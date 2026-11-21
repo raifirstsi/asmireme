@@ -67,7 +67,7 @@ export default async function DealsPage({ params }: DealsPageProps) {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-border flex items-center justify-between mt-4">
+              <div className="pt-4 flex items-center justify-between mt-4">
                 <Link
                   href={`/${locale}/tools/${tool.slug}`}
                   className="text-xs font-semibold text-muted-foreground hover:text-foreground"

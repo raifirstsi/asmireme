@@ -36,11 +36,11 @@ export function CategoryGrid({ locale }: CategoryGridProps) {
           className="group relative flex flex-col justify-between p-4 rounded-2xl border border-zinc-200/90 dark:border-zinc-800/90 bg-white dark:bg-zinc-900/70 hover:bg-zinc-50/80 dark:hover:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-650 transition-all duration-300 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_8px_20px_rgba(0,0,0,0.4)] hover:-translate-y-0.5"
         >
           <div className="flex items-center justify-between mb-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 group-hover:scale-105 transition-all duration-200 border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 group-hover:scale-105 transition-all duration-200 shadow-2xs">
               {getIcon(hub.iconName)}
             </div>
             {hub.newCount > 0 && (
-              <span className="text-[10px] font-semibold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-full border border-zinc-200/80 dark:border-zinc-700">
+              <span className="text-[10px] font-semibold text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-full">
                 +{hub.newCount} new
               </span>
             )}

@@ -77,7 +77,7 @@ export default async function HomePage({ params }: HomePageProps) {
       />
 
       {/* Hero Section - Apple Minimalist Aesthetic */}
-      <section className="relative overflow-hidden py-16 md:py-24 border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-black">
+      <section className="relative overflow-hidden py-16 md:py-24 bg-white dark:bg-black">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="text-center space-y-6">
             {/* Pill Badge */}
@@ -203,7 +203,7 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
 
             {/* Recently Updated & Benchmarked */}
-            <div className="space-y-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
+            <div className="space-y-6 pt-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
                   <RefreshCw className="h-4 w-4 text-zinc-700 dark:text-zinc-300" />

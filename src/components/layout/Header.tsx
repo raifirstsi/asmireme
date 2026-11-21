@@ -78,90 +78,90 @@ export function Header({ locale }: HeaderProps) {
             : "bg-white/95 dark:bg-black/95 backdrop-blur-md border-black/[0.04] dark:border-white/[0.06]"
         }`}
       >
-        <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 max-w-5xl">
-          {/* Brand Logo - Apple Minimalist Typography */}
-          <div className="flex items-center gap-6 lg:gap-8">
-            <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group shrink-0">
+        <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 max-w-5xl relative">
+          {/* Brand Logo - Left Aligned */}
+          <div className="flex items-center shrink-0">
+            <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group">
               <span className="text-lg font-bold tracking-tight text-black dark:text-white transition-opacity group-hover:opacity-80">
                 {dict.brandName}
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 rounded-md">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 bg-zinc-100 dark:bg-zinc-900 px-1.5 py-0.5 rounded-sm">
                 AI
               </span>
             </Link>
-
-            {/* Desktop Minimalist Navigation - Harmonious rounded-md */}
-            <nav className="hidden md:flex items-center space-x-1.5">
-              {primaryNavItems.map((item) => {
-                const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    prefetch={true}
-                    className={`px-3.5 py-1.5 text-xs font-medium tracking-tight rounded-md transition-all duration-150 ${
-                      isActive
-                        ? "text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 font-semibold shadow-2xs"
-                        : "text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-            </nav>
           </div>
 
-          {/* Right Action Cluster: Search, Theme, Lang, Pro Pill, Mobile Menu */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Desktop Quick Search Trigger (Cmd+K) - Balanced rounded-md */}
+          {/* Desktop Navigation - Mathematically Centered */}
+          <nav className="hidden md:flex items-center space-x-1 absolute left-1/2 -translate-x-1/2">
+            {primaryNavItems.map((item) => {
+              const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  prefetch={true}
+                  className={`px-3.5 py-1.5 text-xs font-medium tracking-tight rounded-full transition-colors ${
+                    isActive
+                      ? "text-black dark:text-white bg-zinc-100 dark:bg-zinc-850 font-semibold"
+                      : "text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100/60 dark:hover:bg-zinc-850/50"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Right Action Cluster - Clean Borderless Utility Bar */}
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+            {/* Desktop Quick Search Trigger (Cmd+K) - Clean Minimalist Pill */}
             <button
               onClick={openSearch}
-              className="hidden sm:flex items-center gap-2 h-9 px-3.5 text-xs text-zinc-500 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-850 border border-zinc-200/80 dark:border-zinc-800 rounded-md transition-all w-36 lg:w-48 cursor-pointer text-left shadow-2xs"
+              className="hidden sm:flex items-center gap-2 h-8.5 px-3 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 bg-zinc-100/80 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-full border-0 transition-colors w-32 lg:w-44 cursor-pointer text-left"
               aria-label="Search tools"
             >
               <Search className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
-              <span className="truncate">{dict.nav.searchPlaceholder.slice(0, 16)}...</span>
-              <kbd className="ml-auto pointer-events-none inline-flex h-4 select-none items-center rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-1 font-mono text-[9px] font-medium text-zinc-500">
+              <span className="truncate">{dict.nav.searchPlaceholder.slice(0, 14)}...</span>
+              <kbd className="ml-auto pointer-events-none inline-flex h-4 select-none items-center rounded bg-white dark:bg-zinc-800 px-1 font-mono text-[9px] font-medium text-zinc-400 shadow-2xs">
                 ⌘K
               </kbd>
             </button>
 
-            {/* Mobile search icon */}
+            {/* Mobile search icon - Borderless */}
             <button
               onClick={openSearch}
-              className="sm:hidden flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 transition-colors"
+              className="sm:hidden flex h-9 w-9 items-center justify-center rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               aria-label="Open search modal"
             >
               <Search className="h-4 w-4" />
             </button>
 
-            {/* Theme Toggle (Light / Dark - Square rounded-none) */}
+            {/* Theme Toggle (Light / Dark - Borderless) */}
             <ThemeToggle />
 
-            {/* Language Switcher - Balanced rounded-md */}
+            {/* Language Switcher - Borderless */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-800 dark:text-zinc-200 active:scale-95 shadow-2xs"
+              className="flex items-center gap-1 h-9 px-2.5 text-xs font-semibold rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors active:scale-95 cursor-pointer"
               title="Switch Language"
             >
-              <Globe className="h-3.5 w-3.5 text-zinc-500" />
+              <Globe className="h-3.5 w-3.5 text-zinc-400" />
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Pro CTA Button - Balanced rounded-md */}
+            {/* Pro CTA Button - Minimalist Luxury Pill */}
             <Link
               href={`/${locale}/membership`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-9 px-4 text-xs font-semibold rounded-md bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-2xs"
+              className="hidden sm:inline-flex items-center justify-center h-8.5 px-4 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
             >
               {locale === "vi" ? "Gói Pro" : "Get Pro"}
             </Link>
 
-            {/* Mobile Menu Hamburger */}
+            {/* Mobile Menu Hamburger - Borderless */}
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="md:hidden flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200 transition-colors"
+              className="md:hidden flex h-9 w-9 items-center justify-center rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -221,7 +221,7 @@ export function Header({ locale }: HeaderProps) {
                 <ThemeToggle />
                 <button
                   onClick={toggleLanguage}
-                  className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
+                  className="flex items-center gap-1.5 h-8.5 px-3 text-xs font-semibold rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors border-0"
                 >
                   <Globe className="h-3.5 w-3.5 text-zinc-500" />
                   <span>{locale === "en" ? "Tiếng Việt" : "English"}</span>

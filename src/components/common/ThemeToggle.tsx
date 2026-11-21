@@ -32,14 +32,14 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       onClick={toggleTheme}
       type="button"
       suppressHydrationWarning
-      className={`flex h-9 w-9 items-center justify-center rounded-none border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 transition-colors cursor-pointer active:scale-95 shadow-2xs ${className}`}
+      className={`flex h-9 w-9 items-center justify-center border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer active:scale-95 rounded-md ${className}`}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       title={theme === "dark" ? "Chuyển sang giao diện Sáng" : "Chuyển sang giao diện Tối"}
     >
       {mounted && theme === "light" ? (
-        <Moon className="h-4 w-4 text-zinc-700 hover:text-black transition-colors" />
+        <Moon className="h-4 w-4" />
       ) : (
-        <Sun className="h-4 w-4 text-zinc-300 hover:text-white transition-colors" />
+        <Sun className="h-4 w-4" />
       )}
     </button>
   );

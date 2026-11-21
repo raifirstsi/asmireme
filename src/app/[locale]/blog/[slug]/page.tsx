@@ -149,7 +149,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
 
             {/* Author Bar & EEAT Verification */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-xs text-zinc-500">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500">
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center font-bold text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-750">
                   {post.author.name.charAt(0)}
@@ -195,7 +195,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Featured Tools Mentioned in This Guide */}
           {mentionedTools.length > 0 && (
-            <div className="border-t border-zinc-200 dark:border-zinc-800 pt-10 space-y-6">
+            <div className="pt-8 space-y-6">
               <div className="space-y-1">
                 <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                   {isVi ? "Các Công Cụ Được Nhắc Đến Trong Bài" : "Featured Tools Mentioned in This Guide"}
@@ -248,7 +248,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           )}
 
           {/* Bottom Navigation */}
-          <div className="border-t border-zinc-200 dark:border-zinc-800 pt-8 flex items-center justify-between">
+          <div className="pt-8 flex items-center justify-between">
             <Link
               href={`/${locale}/blog`}
               className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"

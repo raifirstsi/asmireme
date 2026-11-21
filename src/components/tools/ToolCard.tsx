@@ -56,18 +56,18 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
           {tool.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800"
+              className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-2.5 py-0.5 rounded-full"
             >
               {tag}
             </span>
           ))}
           {tool.hasFreePlan && (
-            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800">
+            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full">
               Free Plan
             </span>
           )}
           {!tool.hasFreePlan && tool.hasFreeTrial && (
-            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800">
+            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full">
               {tool.trialDays}d Trial
             </span>
           )}
@@ -75,7 +75,7 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
       </div>
 
       {/* Card Footer: Pricing & Action Buttons - Zero Squeeze & No Text Wrapping */}
-      <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
+      <div className="pt-3 flex items-center justify-between gap-2 mt-auto">
         <div className="shrink-0">
           <span className="text-[9px] uppercase font-semibold text-zinc-400 block tracking-wider">
             {dict.cards.startingFrom}

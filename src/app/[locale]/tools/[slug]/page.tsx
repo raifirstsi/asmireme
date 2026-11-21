@@ -144,16 +144,16 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
       <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-8">
           {/* Breadcrumbs - Apple Single Line */}
-          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none">
+          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none py-1">
             <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</Link>
             <span className="text-zinc-400 dark:text-zinc-600">/</span>
             <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Tools</Link>
             <span className="text-zinc-400 dark:text-zinc-600">/</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate">{tool.name}</span>
+            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate max-w-[150px] sm:max-w-none">{tool.name}</span>
           </nav>
 
-          {/* Hero Header - Apple Minimalist */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-zinc-800">
+          {/* Hero Header - Apple Minimalist (Zero Horizontal Line) */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-2">
             <div className="space-y-3.5">
               <div className="flex items-center gap-3.5">
                 <ToolLogo slug={tool.slug} name={tool.name} size="xl" />
@@ -235,19 +235,19 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             </div>
           </div>
 
-          {/* Pros & Cons (Genuine Drawbacks) */}
+          {/* Pros & Cons (Genuine Drawbacks) - Fixed Generous Padding */}
           <div className="space-y-4">
             <h2 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
               {isVi ? "Ưu & Nhược Điểm Thực Tế" : "Honest Pros & Real Limitations"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3 shadow-2xs">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+              <div className="p-6 sm:p-7 md:p-8 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3.5 shadow-2xs">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
                   Key Advantages
                 </h4>
-                <ul className="space-y-2.5 text-xs text-zinc-700 dark:text-zinc-300">
+                <ul className="space-y-3 text-xs text-zinc-700 dark:text-zinc-300">
                   {tool.pros[locale as Locale].map((pro, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                    <li key={idx} className="flex items-start gap-2.5">
                       <Check className="h-3.5 w-3.5 text-zinc-900 dark:text-zinc-100 shrink-0 mt-0.5" />
                       <span>{pro}</span>
                     </li>
@@ -255,13 +255,13 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                 </ul>
               </div>
 
-              <div className="p-5.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3 shadow-2xs">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              <div className="p-6 sm:p-7 md:p-8 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3.5 shadow-2xs">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500">
                   Documented Drawbacks
                 </h4>
-                <ul className="space-y-2.5 text-xs text-zinc-500 dark:text-zinc-400">
+                <ul className="space-y-3 text-xs text-zinc-500 dark:text-zinc-400">
                   {tool.cons[locale as Locale].map((con, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
+                    <li key={idx} className="flex items-start gap-2.5">
                       <X className="h-3.5 w-3.5 text-zinc-400 shrink-0 mt-0.5" />
                       <span>{con}</span>
                     </li>
@@ -311,7 +311,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                         </div>
                       )}
                     </div>
-                    <ul className="space-y-1.5 text-xs text-muted-foreground pt-2 border-t border-border">
+                    <ul className="space-y-1.5 text-xs text-muted-foreground pt-2">
                       {tier.features.map((feat, i) => (
                         <li key={i} className="flex items-center gap-1.5">
                           <Check className="h-3.5 w-3.5 text-brand-600 shrink-0" />
@@ -335,7 +335,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           </div>
 
           {/* Verified External Community Sentiment & Reviews Center */}
-          <div className="space-y-6 pt-8 border-t border-border">
+          <div className="space-y-6 pt-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h2 className="text-xl sm:text-2xl font-black text-foreground flex items-center gap-2">
@@ -498,7 +498,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     </div>
                   </div>
 
-                  <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between text-xs text-zinc-500">
+                  <div className="pt-3 flex items-center justify-between text-xs text-zinc-500">
                     <div className="flex items-center gap-1.5">
                       <span className="font-medium text-zinc-900 dark:text-zinc-100">{rev.author}</span>
                       <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
@@ -520,7 +520,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           </div>
 
           {/* Alternatives */}
-          <div className="space-y-4 pt-6 border-t border-border">
+          <div className="space-y-4 pt-4">
             <h2 className="text-xl font-bold text-foreground">
               {isVi ? `Các Lựa Chọn Thay Thế Cho ${tool.name}` : `Top Alternatives to ${tool.name}`}
             </h2>
@@ -558,9 +558,9 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           href={`/go/${tool.slug}`}
           target="_blank"
           rel="nofollow sponsored"
-          className="inline-flex items-center justify-center h-9 px-4.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-semibold shadow-xs shrink-0 active:scale-95 transition-transform"
+          className="inline-flex items-center justify-center h-8.5 px-4 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-semibold shadow-xs shrink-0 active:scale-95 transition-transform whitespace-nowrap"
         >
-          <span>{isVi ? "Dùng Thử Miễn Phí" : "Try Free"}</span>
+          <span>{isVi ? "Dùng Thử" : "Try Free"}</span>
           <ExternalLink className="h-3 w-3 ml-1" />
         </a>
       </div>

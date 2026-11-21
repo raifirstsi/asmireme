@@ -13,7 +13,7 @@ export function MarqueeBar({ locale }: MarqueeBarProps) {
   const tools = [...TOOLS_DATA.slice(0, 25), ...TOOLS_DATA.slice(0, 25)];
 
   return (
-    <div className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 border-y border-zinc-200/80 dark:border-zinc-800/80 py-3 overflow-hidden select-none relative [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+    <div className="w-full bg-zinc-50/50 dark:bg-zinc-950/50 py-3 overflow-hidden select-none relative [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
       <div className="flex w-max animate-marquee space-x-4 items-center">
         {tools.map((tool, idx) => (
           <Link

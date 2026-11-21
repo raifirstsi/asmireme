@@ -32,7 +32,7 @@ export function Leaderboard({ locale }: LeaderboardProps) {
           >
             <div>
               <div className="flex items-center justify-between mb-3.5">
-                <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-700/50">
+                <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100">
                   {medal.badge}
                 </span>
                 <span className="flex items-center text-xs font-semibold text-zinc-900 dark:text-zinc-100">
@@ -52,7 +52,7 @@ export function Leaderboard({ locale }: LeaderboardProps) {
               </p>
             </div>
 
-            <div className="pt-3.5 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between">
+            <div className="pt-3.5 flex items-center justify-between">
               <div>
                 <span className="text-[9px] uppercase font-semibold text-zinc-400 block tracking-wider">
                   Starting
