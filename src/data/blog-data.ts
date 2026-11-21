@@ -1,4 +1,14 @@
 import { Locale } from "@/lib/i18n";
+import { CRM_BLOG_POSTS } from "./blog-posts/crm-posts";
+import { CONTENT_BLOG_POSTS } from "./blog-posts/content-posts";
+import { VIDEO_BLOG_POSTS } from "./blog-posts/video-posts";
+import { AUDIO_BLOG_POSTS } from "./blog-posts/audio-posts";
+import { PRODUCTIVITY_BLOG_POSTS } from "./blog-posts/productivity-posts";
+import { PRESENTATION_BLOG_POSTS } from "./blog-posts/presentation-posts";
+import { ADVERTISING_BLOG_POSTS } from "./blog-posts/advertising-posts";
+import { BUILDER_BLOG_POSTS } from "./blog-posts/builder-posts";
+import { DETECTION_BLOG_POSTS } from "./blog-posts/detection-posts";
+import { AGENT_BLOG_POSTS } from "./blog-posts/agent-posts";
 
 export interface BlogPost {
   slug: string;
@@ -18,7 +28,7 @@ export interface BlogPost {
   contentMarkdown: Record<Locale, string>;
 }
 
-export const BLOG_POSTS: BlogPost[] = [
+const ORIGINAL_BLOG_POSTS: BlogPost[] = [
   {
     slug: "gohighlevel-review-agency-blueprint-2026",
     category: "CRM & Agency Automation",
@@ -516,6 +526,20 @@ Với hơn 40 cổng tích hợp sẵn (HubSpot, Salesforce, Slack, Notion), Fir
       `,
     },
   },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  ...CRM_BLOG_POSTS,
+  ...CONTENT_BLOG_POSTS,
+  ...VIDEO_BLOG_POSTS,
+  ...AUDIO_BLOG_POSTS,
+  ...PRODUCTIVITY_BLOG_POSTS,
+  ...PRESENTATION_BLOG_POSTS,
+  ...ADVERTISING_BLOG_POSTS,
+  ...BUILDER_BLOG_POSTS,
+  ...DETECTION_BLOG_POSTS,
+  ...AGENT_BLOG_POSTS,
+  ...ORIGINAL_BLOG_POSTS,
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
