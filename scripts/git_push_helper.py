@@ -10,6 +10,6 @@ def run(cmd):
         raise Exception(f"Command failed with exit code {res.returncode}")
 
 run("git add -A")
-run('git commit -m "style(ui): eliminate excessive line borders, fix card padding, center navbar, and refine mobile/desktop layout"')
+run('git commit -m "fix(ui): remove square borders on tool logos, remove hover bubble on menu, center vertical menu baseline, and fix breadcrumb alignment"')
 run("git push origin master")
 run("git push origin master:main")

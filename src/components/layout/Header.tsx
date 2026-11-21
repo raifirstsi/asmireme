@@ -91,8 +91,8 @@ export function Header({ locale }: HeaderProps) {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Mathematically Centered via Equal Flex Wings */}
-          <nav className="hidden md:flex items-center space-x-1 shrink-0 px-2">
+          {/* Desktop Navigation - Pure Minimalist Typography (Centered Vertically & Horizontally, Zero Bubble, Zero Hover Box) */}
+          <nav className="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 shrink-0">
             {primaryNavItems.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
@@ -100,10 +100,10 @@ export function Header({ locale }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   prefetch={true}
-                  className={`px-3.5 py-1.5 text-xs font-medium tracking-tight rounded-full transition-colors ${
+                  className={`text-xs font-medium tracking-normal transition-colors py-1 ${
                     isActive
-                      ? "text-black dark:text-white bg-zinc-100 dark:bg-zinc-850 font-semibold"
-                      : "text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100/60 dark:hover:bg-zinc-850/50"
+                      ? "text-black dark:text-white font-semibold"
+                      : "text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white"
                   }`}
                 >
                   {item.label}

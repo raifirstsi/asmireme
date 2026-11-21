@@ -143,13 +143,19 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
       <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-8">
-          {/* Breadcrumbs - Apple Single Line */}
-          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none py-1">
-            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</Link>
-            <span className="text-zinc-400 dark:text-zinc-600">/</span>
-            <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Tools</Link>
-            <span className="text-zinc-400 dark:text-zinc-600">/</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate max-w-[150px] sm:max-w-none">{tool.name}</span>
+          {/* Breadcrumbs - Apple Clean Single Line */}
+          <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap overflow-x-auto scrollbar-none py-1">
+            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+              Home
+            </Link>
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
+            <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+              Tools
+            </Link>
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
+            <span className="font-semibold text-zinc-900 dark:text-zinc-100 shrink-0">
+              {tool.name}
+            </span>
           </nav>
 
           {/* Hero Header - Apple Minimalist (Zero Horizontal Line) */}

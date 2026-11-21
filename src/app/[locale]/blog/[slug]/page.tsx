@@ -118,13 +118,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl space-y-8 sm:space-y-10">
-          {/* Breadcrumbs - Apple Single Line */}
-          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none">
-            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</Link>
-            <span className="text-zinc-400 dark:text-zinc-600">/</span>
-            <Link href={`/${locale}/blog`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Blog</Link>
-            <span className="text-zinc-400 dark:text-zinc-600">/</span>
-            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate">{post.category}</span>
+          {/* Breadcrumbs - Apple Clean Single Line */}
+          <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap overflow-x-auto scrollbar-none py-1">
+            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+              Home
+            </Link>
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
+            <Link href={`/${locale}/blog`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+              Blog
+            </Link>
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
+            <span className="font-semibold text-zinc-900 dark:text-zinc-100 shrink-0">
+              {post.category}
+            </span>
           </nav>
 
           {/* Article Header */}
