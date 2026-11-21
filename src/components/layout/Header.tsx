@@ -78,20 +78,20 @@ export function Header({ locale }: HeaderProps) {
             : "bg-white/95 dark:bg-black/95 backdrop-blur-md border-black/[0.04] dark:border-white/[0.06]"
         }`}
       >
-        <div className="mx-auto flex h-14 items-center justify-between px-4 sm:px-6 max-w-5xl">
+        <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 max-w-5xl">
           {/* Brand Logo - Apple Minimalist Typography */}
           <div className="flex items-center gap-6 lg:gap-8">
             <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group shrink-0">
               <span className="text-lg font-bold tracking-tight text-black dark:text-white transition-opacity group-hover:opacity-80">
                 {dict.brandName}
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.2 rounded-full">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 rounded-md">
                 AI
               </span>
             </Link>
 
-            {/* Desktop Minimalist Navigation - 4 clean items */}
-            <nav className="hidden md:flex items-center space-x-1">
+            {/* Desktop Minimalist Navigation - Harmonious rounded-md */}
+            <nav className="hidden md:flex items-center space-x-1.5">
               {primaryNavItems.map((item) => {
                 const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                 return (
@@ -99,10 +99,10 @@ export function Header({ locale }: HeaderProps) {
                     key={item.href}
                     href={item.href}
                     prefetch={true}
-                    className={`px-3 py-1.5 text-xs font-medium tracking-tight rounded-full transition-all duration-200 ${
+                    className={`px-3.5 py-1.5 text-xs font-medium tracking-tight rounded-md transition-all duration-150 ${
                       isActive
-                        ? "text-black dark:text-white bg-black/[0.05] dark:bg-white/[0.1] font-semibold"
-                        : "text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white hover:bg-black/[0.03] dark:hover:bg-white/[0.05]"
+                        ? "text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 font-semibold shadow-2xs"
+                        : "text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900"
                     }`}
                   >
                     {item.label}
@@ -114,10 +114,10 @@ export function Header({ locale }: HeaderProps) {
 
           {/* Right Action Cluster: Search, Theme, Lang, Pro Pill, Mobile Menu */}
           <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Desktop Quick Search Trigger (Cmd+K) */}
+            {/* Desktop Quick Search Trigger (Cmd+K) - Balanced rounded-md */}
             <button
               onClick={openSearch}
-              className="hidden sm:flex items-center gap-2 h-8 px-3 text-xs text-zinc-500 bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-transparent rounded-full transition-all w-36 lg:w-48 cursor-pointer text-left"
+              className="hidden sm:flex items-center gap-2 h-9 px-3.5 text-xs text-zinc-500 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-850 border border-zinc-200/80 dark:border-zinc-800 rounded-md transition-all w-36 lg:w-48 cursor-pointer text-left shadow-2xs"
               aria-label="Search tools"
             >
               <Search className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
@@ -130,30 +130,30 @@ export function Header({ locale }: HeaderProps) {
             {/* Mobile search icon */}
             <button
               onClick={openSearch}
-              className="sm:hidden flex h-8 w-8 items-center justify-center rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 transition-colors"
+              className="sm:hidden flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-700 dark:text-zinc-300 transition-colors"
               aria-label="Open search modal"
             >
               <Search className="h-4 w-4" />
             </button>
 
-            {/* Theme Toggle (Light / Dark) */}
+            {/* Theme Toggle (Light / Dark - Square rounded-none) */}
             <ThemeToggle />
 
-            {/* Language Switcher */}
+            {/* Language Switcher - Balanced rounded-md */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 h-8 px-2.5 text-[11px] font-semibold rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-800 dark:text-zinc-200 active:scale-95"
+              className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-800 dark:text-zinc-200 active:scale-95 shadow-2xs"
               title="Switch Language"
             >
-              <Globe className="h-3 w-3 text-zinc-500" />
+              <Globe className="h-3.5 w-3.5 text-zinc-500" />
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Apple-style Pill CTA */}
+            {/* Pro CTA Button - Balanced rounded-md */}
             <Link
               href={`/${locale}/membership`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-8 px-3.5 text-xs font-medium rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
+              className="hidden sm:inline-flex items-center justify-center h-9 px-4 text-xs font-semibold rounded-md bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-2xs"
             >
               {locale === "vi" ? "Gói Pro" : "Get Pro"}
             </Link>
@@ -161,7 +161,7 @@ export function Header({ locale }: HeaderProps) {
             {/* Mobile Menu Hamburger */}
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="md:hidden flex h-8 w-8 items-center justify-center rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 transition-colors"
+              className="md:hidden flex h-9 w-9 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200 transition-colors"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -169,7 +169,7 @@ export function Header({ locale }: HeaderProps) {
           </div>
         </div>
 
-        {/* Apple-Style Full-Width Clean Mobile Drawer */}
+        {/* Clean Balanced Mobile Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-black/95 backdrop-blur-2xl px-5 py-6 space-y-4 animate-in slide-in-from-top-3 duration-200 relative z-50">
             {/* Core Links */}
@@ -183,7 +183,7 @@ export function Header({ locale }: HeaderProps) {
                   href={item.href}
                   prefetch={true}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-3 py-2 text-sm font-medium rounded-xl transition-colors ${
+                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     pathname === item.href
                       ? "bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white font-semibold"
                       : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900"
@@ -205,7 +205,7 @@ export function Header({ locale }: HeaderProps) {
                   href={item.href}
                   prefetch={true}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white rounded-xl transition-colors"
+                  className="block px-3 py-2 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white rounded-md transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -221,7 +221,7 @@ export function Header({ locale }: HeaderProps) {
                 <ThemeToggle />
                 <button
                   onClick={toggleLanguage}
-                  className="flex items-center gap-1 h-8 px-2.5 text-xs font-semibold rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
+                  className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-md border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
                 >
                   <Globe className="h-3.5 w-3.5 text-zinc-500" />
                   <span>{locale === "en" ? "Tiếng Việt" : "English"}</span>
@@ -234,7 +234,7 @@ export function Header({ locale }: HeaderProps) {
                 href={`/${locale}/membership`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-medium text-xs shadow-xs block transition-all"
+                className="w-full text-center py-2.5 rounded-md bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
               >
                 {dict.nav.getStarted}
               </Link>
@@ -246,7 +246,7 @@ export function Header({ locale }: HeaderProps) {
       {/* Backdrop for mobile drawer */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 top-14 bg-black/40 backdrop-blur-xs z-40 md:hidden"
+          className="fixed inset-0 top-16 bg-black/40 backdrop-blur-xs z-40 md:hidden"
           onClick={() => setMobileMenuOpen(false)}
         />
       )}

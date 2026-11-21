@@ -21,7 +21,7 @@ export function MarqueeBar({ locale }: MarqueeBarProps) {
             href={`/${locale}/tools/${tool.slug}`}
             className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all text-xs font-medium text-zinc-800 dark:text-zinc-200 shrink-0 group shadow-2xs hover:-translate-y-0.5"
           >
-            <ToolLogo slug={tool.slug} name={tool.name} size="xs" className="!rounded-full !border-0 !p-0.5" />
+            <ToolLogo slug={tool.slug} name={tool.name} size="xs" className="rounded-none !border-0 !p-0.5" />
             <span className="font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-black dark:group-hover:text-white transition-colors">
               {tool.name}
             </span>

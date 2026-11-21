@@ -174,7 +174,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
         <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none touch-pan-x">
           <button
             onClick={() => updateParams({ hub: "all" })}
-            className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
+            className={`px-3.5 py-1.5 rounded-lg text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
               selectedHub === "all"
                 ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs border border-transparent"
                 : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
@@ -186,7 +186,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             <button
               key={hub.slug}
               onClick={() => updateParams({ hub: hub.slug })}
-              className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
                 selectedHub === hub.slug
                   ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs border border-transparent"
                   : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
@@ -204,7 +204,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </span>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "free" ? null : "free" })}
-            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-md border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "free"
                 ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
                 : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
@@ -214,7 +214,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under20" ? null : "under20" })}
-            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-md border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under20"
                 ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
                 : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
@@ -224,7 +224,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under50" ? null : "under50" })}
-            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-md border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under50"
                 ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
                 : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
@@ -234,7 +234,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "50plus" ? null : "50plus" })}
-            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-md border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "50plus"
                 ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
                 : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
@@ -247,7 +247,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
 
           <button
             onClick={() => updateParams({ freeTrial: freeTrialOnly ? null : "true" })}
-            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-md border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               freeTrialOnly
                 ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
                 : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"

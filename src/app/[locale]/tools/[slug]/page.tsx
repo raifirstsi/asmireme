@@ -534,7 +534,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     href={`/${locale}/tools/${alt.slug}`}
                     className="inline-flex items-center gap-2.5 p-2.5 pr-3.5 rounded-full border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors shadow-2xs"
                   >
-                    <ToolLogo slug={alt.slug} name={alt.name} size="xs" className="!rounded-full" />
+                    <ToolLogo slug={alt.slug} name={alt.name} size="xs" className="rounded-none" />
                     <span className="text-xs font-semibold text-foreground">{alt.name}</span>
                     <span className="text-[11px] text-muted-foreground">${alt.startingPrice}/mo</span>
                   </Link>
