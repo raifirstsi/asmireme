@@ -30,6 +30,14 @@ export async function generateMetadata({ params }: PricingPageProps) {
       ? `Bảng Giá ${tool.name} 2026: Chi Phí Từng Gói & Cách Chọn — Asmire`
       : `${tool.name} Pricing Guide (2026): Plans, Hidden Costs & Discounts — Asmire`,
     description: `Complete, verified breakdown of ${tool.name} pricing tiers, monthly vs annual billing, and free options.`,
+    alternates: {
+      canonical: `/${locale}/tools/${tool.slug}/pricing`,
+      languages: {
+        en: `/en/tools/${tool.slug}/pricing`,
+        vi: `/vi/tools/${tool.slug}/pricing`,
+        "x-default": `/en/tools/${tool.slug}/pricing`,
+      },
+    },
   };
 }
 
@@ -40,8 +48,44 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
 
   const isVi = locale === "vi";
 
+  const breadcrumbsSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `https://asmire.me/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: `https://asmire.me/${locale}/tools`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: tool.name,
+        item: `https://asmire.me/${locale}/tools/${tool.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Pricing",
+        item: `https://asmire.me/${locale}/tools/${tool.slug}/pricing`,
+      },
+    ],
+  };
+
   return (
-    <div className="py-10 md:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsSchema) }}
+      />
+      <div className="py-10 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-10">
         <Link
           href={`/${locale}/tools/${tool.slug}`}
@@ -121,5 +165,6 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
         </div>
       </div>
     </div>
+    </>
   );
 }

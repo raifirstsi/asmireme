@@ -88,6 +88,11 @@ export function Footer({ locale }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-muted-foreground">
               <li>
+                <Link href={`/${locale}/blog`} className="hover:text-foreground transition-colors font-medium text-brand-600 dark:text-brand-400">
+                  AI Research Blog & Guides
+                </Link>
+              </li>
+              <li>
                 <Link href={`/${locale}/methodology`} className="hover:text-foreground transition-colors">
                   {dict.footer.methodology}
                 </Link>

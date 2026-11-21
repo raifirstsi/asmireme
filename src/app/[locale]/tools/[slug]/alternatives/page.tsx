@@ -30,6 +30,14 @@ export async function generateMetadata({ params }: AlternativesPageProps) {
       ? `Top Công Cụ Thay Thế ${tool.name} Tốt Nhất 2026 — Asmire`
       : `Best ${tool.name} Alternatives & Competitors in 2026 — Asmire`,
     description: `Compare the top tested alternatives to ${tool.name} based on features, pricing, and usability.`,
+    alternates: {
+      canonical: `/${locale}/tools/${tool.slug}/alternatives`,
+      languages: {
+        en: `/en/tools/${tool.slug}/alternatives`,
+        vi: `/vi/tools/${tool.slug}/alternatives`,
+        "x-default": `/en/tools/${tool.slug}/alternatives`,
+      },
+    },
   };
 }
 
@@ -43,8 +51,44 @@ export default async function ToolAlternativesPage({ params }: AlternativesPageP
     .map((altSlug) => getToolBySlug(altSlug))
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
 
+  const breadcrumbsSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `https://asmire.me/${locale}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: `https://asmire.me/${locale}/tools`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: tool.name,
+        item: `https://asmire.me/${locale}/tools/${tool.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Alternatives",
+        item: `https://asmire.me/${locale}/tools/${tool.slug}/alternatives`,
+      },
+    ],
+  };
+
   return (
-    <div className="py-10 md:py-16">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsSchema) }}
+      />
+      <div className="py-10 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl space-y-8">
         <Link
           href={`/${locale}/tools/${tool.slug}`}
@@ -72,5 +116,6 @@ export default async function ToolAlternativesPage({ params }: AlternativesPageP
         </div>
       </div>
     </div>
+    </>
   );
 }

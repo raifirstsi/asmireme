@@ -39,6 +39,7 @@ export function Header({ locale, onOpenSearch }: HeaderProps) {
     { label: dict.nav.compare, href: `/${locale}/compare` },
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
+    { label: dict.nav.blog, href: `/${locale}/blog` },
     { label: dict.nav.membership, href: `/${locale}/membership` },
   ];
 

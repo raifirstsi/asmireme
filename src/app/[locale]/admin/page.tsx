@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { AdminLinksManager } from "@/components/admin/AdminLinksManager";
 import { 
   ShieldAlert, Database, MousePointerClick, CheckCircle, 
   RefreshCw, ExternalLink, Settings, Activity 
@@ -158,48 +159,17 @@ export default async function AdminPage({ params }: AdminPageProps) {
           </div>
         </div>
 
-        {/* Section 2: 50 SaaS Tools Allowlist & Network Registry */}
+        {/* Section 2: 50 SaaS Tools Allowlist, CSV Import/Export & Registry */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-base font-bold text-foreground flex items-center gap-2">
               <Database className="h-4 w-4 text-brand-600" />
-              50 SaaS Tools Registry & Default Admin URLs
+              50 SaaS Tools Registry, CSV Import/Export & Admin Links
             </h3>
             <span className="text-xs text-muted-foreground">From affiliate-terms-audit.md</span>
           </div>
 
-          <div className="rounded-xl border border-border bg-card overflow-hidden shadow-xs max-h-[500px] overflow-y-auto">
-            <table className="w-full text-left border-collapse text-xs">
-              <thead className="sticky top-0 bg-muted/95 backdrop-blur-xs border-b border-border font-bold uppercase tracking-wider text-muted-foreground text-[10px]">
-                <tr>
-                  <th className="p-3.5">#</th>
-                  <th className="p-3.5">Tool Name</th>
-                  <th className="p-3.5">Hub</th>
-                  <th className="p-3.5">Affiliate Network</th>
-                  <th className="p-3.5">Price</th>
-                  <th className="p-3.5">Admin Link Template</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
-                {TOOLS_DATA.map((tool, idx) => (
-                  <tr key={tool.id} className="hover:bg-secondary/30 transition-colors">
-                    <td className="p-3.5 text-muted-foreground">{idx + 1}</td>
-                    <td className="p-3.5 font-bold text-foreground">{tool.name}</td>
-                    <td className="p-3.5">
-                      <span className="bg-secondary px-2 py-0.5 rounded text-[10px] text-foreground font-medium">
-                        {tool.hubs[0]}
-                      </span>
-                    </td>
-                    <td className="p-3.5 text-muted-foreground">{tool.affiliateNetwork}</td>
-                    <td className="p-3.5 font-semibold text-foreground">${tool.startingPrice}/mo</td>
-                    <td className="p-3.5 font-mono text-[11px] text-muted-foreground truncate max-w-xs">
-                      {tool.adminAffiliateUrl}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <AdminLinksManager />
         </div>
       </div>
     </div>
