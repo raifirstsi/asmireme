@@ -228,6 +228,76 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
       vi: "Fireflies.ai có gói Free cơ bản, gói Pro từ $10/người/tháng (năm). MeetGeek có gói Free, gói Pro khởi điểm từ $15/người/tháng.",
     },
   },
+  {
+    slug: "highlevel-vs-getresponse",
+    toolASlug: "highlevel",
+    toolBSlug: "getresponse",
+    category: "CRM & Marketing Automation",
+    title: {
+      en: "HighLevel vs GetResponse (2026): All-in-One Agency CRM vs Dedicated Email Funnels",
+      vi: "So Sánh HighLevel vs GetResponse (2026): Hệ Điều Hành Agency vs Email Marketing Phễu",
+    },
+    metaDescription: {
+      en: "GoHighLevel vs GetResponse in-depth comparison. Evaluating email marketing deliverability, CRM sub-accounts, two-way SMS automation, and multi-client pricing scaling.",
+      vi: "So sánh chi tiết GoHighLevel vs GetResponse. Đối chiếu khả năng gửi email vào inbox, quản lý sub-account cho agency, tự động hóa SMS 2 chiều và bài toán chi phí theo quy mô.",
+    },
+    directAnswer: {
+      en: "HighLevel is superior for marketing agencies, consultants, and SaaS resellers who need an end-to-end white-label operating system replacing 10+ subscriptions. GetResponse is better for solo creators, e-commerce stores, and publishers wanting dedicated high-deliverability email newsletters, automated webinars, and simple sales funnels without agency complexity.",
+      vi: "HighLevel vượt trội cho các agency tiếp thị, chuyên gia tư vấn và người bán lại SaaS cần hệ điều hành white-label thay thế hơn 10 phần mềm riêng lẻ. GetResponse phù hợp hơn cho người làm nội dung solo, shop thương mại điện tử và doanh nghiệp cần gửi email vào inbox với tỷ lệ cao, tổ chức webinar tự động và phễu bán hàng đơn giản mà không bị phức tạp bởi cấu trúc agency.",
+    },
+    winnerOverall: "A",
+    verdictSummary: {
+      en: "HighLevel wins overall on agency utility, unlimited sub-accounts, omnichannel communication (SMS, WhatsApp, phone, email), and client billing. GetResponse wins on standalone email deliverability tools, webinar hosting, and ease of beginner setup.",
+      vi: "HighLevel chiến thắng toàn diện về giá trị cho agency, khả năng tạo tài khoản con không giới hạn, giao tiếp đa kênh (SMS, gọi điện, email, WhatsApp) và thu phí khách hàng. GetResponse ghi điểm ở tính năng webinar có sẵn và thao tác tạo email nhanh cho người mới bắt đầu.",
+    },
+    whoShouldChooseA: {
+      en: "Choose HighLevel if you run an agency, manage multiple client brands, require automated SMS/call follow-ups, and want to consolidate landing pages, email marketing, and CRM into one flat monthly fee.",
+      vi: "Chọn HighLevel nếu bạn vận hành agency, quản lý danh sách nhiều khách hàng, cần tự động hóa tin nhắn SMS và cuộc gọi chăm sóc khách hàng, và muốn gom toàn bộ chi phí phần mềm về một mức phí cố định.",
+    },
+    whoShouldChooseB: {
+      en: "Choose GetResponse if your primary marketing vehicle is email newsletters, automated webinar funnels, and list building, and you do not need client sub-accounts or agency white-labeling.",
+      vi: "Chọn GetResponse nếu kênh tiếp thị chủ đạo của bạn là bản tin email, phễu webinar tự động và thu thập lead, đồng thời bạn không có nhu cầu tạo sub-account hay gắn thương hiệu riêng cho khách hàng.",
+    },
+    pricingVerdict: {
+      en: "HighLevel starts at $97/mo (Starter) and $297/mo (Unlimited sub-accounts). GetResponse starts at $19/mo (up to 1,000 subscribers) and scales with list size. For agencies with 5+ clients or 20,000+ contacts, HighLevel is dramatically cheaper.",
+      vi: "HighLevel có giá $97/tháng (Starter) và $297/tháng (không giới hạn sub-account). GetResponse từ $19/tháng (dưới 1.000 contact) và tăng dần theo quy mô danh sách. Khi quản lý trên 5 khách hàng hoặc trên 20.000 liên hệ, HighLevel tiết kiệm chi phí gấp nhiều lần.",
+    },
+  },
+  {
+    slug: "highlevel-vs-my-ai-front-desk",
+    toolASlug: "highlevel",
+    toolBSlug: "my-ai-front-desk",
+    category: "AI Telephony & Voice Automation",
+    title: {
+      en: "HighLevel vs My AI Front Desk (2026): Which AI Phone Receptionist Closes More Leads?",
+      vi: "So Sánh HighLevel vs My AI Front Desk (2026): Lễ Tân Điện Thoại AI Nào Tốt Hơn?",
+    },
+    metaDescription: {
+      en: "HighLevel Conversational AI Voice vs My AI Front Desk. Benchmarking natural speech understanding, calendar booking sync, latency, and setup difficulty for local businesses.",
+      vi: "So sánh tính năng Lễ tân giọng nói AI của GoHighLevel và My AI Front Desk. Kiểm thử khả năng hiểu ngữ cảnh, đồng bộ lịch hẹn, độ trễ cuộc gọi và độ dễ cài đặt cho doanh nghiệp địa phương.",
+    },
+    directAnswer: {
+      en: "HighLevel is best if you want a complete agency infrastructure where the AI voice receptionist directly triggers CRM workflows, SMS confirmations, and pipeline updates in one unified ecosystem. My AI Front Desk is ideal for solo dentists, salons, or contractors who want a simple standalone AI phone receptionist set up in 10 minutes without switching their entire CRM or tech stack.",
+      vi: "HighLevel tối ưu nhất nếu bạn cần một hạ tầng toàn diện nơi cuộc gọi AI tự động kích hoạt cập nhật CRM, gửi SMS xác nhận và dịch chuyển phễu bán hàng trong một hệ sinh thái đồng nhất. My AI Front Desk lý tưởng cho các phòng khám, salon hoặc dịch vụ địa phương cần một giải pháp lễ tân ảo độc lập cài đặt trong 10 phút mà không phải thay đổi toàn bộ hệ thống CRM hiện có.",
+    },
+    winnerOverall: "A",
+    verdictSummary: {
+      en: "HighLevel offers unmatched end-to-end automation power and CRM integration at a fractional cost for agencies. My AI Front Desk offers extreme plug-and-play simplicity for non-technical local store owners.",
+      vi: "HighLevel vượt trội về sức mạnh tự động hóa khép kín và tích hợp sâu vào CRM với chi phí cực rẻ cho agency. My AI Front Desk ghi điểm ở độ cắm-và-chạy đơn giản cho các chủ cửa hàng không rành công nghệ.",
+    },
+    whoShouldChooseA: {
+      en: "Choose HighLevel if you want the phone call to seamlessly connect to automated SMS drip campaigns, Google Review requests, and CRM pipeline tracking without third-party connector fees.",
+      vi: "Chọn HighLevel nếu bạn muốn sau cuộc gọi, hệ thống tự động bắn SMS chăm sóc, xin đánh giá Google Reviews và cập nhật trạng thái đơn hàng mà không cần tốn thêm phí kết nối trung gian.",
+    },
+    whoShouldChooseB: {
+      en: "Choose My AI Front Desk if you just need a phone number that answers after-hours calls, texts callers an appointment link, and requires zero software migration.",
+      vi: "Chọn My AI Front Desk nếu bạn chỉ cần một số điện thoại trực đêm trả lời khách khi lễ tân vắng mặt, tự động gửi link đặt lịch qua SMS và không muốn đổi phần mềm quản lý hiện tại.",
+    },
+    pricingVerdict: {
+      en: "HighLevel includes Conversational AI Voice within its $97/$297 plans with pay-as-you-go per-minute telephony rates. My AI Front Desk starts at $44.99/mo for 100 minutes. HighLevel is vastly more cost-effective when handling multi-client portfolios.",
+      vi: "HighLevel tích hợp sẵn AI Voice trong gói $97/$297 với cước viễn thông tính theo phút thực dùng rất rẻ. My AI Front Desk có giá từ $44.99/tháng cho 100 phút gọi. HighLevel tiết kiệm hơn nhiều khi quản lý nhiều khách hàng.",
+    },
+  },
 ];
 
 export function getComparisonPairBySlug(slug: string): ComparisonPair | undefined {
