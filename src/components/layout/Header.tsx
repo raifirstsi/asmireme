@@ -78,21 +78,21 @@ export function Header({ locale }: HeaderProps) {
             : "bg-white/95 dark:bg-black/95 backdrop-blur-md border-black/[0.04] dark:border-white/[0.06]"
         }`}
       >
-        <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 max-w-5xl relative">
-          {/* Brand Logo - Left Aligned */}
-          <div className="flex items-center shrink-0">
+        <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-6xl">
+          {/* Brand Logo - Left Column (flex-1 guarantees center alignment) */}
+          <div className="flex items-center justify-start flex-1 shrink-0">
             <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group">
               <span className="text-lg font-bold tracking-tight text-black dark:text-white transition-opacity group-hover:opacity-80">
                 {dict.brandName}
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 bg-zinc-100 dark:bg-zinc-900 px-1.5 py-0.5 rounded-sm">
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 bg-zinc-100 dark:bg-zinc-850 px-1.5 py-0.5 rounded-sm">
                 AI
               </span>
             </Link>
           </div>
 
-          {/* Desktop Navigation - Mathematically Centered */}
-          <nav className="hidden md:flex items-center space-x-1 absolute left-1/2 -translate-x-1/2">
+          {/* Desktop Navigation - Mathematically Centered via Equal Flex Wings */}
+          <nav className="hidden md:flex items-center space-x-1 shrink-0 px-2">
             {primaryNavItems.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
@@ -112,17 +112,17 @@ export function Header({ locale }: HeaderProps) {
             })}
           </nav>
 
-          {/* Right Action Cluster - Clean Borderless Utility Bar */}
-          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+          {/* Right Action Cluster - Right Column (flex-1 guarantees center alignment) */}
+          <div className="flex items-center justify-end flex-1 gap-1.5 sm:gap-2 shrink-0">
             {/* Desktop Quick Search Trigger (Cmd+K) - Clean Minimalist Pill */}
             <button
               onClick={openSearch}
-              className="hidden sm:flex items-center gap-2 h-8.5 px-3 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 bg-zinc-100/80 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-full border-0 transition-colors w-32 lg:w-44 cursor-pointer text-left"
+              className="hidden sm:flex items-center gap-2 h-8.5 px-3 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 bg-zinc-100/80 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-full border-0 transition-colors cursor-pointer"
               aria-label="Search tools"
             >
               <Search className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
-              <span className="truncate">{dict.nav.searchPlaceholder.slice(0, 14)}...</span>
-              <kbd className="ml-auto pointer-events-none inline-flex h-4 select-none items-center rounded bg-white dark:bg-zinc-800 px-1 font-mono text-[9px] font-medium text-zinc-400 shadow-2xs">
+              <span className="hidden xl:inline text-xs truncate max-w-[80px]">Search...</span>
+              <kbd className="pointer-events-none inline-flex h-4 select-none items-center rounded bg-white dark:bg-zinc-800 px-1 font-mono text-[9px] font-medium text-zinc-400 shadow-2xs">
                 ⌘K
               </kbd>
             </button>
@@ -130,19 +130,19 @@ export function Header({ locale }: HeaderProps) {
             {/* Mobile search icon - Borderless */}
             <button
               onClick={openSearch}
-              className="sm:hidden flex h-9 w-9 items-center justify-center rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+              className="sm:hidden flex h-8.5 w-8.5 items-center justify-center rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               aria-label="Open search modal"
             >
               <Search className="h-4 w-4" />
             </button>
 
             {/* Theme Toggle (Light / Dark - Borderless) */}
-            <ThemeToggle />
+            <ThemeToggle className="h-8.5 w-8.5 rounded-full" />
 
             {/* Language Switcher - Borderless */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 h-9 px-2.5 text-xs font-semibold rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors active:scale-95 cursor-pointer"
+              className="flex items-center gap-1 h-8.5 px-2.5 text-xs font-semibold rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors active:scale-95 cursor-pointer"
               title="Switch Language"
             >
               <Globe className="h-3.5 w-3.5 text-zinc-400" />
@@ -153,7 +153,7 @@ export function Header({ locale }: HeaderProps) {
             <Link
               href={`/${locale}/membership`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-8.5 px-4 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
+              className="hidden sm:inline-flex items-center justify-center h-8.5 px-3.5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
             >
               {locale === "vi" ? "Gói Pro" : "Get Pro"}
             </Link>
@@ -161,7 +161,7 @@ export function Header({ locale }: HeaderProps) {
             {/* Mobile Menu Hamburger - Borderless */}
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="md:hidden flex h-9 w-9 items-center justify-center rounded-md border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+              className="md:hidden flex h-8.5 w-8.5 items-center justify-center rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
