@@ -83,8 +83,8 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
       <div className="container mx-auto px-4 sm:px-6 max-w-5xl space-y-16">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-bold text-brand-600 dark:text-brand-400">
-            <Zap className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 px-3.5 py-1 text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+            <Zap className="h-3.5 w-3.5 text-zinc-700 dark:text-zinc-300" />
             <span>Community Attribution Engine</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-foreground">
@@ -98,7 +98,7 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
         {/* Pricing Cards Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
           {/* Standard Free Tier */}
-          <div className="flex flex-col justify-between rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <div className="flex flex-col justify-between rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 p-8 shadow-sm">
             <div className="space-y-6">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
@@ -127,7 +127,7 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
                 <ul className="space-y-2.5 text-xs text-muted-foreground">
                   {dict.membership.standardFeatures.map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <Check className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <Check className="h-4 w-4 text-zinc-900 dark:text-zinc-100 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -138,52 +138,52 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
             <div className="pt-8">
               <Link
                 href={`/${locale}/account`}
-                className="w-full inline-flex items-center justify-center h-11 px-4 text-sm font-bold rounded-xl border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+                className="w-full inline-flex items-center justify-center h-12 px-6 text-sm font-semibold rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-foreground transition-colors shadow-sm"
               >
                 {dict.membership.standardCta}
               </Link>
             </div>
           </div>
 
-          {/* Pro Tier ($29/mo) */}
-          <div className="relative flex flex-col justify-between rounded-2xl border-2 border-brand-500 bg-card p-8 shadow-xl">
+          {/* Pro Tier ($29/mo) - Apple Luxury Contrast */}
+          <div className="relative flex flex-col justify-between rounded-3xl border border-zinc-900 dark:border-zinc-700 bg-zinc-950 text-white dark:bg-zinc-900 dark:text-white p-8 shadow-2xl">
             {/* Best Value Ribbon */}
-            <div className="absolute -top-3.5 right-6 rounded-full bg-brand-600 px-3.5 py-1 text-[11px] font-black uppercase tracking-wider text-white shadow-sm">
+            <div className="absolute -top-3.5 right-6 rounded-full bg-white dark:bg-zinc-100 px-3.5 py-1 text-[11px] font-black uppercase tracking-wider text-zinc-950 shadow-md">
               Most Popular
             </div>
 
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-zinc-400">
                   Full Powerhouse
                 </span>
-                <h3 className="text-2xl font-black text-foreground mt-1">
+                <h3 className="text-2xl font-black text-white mt-1">
                   {dict.membership.proName}
                 </h3>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="text-4xl font-extrabold text-foreground">
+                  <span className="text-4xl font-extrabold text-white">
                     {dict.membership.proPrice}
                   </span>
-                  <span className="text-sm font-semibold text-brand-600 dark:text-brand-400">
+                  <span className="text-sm font-semibold text-zinc-300">
                     ({dict.membership.proVnd})
                   </span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm text-zinc-400">
                     {dict.membership.proPeriod}
                   </span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">
+                <p className="text-xs text-zinc-400 mt-2">
                   {isVi ? "Dành cho agency, blogger chuyên nghiệp và đội ngũ làm affiliate quy mô lớn." : "Engineered for growth agencies, professional bloggers, and media publishers."}
                 </p>
               </div>
 
-              <div className="border-t border-border pt-6 space-y-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-foreground block">
+              <div className="border-t border-zinc-800 pt-6 space-y-3">
+                <span className="text-xs font-bold uppercase tracking-wider text-zinc-200 block">
                   Everything in Standard, plus:
                 </span>
-                <ul className="space-y-2.5 text-xs text-foreground/90 font-medium">
+                <ul className="space-y-2.5 text-xs text-zinc-300 font-medium">
                   {dict.membership.proFeatures.map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
-                      <Check className="h-4 w-4 text-brand-500 shrink-0 mt-0.5" />
+                      <Check className="h-4 w-4 text-white shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -194,13 +194,13 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
             <div className="pt-8 space-y-3">
               <Link
                 href={`/${locale}/account/billing`}
-                className="w-full inline-flex items-center justify-center h-11 px-4 text-sm font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-md hover:shadow-lg"
+                className="w-full inline-flex items-center justify-center h-12 px-6 text-sm font-bold rounded-full bg-white hover:bg-zinc-200 text-zinc-950 transition-all shadow-md"
               >
                 <QrCode className="h-4 w-4 mr-2" />
                 {dict.membership.proCta}
               </Link>
-              <div className="flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
-                <Shield className="h-3.5 w-3.5 text-emerald-500" />
+              <div className="flex items-center justify-center gap-1.5 text-[11px] text-zinc-400">
+                <Shield className="h-3.5 w-3.5 text-zinc-300" />
                 <span>14-day 100% money-back guarantee • Instant SePay activation</span>
               </div>
             </div>
@@ -220,9 +220,9 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="rounded-xl border border-border bg-card p-5 space-y-2">
+              <div key={idx} className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 space-y-2 shadow-sm">
                 <h4 className="font-bold text-sm text-foreground flex items-center gap-2">
-                  <HelpCircle className="h-4 w-4 text-brand-600 shrink-0" />
+                  <HelpCircle className="h-4 w-4 text-zinc-500 shrink-0" />
                   {faq.q}
                 </h4>
                 <p className="text-xs text-muted-foreground leading-relaxed pl-6">

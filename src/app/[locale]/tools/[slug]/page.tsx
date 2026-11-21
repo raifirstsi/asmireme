@@ -151,32 +151,32 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             <span className="text-foreground font-semibold">{tool.name}</span>
           </nav>
 
-          {/* Hero Header */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-border">
-            <div className="space-y-3">
-              <div className="flex items-center gap-2.5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500/10 to-teal-500/20 text-brand-700 dark:text-brand-300 font-black text-2xl border border-brand-500/20">
+          {/* Hero Header - Apple Minimalist */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-zinc-800">
+            <div className="space-y-3.5">
+              <div className="flex items-center gap-3">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-2xl border border-zinc-200/80 dark:border-zinc-700/80 shadow-xs">
                   {tool.name.charAt(0)}
                 </div>
                 <div>
-                  <h1 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+                  <h1 className="text-2xl sm:text-4xl font-bold text-zinc-950 dark:text-zinc-50 tracking-tight">
                     {tool.name}
                   </h1>
                   <div className="flex items-center gap-2 text-xs mt-1">
-                    <span className="flex items-center font-bold text-amber-500">
-                      <Star className="h-4 w-4 fill-current mr-1" />
+                    <span className="flex items-center font-semibold text-zinc-900 dark:text-zinc-100">
+                      <Star className="h-3.5 w-3.5 fill-zinc-900 dark:fill-zinc-100 text-zinc-900 dark:text-zinc-100 mr-1" />
                       {tool.rating} / 5.0
                     </span>
-                    <span className="text-muted-foreground">({tool.reviewCount.toLocaleString()} reviews)</span>
-                    <span className="text-muted-foreground">•</span>
-                    <span className="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded">
-                      <ShieldCheck className="h-3.5 w-3.5 mr-1" />
+                    <span className="text-zinc-400">({tool.reviewCount.toLocaleString()} reviews)</span>
+                    <span className="text-zinc-300 dark:text-zinc-700">•</span>
+                    <span className="flex items-center text-zinc-700 dark:text-zinc-300 font-medium bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-full border border-zinc-200/50 dark:border-zinc-700/50">
+                      <ShieldCheck className="h-3 w-3 mr-1" />
                       Verified
                     </span>
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl font-normal">
                 {tool.tagline[locale as Locale]}
               </p>
             </div>
@@ -187,27 +187,27 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                 href={`/go/${tool.slug}`}
                 target="_blank"
                 rel="nofollow sponsored"
-                className="w-full inline-flex items-center justify-center h-12 px-6 text-sm font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-md hover:shadow-lg"
+                className="w-full inline-flex items-center justify-center h-11 px-6 text-xs sm:text-sm font-semibold rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black transition-all shadow-sm active:scale-95"
               >
                 <span>{isVi ? "Dùng Thử Miễn Phí" : "Try Free / Visit"}</span>
-                <ExternalLink className="h-4 w-4 ml-2" />
+                <ExternalLink className="h-3.5 w-3.5 ml-1.5" />
               </a>
-              <div className="text-[11px] text-center text-muted-foreground">
+              <div className="text-[11px] text-center text-zinc-400">
                 Official website link • Starts ${tool.startingPrice}/mo
               </div>
             </div>
           </div>
 
-          {/* GEO / AEO Direct Answer Box (40-60 Words) */}
-          <div className="p-5 sm:p-6 rounded-2xl border border-brand-500/40 bg-brand-500/5 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
+          {/* GEO / AEO Direct Answer Box (Apple Callout Card) */}
+          <div className="p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 space-y-2.5 shadow-2xs">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Sparkles className="h-4 w-4" />
               Direct Editorial Answer (TL;DR)
             </span>
-            <p className="text-sm font-medium text-foreground leading-relaxed">
+            <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 leading-relaxed">
               {tool.directAnswer[locale as Locale]}
             </p>
-            <div className="pt-2 flex items-center gap-2 text-[11px] text-muted-foreground">
+            <div className="pt-2 flex items-center gap-2 text-[11px] text-zinc-400">
               <Calendar className="h-3.5 w-3.5" />
               <span>Verified on {tool.verifiedAt} by Asmire Benchmark Team</span>
             </div>
@@ -215,22 +215,22 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
           {/* Verdict Snapshot Card (Above the fold) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-5 rounded-xl border border-emerald-500/30 bg-emerald-500/5 space-y-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
-                <Check className="h-4 w-4" />
+            <div className="p-5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-2 shadow-2xs">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
+                <Check className="h-4 w-4 text-zinc-700 dark:text-zinc-300" />
                 Best For
               </h3>
-              <p className="text-xs text-foreground/90 leading-relaxed">
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 {tool.verdict.bestFor[locale as Locale]}
               </p>
             </div>
 
-            <div className="p-5 rounded-xl border border-rose-500/30 bg-rose-500/5 space-y-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400 flex items-center gap-1.5">
-                <X className="h-4 w-4" />
+            <div className="p-5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-2 shadow-2xs">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
+                <X className="h-4 w-4 text-zinc-500" />
                 Who It Is NOT For
               </h3>
-              <p className="text-xs text-foreground/90 leading-relaxed">
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 {tool.verdict.notFor[locale as Locale]}
               </p>
             </div>
@@ -238,32 +238,32 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
           {/* Pros & Cons (Genuine Drawbacks) */}
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-foreground">
+            <h2 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
               {isVi ? "Ưu & Nhược Điểm Thực Tế" : "Honest Pros & Real Limitations"}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 rounded-xl border border-border bg-card space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+              <div className="p-5.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3 shadow-2xs">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
                   Key Advantages
                 </h4>
-                <ul className="space-y-2 text-xs text-foreground/90">
+                <ul className="space-y-2.5 text-xs text-zinc-700 dark:text-zinc-300">
                   {tool.pros[locale as Locale].map((pro, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <Check className="h-3.5 w-3.5 text-zinc-900 dark:text-zinc-100 shrink-0 mt-0.5" />
                       <span>{pro}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="p-5 rounded-xl border border-border bg-card space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
+              <div className="p-5.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3 shadow-2xs">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
                   Documented Drawbacks
                 </h4>
-                <ul className="space-y-2 text-xs text-foreground/90">
+                <ul className="space-y-2.5 text-xs text-zinc-500 dark:text-zinc-400">
                   {tool.cons[locale as Locale].map((con, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <X className="h-4 w-4 text-rose-500 shrink-0 mt-0.5" />
+                      <X className="h-3.5 w-3.5 text-zinc-400 shrink-0 mt-0.5" />
                       <span>{con}</span>
                     </li>
                   ))}
@@ -494,6 +494,23 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Sticky Mobile Action Bar - Apple Mobile Luxury Experience */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/90 dark:bg-black/90 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+        <div className="min-w-0 pl-1">
+          <span className="font-semibold text-xs text-zinc-900 dark:text-zinc-100 block truncate">{tool.name}</span>
+          <span className="text-[11px] text-zinc-400 font-medium">From ${tool.startingPrice}/mo</span>
+        </div>
+        <a
+          href={`/go/${tool.slug}`}
+          target="_blank"
+          rel="nofollow sponsored"
+          className="inline-flex items-center justify-center h-9 px-4.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-semibold shadow-xs shrink-0 active:scale-95 transition-transform"
+        >
+          <span>{isVi ? "Dùng Thử Miễn Phí" : "Try Free"}</span>
+          <ExternalLink className="h-3 w-3 ml-1" />
+        </a>
       </div>
     </>
   );

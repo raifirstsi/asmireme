@@ -158,7 +158,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
 
           {/* Hero Header */}
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">
               <ArrowLeftRight className="h-4 w-4" />
               <span>{pair.category} • Head-to-Head Comparison</span>
             </div>
@@ -173,21 +173,21 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
           {/* Quick Duel Comparison Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Tool A */}
-            <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm flex flex-col justify-between space-y-6">
+            <div className="relative rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-6">
               {pair.winnerOverall === "A" && (
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 text-[11px] font-bold text-amber-600 dark:text-amber-400">
+                <div className="absolute top-5 right-5 inline-flex items-center gap-1 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 px-3 py-1 text-[11px] font-bold shadow-xs">
                   <Trophy className="h-3 w-3" />
                   <span>Category Winner</span>
                 </div>
               )}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary font-black text-xl">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-foreground font-black text-xl border border-border">
                     {toolA.name.charAt(0)}
                   </div>
                   <div>
                     <h2 className="text-xl font-black text-foreground">{toolA.name}</h2>
-                    <div className="flex items-center gap-1 text-xs text-amber-500 font-bold">
+                    <div className="flex items-center gap-1 text-xs text-foreground font-bold">
                       <Star className="h-3.5 w-3.5 fill-current" />
                       <span>{toolA.rating} / 5.0</span>
                       <span className="text-muted-foreground font-normal">({toolA.reviewCount} reviews)</span>
@@ -198,7 +198,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
                   {toolA.tagline[locale as Locale]}
                 </p>
                 <div className="text-xs font-semibold text-foreground pt-1">
-                  Starting at <span className="font-bold text-brand-600">${toolA.startingPrice}/mo</span>
+                  Starting at <span className="font-bold text-foreground">${toolA.startingPrice}/mo</span>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
                   href={`/go/${toolA.slug}`}
                   target="_blank"
                   rel="nofollow sponsored"
-                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-xs transition-colors shadow-sm"
                 >
                   <span>Visit {toolA.name}</span>
                   <ExternalLink className="h-3.5 w-3.5" />
@@ -216,21 +216,21 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
             </div>
 
             {/* Tool B */}
-            <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm flex flex-col justify-between space-y-6">
+            <div className="relative rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-6">
               {pair.winnerOverall === "B" && (
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 rounded-full bg-amber-500/10 border border-amber-500/30 px-2.5 py-0.5 text-[11px] font-bold text-amber-600 dark:text-amber-400">
+                <div className="absolute top-5 right-5 inline-flex items-center gap-1 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 px-3 py-1 text-[11px] font-bold shadow-xs">
                   <Trophy className="h-3 w-3" />
                   <span>Category Winner</span>
                 </div>
               )}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary font-black text-xl">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-foreground font-black text-xl border border-border">
                     {toolB.name.charAt(0)}
                   </div>
                   <div>
                     <h2 className="text-xl font-black text-foreground">{toolB.name}</h2>
-                    <div className="flex items-center gap-1 text-xs text-amber-500 font-bold">
+                    <div className="flex items-center gap-1 text-xs text-foreground font-bold">
                       <Star className="h-3.5 w-3.5 fill-current" />
                       <span>{toolB.rating} / 5.0</span>
                       <span className="text-muted-foreground font-normal">({toolB.reviewCount} reviews)</span>
@@ -241,7 +241,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
                   {toolB.tagline[locale as Locale]}
                 </p>
                 <div className="text-xs font-semibold text-foreground pt-1">
-                  Starting at <span className="font-bold text-brand-600">${toolB.startingPrice}/mo</span>
+                  Starting at <span className="font-bold text-foreground">${toolB.startingPrice}/mo</span>
                 </div>
               </div>
 
@@ -250,7 +250,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
                   href={`/go/${toolB.slug}`}
                   target="_blank"
                   rel="nofollow sponsored"
-                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs transition-colors shadow-sm"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-xs transition-colors shadow-sm"
                 >
                   <span>Visit {toolB.name}</span>
                   <ExternalLink className="h-3.5 w-3.5" />
@@ -260,8 +260,8 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
           </div>
 
           {/* GEO / AEO Direct Answer Box (40-60 Words Citation Target) */}
-          <div className="p-6 rounded-2xl border border-brand-500/40 bg-brand-500/5 space-y-2.5">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
+          <div className="p-6 sm:p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 space-y-2.5 shadow-sm">
+            <span className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Sparkles className="h-4 w-4" />
               <span>Direct Editorial Verdict (TL;DR)</span>
             </span>
@@ -275,22 +275,22 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
 
           {/* Personas: Who Should Choose A vs Who Should Choose B */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 space-y-3">
-              <h3 className="text-sm font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
-                <Check className="h-4 w-4 text-emerald-600" />
+            <div className="p-6 sm:p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card space-y-3 shadow-xs">
+              <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
+                <Check className="h-4 w-4 text-zinc-900 dark:text-zinc-100" />
                 <span>Who Should Choose {toolA.name}</span>
               </h3>
-              <p className="text-xs text-foreground/90 leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 {pair.whoShouldChooseA[locale as Locale]}
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-blue-500/30 bg-blue-500/5 space-y-3">
-              <h3 className="text-sm font-bold text-blue-800 dark:text-blue-300 flex items-center gap-2">
-                <Check className="h-4 w-4 text-blue-600" />
+            <div className="p-6 sm:p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card space-y-3 shadow-xs">
+              <h3 className="text-sm font-bold text-foreground flex items-center gap-2">
+                <Check className="h-4 w-4 text-zinc-900 dark:text-zinc-100" />
                 <span>Who Should Choose {toolB.name}</span>
               </h3>
-              <p className="text-xs text-foreground/90 leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 {pair.whoShouldChooseB[locale as Locale]}
               </p>
             </div>

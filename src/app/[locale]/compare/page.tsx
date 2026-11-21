@@ -43,7 +43,7 @@ export default async function ComparePage({ params, searchParams }: ComparePageP
     <div className="py-10 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl space-y-8">
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">
             <ArrowLeftRight className="h-4 w-4" />
             <span>Interactive Multi-Tool Matrix</span>
           </div>
@@ -79,13 +79,13 @@ export default async function ComparePage({ params, searchParams }: ComparePageP
               <Link
                 key={pair.slug}
                 href={`/${locale}/compare/${pair.slug}`}
-                className="rounded-2xl border border-border bg-card p-6 hover:border-brand-500/50 hover:shadow-sm transition-all group flex flex-col justify-between space-y-4"
+                className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 sm:p-7 hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-md transition-all group flex flex-col justify-between space-y-4"
               >
                 <div className="space-y-2">
-                  <span className="text-[11px] font-bold text-brand-600 uppercase tracking-wider block">
+                  <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider block">
                     {pair.category}
                   </span>
-                  <h3 className="text-base font-bold text-foreground group-hover:text-brand-600 transition-colors">
+                  <h3 className="text-base font-bold text-foreground group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                     {pair.title[locale as Locale]}
                   </h3>
                   <p className="text-xs text-muted-foreground line-clamp-2">
@@ -93,7 +93,7 @@ export default async function ComparePage({ params, searchParams }: ComparePageP
                   </p>
                 </div>
 
-                <div className="flex items-center text-xs font-bold text-brand-600 group-hover:translate-x-1 transition-transform">
+                <div className="flex items-center text-xs font-bold text-foreground group-hover:translate-x-1 transition-transform">
                   <span>{isVi ? "Xem chi tiết so sánh" : "Read full comparison"}</span>
                   <span className="ml-1">→</span>
                 </div>

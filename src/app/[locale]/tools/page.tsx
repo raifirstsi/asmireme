@@ -28,7 +28,7 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
       <div className="container mx-auto px-4 sm:px-6 space-y-8">
         {/* Header */}
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">
             <Layers className="h-4 w-4" />
             <span>50 Production AI Solutions</span>
           </div>

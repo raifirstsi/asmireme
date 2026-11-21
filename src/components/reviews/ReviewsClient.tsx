@@ -130,19 +130,19 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
 
   return (
     <div className="space-y-8">
-      {/* Real-Time Status & Ingestion Monitor Banner */}
-      <div className="rounded-2xl border border-brand-500/30 bg-gradient-to-r from-brand-500/10 via-teal-500/5 to-card p-6 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      {/* Real-Time Status & Ingestion Monitor Banner - Apple Minimalist */}
+      <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 p-6 shadow-2xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div className="space-y-1.5">
           <div className="flex items-center gap-2">
-            <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[11px] font-semibold text-zinc-800 dark:text-zinc-200 uppercase tracking-wider">
               {isVi ? "Hệ thống đồng bộ tự động 10h/lần đang hoạt động" : "10-Hour Automated Ingestion Active"}
             </span>
           </div>
-          <h2 className="text-xl font-black text-foreground">
+          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
             {isVi ? "200+ Đánh Giá Độc Lập Từ Product Hunt, G2, Trustpilot & Reddit" : "200+ Multi-Platform Community Reviews & Verified Scores"}
           </h2>
-          <p className="text-xs text-muted-foreground max-w-2xl">
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 max-w-2xl font-normal leading-relaxed">
             {isVi
               ? "Dữ liệu được cập nhật tự động mỗi 10 giờ từ các nền tảng đánh giá phần mềm uy tín. Không có đánh giá ảo hoặc tài trợ."
               : "Empirical practitioner sentiment gathered across 5 major software review hubs. Filtered for genuine user feedback, pros, and cons."}
@@ -151,31 +151,31 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
 
         <button
           onClick={() => setModalOpen(true)}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs shadow-sm hover:shadow transition-all shrink-0 cursor-pointer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black font-semibold text-xs shadow-xs transition-all shrink-0 cursor-pointer active:scale-95"
         >
           <Plus className="h-4 w-4" />
           <span>{isVi ? "Đóng góp đánh giá" : "Submit a Review"}</span>
         </button>
       </div>
 
-      {/* Search & Comprehensive Filters */}
+      {/* Search & Comprehensive Filters - Apple Minimalist */}
       <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         {/* Search input */}
         <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={isVi ? "Tìm theo tên công cụ, tác giả, nhận xét..." : "Search by tool, reviewer, sentiment..."}
-            className="w-full h-11 pl-10 pr-10 rounded-xl border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+            className="w-full h-10 pl-10 pr-10 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 shadow-2xs"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-zinc-400 hover:text-black dark:hover:text-white"
             >
-              <X className="h-4 w-4" />
+              <X className="h-3.5 w-3.5" />
             </button>
           )}
         </div>
@@ -186,7 +186,7 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
           <select
             value={selectedTool}
             onChange={(e) => setSelectedTool(e.target.value)}
-            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none cursor-pointer"
+            className="h-10 px-3.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs font-medium text-zinc-800 dark:text-zinc-200 focus:outline-none cursor-pointer shadow-2xs"
           >
             <option value="all">{isVi ? "Tất cả 50 công cụ" : "All 50 Tools"}</option>
             {TOOLS_DATA.map((t) => (
@@ -200,7 +200,7 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
           <select
             value={selectedPlatform}
             onChange={(e) => setSelectedPlatform(e.target.value)}
-            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none cursor-pointer"
+            className="h-10 px-3.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs font-medium text-zinc-800 dark:text-zinc-200 focus:outline-none cursor-pointer shadow-2xs"
           >
             <option value="all">{isVi ? "Tất cả nền tảng" : "All Platforms"}</option>
             <option value="PRODUCT_HUNT">Product Hunt</option>
@@ -214,7 +214,7 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
           <select
             value={selectedRating}
             onChange={(e) => setSelectedRating(e.target.value)}
-            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none cursor-pointer"
+            className="h-10 px-3.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs font-medium text-zinc-800 dark:text-zinc-200 focus:outline-none cursor-pointer shadow-2xs"
           >
             <option value="all">{isVi ? "Mọi điểm số" : "All Ratings"}</option>
             <option value="5">5 Stars Only</option>

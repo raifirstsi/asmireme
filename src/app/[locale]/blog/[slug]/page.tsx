@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/data/blog-data";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { MarkdownRenderer } from "@/components/common/MarkdownRenderer";
 import { 
   Calendar, Clock, ShieldCheck, Sparkles, ArrowLeft, 
   ExternalLink, Check, ArrowRight, Share2, BookOpen 
@@ -128,33 +129,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Article Header */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-xs">
-              <span className="font-bold text-brand-600 uppercase tracking-wider bg-brand-500/10 px-2.5 py-0.5 rounded-full border border-brand-500/20">
+              <span className="font-semibold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full border border-zinc-200/60 dark:border-zinc-700/60">
                 {post.category}
               </span>
-              <span className="text-muted-foreground">•</span>
-              <span className="flex items-center gap-1 text-muted-foreground">
+              <span className="text-zinc-400">•</span>
+              <span className="flex items-center gap-1 text-zinc-500 dark:text-zinc-400">
                 <Clock className="h-3.5 w-3.5" />
                 <span>{post.readingTimeMinutes} min read</span>
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-foreground tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-bold text-zinc-950 dark:text-zinc-50 tracking-tight leading-tight">
               {post.title[locale as Locale]}
             </h1>
 
-            <p className="text-base text-muted-foreground leading-relaxed">
+            <p className="text-base text-zinc-500 dark:text-zinc-400 leading-relaxed font-normal">
               {post.metaDescription[locale as Locale]}
             </p>
 
             {/* Author Bar & EEAT Verification */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-border text-xs text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-xs text-zinc-500">
               <div className="flex items-center gap-3">
-                <div className="h-9 w-9 rounded-full bg-secondary flex items-center justify-center font-bold text-foreground border border-border">
+                <div className="h-9 w-9 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center font-bold text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-750">
                   {post.author.name.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">{post.author.name}</div>
-                  <div className="text-[11px] text-muted-foreground">{post.author.role}</div>
+                  <div className="font-semibold text-zinc-900 dark:text-zinc-100">{post.author.name}</div>
+                  <div className="text-[11px] text-zinc-400">{post.author.role}</div>
                 </div>
               </div>
 
@@ -163,10 +164,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Calendar className="h-3.5 w-3.5" />
                   <span>Updated: {post.lastReviewedDate}</span>
                 </span>
-                <span className="text-muted-foreground">•</span>
+                <span className="text-zinc-300 dark:text-zinc-700">•</span>
                 <Link
                   href={`/${locale}/editorial-policy`}
-                  className="flex items-center gap-1 text-emerald-600 font-semibold hover:underline"
+                  className="flex items-center gap-1 text-zinc-700 dark:text-zinc-300 font-medium hover:underline"
                 >
                   <ShieldCheck className="h-3.5 w-3.5" />
                   <span>Verified Review</span>
@@ -175,33 +176,31 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
 
-          {/* GEO / AEO Direct Answer Box (40-60 Words Citation Target) */}
-          <div className="p-6 rounded-2xl border border-brand-500/40 bg-brand-500/5 space-y-2.5">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
+          {/* GEO / AEO Direct Answer Box (Apple Callout Card) */}
+          <div className="p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 space-y-2.5 shadow-2xs">
+            <span className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Sparkles className="h-4 w-4" />
               <span>Direct Takeaway / AI Overview Summary</span>
             </span>
-            <p className="text-sm sm:text-base font-semibold text-foreground leading-relaxed">
+            <p className="text-sm sm:text-base font-medium text-zinc-900 dark:text-zinc-100 leading-relaxed">
               {post.directAnswerSummary[locale as Locale]}
             </p>
           </div>
 
-          {/* Main Article Body */}
-          <div className="prose prose-base dark:prose-invert max-w-none space-y-6 leading-relaxed text-foreground/90">
-            <div className="whitespace-pre-line text-sm sm:text-base">
-              {post.contentMarkdown[locale as Locale]}
-            </div>
+          {/* Main Article Body - Rendered with Apple Markdown Engine */}
+          <div className="space-y-4">
+            <MarkdownRenderer content={post.contentMarkdown[locale as Locale]} />
           </div>
 
           {/* Featured Tools Mentioned in This Guide */}
           {mentionedTools.length > 0 && (
-            <div className="border-t border-border pt-10 space-y-6">
+            <div className="border-t border-zinc-200 dark:border-zinc-800 pt-10 space-y-6">
               <div className="space-y-1">
-                <h3 className="text-xl font-black text-foreground">
+                <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                   {isVi ? "Các Công Cụ Được Nhắc Đến Trong Bài" : "Featured Tools Mentioned in This Guide"}
                 </h3>
-                <p className="text-xs text-muted-foreground">
-                  {isVi ? "Kiểm tra bảng giá và dùng thử các công cụ hàng đầu:" : "Explore verified specs and direct official links:"}
+                <p className="text-xs text-zinc-400">
+                  {isVi ? "Kiểm tra thông số xác thực và truy cập link trực tiếp:" : "Explore verified specs and direct official links:"}
                 </p>
               </div>
 
@@ -209,31 +208,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {mentionedTools.map((tool) => (
                   <div
                     key={tool.slug}
-                    className="p-5 rounded-2xl border border-border bg-card flex flex-col justify-between space-y-4 shadow-xs"
+                    className="p-5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] flex flex-col justify-between space-y-4 shadow-xs"
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <h4 className="font-bold text-base text-foreground">{tool.name}</h4>
-                        <span className="text-xs font-bold text-brand-600">${tool.startingPrice}/mo</span>
+                        <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100">{tool.name}</h4>
+                        <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">${tool.startingPrice}/mo</span>
                       </div>
-                      <p className="text-xs text-muted-foreground line-clamp-2">
+                      <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2">
                         {tool.tagline[locale as Locale]}
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-850">
                       <Link
                         href={`/${locale}/tools/${tool.slug}`}
-                        className="text-xs font-bold text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
                       >
                         {isVi ? "Xem đánh giá" : "Full Review"}
                       </Link>
-                      <span className="text-muted-foreground">•</span>
                       <a
                         href={`/go/${tool.slug}`}
                         target="_blank"
                         rel="nofollow sponsored"
-                        className="inline-flex items-center gap-1 text-xs font-bold text-brand-600 hover:text-brand-700"
+                        className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black text-xs font-medium transition-all shadow-xs"
                       >
                         <span>{isVi ? "Dùng thử" : "Try Free"}</span>
                         <ExternalLink className="h-3 w-3" />
@@ -246,10 +244,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           )}
 
           {/* Bottom Navigation */}
-          <div className="border-t border-border pt-8 flex items-center justify-between">
+          <div className="border-t border-zinc-200 dark:border-zinc-800 pt-8 flex items-center justify-between">
             <Link
               href={`/${locale}/blog`}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               <span>{isVi ? "Quay lại danh sách bài viết" : "Back to all guides"}</span>
@@ -257,7 +255,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <Link
               href={`/${locale}/compare`}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 hover:underline"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline"
             >
               <span>{isVi ? "Xem ma trận so sánh công cụ" : "View Comparison Matrix"}</span>
               <ArrowRight className="h-3.5 w-3.5" />

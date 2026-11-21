@@ -101,30 +101,35 @@ export function ComparisonMatrix({ initialTools, locale }: ComparisonMatrixProps
         </div>
       </div>
 
-      {/* Responsive Comparison Grid / Table */}
-      <div className="rounded-2xl border border-border bg-card overflow-x-auto shadow-xs">
+      {/* Mobile Swipe Hint */}
+      <div className="sm:hidden flex items-center justify-center gap-1.5 py-1 text-[11px] font-medium text-zinc-400">
+        <span>← {isVi ? "Vuốt ngang để so sánh tất cả công cụ" : "Swipe horizontally to compare all tools"} →</span>
+      </div>
+
+      {/* Responsive Comparison Grid / Table - Apple Minimalist */}
+      <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] overflow-x-auto shadow-xs">
         <table className="w-full text-left border-collapse min-w-[700px]">
           {/* Table Header: Tools */}
           <thead>
-            <tr className="border-b border-border bg-muted/40">
-              <th className="p-4 w-48 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            <tr className="border-b border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-900">
+              <th className="p-4 w-48 text-xs font-semibold uppercase tracking-wider text-zinc-400">
                 Software Feature
               </th>
               {selectedTools.map((tool) => (
-                <th key={tool.id} className="p-4 align-top w-64 border-l border-border">
+                <th key={tool.id} className="p-4 align-top w-64 border-l border-zinc-200/80 dark:border-zinc-800/80">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-500/10 text-brand-700 dark:text-brand-300 font-black text-sm border border-brand-500/20">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-sm border border-zinc-200/60 dark:border-zinc-700/60">
                         {tool.name.charAt(0)}
                       </div>
                       <div>
                         <Link
                           href={`/${locale}/tools/${tool.slug}`}
-                          className="font-bold text-sm text-foreground hover:text-brand-600 transition-colors line-clamp-1"
+                          className="font-semibold text-sm text-zinc-900 dark:text-zinc-100 hover:text-black dark:hover:text-white transition-colors line-clamp-1"
                         >
                           {tool.name}
                         </Link>
-                        <span className="text-xs font-extrabold text-foreground block">
+                        <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100 block">
                           ${tool.startingPrice}/mo
                         </span>
                       </div>
@@ -133,7 +138,7 @@ export function ComparisonMatrix({ initialTools, locale }: ComparisonMatrixProps
                     {selectedTools.length > 2 && (
                       <button
                         onClick={() => removeTool(tool.slug)}
-                        className="p-1 text-muted-foreground hover:text-destructive rounded transition-colors"
+                        className="p-1 text-zinc-400 hover:text-rose-500 rounded transition-colors"
                         title="Remove tool from comparison"
                       >
                         <Trash2 className="h-3.5 w-3.5" />
@@ -145,7 +150,7 @@ export function ComparisonMatrix({ initialTools, locale }: ComparisonMatrixProps
                     href={`/go/${tool.slug}`}
                     target="_blank"
                     rel="nofollow sponsored"
-                    className="mt-3 w-full inline-flex items-center justify-center h-8 text-xs font-bold rounded-lg bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-xs"
+                    className="mt-3.5 w-full inline-flex items-center justify-center h-8 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black transition-all shadow-xs"
                   >
                     <span>Visit {tool.name}</span>
                     <ExternalLink className="h-3 w-3 ml-1" />

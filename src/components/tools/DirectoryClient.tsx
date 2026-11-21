@@ -114,16 +114,16 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
 
   return (
     <div className="space-y-8">
-      {/* Search & Top Action Bar */}
+      {/* Search & Top Action Bar - Apple Minimalist */}
       <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
           <input
             type="text"
             value={query}
             onChange={(e) => handleQueryChange(e.target.value)}
             placeholder={locale === "vi" ? "Tìm nhanh 50 công cụ AI..." : "Search across all 50 AI tools..."}
-            className="w-full h-11 pl-10 pr-10 rounded-xl border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500"
+            className="w-full h-10 pl-10 pr-10 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 shadow-2xs"
           />
           {query && (
             <button
@@ -131,22 +131,22 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
                 setQuery("");
                 updateParams({ q: null });
               }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground hover:text-foreground active:scale-95"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-zinc-400 hover:text-black dark:hover:text-white active:scale-95 transition-colors"
               aria-label="Clear search input"
             >
-              <X className="h-4 w-4" />
+              <X className="h-3.5 w-3.5" />
             </button>
           )}
         </div>
 
         {/* Sorting Dropdown */}
         <div className="flex items-center gap-2">
-          <ArrowUpDown className="h-4 w-4 text-muted-foreground shrink-0" />
-          <span className="text-xs font-semibold text-muted-foreground hidden sm:inline">Sort:</span>
+          <ArrowUpDown className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
+          <span className="text-xs font-medium text-zinc-400 hidden sm:inline">Sort:</span>
           <select
             value={sortBy}
             onChange={(e) => updateParams({ sort: e.target.value })}
-            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20 cursor-pointer"
+            className="h-10 px-3.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs font-medium text-zinc-800 dark:text-zinc-200 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 cursor-pointer shadow-2xs"
           >
             <option value="rating">Highest Editorial Rating</option>
             <option value="priceAsc">Price: Low to High</option>
@@ -158,26 +158,26 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           {(selectedHub !== "all" || selectedPriceTier !== "all" || freePlanOnly || freeTrialOnly || query) && (
             <button
               onClick={clearAllFilters}
-              className="flex items-center gap-1.5 h-11 px-3 text-xs font-semibold rounded-xl border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors active:scale-95 cursor-pointer"
+              className="flex items-center gap-1.5 h-10 px-3.5 text-xs font-medium rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 transition-colors active:scale-95 cursor-pointer"
               title="Reset all filters"
             >
-              <RotateCcw className="h-3.5 w-3.5 text-muted-foreground" />
+              <RotateCcw className="h-3 w-3 text-zinc-400" />
               <span className="hidden sm:inline">Reset</span>
             </button>
           )}
         </div>
       </div>
 
-      {/* Main Filter Chips & Pills */}
+      {/* Main Filter Chips & Pills - Apple Pill Aesthetic */}
       <div className="space-y-3">
-        {/* Hub Category Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none touch-pan-x">
+        {/* Hub Category Pills with Smooth Touch Scroll */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none touch-pan-x">
           <button
             onClick={() => updateParams({ hub: "all" })}
-            className={`px-3.5 py-2 rounded-xl text-xs font-bold shrink-0 transition-colors cursor-pointer active:scale-95 ${
+            className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
               selectedHub === "all"
-                ? "bg-brand-600 text-white shadow-xs"
-                : "bg-secondary/80 hover:bg-secondary text-foreground"
+                ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs"
+                : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
             }`}
           >
             All Categories ({initialTools.length})
@@ -186,10 +186,10 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             <button
               key={hub.slug}
               onClick={() => updateParams({ hub: hub.slug })}
-              className={`px-3.5 py-2 rounded-xl text-xs font-semibold shrink-0 transition-colors cursor-pointer active:scale-95 ${
+              className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
                 selectedHub === hub.slug
-                  ? "bg-brand-600 text-white shadow-xs"
-                  : "bg-secondary/80 hover:bg-secondary text-foreground"
+                  ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs"
+                  : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
               }`}
             >
               {hub.name[locale]} ({hub.count})
@@ -199,58 +199,58 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
 
         {/* Secondary Filter Badges: Price & Trials */}
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-muted-foreground font-semibold text-[11px] uppercase tracking-wider">
-            Pricing Filter:
+          <span className="text-zinc-400 font-medium text-[11px] uppercase tracking-wider">
+            Filter:
           </span>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "free" ? null : "free" })}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "free"
-                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
-                : "border-border bg-card text-muted-foreground hover:text-foreground"
+                ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
+                : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             }`}
           >
             Has Free Plan
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under20" ? null : "under20" })}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under20"
-                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
-                : "border-border bg-card text-muted-foreground hover:text-foreground"
+                ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
+                : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             }`}
           >
             Under $20/mo
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under50" ? null : "under50" })}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under50"
-                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
-                : "border-border bg-card text-muted-foreground hover:text-foreground"
+                ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
+                : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             }`}
           >
             Under $50/mo
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "50plus" ? null : "50plus" })}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "50plus"
-                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
-                : "border-border bg-card text-muted-foreground hover:text-foreground"
+                ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
+                : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             }`}
           >
             $50+/mo
           </button>
 
-          <span className="text-muted-foreground/40 mx-1">|</span>
+          <span className="text-zinc-300 dark:text-zinc-700 mx-0.5">•</span>
 
           <button
             onClick={() => updateParams({ freeTrial: freeTrialOnly ? null : "true" })}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
+            className={`px-3 py-1 rounded-full border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               freeTrialOnly
-                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
-                : "border-border bg-card text-muted-foreground hover:text-foreground"
+                ? "border-black bg-black text-white dark:border-white dark:bg-white dark:text-black font-semibold"
+                : "border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white"
             }`}
           >
             Free Trial Available

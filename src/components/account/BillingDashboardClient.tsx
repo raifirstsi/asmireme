@@ -190,9 +190,9 @@ export function BillingDashboardClient({
                   {status.isPro ? "Asmire Pro" : "Asmire Standard (Starter)"}
                 </h2>
                 <span
-                  className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${
+                  className={`text-[11px] font-bold px-3 py-1 rounded-full border ${
                     status.isPro
-                      ? "bg-brand-500/10 text-brand-600 border-brand-500/30"
+                      ? "bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 border-zinc-950 dark:border-white"
                       : "bg-secondary text-muted-foreground border-border"
                   }`}
                 >
@@ -201,8 +201,8 @@ export function BillingDashboardClient({
               </div>
             </div>
 
-            <div className="h-12 w-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary">
-              {status.isPro ? <Sparkles className="h-6 w-6 text-brand-600" /> : <Shield className="h-6 w-6 text-muted-foreground" />}
+            <div className="h-12 w-12 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-foreground">
+              {status.isPro ? <Sparkles className="h-6 w-6 text-foreground" /> : <Shield className="h-6 w-6 text-muted-foreground" />}
             </div>
           </div>
 
@@ -223,7 +223,7 @@ export function BillingDashboardClient({
             <div className="space-y-1">
               <span className="text-xs text-muted-foreground">{isVi ? "Thời hạn & Chu kỳ:" : "Billing Period:"}</span>
               <p className="text-sm font-bold text-foreground flex items-center gap-1.5">
-                <Clock className="h-4 w-4 text-brand-600" />
+                <Clock className="h-4 w-4 text-muted-foreground" />
                 {status.isPro && status.expiresAt ? (
                   <span>
                     {isVi ? `Còn ${status.daysRemaining} ngày (Hết hạn: ${new Date(status.expiresAt).toLocaleDateString("vi-VN")})` : `${status.daysRemaining} days left (Expires: ${new Date(status.expiresAt).toLocaleDateString("en-US")})`}
@@ -304,7 +304,7 @@ export function BillingDashboardClient({
             <button
               onClick={handleCreateOrder}
               disabled={loading}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs py-3 px-4 shadow-sm transition-colors"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-xs py-3 px-5 shadow-sm transition-all"
             >
               {loading ? (
                 <>
@@ -324,10 +324,10 @@ export function BillingDashboardClient({
 
       {/* Dynamic VietQR Payment Box (Shown when user clicks upgrade) */}
       {activeOrder && !status.isPro && (
-        <div className="rounded-2xl border-2 border-brand-500/40 bg-card p-6 sm:p-8 space-y-6 shadow-md animate-in fade-in duration-300">
+        <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 sm:p-8 space-y-6 shadow-md animate-in fade-in duration-300">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">
                 <QrCode className="h-4 w-4" />
                 <span>{isVi ? "Cổng thanh toán tự động VietQR (SePay)" : "Automated VietQR Banking (SePay)"}</span>
               </div>
@@ -336,7 +336,7 @@ export function BillingDashboardClient({
               </h3>
             </div>
 
-            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20">
+            <div className="flex items-center gap-2 text-xs font-semibold text-foreground bg-zinc-100 dark:bg-zinc-800 px-3.5 py-1.5 rounded-full border border-border">
               <RefreshCw className="h-3.5 w-3.5 animate-spin" />
               <span>{isVi ? "Đang chờ thanh toán (Tự động cập nhật)..." : "Waiting for payment (Auto-polling)..."}</span>
             </div>
@@ -344,22 +344,22 @@ export function BillingDashboardClient({
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* QR Image */}
-            <div className="md:col-span-5 flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-border shadow-sm">
+            <div className="md:col-span-5 flex flex-col items-center justify-center bg-white p-4 rounded-2xl border border-border shadow-sm">
               <img
                 src={activeOrder.qrUrl}
                 alt={`VietQR ${activeOrder.orderCode}`}
                 className="w-56 h-56 object-contain rounded-lg"
               />
-              <p className="text-[11px] text-slate-500 text-center mt-3 font-medium">
+              <p className="text-[11px] text-zinc-500 text-center mt-3 font-medium">
                 {isVi ? "Mở app ngân hàng (Vietcombank, MB, Techcombank...) để quét" : "Open any banking app to scan this QR"}
               </p>
             </div>
 
             {/* Bank details & Copy buttons */}
             <div className="md:col-span-7 space-y-4">
-              <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-3.5 text-amber-900 dark:text-amber-200 text-xs">
-                <span className="font-bold flex items-center gap-1.5 mb-1">
-                  <AlertCircle className="h-4 w-4 text-amber-600 shrink-0" />
+              <div className="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/50 p-3.5 text-zinc-800 dark:text-zinc-200 text-xs">
+                <span className="font-bold flex items-center gap-1.5 mb-1 text-foreground">
+                  <AlertCircle className="h-4 w-4 text-zinc-600 dark:text-zinc-400 shrink-0" />
                   {isVi ? "Lưu ý quan trọng về Nội dung chuyển khoản:" : "Critical Transfer Note Requirement:"}
                 </span>
                 <span>
@@ -371,20 +371,20 @@ export function BillingDashboardClient({
 
               <div className="space-y-3 text-xs">
                 {/* Bank Name */}
-                <div className="flex items-center justify-between p-3 rounded-lg bg-secondary/50 border border-border">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
                   <span className="text-muted-foreground">{isVi ? "Ngân hàng:" : "Bank:"}</span>
                   <span className="font-bold text-foreground text-sm">{activeOrder.bankName}</span>
                 </div>
 
                 {/* Account Number */}
-                <div className="flex items-center justify-between p-3 rounded-lg bg-secondary/50 border border-border">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
                   <div>
                     <span className="text-muted-foreground block">{isVi ? "Số tài khoản:" : "Account Number:"}</span>
                     <span className="font-mono font-bold text-foreground text-sm">{activeOrder.accountNumber}</span>
                   </div>
                   <button
                     onClick={() => handleCopy(activeOrder.accountNumber, "acc")}
-                    className="flex items-center gap-1 text-[11px] font-bold text-brand-600 hover:text-brand-700 bg-card px-2.5 py-1 rounded border border-border"
+                    className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors"
                   >
                     {copiedField === "acc" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
                     <span>{copiedField === "acc" ? "Copied" : "Copy"}</span>
@@ -392,22 +392,22 @@ export function BillingDashboardClient({
                 </div>
 
                 {/* Account Holder */}
-                <div className="flex items-center justify-between p-3 rounded-lg bg-secondary/50 border border-border">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
                   <span className="text-muted-foreground">{isVi ? "Chủ tài khoản:" : "Account Holder:"}</span>
                   <span className="font-bold text-foreground text-sm uppercase">{activeOrder.accountName}</span>
                 </div>
 
                 {/* Amount */}
-                <div className="flex items-center justify-between p-3 rounded-lg bg-secondary/50 border border-border">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
                   <div>
                     <span className="text-muted-foreground block">{isVi ? "Số tiền:" : "Amount:"}</span>
-                    <span className="font-mono font-black text-brand-600 text-base">
+                    <span className="font-mono font-black text-foreground text-base">
                       {activeOrder.amountVnd.toLocaleString("vi-VN")} VND
                     </span>
                   </div>
                   <button
                     onClick={() => handleCopy(String(activeOrder.amountVnd), "amount")}
-                    className="flex items-center gap-1 text-[11px] font-bold text-brand-600 hover:text-brand-700 bg-card px-2.5 py-1 rounded border border-border"
+                    className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors"
                   >
                     {copiedField === "amount" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
                     <span>{copiedField === "amount" ? "Copied" : "Copy"}</span>
@@ -415,14 +415,14 @@ export function BillingDashboardClient({
                 </div>
 
                 {/* Memo */}
-                <div className="flex items-center justify-between p-3 rounded-lg bg-brand-500/10 border border-brand-500/30">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700">
                   <div>
-                    <span className="text-brand-600 dark:text-brand-400 font-bold block">{isVi ? "Nội dung chuyển khoản (Memo):" : "Transfer Memo:"}</span>
+                    <span className="text-zinc-900 dark:text-zinc-100 font-bold block">{isVi ? "Nội dung chuyển khoản (Memo):" : "Transfer Memo:"}</span>
                     <span className="font-mono font-black text-foreground text-base tracking-wider">{activeOrder.orderCode}</span>
                   </div>
                   <button
                     onClick={() => handleCopy(activeOrder.orderCode, "memo")}
-                    className="flex items-center gap-1 text-[11px] font-bold text-brand-600 hover:text-brand-700 bg-card px-2.5 py-1 rounded border border-border"
+                    className="flex items-center gap-1 text-[11px] font-semibold text-zinc-950 dark:text-white bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-300 dark:border-zinc-700 transition-colors shadow-sm"
                   >
                     {copiedField === "memo" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
                     <span>{copiedField === "memo" ? "Copied" : "Copy"}</span>
