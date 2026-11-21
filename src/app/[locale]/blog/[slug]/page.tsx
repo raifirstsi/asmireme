@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
   if (!post) return {};
 
   return {
-    title: `${post.title[locale as Locale]} — Asmire Research`,
+    title: `${post.title[locale as Locale]} - Asmire Research`,
     description: post.metaDescription[locale as Locale],
     alternates: {
       canonical: `/${locale}/blog/${post.slug}`,

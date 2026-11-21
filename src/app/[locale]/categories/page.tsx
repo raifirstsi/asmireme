@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: CategoriesPageProps) {
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Chuyên Mục Công Cụ AI SaaS — Asmire" : "All AI SaaS Categories & Hubs — Asmire",
+    title: isVi ? "Chuyên Mục Công Cụ AI SaaS - Asmire" : "All AI SaaS Categories & Hubs - Asmire",
     description: isVi
       ? "Khám phá 10 chuyên mục công cụ AI SaaS: Video, Âm thanh, Viết bài chuẩn SEO, CRM bán hàng, Thiết kế slide..."
       : "Explore 10 AI software categories: Video, Voice, Content & SEO, Sales CRM, Presentations, and AI Agents.",

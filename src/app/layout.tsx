@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Asmire — The Verified AI SaaS Directory & Benchmark Engine",
+  title: "Asmire - The Verified AI SaaS Directory & Benchmark Engine",
   description: "Independent, empirically tested AI software reviews, unbiased comparisons, real-time pricing alerts, and community-powered referral rewards.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://asmire.me"),
   icons: {

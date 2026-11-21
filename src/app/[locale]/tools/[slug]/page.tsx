@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: ToolPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Đánh Giá ${tool.name} Chi Tiết (2027): Bảng Giá, Thử Nghiệm & Nhược Điểm — Asmire`
-      : `${tool.name} Review (2027): Verified Benchmarks, Pricing & Drawbacks — Asmire`,
+      ? `Đánh Giá ${tool.name} Chi Tiết (2027): Bảng Giá, Thử Nghiệm & Nhược Điểm - Asmire`
+      : `${tool.name} Review (2027): Verified Benchmarks, Pricing & Drawbacks - Asmire`,
     description: tool.directAnswer[locale as Locale],
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}`,
@@ -553,7 +553,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
       </div>
 
       {/* Sticky Mobile Action Bar - Apple Mobile Luxury Experience */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/90 dark:bg-black/90 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 py-3 px-4 bg-white/95 dark:bg-black/95 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
         <div className="flex items-center gap-2.5 min-w-0 pl-1">
           <ToolLogo slug={tool.slug} name={tool.name} size="sm" />
           <div className="min-w-0">
@@ -565,10 +565,10 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           href={`/go/${tool.slug}`}
           target="_blank"
           rel="nofollow sponsored"
-          className="inline-flex items-center justify-center h-8.5 px-4 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-semibold shadow-xs shrink-0 active:scale-95 transition-transform whitespace-nowrap"
+          className="inline-flex items-center justify-center h-10 px-5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-bold shadow-sm shrink-0 active:scale-95 transition-transform whitespace-nowrap"
         >
           <span>{isVi ? "Dùng Thử" : "Try Free"}</span>
-          <ExternalLink className="h-3 w-3 ml-1" />
+          <ExternalLink className="h-3.5 w-3.5 ml-1.5" />
         </a>
       </div>
     </>

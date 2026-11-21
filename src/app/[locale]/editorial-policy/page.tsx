@@ -9,7 +9,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Chính Sách Biên Tập & Độc Lập Đánh Giá — Asmire" : "Editorial Policy & Independence — Asmire",
+    title: locale === "vi" ? "Chính Sách Biên Tập & Độc Lập Đánh Giá - Asmire" : "Editorial Policy & Independence - Asmire",
     description: "Our strict editorial guidelines guaranteeing objective AI software ratings free from sponsor bias.",
   };
 }

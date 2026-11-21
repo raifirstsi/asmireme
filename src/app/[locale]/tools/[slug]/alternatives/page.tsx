@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: AlternativesPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Top Công Cụ Thay Thế ${tool.name} Tốt Nhất 2027 — Asmire`
-      : `Best ${tool.name} Alternatives & Competitors in 2027 — Asmire`,
+      ? `Top Công Cụ Thay Thế ${tool.name} Tốt Nhất 2027 - Asmire`
+      : `Best ${tool.name} Alternatives & Competitors in 2027 - Asmire`,
     description: `Compare the top tested alternatives to ${tool.name} based on features, pricing, and usability.`,
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}/alternatives`,

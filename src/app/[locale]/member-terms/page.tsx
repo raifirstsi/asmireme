@@ -9,7 +9,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Điều Khoản Thành Viên & Quy Định Giới Thiệu — Asmire" : "Member Referral Terms of Service — Asmire",
+    title: locale === "vi" ? "Điều Khoản Thành Viên & Quy Định Giới Thiệu - Asmire" : "Member Referral Terms of Service - Asmire",
     description: "Terms and conditions governing the Asmire community member referral network.",
   };
 }

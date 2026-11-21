@@ -8,7 +8,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Điều Khoản Sử Dụng — Asmire" : "Terms of Service — Asmire",
+    title: locale === "vi" ? "Điều Khoản Sử Dụng - Asmire" : "Terms of Service - Asmire",
     description: "Terms and conditions of use for Asmire directory and services.",
   };
 }

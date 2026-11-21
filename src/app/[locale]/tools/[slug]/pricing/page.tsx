@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: PricingPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Bảng Giá ${tool.name} 2027: Chi Phí Từng Gói & Cách Chọn — Asmire`
-      : `${tool.name} Pricing Guide (2027): Plans, Hidden Costs & Discounts — Asmire`,
+      ? `Bảng Giá ${tool.name} 2027: Chi Phí Từng Gói & Cách Chọn - Asmire`
+      : `${tool.name} Pricing Guide (2027): Plans, Hidden Costs & Discounts - Asmire`,
     description: `Complete, verified breakdown of ${tool.name} pricing tiers, monthly vs annual billing, and free options.`,
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}/pricing`,

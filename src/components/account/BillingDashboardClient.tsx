@@ -140,8 +140,8 @@ export function BillingDashboardClient({
           </h1>
           <p className="text-xs sm:text-sm text-muted-foreground mt-1">
             {isVi
-              ? "Tự động hóa thanh toán VietQR qua SePay — Minh bạch và đảm bảo hoàn tiền 14 ngày."
-              : "Automated VietQR banking via SePay — Transparent and 14-day money-back guarantee."}
+              ? "Tự động hóa thanh toán VietQR qua SePay - Minh bạch và đảm bảo hoàn tiền 14 ngày."
+              : "Automated VietQR banking via SePay - Transparent and 14-day money-back guarantee."}
           </p>
         </div>
 

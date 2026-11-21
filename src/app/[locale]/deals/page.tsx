@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: DealsPageProps) {
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Mã Giảm Giá & Ưu Đãi Công Cụ AI SaaS 2027 — Asmire" : "Verified AI SaaS Deals, Coupons & Discounts 2027 — Asmire",
+    title: isVi ? "Mã Giảm Giá & Ưu Đãi Công Cụ AI SaaS 2027 - Asmire" : "Verified AI SaaS Deals, Coupons & Discounts 2027 - Asmire",
     description: "Hand-tested, verified promo codes and annual discounts for top AI software.",
   };
 }

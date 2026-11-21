@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: HomePageProps) {
   const dict = getDictionary(locale as Locale);
 
   return {
-    title: `${dict.brandName} — ${dict.brandTagline}`,
+    title: `${dict.brandName} - ${dict.brandTagline}`,
     description: dict.brandDescription,
     alternates: {
       canonical: `/${locale}`,

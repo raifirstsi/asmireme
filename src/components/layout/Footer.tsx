@@ -29,21 +29,12 @@ export function Footer({ locale }: FooterProps) {
               <img
                 src="/brand/asmire-logo-black.png"
                 alt="Asmire"
-                className="h-6 w-auto block dark:hidden object-contain"
-              />
-              <img
-                src="/brand/asmire-logo-white.png"
-                alt="Asmire"
-                className="h-6 w-auto hidden dark:block object-contain"
+                className="h-5 w-auto object-contain dark:invert transition-[filter] duration-200"
               />
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               {dict.brandDescription}
             </p>
-            <div className="pt-2 text-[11px] text-zinc-400 space-y-0.5">
-              <p>Domain: <span className="font-medium text-zinc-700 dark:text-zinc-300">asmire.me</span></p>
-              <p>Operating Entity: <span className="font-medium text-zinc-700 dark:text-zinc-300">Vietnam Registered Enterprise</span></p>
-            </div>
           </div>
 
           {/* Tools & Hubs */}
@@ -172,11 +163,6 @@ export function Footer({ locale }: FooterProps) {
         {/* Bottom Bar */}
         <div className="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
           <p>© Asmire. {dict.footer.rights}</p>
-          <div className="flex items-center gap-3 text-zinc-400 text-[11px]">
-            <span>Cloud Infrastructure</span>
-            <span>•</span>
-            <span>Automated Payments via SePay</span>
-          </div>
         </div>
       </div>
     </footer>

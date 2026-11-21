@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: MembershipPageProps) {
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Gói Thành Viên Asmire — Kiếm Tiền Từ Lời Khuyên Phần Mềm" : "Asmire Membership — Turn Software Knowledge Into Direct Revenue",
+    title: isVi ? "Gói Thành Viên Asmire - Kiếm Tiền Từ Lời Khuyên Phần Mềm" : "Asmire Membership - Turn Software Knowledge Into Direct Revenue",
     description: isVi
       ? "Gói Standard miễn phí 3 tool hoặc gói Pro 725.000đ/tháng không giới hạn. Gắn link affiliate của bạn và nhận 100% hoa hồng trực tiếp từ hãng."
       : "Standard free plan for 3 tools or Pro for $29/mo with all 50 SaaS tools. Insert your own affiliate links and earn direct vendor commissions.",
@@ -214,7 +214,7 @@ export default async function MembershipPage({ params }: MembershipPageProps) {
               {isVi ? "Câu Hỏi Thường Gặp Về Quyền Lợi Thành Viên" : "Frequently Asked Questions"}
             </h2>
             <p className="text-xs text-muted-foreground mt-1">
-              {isVi ? "Minh bạch tuyệt đối — Không cam kết ảo, không chiêu trò lừa dối." : "Transparent rules and honest policies — No deceptive scarcity or false promises."}
+              {isVi ? "Minh bạch tuyệt đối - Không cam kết ảo, không chiêu trò lừa dối." : "Transparent rules and honest policies - No deceptive scarcity or false promises."}
             </p>
           </div>
 

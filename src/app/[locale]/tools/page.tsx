@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ToolsPageProps) {
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Danh Mục 50 Công Cụ AI SaaS Đã Kiểm Chứng (2027) — Asmire" : "All 50 Verified AI SaaS Tools Directory (2027) — Asmire",
+    title: isVi ? "Danh Mục 50 Công Cụ AI SaaS Đã Kiểm Chứng (2027) - Asmire" : "All 50 Verified AI SaaS Tools Directory (2027) - Asmire",
     description: isVi
       ? "Bộ lọc thông minh 50 công cụ AI SaaS tốt nhất năm 2027 theo chuyên mục, mức giá, bản miễn phí và điểm số kiểm thử thực tế."
       : "Interactive directory of all 50 top AI SaaS tools with verified benchmarks, live pricing filters, and empirical verdicts.",

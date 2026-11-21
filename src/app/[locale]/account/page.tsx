@@ -12,7 +12,7 @@ interface AccountPageProps {
 
 export async function generateMetadata() {
   return {
-    title: "Member Dashboard — Asmire Referral Hub",
+    title: "Member Dashboard - Asmire Referral Hub",
     robots: {
       index: false,
       follow: false,

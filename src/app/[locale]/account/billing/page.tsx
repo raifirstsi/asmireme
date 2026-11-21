@@ -12,7 +12,7 @@ interface BillingPageProps {
 
 export async function generateMetadata() {
   return {
-    title: "Billing & Subscription — Asmire Pro",
+    title: "Billing & Subscription - Asmire Pro",
     robots: {
       index: false,
       follow: false,

@@ -16,7 +16,7 @@ export async function generateMetadata({ params, searchParams }: ComparePageProp
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Công Cụ So Sánh 2-4 Phần Mềm AI SaaS — Asmire" : "2-4 AI Software Head-to-Head Comparison Matrix — Asmire",
+    title: isVi ? "Công Cụ So Sánh 2-4 Phần Mềm AI SaaS - Asmire" : "2-4 AI Software Head-to-Head Comparison Matrix - Asmire",
     description: "Compare features, pricing tiers, and benchmark scores between top AI tools side-by-side.",
   };
 }

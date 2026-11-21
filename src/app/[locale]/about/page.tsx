@@ -9,7 +9,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Về Chúng Tôi — Asmire" : "About Us — Asmire",
+    title: locale === "vi" ? "Về Chúng Tôi - Asmire" : "About Us - Asmire",
     description: "Learn about Asmire's mission to bring empirical benchmarks and fair referral sharing to AI software.",
   };
 }
@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: PageProps) {
             <span>Our Mission & Core Values</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
-            {isVi ? "Về Chúng Tôi — Asmire" : "About Asmire"}
+            {isVi ? "Về Chúng Tôi - Asmire" : "About Asmire"}
           </h1>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {isVi

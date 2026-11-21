@@ -8,7 +8,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Chính Sách Bảo Mật — Asmire" : "Privacy Policy — Asmire",
+    title: locale === "vi" ? "Chính Sách Bảo Mật - Asmire" : "Privacy Policy - Asmire",
     description: "How Asmire protects user data, handles referral cookies, and complies with privacy standards.",
   };
 }

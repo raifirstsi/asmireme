@@ -60,7 +60,7 @@ export const dictionary = {
     },
     footer: {
       disclosure: "Affiliate Disclosure: Asmire is supported by our readers and community members. When you purchase through links on our site, we or referring members may earn a commission at no extra cost to you. Editorial scores are strictly independent.",
-      rights: "All rights reserved. Operating under Vietnamese enterprise registration.",
+      rights: "All rights reserved.",
       toolsCol: "Explore Tools",
       resourcesCol: "Resources",
       legalCol: "Legal & Trust",
@@ -121,7 +121,7 @@ export const dictionary = {
       myAccount: "Quản trị",
     },
     hero: {
-      badge: "100% Thử Nghiệm Thực Tế — Không Quảng Cáo Ẩn",
+      badge: "100% Thử Nghiệm Thực Tế - Không Quảng Cáo Ẩn",
       title: "Tìm Đúng Công Cụ AI SaaS Phù Hợp, Minh Bạch Tuyệt Đối.",
       subtitle: "Chúng tôi chạy thử nghiệm thực tế trên toàn bộ 50 công cụ AI hàng đầu. Không thiên vị hoa hồng, có dữ liệu kiểm chứng, bảng giá cập nhật hàng ngày.",
       browseCta: "Khám phá danh mục",
@@ -158,7 +158,7 @@ export const dictionary = {
     },
     footer: {
       disclosure: "Minh bạch liên kết: Asmire hoạt động nhờ sự ủng hộ của người đọc và thành viên cộng đồng. Khi bạn đăng ký qua link trên site, chúng tôi hoặc thành viên giới thiệu có thể nhận hoa hồng từ nhà cung cấp mà không làm tăng chi phí của bạn.",
-      rights: "Bảo lưu mọi quyền. Đăng ký doanh nghiệp tại Việt Nam.",
+      rights: "Bảo lưu mọi quyền.",
       toolsCol: "Khám phá công cụ",
       resourcesCol: "Tài nguyên",
       legalCol: "Pháp lý & Minh bạch",

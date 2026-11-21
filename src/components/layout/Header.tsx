@@ -85,12 +85,7 @@ export function Header({ locale }: HeaderProps) {
               <img
                 src="/brand/asmire-logo-black.png"
                 alt="Asmire"
-                className="h-6 w-auto block dark:hidden object-contain"
-              />
-              <img
-                src="/brand/asmire-logo-white.png"
-                alt="Asmire"
-                className="h-6 w-auto hidden dark:block object-contain"
+                className="h-5 w-auto object-contain dark:invert transition-[filter] duration-200"
               />
             </Link>
           </div>
@@ -216,29 +211,12 @@ export function Header({ locale }: HeaderProps) {
               ))}
             </div>
 
-            {/* Mobile Actions: Language & Theme */}
-            <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900 flex items-center justify-between px-2">
-              <span className="text-xs text-zinc-500 font-medium">
-                {locale === "vi" ? "Giao diện & Ngôn ngữ" : "Appearance & Language"}
-              </span>
-              <div className="flex items-center gap-2">
-                <ThemeToggle />
-                <button
-                  onClick={toggleLanguage}
-                  className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors border-0"
-                >
-                  <Globe className="h-3.5 w-3.5 text-zinc-500" />
-                  <span>{locale === "en" ? "Tiếng Việt" : "English"}</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="pt-2">
+            <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <Link
                 href={`/${locale}/membership`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-md bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
+                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
               >
                 Member
               </Link>

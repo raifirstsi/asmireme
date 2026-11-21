@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: RankingsPageProps) {
   const isVi = locale === "vi";
 
   return {
-    title: isVi ? "Bảng Xếp Hạng 50 Công Cụ AI SaaS (Tuần & Tháng) — Asmire" : "Top 50 AI SaaS Software Rankings & Leaderboard — Asmire",
+    title: isVi ? "Bảng Xếp Hạng 50 Công Cụ AI SaaS (Tuần & Tháng) - Asmire" : "Top 50 AI SaaS Software Rankings & Leaderboard - Asmire",
     description: "Weekly and monthly rankings of verified AI software ranked by objective benchmark scores.",
   };
 }

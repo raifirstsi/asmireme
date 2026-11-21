@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: BlogIndexProps) {
 
   return {
     title: isVi
-      ? "Blog & Nghiên Cứu AI SaaS Chuyên Sâu — Asmire"
-      : "Asmire AI SaaS Research & Benchmark Guides — Asmire",
+      ? "Blog & Nghiên Cứu AI SaaS Chuyên Sâu - Asmire"
+      : "Asmire AI SaaS Research & Benchmark Guides - Asmire",
     description: isVi
       ? "Các bài viết thử nghiệm thực tế, đối sánh tính năng và hướng dẫn chuyên sâu về 50 công cụ SaaS AI hàng đầu."
       : "In-depth benchmark reports, empirical test findings, and tactical guides across top 50 AI software tools.",

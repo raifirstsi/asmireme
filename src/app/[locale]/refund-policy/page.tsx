@@ -9,7 +9,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Chính Sách Hoàn Tiền 14 Ngày — Asmire" : "14-Day Refund Policy — Asmire",
+    title: locale === "vi" ? "Chính Sách Hoàn Tiền 14 Ngày - Asmire" : "14-Day Refund Policy - Asmire",
     description: "Asmire 14-day 100% money-back guarantee policy for Pro subscriptions.",
   };
 }

@@ -14,7 +14,7 @@ interface AdminPageProps {
 
 export async function generateMetadata({ params }: AdminPageProps) {
   return {
-    title: "Asmire Admin Dashboard — Master Registry & Click Audit",
+    title: "Asmire Admin Dashboard - Master Registry & Click Audit",
     robots: {
       index: false,
       follow: false,

@@ -343,11 +343,11 @@ export async function processSepayWebhook(
       await resend.emails.send({
         from: `Asmire <${process.env.RESEND_FROM_EMAIL || "support@asmire.me"}>`,
         to: targetUserEmail,
-        subject: "🎉 Welcome to Asmire Pro — All 50 AI SaaS Tools Unlocked!",
+        subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 580px; margin: 0 auto; padding: 24px; color: #1e293b; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
             <div style="border-bottom: 2px solid #3b82f6; padding-bottom: 12px; margin-bottom: 20px;">
-              <h2 style="margin: 0; color: #0f172a;">Payment Confirmed — Asmire Pro Active</h2>
+              <h2 style="margin: 0; color: #0f172a;">Payment Confirmed - Asmire Pro Active</h2>
             </div>
             <p>Hello,</p>
             <p>Your payment of <strong>${amountIn.toLocaleString("vi-VN")} VND</strong> (Order code: <code>${orderCode}</code>) via VietQR has been successfully verified.</p>

@@ -9,7 +9,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
-    title: locale === "vi" ? "Công Khai Quan Hệ Liên Kết (Affiliate Disclosure) — Asmire" : "Affiliate Disclosure — Asmire",
+    title: locale === "vi" ? "Công Khai Quan Hệ Liên Kết (Affiliate Disclosure) - Asmire" : "Affiliate Disclosure - Asmire",
     description: "Full FTC commercial disclosure and member referral attribution transparency for Asmire.",
   };
 }

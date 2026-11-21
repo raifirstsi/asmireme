@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: CategoryDetailPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Top Công Cụ ${hub.name.vi} Tốt Nhất (2027) — Asmire`
-      : `Best ${hub.name.en} Tools (2027 Ranking) — Asmire`,
+      ? `Top Công Cụ ${hub.name.vi} Tốt Nhất (2027) - Asmire`
+      : `Best ${hub.name.en} Tools (2027 Ranking) - Asmire`,
     description: hub.description[locale as Locale],
   };
 }
