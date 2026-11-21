@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { EXTERNAL_REVIEWS_MAPPING } from "@/services/review-ingestion";
+import { syncAllToolReviews } from "@/services/review-ingestion";
 
-export async function GET(request: NextRequest) {
+async function handleSync(request: NextRequest) {
   // Authorization check for cron secret
   const authHeader = request.headers.get("authorization");
   const cronSecret = process.env.CRON_SECRET || "asmire_cron_secret_2026";
@@ -10,13 +10,27 @@ export async function GET(request: NextRequest) {
     return new NextResponse("Unauthorized cron execution", { status: 401 });
   }
 
-  const syncedCount = Object.keys(EXTERNAL_REVIEWS_MAPPING).length;
+  try {
+    const result = await syncAllToolReviews();
+    return NextResponse.json({
+      message: "10-Hour automated external review ingestion pipeline completed successfully.",
+      ...result,
+    });
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: error.message || "Failed to sync reviews",
+      },
+      { status: 500 }
+    );
+  }
+}
 
-  return NextResponse.json({
-    success: true,
-    message: "External reviews ingestion pipeline completed successfully.",
-    sources: ["Product Hunt GraphQL / API", "Hacker News Firebase REST API"],
-    toolsUpdated: syncedCount,
-    timestamp: new Date().toISOString(),
-  });
+export async function GET(request: NextRequest) {
+  return handleSync(request);
+}
+
+export async function POST(request: NextRequest) {
+  return handleSync(request);
 }

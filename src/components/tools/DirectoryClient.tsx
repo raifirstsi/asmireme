@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef, useTransition } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { ToolItem } from "@/types";
@@ -22,6 +22,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
 
   // URL state
   const selectedHub = searchParams.get("hub") || "all";
@@ -31,10 +32,16 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
   const sortBy = searchParams.get("sort") || "rating";
   const searchQuery = searchParams.get("q") || "";
 
-  // Local filter states
+  // Local filter states for instant response
   const [query, setQuery] = useState(searchQuery);
+  const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Helper to push updated search params
+  // Sync external URL param changes to local query
+  useEffect(() => {
+    setQuery(searchQuery);
+  }, [searchQuery]);
+
+  // Helper to push updated search params non-blockingly
   const updateParams = (newParams: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams.toString());
     Object.entries(newParams).forEach(([key, value]) => {
@@ -44,12 +51,28 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
         params.set(key, value);
       }
     });
-    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+
+    startTransition(() => {
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    });
+  };
+
+  const handleQueryChange = (val: string) => {
+    setQuery(val);
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+    }
+    debounceTimerRef.current = setTimeout(() => {
+      updateParams({ q: val.trim() ? val : null });
+    }, 250);
   };
 
   const clearAllFilters = () => {
     setQuery("");
-    router.push(pathname, { scroll: false });
+    if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
+    startTransition(() => {
+      router.replace(pathname, { scroll: false });
+    });
   };
 
   // Filtered & Sorted Tools Memo
@@ -73,8 +96,8 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           const q = query.toLowerCase();
           const matchName = tool.name.toLowerCase().includes(q);
           const matchTags = tool.tags.some((t) => t.toLowerCase().includes(q));
-          const matchTagline = tool.tagline[locale].toLowerCase().includes(q);
-          const matchDesc = tool.description[locale].toLowerCase().includes(q);
+          const matchTagline = tool.tagline[locale]?.toLowerCase().includes(q);
+          const matchDesc = tool.description[locale]?.toLowerCase().includes(q);
           if (!matchName && !matchTags && !matchTagline && !matchDesc) return false;
         }
         return true;
@@ -98,12 +121,9 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           <input
             type="text"
             value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              updateParams({ q: e.target.value });
-            }}
+            onChange={(e) => handleQueryChange(e.target.value)}
             placeholder={locale === "vi" ? "Tìm nhanh 50 công cụ AI..." : "Search across all 50 AI tools..."}
-            className="w-full h-11 pl-10 pr-4 rounded-xl border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500"
+            className="w-full h-11 pl-10 pr-10 rounded-xl border border-border bg-card text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500"
           />
           {query && (
             <button
@@ -111,7 +131,8 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
                 setQuery("");
                 updateParams({ q: null });
               }}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-muted-foreground hover:text-foreground"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground hover:text-foreground active:scale-95"
+              aria-label="Clear search input"
             >
               <X className="h-4 w-4" />
             </button>
@@ -125,7 +146,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           <select
             value={sortBy}
             onChange={(e) => updateParams({ sort: e.target.value })}
-            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20"
+            className="h-11 px-3 rounded-xl border border-border bg-card text-xs font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500/20 cursor-pointer"
           >
             <option value="rating">Highest Editorial Rating</option>
             <option value="priceAsc">Price: Low to High</option>
@@ -137,7 +158,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           {(selectedHub !== "all" || selectedPriceTier !== "all" || freePlanOnly || freeTrialOnly || query) && (
             <button
               onClick={clearAllFilters}
-              className="flex items-center gap-1.5 h-11 px-3 text-xs font-semibold rounded-xl border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+              className="flex items-center gap-1.5 h-11 px-3 text-xs font-semibold rounded-xl border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors active:scale-95 cursor-pointer"
               title="Reset all filters"
             >
               <RotateCcw className="h-3.5 w-3.5 text-muted-foreground" />
@@ -150,10 +171,10 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
       {/* Main Filter Chips & Pills */}
       <div className="space-y-3">
         {/* Hub Category Pills */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none touch-pan-x">
           <button
             onClick={() => updateParams({ hub: "all" })}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-colors ${
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold shrink-0 transition-colors cursor-pointer active:scale-95 ${
               selectedHub === "all"
                 ? "bg-brand-600 text-white shadow-xs"
                 : "bg-secondary/80 hover:bg-secondary text-foreground"
@@ -165,7 +186,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             <button
               key={hub.slug}
               onClick={() => updateParams({ hub: hub.slug })}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold shrink-0 transition-colors ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-semibold shrink-0 transition-colors cursor-pointer active:scale-95 ${
                 selectedHub === hub.slug
                   ? "bg-brand-600 text-white shadow-xs"
                   : "bg-secondary/80 hover:bg-secondary text-foreground"
@@ -183,7 +204,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </span>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "free" ? null : "free" })}
-            className={`px-2.5 py-1 rounded-md border text-xs font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "free"
                 ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
@@ -193,7 +214,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under20" ? null : "under20" })}
-            className={`px-2.5 py-1 rounded-md border text-xs font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under20"
                 ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
@@ -203,7 +224,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "under50" ? null : "under50" })}
-            className={`px-2.5 py-1 rounded-md border text-xs font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "under50"
                 ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
@@ -213,58 +234,63 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ price: selectedPriceTier === "50plus" ? null : "50plus" })}
-            className={`px-2.5 py-1 rounded-md border text-xs font-medium transition-colors ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               selectedPriceTier === "50plus"
                 ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
             }`}
           >
-            $50+/mo (Pro/Enterprise)
+            $50+/mo
           </button>
 
           <span className="text-muted-foreground/40 mx-1">|</span>
 
-          {/* Free Trial Toggle */}
           <button
             onClick={() => updateParams({ freeTrial: freeTrialOnly ? null : "true" })}
-            className={`px-2.5 py-1 rounded-md border text-xs font-medium transition-colors flex items-center gap-1 ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-medium transition-colors cursor-pointer active:scale-95 ${
               freeTrialOnly
-                ? "border-blue-500 bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold"
+                ? "border-brand-500 bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold"
                 : "border-border bg-card text-muted-foreground hover:text-foreground"
             }`}
           >
-            {freeTrialOnly && <Check className="h-3 w-3" />}
-            <span>Free Trial Available</span>
+            Free Trial Available
           </button>
         </div>
       </div>
 
       {/* Results Header */}
-      <div className="flex items-center justify-between text-xs text-muted-foreground pt-2 border-t border-border/60">
-        <span>Showing <strong>{filteredTools.length}</strong> of {initialTools.length} verified AI tools</span>
-        <span>All prices verified for 2026</span>
+      <div className="flex items-center justify-between border-b border-border pb-3">
+        <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+          Showing {filteredTools.length} of {initialTools.length} tools
+        </span>
+        {isPending && (
+          <span className="text-xs font-medium text-brand-600 animate-pulse">
+            Updating...
+          </span>
+        )}
       </div>
 
-      {/* Directory Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {filteredTools.map((tool) => (
-          <ToolCard key={tool.id} tool={tool} locale={locale} />
-        ))}
-      </div>
-
-      {filteredTools.length === 0 && (
-        <div className="py-20 text-center rounded-2xl border border-dashed border-border bg-card p-8 space-y-3">
-          <p className="text-sm font-semibold text-foreground">
-            No AI tools matched your exact filter combination.
+      {/* Grid of Tool Cards */}
+      {filteredTools.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredTools.map((tool) => (
+            <ToolCard key={tool.id} tool={tool} locale={locale} />
+          ))}
+        </div>
+      ) : (
+        <div className="py-20 text-center space-y-3 bg-card border border-border rounded-2xl p-8">
+          <p className="text-base font-bold text-foreground">
+            No AI tools match your current filter criteria.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Try resetting your price filter or expanding your category selection.
+          <p className="text-xs text-muted-foreground max-w-md mx-auto">
+            Try resetting your price filter or searching for another keyword to discover verified software.
           </p>
           <button
             onClick={clearAllFilters}
-            className="inline-flex items-center justify-center h-9 px-4 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition-colors"
+            className="mt-2 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition-colors cursor-pointer"
           >
-            Clear All Filters
+            <RotateCcw className="h-3.5 w-3.5" />
+            <span>Reset All Filters</span>
           </button>
         </div>
       )}

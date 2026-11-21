@@ -16,19 +16,16 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault();
-        if (isOpen) onClose();
-        else setQuery("");
-      }
-      if (e.key === "Escape" && isOpen) {
-        onClose();
-      }
+    if (!isOpen) return;
+
+    // Lock body scroll on mobile and desktop
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, onClose]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -42,8 +39,13 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
     : TOOLS_DATA.slice(0, 6);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-background/80 backdrop-blur-sm animate-in fade-in-0 duration-200">
-      <div className="w-full max-w-2xl bg-card border border-border rounded-xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+    <div 
+      className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-background/80 backdrop-blur-sm animate-in fade-in-0 duration-150"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+    >
+      <div className="w-full max-w-2xl bg-card border border-border rounded-xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-150">
         {/* Search Input Bar */}
         <div className="flex items-center px-4 border-b border-border">
           <Search className="h-5 w-5 text-muted-foreground shrink-0" />
@@ -57,7 +59,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
           />
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg hover:bg-secondary text-muted-foreground"
+            className="p-2 rounded-lg hover:bg-secondary text-muted-foreground transition-colors"
             aria-label="Close search"
           >
             <X className="h-5 w-5" />
@@ -75,6 +77,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
               <Link
                 key={tool.id}
                 href={`/${locale}/tools/${tool.slug}`}
+                prefetch={true}
                 onClick={onClose}
                 className="flex items-center justify-between p-3 rounded-lg hover:bg-secondary/70 transition-colors group"
               >

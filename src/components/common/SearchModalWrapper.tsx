@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Locale } from "@/lib/i18n";
-import { Header } from "@/components/layout/Header";
+import { SearchProvider, useSearch } from "@/context/SearchContext";
 import { SearchModal } from "@/components/common/SearchModal";
 
 interface SearchModalWrapperProps {
@@ -10,27 +10,18 @@ interface SearchModalWrapperProps {
   locale: Locale;
 }
 
-export function SearchModalWrapper({ children, locale }: SearchModalWrapperProps) {
-  const [searchOpen, setSearchOpen] = useState(false);
+function InnerSearchModal({ locale }: { locale: Locale }) {
+  const { isOpen, closeSearch } = useSearch();
+  return <SearchModal isOpen={isOpen} onClose={closeSearch} locale={locale} />;
+}
 
+export function SearchModalWrapper({ children, locale }: SearchModalWrapperProps) {
   return (
-    <>
+    <SearchProvider>
       <div className="flex flex-col min-h-screen">
-        {/* Clone or wrap children and provide open handler */}
-        {React.Children.map(children, (child) => {
-          if (React.isValidElement(child) && child.type === Header) {
-            return React.cloneElement(child as React.ReactElement<any>, {
-              onOpenSearch: () => setSearchOpen(true),
-            });
-          }
-          return child;
-        })}
+        {children}
       </div>
-      <SearchModal
-        isOpen={searchOpen}
-        onClose={() => setSearchOpen(false)}
-        locale={locale}
-      />
-    </>
+      <InnerSearchModal locale={locale} />
+    </SearchProvider>
   );
 }

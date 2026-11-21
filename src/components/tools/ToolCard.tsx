@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ToolItem } from "@/types";
 import { Locale, getDictionary } from "@/lib/i18n";
-import { Star, ExternalLink, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Star, ExternalLink, ShieldCheck } from "lucide-react";
 
 interface ToolCardProps {
   tool: ToolItem;
@@ -24,6 +24,7 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
             <div>
               <Link
                 href={`/${locale}/tools/${tool.slug}`}
+                prefetch={true}
                 className="font-bold text-base text-foreground hover:text-brand-600 dark:hover:text-brand-400 transition-colors line-clamp-1"
               >
                 {tool.name}
@@ -91,6 +92,7 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
         <div className="flex items-center gap-1.5">
           <Link
             href={`/${locale}/tools/${tool.slug}`}
+            prefetch={true}
             className="inline-flex items-center justify-center h-8 px-3 text-xs font-semibold rounded-lg bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
           >
             {dict.cards.viewDetails}
@@ -99,10 +101,10 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
             href={`/go/${tool.slug}`}
             target="_blank"
             rel="nofollow sponsored"
-            className="inline-flex items-center justify-center h-8 px-2.5 text-xs font-bold rounded-lg bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-xs"
-            title={dict.cards.visitSite}
+            className="inline-flex items-center justify-center h-8 px-3 text-xs font-bold rounded-lg bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-xs"
           >
-            <ExternalLink className="h-3.5 w-3.5" />
+            <span>{dict.cards.visitSite}</span>
+            <ExternalLink className="h-3 w-3 ml-1" />
           </a>
         </div>
       </div>
