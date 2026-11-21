@@ -144,16 +144,16 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
       <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-8">
           {/* Breadcrumbs - Apple Clean Single Line */}
-          <nav aria-label="Breadcrumb" className="flex items-center text-xs font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap overflow-x-auto scrollbar-none py-1">
-            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+          <nav aria-label="Breadcrumb" className="flex items-center h-6 text-xs font-medium text-zinc-400 dark:text-zinc-500 whitespace-nowrap overflow-x-auto scrollbar-none">
+            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0 inline-flex items-center">
               Home
             </Link>
-            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
-            <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0">
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0 inline-flex items-center">/</span>
+            <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors shrink-0 inline-flex items-center">
               Tools
             </Link>
-            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0">/</span>
-            <span className="font-semibold text-zinc-900 dark:text-zinc-100 shrink-0">
+            <span className="mx-2 text-zinc-400 dark:text-zinc-600 select-none shrink-0 inline-flex items-center">/</span>
+            <span className="font-semibold text-zinc-900 dark:text-zinc-100 shrink-0 inline-flex items-center">
               {tool.name}
             </span>
           </nav>

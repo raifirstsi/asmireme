@@ -75,16 +75,6 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     letter-spacing: -0.011em;
   }
-  /* WCAG 2.2 AA Minimum touch targets */
-  button, a, input, select, textarea {
-    min-height: 44px;
-    min-width: 44px;
-  }
-  /* Compact inline elements inside tags/badges override min-size where appropriate */
-  .badge-tap {
-    min-height: unset;
-    min-width: unset;
-  }
 }
 
 /* Custom scrollbars for high-density tables */
