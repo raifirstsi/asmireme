@@ -20,15 +20,19 @@
 
 ---
 
-## ADR-002: Billing & Merchant of Record (MoR) Selection
-* **Context**: The website owner operates as a registered business in Vietnam (Doanh nghiệp Việt Nam). Selling recurring digital subscriptions ($29/month) to international buyers requires handling global sales tax (US state sales tax, EU VAT, UK VAT, etc.), fraud prevention, chargeback handling, and compliant payouts to a Vietnamese corporate bank account.
-* **Decision**: Adopt **Paddle** as the primary Merchant of Record (MoR), with **Lemon Squeezy** as the immediate fallback.
-  - *Why not Stripe direct?* Stripe requires a local entity in supported Stripe countries (or Stripe Atlas US LLC setup). Operating as a direct merchant in Vietnam requires the business to register and remit VAT/sales tax in every US state and EU country where customers reside, creating an impossible accounting and legal compliance burden.
-  - *Why MoR?* Paddle acts as the reseller/merchant of record, takes 100% legal liability for global indirect tax calculation and filing, provides localized payment methods, natively supports wire transfer payouts to Vietnam, and provides automated customer portals for cancellation, upgrades, and invoices.
+## ADR-002: Billing & Payment Provider Selection (SePay Integration)
+* **Context**: The site owner operates as a registered business in Vietnam (Doanh nghiệp Việt Nam). The business chooses **SePay (sepay.vn)** as the core automated payment gateway.
+* **Decision**:
+  - **Primary Payment Gateway**: **SePay** for automated VietQR / Bank Transfer processing.
+  - **Currency & Pricing**: Base plan is $29/month, configured in the system with a localized VND equivalent (e.g., 725,000 VND / month or configurable via environment/DB setting `PRO_PLAN_PRICE_VND`).
+  - **Billing Mechanics**: Since standard Vietnamese bank transfers via VietQR operate as push payments (prepaid cycles), the Pro subscription operates as a **30-day prepaid recurring cycle**.
+  - **Automated Provisioning via Webhook**: SePay sends real-time bank transaction webhooks to `/api/webhooks/sepay` with API Key authentication (`Authorization: Apikey <SEPAY_API_KEY>`). The system parses the unique transfer memo (e.g., `ASM<orderCode>`), validates the exact amount, records an idempotent `PaymentEvent`, and immediately upgrades the user's entitlement to Pro (`status = 'ACTIVE'`, `currentPeriodEnd = NOW() + 30 days`).
+  - **Automated Renewal & Dunning**: 3 days prior to expiration, the system dispatches an automated renewal reminder email via Resend (`support@asmire.me`) containing a 1-click VietQR link for the next 30-day cycle.
+  - **14-Day Refund Processing**: Under the confirmed 14-day refund policy, refunds are processed via the business bank account or manual bank transfer confirmation; the admin or webhook flags the order as `REFUNDED`, and the member is seamlessly reverted to the Standard 3-slot tier.
 * **Alternatives Considered**:
-  - *Stripe Direct*: Rejected due to high compliance friction and tax liability for non-US entities.
-  - *Polar.sh*: Modern MoR, but Paddle has a longer enterprise track record for SaaS subscriptions and higher bank acceptance in Vietnam.
-* **Consequences**: Subscription lifecycles and webhooks will be modeled around Paddle's Billing API v2.
+  - *Paddle / Lemon Squeezy*: International MoRs. While powerful for USD cards, SePay has near 100% conversion and familiarity for Vietnamese domestic payments with zero risk of gateway account suspensions. (Can be added later as an auxiliary option for non-Vietnamese users if needed).
+  - *Stripe Direct*: Rejected due to lack of direct Vietnamese banking support.
+* **Consequences**: Webhook handler, checkout page, and QR generation are tailored specifically for SePay's API and VietQR format.
 
 ---
 
