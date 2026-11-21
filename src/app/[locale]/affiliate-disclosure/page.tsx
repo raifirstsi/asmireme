@@ -30,7 +30,7 @@ export default async function AffiliateDisclosurePage({ params }: PageProps) {
             {isVi ? "Công Khai Quan Hệ Liên Kết (Affiliate Disclosure)" : "Affiliate & Referral Disclosure"}
           </h1>
           <p className="text-xs text-muted-foreground">
-            {isVi ? "Cập nhật lần cuối: 21 tháng 11, 2026" : "Last Reviewed: November 21, 2026"}
+            {isVi ? "Cập nhật lần cuối: 21 tháng 11, 2027" : "Last Reviewed: November 21, 2027"}
           </p>
         </div>
 

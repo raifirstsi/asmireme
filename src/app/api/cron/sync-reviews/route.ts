@@ -4,7 +4,7 @@ import { syncAllToolReviews } from "@/services/review-ingestion";
 async function handleSync(request: NextRequest) {
   // Authorization check for cron secret
   const authHeader = request.headers.get("authorization");
-  const cronSecret = process.env.CRON_SECRET || "asmire_cron_secret_2026";
+  const cronSecret = process.env.CRON_SECRET || "asmire_cron_secret_2027";
 
   if (process.env.NODE_ENV === "production" && authHeader !== `Bearer ${cronSecret}`) {
     return new NextResponse("Unauthorized cron execution", { status: 401 });

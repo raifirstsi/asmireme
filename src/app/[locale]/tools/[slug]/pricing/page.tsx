@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: PricingPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Bảng Giá ${tool.name} 2026: Chi Phí Từng Gói & Cách Chọn — Asmire`
-      : `${tool.name} Pricing Guide (2026): Plans, Hidden Costs & Discounts — Asmire`,
+      ? `Bảng Giá ${tool.name} 2027: Chi Phí Từng Gói & Cách Chọn — Asmire`
+      : `${tool.name} Pricing Guide (2027): Plans, Hidden Costs & Discounts — Asmire`,
     description: `Complete, verified breakdown of ${tool.name} pricing tiers, monthly vs annual billing, and free options.`,
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}/pricing`,
@@ -97,7 +97,7 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
 
         <div className="space-y-3">
           <h1 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
-            {isVi ? `Bảng Giá & Chi Phí ${tool.name} (2026)` : `${tool.name} Pricing & Plans (2026)`}
+            {isVi ? `Bảng Giá & Chi Phí ${tool.name} (2027)` : `${tool.name} Pricing & Plans (2027)`}
           </h1>
           <p className="text-sm text-muted-foreground">
             {isVi

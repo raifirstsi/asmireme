@@ -38,7 +38,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Initial setup requires dedicated configuration time",
     "helpfulCount": 48,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_2",
@@ -55,7 +55,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Interface has a learning curve due to sheer number of features",
     "helpfulCount": 36,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_3",
@@ -72,7 +72,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard could have more pre-built visual templates",
     "helpfulCount": 22,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_4",
@@ -89,7 +89,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Email warmup requires careful domain setup",
     "helpfulCount": 25,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_5",
@@ -106,7 +106,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Learning curve for junior staff during initial 2 weeks",
     "helpfulCount": 74,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_6",
@@ -123,7 +123,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Twilio / LC Phone compliance (A2P 10DLC) registration takes 3-5 business days",
     "helpfulCount": 58,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_7",
@@ -140,7 +140,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires upfront investment in building your niche snapshot before selling",
     "helpfulCount": 89,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_8",
@@ -157,7 +157,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard attribution can occasionally miss multi-touch offline sales",
     "helpfulCount": 43,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_9",
@@ -174,7 +174,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Funnel page editor has slight differences from classic ClickFunnels drag-and-drop",
     "helpfulCount": 51,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_10",
@@ -191,7 +191,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Community interface is simpler than dedicated platforms like Circle",
     "helpfulCount": 37,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_11",
@@ -208,7 +208,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Custom app upgrade carries an additional monthly fee ($497/mo)",
     "helpfulCount": 64,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_12",
@@ -225,7 +225,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Must teach clients how to use the tool properly to minimize early churn",
     "helpfulCount": 82,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_13",
@@ -242,7 +242,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires thorough testing of workflow conditions before launching live",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_highlevel_14",
@@ -259,7 +259,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Per-minute voice AI usage costs should be factored into pricing models",
     "helpfulCount": 66,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_decktopus_1",
@@ -276,7 +276,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Complex financial models still require manual table adjustments",
     "helpfulCount": 39,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_decktopus_2",
@@ -293,7 +293,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Custom brand color palettes require Pro subscription",
     "helpfulCount": 28,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_decktopus_3",
@@ -310,7 +310,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Offline presentation mode requires downloading HTML/PDF",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_decktopus_4",
@@ -327,7 +327,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Font choices are curated but limited to modern aesthetics",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_taskade_1",
@@ -344,7 +344,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_taskade_2",
@@ -361,7 +361,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_taskade_3",
@@ -378,7 +378,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_taskade_4",
@@ -395,7 +395,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_getresponse_1",
@@ -412,7 +412,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Initial setup requires dedicated configuration time",
     "helpfulCount": 48,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_getresponse_2",
@@ -429,7 +429,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Interface has a learning curve due to sheer number of features",
     "helpfulCount": 36,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_getresponse_3",
@@ -446,7 +446,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard could have more pre-built visual templates",
     "helpfulCount": 22,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_getresponse_4",
@@ -463,7 +463,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Email warmup requires careful domain setup",
     "helpfulCount": 25,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_omniseo_1",
@@ -480,7 +480,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_omniseo_2",
@@ -497,7 +497,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_omniseo_3",
@@ -514,7 +514,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_omniseo_4",
@@ -531,7 +531,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_reclaim_1",
@@ -548,7 +548,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_reclaim_2",
@@ -565,7 +565,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_reclaim_3",
@@ -582,7 +582,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_reclaim_4",
@@ -599,7 +599,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_marblism_1",
@@ -616,7 +616,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_marblism_2",
@@ -633,7 +633,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_marblism_3",
@@ -650,7 +650,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_marblism_4",
@@ -667,7 +667,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rightblogger_1",
@@ -684,7 +684,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rightblogger_2",
@@ -701,7 +701,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rightblogger_3",
@@ -718,7 +718,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rightblogger_4",
@@ -735,7 +735,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pickaxe_1",
@@ -752,7 +752,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pickaxe_2",
@@ -769,7 +769,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pickaxe_3",
@@ -786,7 +786,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pickaxe_4",
@@ -803,7 +803,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_winston_1",
@@ -820,7 +820,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_winston_2",
@@ -837,7 +837,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_winston_3",
@@ -854,7 +854,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_winston_4",
@@ -871,7 +871,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_ai-studios_1",
@@ -888,7 +888,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_ai-studios_2",
@@ -905,7 +905,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_ai-studios_3",
@@ -922,7 +922,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_ai-studios_4",
@@ -939,7 +939,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_capcut_1",
@@ -956,7 +956,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_capcut_2",
@@ -973,7 +973,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_capcut_3",
@@ -990,7 +990,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_capcut_4",
@@ -1007,7 +1007,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_akool_1",
@@ -1024,7 +1024,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_akool_2",
@@ -1041,7 +1041,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_akool_3",
@@ -1058,7 +1058,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_akool_4",
@@ -1075,7 +1075,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_nutshell_1",
@@ -1092,7 +1092,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Initial setup requires dedicated configuration time",
     "helpfulCount": 48,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_nutshell_2",
@@ -1109,7 +1109,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Interface has a learning curve due to sheer number of features",
     "helpfulCount": 36,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_nutshell_3",
@@ -1126,7 +1126,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard could have more pre-built visual templates",
     "helpfulCount": 22,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_nutshell_4",
@@ -1143,7 +1143,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Email warmup requires careful domain setup",
     "helpfulCount": 25,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_elevenlabs_1",
@@ -1160,7 +1160,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_elevenlabs_2",
@@ -1177,7 +1177,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_elevenlabs_3",
@@ -1194,7 +1194,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_elevenlabs_4",
@@ -1211,7 +1211,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_adcreative_1",
@@ -1228,7 +1228,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_adcreative_2",
@@ -1245,7 +1245,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_adcreative_3",
@@ -1262,7 +1262,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_adcreative_4",
@@ -1279,7 +1279,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_krispcall_1",
@@ -1296,7 +1296,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Initial setup requires dedicated configuration time",
     "helpfulCount": 48,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_krispcall_2",
@@ -1313,7 +1313,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Interface has a learning curve due to sheer number of features",
     "helpfulCount": 36,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_krispcall_3",
@@ -1330,7 +1330,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard could have more pre-built visual templates",
     "helpfulCount": 22,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_krispcall_4",
@@ -1347,7 +1347,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Email warmup requires careful domain setup",
     "helpfulCount": 25,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_my-ai-front-desk_1",
@@ -1364,7 +1364,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Initial setup requires dedicated configuration time",
     "helpfulCount": 48,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_my-ai-front-desk_2",
@@ -1381,7 +1381,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Interface has a learning curve due to sheer number of features",
     "helpfulCount": 36,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_my-ai-front-desk_3",
@@ -1398,7 +1398,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Reporting dashboard could have more pre-built visual templates",
     "helpfulCount": 22,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_my-ai-front-desk_4",
@@ -1415,7 +1415,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Email warmup requires careful domain setup",
     "helpfulCount": 25,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fliki_1",
@@ -1432,7 +1432,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fliki_2",
@@ -1449,7 +1449,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fliki_3",
@@ -1466,7 +1466,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fliki_4",
@@ -1483,7 +1483,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_describely_1",
@@ -1500,7 +1500,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_describely_2",
@@ -1517,7 +1517,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_describely_3",
@@ -1534,7 +1534,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_describely_4",
@@ -1551,7 +1551,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_koala_1",
@@ -1568,7 +1568,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_koala_2",
@@ -1585,7 +1585,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_koala_3",
@@ -1602,7 +1602,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_koala_4",
@@ -1619,7 +1619,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_submagic_1",
@@ -1636,7 +1636,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_submagic_2",
@@ -1653,7 +1653,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_submagic_3",
@@ -1670,7 +1670,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_submagic_4",
@@ -1687,7 +1687,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_videogen_1",
@@ -1704,7 +1704,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_videogen_2",
@@ -1721,7 +1721,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_videogen_3",
@@ -1738,7 +1738,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_videogen_4",
@@ -1755,7 +1755,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_textero_1",
@@ -1772,7 +1772,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_textero_2",
@@ -1789,7 +1789,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_textero_3",
@@ -1806,7 +1806,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_textero_4",
@@ -1823,7 +1823,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_quickads_1",
@@ -1840,7 +1840,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_quickads_2",
@@ -1857,7 +1857,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_quickads_3",
@@ -1874,7 +1874,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_quickads_4",
@@ -1891,7 +1891,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_meetgeek_1",
@@ -1908,7 +1908,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_meetgeek_2",
@@ -1925,7 +1925,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_meetgeek_3",
@@ -1942,7 +1942,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_meetgeek_4",
@@ -1959,7 +1959,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_castmagic_1",
@@ -1976,7 +1976,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_castmagic_2",
@@ -1993,7 +1993,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_castmagic_3",
@@ -2010,7 +2010,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_castmagic_4",
@@ -2027,7 +2027,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palette_1",
@@ -2044,7 +2044,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palette_2",
@@ -2061,7 +2061,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palette_3",
@@ -2078,7 +2078,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palette_4",
@@ -2095,7 +2095,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fireflies_1",
@@ -2112,7 +2112,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fireflies_2",
@@ -2129,7 +2129,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fireflies_3",
@@ -2146,7 +2146,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_fireflies_4",
@@ -2163,7 +2163,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_frase_1",
@@ -2180,7 +2180,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_frase_2",
@@ -2197,7 +2197,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_frase_3",
@@ -2214,7 +2214,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_frase_4",
@@ -2231,7 +2231,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_10web_1",
@@ -2248,7 +2248,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_10web_2",
@@ -2265,7 +2265,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_10web_3",
@@ -2282,7 +2282,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_10web_4",
@@ -2299,7 +2299,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palabra_1",
@@ -2316,7 +2316,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palabra_2",
@@ -2333,7 +2333,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palabra_3",
@@ -2350,7 +2350,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_palabra_4",
@@ -2367,7 +2367,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_postcrest_1",
@@ -2384,7 +2384,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_postcrest_2",
@@ -2401,7 +2401,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_postcrest_3",
@@ -2418,7 +2418,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_postcrest_4",
@@ -2435,7 +2435,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pineapple-builder_1",
@@ -2452,7 +2452,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pineapple-builder_2",
@@ -2469,7 +2469,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pineapple-builder_3",
@@ -2486,7 +2486,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_pineapple-builder_4",
@@ -2503,7 +2503,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_potion_1",
@@ -2520,7 +2520,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_potion_2",
@@ -2537,7 +2537,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_potion_3",
@@ -2554,7 +2554,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_potion_4",
@@ -2571,7 +2571,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rytr_1",
@@ -2588,7 +2588,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rytr_2",
@@ -2605,7 +2605,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rytr_3",
@@ -2622,7 +2622,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_rytr_4",
@@ -2639,7 +2639,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_listnr_1",
@@ -2656,7 +2656,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_listnr_2",
@@ -2673,7 +2673,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_listnr_3",
@@ -2690,7 +2690,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_listnr_4",
@@ -2707,7 +2707,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jotform_1",
@@ -2724,7 +2724,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jotform_2",
@@ -2741,7 +2741,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jotform_3",
@@ -2758,7 +2758,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jotform_4",
@@ -2775,7 +2775,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_lebesgue_1",
@@ -2792,7 +2792,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_lebesgue_2",
@@ -2809,7 +2809,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_lebesgue_3",
@@ -2826,7 +2826,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_lebesgue_4",
@@ -2843,7 +2843,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_gamma_1",
@@ -2860,7 +2860,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Complex financial models still require manual table adjustments",
     "helpfulCount": 39,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_gamma_2",
@@ -2877,7 +2877,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Custom brand color palettes require Pro subscription",
     "helpfulCount": 28,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_gamma_3",
@@ -2894,7 +2894,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Offline presentation mode requires downloading HTML/PDF",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_gamma_4",
@@ -2911,7 +2911,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Font choices are curated but limited to modern aesthetics",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_synthesia_1",
@@ -2928,7 +2928,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_synthesia_2",
@@ -2945,7 +2945,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_synthesia_3",
@@ -2962,7 +2962,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_synthesia_4",
@@ -2979,7 +2979,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jasper_1",
@@ -2996,7 +2996,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jasper_2",
@@ -3013,7 +3013,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jasper_3",
@@ -3030,7 +3030,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_jasper_4",
@@ -3047,7 +3047,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_opusclip_1",
@@ -3064,7 +3064,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Exporting 4K takes slightly longer during peak cloud hours",
     "helpfulCount": 42,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_opusclip_2",
@@ -3081,7 +3081,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Avatar gestures have a minor learning curve to sequence smoothly",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_opusclip_3",
@@ -3098,7 +3098,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires high-tier plan for team collaboration seats",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_opusclip_4",
@@ -3115,7 +3115,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Template customization requires a bit of experimentation",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_originality_1",
@@ -3132,7 +3132,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_originality_2",
@@ -3149,7 +3149,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_originality_3",
@@ -3166,7 +3166,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_originality_4",
@@ -3183,7 +3183,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_speak-ai_1",
@@ -3200,7 +3200,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "High usage volumes require enterprise tier planning",
     "helpfulCount": 55,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_speak-ai_2",
@@ -3217,7 +3217,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Cloning requires clean high-quality studio reference samples",
     "helpfulCount": 41,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_speak-ai_3",
@@ -3234,7 +3234,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Rate limits on standard tiers require defensive backoff",
     "helpfulCount": 38,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_speak-ai_4",
@@ -3251,7 +3251,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Credit meters run fast when experimenting with long chapters",
     "helpfulCount": 27,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_undetectable_1",
@@ -3268,7 +3268,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_undetectable_2",
@@ -3285,7 +3285,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_undetectable_3",
@@ -3302,7 +3302,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_undetectable_4",
@@ -3319,7 +3319,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_simplified_1",
@@ -3336,7 +3336,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires editorial review for brand-specific tone consistency",
     "helpfulCount": 44,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_simplified_2",
@@ -3353,7 +3353,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Can produce overly lengthy introductions if not constrained",
     "helpfulCount": 32,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_simplified_3",
@@ -3370,7 +3370,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Keyword difficulty metrics occasionally vary from Semrush",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_simplified_4",
@@ -3387,7 +3387,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Needs a few minutes to customize prompts for specific niches",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_magicslides_1",
@@ -3404,7 +3404,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Complex financial models still require manual table adjustments",
     "helpfulCount": 39,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_magicslides_2",
@@ -3421,7 +3421,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Custom brand color palettes require Pro subscription",
     "helpfulCount": 28,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_magicslides_3",
@@ -3438,7 +3438,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Offline presentation mode requires downloading HTML/PDF",
     "helpfulCount": 19,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_magicslides_4",
@@ -3455,7 +3455,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Font choices are curated but limited to modern aesthetics",
     "helpfulCount": 24,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_paperguide_1",
@@ -3472,7 +3472,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_paperguide_2",
@@ -3489,7 +3489,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_paperguide_3",
@@ -3506,7 +3506,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_paperguide_4",
@@ -3523,7 +3523,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_browse-ai_1",
@@ -3540,7 +3540,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Advanced customization options require exploring settings",
     "helpfulCount": 35,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_browse-ai_2",
@@ -3557,7 +3557,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Mobile app is slightly less comprehensive than desktop web app",
     "helpfulCount": 29,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_browse-ai_3",
@@ -3574,7 +3574,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Documentation for niche use cases could be more comprehensive",
     "helpfulCount": 21,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   },
   {
     "id": "rev_browse-ai_4",
@@ -3591,7 +3591,7 @@ export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [
     "cons": "Requires a short adjustment period to integrate into daily workflows",
     "helpfulCount": 26,
     "verifiedBuyer": true,
-    "syncDate": "2026-11-21 21:00"
+    "syncDate": "2027-11-21 21:00"
   }
 ];
 

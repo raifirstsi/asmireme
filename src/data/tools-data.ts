@@ -14,8 +14,8 @@ export const TOOLS_DATA: ToolItem[] = [
       vi: "GoHighLevel h\u1ee3p nh\u1ea5t CRM, email marketing, SMS, ph\u1ec5u b\u00e1n h\u00e0ng, \u0111\u1eb7t l\u1ecbch h\u1eb9n v\u00e0 tr\u1ee3 l\u00fd AI v\u00e0o m\u1ed9t giao di\u1ec7n duy nh\u1ea5t cho ph\u00e9p g\u1eafn th\u01b0\u01a1ng hi\u1ec7u ri\u00eang (white-label).",
     },
     directAnswer: {
-      en: "HighLevel (GoHighLevel) is the premier all-in-one CRM, sales funnel, and marketing automation operating system for agencies and businesses in 2026. For a flat $97 to $297/mo, it replaces 10+ subscriptions including HubSpot, ClickFunnels, ActiveCampaign, and Calendly with unlimited contacts and client sub-accounts. Its standout capability is SaaS Mode ($497/mo), enabling agency owners to rebrand the platform and resell it to clients for 100% recurring profit.",
-      vi: "HighLevel (GoHighLevel) là nền tảng hệ điều hành CRM, phễu bán hàng và tự động hóa marketing tất-cả-trong-một hàng đầu cho agency và doanh nghiệp năm 2026. Với chi phí cố định từ $97 đến $297/tháng, phần mềm thay thế hơn 10 công cụ đắt đỏ như HubSpot, ClickFunnels, ActiveCampaign và Calendly mà không giới hạn liên hệ hay tài khoản con. Điểm đột phá là tính năng SaaS Mode ($497/tháng) cho phép gắn thương hiệu riêng (white-label) và bán lại thu 100% lợi nhuận định kỳ.",
+      en: "HighLevel (GoHighLevel) is the premier all-in-one CRM, sales funnel, and marketing automation operating system for agencies and businesses in 2027. For a flat $97 to $297/mo, it replaces 10+ subscriptions including HubSpot, ClickFunnels, ActiveCampaign, and Calendly with unlimited contacts and client sub-accounts. Its standout capability is SaaS Mode ($497/mo), enabling agency owners to rebrand the platform and resell it to clients for 100% recurring profit.",
+      vi: "HighLevel (GoHighLevel) là nền tảng hệ điều hành CRM, phễu bán hàng và tự động hóa marketing tất-cả-trong-một hàng đầu cho agency và doanh nghiệp năm 2027. Với chi phí cố định từ $97 đến $297/tháng, phần mềm thay thế hơn 10 công cụ đắt đỏ như HubSpot, ClickFunnels, ActiveCampaign và Calendly mà không giới hạn liên hệ hay tài khoản con. Điểm đột phá là tính năng SaaS Mode ($497/tháng) cho phép gắn thương hiệu riêng (white-label) và bán lại thu 100% lợi nhuận định kỳ.",
     },
     hubs: ["sales-crm", "website-builder"],
     tags: ["CRM", "Agency", "Automation", "Funnels", "Email", "SaaS Mode", "White-Label"],
@@ -29,7 +29,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.9,
     reviewCount: 3890,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Marketing agencies, growth consultants, SaaS resellers, and multi-location businesses looking to eliminate software bloat and monetize proprietary client portals.",
@@ -40,8 +40,8 @@ export const TOOLS_DATA: ToolItem[] = [
         vi: "Cá nhân làm sở thích đơn lẻ hoặc người không rành công nghệ chỉ có nhu cầu gửi một bản tin email danh sách nhỏ mà không cần tính năng agency.",
       },
       bottomLine: {
-        en: "The highest ROI software investment for marketing agencies in 2026. Consolidating 10+ software bills while offering SaaS mode rebilling makes it virtually unmatched in commercial value.",
-        vi: "Khoản đầu tư phần mềm có tỷ suất lợi nhuận (ROI) cao nhất cho agency tiếp thị năm 2026. Gom hơn 10 phần mềm về một mối và mở ra mô hình kinh doanh bán lại SaaS biến HighLevel thành công cụ không có đối thủ về giá trị thương mại.",
+        en: "The highest ROI software investment for marketing agencies in 2027. Consolidating 10+ software bills while offering SaaS mode rebilling makes it virtually unmatched in commercial value.",
+        vi: "Khoản đầu tư phần mềm có tỷ suất lợi nhuận (ROI) cao nhất cho agency tiếp thị năm 2027. Gom hơn 10 phần mềm về một mối và mở ra mô hình kinh doanh bán lại SaaS biến HighLevel thành công cụ không có đối thủ về giá trị thương mại.",
       },
     },
     pros: {
@@ -107,7 +107,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 980,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -165,7 +165,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 2150,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -223,7 +223,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 4120,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -281,7 +281,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.4,
     reviewCount: 320,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -339,7 +339,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 1890,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -397,7 +397,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 450,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -455,7 +455,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 780,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -513,7 +513,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 620,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -571,7 +571,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 1450,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -629,7 +629,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 1680,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -687,7 +687,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.9,
     reviewCount: 15400,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -745,7 +745,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 510,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -803,7 +803,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 2200,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -861,7 +861,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.9,
     reviewCount: 8900,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -919,7 +919,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 3100,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -977,7 +977,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 920,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1035,7 +1035,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 380,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1093,7 +1093,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 3890,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1151,7 +1151,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 420,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1209,7 +1209,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 2350,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1267,7 +1267,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 3120,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1325,7 +1325,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 840,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1383,7 +1383,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 620,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1441,7 +1441,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 540,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1499,7 +1499,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 1850,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1557,7 +1557,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.9,
     reviewCount: 2100,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1615,7 +1615,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 920,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1673,7 +1673,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 4800,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1731,7 +1731,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 3200,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1789,7 +1789,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 2800,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1847,7 +1847,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 340,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1905,7 +1905,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 410,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -1963,7 +1963,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 890,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2021,7 +2021,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 720,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2079,7 +2079,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 5200,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2137,7 +2137,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 980,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2195,7 +2195,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 6700,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2253,7 +2253,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 610,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2311,7 +2311,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.9,
     reviewCount: 5800,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2369,7 +2369,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 5400,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2427,7 +2427,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 7600,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2485,7 +2485,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 4100,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2543,7 +2543,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 2800,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2601,7 +2601,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 750,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2659,7 +2659,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 3100,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2717,7 +2717,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.7,
     reviewCount: 4300,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2775,7 +2775,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.5,
     reviewCount: 1150,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2833,7 +2833,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.6,
     reviewCount: 520,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",
@@ -2891,7 +2891,7 @@ export const TOOLS_DATA: ToolItem[] = [
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 3800,
-    verifiedAt: "2026-11-21",
+    verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {
         en: "Professionals and teams looking to streamline workflows with verified AI solutions.",

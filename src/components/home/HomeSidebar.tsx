@@ -17,10 +17,10 @@ export function HomeSidebar({ locale }: HomeSidebarProps) {
   const randomTool = TOOLS_DATA[Math.floor(Math.random() * TOOLS_DATA.length)] || TOOLS_DATA[0];
 
   const recentUpdates = [
-    { tool: "ElevenLabs", update: "Added conversational AI agent studio & multi-speaker dubbing.", date: "Nov 20, 2026" },
-    { tool: "CapCut", update: "Rolled out automatic 4K 60fps AI video upscaler.", date: "Nov 18, 2026" },
-    { tool: "HighLevel", update: "Launched custom white-label AI voice telephony receptionist.", date: "Nov 15, 2026" },
-    { tool: "Koala AI", update: "Integrated live Google SERP grounding for 2026 search updates.", date: "Nov 12, 2026" },
+    { tool: "ElevenLabs", update: "Added conversational AI agent studio & multi-speaker dubbing.", date: "Nov 20, 2027" },
+    { tool: "CapCut", update: "Rolled out automatic 4K 60fps AI video upscaler.", date: "Nov 18, 2027" },
+    { tool: "HighLevel", update: "Launched custom white-label AI voice telephony receptionist.", date: "Nov 15, 2027" },
+    { tool: "Koala AI", update: "Integrated live Google SERP grounding for 2027 search updates.", date: "Nov 12, 2027" },
   ];
 
   const externalReviews = [

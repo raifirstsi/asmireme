@@ -35,7 +35,7 @@ export default async function RankingsPage({ params }: RankingsPageProps) {
             <span>Leaderboard</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
-            {isVi ? "Bảng Xếp Hạng Công Cụ AI SaaS 2026" : "AI SaaS Software Leaderboard (2026)"}
+            {isVi ? "Bảng Xếp Hạng Công Cụ AI SaaS 2027" : "AI SaaS Software Leaderboard (2027)"}
           </h1>
           <p className="text-sm text-muted-foreground">
             {isVi

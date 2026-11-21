@@ -81,13 +81,17 @@ export function Header({ locale }: HeaderProps) {
         <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-6xl">
           {/* Brand Logo - Left Column (flex-1 guarantees center alignment) */}
           <div className="flex items-center justify-start flex-1 shrink-0">
-            <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group">
-              <span className="text-lg font-bold tracking-tight text-black dark:text-white transition-opacity group-hover:opacity-80">
-                {dict.brandName}
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500 bg-zinc-100 dark:bg-zinc-850 px-1.5 py-0.5 rounded-sm">
-                AI
-              </span>
+            <Link href={`/${locale}`} prefetch={true} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
+              <img
+                src="/brand/asmire-logo-black.png"
+                alt="Asmire"
+                className="h-6 w-auto block dark:hidden object-contain"
+              />
+              <img
+                src="/brand/asmire-logo-white.png"
+                alt="Asmire"
+                className="h-6 w-auto hidden dark:block object-contain"
+              />
             </Link>
           </div>
 
@@ -149,13 +153,13 @@ export function Header({ locale }: HeaderProps) {
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Pro CTA Button - Minimalist Luxury Pill */}
+            {/* Member CTA Button - Balanced Luxury Pill */}
             <Link
               href={`/${locale}/membership`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-9 px-4 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
+              className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              {locale === "vi" ? "Gói Pro" : "Get Pro"}
+              Member
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
@@ -236,7 +240,7 @@ export function Header({ locale }: HeaderProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-md bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
               >
-                {dict.nav.getStarted}
+                Member
               </Link>
             </div>
           </div>

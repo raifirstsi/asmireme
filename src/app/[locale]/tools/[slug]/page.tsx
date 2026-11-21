@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: ToolPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? `Đánh Giá ${tool.name} Chi Tiết (2026): Bảng Giá, Thử Nghiệm & Nhược Điểm — Asmire`
-      : `${tool.name} Review (2026): Verified Benchmarks, Pricing & Drawbacks — Asmire`,
+      ? `Đánh Giá ${tool.name} Chi Tiết (2027): Bảng Giá, Thử Nghiệm & Nhược Điểm — Asmire`
+      : `${tool.name} Review (2027): Verified Benchmarks, Pricing & Drawbacks — Asmire`,
     description: tool.directAnswer[locale as Locale],
     alternates: {
       canonical: `/${locale}/tools/${tool.slug}`,
@@ -122,7 +122,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           },
           {
             "@type": "Question",
-            name: isVi ? `${tool.name} có giá bao nhiêu trong năm 2026?` : `How much does ${tool.name} cost in 2026?`,
+            name: isVi ? `${tool.name} có giá bao nhiêu trong năm 2027?` : `How much does ${tool.name} cost in 2027?`,
             acceptedAnswer: {
               "@type": "Answer",
               text: isVi
@@ -282,7 +282,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-bold text-foreground">
-                {isVi ? "Bảng Giá Xác Thực" : "Verified Pricing Plans (2026)"}
+                {isVi ? "Bảng Giá Xác Thực" : "Verified Pricing Plans (2027)"}
               </h2>
               <Link
                 href={`/${locale}/tools/${tool.slug}/pricing`}

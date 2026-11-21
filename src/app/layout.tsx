@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Asmire — The Verified AI SaaS Directory & Benchmark Engine",
   description: "Independent, empirically tested AI software reviews, unbiased comparisons, real-time pricing alerts, and community-powered referral rewards.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://asmire.me"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png" },
+    ],
+  },
   alternates: {
     canonical: "/en",
     languages: {

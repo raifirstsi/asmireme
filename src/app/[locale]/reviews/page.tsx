@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: ReviewsPageProps) {
   return {
     title: isVi
       ? "200+ Đánh Giá Phần Mềm AI Thực Tế (Product Hunt, G2, Trustpilot, Reddit) — Asmire"
-      : "200+ Verified AI SaaS Reviews & Community Sentiment Hub (2026) — Asmire",
+      : "200+ Verified AI SaaS Reviews & Community Sentiment Hub (2027) — Asmire",
     description: isVi
       ? "Kho dữ liệu 200+ đánh giá thực tế độc lập từ người dùng và chuyên gia trên Product Hunt, G2, Trustpilot, Reddit và Hacker News cho 50 công cụ AI SaaS hàng đầu."
       : "Live database of 200+ verified customer reviews and empirical sentiment across 50 top AI SaaS tools, aggregated continuously every 10 hours.",

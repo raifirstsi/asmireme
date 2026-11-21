@@ -24,8 +24,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "nutshell",
     category: "CRM & Marketing Automation",
     title: {
-      en: "HighLevel vs Nutshell (2026): In-Depth CRM & Agency Automation Comparison",
-      vi: "So Sánh HighLevel vs Nutshell (2026): Đánh Giá CRM & Tự Động Hóa Thực Tế",
+      en: "HighLevel vs Nutshell (2027): In-Depth CRM & Agency Automation Comparison",
+      vi: "So Sánh HighLevel vs Nutshell (2027): Đánh Giá CRM & Tự Động Hóa Thực Tế",
     },
     metaDescription: {
       en: "Head-to-head comparison between GoHighLevel and Nutshell CRM. Benchmarking multi-channel funnels, client sub-accounts, pricing scaling, and ease of use.",
@@ -59,8 +59,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "listnr",
     category: "AI Voice & Speech Synthesis",
     title: {
-      en: "ElevenLabs vs Listnr (2026): Which AI Voice Generator Produces Better Audio?",
-      vi: "So Sánh ElevenLabs vs Listnr (2026): Nền Tảng Giọng Nói AI Nào Chân Thực Hơn?",
+      en: "ElevenLabs vs Listnr (2027): Which AI Voice Generator Produces Better Audio?",
+      vi: "So Sánh ElevenLabs vs Listnr (2027): Nền Tảng Giọng Nói AI Nào Chân Thực Hơn?",
     },
     metaDescription: {
       en: "ElevenLabs vs Listnr tested on voice realism, emotion control, voice cloning latency, and commercial podcast licensing. See verified benchmark audio results.",
@@ -94,8 +94,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "koala",
     category: "AI Content & SEO Writing",
     title: {
-      en: "Jasper AI vs Koala AI (2026): Best AI Writer for Long-Form SEO Articles?",
-      vi: "So Sánh Jasper AI vs Koala AI (2026): Đâu Là Công Cụ Viết Bài SEO Dài Tốt Nhất?",
+      en: "Jasper AI vs Koala AI (2027): Best AI Writer for Long-Form SEO Articles?",
+      vi: "So Sánh Jasper AI vs Koala AI (2027): Đâu Là Công Cụ Viết Bài SEO Dài Tốt Nhất?",
     },
     metaDescription: {
       en: "Comparing Jasper AI enterprise brand voice against Koala AI 1-click SEO articles. Real benchmarks on SERP ranking performance, live web search, and costs.",
@@ -129,8 +129,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "decktopus",
     category: "AI Presentations & Decks",
     title: {
-      en: "Gamma vs Decktopus AI (2026): Which AI Presentation Builder Is Better?",
-      vi: "So Sánh Gamma vs Decktopus AI (2026): Trình Tạo Bài Thuyết Trình AI Nào Đỉnh Hơn?",
+      en: "Gamma vs Decktopus AI (2027): Which AI Presentation Builder Is Better?",
+      vi: "So Sánh Gamma vs Decktopus AI (2027): Trình Tạo Bài Thuyết Trình AI Nào Đỉnh Hơn?",
     },
     metaDescription: {
       en: "Gamma vs Decktopus AI tested for pitch decks, document-to-presentation workflows, interactive cards, and export flexibility. Full feature breakdown.",
@@ -164,8 +164,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "winston",
     category: "AI Content & Plagiarism Detection",
     title: {
-      en: "Originality.ai vs Winston AI (2026): Most Accurate AI Detector Tested",
-      vi: "So Sánh Originality.ai vs Winston AI (2026): Công Cụ Quét AI Nào Chính Xác Nhất?",
+      en: "Originality.ai vs Winston AI (2027): Most Accurate AI Detector Tested",
+      vi: "So Sánh Originality.ai vs Winston AI (2027): Công Cụ Quét AI Nào Chính Xác Nhất?",
     },
     metaDescription: {
       en: "Originality.ai vs Winston AI detection accuracy benchmark against GPT-4o, Claude 3.5 Sonnet, and Gemini Pro. False positive rates and academic verification.",
@@ -199,8 +199,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "meetgeek",
     category: "AI Meeting Assistants & Note-taking",
     title: {
-      en: "Fireflies.ai vs MeetGeek (2026): Which AI Meeting Notetaker Wins?",
-      vi: "So Sánh Fireflies.ai vs MeetGeek (2026): Trợ Lý Họp AI Nào Ghi Chép Tốt Hơn?",
+      en: "Fireflies.ai vs MeetGeek (2027): Which AI Meeting Notetaker Wins?",
+      vi: "So Sánh Fireflies.ai vs MeetGeek (2027): Trợ Lý Họp AI Nào Ghi Chép Tốt Hơn?",
     },
     metaDescription: {
       en: "Tested: Fireflies.ai vs MeetGeek on transcription accuracy across Zoom/Teams/Meet, speaker diarization, CRM integrations, and automatic action items.",
@@ -234,8 +234,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "getresponse",
     category: "CRM & Marketing Automation",
     title: {
-      en: "HighLevel vs GetResponse (2026): All-in-One Agency CRM vs Dedicated Email Funnels",
-      vi: "So Sánh HighLevel vs GetResponse (2026): Hệ Điều Hành Agency vs Email Marketing Phễu",
+      en: "HighLevel vs GetResponse (2027): All-in-One Agency CRM vs Dedicated Email Funnels",
+      vi: "So Sánh HighLevel vs GetResponse (2027): Hệ Điều Hành Agency vs Email Marketing Phễu",
     },
     metaDescription: {
       en: "GoHighLevel vs GetResponse in-depth comparison. Evaluating email marketing deliverability, CRM sub-accounts, two-way SMS automation, and multi-client pricing scaling.",
@@ -269,8 +269,8 @@ export const COMPARISON_PAIRS: ComparisonPair[] = [
     toolBSlug: "my-ai-front-desk",
     category: "AI Telephony & Voice Automation",
     title: {
-      en: "HighLevel vs My AI Front Desk (2026): Which AI Phone Receptionist Closes More Leads?",
-      vi: "So Sánh HighLevel vs My AI Front Desk (2026): Lễ Tân Điện Thoại AI Nào Tốt Hơn?",
+      en: "HighLevel vs My AI Front Desk (2027): Which AI Phone Receptionist Closes More Leads?",
+      vi: "So Sánh HighLevel vs My AI Front Desk (2027): Lễ Tân Điện Thoại AI Nào Tốt Hơn?",
     },
     metaDescription: {
       en: "HighLevel Conversational AI Voice vs My AI Front Desk. Benchmarking natural speech understanding, calendar booking sync, latency, and setup difficulty for local businesses.",

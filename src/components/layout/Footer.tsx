@@ -25,13 +25,17 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3.5 md:col-span-1">
-            <Link href={`/${locale}`} className="flex items-center gap-2 group">
-              <span className="text-lg font-bold tracking-tight text-black dark:text-white">
-                {dict.brandName}
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-zinc-400 border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.2 rounded-full">
-                AI
-              </span>
+            <Link href={`/${locale}`} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
+              <img
+                src="/brand/asmire-logo-black.png"
+                alt="Asmire"
+                className="h-6 w-auto block dark:hidden object-contain"
+              />
+              <img
+                src="/brand/asmire-logo-white.png"
+                alt="Asmire"
+                className="h-6 w-auto hidden dark:block object-contain"
+              />
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               {dict.brandDescription}
@@ -167,7 +171,7 @@ export function Footer({ locale }: FooterProps) {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
-          <p>© {new Date().getFullYear()} Asmire. {dict.footer.rights}</p>
+          <p>© Asmire. {dict.footer.rights}</p>
           <div className="flex items-center gap-3 text-zinc-400 text-[11px]">
             <span>Cloud Infrastructure</span>
             <span>•</span>

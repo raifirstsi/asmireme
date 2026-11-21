@@ -44,21 +44,21 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
       toolSlug: "highlevel",
       affiliateUrl: "https://www.gohighlevel.com/?fp_ref=my_sample_code",
       status: "VALID",
-      lastSwappedAt: "2026-11-20",
+      lastSwappedAt: "2027-11-20",
     },
     {
       slotIndex: 2,
       toolSlug: "elevenlabs",
       affiliateUrl: "https://elevenlabs.io/?via=my_voice_ref",
       status: "VALID",
-      lastSwappedAt: "2026-11-18",
+      lastSwappedAt: "2027-11-18",
     },
     {
       slotIndex: 3,
       toolSlug: "capcut",
       affiliateUrl: "",
       status: "EMPTY",
-      lastSwappedAt: "2026-11-15",
+      lastSwappedAt: "2027-11-15",
     },
   ]);
 

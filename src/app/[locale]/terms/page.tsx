@@ -24,7 +24,7 @@ export default async function TermsPage({ params }: PageProps) {
           {isVi ? "Điều Khoản Sử Dụng" : "Terms of Service"}
         </h1>
         <p className="text-xs text-muted-foreground">
-          {isVi ? "Cập nhật lần cuối: 21 tháng 11, 2026" : "Last updated: November 21, 2026"}
+          {isVi ? "Cập nhật lần cuối: 21 tháng 11, 2027" : "Last updated: November 21, 2027"}
         </p>
 
         <div className="prose prose-sm dark:prose-invert max-w-none space-y-4 text-foreground/90 text-sm leading-relaxed">
