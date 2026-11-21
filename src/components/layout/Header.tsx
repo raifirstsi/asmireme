@@ -54,6 +54,7 @@ export function Header({ locale }: HeaderProps) {
 
   const navItems = [
     { label: dict.nav.tools, href: `/${locale}/tools` },
+    { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
     { label: dict.nav.rankings, href: `/${locale}/rankings` },

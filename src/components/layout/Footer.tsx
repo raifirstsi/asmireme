@@ -88,7 +88,12 @@ export function Footer({ locale }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-muted-foreground">
               <li>
-                <Link href={`/${locale}/blog`} className="hover:text-foreground transition-colors font-medium text-brand-600 dark:text-brand-400">
+                <Link href={`/${locale}/reviews`} className="hover:text-foreground transition-colors font-medium text-amber-600 dark:text-amber-400">
+                  {locale === "vi" ? "Kho 200+ Đánh Giá Thực Tế →" : "200+ Verified Reviews Hub →"}
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/blog`} className="hover:text-foreground transition-colors">
                   AI Research Blog & Guides
                 </Link>
               </li>
