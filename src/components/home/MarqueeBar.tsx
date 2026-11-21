@@ -13,21 +13,21 @@ export function MarqueeBar({ locale }: MarqueeBarProps) {
   const tools = [...TOOLS_DATA.slice(0, 25), ...TOOLS_DATA.slice(0, 25)];
 
   return (
-    <div className="w-full bg-secondary/50 border-y border-border py-3 overflow-hidden select-none">
-      <div className="flex w-max animate-marquee space-x-6 items-center">
+    <div className="w-full bg-zinc-50/60 dark:bg-zinc-900/40 border-y border-zinc-200/80 dark:border-zinc-800/80 py-2.5 overflow-hidden select-none">
+      <div className="flex w-max animate-marquee space-x-5 items-center">
         {tools.map((tool, idx) => (
           <Link
             key={`${tool.id}-${idx}`}
             href={`/${locale}/tools/${tool.slug}`}
-            className="flex items-center gap-2 px-3 py-1 rounded-lg bg-card/80 border border-border/60 hover:border-brand-500/60 hover:bg-card transition-all text-xs font-semibold text-foreground/90 shrink-0 group"
+            className="flex items-center gap-2 px-3 py-1 rounded-full bg-white dark:bg-[#141415] border border-zinc-200/60 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all text-xs font-medium text-zinc-800 dark:text-zinc-200 shrink-0 group shadow-2xs"
           >
-            <div className="flex h-5 w-5 items-center justify-center rounded bg-brand-500/10 text-brand-600 dark:text-brand-400 font-bold text-[10px]">
+            <div className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-[9px] border border-zinc-200/40 dark:border-zinc-700/40">
               {tool.name.charAt(0)}
             </div>
-            <span className="group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+            <span className="group-hover:text-black dark:group-hover:text-white transition-colors">
               {tool.name}
             </span>
-            <span className="text-[10px] text-muted-foreground font-normal">
+            <span className="text-[10px] text-zinc-400 font-normal">
               ${tool.startingPrice}/mo
             </span>
           </Link>

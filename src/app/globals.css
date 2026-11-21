@@ -4,65 +4,65 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 100%; /* Pure Apple White #ffffff */
+    --foreground: 0 0% 11%;   /* Apple Charcoal #1d1d1f */
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 11%;
 
-    --primary: 173 80% 32%; /* Teal #0d9488 */
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 9%;       /* Apple Solid Black #161617 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 94%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 240 5% 96%;  /* Apple Light Gray #f5f5f7 */
+    --secondary-foreground: 0 0% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 53%; /* Apple Secondary Gray #86868b */
 
-    --accent: 173 70% 92%;
-    --accent-foreground: 173 80% 25%;
+    --accent: 240 5% 92%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 173 80% 32%;
+    --border: 240 5% 90%;     /* Apple Subtle Border #e5e5e7 */
+    --input: 240 5% 90%;
+    --ring: 0 0% 9%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 
   .dark {
-    --background: 222 47% 6%; /* Deep night slate #0b0f17 */
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%;    /* Apple OLED Pure Black #000000 */
+    --foreground: 240 5% 96%; /* Apple Crisp White #f5f5f7 */
 
-    --card: 217 33% 11%; /* #111827 */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;          /* Apple Sleek Surface #141415 */
+    --card-foreground: 240 5% 96%;
 
-    --popover: 217 33% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 240 5% 96%;
 
-    --primary: 173 80% 40%; /* Vibrant emerald-teal */
-    --primary-foreground: 222 47% 6%;
+    --primary: 0 0% 98%;      /* Apple Crisp White Primary in Dark #ffffff */
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 12%;    /* Apple Dark Gray #1d1d1f */
+    --secondary-foreground: 240 5% 96%;
 
-    --muted: 217 33% 16%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 240 4% 63%; /* Apple Dark Secondary #a1a1a6 */
 
-    --accent: 173 80% 20%;
-    --accent-foreground: 173 80% 75%;
+    --accent: 0 0% 16%;
+    --accent-foreground: 240 5% 96%;
 
     --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 19%;
-    --input: 217 33% 19%;
-    --ring: 173 80% 40%;
+    --border: 0 0% 18%;       /* Apple Subtle Dark Border */
+    --input: 0 0% 18%;
+    --ring: 0 0% 98%;
   }
 }
 
@@ -71,8 +71,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-brand-500/20 selection:text-brand-700 dark:selection:text-brand-300;
+    @apply bg-background text-foreground antialiased selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    letter-spacing: -0.011em;
   }
   /* WCAG 2.2 AA Minimum touch targets */
   button, a, input, select, textarea {

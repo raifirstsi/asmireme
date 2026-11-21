@@ -76,56 +76,56 @@ export default async function HomePage({ params }: HomePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 md:py-20 border-b border-border bg-gradient-to-b from-background via-card/50 to-background">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-5">
+      {/* Hero Section - Apple Minimalist Aesthetic */}
+      <section className="relative overflow-hidden py-16 md:py-24 border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-black">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="text-center space-y-6">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3.5 py-1 text-xs font-bold text-brand-600 dark:text-brand-400">
-              <ShieldCheck className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-1 text-xs font-medium text-zinc-700 dark:text-zinc-300 shadow-2xs">
+              <ShieldCheck className="h-3.5 w-3.5 text-zinc-800 dark:text-zinc-200" />
               <span>{dict.hero.badge}</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-foreground leading-[1.15]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 leading-[1.08]">
               {dict.hero.title}
             </h1>
 
             {/* Sub-headline */}
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-zinc-500 dark:text-zinc-400 font-normal leading-relaxed max-w-2xl mx-auto">
               {dict.hero.subtitle}
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
               <Link
                 href={`/${locale}/tools`}
-                className="inline-flex items-center justify-center h-11 px-6 text-sm font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-sm hover:shadow"
+                className="inline-flex items-center justify-center h-10 px-6 text-xs sm:text-sm font-medium rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black transition-all shadow-xs"
               >
                 {dict.hero.browseCta}
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
               </Link>
               <Link
                 href={`/${locale}/compare`}
-                className="inline-flex items-center justify-center h-11 px-6 text-sm font-bold rounded-xl border border-border bg-card hover:bg-secondary text-foreground transition-colors"
+                className="inline-flex items-center justify-center h-10 px-6 text-xs sm:text-sm font-medium rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-black hover:bg-zinc-50 dark:hover:bg-zinc-900 text-zinc-900 dark:text-zinc-100 transition-colors"
               >
                 {dict.hero.compareCta}
               </Link>
             </div>
 
             {/* Quick Metrics */}
-            <div className="pt-6 grid grid-cols-3 gap-2 border-t border-border/80 max-w-xl mx-auto text-center">
+            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-zinc-100 dark:border-zinc-850 max-w-lg mx-auto text-center">
               <div>
-                <span className="block text-base sm:text-lg font-black text-foreground">50</span>
-                <span className="text-[11px] text-muted-foreground">{dict.hero.stats.tools}</span>
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">50</span>
+                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.tools}</span>
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-black text-brand-600 dark:text-brand-400">100%</span>
-                <span className="text-[11px] text-muted-foreground">{dict.hero.stats.benchmarks}</span>
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">100%</span>
+                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.benchmarks}</span>
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-black text-foreground">24/7</span>
-                <span className="text-[11px] text-muted-foreground">{dict.hero.stats.pricingUpdates}</span>
+                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">24/7</span>
+                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.pricingUpdates}</span>
               </div>
             </div>
           </div>
@@ -141,19 +141,20 @@ export default async function HomePage({ params }: HomePageProps) {
         <section className="space-y-6">
           <div className="flex items-end justify-between">
             <div>
-              <h2 className="text-xl sm:text-2xl font-black text-foreground tracking-tight flex items-center gap-2">
-                <Layers className="h-5 w-5 text-brand-600 dark:text-brand-400" />
+              <h2 className="text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
+                <Layers className="h-5 w-5 text-zinc-900 dark:text-zinc-100" />
                 {dict.sections.categoriesTitle}
               </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                 {dict.sections.categoriesSub}
               </p>
             </div>
             <Link
               href={`/${locale}/categories`}
-              className="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1"
+              className="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:text-black dark:hover:text-white flex items-center gap-1 group"
             >
-              All Categories <ArrowRight className="h-3.5 w-3.5" />
+              <span>All Categories</span>
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
           <CategoryGrid locale={locale as Locale} />
@@ -162,10 +163,10 @@ export default async function HomePage({ params }: HomePageProps) {
         {/* Weekly Leaderboard Section */}
         <section className="space-y-6">
           <div>
-            <h2 className="text-xl sm:text-2xl font-black text-foreground tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight">
               {dict.sections.rankingsTitle}
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
               {dict.sections.rankingsSub}
             </p>
           </div>
@@ -179,15 +180,16 @@ export default async function HomePage({ params }: HomePageProps) {
             {/* Trending Tools */}
             <div className="space-y-6">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5 text-brand-600 dark:text-brand-400" />
+                <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
+                  <TrendingUp className="h-5 w-5 text-zinc-900 dark:text-zinc-100" />
                   {dict.sections.trendingTitle}
                 </h3>
                 <Link
                   href={`/${locale}/tools`}
-                  className="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1"
+                  className="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline flex items-center gap-1 group"
                 >
-                  View All 50 Tools <ArrowRight className="h-3.5 w-3.5" />
+                  <span>View All 50 Tools</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </div>
 
@@ -199,10 +201,10 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
 
             {/* Recently Updated & Benchmarked */}
-            <div className="space-y-6 pt-6 border-t border-border">
+            <div className="space-y-6 pt-6 border-t border-zinc-200 dark:border-zinc-800">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-2">
-                  <RefreshCw className="h-5 w-5 text-teal-600" />
+                <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
+                  <RefreshCw className="h-4 w-4 text-zinc-700 dark:text-zinc-300" />
                   Recently Re-tested & Updated
                 </h3>
               </div>

@@ -15,9 +15,9 @@ export function Leaderboard({ locale }: LeaderboardProps) {
   const topRanked = [...TOOLS_DATA].sort((a, b) => b.rating - a.rating).slice(0, 3);
 
   const medalColors = [
-    { badge: "🥇 #1", bg: "from-amber-500/20 to-yellow-500/10", border: "border-amber-500/40", text: "text-amber-600 dark:text-amber-400" },
-    { badge: "🥈 #2", bg: "from-slate-400/20 to-zinc-400/10", border: "border-slate-400/40", text: "text-slate-600 dark:text-slate-300" },
-    { badge: "🥉 #3", bg: "from-amber-700/20 to-orange-700/10", border: "border-amber-700/40", text: "text-amber-700 dark:text-amber-500" },
+    { badge: "#1 Choice", border: "border-zinc-300 dark:border-zinc-700", bg: "bg-zinc-50/50 dark:bg-zinc-900/40" },
+    { badge: "#2 Choice", border: "border-zinc-200 dark:border-zinc-800", bg: "bg-white dark:bg-[#141415]" },
+    { badge: "#3 Choice", border: "border-zinc-200 dark:border-zinc-800", bg: "bg-white dark:bg-[#141415]" },
   ];
 
   return (
@@ -27,41 +27,42 @@ export function Leaderboard({ locale }: LeaderboardProps) {
         return (
           <div
             key={tool.id}
-            className={`relative flex flex-col justify-between p-5 rounded-xl border bg-gradient-to-br ${medal.bg} ${medal.border} bg-card shadow-xs transition-all hover:-translate-y-0.5`}
+            className={`relative flex flex-col justify-between p-5 rounded-2xl border ${medal.border} ${medal.bg} shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600`}
           >
             <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className={`text-xs font-black px-2.5 py-1 rounded-full bg-card border ${medal.border} ${medal.text}`}>
-                  {medal.badge} Editor's Choice
+              <div className="flex items-center justify-between mb-3.5">
+                <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border border-zinc-200/50 dark:border-zinc-700/50">
+                  {medal.badge}
                 </span>
-                <span className="flex items-center text-xs font-bold text-amber-500">
-                  <Star className="h-3.5 w-3.5 fill-current mr-0.5" />
+                <span className="flex items-center text-xs font-semibold text-zinc-900 dark:text-zinc-100">
+                  <Star className="h-3 w-3 fill-zinc-900 dark:fill-zinc-100 text-zinc-900 dark:text-zinc-100 mr-1" />
                   {tool.rating} / 5.0
                 </span>
               </div>
 
-              <h4 className="font-extrabold text-base text-foreground mb-1">
+              <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 mb-1 tracking-tight">
                 {tool.name}
               </h4>
-              <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed mb-4">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed mb-4">
                 {tool.tagline[locale]}
               </p>
             </div>
 
-            <div className="pt-3 border-t border-border/80 flex items-center justify-between">
+            <div className="pt-3.5 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between">
               <div>
-                <span className="text-[10px] uppercase font-semibold text-muted-foreground block">
+                <span className="text-[9px] uppercase font-semibold text-zinc-400 block tracking-wider">
                   Starting
                 </span>
-                <span className="text-sm font-extrabold text-foreground">
+                <span className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
                   ${tool.startingPrice}/mo
                 </span>
               </div>
               <Link
                 href={`/${locale}/tools/${tool.slug}`}
-                className="inline-flex items-center text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline"
+                className="inline-flex items-center text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:text-black dark:hover:text-white group"
               >
-                In-Depth Review <ArrowRight className="h-3 w-3 ml-1" />
+                <span>In-Depth Review</span>
+                <ArrowRight className="h-3 w-3 ml-1 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
           </div>
