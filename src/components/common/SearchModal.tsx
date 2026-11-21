@@ -41,21 +41,21 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-background/80 backdrop-blur-sm animate-in fade-in-0 duration-150"
+      className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 dark:bg-black/80 backdrop-blur-md animate-in fade-in-0 duration-150"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="w-full max-w-2xl bg-white/95 dark:bg-[#141415]/95 backdrop-blur-2xl border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-150">
+      <div className="w-full max-w-2xl bg-white dark:bg-[#151516] border border-zinc-200/90 dark:border-zinc-700/70 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.3)] overflow-hidden animate-in zoom-in-95 duration-150">
         {/* Search Input Bar - Apple Spotlight Style */}
-        <div className="flex items-center px-4.5 border-b border-zinc-100 dark:border-zinc-800/80">
-          <Search className="h-4.5 w-4.5 text-zinc-400 shrink-0" />
+        <div className="flex items-center px-4 h-13 border-b border-zinc-100 dark:border-zinc-800">
+          <Search className="h-4 w-4 text-zinc-400 shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={locale === "vi" ? "Tìm kiếm công cụ, tính năng, chuyên mục..." : "Search tools, features, categories..."}
-            className="w-full h-13 bg-transparent px-3 text-sm sm:text-base text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none tracking-tight"
+            className="w-full h-full bg-transparent px-3 text-sm sm:text-base text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none tracking-tight"
             autoFocus
           />
           <button
@@ -80,7 +80,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                 href={`/${locale}/tools/${tool.slug}`}
                 prefetch={true}
                 onClick={onClose}
-                className="flex items-center justify-between p-2.5 rounded-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-850/80 transition-colors group"
+                className="flex items-center justify-between p-2.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors group"
               >
                 <div className="flex items-center gap-3">
                   <ToolLogo slug={tool.slug} name={tool.name} size="md" />

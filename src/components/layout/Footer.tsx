@@ -166,7 +166,7 @@ export function Footer({ locale }: FooterProps) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-zinc-200 dark:border-zinc-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+        <div className="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
           <p>© {new Date().getFullYear()} Asmire. {dict.footer.rights}</p>
           <div className="flex items-center gap-3 text-zinc-400 text-[11px]">
             <span>Cloud Infrastructure</span>

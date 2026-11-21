@@ -176,8 +176,8 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             onClick={() => updateParams({ hub: "all" })}
             className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
               selectedHub === "all"
-                ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs"
-                : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
+                ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs border border-transparent"
+                : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
             }`}
           >
             All Categories ({initialTools.length})
@@ -188,8 +188,8 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
               onClick={() => updateParams({ hub: hub.slug })}
               className={`px-4 py-2 rounded-full text-xs font-medium tracking-tight shrink-0 transition-all cursor-pointer active:scale-95 ${
                 selectedHub === hub.slug
-                  ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs"
-                  : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-850 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
+                  ? "bg-black text-white dark:bg-white dark:text-black font-semibold shadow-xs border border-transparent"
+                  : "bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200/80 dark:border-zinc-800"
               }`}
             >
               {hub.name[locale]} ({hub.count})

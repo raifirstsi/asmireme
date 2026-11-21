@@ -62,7 +62,7 @@ export default async function ComparePage({ params, searchParams }: ComparePageP
         </Suspense>
 
         {/* Featured Editorial Comparison Guides */}
-        <div className="border-t border-border pt-12 space-y-6">
+        <div className="pt-6 sm:pt-8 space-y-6">
           <div className="space-y-1">
             <h2 className="text-xl sm:text-2xl font-black text-foreground">
               {isVi ? "Các Bài So Sánh Đối Đầu Chuyên Sâu" : "Featured Head-to-Head Comparison Guides"}

@@ -51,32 +51,32 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
           {tool.tagline[locale]}
         </p>
 
-        {/* Feature Tags */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {tool.tags.slice(0, 3).map((tag) => (
+        {/* Feature Tags - Clean Apple Badges (Max 2 tags to prevent overflow) */}
+        <div className="flex flex-wrap items-center gap-1.5 mb-4">
+          {tool.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-850 text-zinc-600 dark:text-zinc-400 px-2.5 py-0.5 rounded-full border border-zinc-200/50 dark:border-zinc-800"
+              className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800"
             >
               {tag}
             </span>
           ))}
           {tool.hasFreePlan && (
-            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full">
+            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800">
               Free Plan
             </span>
           )}
-          {tool.hasFreeTrial && (
-            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full">
+          {!tool.hasFreePlan && tool.hasFreeTrial && (
+            <span className="text-[10px] font-medium bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 px-2.5 py-0.5 rounded-full border border-zinc-200/60 dark:border-zinc-800">
               {tool.trialDays}d Trial
             </span>
           )}
         </div>
       </div>
 
-      {/* Card Footer: Pricing & Action Buttons */}
-      <div className="pt-3.5 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
-        <div>
+      {/* Card Footer: Pricing & Action Buttons - Zero Squeeze & No Text Wrapping */}
+      <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between gap-2 mt-auto">
+        <div className="shrink-0">
           <span className="text-[9px] uppercase font-semibold text-zinc-400 block tracking-wider">
             {dict.cards.startingFrom}
           </span>
@@ -88,11 +88,11 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
           </span>
         </div>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 shrink-0">
           <Link
             href={`/${locale}/tools/${tool.slug}`}
             prefetch={true}
-            className="inline-flex items-center justify-center h-7.5 px-3 text-xs font-medium rounded-full bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 transition-colors"
+            className="inline-flex items-center justify-center h-8 px-3 text-xs font-medium rounded-full bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 transition-colors whitespace-nowrap"
           >
             {dict.cards.viewDetails}
           </Link>
@@ -100,7 +100,7 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
             href={`/go/${tool.slug}`}
             target="_blank"
             rel="nofollow sponsored"
-            className="inline-flex items-center justify-center h-7.5 px-3.5 text-xs font-medium rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black transition-all shadow-xs"
+            className="inline-flex items-center justify-center h-8 px-3.5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-black transition-all shadow-xs whitespace-nowrap"
           >
             <span>{dict.cards.visitSite}</span>
             <ExternalLink className="h-2.5 w-2.5 ml-1" />

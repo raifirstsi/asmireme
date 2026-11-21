@@ -153,7 +153,7 @@ export function Header({ locale }: HeaderProps) {
             <Link
               href={`/${locale}/membership`}
               prefetch={true}
-              className="inline-flex items-center justify-center h-8 px-3.5 text-xs font-medium rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
+              className="hidden sm:inline-flex items-center justify-center h-8 px-3.5 text-xs font-medium rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs"
             >
               {locale === "vi" ? "Gói Pro" : "Get Pro"}
             </Link>

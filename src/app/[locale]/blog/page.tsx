@@ -120,7 +120,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-zinc-100 dark:border-zinc-850 flex items-center justify-between">
+                <div className="pt-2 flex items-center justify-between">
                   <div className="flex items-center gap-2 text-xs text-zinc-400">
                     <span className="font-medium text-zinc-700 dark:text-zinc-300">{post.author.name}</span>
                     <span>•</span>

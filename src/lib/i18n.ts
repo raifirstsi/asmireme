@@ -54,8 +54,8 @@ export const dictionary = {
       freePlan: "Free Plan Available",
       freeTrial: "Free Trial",
       verified: "Verified",
-      viewDetails: "Full Review",
-      visitSite: "Visit Official Site",
+      viewDetails: "Review",
+      visitSite: "Try Free",
       testedOn: "Tested on",
     },
     footer: {
@@ -152,8 +152,8 @@ export const dictionary = {
       freePlan: "Có bản miễn phí",
       freeTrial: "Dùng thử miễn phí",
       verified: "Đã kiểm chứng",
-      viewDetails: "Xem đánh giá",
-      visitSite: "Đến trang chủ hãng",
+      viewDetails: "Đánh giá",
+      visitSite: "Dùng thử",
       testedOn: "Đã test ngày",
     },
     footer: {

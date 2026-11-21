@@ -77,7 +77,7 @@ export function HomeSidebar({ locale }: HomeSidebarProps) {
         </div>
         <div className="space-y-3.5">
           {recentUpdates.map((item, idx) => (
-            <div key={idx} className="border-b border-zinc-100 dark:border-zinc-850 pb-3 last:border-0 last:pb-0">
+            <div key={idx} className="border-b border-zinc-100 dark:border-zinc-800 pb-3 last:border-0 last:pb-0">
               <div className="flex items-center justify-between text-xs mb-1">
                 <span className="font-semibold text-zinc-900 dark:text-zinc-100">{item.tool}</span>
                 <span className="text-[10px] text-zinc-400">{item.date}</span>
@@ -103,7 +103,7 @@ export function HomeSidebar({ locale }: HomeSidebarProps) {
         </div>
         <div className="space-y-3.5">
           {DETAILED_REVIEWS_DATASET.slice(0, 3).map((rev) => (
-            <div key={rev.id} className="border-b border-zinc-100 dark:border-zinc-850 pb-3 last:border-0 last:pb-0 space-y-1.5">
+            <div key={rev.id} className="border-b border-zinc-100 dark:border-zinc-800 pb-3 last:border-0 last:pb-0 space-y-1.5">
               <div className="flex items-center justify-between text-xs">
                 <Link
                   href={`/${locale}/tools/${rev.toolSlug}`}

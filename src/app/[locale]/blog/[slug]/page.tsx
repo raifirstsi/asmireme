@@ -116,15 +116,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="py-10 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-12">
-          {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-muted-foreground">
-            <Link href={`/${locale}`} className="hover:text-foreground">Home</Link>
-            <span>/</span>
-            <Link href={`/${locale}/blog`} className="hover:text-foreground">Blog</Link>
-            <span>/</span>
-            <span className="text-foreground font-semibold truncate max-w-xs">{post.category}</span>
+      <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl space-y-8 sm:space-y-10">
+          {/* Breadcrumbs - Apple Single Line */}
+          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none">
+            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</Link>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <Link href={`/${locale}/blog`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Blog</Link>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate">{post.category}</span>
           </nav>
 
           {/* Article Header */}
@@ -224,7 +224,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-850">
+                    <div className="flex items-center justify-between pt-1">
                       <Link
                         href={`/${locale}/tools/${tool.slug}`}
                         className="text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"

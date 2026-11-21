@@ -141,15 +141,15 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="py-10 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-12">
-          {/* Breadcrumbs */}
-          <nav className="flex items-center gap-2 text-xs text-muted-foreground">
-            <Link href={`/${locale}`} className="hover:text-foreground">Home</Link>
-            <span>/</span>
-            <Link href={`/${locale}/tools`} className="hover:text-foreground">Tools</Link>
-            <span>/</span>
-            <span className="text-foreground font-semibold">{tool.name}</span>
+      <div className="pt-5 pb-12 sm:pt-7 sm:pb-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl space-y-8">
+          {/* Breadcrumbs - Apple Single Line */}
+          <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-medium whitespace-nowrap overflow-x-auto scrollbar-none">
+            <Link href={`/${locale}`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Home</Link>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <Link href={`/${locale}/tools`} className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Tools</Link>
+            <span className="text-zinc-400 dark:text-zinc-600">/</span>
+            <span className="text-zinc-900 dark:text-zinc-100 font-semibold truncate">{tool.name}</span>
           </nav>
 
           {/* Hero Header - Apple Minimalist */}
