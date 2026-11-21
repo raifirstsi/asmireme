@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Search, X, Star, ArrowRight } from "lucide-react";
 
 interface SearchModalProps {
@@ -82,9 +83,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                 className="flex items-center justify-between p-2.5 rounded-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-850/80 transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-xs border border-zinc-200/50 dark:border-zinc-700/50">
-                    {tool.name.charAt(0)}
-                  </div>
+                  <ToolLogo slug={tool.slug} name={tool.name} size="md" />
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-black dark:group-hover:text-white transition-colors">

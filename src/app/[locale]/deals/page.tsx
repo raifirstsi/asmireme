@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Tag, Sparkles, ExternalLink } from "lucide-react";
 
 interface DealsPageProps {
@@ -50,7 +51,10 @@ export default async function DealsPage({ params }: DealsPageProps) {
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-sm text-foreground">{tool.name}</span>
+                  <div className="flex items-center gap-2.5">
+                    <ToolLogo slug={tool.slug} name={tool.name} size="sm" />
+                    <span className="font-bold text-sm text-foreground">{tool.name}</span>
+                  </div>
                   <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">
                     {tool.hasFreeTrial ? `${tool.trialDays}d Free Trial` : "Discount Tier"}
                   </span>

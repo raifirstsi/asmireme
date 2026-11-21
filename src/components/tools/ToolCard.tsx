@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ToolItem } from "@/types";
 import { Locale, getDictionary } from "@/lib/i18n";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Star, ExternalLink, ShieldCheck } from "lucide-react";
 
 interface ToolCardProps {
@@ -15,12 +16,10 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
   return (
     <div className="group relative flex flex-col justify-between rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] p-5 shadow-[0_1px_4px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all duration-300 hover:border-zinc-400 dark:hover:border-zinc-600">
       <div>
-        {/* Top Header: Logo Initial + Badges */}
+        {/* Top Header: Real Logo + Badges */}
         <div className="flex items-start justify-between gap-3 mb-3.5">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-base border border-zinc-200/60 dark:border-zinc-700/60 shadow-xs">
-              {tool.name.charAt(0)}
-            </div>
+            <ToolLogo slug={tool.slug} name={tool.name} size="lg" />
             <div>
               <Link
                 href={`/${locale}/tools/${tool.slug}`}

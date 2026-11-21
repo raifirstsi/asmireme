@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Locale, getDictionary } from "@/lib/i18n";
 import { useSearch } from "@/context/SearchContext";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { Search, Globe, Menu, X, Sparkles } from "lucide-react";
 
 interface HeaderProps {
@@ -77,10 +78,10 @@ export function Header({ locale }: HeaderProps) {
             : "bg-white/95 dark:bg-black/95 backdrop-blur-md border-black/[0.04] dark:border-white/[0.06]"
         }`}
       >
-        <div className="container mx-auto flex h-14 items-center justify-between px-4 sm:px-6 max-w-7xl">
+        <div className="mx-auto flex h-14 items-center justify-between px-4 sm:px-6 max-w-5xl">
           {/* Brand Logo - Apple Minimalist Typography */}
-          <div className="flex items-center gap-8">
-            <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group">
+          <div className="flex items-center gap-6 lg:gap-8">
+            <Link href={`/${locale}`} prefetch={true} className="flex items-center gap-2 group shrink-0">
               <span className="text-lg font-bold tracking-tight text-black dark:text-white transition-opacity group-hover:opacity-80">
                 {dict.brandName}
               </span>
@@ -111,17 +112,17 @@ export function Header({ locale }: HeaderProps) {
             </nav>
           </div>
 
-          {/* Right Action Cluster: Search, Lang, Pro Pill, Mobile Menu */}
+          {/* Right Action Cluster: Search, Theme, Lang, Pro Pill, Mobile Menu */}
           <div className="flex items-center gap-2 sm:gap-2.5">
             {/* Desktop Quick Search Trigger (Cmd+K) */}
             <button
               onClick={openSearch}
-              className="hidden sm:flex items-center gap-2 h-8 px-3 text-xs text-zinc-500 bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-transparent rounded-full transition-all w-44 lg:w-56 cursor-pointer text-left"
+              className="hidden sm:flex items-center gap-2 h-8 px-3 text-xs text-zinc-500 bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 border border-transparent rounded-full transition-all w-36 lg:w-48 cursor-pointer text-left"
               aria-label="Search tools"
             >
               <Search className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
-              <span className="truncate">{dict.nav.searchPlaceholder.slice(0, 18)}...</span>
-              <kbd className="ml-auto pointer-events-none inline-flex h-4 select-none items-center rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-1.5 font-mono text-[9px] font-medium text-zinc-500">
+              <span className="truncate">{dict.nav.searchPlaceholder.slice(0, 16)}...</span>
+              <kbd className="ml-auto pointer-events-none inline-flex h-4 select-none items-center rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-1 font-mono text-[9px] font-medium text-zinc-500">
                 ⌘K
               </kbd>
             </button>
@@ -134,6 +135,9 @@ export function Header({ locale }: HeaderProps) {
             >
               <Search className="h-4 w-4" />
             </button>
+
+            {/* Theme Toggle (Light / Dark) */}
+            <ThemeToggle />
 
             {/* Language Switcher */}
             <button
@@ -206,6 +210,23 @@ export function Header({ locale }: HeaderProps) {
                   {item.label}
                 </Link>
               ))}
+            </div>
+
+            {/* Mobile Actions: Language & Theme */}
+            <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900 flex items-center justify-between px-2">
+              <span className="text-xs text-zinc-500 font-medium">
+                {locale === "vi" ? "Giao diện & Ngôn ngữ" : "Appearance & Language"}
+              </span>
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <button
+                  onClick={toggleLanguage}
+                  className="flex items-center gap-1 h-8 px-2.5 text-xs font-semibold rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
+                >
+                  <Globe className="h-3.5 w-3.5 text-zinc-500" />
+                  <span>{locale === "en" ? "Tiếng Việt" : "English"}</span>
+                </button>
+              </div>
             </div>
 
             <div className="pt-2">

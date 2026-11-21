@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Locale, getDictionary } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Trophy, Star, ArrowRight } from "lucide-react";
 
 interface LeaderboardProps {
@@ -40,9 +41,12 @@ export function Leaderboard({ locale }: LeaderboardProps) {
                 </span>
               </div>
 
-              <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 mb-1 tracking-tight">
-                {tool.name}
-              </h4>
+              <div className="flex items-center gap-3 mb-2.5">
+                <ToolLogo slug={tool.slug} name={tool.name} size="md" />
+                <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 tracking-tight">
+                  {tool.name}
+                </h4>
+              </div>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed mb-4">
                 {tool.tagline[locale]}
               </p>

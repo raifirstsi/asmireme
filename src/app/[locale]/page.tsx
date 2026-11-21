@@ -113,19 +113,21 @@ export default async function HomePage({ params }: HomePageProps) {
               </Link>
             </div>
 
-            {/* Quick Metrics */}
-            <div className="pt-8 grid grid-cols-3 gap-4 border-t border-zinc-100 dark:border-zinc-850 max-w-lg mx-auto text-center">
-              <div>
-                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">50</span>
-                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.tools}</span>
-              </div>
-              <div>
-                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">100%</span>
-                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.benchmarks}</span>
-              </div>
-              <div>
-                <span className="block text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">24/7</span>
-                <span className="text-[11px] font-medium text-zinc-400">{dict.hero.stats.pricingUpdates}</span>
+            {/* Quick Metrics - Apple Unified Glass Capsule */}
+            <div className="pt-8 max-w-md mx-auto">
+              <div className="grid grid-cols-3 divide-x divide-zinc-200/80 dark:divide-zinc-800 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-900/40 p-3 sm:p-4 text-center shadow-2xs backdrop-blur-xs">
+                <div>
+                  <span className="block text-lg sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">50</span>
+                  <span className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">{dict.hero.stats.tools}</span>
+                </div>
+                <div>
+                  <span className="block text-lg sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">100%</span>
+                  <span className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">{dict.hero.stats.benchmarks}</span>
+                </div>
+                <div>
+                  <span className="block text-lg sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">24/7</span>
+                  <span className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">{dict.hero.stats.pricingUpdates}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -135,8 +137,8 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* Marquee Ticker */}
       <MarqueeBar locale={locale as Locale} />
 
-      {/* Main Content Area */}
-      <div className="container mx-auto px-4 sm:px-6 py-12 space-y-16">
+      {/* Main Content Area - Focused Center Layout */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 space-y-16">
         {/* Category Grid Section */}
         <section className="space-y-6">
           <div className="flex items-end justify-between">

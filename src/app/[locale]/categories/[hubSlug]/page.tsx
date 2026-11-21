@@ -44,7 +44,7 @@ export default async function CategoryDetailPage({ params }: CategoryDetailPageP
 
   return (
     <div className="py-10 md:py-16">
-      <div className="container mx-auto px-4 sm:px-6 space-y-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
         <Link
           href={`/${locale}/categories`}
           className="inline-flex items-center text-xs font-semibold text-muted-foreground hover:text-foreground"

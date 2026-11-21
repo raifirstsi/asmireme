@@ -9,6 +9,7 @@ import {
 } from "@/data/comparisons-data";
 import { ComparisonMatrix } from "@/components/tools/ComparisonMatrix";
 import { PriceCalculator } from "@/components/tools/PriceCalculator";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { 
   ArrowLeftRight, Check, X, ShieldCheck, Sparkles, 
   Star, ExternalLink, ArrowRight, Layers, HelpCircle, Trophy
@@ -182,9 +183,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
               )}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-foreground font-black text-xl border border-border">
-                    {toolA.name.charAt(0)}
-                  </div>
+                  <ToolLogo slug={toolA.slug} name={toolA.name} size="lg" />
                   <div>
                     <h2 className="text-xl font-black text-foreground">{toolA.name}</h2>
                     <div className="flex items-center gap-1 text-xs text-foreground font-bold">
@@ -225,9 +224,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
               )}
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-foreground font-black text-xl border border-border">
-                    {toolB.name.charAt(0)}
-                  </div>
+                  <ToolLogo slug={toolB.slug} name={toolB.name} size="lg" />
                   <div>
                     <h2 className="text-xl font-black text-foreground">{toolB.name}</h2>
                     <div className="flex items-center gap-1 text-xs text-foreground font-bold">

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Locale, getDictionary } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Sparkles, Dna, Clock, MessageSquare, Tag, ArrowUpRight, Star, ArrowRight } from "lucide-react";
 import { DETAILED_REVIEWS_DATASET } from "@/data/reviews-dataset";
 
@@ -43,11 +44,14 @@ export function HomeSidebar({ locale }: HomeSidebarProps) {
     <aside className="space-y-6">
       {/* Random Discovery Card - Apple Monochrome Refinement */}
       <div className="rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 p-5 shadow-2xs">
-        <div className="flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 font-semibold text-[11px] uppercase tracking-wider mb-2">
+        <div className="flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 font-semibold text-[11px] uppercase tracking-wider mb-3">
           <Dna className="h-3.5 w-3.5 text-zinc-700 dark:text-zinc-300" />
           <span>Featured Discovery</span>
         </div>
-        <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100 mb-1 tracking-tight">{randomTool.name}</h4>
+        <div className="flex items-center gap-3 mb-2">
+          <ToolLogo slug={randomTool.slug} name={randomTool.name} size="md" />
+          <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100 tracking-tight">{randomTool.name}</h4>
+        </div>
         <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 mb-3.5">
           {randomTool.tagline[locale]}
         </p>

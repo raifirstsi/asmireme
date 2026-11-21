@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { Trophy, Star, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface RankingsPageProps {
@@ -52,9 +53,10 @@ export default async function RankingsPage({ params }: RankingsPageProps) {
                 className="flex items-center justify-between p-4 sm:p-5 hover:bg-secondary/40 transition-colors"
               >
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-lg bg-secondary font-black text-xs sm:text-sm text-foreground">
+                  <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-secondary font-black text-xs sm:text-sm text-foreground shrink-0">
                     #{idx + 1}
                   </span>
+                  <ToolLogo slug={tool.slug} name={tool.name} size="md" />
                   <div>
                     <Link
                       href={`/${locale}/tools/${tool.slug}`}

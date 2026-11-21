@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Locale, getDictionary } from "@/lib/i18n";
 import { getToolBySlug, TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { getExternalReviewsForTool } from "@/services/review-ingestion";
 import { getDetailedReviewsForTool } from "@/data/reviews-dataset";
 import { 
@@ -154,10 +155,8 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           {/* Hero Header - Apple Minimalist */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-zinc-200 dark:border-zinc-800">
             <div className="space-y-3.5">
-              <div className="flex items-center gap-3">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-2xl border border-zinc-200/80 dark:border-zinc-700/80 shadow-xs">
-                  {tool.name.charAt(0)}
-                </div>
+              <div className="flex items-center gap-3.5">
+                <ToolLogo slug={tool.slug} name={tool.name} size="xl" />
                 <div>
                   <h1 className="text-2xl sm:text-4xl font-bold text-zinc-950 dark:text-zinc-50 tracking-tight">
                     {tool.name}
@@ -473,7 +472,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             <h2 className="text-xl font-bold text-foreground">
               {isVi ? `Các Lựa Chọn Thay Thế Cho ${tool.name}` : `Top Alternatives to ${tool.name}`}
             </h2>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2.5">
               {tool.alternatives.map((altSlug) => {
                 const alt = getToolBySlug(altSlug);
                 if (!alt) return null;
@@ -481,12 +480,10 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                   <Link
                     key={alt.slug}
                     href={`/${locale}/tools/${alt.slug}`}
-                    className="inline-flex items-center gap-2 p-3 rounded-xl border border-border bg-card hover:border-brand-500/50 hover:bg-secondary/40 transition-colors"
+                    className="inline-flex items-center gap-2.5 p-2.5 pr-3.5 rounded-full border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors shadow-2xs"
                   >
-                    <div className="flex h-7 w-7 items-center justify-center rounded bg-brand-500/10 text-brand-600 font-bold text-xs">
-                      {alt.name.charAt(0)}
-                    </div>
-                    <span className="text-xs font-bold text-foreground">{alt.name}</span>
+                    <ToolLogo slug={alt.slug} name={alt.name} size="xs" className="!rounded-full" />
+                    <span className="text-xs font-semibold text-foreground">{alt.name}</span>
                     <span className="text-[11px] text-muted-foreground">${alt.startingPrice}/mo</span>
                   </Link>
                 );
@@ -498,9 +495,12 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
       {/* Sticky Mobile Action Bar - Apple Mobile Luxury Experience */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-3 bg-white/90 dark:bg-black/90 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-3 shadow-[0_-4px_16px_rgba(0,0,0,0.06)]">
-        <div className="min-w-0 pl-1">
-          <span className="font-semibold text-xs text-zinc-900 dark:text-zinc-100 block truncate">{tool.name}</span>
-          <span className="text-[11px] text-zinc-400 font-medium">From ${tool.startingPrice}/mo</span>
+        <div className="flex items-center gap-2.5 min-w-0 pl-1">
+          <ToolLogo slug={tool.slug} name={tool.name} size="sm" />
+          <div className="min-w-0">
+            <span className="font-semibold text-xs text-zinc-900 dark:text-zinc-100 block truncate">{tool.name}</span>
+            <span className="text-[11px] text-zinc-400 font-medium">From ${tool.startingPrice}/mo</span>
+          </div>
         </div>
         <a
           href={`/go/${tool.slug}`}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ToolItem } from "@/types";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { 
   Check, X, Star, ExternalLink, Plus, Trash2, 
   ArrowLeftRight, Sparkles, Share2, CheckCheck 
@@ -119,9 +120,7 @@ export function ComparisonMatrix({ initialTools, locale }: ComparisonMatrixProps
                 <th key={tool.id} className="p-4 align-top w-64 border-l border-zinc-200/80 dark:border-zinc-800/80">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-bold text-sm border border-zinc-200/60 dark:border-zinc-700/60">
-                        {tool.name.charAt(0)}
-                      </div>
+                      <ToolLogo slug={tool.slug} name={tool.name} size="md" />
                       <div>
                         <Link
                           href={`/${locale}/tools/${tool.slug}`}

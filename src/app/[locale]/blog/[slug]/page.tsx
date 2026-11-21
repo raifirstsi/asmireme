@@ -5,6 +5,7 @@ import { Locale } from "@/lib/i18n";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/data/blog-data";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { MarkdownRenderer } from "@/components/common/MarkdownRenderer";
+import { ToolLogo } from "@/components/common/ToolLogo";
 import { 
   Calendar, Clock, ShieldCheck, Sparkles, ArrowLeft, 
   ExternalLink, Check, ArrowRight, Share2, BookOpen 
@@ -212,7 +213,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100">{tool.name}</h4>
+                        <div className="flex items-center gap-2.5">
+                          <ToolLogo slug={tool.slug} name={tool.name} size="sm" />
+                          <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100">{tool.name}</h4>
+                        </div>
                         <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">${tool.startingPrice}/mo</span>
                       </div>
                       <p className="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2">

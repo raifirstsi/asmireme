@@ -14,14 +14,14 @@ export function Footer({ locale }: FooterProps) {
     <footer className="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-black text-zinc-900 dark:text-zinc-100 mt-20">
       {/* FTC / Transparency Bar - Apple Minimalist */}
       <div className="border-b border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-100/40 dark:bg-zinc-900/40 py-3.5 px-4 sm:px-6">
-        <div className="container mx-auto flex items-start gap-2.5 max-w-6xl text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+        <div className="mx-auto flex items-start gap-2.5 max-w-5xl text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
           <Shield className="h-3.5 w-3.5 text-zinc-700 dark:text-zinc-300 shrink-0 mt-0.5" />
           <p className="font-normal">{dict.footer.disclosure}</p>
         </div>
       </div>
 
       {/* Main Footer Links */}
-      <div className="container mx-auto px-4 sm:px-6 py-12 max-w-6xl">
+      <div className="mx-auto px-4 sm:px-6 py-12 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3.5 md:col-span-1">

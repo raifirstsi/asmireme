@@ -22,7 +22,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var saved = localStorage.getItem('theme');
+                  var pref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (saved === 'dark' || (!saved && pref)) {
+                    document.documentElement.classList.add('dark');
+                  } else if (saved === 'light') {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch(e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground transition-colors duration-200">
         {children}
       </body>
     </html>
