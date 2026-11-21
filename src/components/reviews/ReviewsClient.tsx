@@ -357,11 +357,12 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
                     <a
                       href={rev.sourceUrl}
                       target="_blank"
-                      rel="nofollow"
-                      className="p-1.5 rounded-lg border border-border text-muted-foreground hover:text-brand-600 hover:bg-secondary transition-colors"
-                      title="Open original thread"
+                      rel="nofollow sponsored"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white text-xs font-medium transition-colors"
+                      title={isVi ? `Xác minh trên ${rev.source.replace("_", " ")}` : `Verify on ${rev.source.replace("_", " ")}`}
                     >
-                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span>{rev.source.replace("_", " ")}</span>
+                      <ExternalLink className="h-3 w-3" />
                     </a>
                   </div>
                 </div>

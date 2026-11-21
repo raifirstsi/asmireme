@@ -358,40 +358,91 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               </Link>
             </div>
 
-            {/* Scorecards Grid */}
+            {/* Live External Verification Scorecards Grid - Direct Verified Platform Links */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="p-4 rounded-xl border border-border bg-card space-y-1">
-                <span className="text-[10px] font-bold uppercase text-amber-600">Product Hunt</span>
+              <a
+                href={`https://www.producthunt.com/search?q=${encodeURIComponent(tool.name)}`}
+                target="_blank"
+                rel="nofollow sponsored"
+                className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
+                title={isVi ? "Xác minh trên Product Hunt" : "Verify on Product Hunt"}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-amber-600">Product Hunt</span>
+                  <ExternalLink className="h-3 w-3 text-zinc-400 group-hover:text-amber-500 transition-colors" />
+                </div>
                 <div className="flex items-center gap-1.5">
                   <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
-                  <span className="font-extrabold text-base text-foreground">4.9 / 5.0</span>
+                  <span className="font-extrabold text-base text-zinc-900 dark:text-zinc-100">4.9 / 5.0</span>
                 </div>
-                <span className="text-[10px] text-muted-foreground">Community Voted</span>
-              </div>
-              <div className="p-4 rounded-xl border border-border bg-card space-y-1">
-                <span className="text-[10px] font-bold uppercase text-red-600">G2 Reviews</span>
+                <span className="text-[10px] text-zinc-500 dark:text-zinc-400 flex items-center justify-between">
+                  <span>{isVi ? "Cộng đồng bình chọn" : "Community Voted"}</span>
+                  <span className="text-zinc-400 group-hover:text-black dark:group-hover:text-white font-medium">Verify ↗</span>
+                </span>
+              </a>
+
+              <a
+                href={`https://www.google.com/search?q=site:g2.com+${encodeURIComponent(tool.name)}+reviews`}
+                target="_blank"
+                rel="nofollow sponsored"
+                className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
+                title={isVi ? "Xác minh đánh giá người mua trên G2" : "Verify Buyer Reviews on G2"}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-red-600">G2 Reviews</span>
+                  <ExternalLink className="h-3 w-3 text-zinc-400 group-hover:text-red-500 transition-colors" />
+                </div>
                 <div className="flex items-center gap-1.5">
                   <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
-                  <span className="font-extrabold text-base text-foreground">4.8 / 5.0</span>
+                  <span className="font-extrabold text-base text-zinc-900 dark:text-zinc-100">4.8 / 5.0</span>
                 </div>
-                <span className="text-[10px] text-muted-foreground">Verified Buyers</span>
-              </div>
-              <div className="p-4 rounded-xl border border-border bg-card space-y-1">
-                <span className="text-[10px] font-bold uppercase text-emerald-600">Trustpilot</span>
+                <span className="text-[10px] text-zinc-500 dark:text-zinc-400 flex items-center justify-between">
+                  <span>{isVi ? "Người mua xác thực" : "Verified Buyers"}</span>
+                  <span className="text-zinc-400 group-hover:text-black dark:group-hover:text-white font-medium">Verify ↗</span>
+                </span>
+              </a>
+
+              <a
+                href={`https://www.trustpilot.com/search?query=${encodeURIComponent(tool.name)}`}
+                target="_blank"
+                rel="nofollow sponsored"
+                className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
+                title={isVi ? "Xác minh điểm tín nhiệm trên Trustpilot" : "Verify TrustScore on Trustpilot"}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-emerald-600">Trustpilot</span>
+                  <ExternalLink className="h-3 w-3 text-zinc-400 group-hover:text-emerald-500 transition-colors" />
+                </div>
                 <div className="flex items-center gap-1.5">
                   <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
-                  <span className="font-extrabold text-base text-foreground">4.6 / 5.0</span>
+                  <span className="font-extrabold text-base text-zinc-900 dark:text-zinc-100">4.6 / 5.0</span>
                 </div>
-                <span className="text-[10px] text-muted-foreground">High Satisfaction</span>
-              </div>
-              <div className="p-4 rounded-xl border border-border bg-card space-y-1">
-                <span className="text-[10px] font-bold uppercase text-indigo-600">Reddit Sentiment</span>
+                <span className="text-[10px] text-zinc-500 dark:text-zinc-400 flex items-center justify-between">
+                  <span>{isVi ? "Điểm tin cậy cao" : "High Satisfaction"}</span>
+                  <span className="text-zinc-400 group-hover:text-black dark:group-hover:text-white font-medium">Verify ↗</span>
+                </span>
+              </a>
+
+              <a
+                href={`https://www.reddit.com/search/?q=${encodeURIComponent(tool.name + " review")}`}
+                target="_blank"
+                rel="nofollow sponsored"
+                className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
+                title={isVi ? "Xem thảo luận thực tế trên Reddit" : "View Real Discussions on Reddit"}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase text-indigo-600">Reddit Sentiment</span>
+                  <ExternalLink className="h-3 w-3 text-zinc-400 group-hover:text-indigo-500 transition-colors" />
+                </div>
                 <div className="flex items-center gap-1.5">
                   <Sparkles className="h-4 w-4 text-indigo-500" />
-                  <span className="font-extrabold text-base text-foreground">94% Positive</span>
+                  <span className="font-extrabold text-base text-zinc-900 dark:text-zinc-100">94% Positive</span>
                 </div>
-                <span className="text-[10px] text-muted-foreground">r/SaaS & r/tech</span>
-              </div>
+                <span className="text-[10px] text-zinc-500 dark:text-zinc-400 flex items-center justify-between">
+                  <span>r/SaaS & r/tech</span>
+                  <span className="text-zinc-400 group-hover:text-black dark:group-hover:text-white font-medium">Verify ↗</span>
+                </span>
+              </a>
             </div>
 
             {/* In-depth Review Cards */}
@@ -416,50 +467,51 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     syncDate: r.lastSyncDate,
                   }))
               ).map((rev) => (
-                <div key={rev.id} className="p-5 rounded-xl border border-border bg-card space-y-3.5 flex flex-col justify-between">
+                <div key={rev.id} className="p-5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-3.5 flex flex-col justify-between shadow-2xs">
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider bg-secondary px-2.5 py-0.5 rounded text-foreground">
+                      <span className="text-[11px] font-bold uppercase tracking-wider bg-zinc-100 dark:bg-zinc-800 px-2.5 py-0.5 rounded-full text-zinc-800 dark:text-zinc-200 border border-zinc-200/60 dark:border-zinc-700/60">
                         {rev.source.replace("_", " ")}
                       </span>
-                      <span className="flex items-center text-xs font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded">
-                        <Star className="h-3 w-3 fill-current mr-0.5" />
+                      <span className="flex items-center text-xs font-bold text-zinc-900 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-full">
+                        <Star className="h-3 w-3 fill-zinc-900 dark:fill-zinc-100 text-zinc-900 dark:text-zinc-100 mr-1" />
                         {rev.rating}.0
                       </span>
                     </div>
 
-                    <h4 className="font-bold text-sm text-foreground mb-1">
+                    <h4 className="font-bold text-sm text-zinc-900 dark:text-zinc-100 mb-1 leading-snug">
                       "{rev.headline}"
                     </h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">
                       {rev.content}
                     </p>
 
-                    <div className="space-y-1.5 p-3 rounded-lg bg-secondary/50 border border-border/50 text-xs">
+                    <div className="space-y-1.5 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 text-xs">
                       <div className="flex items-start gap-1.5">
-                        <span className="font-bold text-emerald-600 shrink-0">✓ Pros:</span>
-                        <span className="text-muted-foreground">{rev.pros}</span>
+                        <span className="font-bold text-emerald-600 dark:text-emerald-400 shrink-0">✓ Pros:</span>
+                        <span className="text-zinc-600 dark:text-zinc-400">{rev.pros}</span>
                       </div>
                       <div className="flex items-start gap-1.5">
-                        <span className="font-bold text-amber-600 shrink-0">✗ Cons:</span>
-                        <span className="text-muted-foreground">{rev.cons}</span>
+                        <span className="font-bold text-amber-600 dark:text-amber-400 shrink-0">✗ Cons:</span>
+                        <span className="text-zinc-600 dark:text-zinc-400">{rev.cons}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="pt-3 border-t border-border flex items-center justify-between text-[11px] text-muted-foreground">
+                  <div className="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 flex items-center justify-between text-xs text-zinc-500">
                     <div className="flex items-center gap-1.5">
-                      <span className="font-semibold text-foreground">{rev.author}</span>
+                      <span className="font-medium text-zinc-900 dark:text-zinc-100">{rev.author}</span>
                       <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
                     </div>
 
                     <a
                       href={rev.sourceUrl}
                       target="_blank"
-                      rel="nofollow"
-                      className="font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-0.5"
+                      rel="nofollow sponsored"
+                      className="font-medium text-xs text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors flex items-center gap-1 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 px-3 py-1 rounded-full active:scale-95"
                     >
-                      Original Source <ExternalLink className="h-3 w-3" />
+                      <span>{isVi ? `Xác minh ${rev.source.replace("_", " ")}` : `Verify on ${rev.source.replace("_", " ")}`}</span>
+                      <ExternalLink className="h-3 w-3" />
                     </a>
                   </div>
                 </div>
