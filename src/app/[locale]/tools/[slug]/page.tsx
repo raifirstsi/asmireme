@@ -6,6 +6,7 @@ import { getToolBySlug, TOOLS_DATA } from "@/data/tools-data";
 import { ToolLogo } from "@/components/common/ToolLogo";
 import { getExternalReviewsForTool } from "@/services/review-ingestion";
 import { getDetailedReviewsForTool } from "@/data/reviews-dataset";
+import { getVerifiedReviewUrl } from "@/data/platform-review-links";
 import { 
   Star, ShieldCheck, Check, X, ExternalLink, Calendar, 
   HelpCircle, Sparkles, AlertCircle, ArrowRight, Layers, MessageSquare, ThumbsUp 
@@ -367,7 +368,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             {/* Live External Verification Scorecards Grid - Direct Verified Platform Links */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <a
-                href={`https://www.producthunt.com/search?q=${encodeURIComponent(tool.name)}`}
+                href={getVerifiedReviewUrl(tool.slug, "PRODUCT_HUNT", tool.name)}
                 target="_blank"
                 rel="nofollow sponsored"
                 className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
@@ -388,7 +389,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               </a>
 
               <a
-                href={`https://www.google.com/search?q=site:g2.com+${encodeURIComponent(tool.name)}+reviews`}
+                href={getVerifiedReviewUrl(tool.slug, "G2", tool.name)}
                 target="_blank"
                 rel="nofollow sponsored"
                 className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
@@ -409,7 +410,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               </a>
 
               <a
-                href={`https://www.trustpilot.com/search?query=${encodeURIComponent(tool.name)}`}
+                href={getVerifiedReviewUrl(tool.slug, "TRUSTPILOT", tool.name)}
                 target="_blank"
                 rel="nofollow sponsored"
                 className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
@@ -430,7 +431,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               </a>
 
               <a
-                href={`https://www.reddit.com/search/?q=${encodeURIComponent(tool.name + " review")}`}
+                href={getVerifiedReviewUrl(tool.slug, "REDDIT", tool.name)}
                 target="_blank"
                 rel="nofollow sponsored"
                 className="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all space-y-1 group"
@@ -511,7 +512,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     </div>
 
                     <a
-                      href={rev.sourceUrl}
+                      href={getVerifiedReviewUrl(tool.slug, rev.source, tool.name) || rev.sourceUrl}
                       target="_blank"
                       rel="nofollow sponsored"
                       className="font-medium text-xs text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors flex items-center gap-1 bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 px-3 py-1 rounded-full active:scale-95"

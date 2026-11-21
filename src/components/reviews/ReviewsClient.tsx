@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { DetailedReviewItem } from "@/data/reviews-dataset";
+import { getVerifiedReviewUrl } from "@/data/platform-review-links";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { 
   Star, Search, Filter, ExternalLink, ThumbsUp, ShieldCheck, 
@@ -355,7 +356,7 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
                     </button>
 
                     <a
-                      href={rev.sourceUrl}
+                      href={getVerifiedReviewUrl(rev.toolSlug, rev.source, rev.toolName) || rev.sourceUrl}
                       target="_blank"
                       rel="nofollow sponsored"
                       className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 hover:bg-zinc-100 dark:bg-zinc-900 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white text-xs font-medium transition-colors"
