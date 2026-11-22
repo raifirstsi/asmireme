@@ -99,7 +99,7 @@ export function Header({ locale }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   prefetch={true}
-                  className={`text-[14px] lg:text-[15px] font-medium tracking-normal transition-colors py-1 ${
+                  className={`text-[13px] font-medium tracking-normal transition-colors py-1 ${
                     isActive
                       ? "text-black dark:text-white font-semibold"
                       : "text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white"
@@ -152,7 +152,7 @@ export function Header({ locale }: HeaderProps) {
             <Link
               href={`/${locale}/account/login`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-[13.5px] font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
+              className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-[13px] font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
               Đăng nhập
             </Link>
@@ -216,7 +216,7 @@ export function Header({ locale }: HeaderProps) {
                 href={`/${locale}/account/login`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-sm shadow-xs block transition-all"
+                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-[13px] shadow-xs block transition-all"
               >
                 Đăng nhập
               </Link>
