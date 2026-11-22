@@ -1,0 +1,1019 @@
+[
+  {
+    "slug": "decktopus",
+    "name": "Decktopus AI",
+    "url": "https://decktopus.com",
+    "hubs": "\"presentation-design\"",
+    "startingPrice": 9.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "taskade",
+    "name": "Taskade",
+    "url": "https://www.taskade.com",
+    "hubs": "\"meeting-productivity\", \"research-agent\"",
+    "startingPrice": 8.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "omniseo",
+    "name": "OmniSEO",
+    "url": "https://omniseo.ai",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 39.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim.ai",
+    "url": "https://reclaim.ai",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 8.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "rightblogger",
+    "name": "RightBlogger",
+    "url": "https://rightblogger.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 24.99,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "winston",
+    "name": "Winston AI",
+    "url": "https://gowinston.ai",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "ai-studios",
+    "name": "AI Studios (DeepBrain)",
+    "url": "https://www.deepbrain.io/aistudios",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 24.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut",
+    "url": "https://www.capcut.com",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 7.49,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "akool",
+    "name": "AKOOL",
+    "url": "https://akool.com",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 16.8,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "adcreative",
+    "name": "AdCreative.ai",
+    "url": "https://adcreative.ai",
+    "hubs": "\"advertising\"",
+    "startingPrice": 21.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "krispcall",
+    "name": "KrispCall",
+    "url": "https://krispcall.com",
+    "hubs": "\"sales-crm\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "my-ai-front-desk",
+    "name": "My AI Front Desk",
+    "url": "https://myaifrontdesk.com",
+    "hubs": "\"sales-crm\"",
+    "startingPrice": 35.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "fliki",
+    "name": "Fliki",
+    "url": "https://fliki.ai",
+    "hubs": "\"video-avatar\", \"voice-audio\"",
+    "startingPrice": 21.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "describely",
+    "name": "Describely",
+    "url": "https://describely.ai",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 22.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "submagic",
+    "name": "Submagic",
+    "url": "https://submagic.co",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 16.0,
+    "hasFreeTrial": true,
+    "trialDays": 3
+  },
+  {
+    "slug": "videogen",
+    "name": "VideoGen",
+    "url": "https://videogen.io",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 14.4,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "textero",
+    "name": "Textero AI",
+    "url": "https://textero.ai",
+    "hubs": "\"research-agent\", \"content-seo\"",
+    "startingPrice": 13.59,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "quickads",
+    "name": "QuickAds",
+    "url": "https://quickads.ai",
+    "hubs": "\"advertising\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "meetgeek",
+    "name": "MeetGeek",
+    "url": "https://meetgeek.ai",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "castmagic",
+    "name": "Castmagic",
+    "url": "https://castmagic.io",
+    "hubs": "\"voice-audio\", \"content-seo\"",
+    "startingPrice": 23.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "palette",
+    "name": "Palette.fm",
+    "url": "https://palette.fm",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 7.2,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "url": "https://frase.io",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 12.75,
+    "hasFreeTrial": true,
+    "trialDays": 5
+  },
+  {
+    "slug": "10web",
+    "name": "10Web",
+    "url": "https://10web.io",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 7.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "palabra",
+    "name": "Palabra.ai",
+    "url": "https://palabra.ai",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 23.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "postcrest",
+    "name": "Postcrest",
+    "url": "https://postcrest.com",
+    "hubs": "\"website-builder\", \"content-seo\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "pineapple-builder",
+    "name": "Pineapple Builder",
+    "url": "https://pineapplebuilder.com",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 9.6,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "potion",
+    "name": "Potion",
+    "url": "https://sendpotion.com",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 23.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 7.5,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "listnr",
+    "name": "Listnr",
+    "url": "https://listnr.ai",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 7.2,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "jotform",
+    "name": "Jotform",
+    "url": "https://www.jotform.com",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 29.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "lebesgue",
+    "name": "Lebesgue",
+    "url": "https://lebesgue.io",
+    "hubs": "\"advertising\"",
+    "startingPrice": 31.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "hubs": "\"presentation-design\"",
+    "startingPrice": 8.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "opusclip",
+    "name": "OpusClip",
+    "url": "https://opus.pro",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "speak-ai",
+    "name": "Speak AI",
+    "url": "https://speakai.co",
+    "hubs": "\"meeting-productivity\", \"voice-audio\"",
+    "startingPrice": 23.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "undetectable",
+    "name": "Undetectable AI",
+    "url": "https://undetectable.ai",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 9.99,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "simplified",
+    "name": "Simplified",
+    "url": "https://simplified.com",
+    "hubs": "\"presentation-design\", \"content-seo\"",
+    "startingPrice": 18.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "magicslides",
+    "name": "MagicSlides",
+    "url": "https://magicslides.app",
+    "hubs": "\"presentation-design\"",
+    "startingPrice": 9.99,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "paperguide",
+    "name": "Paperguide",
+    "url": "https://paperguide.ai",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "browse-ai",
+    "name": "Browse AI",
+    "url": "https://browse.ai",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 39.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "invideo",
+    "name": "InVideo AI",
+    "url": "https://invideo.io",
+    "hubs": "\"video-avatar\", \"content-seo\"",
+    "startingPrice": 25.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt.new",
+    "url": "https://bolt.new",
+    "hubs": "\"code-developer\", \"website-builder\", \"research-agent\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "hubs": "\"code-developer\", \"website-builder\", \"research-agent\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://www.notion.so",
+    "hubs": "\"meeting-productivity\", \"content-seo\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "gptzero",
+    "name": "GPTZero",
+    "url": "https://gptzero.me",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 16.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "clickup-ai",
+    "name": "ClickUp Brain",
+    "url": "https://clickup.com",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 7.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "framer",
+    "name": "Framer AI",
+    "url": "https://www.framer.com",
+    "hubs": "\"website-builder\", \"advertising\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "murf-ai",
+    "name": "Murf AI",
+    "url": "https://murf.ai",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 29.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com",
+    "hubs": "\"voice-audio\", \"meeting-productivity\"",
+    "startingPrice": 11.58,
+    "hasFreeTrial": true,
+    "trialDays": 3
+  },
+  {
+    "slug": "suno",
+    "name": "Suno AI",
+    "url": "https://suno.com",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "hubs": "\"content-seo\", \"sales-crm\"",
+    "startingPrice": 49.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 9.95,
+    "hasFreeTrial": true,
+    "trialDays": 3
+  },
+  {
+    "slug": "klaviyo",
+    "name": "Klaviyo AI",
+    "url": "https://www.klaviyo.com",
+    "hubs": "\"advertising\", \"sales-crm\"",
+    "startingPrice": 45.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "hubspot-crm",
+    "name": "HubSpot AI CRM",
+    "url": "https://www.hubspot.com",
+    "hubs": "\"sales-crm\", \"advertising\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive AI",
+    "url": "https://www.pipedrive.com",
+    "hubs": "\"sales-crm\"",
+    "startingPrice": 14.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "slides-ai",
+    "name": "SlidesAI",
+    "url": "https://www.slidesai.io",
+    "hubs": "\"presentation-design\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "canva-ai",
+    "name": "Canva Magic Studio",
+    "url": "https://www.canva.com",
+    "hubs": "\"advertising\", \"presentation-design\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": true,
+    "trialDays": 30
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo.Ai",
+    "url": "https://leonardo.ai",
+    "hubs": "\"image-design\", \"presentation-design\", \"advertising\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram AI",
+    "url": "https://ideogram.ai",
+    "hubs": "\"image-design\", \"advertising\", \"presentation-design\"",
+    "startingPrice": 8.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "replit",
+    "name": "Replit AI Agent",
+    "url": "https://replit.com",
+    "hubs": "\"code-developer\", \"research-agent\", \"website-builder\"",
+    "startingPrice": 25.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf Editor",
+    "url": "https://codeium.com/windsurf",
+    "hubs": "\"code-developer\", \"research-agent\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com",
+    "hubs": "\"research-agent\", \"meeting-productivity\"",
+    "startingPrice": 5.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "turnitin",
+    "name": "Turnitin AI Detector",
+    "url": "https://www.turnitin.com",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT Plus / Team",
+    "url": "https://chatgpt.com",
+    "hubs": "\"research-agent\", \"content-seo\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "claude-ai",
+    "name": "Claude AI (Anthropic)",
+    "url": "https://claude.ai",
+    "hubs": "\"research-agent\", \"content-seo\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "grok",
+    "name": "Grok (xAI)",
+    "url": "https://x.ai",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 8.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek R1",
+    "url": "https://www.deepseek.com",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 30
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "hubs": "\"video-avatar\", \"voice-audio\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n (AI Agent Workflows)",
+    "url": "https://n8n.io",
+    "hubs": "\"code-developer\", \"research-agent\", \"meeting-productivity\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "coze",
+    "name": "Coze (ByteDance)",
+    "url": "https://www.coze.com",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 9.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "hubs": "\"image-design\", \"presentation-design\", \"advertising\"",
+    "startingPrice": 4.99,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly AI",
+    "url": "https://www.grammarly.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "hugging-face",
+    "name": "Hugging Face Hub",
+    "url": "https://huggingface.co",
+    "hubs": "\"code-developer\", \"research-agent\"",
+    "startingPrice": 9.0,
+    "hasFreeTrial": false,
+    "trialDays": 0
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral AI (Le Chat)",
+    "url": "https://mistral.ai",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "pika-labs",
+    "name": "Pika Labs",
+    "url": "https://pika.art",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic (Chatsonic)",
+    "url": "https://writesonic.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 19.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "copyleaks",
+    "name": "Copyleaks",
+    "url": "https://copyleaks.com",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 9.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "ai-or-not",
+    "name": "AI or Not",
+    "url": "https://www.aiornot.com",
+    "hubs": "\"ai-detection\"",
+    "startingPrice": 5.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "convertos-ai",
+    "name": "Convertos.ai",
+    "url": "https://convertos.ai",
+    "hubs": "\"content-seo\", \"advertising\"",
+    "startingPrice": 49.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "voicefleet",
+    "name": "VoiceFleet",
+    "url": "https://voicefleet.ai",
+    "hubs": "\"sales-crm\"",
+    "startingPrice": 49.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion (Stability AI)",
+    "url": "https://stability.ai",
+    "hubs": "\"image-design\", \"advertising\", \"presentation-design\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 30
+  },
+  {
+    "slug": "v0-dev",
+    "name": "v0 by Vercel",
+    "url": "https://v0.dev",
+    "hubs": "\"code-developer\", \"website-builder\", \"research-agent\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "kling-ai",
+    "name": "Kling AI",
+    "url": "https://klingai.com",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/dream-machine",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 9.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "minimax-video",
+    "name": "MiniMax Hailuo AI",
+    "url": "https://hailuoai.video",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "ltx-studio",
+    "name": "LTX Studio (Lightricks)",
+    "url": "https://ltx.studio",
+    "hubs": "\"video-avatar\"",
+    "startingPrice": 15.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "udio",
+    "name": "Udio AI",
+    "url": "https://www.udio.com",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "soundraw",
+    "name": "SOUNDRAW",
+    "url": "https://soundraw.io",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 16.6,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "stable-audio",
+    "name": "Stable Audio (Stability AI)",
+    "url": "https://stableaudio.com",
+    "hubs": "\"voice-audio\"",
+    "startingPrice": 11.99,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "flux-ai",
+    "name": "FLUX.1 (Black Forest Labs)",
+    "url": "https://blackforestlabs.ai",
+    "hubs": "\"image-design\", \"advertising\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "krea-ai",
+    "name": "Krea AI",
+    "url": "https://www.krea.ai",
+    "hubs": "\"image-design\", \"presentation-design\"",
+    "startingPrice": 10.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "recraft-ai",
+    "name": "Recraft AI",
+    "url": "https://www.recraft.ai",
+    "hubs": "\"image-design\", \"presentation-design\"",
+    "startingPrice": 20.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "freepik-mystic",
+    "name": "Freepik Mystic",
+    "url": "https://www.freepik.com/ai",
+    "hubs": "\"image-design\", \"advertising\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "surfer-seo",
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 89.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "marketmuse",
+    "name": "MarketMuse",
+    "url": "https://www.marketmuse.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 149.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "scalenut",
+    "name": "Scalenut",
+    "url": "https://www.scalenut.com",
+    "hubs": "\"content-seo\"",
+    "startingPrice": 19.0,
+    "hasFreeTrial": true,
+    "trialDays": 7
+  },
+  {
+    "slug": "fathom-ai",
+    "name": "Fathom AI",
+    "url": "https://fathom.video",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "tldv",
+    "name": "tl;dv",
+    "url": "https://tldv.io",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 18.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "supernormal",
+    "name": "Supernormal",
+    "url": "https://supernormal.com",
+    "hubs": "\"meeting-productivity\"",
+    "startingPrice": 18.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "clay-ai",
+    "name": "Clay.com",
+    "url": "https://www.clay.com",
+    "hubs": "\"sales-crm\", \"advertising\"",
+    "startingPrice": 149.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "apollo-ai",
+    "name": "Apollo.io AI",
+    "url": "https://www.apollo.io",
+    "hubs": "\"sales-crm\"",
+    "startingPrice": 49.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "instantly-ai",
+    "name": "Instantly.ai",
+    "url": "https://instantly.ai",
+    "hubs": "\"sales-crm\", \"advertising\"",
+    "startingPrice": 30.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "url": "https://www.beautiful.ai",
+    "hubs": "\"presentation-design\"",
+    "startingPrice": 12.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "napkin-ai",
+    "name": "Napkin AI",
+    "url": "https://www.napkin.ai",
+    "hubs": "\"presentation-design\", \"content-seo\", \"image-design\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "glide-apps",
+    "name": "Glide",
+    "url": "https://www.glideapps.com",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 49.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "flutterflow",
+    "name": "FlutterFlow",
+    "url": "https://flutterflow.io",
+    "hubs": "\"website-builder\", \"code-developer\"",
+    "startingPrice": 30.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "bubble-io",
+    "name": "Bubble.io",
+    "url": "https://bubble.io",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 29.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "webflow",
+    "name": "Webflow AI",
+    "url": "https://webflow.com",
+    "hubs": "\"website-builder\"",
+    "startingPrice": 14.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "cohere",
+    "name": "Cohere (Command R+)",
+    "url": "https://cohere.com",
+    "hubs": "\"research-agent\"",
+    "startingPrice": 5.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  },
+  {
+    "slug": "groq",
+    "name": "Groq",
+    "url": "https://groq.com",
+    "hubs": "\"code-developer\", \"research-agent\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 30
+  },
+  {
+    "slug": "langchain",
+    "name": "LangChain & LangSmith",
+    "url": "https://www.langchain.com",
+    "hubs": "\"code-developer\", \"research-agent\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 30
+  },
+  {
+    "slug": "codeium",
+    "name": "Codeium",
+    "url": "https://codeium.com",
+    "hubs": "\"code-developer\"",
+    "startingPrice": 0.0,
+    "hasFreeTrial": true,
+    "trialDays": 14
+  }
+]

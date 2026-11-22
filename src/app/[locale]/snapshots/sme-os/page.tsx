@@ -8,7 +8,7 @@ import {
   Video, Gift, Building2, Scissors, Home, Utensils, HelpCircle, 
   ArrowLeft, Clock, Target, Star, Users, Flame, Award, Wrench,
   DollarSign, MessageSquare, PhoneForwarded, ThumbsUp, RefreshCw,
-  Share2, ChevronRight, Sliders, Smartphone, Palette, FileText
+  Share2, ChevronRight, Sliders, Smartphone, Palette
 } from "lucide-react";
 
 interface SnapshotPageProps {
@@ -406,18 +406,6 @@ export default async function SnapshotSmeOSPage({ params }: SnapshotPageProps) {
                   <p className="text-xs text-zinc-400 leading-relaxed">{m.desc}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="p-5 rounded-2xl bg-zinc-900 border border-zinc-800/80 max-w-2xl text-xs space-y-2">
-              <div className="font-bold text-emerald-400 flex items-center gap-2">
-                <FileText className="h-4 w-4" />
-                <span>{isVi ? "Khách hàng của bạn sẽ nhận được tin nhắn mẫu như sau:" : "What your customer automatically receives:"}</span>
-              </div>
-              <blockquote className="italic text-zinc-300 border-l-2 border-emerald-500 pl-3 py-1">
-                {isVi
-                  ? `"Chào [Tên Khách], rất vui được trao đổi với bạn hôm nay! Về hạng mục bạn quan tâm: [Nội dung tóm tắt bạn vừa điền]. Báo giá chi tiết đã được gửi vào email của bạn. Nếu bạn có bất kỳ câu hỏi nào, chỉ cần nhắn lại cho tôi tại đây nhé!"`
-                  : `"Hey Sharon, pleasure speaking with you! Just to recap: [Your 1-minute recap notes]. Your quote has been delivered to your email. Reply directly here if you need any adjustments!"`}
-              </blockquote>
             </div>
           </div>
 
