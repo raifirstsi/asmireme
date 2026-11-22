@@ -7,7 +7,7 @@ import { eq } from "drizzle-orm";
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, code } = await request.json();
+    const { email, code, redirectUrl, locale } = await request.json();
 
     if (!email || !code) {
       return NextResponse.json(
@@ -31,8 +31,17 @@ export async function POST(request: NextRequest) {
     let referralCode = generateReferralCode();
     let userRole: "USER" | "MEMBER" | "ADMIN" = "MEMBER";
 
-    const adminEmails = (process.env.ADMIN_EMAILS || "support@asmire.me,admin@asmire.me").toLowerCase().split(",").map(e => e.trim());
-    if (adminEmails.includes(normalizedEmail) || normalizedEmail.startsWith("admin@")) {
+    // Super Admin check: striverle@gmail.com is hardcoded authorized owner
+    const adminEmails = (process.env.ADMIN_EMAILS || "striverle@gmail.com,support@asmire.me,admin@asmire.me")
+      .toLowerCase()
+      .split(",")
+      .map((e) => e.trim());
+
+    if (
+      normalizedEmail === "striverle@gmail.com" ||
+      adminEmails.includes(normalizedEmail) ||
+      normalizedEmail.startsWith("admin@")
+    ) {
       userRole = "ADMIN";
     }
 
@@ -41,9 +50,14 @@ export async function POST(request: NextRequest) {
       const existingUsers = await db.select().from(users).where(eq(users.email, normalizedEmail));
       if (existingUsers.length > 0) {
         userId = existingUsers[0].id;
-        if (existingUsers[0].role === "ADMIN") {
+        
+        // Upgrade role to ADMIN if verified as super-admin email
+        if (userRole === "ADMIN" && existingUsers[0].role !== "ADMIN") {
+          await db.update(users).set({ role: "ADMIN", updatedAt: new Date() }).where(eq(users.id, userId));
+        } else if (existingUsers[0].role === "ADMIN") {
           userRole = "ADMIN";
         }
+
         const profile = await db.select().from(memberProfiles).where(eq(memberProfiles.userId, userId));
         if (profile.length > 0) {
           memberId = profile[0].id;
@@ -51,24 +65,30 @@ export async function POST(request: NextRequest) {
         }
       } else {
         // Create new user & profile
-        const [newUser] = await db.insert(users).values({
-          email: normalizedEmail,
-          role: userRole,
-        }).returning();
+        const [newUser] = await db
+          .insert(users)
+          .values({
+            email: normalizedEmail,
+            role: userRole,
+          })
+          .returning();
         userId = newUser.id;
 
-        const [newProfile] = await db.insert(memberProfiles).values({
-          userId: newUser.id,
-          referralCode,
-          status: "ACTIVE",
-        }).returning();
+        const [newProfile] = await db
+          .insert(memberProfiles)
+          .values({
+            userId: newUser.id,
+            referralCode,
+            status: "ACTIVE",
+          })
+          .returning();
         memberId = newProfile.id;
       }
     } catch (dbErr) {
       console.warn("[Auth] DB sync skipped (using stateless session fallback):", (dbErr as Error).message);
     }
 
-    // Issue session token
+    // Issue cryptographic session token
     const token = createSessionToken({
       userId,
       email: normalizedEmail,
@@ -77,13 +97,29 @@ export async function POST(request: NextRequest) {
       referralCode,
     });
 
+    // Compute intelligent destination route
+    const targetLocale = locale || "vi";
+    let redirectDestination = userRole === "ADMIN" 
+      ? `/${targetLocale}/admin` 
+      : `/${targetLocale}/account`;
+
+    if (redirectUrl && typeof redirectUrl === "string") {
+      // For non-admin, block unauthorized redirect into /admin
+      if (userRole !== "ADMIN" && redirectUrl.includes("/admin")) {
+        redirectDestination = `/${targetLocale}/account`;
+      } else {
+        redirectDestination = redirectUrl;
+      }
+    }
+
     const response = NextResponse.json({
       success: true,
       message: "Authentication successful.",
-      redirect: "/en/account",
+      role: userRole,
+      redirect: redirectDestination,
     });
 
-    // Set secure HTTP-only session cookie
+    // Set secure HTTP-only session cookie (30 days)
     response.cookies.set("asmire_session", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",

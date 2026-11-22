@@ -266,13 +266,13 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
 
         {/* Empirical Audit Micro-Filters - Apple Hairline Minimalist */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-zinc-200/60 dark:border-zinc-800/60">
-          <span className="text-zinc-400 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1">
+          <span className="text-zinc-400 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1 shrink-0">
             <ShieldCheck className="h-3 w-3 text-emerald-500" />
             {locale === "vi" ? "Kiểm thử thực tế:" : "Empirical Filters:"}
           </span>
           <button
             onClick={() => updateParams({ easyCancel: easyCancelOnly ? null : "true" })}
-            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer active:scale-95 border ${
               easyCancelOnly
                 ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
                 : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
@@ -282,7 +282,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ noCardTrial: noCardTrialOnly ? null : "true" })}
-            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer active:scale-95 border ${
               noCardTrialOnly
                 ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
                 : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
@@ -292,7 +292,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
           </button>
           <button
             onClick={() => updateParams({ noApiNeeded: noApiNeededOnly ? null : "true" })}
-            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+            className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer active:scale-95 border ${
               noApiNeededOnly
                 ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
                 : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
