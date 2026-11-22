@@ -10,7 +10,16 @@ import {
 } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
 
-const BOT_USER_AGENTS = ["googlebot", "bingbot", "gptbot", "perplexitybot", "claudebot", "applebot"];
+// 1. Comprehensive bot and crawler list
+const BOT_USER_AGENTS = [
+  "googlebot", "bingbot", "gptbot", "perplexitybot", "claudebot", "applebot",
+  "bot", "crawler", "spider", "headless", "slurp", "facebookexternalhit",
+  "lighthouse", "bytespider", "yandex", "duckduckbot", "baiduspider",
+  "semrush", "ahrefs", "mj12bot", "petalbot", "screaming frog", "curl", "wget", "python"
+];
+
+// 2. In-memory click deduplication debounce cache (5-second window per visitor + tool)
+const clickDedupeCache = new Map<string, number>();
 
 export async function GET(
   request: NextRequest,
@@ -21,6 +30,23 @@ export async function GET(
 
   if (!tool) {
     return new NextResponse("Requested AI tool was not found in catalog.", { status: 404 });
+  }
+
+  // CRITICAL: Block Next.js & browser speculative prefetch requests from triggering click analytics
+  const isPrefetch =
+    request.headers.get("next-router-prefetch") === "1" ||
+    request.headers.get("purpose") === "prefetch" ||
+    request.headers.get("sec-purpose") === "prefetch" ||
+    request.headers.get("x-purpose") === "preview" ||
+    request.headers.get("x-moz") === "prefetch";
+
+  if (isPrefetch) {
+    return new NextResponse(null, {
+      status: 204,
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+      },
+    });
   }
 
   const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "127.0.0.1";
@@ -34,42 +60,45 @@ export async function GET(
   let attributedMemberId: string | null = null;
   let isFallback = true;
 
-  // Branch 1: Known search or AI bot
+  // Known search engine or AI bot - redirect cleanly without recording telemetry
   const isBot = BOT_USER_AGENTS.some((b) => userAgent.includes(b));
   if (isBot) {
-    reasonCode = "bot_crawler_clean";
-    return issueRedirect(targetUrl, reasonCode, isFallback, attributedMemberId, visitorHash, tool.slug, referer);
+    return createCleanRedirect(targetUrl);
   }
 
-  // Branch 2: Read 365-day signed HMAC referral cookie
-  const refCookie = request.cookies.get("asmire_ref")?.value;
+  // Session check for Admin testing & self-referral
   const sessionCookie = request.cookies.get("asmire_session")?.value;
   const loggedInUser = sessionCookie ? verifySessionToken(sessionCookie) : null;
 
+  // If Admin is testing links from the dashboard or logged in, redirect directly without polluting customer analytics
+  const isFromAdminDashboard = referer.includes("/admin");
+  const isAdminTesting = isFromAdminDashboard || loggedInUser?.role === "ADMIN" || loggedInUser?.email === "striverle@gmail.com";
+  if (isAdminTesting) {
+    return createCleanRedirect(targetUrl);
+  }
+
+  // Read 365-day signed HMAC referral cookie
+  const refCookie = request.cookies.get("asmire_ref")?.value;
   if (refCookie) {
     const verifiedRef = verifyReferralCookie(refCookie);
 
     if (verifiedRef) {
       const memberId = verifiedRef.memberId;
 
-      // Branch 6: Self-referral guard
+      // Self-referral guard
       if (loggedInUser && loggedInUser.memberId === memberId) {
         reasonCode = "self_referral_blocked";
         return issueRedirect(targetUrl, reasonCode, true, null, visitorHash, tool.slug, referer);
       }
 
-      // Branch 3: Verify member status, plan limits, and active slots
       try {
         const profile = await db.select().from(memberProfiles).where(eq(memberProfiles.id, memberId));
 
         if (profile.length === 0 || profile[0].status !== "ACTIVE") {
-          // Member not found or suspended
           reasonCode = "fallback_member_suspended";
         } else if (!tool.allowMemberLinks) {
-          // Tool vendor restricts member links
           reasonCode = "fallback_tool_restricted";
         } else {
-          // Check Subscription (Standard vs Pro)
           const sub = await db
             .select()
             .from(subscriptions)
@@ -78,53 +107,54 @@ export async function GET(
           const isPro = sub.length > 0 && sub[0].planId === "PRO" && new Date(sub[0].currentPeriodEnd) > new Date();
 
           let isToolInEntitlement = false;
-
           if (isPro) {
-            // Pro plan has unlimited access to all tools
             isToolInEntitlement = true;
           } else {
-            // Standard plan: tool MUST be chosen in member's 3 active slots
             const slots = await db
               .select()
               .from(activeToolSlots)
               .where(and(eq(activeToolSlots.userId, profile[0].userId), eq(activeToolSlots.toolSlug, tool.slug)));
-            
             isToolInEntitlement = slots.length > 0;
           }
 
           if (!isToolInEntitlement) {
-            // Tool is not in member's active 3 slots
             reasonCode = "fallback_plan_limit";
           } else {
-            // Check if member entered a valid affiliate link for this tool
             const links = await db
               .select()
               .from(memberAffiliateLinks)
               .where(and(eq(memberAffiliateLinks.userId, profile[0].userId), eq(memberAffiliateLinks.toolSlug, tool.slug)));
 
             if (links.length > 0 && links[0].status === "VALID" && links[0].affiliateUrl) {
-              // SUCCESS! Attributed to member
               targetUrl = links[0].affiliateUrl;
               reasonCode = "attributed_member";
               attributedMemberId = memberId;
               isFallback = false;
             } else {
-              // Member has slot but has not entered link
               reasonCode = "fallback_tool_not_linked";
             }
           }
         }
       } catch (dbErr) {
-        // Fallback gracefully on DB error
         reasonCode = "fallback_no_cookie";
       }
     } else {
-      // Cookie was tampered or expired (> 365 days)
       reasonCode = "fallback_no_cookie";
     }
   }
 
   return issueRedirect(targetUrl, reasonCode, isFallback, attributedMemberId, visitorHash, tool.slug, referer);
+}
+
+function createCleanRedirect(targetUrl: string) {
+  if (!isValidOutboundUrl(targetUrl)) {
+    return new NextResponse("Security Alert: Invalid target URL rejected.", { status: 400 });
+  }
+  const response = NextResponse.redirect(targetUrl, 307);
+  response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+  response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
+  response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
+  return response;
 }
 
 async function issueRedirect(
@@ -136,32 +166,44 @@ async function issueRedirect(
   toolSlug: string,
   referer: string
 ) {
-  // Security check: validate outbound target
   if (!isValidOutboundUrl(targetUrl)) {
     return new NextResponse("Security Alert: Invalid target URL rejected.", { status: 400 });
   }
 
   const parsed = new URL(targetUrl);
+  const now = Date.now();
+  const dedupeKey = `${visitorHash}:${toolSlug}`;
+  const lastClickTime = clickDedupeCache.get(dedupeKey);
 
-  // Log click event asynchronously
-  try {
-    await db.insert(referralClicks).values({
-      visitorHash,
-      toolSlug,
-      pagePath: referer,
-      attributedMemberId: attributedMemberId as any,
-      isFallback,
-      reasonCode,
-      targetUrlHost: parsed.hostname,
-    });
-  } catch (err) {
-    // Non-blocking log
+  // Anti-Duplicate Debounce Window: Ignore duplicate clicks within 5 seconds from the same visitor
+  const isDuplicate = lastClickTime && now - lastClickTime < 5000;
+
+  if (!isDuplicate) {
+    clickDedupeCache.set(dedupeKey, now);
+
+    // Keep cache bounded
+    if (clickDedupeCache.size > 5000) {
+      const cutoff = now - 60000;
+      for (const [k, v] of clickDedupeCache.entries()) {
+        if (v < cutoff) clickDedupeCache.delete(k);
+      }
+    }
+
+    // Log genuine click event
+    try {
+      await db.insert(referralClicks).values({
+        visitorHash,
+        toolSlug,
+        pagePath: referer,
+        attributedMemberId: attributedMemberId as any,
+        isFallback,
+        reasonCode,
+        targetUrlHost: parsed.hostname,
+      });
+    } catch (err) {
+      // Non-blocking log
+    }
   }
 
-  const response = NextResponse.redirect(targetUrl, 307);
-  response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
-  response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate");
-  response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
-
-  return response;
+  return createCleanRedirect(targetUrl);
 }

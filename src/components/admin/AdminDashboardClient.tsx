@@ -313,14 +313,15 @@ export function AdminDashboardClient({ stats, locale }: AdminDashboardClientProp
                             <span className="font-black text-brand-600 dark:text-brand-400 text-sm">
                               {tool.totalClicks} clicks
                             </span>
-                            <Link
+                            <a
                               href={`/go/${tool.toolSlug}`}
                               target="_blank"
+                              rel="noopener noreferrer nofollow"
                               title="Test luồng điều hướng"
                               className="text-muted-foreground hover:text-foreground"
                             >
                               <ExternalLink className="h-3.5 w-3.5" />
-                            </Link>
+                            </a>
                           </div>
                         </div>
 
@@ -503,14 +504,15 @@ export function AdminDashboardClient({ stats, locale }: AdminDashboardClientProp
                         {t.lastClickedAt}
                       </td>
                       <td className="p-3.5 text-center">
-                        <Link
+                        <a
                           href={`/go/${t.toolSlug}`}
                           target="_blank"
+                          rel="noopener noreferrer nofollow"
                           className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary hover:bg-secondary/80 text-[10px] font-bold text-foreground transition-colors"
                         >
                           <span>Test</span>
                           <ExternalLink className="h-3 w-3" />
-                        </Link>
+                        </a>
                       </td>
                     </tr>
                   ))
