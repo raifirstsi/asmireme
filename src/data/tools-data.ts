@@ -442,7 +442,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["SEO", "Programmatic SEO", "Content Writing", "Keywords"],
-    startingPrice: 49,
+    startingPrice: 39,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -478,8 +478,49 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://omniseo.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 39.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 107.8, priceAnnualMonthly: 88.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "50 programmatic articles/mo",
+        features: [
+          "50 programmatic SEO articles per month",
+          "Automated schema markup injection",
+          "Direct WordPress and Webflow CMS sync",
+          "Keyword cluster and search intent mapping"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 99,
+        priceAnnualMonthly: 79,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "3 User Seats",
+        usageLimit: "200 programmatic articles/mo",
+        features: [
+          "200 programmatic SEO articles per month",
+          "Automated internal linking architecture",
+          "Google Search Console auto-indexing API",
+          "SERP rank tracking & keyword performance audits"
+        ]
+      },
+      {
+        name: "Scale",
+        priceMonthly: 199,
+        priceAnnualMonthly: 159,
+        currency: "USD",
+        userLimit: "Unlimited Seats",
+        usageLimit: "500 programmatic articles/mo",
+        features: [
+          "500 programmatic articles per month",
+          "Connect unlimited websites & custom domains",
+          "Custom API access & webhook triggers",
+          "Dedicated priority support & custom templates"
+        ]
+      }
     ],
     officialUrl: "https://omniseo.ai",
     alternatives: ["koala", "frase", "rightblogger"]
@@ -605,7 +646,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["research-agent", "website-builder"],
     tags: ["Full-Stack", "App Builder", "Developer Tools", "No-Code"],
-    startingPrice: 29,
+    startingPrice: 24,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -641,8 +682,49 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "flat",
     pricingEvidenceUrl: "https://marblism.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Hobby",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 Developer",
+        usageLimit: "1 Active Project, Web Preview",
+        features: [
+          "1 active full-stack web project",
+          "Interactive live web preview",
+          "Standard AI generation credits",
+          "Community Discord support"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 24,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Developer",
+        usageLimit: "3 Full-Stack Code Exports/mo",
+        features: [
+          "3 full-stack project exports per month",
+          "Complete GitHub repo sync (React + Node.js + Prisma)",
+          "Built-in Authentication & PostgreSQL schema setup",
+          "Stripe payments and email integration templates"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 79,
+        priceAnnualMonthly: 64,
+        currency: "USD",
+        userLimit: "3 Team Developers",
+        usageLimit: "Unlimited Full-Stack Exports",
+        features: [
+          "Unlimited full-stack project exports",
+          "Custom backend API integrations & webhooks",
+          "Priority AI engine processing",
+          "Commercial deployment rights"
+        ]
+      }
     ],
     officialUrl: "https://marblism.com",
     alternatives: ["10web", "pickaxe"]
@@ -665,7 +747,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["Blogging", "Copywriting", "SEO", "YouTube Repurposing"],
-    startingPrice: 29.99,
+    startingPrice: 24.99,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -698,11 +780,53 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://rightblogger.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29.99, priceAnnualMonthly: 23.99, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 65.98, priceAnnualMonthly: 53.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 Free tool runs per month",
+        features: [
+          "5 tool generations per month",
+          "Access to 70+ blogging AI tools",
+          "Basic article generator",
+          "Chrome browser extension"
+        ]
+      },
+      {
+        name: "Unlimited",
+        priceMonthly: 29.99,
+        priceAnnualMonthly: 24.99,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited Words & Generations",
+        features: [
+          "Unlimited AI word generation",
+          "Unlimited runs on all 70+ blogging tools",
+          "Article Writer 3.0 with real-time web research",
+          "Keyword research & SEO competitor inspection",
+          "Automatic internal links & image suggestions"
+        ]
+      },
+      {
+        name: "Team",
+        priceMonthly: 49.99,
+        priceAnnualMonthly: 39.99,
+        currency: "USD",
+        userLimit: "3 User Seats Included",
+        usageLimit: "Unlimited Words & Shared Library",
+        features: [
+          "3 user seats included ($15/mo per extra seat)",
+          "Shared team content library & drafts",
+          "Brand voice management for multiple blogs",
+          "Priority feature access & customer support"
+        ]
+      }
     ],
     officialUrl: "https://rightblogger.com",
     alternatives: ["koala", "rytr", "jasper"]
@@ -725,7 +849,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["research-agent"],
     tags: ["Chatbots", "Monetization", "AI Agents", "No-Code"],
-    startingPrice: 20,
+    startingPrice: 16,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -761,8 +885,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://pickaxe.co/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 16.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 44.0, priceAnnualMonthly: 36.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 Creator",
+        usageLimit: "3 AI Bots, 50 queries/mo",
+        features: [
+          "Create up to 3 custom AI chatbots",
+          "50 total test queries",
+          "Basic web embed snippet",
+          "Pickaxe community badge"
+        ]
+      },
+      {
+        name: "Gold",
+        priceMonthly: 20,
+        priceAnnualMonthly: 16,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Creator Seat",
+        usageLimit: "Unlimited Bots, 1,000 queries/mo",
+        features: [
+          "Unlimited custom AI chatbots and web tools",
+          "1,000 GPT queries per month",
+          "Embed on any website without Pickaxe branding",
+          "Upload documents & PDF knowledge bases (RAG)",
+          "Lead capture forms inside chatbot conversations"
+        ]
+      },
+      {
+        name: "Studio",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "3 Team Members",
+        usageLimit: "Custom Domain, 5,000 queries/mo",
+        features: [
+          "5,000 GPT queries per month",
+          "Custom domain for your white-label AI app portal",
+          "Stripe monetization: charge users to access your bot",
+          "User accounts, access tiers, and paywalls"
+        ]
+      }
     ],
     officialUrl: "https://pickaxe.co",
     alternatives: ["marblism", "browse-ai"]
@@ -888,7 +1054,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Video Generation", "AI Avatars", "Corporate Training"],
-    startingPrice: 29,
+    startingPrice: 24,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -924,8 +1090,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://www.deepbrain.io/aistudios/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 24,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "10 video minutes/mo (120 mins/yr)",
+        features: [
+          "10 minutes of video generation per month",
+          "100+ photorealistic AI avatars",
+          "80+ languages and natural voice accents",
+          "1080p Full HD video downloads without watermark",
+          "ChatGPT-powered script assistant"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 89,
+        priceAnnualMonthly: 72,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "30 video minutes/mo (360 mins/yr)",
+        features: [
+          "30 minutes of video generation per month",
+          "Access to full premium avatar library",
+          "Eligible for Custom Instant Avatar creation",
+          "Fast GPU rendering queue",
+          "Multi-speaker conversations and podcast layout"
+        ]
+      },
+      {
+        name: "Enterprise",
+        priceMonthly: 249,
+        priceAnnualMonthly: 199,
+        currency: "USD",
+        userLimit: "Custom Team Seats",
+        usageLimit: "Custom Video Minutes & Studio Avatar",
+        features: [
+          "Custom monthly video minute allowance",
+          "Bespoke 3D Studio Avatar with custom clothing",
+          "Full REST API for automated video generation",
+          "Dedicated account manager & SLA guarantee"
+        ]
+      }
     ],
     officialUrl: "https://www.deepbrain.io/aistudios",
     alternatives: ["synthesia", "fliki", "akool"]
@@ -948,7 +1157,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Video Editing", "TikTok", "Shorts", "Subtitles", "Reels"],
-    startingPrice: 9.99,
+    startingPrice: 7.49,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 7,
@@ -981,11 +1190,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://www.capcut.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 9.99, priceAnnualMonthly: 7.99, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 21.98, priceAnnualMonthly: 17.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "Standard Effects, 720p/1080p",
+        features: [
+          "Full timeline multi-track video editing",
+          "Standard transitions, filters, and audio effects",
+          "Basic auto-captions generator",
+          "Export up to 1080p with CapCut end screen"
+        ]
+      },
+      {
+        name: "Pro Monthly",
+        priceMonthly: 9.99,
+        priceAnnualMonthly: 7.49,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User (Desktop & Mobile)",
+        usageLimit: "100GB Cloud Storage, 4K 60fps",
+        features: [
+          "100GB secure cloud storage backup",
+          "AI auto-captions with bilingual translation",
+          "Smart background removal & chroma key",
+          "Vocal isolation and background noise reducer",
+          "4K 60fps high bitrate exports",
+          "Full access to 10,000+ premium pro templates & fonts"
+        ]
+      },
+      {
+        name: "Team Collaboration",
+        priceMonthly: 19.99,
+        priceAnnualMonthly: 16.99,
+        currency: "USD",
+        userLimit: "Up to 5 Team Members",
+        usageLimit: "500GB Shared Cloud Storage",
+        features: [
+          "500GB shared cloud storage workspace",
+          "Team project sharing and real-time review links",
+          "Brand asset library with shared fonts and logos",
+          "Centralized member billing"
+        ]
+      }
     ],
     officialUrl: "https://www.capcut.com",
     alternatives: ["submagic", "opusclip", "simplified"]
@@ -1008,7 +1260,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Face Swap", "Talking Avatar", "E-commerce", "Virtual Try-On"],
-    startingPrice: 21,
+    startingPrice: 16.8,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -1044,8 +1296,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://akool.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 21, priceAnnualMonthly: 16.8, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 46.2, priceAnnualMonthly: 37.8, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "50 Free Credits",
+        features: [
+          "50 initial credits to test face swap and avatar",
+          "Standard definition generation",
+          "Akool watermark on outputs",
+          "Personal non-commercial use"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 21,
+        priceAnnualMonthly: 16.8,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "300 Credits per month",
+        features: [
+          "300 credits per month with rollover support",
+          "4K Ultra HD face swap in photos and videos",
+          "Realistic AI talking avatars from single portrait",
+          "No watermark and full commercial usage rights",
+          "Fast cloud GPU rendering priority"
+        ]
+      },
+      {
+        name: "Studio",
+        priceMonthly: 99,
+        priceAnnualMonthly: 79,
+        currency: "USD",
+        userLimit: "3 User Seats",
+        usageLimit: "2,000 Credits per month",
+        features: [
+          "2,000 credits per month",
+          "Live streaming interactive avatar",
+          "Custom voice cloning and instant lip-sync",
+          "REST API access for automated marketing pipelines"
+        ]
+      }
     ],
     officialUrl: "https://akool.com",
     alternatives: ["ai-studios", "synthesia"]
@@ -1290,7 +1584,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["advertising"],
     tags: ["Advertising", "Ad Creatives", "Banners", "E-commerce"],
-    startingPrice: 29,
+    startingPrice: 21,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1326,8 +1620,52 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://adcreative.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Startup",
+        priceMonthly: 29,
+        priceAnnualMonthly: 21,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "10 Download Credits/mo, 1 Brand",
+        features: [
+          "10 download credits per month",
+          "Unlimited AI ad creative generations",
+          "1 brand profile with custom colors and logo",
+          "AI text & headline copy generator",
+          "Meta, Google, LinkedIn & Pinterest ad formats"
+        ]
+      },
+      {
+        name: "Professional",
+        priceMonthly: 59,
+        priceAnnualMonthly: 44,
+        currency: "USD",
+        userLimit: "2 User Seats",
+        usageLimit: "25 Download Credits/mo, 2 Brands",
+        features: [
+          "25 download credits per month",
+          "2 brand profiles with separate asset kits",
+          "Competitor ad insights & scoring engine",
+          "Creative scoring AI (win probability benchmark)",
+          "High-priority image rendering"
+        ]
+      },
+      {
+        name: "Agency",
+        priceMonthly: 149,
+        priceAnnualMonthly: 111,
+        currency: "USD",
+        userLimit: "Unlimited Team Members",
+        usageLimit: "100 Download Credits/mo, Unlimited Brands",
+        features: [
+          "100 download credits per month",
+          "Unlimited brand profiles for agency clients",
+          "Unlimited team members with role-based access",
+          "Sub-account client folder workspaces",
+          "Dedicated account manager & phone onboarding"
+        ]
+      }
     ],
     officialUrl: "https://adcreative.ai",
     alternatives: ["quickads", "lebesgue"]
@@ -1350,7 +1688,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["sales-crm"],
     tags: ["VoIP", "Telephony", "Call Center", "Virtual Numbers"],
-    startingPrice: 15,
+    startingPrice: 12,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1386,8 +1724,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "per_seat",
     pricingEvidenceUrl: "https://krispcall.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Standard",
+        priceMonthly: 15,
+        priceAnnualMonthly: 12,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "1 Free Phone Number Included",
+        features: [
+          "1 free local or toll-free number per user",
+          "VoIP inbound and outbound calling across 100+ countries",
+          "Shared number capability for sales/support teams",
+          "Call forwarding, voicemail-to-text, and call transfer",
+          "Desktop, iOS, and Android dialer apps"
+        ]
+      },
+      {
+        name: "Premium",
+        priceMonthly: 40,
+        priceAnnualMonthly: 32,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited US/CA Calling",
+        features: [
+          "Unlimited calling within US & Canada",
+          "Automated call recording & cloud archiving",
+          "Live call monitoring, whispering & barging",
+          "Native integrations with HubSpot, Pipedrive, Zapier",
+          "Advanced analytics and call center metrics"
+        ]
+      },
+      {
+        name: "Enterprise",
+        priceMonthly: 75,
+        priceAnnualMonthly: 60,
+        currency: "USD",
+        userLimit: "Per User / Seat (Min 10 users)",
+        usageLimit: "Custom Volume & Developer API",
+        features: [
+          "Developer API & Webhooks access",
+          "Custom call routing trees and multi-level IVR",
+          "Dedicated account manager & 99.99% uptime SLA",
+          "Custom compliance and HIPAA-ready configurations"
+        ]
+      }
     ],
     officialUrl: "https://krispcall.com",
     alternatives: ["my-ai-front-desk", "highlevel"]
@@ -1410,7 +1791,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["sales-crm"],
     tags: ["AI Receptionist", "Voice Bot", "Appointment Booking", "Phone Automation"],
-    startingPrice: 44.99,
+    startingPrice: 35.99,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1443,11 +1824,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "per_seat",
+    pricingModel: "usage",
     pricingEvidenceUrl: "https://myaifrontdesk.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 44.99, priceAnnualMonthly: 35.99, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 98.98, priceAnnualMonthly: 80.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 44.99,
+        priceAnnualMonthly: 35.99,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Business Location",
+        usageLimit: "100 Call Minutes / month",
+        features: [
+          "100 call minutes per month included",
+          "Dedicated phone number with AI receptionist direct answer",
+          "Automated calendar booking (Google Calendar / Calendly)",
+          "SMS text confirmation sent to callers immediately",
+          "Email notifications with full audio recordings and transcripts"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 99.99,
+        priceAnnualMonthly: 79.99,
+        currency: "USD",
+        userLimit: "1-3 Business Locations",
+        usageLimit: "350 Call Minutes / month",
+        features: [
+          "350 call minutes per month",
+          "Custom AI knowledge base (upload business FAQs & menus)",
+          "CRM webhook integrations (Zapier, GoHighLevel)",
+          "Custom caller ID forwarding to live staff when requested",
+          "Detailed sentiment and caller intent analytics"
+        ]
+      },
+      {
+        name: "Enterprise",
+        priceMonthly: 199.99,
+        priceAnnualMonthly: 159.99,
+        currency: "USD",
+        userLimit: "Multi-Location Chains",
+        usageLimit: "1,000 Call Minutes / month",
+        features: [
+          "1,000 call minutes per month",
+          "Multiple phone lines & location routing",
+          "Custom voice tone and multilingual conversation support",
+          "Priority technical support & phone onboarding"
+        ]
+      }
     ],
     officialUrl: "https://myaifrontdesk.com",
     alternatives: ["krispcall", "highlevel"]
@@ -1470,7 +1894,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar", "voice-audio"],
     tags: ["Text to Video", "AI Voice", "YouTube Automation", "Content Repurposing"],
-    startingPrice: 28,
+    startingPrice: 21,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -1506,8 +1930,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://fliki.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 28, priceAnnualMonthly: 22.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 61.6, priceAnnualMonthly: 50.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 mins audio/video per month",
+        features: [
+          "5 minutes of credits per month",
+          "300 realistic AI voices in 75+ languages",
+          "HD 720p video exports with Fliki watermark",
+          "Convert blog posts, tweets, and PPTs to video"
+        ]
+      },
+      {
+        name: "Standard",
+        priceMonthly: 28,
+        priceAnnualMonthly: 21,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "180 video mins/yr (15 mins/mo)",
+        features: [
+          "15 video minutes per month (180 mins billed annually)",
+          "1,000+ ultra-natural voices in 85+ languages",
+          "1080p Full HD video exports without watermark",
+          "Millions of premium stock images and video clips",
+          "Commercial usage rights included"
+        ]
+      },
+      {
+        name: "Premium",
+        priceMonthly: 88,
+        priceAnnualMonthly: 66,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "600 video mins/yr (50 mins/mo)",
+        features: [
+          "50 video minutes per month (600 mins billed annually)",
+          "2,000+ ultra-realistic voices including Ultra HD voices",
+          "AI voice cloning from 2-minute sample",
+          "AI avatar generation and video lip-sync",
+          "Full REST API access and priority render queue"
+        ]
+      }
     ],
     officialUrl: "https://fliki.ai",
     alternatives: ["videogen", "synthesia", "elevenlabs"]
@@ -1530,7 +1997,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["E-commerce", "Product Descriptions", "Shopify", "Catalog SEO"],
-    startingPrice: 28,
+    startingPrice: 22,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1566,8 +2033,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://describely.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 28, priceAnnualMonthly: 22.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 61.6, priceAnnualMonthly: 50.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 Product Descriptions",
+        features: [
+          "5 product descriptions one-time",
+          "Standard AI generation templates",
+          "Basic keyword optimization",
+          "Copy-paste export"
+        ]
+      },
+      {
+        name: "Core",
+        priceMonthly: 28,
+        priceAnnualMonthly: 22,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "30 Products / month",
+        features: [
+          "30 product generations per month",
+          "Bulk CSV catalog import & generation",
+          "Direct store sync with Shopify, WooCommerce, Amazon",
+          "SEO keyword density and readability scoring",
+          "Custom brand voice and tone rules"
+        ]
+      },
+      {
+        name: "Enterprise",
+        priceMonthly: 99,
+        priceAnnualMonthly: 79,
+        currency: "USD",
+        userLimit: "Unlimited Team Seats",
+        usageLimit: "Unlimited Products & Catalog Sync",
+        features: [
+          "Unlimited product description generation",
+          "Multi-store catalog management",
+          "Dedicated brand rules and automated tag generation",
+          "Priority customer support and bulk API"
+        ]
+      }
     ],
     officialUrl: "https://describely.ai",
     alternatives: ["jasper", "koala", "simplified"]
@@ -1590,7 +2099,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["SEO Content", "Affiliate Blogging", "GPT-4", "Amazon Roundup"],
-    startingPrice: 9,
+    startingPrice: 7.2,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -1626,8 +2135,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://koala.sh/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Essentials",
+        priceMonthly: 9,
+        priceAnnualMonthly: 7.2,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "15,000 words / month",
+        features: [
+          "15,000 AI words per month",
+          "KoalaWriter with real-time Google search data integration",
+          "Amazon affiliate product roundup & review formatting",
+          "KoalaChat assistant access",
+          "Direct WordPress 1-click publishing"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 25,
+        priceAnnualMonthly: 20,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "45,000 words / month",
+        features: [
+          "45,000 AI words per month",
+          "Automated internal linking architecture",
+          "AI image generation included directly in articles",
+          "Bulk article creation mode (up to 10 articles at once)",
+          "SEO outline editor with competitor SERP analysis"
+        ]
+      },
+      {
+        name: "Professional",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "Unlimited Team Members",
+        usageLimit: "100,000 words / month",
+        features: [
+          "100,000 AI words per month",
+          "Unlimited team members with shared usage pool",
+          "Full REST API for automated blog posting",
+          "Custom brand voices and custom tone instructions"
+        ]
+      }
     ],
     officialUrl: "https://koala.sh",
     alternatives: ["frase", "rightblogger", "jasper"]
@@ -1650,7 +2202,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Auto Captions", "Shorts", "Reels", "Video Hooks"],
-    startingPrice: 20,
+    startingPrice: 16,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 3,
@@ -1686,8 +2238,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://submagic.co/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 16.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 44.0, priceAnnualMonthly: 36.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 20,
+        priceAnnualMonthly: 16,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "20 videos / month (up to 2 mins)",
+        features: [
+          "20 videos per month (up to 2 minutes each)",
+          "Dynamic viral captions (Hormozi & Ali Abdaal styles)",
+          "Auto-generated relevant B-roll clips",
+          "Remove Submagic watermark",
+          "Auto sound effects & auto zooms"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 50,
+        priceAnnualMonthly: 40,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited videos (up to 5 mins)",
+        features: [
+          "Unlimited videos per month (up to 5 minutes each)",
+          "Upload custom brand fonts and custom templates",
+          "AI description and hashtag generator",
+          "Fast priority video rendering queue",
+          "Multi-language caption generation"
+        ]
+      },
+      {
+        name: "Agency",
+        priceMonthly: 150,
+        priceAnnualMonthly: 120,
+        currency: "USD",
+        userLimit: "Up to 10 Team Seats",
+        usageLimit: "500 videos / mo (up to 10 mins)",
+        features: [
+          "Up to 10 team member seats",
+          "500 videos per month (up to 10 minutes each)",
+          "Shared team asset libraries and brand workspaces",
+          "Dedicated account manager & priority rendering"
+        ]
+      }
     ],
     officialUrl: "https://submagic.co",
     alternatives: ["capcut", "opusclip"]
@@ -1710,7 +2305,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Faceless Videos", "Text to Video", "Royalty Free", "Video Production"],
-    startingPrice: 18,
+    startingPrice: 14.4,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -1746,8 +2341,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://videogen.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 18, priceAnnualMonthly: 14.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 39.6, priceAnnualMonthly: 32.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "3 videos/mo, 720p with watermark",
+        features: [
+          "3 video generations per month",
+          "Standard definition 720p",
+          "VideoGen watermark on exports",
+          "Basic stock media access"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 18,
+        priceAnnualMonthly: 14.4,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "25 videos/mo, 1080p Full HD",
+        features: [
+          "25 video generations per month",
+          "1080p Full HD exports without watermark",
+          "Access to 3M+ copyright-free stock footage and music",
+          "Ultra-realistic AI voice narration",
+          "Full commercial monetization rights"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 48,
+        priceAnnualMonthly: 38.4,
+        currency: "USD",
+        userLimit: "2 User Seats",
+        usageLimit: "80 videos/mo, Priority Queue",
+        features: [
+          "80 video generations per month",
+          "Fast cloud GPU rendering priority",
+          "Custom brand fonts and watermark overlay",
+          "Priority customer support"
+        ]
+      }
     ],
     officialUrl: "https://videogen.io",
     alternatives: ["fliki", "synthesia"]
@@ -1770,7 +2407,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["research-agent", "content-seo"],
     tags: ["Academic Research", "Literature Review", "Citations", "Essay Assistant"],
-    startingPrice: 16.99,
+    startingPrice: 13.59,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -1803,11 +2440,39 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://textero.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 16.99, priceAnnualMonthly: 13.59, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 37.38, priceAnnualMonthly: 30.58, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "3,000 words / month",
+        features: [
+          "3,000 AI words per month",
+          "Basic essay outline and idea generator",
+          "Access to open research summary database",
+          "Standard reference formatting"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 16.99,
+        priceAnnualMonthly: 13.59,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited Words & Academic Search",
+        features: [
+          "Unlimited AI word generation",
+          "Direct semantic search across 200M+ academic research papers",
+          "Automatic APA, MLA, Chicago in-text citations and bibliography",
+          "AI text summarizer and PDF document chat",
+          "Export directly to DOCX and PDF"
+        ]
+      }
     ],
     officialUrl: "https://textero.ai",
     alternatives: ["paperguide", "speak-ai"]
@@ -1830,7 +2495,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["advertising"],
     tags: ["Ad Maker", "Multi-Platform", "Social Ads", "Banners"],
-    startingPrice: 19,
+    startingPrice: 15,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1866,8 +2531,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://quickads.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 19,
+        priceAnnualMonthly: 15,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "20 Ad Creatives / mo, 1 Brand",
+        features: [
+          "20 AI ad creative downloads per month",
+          "1 brand kit with logo and color palette",
+          "All standard ad dimensions (Meta, Google, TikTok, LinkedIn)",
+          "AI copywriter for ad captions and headlines",
+          "High-resolution PNG and JPG exports"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "3 User Seats",
+        usageLimit: "100 Ad Creatives / mo, 3 Brands",
+        features: [
+          "100 AI ad creative downloads per month",
+          "3 brand profiles with separated asset libraries",
+          "Multilingual ad generation in 30+ languages",
+          "Competitor ad inspiration and design presets",
+          "Priority image rendering queue"
+        ]
+      },
+      {
+        name: "Agency",
+        priceMonthly: 99,
+        priceAnnualMonthly: 79,
+        currency: "USD",
+        userLimit: "Unlimited Team Seats",
+        usageLimit: "Unlimited Ads, 10 Brands",
+        features: [
+          "Unlimited AI ad creative generations",
+          "Up to 10 client brand workspaces",
+          "Client folder collaboration & approval links",
+          "Dedicated account manager & phone onboarding"
+        ]
+      }
     ],
     officialUrl: "https://quickads.ai",
     alternatives: ["adcreative", "lebesgue"]
@@ -1890,7 +2598,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["meeting-productivity"],
     tags: ["Meeting Minutes", "Transcription", "Zoom", "Google Meet"],
-    startingPrice: 15,
+    startingPrice: 12,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 14,
@@ -1926,8 +2634,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "per_seat",
     pricingEvidenceUrl: "https://meetgeek.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Basic",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 hours of meetings/mo",
+        features: [
+          "5 hours of meeting recording & transcription per month",
+          "3 months storage history",
+          "Zoom, Google Meet, and Microsoft Teams integration",
+          "Basic meeting summary and topic bookmarks"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 15,
+        priceAnnualMonthly: 12,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "20 hours / mo, 1 Year Storage",
+        features: [
+          "20 hours of meetings per user per month",
+          "1 year of cloud storage",
+          "AI summaries, automated action items, and key takeaways",
+          "Download audio, video, and full text transcripts",
+          "Direct integrations with Notion, Slack, Trello, Google Drive"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 29,
+        priceAnnualMonthly: 24,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "100 hours / mo, Unlimited Storage",
+        features: [
+          "100 hours of meetings per user per month",
+          "Unlimited cloud storage history",
+          "Shareable video soundbites and highlight reels",
+          "Custom meeting vocabulary and industry jargon training",
+          "Sales CRM sync (HubSpot, Salesforce, Pipedrive)"
+        ]
+      }
     ],
     officialUrl: "https://meetgeek.ai",
     alternatives: ["fireflies", "speak-ai", "taskade"]
@@ -1950,7 +2701,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["voice-audio", "content-seo"],
     tags: ["Podcasting", "Show Notes", "Audio to Text", "Repurposing"],
-    startingPrice: 29,
+    startingPrice: 23,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -1986,8 +2737,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://castmagic.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 23,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "100 audio minutes / month",
+        features: [
+          "100 audio recording minutes per month",
+          "Automated high-accuracy transcriptions",
+          "Show notes, episode summaries, and timestamps",
+          "Social media post generator (LinkedIn, Twitter, Newsletters)",
+          "Upload MP3, WAV, MP4, or paste YouTube links"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 79,
+        priceAnnualMonthly: 63,
+        currency: "USD",
+        userLimit: "2 User Seats",
+        usageLimit: "500 audio minutes / month",
+        features: [
+          "500 audio recording minutes per month",
+          "Custom Magic Chat: ask questions against your audio library",
+          "Custom prompt recipes for bespoke content outputs",
+          "Key quotes and pull-out soundbite generator",
+          "Integration with Zapier for automated podcast workflows"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 199,
+        priceAnnualMonthly: 159,
+        currency: "USD",
+        userLimit: "5 User Seats",
+        usageLimit: "1,500 audio minutes / month",
+        features: [
+          "1,500 audio minutes per month",
+          "Agency workspaces with segregated client folders",
+          "Highest fidelity transcription model",
+          "Priority customer support & dedicated account rep"
+        ]
+      }
     ],
     officialUrl: "https://castmagic.io",
     alternatives: ["elevenlabs", "speak-ai", "listnr"]
@@ -2010,7 +2804,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["voice-audio"],
     tags: ["Photo Colorizer", "Historical Photos", "Image Restoration", "Creative"],
-    startingPrice: 9,
+    startingPrice: 7.2,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -2046,8 +2840,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://palette.fm/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "Unlimited Standard Res Colorization",
+        features: [
+          "Unlimited free colorizations at standard resolution",
+          "21 distinct artistic color palettes to choose from",
+          "Web browser upload and instant color preview",
+          "Personal non-commercial use"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 9,
+        priceAnnualMonthly: 7.2,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "40 High-Res Credits / month",
+        features: [
+          "40 high-resolution colorization credits per month",
+          "Full original resolution export up to 4K quality",
+          "Uncompressed PNG downloads without watermark",
+          "Full commercial monetization license",
+          "Unused credits rollover month-to-month"
+        ]
+      },
+      {
+        name: "Unlimited",
+        priceMonthly: 29,
+        priceAnnualMonthly: 23,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited High-Res Generations",
+        features: [
+          "Unlimited high-resolution colorizations",
+          "Priority GPU processing pipeline",
+          "Bulk batch photo colorization",
+          "Full API access for automated developer pipelines"
+        ]
+      }
     ],
     officialUrl: "https://palette.fm",
     alternatives: ["simplified", "capcut"]
@@ -2106,8 +2942,51 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "per_seat",
     pricingEvidenceUrl: "https://fireflies.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "Limited credits, 800 mins storage",
+        features: [
+          "Limited transcription credits",
+          "800 minutes of cloud storage",
+          "Captures Zoom, Google Meet, Microsoft Teams, Webex",
+          "Basic meeting summaries and audio playback"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 18,
+        priceAnnualMonthly: 10,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited Transcription, 8,000 mins storage",
+        features: [
+          "Unlimited meeting transcription minutes",
+          "8,000 minutes of cloud storage per seat",
+          "AI meeting summaries with action items and timestamps",
+          "Smart Search filters (sentiment, dates, metrics, speakers)",
+          "Download audio, video, and text transcripts"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 29,
+        priceAnnualMonthly: 19,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited Storage & Video Screen Capture",
+        features: [
+          "Unlimited cloud storage history",
+          "Video screen recording alongside audio transcription",
+          "Conversation intelligence: talk-time ratios, sentiments",
+          "Sales CRM integrations (HubSpot, Salesforce, Pipedrive)",
+          "Team channels and collaborative workspace access"
+        ]
+      }
     ],
     officialUrl: "https://fireflies.ai",
     alternatives: ["meetgeek", "reclaim", "taskade"]
@@ -2130,7 +3009,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["SEO Optimization", "SERP Analysis", "Content Briefs", "Keywords"],
-    startingPrice: 15,
+    startingPrice: 12.75,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 5,
@@ -2164,10 +3043,54 @@ export const TOOLS_DATA: ToolItem[] = [
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
     pricingModel: "usage",
-    pricingEvidenceUrl: "https://frase.io/pricing",
+    pricingEvidenceUrl: "https://www.frase.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Solo",
+        priceMonthly: 15,
+        priceAnnualMonthly: 12.75,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "4 Articles / month, 4,000 AI words",
+        features: [
+          "1 user seat included",
+          "Write & optimize up to 4 articles per month",
+          "4,000 AI words generated per month",
+          "SERP competitor content analysis (top 20 Google results)",
+          "Automated content outline builder"
+        ]
+      },
+      {
+        name: "Basic",
+        priceMonthly: 45,
+        priceAnnualMonthly: 38.25,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "30 Articles / month, 4,000 AI words",
+        features: [
+          "1 user seat included",
+          "Write & optimize up to 30 articles per month",
+          "4,000 AI words per month",
+          "Google Search Console integration",
+          "Topic model scoring and keyword recommendations"
+        ]
+      },
+      {
+        name: "Team",
+        priceMonthly: 115,
+        priceAnnualMonthly: 97.75,
+        currency: "USD",
+        userLimit: "3 User Seats ($25/mo per extra seat)",
+        usageLimit: "Unlimited Articles / month",
+        features: [
+          "3 user seats included",
+          "Unlimited article creation and optimization documents",
+          "4,000 AI words included (Pro add-on eligible for unlimited)",
+          "Collaborative document sharing and role management",
+          "Priority customer support"
+        ]
+      }
     ],
     officialUrl: "https://frase.io",
     alternatives: ["koala", "rightblogger", "jasper"]
@@ -2190,7 +3113,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["website-builder"],
     tags: ["WordPress", "AI Website Builder", "PageSpeed", "Elementor"],
-    startingPrice: 10,
+    startingPrice: 7,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -2226,8 +3149,52 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "flat",
     pricingEvidenceUrl: "https://10web.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "AI Starter",
+        priceMonthly: 10,
+        priceAnnualMonthly: 7,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 WordPress Website",
+        usageLimit: "10k Monthly Visits, 10GB Storage",
+        features: [
+          "1 WordPress website hosted on Google Cloud",
+          "10,000 monthly visits allowance",
+          "10GB SSD storage & 100GB monthly bandwidth",
+          "AI Website Builder with responsive Elementor templates",
+          "Automated 90+ PageSpeed optimization"
+        ]
+      },
+      {
+        name: "AI Premium",
+        priceMonthly: 15,
+        priceAnnualMonthly: 10,
+        currency: "USD",
+        userLimit: "1 WordPress Website",
+        usageLimit: "50k Monthly Visits, 15GB Storage",
+        features: [
+          "1 WordPress website on isolated high-performance server",
+          "50,000 monthly visits allowance",
+          "15GB SSD storage & 200GB monthly bandwidth",
+          "AI content generator and automatic image optimizer",
+          "Real-time automated backups & 1-click restore"
+        ]
+      },
+      {
+        name: "AI Agency",
+        priceMonthly: 24,
+        priceAnnualMonthly: 16,
+        currency: "USD",
+        userLimit: "3 WordPress Websites",
+        usageLimit: "100k Monthly Visits, Multisite",
+        features: [
+          "3 WordPress websites included ($6/mo per extra site)",
+          "100,000 monthly visits allowance",
+          "Multisite dashboard with centralized management",
+          "White-label client reporting",
+          "24/7 priority live chat and engineering support"
+        ]
+      }
     ],
     officialUrl: "https://10web.io",
     alternatives: ["pineapple-builder", "marblism"]
@@ -2250,7 +3217,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["voice-audio"],
     tags: ["Video Translation", "Voice Dubbing", "Localization", "Multi-Language"],
-    startingPrice: 29,
+    startingPrice: 23,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -2286,8 +3253,37 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://palabra.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 23,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "20 video minutes / month",
+        features: [
+          "20 minutes of AI video dubbing per month",
+          "30+ international languages with natural accents",
+          "AI voice cloning from original speaker audio",
+          "Automated lip-sync translation adjustment",
+          "1080p Full HD video exports without watermark"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 79,
+        priceAnnualMonthly: 63,
+        currency: "USD",
+        userLimit: "2 User Seats",
+        usageLimit: "60 video minutes / month",
+        features: [
+          "60 minutes of AI video dubbing per month",
+          "Multi-speaker detection and individual voice cloning",
+          "Export translated SRT and VTT subtitle tracks",
+          "Full timeline subtitle editor for manual perfection",
+          "Fast GPU dubbing queue priority"
+        ]
+      }
     ],
     officialUrl: "https://palabra.ai",
     alternatives: ["elevenlabs", "fliki"]
@@ -2310,7 +3306,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["website-builder", "content-seo"],
     tags: ["Social Media", "Carousels", "LinkedIn", "Instagram"],
-    startingPrice: 19,
+    startingPrice: 15,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -2346,8 +3342,37 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "flat",
     pricingEvidenceUrl: "https://postcrest.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 19,
+        priceAnnualMonthly: 15,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "3 Social Accounts, 50 AI Posts/mo",
+        features: [
+          "Connect up to 3 social accounts (X, LinkedIn, Threads)",
+          "50 AI-generated social posts per month",
+          "Visual content calendar and automated scheduling",
+          "Viral hook generator and hashtag recommendations",
+          "Basic post analytics"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "3 Team Members",
+        usageLimit: "10 Social Accounts, Unlimited Posts",
+        features: [
+          "Connect up to 10 social media accounts",
+          "Unlimited AI social post generations",
+          "LinkedIn carousel generator with PDF export",
+          "Audience engagement analytics and best-time posting",
+          "Team approval workflow and shared content library"
+        ]
+      }
     ],
     officialUrl: "https://postcrest.com",
     alternatives: ["simplified", "decktopus"]
@@ -2370,7 +3395,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["website-builder"],
     tags: ["Website Builder", "Landing Pages", "Startups", "No-Code"],
-    startingPrice: 12,
+    startingPrice: 9.6,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 7,
@@ -2406,8 +3431,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "flat",
     pricingEvidenceUrl: "https://pineapplebuilder.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 12, priceAnnualMonthly: 9.6, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 26.4, priceAnnualMonthly: 21.6, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Basic",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "1 Website on subdomain",
+        features: [
+          "1 website hosted on Pineapple subdomain",
+          "AI copy & design generator",
+          "Free SSL certificate included",
+          "Basic contact form and lead capture"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 12,
+        priceAnnualMonthly: 9.6,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User",
+        usageLimit: "1 Custom Domain, Unlimited Pages",
+        features: [
+          "Connect your own custom domain",
+          "Remove Pineapple badge branding",
+          "Unlimited website pages and blog posts",
+          "24/7 web analytics and Google Tag Manager integration",
+          "Fast CDN hosting and 99.9% uptime"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 24,
+        priceAnnualMonthly: 19.2,
+        currency: "USD",
+        userLimit: "3 Team Members",
+        usageLimit: "Membership & Payment Integration",
+        features: [
+          "Members-only gated content areas and user signups",
+          "Stripe payments and subscription checkout",
+          "SEO optimization tools and custom code injection",
+          "Priority customer support"
+        ]
+      }
     ],
     officialUrl: "https://pineapplebuilder.com",
     alternatives: ["10web", "marblism"]
@@ -2430,7 +3497,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Personalized Video", "Cold Outreach", "B2B Sales", "Email Marketing"],
-    startingPrice: 29,
+    startingPrice: 23,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 14,
@@ -2466,8 +3533,37 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://sendpotion.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 23,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "250 Video Emails / month",
+        features: [
+          "250 AI-personalized video outreach emails/mo",
+          "Record 1 template video and AI personalizes name and screen",
+          "Animated video GIF thumbnail in outgoing emails",
+          "Custom video landing pages with call-to-action button",
+          "Chrome extension for Gmail, LinkedIn, and Outlook"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 89,
+        priceAnnualMonthly: 71,
+        currency: "USD",
+        userLimit: "3 User Seats",
+        usageLimit: "1,000 Video Emails / month",
+        features: [
+          "1,000 AI-personalized video emails per month",
+          "Custom domain for video landing pages",
+          "Integrations with HubSpot, Salesforce, Outreach, Apollo",
+          "Video viewing analytics and instant click notifications",
+          "Fast rendering pipeline priority"
+        ]
+      }
     ],
     officialUrl: "https://sendpotion.com",
     alternatives: ["ai-studios", "synthesia"]
@@ -2490,7 +3586,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["content-seo"],
     tags: ["Copywriting", "Budget Friendly", "Social Captions", "Writing Assistant"],
-    startingPrice: 9,
+    startingPrice: 7.5,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -2523,11 +3619,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://rytr.me/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "10,000 characters / month",
+        features: [
+          "10,000 characters per month (~2,000 words)",
+          "Access to 40+ use cases and writing templates",
+          "Write in 30+ languages with 20+ emotional tones",
+          "Built-in basic plagiarism checker"
+        ]
+      },
+      {
+        name: "Unlimited",
+        priceMonthly: 9,
+        priceAnnualMonthly: 7.5,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited Characters / month",
+        features: [
+          "Unlimited character generation per month",
+          "Create 1 custom brand voice and style persona",
+          "50 plagiarism checks per month included",
+          "Generate 20 AI images per month",
+          "Access to private Rytr user community"
+        ]
+      },
+      {
+        name: "Premium",
+        priceMonthly: 29,
+        priceAnnualMonthly: 24,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited Characters, Multiple Voices",
+        features: [
+          "Unlimited character generation",
+          "Create multiple custom brand voices and personas",
+          "100 plagiarism checks per month",
+          "Generate 100 AI images per month",
+          "Dedicated account manager & priority email support"
+        ]
+      }
     ],
     officialUrl: "https://rytr.me",
     alternatives: ["rightblogger", "jasper", "koala"]
@@ -2550,7 +3689,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["voice-audio"],
     tags: ["Text to Speech", "Podcast Hosting", "Audio Player", "Voiceover"],
-    startingPrice: 19,
+    startingPrice: 7.2,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 7,
@@ -2586,8 +3725,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://listnr.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Student",
+        priceMonthly: 9,
+        priceAnnualMonthly: 7.2,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "4,000 words / month",
+        features: [
+          "4,000 words of text-to-speech conversion per month",
+          "900+ voices across 140+ languages",
+          "Standard audio quality export",
+          "Embeddable audio player widget"
+        ]
+      },
+      {
+        name: "Individual",
+        priceMonthly: 19,
+        priceAnnualMonthly: 15,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "20,000 words / month",
+        features: [
+          "20,000 words per month",
+          "Full commercial monetization license",
+          "Unlimited podcast hosting with RSS distribution to Spotify",
+          "Automatic audio player analytics",
+          "Export in WAV and MP3 format"
+        ]
+      },
+      {
+        name: "Solo",
+        priceMonthly: 39,
+        priceAnnualMonthly: 31,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "50,000 words / month",
+        features: [
+          "50,000 words per month",
+          "Instant voice cloning from audio sample",
+          "Priority audio generation queue",
+          "REST API access with custom webhooks"
+        ]
+      }
     ],
     officialUrl: "https://listnr.ai",
     alternatives: ["elevenlabs", "castmagic"]
@@ -2610,7 +3791,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["website-builder"],
     tags: ["Form Builder", "Surveys", "Workflows", "Payment Forms"],
-    startingPrice: 34,
+    startingPrice: 29,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -2646,8 +3827,66 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "flat",
     pricingEvidenceUrl: "https://www.jotform.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 34, priceAnnualMonthly: 27.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 74.8, priceAnnualMonthly: 61.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 Forms, 100 Submissions/mo",
+        features: [
+          "Up to 5 active forms",
+          "100 monthly form submissions",
+          "100MB cloud upload storage",
+          "Jotform branding on forms"
+        ]
+      },
+      {
+        name: "Bronze",
+        priceMonthly: 39,
+        priceAnnualMonthly: 29,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "25 Forms, 1,000 Submissions/mo",
+        features: [
+          "Up to 25 active forms",
+          "1,000 monthly submissions",
+          "1GB cloud upload storage",
+          "Remove Jotform branding completely",
+          "Collect payments via Stripe, PayPal, Square without extra fees"
+        ]
+      },
+      {
+        name: "Silver",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "50 Forms, 2,500 Submissions/mo",
+        features: [
+          "Up to 50 active forms",
+          "2,500 monthly submissions",
+          "10GB cloud upload storage",
+          "HIPAA compliance eligible for healthcare data",
+          "Custom PDF receipts and automated confirmation emails"
+        ]
+      },
+      {
+        name: "Gold",
+        priceMonthly: 129,
+        priceAnnualMonthly: 99,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "100 Forms, 10,000 Submissions/mo",
+        features: [
+          "Up to 100 active forms",
+          "10,000 monthly submissions",
+          "100GB cloud storage space",
+          "HIPAA compliant with BAA agreement",
+          "Priority 24/7 customer support"
+        ]
+      }
     ],
     officialUrl: "https://www.jotform.com",
     alternatives: ["highlevel", "taskade"]
@@ -2670,7 +3909,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["advertising"],
     tags: ["Ad Analytics", "Shopify", "E-commerce", "Ad Waste Audit"],
-    startingPrice: 39,
+    startingPrice: 31,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 14,
@@ -2703,11 +3942,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://lebesgue.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 39, priceAnnualMonthly: 31.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 85.8, priceAnnualMonthly: 70.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 39,
+        priceAnnualMonthly: 31,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Store / Brand",
+        usageLimit: "Up to $5k monthly ad spend",
+        features: [
+          "Connect Facebook, Instagram, Google Ads & TikTok",
+          "Automated daily ad audit and budget leak detection",
+          "AI ad copy recommendations based on top-performing ads",
+          "Market benchmark comparisons in your ecommerce niche",
+          "Weekly performance summaries"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 89,
+        priceAnnualMonthly: 71,
+        currency: "USD",
+        userLimit: "Up to 3 Stores / Brands",
+        usageLimit: "Up to $25k monthly ad spend",
+        features: [
+          "Deep competitor ad monitoring and tracking",
+          "Customer lifetime value (LTV) and cohort analytics",
+          "First-party conversion tracking fixes",
+          "Custom marketing mix modeling (MMM)",
+          "Priority live chat support"
+        ]
+      },
+      {
+        name: "Agency",
+        priceMonthly: 199,
+        priceAnnualMonthly: 159,
+        currency: "USD",
+        userLimit: "Unlimited Team Members",
+        usageLimit: "Unlimited Ad Spend & Stores",
+        features: [
+          "Unlimited ad spend and multi-client dashboards",
+          "White-label client audit PDF exports",
+          "Custom API access and raw data sync",
+          "Dedicated growth strategist consultation"
+        ]
+      }
     ],
     officialUrl: "https://lebesgue.io",
     alternatives: ["adcreative", "quickads"]
@@ -2730,7 +4012,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["presentation-design"],
     tags: ["Presentations", "Slides", "Pitch Decks", "Documents"],
-    startingPrice: 10,
+    startingPrice: 8,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -2763,11 +4045,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "per_seat",
     pricingEvidenceUrl: "https://gamma.app/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "400 AI credits one-time",
+        features: [
+          "400 initial AI creation credits",
+          "Unlimited card generation and slide decks",
+          "Basic deck view analytics",
+          "Export to PDF with Made with Gamma badge"
+        ]
+      },
+      {
+        name: "Plus",
+        priceMonthly: 10,
+        priceAnnualMonthly: 8,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited AI Creations, 400 credits/mo",
+        features: [
+          "Unlimited AI creations",
+          "400 monthly AI credits refreshed every month",
+          "Remove Made with Gamma branding badge",
+          "Export directly to editable PowerPoint (.pptx) & PDF",
+          "Full 30-day revision history"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 20,
+        priceAnnualMonthly: 15,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited AI + Custom Domains",
+        features: [
+          "Unlimited AI generation with advanced AI models",
+          "Custom brand fonts, colors, and design themes",
+          "Publish presentations to your own custom domain",
+          "Granular card-by-card engagement analytics",
+          "Priority GPU generation queue"
+        ]
+      }
     ],
     officialUrl: "https://gamma.app",
     alternatives: ["decktopus", "magicslides"]
@@ -2999,7 +4324,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["Video Repurposing", "Viral Shorts", "Auto Highlights", "AI Virality"],
-    startingPrice: 19,
+    startingPrice: 15,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -3033,10 +4358,54 @@ export const TOOLS_DATA: ToolItem[] = [
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
     pricingModel: "usage",
-    pricingEvidenceUrl: "https://opus.pro/pricing",
+    pricingEvidenceUrl: "https://www.opus.pro/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "60 processing mins/mo",
+        features: [
+          "60 minutes of video upload processing per month",
+          "AI Virality Score prediction for every clip",
+          "Auto-reframing into vertical 9:16 format",
+          "Dynamic auto-captions with emoji highlighting",
+          "1080p resolution with OpusClip watermark"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 19,
+        priceAnnualMonthly: 15,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "150 processing mins / month",
+        features: [
+          "150 minutes of upload processing per month",
+          "Watermark removal on all video exports",
+          "Custom brand templates, fonts, and colors",
+          "Multi-aspect ratio export (9:16, 1:1, 16:9)",
+          "Auto-schedule posts directly to TikTok, YouTube, Reels"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 38,
+        priceAnnualMonthly: 29,
+        currency: "USD",
+        userLimit: "2 Team Members",
+        usageLimit: "300 processing mins / month",
+        features: [
+          "300 minutes of upload processing per month",
+          "Multiple aspect ratio exports at once",
+          "Team collaboration workspace and asset sharing",
+          "B-roll auto-insertion and custom hook generator",
+          "Fast GPU processing priority"
+        ]
+      }
     ],
     officialUrl: "https://opus.pro",
     alternatives: ["submagic", "capcut"]
@@ -3149,7 +4518,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["meeting-productivity", "voice-audio"],
     tags: ["Transcription", "Voice Sentiment", "Qualitative Research", "Speech Intelligence"],
-    startingPrice: 29,
+    startingPrice: 23,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -3182,11 +4551,40 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "per_seat",
+    pricingModel: "usage",
     pricingEvidenceUrl: "https://speakai.co/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 23,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "15 hours audio/video per month",
+        features: [
+          "15 hours of audio/video transcription per month",
+          "Automated sentiment and emotional tone analysis",
+          "Named Entity Recognition (brands, people, locations)",
+          "Embeddable audio & video recording recorder widget",
+          "Export to CSV, PDF, Word, and SRT subtitle format"
+        ]
+      },
+      {
+        name: "Custom",
+        priceMonthly: 79,
+        priceAnnualMonthly: 63,
+        currency: "USD",
+        userLimit: "3 Team Members",
+        usageLimit: "40 hours / mo, Media Library",
+        features: [
+          "40 hours of transcription per month",
+          "Shareable team media repository and search",
+          "Custom vocabulary dictionary for technical terms",
+          "Direct integration with Zapier, Zoom, Google Drive",
+          "Priority customer support"
+        ]
+      }
     ],
     officialUrl: "https://speakai.co",
     alternatives: ["fireflies", "castmagic"]
@@ -3209,7 +4607,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["ai-detection"],
     tags: ["AI Humanizer", "Text Rewriter", "Bypass AI", "Content Polish"],
-    startingPrice: 14.99,
+    startingPrice: 9.99,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -3245,8 +4643,37 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://undetectable.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 14.99, priceAnnualMonthly: 11.99, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 32.98, priceAnnualMonthly: 26.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Monthly (10k Words)",
+        priceMonthly: 14.99,
+        priceAnnualMonthly: 9.99,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "10,000 humanized words / mo",
+        features: [
+          "10,000 words humanized per month",
+          "Bypass all major AI detectors (Turnitin, GPTZero, CopyLeaks)",
+          "Matches human readability and emotional perplexity",
+          "High-speed generation with no AI watermarks",
+          "Multi-detector audit score comparison"
+        ]
+      },
+      {
+        name: "Monthly (50k Words)",
+        priceMonthly: 49.99,
+        priceAnnualMonthly: 29.99,
+        currency: "USD",
+        userLimit: "Unlimited Team Seats",
+        usageLimit: "50,000 humanized words / mo",
+        features: [
+          "50,000 words humanized per month",
+          "Bulk document upload (DOCX, PDF, TXT)",
+          "Highest quality Human rewriting mode",
+          "Full REST API access for automated content workflows",
+          "Priority processing queue"
+        ]
+      }
     ],
     officialUrl: "https://undetectable.ai",
     alternatives: ["winston", "originality"]
@@ -3269,7 +4696,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["presentation-design", "content-seo"],
     tags: ["All-in-One", "Graphic Design", "Social Media", "Video Editing"],
-    startingPrice: 24,
+    startingPrice: 18,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -3302,11 +4729,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "per_seat",
     pricingEvidenceUrl: "https://simplified.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 24, priceAnnualMonthly: 19.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 52.8, priceAnnualMonthly: 43.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5,000 AI words, 1GB Storage",
+        features: [
+          "Core graphic design editor with templates",
+          "5,000 AI writer words per month",
+          "1GB cloud storage",
+          "Publish to 3 social media accounts"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 24,
+        priceAnnualMonthly: 18,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "100k AI words, 10 Video Credits",
+        features: [
+          "100,000 AI writer words per month",
+          "10 AI video generation credits per month",
+          "100GB cloud storage space",
+          "1 brand kit with custom fonts and colors",
+          "Schedule to 7 social media accounts"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 49,
+        priceAnnualMonthly: 35,
+        currency: "USD",
+        userLimit: "Up to 5 Team Seats Included",
+        usageLimit: "Unlimited AI Words, 500GB Storage",
+        features: [
+          "Up to 5 team member seats included",
+          "Unlimited AI writing words",
+          "50 AI video credits per month",
+          "500GB cloud storage and shared team folders",
+          "Approval workflows and role-based access"
+        ]
+      }
     ],
     officialUrl: "https://simplified.com",
     alternatives: ["capcut", "gamma", "postcrest"]
@@ -3329,7 +4799,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["presentation-design"],
     tags: ["Google Slides", "Presentations", "Pitch Decks", "Add-on"],
-    startingPrice: 12.99,
+    startingPrice: 9.99,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -3365,8 +4835,50 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://magicslides.app/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 12.99, priceAnnualMonthly: 10.39, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 28.58, priceAnnualMonthly: 23.38, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "3 presentations / mo (up to 10 slides)",
+        features: [
+          "3 presentations per month",
+          "Up to 10 slides per presentation",
+          "Seamless Google Slides addon integration",
+          "Basic design themes and stock images"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 12.99,
+        priceAnnualMonthly: 9.99,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "50 presentations / mo (up to 50 slides)",
+        features: [
+          "50 presentations per month",
+          "Up to 50 slides per deck",
+          "Convert YouTube videos and URLs to slide decks",
+          "Convert PDF and DOCX documents directly to slides",
+          "Commercial usage license"
+        ]
+      },
+      {
+        name: "Team",
+        priceMonthly: 39.99,
+        priceAnnualMonthly: 29.99,
+        currency: "USD",
+        userLimit: "Up to 5 Team Members",
+        usageLimit: "Unlimited Presentations & Custom Fonts",
+        features: [
+          "Unlimited presentation creations",
+          "Custom company branding and typography templates",
+          "Shared team templates and slide component library",
+          "Priority customer support"
+        ]
+      }
     ],
     officialUrl: "https://magicslides.app",
     alternatives: ["gamma", "decktopus"]
@@ -3389,7 +4901,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["research-agent"],
     tags: ["Research Papers", "Chat with PDF", "Academic AI", "Science"],
-    startingPrice: 15,
+    startingPrice: 12,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 7,
@@ -3422,11 +4934,39 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
-    pricingModel: "usage",
+    pricingModel: "flat",
     pricingEvidenceUrl: "https://paperguide.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "5 paper summaries / month",
+        features: [
+          "5 research paper summaries per month",
+          "Basic PDF reference manager",
+          "Semantic paper search across arXiv and PubMed",
+          "Community support"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 15,
+        priceAnnualMonthly: 12,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Researcher Seat",
+        usageLimit: "Unlimited Paper Chats & Literature Matrix",
+        features: [
+          "Unlimited PDF document chats and multi-paper comparisons",
+          "Automated literature review matrix generator",
+          "Export directly to LaTeX, BibTeX, and DOCX",
+          "Two-way citation synchronization with Zotero and Mendeley",
+          "Priority AI math and formula extraction"
+        ]
+      }
     ],
     officialUrl: "https://paperguide.ai",
     alternatives: ["textero", "browse-ai"]
@@ -3449,7 +4989,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["research-agent"],
     tags: ["Web Scraping", "Data Extraction", "No-Code API", "Monitoring"],
-    startingPrice: 48.75,
+    startingPrice: 39,
     hasFreePlan: true,
     hasFreeTrial: false,
     trialDays: 0,
@@ -3485,8 +5025,52 @@ export const TOOLS_DATA: ToolItem[] = [
     pricingModel: "usage",
     pricingEvidenceUrl: "https://browse.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 48.75, priceAnnualMonthly: 39.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 107.25, priceAnnualMonthly: 87.75, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 48.75,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "2,000 Credits / mo, 10 Robots",
+        features: [
+          "2,000 extraction credits per month",
+          "Build up to 10 automated scraping robots without code",
+          "Monitor websites with 1-hour check frequency",
+          "Extract data behind logins and handle pagination",
+          "Download to CSV, Excel, or sync to Google Sheets"
+        ]
+      },
+      {
+        name: "Professional",
+        priceMonthly: 123.75,
+        priceAnnualMonthly: 99,
+        currency: "USD",
+        userLimit: "2 User Seats",
+        usageLimit: "5,000 Credits / mo, 30 Robots",
+        features: [
+          "5,000 extraction credits per month",
+          "Build up to 30 automated scraping robots",
+          "Monitor frequency down to 15 minutes",
+          "Webhooks, Zapier, Make, and Airtable integrations",
+          "Solve standard captchas and geo-targeted scraping"
+        ]
+      },
+      {
+        name: "Team",
+        priceMonthly: 311.25,
+        priceAnnualMonthly: 249,
+        currency: "USD",
+        userLimit: "5 User Seats",
+        usageLimit: "10,000 Credits / mo, Unlimited Robots",
+        features: [
+          "10,000 extraction credits per month",
+          "Unlimited scraping robots",
+          "Monitor frequency down to 5 minutes",
+          "Full REST API for custom programmatic scraping",
+          "Dedicated customer success manager"
+        ]
+      }
     ],
     officialUrl: "https://browse.ai",
     alternatives: ["pickaxe", "marblism"]
@@ -6723,6 +8307,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Peak generation times can experience rendering queue delays on free accounts", "4K master video upscaling requires higher tier credit consumption"],
       vi: ["Khung gi\u1edd cao \u0111i\u1ec3m c\u00f3 th\u1ec3 ph\u1ea3i ch\u1edd x\u1ebfp h\u00e0ng render \u0111\u1ed1i v\u1edbi c\u00e1c t\u00e0i kho\u1ea3n mi\u1ec5n ph\u00ed", "T\u00ednh n\u0103ng ph\u00f3ng to video chu\u1ea9n 4K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng h\u01a1n"],
     },
+    pricingEvidenceUrl: "https://klingai.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -6817,6 +8402,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["High motion scenes can occasionally produce subtle morphing artifacts", "Watermark removal and commercial generation rights require a paid subscription"],
       vi: ["C\u00e1c c\u1ea3nh c\u00f3 chuy\u1ec3n \u0111\u1ed9ng qu\u00e1 nhanh \u0111\u00f4i khi c\u00f3 th\u1ec3 xu\u1ea5t hi\u1ec7n hi\u1ec7n t\u01b0\u1ee3ng bi\u1ebfn d\u1ea1ng nh\u1eb9", "X\u00f3a h\u00ecnh m\u1edd watermark v\u00e0 quy\u1ec1n s\u1eed d\u1ee5ng th\u01b0\u01a1ng m\u1ea1i \u0111\u1ea7y \u0111\u1ee7 y\u00eau c\u1ea7u g\u00f3i tr\u1ea3 ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://lumalabs.ai/dream-machine/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -6911,6 +8497,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Web interface is straightforward with fewer manual camera slider dials than Runway", "Max single generation length is currently capped at 6 seconds"],
       vi: ["Giao di\u1ec7n web tr\u1ef1c quan nh\u01b0ng \u00edt thanh tr\u01b0\u1ee3t ch\u1ec9nh camera th\u1ee7 c\u00f4ng h\u01a1n so v\u1edbi Runway", "Th\u1eddi l\u01b0\u1ee3ng m\u1ed9t l\u1ea7n k\u1ebft xu\u1ea5t hi\u1ec7n t\u1ea1i gi\u1edbi h\u1ea1n \u1edf m\u1ee9c 6 gi\u00e2y"],
     },
+    pricingEvidenceUrl: "https://www.minimaxi.com/pricing",
     pricingTiers: [
       {
             "name": "Free Tier",
@@ -7006,6 +8593,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Comprehensive workflow involves a creative learning curve compared to simple prompt-box tools", "Exporting lengthy 4K master sequences consumes credits faster"],
       vi: ["Quy tr\u00ecnh l\u00e0m phim chuy\u00ean nghi\u1ec7p \u0111\u00f2i h\u1ecfi ng\u01b0\u1eddi d\u00f9ng d\u00e0nh th\u1eddi gian l\u00e0m quen v\u1edbi thu\u1eadt ng\u1eef \u0111\u1ea1o di\u1ec5n", "Xu\u1ea5t to\u00e0n b\u1ed9 b\u1ed9 phim d\u00e0i \u1edf \u0111\u1ed9 ph\u00e2n gi\u1ea3i 4K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng"],
     },
+    pricingEvidenceUrl: "https://ltx.studio/pricing",
     pricingTiers: [
       {
             "name": "Free Pilot",
@@ -7101,6 +8689,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Songs generate in 32-second sections initially, requiring successive extensions to build full 3-minute songs", "Stem separation is reserved for paid subscriber tiers"],
       vi: ["B\u00e0i h\u00e1t ban \u0111\u1ea7u \u0111\u01b0\u1ee3c t\u1ea1o theo c\u00e1c ph\u00e2n \u0111o\u1ea1n 32 gi\u00e2y, c\u1ea7n b\u1ea5m n\u1ed1i ti\u1ebfp \u0111\u1ec3 t\u1ea1o th\u00e0nh b\u00e0i ho\u00e0n ch\u1ec9nh 3 ph\u00fat", "T\u00ednh n\u0103ng t\u00e1ch t\u1eebng d\u1ea3i \u00e2m thanh (Stems) ch\u1ec9 \u00e1p d\u1ee5ng cho c\u00e1c g\u00f3i tr\u1ea3 ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://www.udio.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7196,6 +8785,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Focuses primarily on instrumental tracks and musical beds rather than full vocal songs", "Free tier allows unlimited song generation but requires subscription to download audio files"],
       vi: ["T\u1eadp trung chuy\u00ean s\u00e2u cho nh\u1ea1c n\u1ec1n nh\u1ea1c c\u1ee5 (instrumental) ch\u1ee9 kh\u00f4ng ch\u00fa tr\u1ecdng b\u00e0i h\u00e1t c\u00f3 ca s\u0129 h\u00e1t l\u1eddi", "G\u00f3i mi\u1ec5n ph\u00ed cho ph\u00e9p t\u1ea1o nh\u1ea1c kh\u00f4ng gi\u1edbi h\u1ea1n nh\u01b0ng c\u1ea7n \u0111\u0103ng k\u00fd thu\u00ea bao \u0111\u1ec3 t\u1ea3i file \u00e2m thanh v\u1ec1 m\u00e1y"],
     },
+    pricingEvidenceUrl: "https://soundraw.io/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7290,6 +8880,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier generations do not include commercial usage rights", "Synthesizing complex multi-singer pop choruses is better suited for Udio or Suno"],
       vi: ["C\u00e1c b\u1ea3n nh\u1ea1c t\u1ea1o \u1edf g\u00f3i mi\u1ec5n ph\u00ed kh\u00f4ng bao g\u1ed3m quy\u1ec1n s\u1eed d\u1ee5ng th\u01b0\u01a1ng m\u1ea1i", "Vi\u1ec7c t\u1ea1o b\u00e0i h\u00e1t c\u00f3 nhi\u1ec1u ca s\u0129 h\u00e1t h\u00f2a gi\u1ecdng th\u00ec Suno ho\u1eb7c Udio s\u1ebd chuy\u00ean bi\u1ec7t h\u01a1n"],
     },
+    pricingEvidenceUrl: "https://stableaudio.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7384,6 +8975,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Local execution of the full 12B parameter model requires 16GB+ VRAM on modern Nvidia GPUs", "Commercial rights for the top-tier FLUX.1 [pro] model require API licensing"],
       vi: ["Ch\u1ea1y m\u00f4 h\u00ecnh 12 t\u1ef7 tham s\u1ed1 tr\u00ean m\u00e1y t\u00ednh \u0111\u00f2i h\u1ecfi card m\u00e0n h\u00ecnh Nvidia c\u00f3 t\u1ed1i thi\u1ec3u 16GB VRAM", "Quy\u1ec1n th\u01b0\u01a1ng m\u1ea1i cho phi\u00ean b\u1ea3n cao nh\u1ea5t FLUX.1 [pro] y\u00eau c\u1ea7u d\u00f9ng qua API c\u00f3 tr\u1ea3 ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://bfl.ml/pricing",
     pricingTiers: [
       {
             "name": "FLUX.1 [schnell] Open",
@@ -7478,6 +9070,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Extreme 8K upscaling requires higher tier credit packages", "Real-time mode requires a reasonably modern desktop browser and stable internet connection"],
       vi: ["Ph\u00f3ng to \u0111\u1ed9 n\u00e9t c\u1ef1c \u0111\u1ea1i 8K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng \u1edf c\u00e1c g\u00f3i cao", "Ch\u1ebf \u0111\u1ed9 v\u1ebd th\u1eddi gian th\u1ef1c \u0111\u00f2i h\u1ecfi tr\u00ecnh duy\u1ec7t m\u00e1y t\u00ednh hi\u1ec7n \u0111\u1ea1i v\u00e0 \u0111\u01b0\u1eddng truy\u1ec1n internet \u1ed5n \u0111\u1ecbnh"],
     },
+    pricingEvidenceUrl: "https://www.krea.ai/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7572,6 +9165,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Complex raster photorealism is less detailed than Midjourney (focus is heavily vector and design-centric)", "Free tier generations are visible in the public community gallery"],
       vi: ["C\u00e1c \u1ea3nh ch\u1ee5p ng\u01b0\u1eddi \u0111\u1eddi th\u1ef1c si\u00eau th\u1ef1c kh\u00f4ng qu\u00e1 chuy\u00ean s\u00e2u nh\u01b0 Midjourney (th\u1ebf m\u1ea1nh l\u00e0 vector v\u00e0 \u0111\u1ed3 h\u1ecda)", "\u1ea4n ph\u1ea9m t\u1ea1o \u1edf g\u00f3i mi\u1ec5n ph\u00ed s\u1ebd hi\u1ec3n th\u1ecb c\u00f4ng khai tr\u00ean b\u1ea3ng tin c\u1ed9ng \u0111\u1ed3ng Recraft"],
     },
+    pricingEvidenceUrl: "https://www.recraft.ai/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7666,6 +9260,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Subscription covers the full Freepik ecosystem, which may include more assets than simple AI users need", "Daily AI generation credit caps vary between monthly and annual plans"],
       vi: ["G\u00f3i thu\u00ea bao bao g\u1ed3m to\u00e0n b\u1ed9 h\u1ec7 sinh th\u00e1i Freepik, c\u00f3 th\u1ec3 th\u1eeba th\u00e3i n\u1ebfu ng\u01b0\u1eddi d\u00f9ng ch\u1ec9 c\u00f3 nhu c\u1ea7u t\u1ea1o \u1ea3nh AI", "H\u1ea1n m\u1ee9c t\u1ea1o \u1ea3nh AI m\u1ed7i ng\u00e0y c\u00f3 s\u1ef1 kh\u00e1c bi\u1ec7t gi\u1eefa g\u00f3i thanh to\u00e1n theo th\u00e1ng v\u00e0 theo n\u0103m"],
     },
+    pricingEvidenceUrl: "https://www.freepik.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7760,6 +9355,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Starting price point ($89/mo) is an investment targeted at professional publishers and businesses", "Keyword density targets must be balanced with human readability to avoid robotic phrasing"],
       vi: ["M\u1ee9c gi\u00e1 kh\u1edfi \u0111i\u1ec3m ($89/th\u00e1ng) l\u00e0 m\u1ed9t kho\u1ea3n \u0111\u1ea7u t\u01b0 h\u01b0\u1edbng t\u1edbi doanh nghi\u1ec7p v\u00e0 ng\u01b0\u1eddi l\u00e0m xu\u1ea5t b\u1ea3n chuy\u00ean nghi\u1ec7p", "C\u1ea7n k\u1ebft h\u1ee3p linh ho\u1ea1t v\u1edbi v\u0103n phong t\u1ef1 nhi\u00ean \u0111\u1ec3 tr\u00e1nh b\u00e0i vi\u1ebft b\u1ecb g\u01b0\u1ee3ng g\u1ea1o do nh\u1ed3i nh\u00e9t qu\u00e1 nhi\u1ec1u t\u1eeb kh\u00f3a"],
     },
+    pricingEvidenceUrl: "https://surferseo.com/pricing",
     pricingTiers: [
       {
             "name": "Essential",
@@ -7854,6 +9450,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Higher enterprise price tier makes it an institutional investment", "Complex data models require onboarding time to master strategic workflows"],
       vi: ["M\u1ee9c gi\u00e1 thu\u00ea bao c\u1ea5p doanh nghi\u1ec7p kh\u00e1 cao, ph\u00f9 h\u1ee3p v\u1edbi c\u00e1c \u0111\u01a1n v\u1ecb kinh doanh b\u00e0i b\u1ea3n", "H\u1ec7 th\u1ed1ng d\u1eef li\u1ec7u chuy\u00ean s\u00e2u c\u1ea7n th\u1eddi gian \u0111\u00e0o t\u1ea1o ban \u0111\u1ea7u \u0111\u1ec3 khai th\u00e1c h\u1ebft ti\u1ec1m n\u0103ng chi\u1ebfn l\u01b0\u1ee3c"],
     },
+    pricingEvidenceUrl: "https://www.marketmuse.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -7949,6 +9546,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires human editing to add brand-specific anecdotes, personal stories, and original data", "Does not offer a permanent free plan (7-day free trial available)"],
       vi: ["V\u1eabn c\u1ea7n ng\u01b0\u1eddi th\u1eadt bi\u00ean t\u1eadp \u0111\u1ec3 l\u1ed3ng gh\u00e9p c\u00e2u chuy\u1ec7n th\u01b0\u01a1ng hi\u1ec7u v\u00e0 d\u1eef li\u1ec7u \u0111\u1ed9c quy\u1ec1n c\u1ee7a doanh nghi\u1ec7p", "Kh\u00f4ng c\u00f3 g\u00f3i mi\u1ec5n ph\u00ed v\u0129nh vi\u1ec5n (ch\u1ec9 c\u00f3 b\u1ea3n d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed 7 ng\u00e0y)"],
     },
+    pricingEvidenceUrl: "https://www.scalenut.com/pricing",
     pricingTiers: [
       {
             "name": "Essential",
@@ -8043,6 +9641,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced team-wide deal intelligence and keyword tracking require paid Team Edition", "Participants receive a standard bot notification upon joining the call"],
       vi: ["C\u00e1c t\u00ednh n\u0103ng theo d\u00f5i t\u1eeb kh\u00f3a th\u01b0\u01a1ng v\u1ee5 v\u00e0 ph\u00e2n t\u00edch to\u00e0n \u0111\u1ed9i ng\u0169 kinh doanh y\u00eau c\u1ea7u g\u00f3i Team Edition", "C\u00e1c th\u00e0nh vi\u00ean tham gia cu\u1ed9c h\u1ecdp s\u1ebd nh\u1eadn \u0111\u01b0\u1ee3c th\u00f4ng b\u00e1o bot Fathom tham gia ghi ch\u00e9p"],
     },
+    pricingEvidenceUrl: "https://fathom.video/pricing",
     pricingTiers: [
       {
             "name": "Free Forever",
@@ -8137,6 +9736,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced CRM field automation requires the paid Pro subscription", "Requires granting bot access to your calendar to automatically join calls"],
       vi: ["T\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng \u0111i\u1ec1n c\u00e1c tr\u01b0\u1eddng d\u1eef li\u1ec7u CRM n\u00e2ng cao y\u00eau c\u1ea7u g\u00f3i thu\u00ea bao Pro", "C\u1ea7n c\u1ea5p quy\u1ec1n \u0111\u1ed3ng b\u1ed9 l\u1ecbch \u0111\u1ec3 bot t\u1ef1 \u0111\u1ed9ng tham gia c\u00e1c cu\u1ed9c h\u1ecdp \u0111\u00fang gi\u1edd"],
     },
+    pricingEvidenceUrl: "https://tldv.io/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -8231,6 +9831,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier is capped at 1,000 monthly meeting minutes", "Fewer sales-specific pipeline scoring features compared to Fathom"],
       vi: ["G\u00f3i mi\u1ec5n ph\u00ed gi\u1edbi h\u1ea1n \u1edf m\u1ee9c 1.000 ph\u00fat h\u1ecdp m\u1ed7i th\u00e1ng", "\u00cdt t\u00ednh n\u0103ng ch\u1ea5m \u0111i\u1ec3m th\u01b0\u01a1ng v\u1ee5 b\u00e1n h\u00e0ng chuy\u00ean s\u00e2u h\u01a1n so v\u1edbi Fathom"],
     },
+    pricingEvidenceUrl: "https://supernormal.com/pricing",
     pricingTiers: [
       {
             "name": "Starter",
@@ -8325,6 +9926,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires an understanding of outbound sales concepts and credit-based workflow economics", "Starting subscription ($149/mo) represents a serious commitment for early-stage solo founders"],
       vi: ["\u0110\u00f2i h\u1ecfi ng\u01b0\u1eddi d\u00f9ng n\u1eafm v\u1eefng t\u01b0 duy b\u00e1n h\u00e0ng B2B v\u00e0 c\u00e1ch t\u1ed1i \u01b0u h\u1ea1n m\u1ee9c credit c\u1ee7a t\u1eebng t\u00e1c v\u1ee5", "M\u1ee9c gi\u00e1 g\u00f3i kh\u1edfi \u0111i\u1ec3m ($149/th\u00e1ng) l\u00e0 m\u1ed9t kho\u1ea3n \u0111\u1ea7u t\u01b0 \u0111\u00e1ng k\u1ec3 \u0111\u1ed1i v\u1edbi c\u00e1c c\u00e1 nh\u00e2n kh\u1edfi nghi\u1ec7p giai \u0111o\u1ea1n \u0111\u1ea7u"],
     },
+    pricingEvidenceUrl: "https://www.clay.com/pricing",
     pricingTiers: [
       {
             "name": "Free Starter",
@@ -8419,6 +10021,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Mobile direct dial credits require higher tier subscription bundles", "High-volume cold emailing requires careful domain warm-up to preserve deliverability"],
       vi: ["S\u1ed1 l\u01b0\u1ee3t l\u1ea5y s\u1ed1 \u0111i\u1ec7n tho\u1ea1i di \u0111\u1ed9ng tr\u1ef1c ti\u1ebfp (direct dials) \u0111\u00f2i h\u1ecfi c\u00e1c g\u00f3i thu\u00ea bao cao c\u1ea5p h\u01a1n", "G\u1eedi email ti\u1ebfp c\u1eadn s\u1ed1 l\u01b0\u1ee3ng l\u1edbn c\u1ea7n th\u1ef1c hi\u1ec7n c\u00e1c b\u01b0\u1edbc l\u00e0m \u1ea5m h\u1ed9p th\u01b0 (warm-up) c\u1ea9n th\u1eadn \u0111\u1ec3 tr\u00e1nh v\u00e0o m\u1ee5c spam"],
     },
+    pricingEvidenceUrl: "https://www.apollo.io/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -8513,6 +10116,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires setting up dedicated secondary domains and DNS records (SPF, DKIM, DMARC) for safety", "Lead database search credits are billed as a separate add-on module"],
       vi: ["\u0110\u00f2i h\u1ecfi ph\u1ea3i mua th\u00eam c\u00e1c t\u00ean mi\u1ec1n ph\u1ee5 v\u00e0 c\u1ea5u h\u00ecnh b\u1ea3n ghi DNS (SPF, DKIM, DMARC) chu\u1ea9n \u0111\u1ec3 \u0111\u1ea3m b\u1ea3o an to\u00e0n", "T\u00ednh n\u0103ng tra c\u1ee9u data kh\u00e1ch h\u00e0ng (Lead Finder) l\u00e0 g\u00f3i mua th\u00eam t\u00e1ch bi\u1ec7t"],
     },
+    pricingEvidenceUrl: "https://instantly.ai/pricing",
     pricingTiers: [
       {
             "name": "Growth",
@@ -8610,6 +10214,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Strict smart layout rules prevent dragging elements to arbitrary random coordinates", "Requires credit card to initiate the 14-day free trial"],
       vi: ["Quy chu\u1ea9n b\u1ed1 c\u1ee5c th\u00f4ng minh ng\u0103n vi\u1ec7c k\u00e9o th\u1ea3 t\u1ef1 do c\u00e1c th\u00e0nh ph\u1ea7n ra ngo\u00e0i l\u1ec1 quy \u0111\u1ecbnh", "C\u1ea7n th\u00f4ng tin thanh to\u00e1n khi \u0111\u0103ng k\u00fd 14 ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://www.beautiful.ai/pricing",
     pricingTiers: [
       {
             "name": "Pro (Individual)",
@@ -8704,6 +10309,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced custom styling requires paid plan", "Complex niche technical flowcharts may need manual tweak"],
       vi: ["T\u00f9y ch\u1ec9nh s\u00e2u phong c\u00e1ch th\u01b0\u01a1ng hi\u1ec7u c\u1ea7n g\u00f3i tr\u1ea3 ph\u00ed", "M\u1ed9t s\u1ed1 s\u01a1 \u0111\u1ed3 k\u1ef9 thu\u1eadt ng\u00e1ch c\u1ea7n c\u0103n ch\u1ec9nh th\u1ee7 c\u00f4ng"],
     },
+    pricingEvidenceUrl: "https://www.napkin.ai/pricing",
     pricingTiers: [
       {
             "name": "Starter Free",
@@ -8785,6 +10391,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Apps run as progressive web apps (PWAs) rather than standalone binary App Store package downloads", "Heavy datasets exceeding 50,000+ rows perform better with SQL connections rather than raw Google Sheets"],
       vi: ["\u1ee8ng d\u1ee5ng ho\u1ea1t \u0111\u1ed9ng d\u01b0\u1edbi d\u1ea1ng Progressive Web App (PWA) c\u00e0i qua tr\u00ecnh duy\u1ec7t ch\u1ee9 kh\u00f4ng ph\u1ea3i t\u1ea3i qua App Store", "D\u1eef li\u1ec7u l\u1edbn tr\u00ean 50.000 d\u00f2ng n\u00ean k\u1ebft n\u1ed1i c\u01a1 s\u1edf d\u1eef li\u1ec7u SQL chuy\u00ean d\u1ee5ng thay v\u00ec d\u00f9ng Google Sheets th\u00f4ng th\u01b0\u1eddng"],
     },
+    pricingEvidenceUrl: "https://www.glideapps.com/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -8879,6 +10486,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Steeper learning curve than simple web drag-and-drop tools like Glide", "Source code download and App Store deployment features require paid tiers"],
       vi: ["\u0110\u00f2i h\u1ecfi th\u1eddi gian l\u00e0m quen v\u00e0 t\u01b0 duy k\u1ef9 thu\u1eadt nhi\u1ec1u h\u01a1n so v\u1edbi c\u00e1c c\u00f4ng c\u1ee5 t\u1ea1o web k\u00e9o th\u1ea3 \u0111\u01a1n gi\u1ea3n nh\u01b0 Glide", "T\u00ednh n\u0103ng t\u1ea3i m\u00e3 ngu\u1ed3n v\u00e0 xu\u1ea5t b\u1ea3n t\u1ef1 \u0111\u1ed9ng l\u00ean App Store y\u00eau c\u1ea7u g\u00f3i tr\u1ea3 ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://flutterflow.io/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -8973,6 +10581,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Proprietary hosting model: applications must run on Bubble's cloud and cannot be exported as raw code", "Workload Units (WU) pricing structure requires monitoring server capacity usage"],
       vi: ["M\u00f4 h\u00ecnh l\u01b0u tr\u1eef \u0111\u00e1m m\u00e2y \u0111\u1ed9c quy\u1ec1n: \u1ee9ng d\u1ee5ng ph\u1ea3i ch\u1ea1y tr\u00ean h\u1ea1 t\u1ea7ng Bubble ch\u1ee9 kh\u00f4ng th\u1ec3 xu\u1ea5t m\u00e3 ngu\u1ed3n thu\u1ea7n ra ngo\u00e0i", "C\u01a1 ch\u1ebf t\u00ednh ph\u00ed Workload Units (WU) \u0111\u00f2i h\u1ecfi ng\u01b0\u1eddi qu\u1ea3n tr\u1ecb t\u1ed1i \u01b0u h\u00f3a t\u1ea7n su\u1ea5t truy v\u1ea5n \u0111\u1ec3 ti\u1ebft ki\u1ec7m chi ph\u00ed"],
     },
+    pricingEvidenceUrl: "https://bubble.io/pricing",
     pricingTiers: [
       {
             "name": "Free",
@@ -9067,6 +10676,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Steeper learning curve than basic template-based site builders like Wix or Squarespace", "CMS item limits apply based on the selected hosting tier"],
       vi: ["\u0110\u00f2i h\u1ecfi hi\u1ec3u bi\u1ebft c\u01a1 b\u1ea3n v\u1ec1 c\u1ea5u tr\u00fac HTML/CSS h\u01a1n so v\u1edbi c\u00e1c n\u1ec1n t\u1ea3ng k\u00e9o th\u1ea3 m\u1eabu \u0111\u01a1n gi\u1ea3n nh\u01b0 Wix", "S\u1ed1 l\u01b0\u1ee3ng b\u00e0i vi\u1ebft CMS c\u00f3 gi\u1edbi h\u1ea1n theo t\u1eebng g\u00f3i hosting \u0111\u0103ng k\u00fd"],
     },
+    pricingEvidenceUrl: "https://webflow.com/pricing",
     pricingTiers: [
       {
             "name": "Free Starter",
@@ -9161,6 +10771,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Focused strictly on enterprise B2B backend API integration rather than consumer mobile apps", "Dedicated private model deployments require cloud infrastructure engineering resources"],
       vi: ["T\u1eadp trung chuy\u00ean bi\u1ec7t cho h\u1ea1 t\u1ea7ng API ph\u00eda backend c\u1ee7a doanh nghi\u1ec7p ch\u1ee9 kh\u00f4ng c\u00f3 \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng cho ng\u01b0\u1eddi ti\u00eau d\u00f9ng", "Vi\u1ec7c tri\u1ec3n khai c\u00e1c c\u1ee5m m\u00e1y ch\u1ee7 ri\u00eang bi\u1ec7t \u0111\u00f2i h\u1ecfi nh\u00e2n s\u1ef1 k\u1ef9 thu\u1eadt h\u1ea1 t\u1ea7ng \u0111\u00e1m m\u00e2y ph\u1ee5 tr\u00e1ch"],
     },
+    pricingEvidenceUrl: "https://cohere.com/pricing",
     pricingTiers: [
       {
             "name": "Trial Key (Free)",
@@ -9255,6 +10866,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Focused strictly on running open-weights models rather than proprietary models like GPT-4o or Claude", "Rate limits apply on free developer tiers during periods of peak global demand"],
       vi: ["Chuy\u00ean bi\u1ec7t \u0111\u1ec3 ch\u1ea1y c\u00e1c m\u00f4 h\u00ecnh m\u00e3 ngu\u1ed3n m\u1edf ch\u1ee9 kh\u00f4ng ch\u1ea1y \u0111\u01b0\u1ee3c c\u00e1c m\u00f4 h\u00ecnh \u0111\u00f3ng \u0111\u1ed9c quy\u1ec1n nh\u01b0 GPT-4o hay Claude", "\u00c1p d\u1ee5ng h\u1ea1n m\u1ee9c s\u1ed1 l\u01b0\u1ee3t g\u1ecdi m\u1ed7i ph\u00fat tr\u00ean g\u00f3i nh\u00e0 ph\u00e1t tri\u1ec3n mi\u1ec5n ph\u00ed khi c\u00f3 l\u01b0\u1ee3ng truy c\u1eadp \u0111\u1ed9t bi\u1ebfn"],
     },
+    pricingEvidenceUrl: "https://groq.com/pricing",
     pricingTiers: [
       {
             "name": "Developer Free",
@@ -9349,6 +10961,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Rapid library evolution requires keeping up with major version syntax and architectural migrations", "Comprehensive framework carries a technical learning curve compared to simple single-prompt scripts"],
       vi: ["T\u1ed1c \u0111\u1ed9 ph\u00e1t tri\u1ec3n nhanh c\u1ee7a th\u01b0 vi\u1ec7n \u0111\u00f2i h\u1ecfi l\u1eadp tr\u00ecnh vi\u00ean c\u1eadp nh\u1eadt li\u00ean t\u1ee5c c\u00e1c thay \u0111\u1ed5i v\u1ec1 c\u00fa ph\u00e1p", "C\u1ea5u tr\u00fac framework \u0111a t\u1ea7ng \u0111\u00f2i h\u1ecfi n\u1eafm v\u1eefng t\u01b0 duy ki\u1ebfn tr\u00fac ph\u1ea7n m\u1ec1m h\u01a1n so v\u1edbi vi\u1ec7c g\u1ecdi API \u0111\u01a1n l\u1ebb"],
     },
+    pricingEvidenceUrl: "https://www.langchain.com/pricing",
     pricingTiers: [
       {
             "name": "LangChain Framework",
@@ -9443,6 +11056,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Autonomous multi-file agentic editing requires switching to Codeium's native Windsurf editor", "Self-hosted air-gapped enterprise deployments require custom organizational quotes"],
       vi: ["\u0110\u1ec3 tr\u1ea3i nghi\u1ec7m t\u00ednh n\u0103ng AI Agent t\u1ef1 \u0111\u1ed9ng s\u1eeda nhi\u1ec1u file \u0111\u1ed3ng b\u1ed9, ng\u01b0\u1eddi d\u00f9ng c\u1ea7n chuy\u1ec3n sang d\u00f9ng tr\u00ecnh so\u1ea1n th\u1ea3o Windsurf", "Tri\u1ec3n khai c\u1ee5c b\u1ed9 ng\u1eaft m\u1ea1ng ho\u00e0n to\u00e0n (air-gapped) y\u00eau c\u1ea7u b\u00e1o gi\u00e1 doanh nghi\u1ec7p ri\u00eang"],
     },
+    pricingEvidenceUrl: "https://codeium.com/pricing",
     pricingTiers: [
       {
             "name": "Individual (Free)",
