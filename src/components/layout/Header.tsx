@@ -53,12 +53,13 @@ export function Header({ locale }: HeaderProps) {
     router.push(segments.join("/") || `/${targetLocale}`);
   };
 
-  // Apple-style streamlined primary navigation: 4 core links
+  // Apple-style streamlined primary navigation: 5 core links
   const primaryNavItems = [
     { label: dict.nav.tools, href: `/${locale}/tools` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
     { label: dict.nav.blog, href: `/${locale}/blog` },
+    { label: "Member", href: `/${locale}/membership` },
   ];
 
   // Secondary links for mobile drawer and search
@@ -66,7 +67,6 @@ export function Header({ locale }: HeaderProps) {
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
-    { label: dict.nav.membership, href: `/${locale}/membership` },
   ];
 
   return (
@@ -148,13 +148,13 @@ export function Header({ locale }: HeaderProps) {
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Member CTA Button - Balanced Luxury Pill */}
+            {/* Login CTA Button - Balanced Luxury Pill */}
             <Link
-              href={`/${locale}/membership`}
+              href={`/${locale}/account/login`}
               prefetch={true}
               className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              Member
+              Đăng nhập
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
@@ -213,12 +213,12 @@ export function Header({ locale }: HeaderProps) {
 
             <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <Link
-                href={`/${locale}/membership`}
+                href={`/${locale}/account/login`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
               >
-                Member
+                Đăng nhập
               </Link>
             </div>
           </div>
