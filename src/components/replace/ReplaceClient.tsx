@@ -34,16 +34,78 @@ export function ReplaceClient({ stacks, locale }: ReplaceClientProps) {
     stacks.map((s) => s.id)
   );
 
+  // Sync state to URL without page refresh for easy sharing
+  const updateUrlState = (category: string, activeIds: string[]) => {
+    if (typeof window === "undefined") return;
+    const url = new URL(window.location.href);
+    if (category && category !== "all") {
+      url.searchParams.set("cat", category);
+    } else {
+      url.searchParams.delete("cat");
+    }
+
+    if (activeIds.length < stacks.length) {
+      url.searchParams.set("stacks", activeIds.join(","));
+    } else {
+      url.searchParams.delete("stacks");
+    }
+
+    window.history.replaceState(null, "", url.toString());
+  };
+
+  // Read URL query params on mount
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const catParam = params.get("cat");
+    const stacksParam = params.get("stacks");
+
+    if (catParam && ["crm_sales", "automation", "ai_content", "ai_video", "funnels_forms"].includes(catParam)) {
+      setSelectedCategory(catParam);
+    }
+
+    if (stacksParam) {
+      const ids = stacksParam.split(",").filter((id) => stacks.some((s) => s.id === id));
+      if (ids.length > 0) {
+        setSelectedStackIds(ids);
+      }
+    }
+
+    // Hash check: if arriving at #stack-id, ensure category shows it
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      const targetStack = stacks.find((s) => s.id === hash);
+      if (targetStack && targetStack.category !== catParam) {
+        setSelectedCategory("all");
+      }
+    }
+  }, [stacks]);
+
   // Toggle stack selection in calculator
   const toggleStackSelection = (id: string) => {
-    setSelectedStackIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    setSelectedStackIds((prev) => {
+      const next = prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id];
+      updateUrlState(selectedCategory, next);
+      return next;
+    });
   };
 
   // Select all or clear all
-  const selectAll = () => setSelectedStackIds(stacks.map((s) => s.id));
-  const clearAll = () => setSelectedStackIds([]);
+  const selectAll = () => {
+    const allIds = stacks.map((s) => s.id);
+    setSelectedStackIds(allIds);
+    updateUrlState(selectedCategory, allIds);
+  };
+
+  const clearAll = () => {
+    setSelectedStackIds([]);
+    updateUrlState(selectedCategory, []);
+  };
+
+  const handleCategorySelect = (catId: string) => {
+    setSelectedCategory(catId);
+    updateUrlState(catId, selectedStackIds);
+  };
 
   // Calculate live cumulative savings
   const cumulativeSavings = useMemo(() => {
@@ -205,7 +267,7 @@ export function ReplaceClient({ stacks, locale }: ReplaceClientProps) {
         {categories.map((cat) => (
           <button
             key={cat.id}
-            onClick={() => setSelectedCategory(cat.id)}
+            onClick={() => handleCategorySelect(cat.id)}
             className={`px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all ${
               selectedCategory === cat.id
                 ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 shadow-xs"
