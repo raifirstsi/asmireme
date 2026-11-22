@@ -3,7 +3,7 @@
 import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams, useParams } from "next/navigation";
-import { Mail, KeyRound, ArrowRight, ShieldCheck, CheckCircle2, ShieldAlert } from "lucide-react";
+import { Mail, KeyRound, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 function LoginForm() {
   const router = useRouter();
@@ -11,7 +11,6 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const locale = (params?.locale as string) || "vi";
   const redirectQuery = searchParams?.get("redirect") || "";
-  const isAdminLogin = redirectQuery.includes("/admin");
 
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
@@ -90,23 +89,12 @@ function LoginForm() {
           />
         </div>
 
-        {isAdminLogin && (
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-            <ShieldAlert className="h-3.5 w-3.5" />
-            <span>Khu vực Quản Trị Hệ Thống (Admin Auth)</span>
-          </div>
-        )}
-
         <h1 className="text-2xl sm:text-3xl font-black text-foreground">
-          {step === "EMAIL"
-            ? (isAdminLogin ? "Đăng Nhập Quản Trị Viên" : "Welcome to Asmire")
-            : "Enter Verification Code"}
+          {step === "EMAIL" ? "Welcome to Asmire" : "Enter Verification Code"}
         </h1>
         <p className="text-sm text-muted-foreground">
           {step === "EMAIL"
-            ? (isAdminLogin 
-                ? "Vui lòng nhập email Admin (striverle@gmail.com) để truy cập Command Center."
-                : "Passwordless access for member referral management.")
+            ? "Passwordless access for member referral management."
             : `We sent a 6-digit login code from support@asmire.me to ${email}`}
         </p>
       </div>
