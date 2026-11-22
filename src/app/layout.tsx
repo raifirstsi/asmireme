@@ -61,7 +61,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground transition-colors duration-200">
+      <body className="min-h-screen flex flex-col font-sans bg-background text-foreground transition-colors duration-150 ease-out">
         {children}
       </body>
     </html>
