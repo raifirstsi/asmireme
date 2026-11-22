@@ -697,8 +697,8 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                       <div className="font-bold text-foreground text-sm flex flex-wrap items-center gap-2">
                         <span className="leading-snug">
                           {isVi 
-                            ? "Bonus 2: SMEs Snapshot Trị Giá $997 (Dành Cho SMEs & Small Business)" 
-                            : "Bonus 2: SMEs Snapshot $997 Value (For SMEs & Small Businesses)"}
+                            ? "Bonus 2: SMEs Snapshot Trị Giá $997 (Dành Cho Local & Small Business)" 
+                            : "Bonus 2: SMEs Snapshot $997 Value (For Local & Small Businesses)"}
                         </span>
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30 text-[11px] font-bold whitespace-nowrap shrink-0">
                           <CheckCircle2 className="h-3 w-3 text-emerald-500" />

@@ -24,11 +24,11 @@ export async function generateMetadata({ params }: SnapshotPageProps) {
   const isVi = locale === "vi";
   return {
     title: isVi
-      ? "SMEs Snapshot ($997 Bonus): Hệ Thống Vận Hành & Tự Động Bán Hàng Cho SMEs & Small Business - Asmire"
-      : "SMEs Snapshot ($997 Bonus): All-in-One Sales & Automation Engine for SMEs & Small Businesses - Asmire",
+      ? "SMEs Snapshot ($997 Bonus): Hệ Thống Vận Hành & Tự Động Bán Hàng Cho Local & Small Business - Asmire"
+      : "SMEs Snapshot ($997 Bonus): All-in-One Sales & Automation Engine for Local & Small Businesses - Asmire",
     description: isVi
-      ? "Nhận miễn phí trọn bộ SMEs Snapshot trị giá $997 khi đăng ký GoHighLevel gói $97/tháng. Hộp thư hợp nhất đa kênh, cuộc gọi kết nối trong 60 giây, form họp tự gửi recap 5 phút, 52 tuần SMS nuôi dưỡng và xin review Google 5 sao tự động cho doanh nghiệp vừa, nhỏ (SMEs), Small Business & dịch vụ."
-      : "Claim the $997 SMEs Snapshot 100% free when starting your HighLevel $97/mo Starter plan. Unified omnichannel inbox, 60s speed-to-lead callback, meeting recap automation, 52-week SMS nurture, and automated Google reviews for SMEs & small businesses.",
+      ? "Nhận miễn phí trọn bộ SMEs Snapshot trị giá $997 khi đăng ký GoHighLevel gói $97/tháng. Hộp thư hợp nhất đa kênh, cuộc gọi kết nối trong 60 giây, form họp tự gửi recap 5 phút, 52 tuần SMS nuôi dưỡng và xin review Google 5 sao tự động cho Local & Small Business."
+      : "Claim the $997 SMEs Snapshot 100% free when starting your HighLevel $97/mo Starter plan. Unified omnichannel inbox, 60s speed-to-lead callback, meeting recap automation, 52-week SMS nurture, and automated Google reviews for local & small businesses.",
     alternates: {
       canonical: `/${locale}/snapshots/sme-os`,
       languages: {
@@ -229,7 +229,7 @@ export default async function SnapshotSmeOSPage({ params }: SnapshotPageProps) {
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider shadow-2xs">
               <Gift className="h-4 w-4" />
-              <span>{isVi ? "Bonus Dành Cho SMEs & Doanh Nghiệp Nhỏ (Small Business) • Trị Giá $997 Miễn Phí" : "Exclusive SMEs & Small Business Bonus • $997 Value 100% Free"}</span>
+              <span>{isVi ? "Bonus Dành Cho Local & Small Business • Trị Giá $997 Miễn Phí" : "Exclusive Local & Small Business Bonus • $997 Value 100% Free"}</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-zinc-950 dark:text-zinc-50 tracking-tight leading-[1.15]">
@@ -237,14 +237,14 @@ export default async function SnapshotSmeOSPage({ params }: SnapshotPageProps) {
                 <>
                   Chấm Dứt Thất Thoát Khách Hàng: <br className="hidden sm:inline" />
                   <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
-                    SMEs Snapshot Cho Doanh Nghiệp Vừa & Nhỏ (SMEs & Small Business)
+                    SMEs Snapshot Cho Local & Small Business
                   </span>
                 </>
               ) : (
                 <>
                   Stop Losing High-Ticket Customers: <br className="hidden sm:inline" />
                   <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-500 bg-clip-text text-transparent">
-                    All-in-One SMEs Snapshot for SMEs & Small Businesses
+                    All-in-One SMEs Snapshot for Local & Small Businesses
                   </span>
                 </>
               )}
