@@ -195,8 +195,12 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             {/* Author Bar & Verification */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500 border-t border-black/[0.05] dark:border-white/[0.07]">
               <div className="flex items-center gap-3">
-                <div className="h-9 w-9 rounded-full flex items-center justify-center border border-zinc-200/80 dark:border-zinc-800 bg-zinc-950 dark:bg-zinc-900 text-white font-black text-sm select-none shrink-0 shadow-2xs">
-                  a
+                <div className="h-9 w-9 rounded-full flex items-center justify-center border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800/80 overflow-hidden shrink-0 shadow-2xs">
+                  <img
+                    src={post.author.avatarUrl || "/icon.png"}
+                    alt={post.author.name}
+                    className="h-5 w-5 object-contain dark:invert transition-[filter] duration-200"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-zinc-900 dark:text-zinc-100">{post.author.name}</div>
