@@ -126,6 +126,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.gohighlevel.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 4,
+        method: "RETENTION_FLOW",
+        clickCountToCancel: 5,
+        retentionScreensCount: 2,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day cancellation window with retention discount offers before downgrade",
+          vi: "Hủy gói sau 2 bước xác nhận và khảo sát giữ chân kèm ưu đãi giảm giá",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Native LC Phone & Twilio integration; usage rebilled separately",
+          vi: "Tích hợp sẵn LC Phone & Twilio; chi phí thoại/SMS tính riêng theo lượng dùng",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 125,
+        overageRateDescription: {
+          en: "$0.015/SMS, $0.03/min AI Voice Agent, $0.001/email via LC Network",
+          vi: "0.015$/SMS, 0.03$/phút AI Voice Agent, 0.001$/email qua hệ thống LC",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: true,
+        autoChargesAfterTrial: true,
+      },
+    },
     alternatives: ["nutshell", "getresponse"]
   },
   {
@@ -215,6 +247,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://decktopus.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["gamma", "magicslides"]
   },
   {
@@ -318,6 +382,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.taskade.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["reclaim", "fireflies"]
   },
   {
@@ -422,6 +518,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.getresponse.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 4,
+        method: "RETENTION_FLOW",
+        clickCountToCancel: 4,
+        retentionScreensCount: 2,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "Self-serve cancellation in My Account with retention discounts",
+          vi: "Hủy tự phục vụ trong Cài đặt tài khoản kèm ưu đãi giữ chân 30%",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Email deliverability and autoresponder sequences included",
+          vi: "Bao gồm sẵn hạ tầng gửi email tỷ lệ vào inbox cao và chuỗi thư tự động",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 25,
+        overageRateDescription: {
+          en: "Tier jumps automatically as contact list expands past 1,000 threshold",
+          vi: "Tự động nhảy gói cước khi danh bạ liên hệ vượt ngưỡng 1,000",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["highlevel", "nutshell"]
   },
   {
@@ -523,6 +651,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://omniseo.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 49,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["koala", "frase", "rightblogger"]
   },
   {
@@ -626,6 +786,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://reclaim.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["taskade", "fireflies"]
   },
   {
@@ -727,6 +919,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://marblism.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 7,
+        coolingOffPolicy: {
+          en: "1-click self-serve cancellation inside billing portal",
+          vi: "Hủy 1 click tự phục vụ trong cổng thanh toán Stripe tích hợp",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: true,
+        externalApiNote: {
+          en: "Requires OpenAI API key for ongoing prompt iterations and live preview",
+          vi: "Cần gắn API key OpenAI riêng để chạy thử nghiệm và sửa code liên tục",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 49,
+        overageRateDescription: {
+          en: "$10 per 5 additional full-stack generation credits",
+          vi: "10$ cho 5 credit tạo ứng dụng full-stack bổ sung",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["10web", "pickaxe"]
   },
   {
@@ -829,6 +1053,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://rightblogger.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 31,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["koala", "rytr", "jasper"]
   },
   {
@@ -931,6 +1187,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://pickaxe.co",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 7,
+        coolingOffPolicy: {
+          en: "Instant 1-click subscription cancellation in account settings",
+          vi: "Hủy gói 1-click nhanh chóng trong trang cài đặt tài khoản",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: true,
+        externalApiNote: {
+          en: "Requires user's own OpenAI/Anthropic API key for high-volume custom GPTs",
+          vi: "Cần cắm API key OpenAI/Anthropic riêng khi triển khai bot số lượng lớn",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 35,
+        overageRateDescription: {
+          en: "$0.01 per additional bot response credit",
+          vi: "0.01$ cho mỗi lượt phản hồi chatbot phát sinh",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["marblism", "browse-ai"]
   },
   {
@@ -1034,6 +1322,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://gowinston.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["originality", "undetectable"]
   },
   {
@@ -1137,6 +1457,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.deepbrain.io/aistudios",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 30,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["synthesia", "fliki", "akool"]
   },
   {
@@ -1240,6 +1592,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.capcut.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["submagic", "opusclip", "simplified"]
   },
   {
@@ -1342,6 +1726,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://akool.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 21,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["ai-studios", "synthesia"]
   },
   {
@@ -1445,6 +1861,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.nutshell.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 4,
+        method: "RETENTION_FLOW",
+        clickCountToCancel: 4,
+        retentionScreensCount: 2,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "Instant account cancellation with 30-day read-only data grace period",
+          vi: "Hủy ngay lập tức với 30 ngày bảo lưu dữ liệu để xuất file CSV",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Native pipeline management, email sync, and basic reporting included",
+          vi: "Bao gồm sẵn quản lý phễu cơ hội, đồng bộ hòm thư và báo cáo doanh số",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 22,
+        overageRateDescription: {
+          en: "$16/user/mo for additional team members on Foundation tier",
+          vi: "16$/user/tháng cho mỗi thành viên bổ sung ở gói Foundation",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["highlevel", "getresponse"]
   },
   {
@@ -1564,6 +2012,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://elevenlabs.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 7,
+        coolingOffPolicy: {
+          en: "7-day refund policy if less than 20% of character quota was consumed",
+          vi: "Hoàn tiền trong 7 ngày nếu tiêu thụ dưới 20% định mức ký tự",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Proprietary voice cloning model and neural speech synthesis included",
+          vi: "Đã bao gồm mô hình nhân bản giọng nói độc quyền và tổng hợp giọng đọc",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 22,
+        overageRateDescription: {
+          en: "$0.30 per 1,000 extra characters beyond monthly allocation",
+          vi: "0.30$ cho mỗi 1,000 ký tự phụ trội ngoài định mức tháng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["listnr", "castmagic", "speak-ai"]
   },
   {
@@ -1668,6 +2148,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://adcreative.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 26,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["quickads", "lebesgue"]
   },
   {
@@ -1771,6 +2283,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://krispcall.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["my-ai-front-desk", "highlevel"]
   },
   {
@@ -1874,6 +2418,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://myaifrontdesk.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 45,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["krispcall", "highlevel"]
   },
   {
@@ -1977,6 +2553,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://fliki.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 26,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["videogen", "synthesia", "elevenlabs"]
   },
   {
@@ -2079,6 +2687,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://describely.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 28,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["jasper", "koala", "simplified"]
   },
   {
@@ -2182,6 +2822,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://koala.sh",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 2,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day unconditional refund if less than 5,000 words produced",
+          vi: "Hoàn tiền vô điều kiện trong 14 ngày nếu viết dưới 5,000 từ",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Real-time web search integration and Amazon affiliate linking included",
+          vi: "Tích hợp sẵn tìm kiếm web thời gian thực và cào link affiliate Amazon",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 25,
+        overageRateDescription: {
+          en: "$5 per extra 10,000 word booster pack",
+          vi: "5$ cho gói mở rộng 10,000 từ tiếp theo",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["frase", "rightblogger", "jasper"]
   },
   {
@@ -2285,6 +2957,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://submagic.co",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 20,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["capcut", "opusclip"]
   },
   {
@@ -2387,6 +3091,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://videogen.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 18,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["fliki", "synthesia"]
   },
   {
@@ -2475,6 +3211,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://textero.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 17,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["paperguide", "speak-ai"]
   },
   {
@@ -2578,6 +3346,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://quickads.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 19,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["adcreative", "lebesgue"]
   },
   {
@@ -2681,6 +3481,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://meetgeek.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["fireflies", "speak-ai", "taskade"]
   },
   {
@@ -2784,6 +3616,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://castmagic.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 29,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["elevenlabs", "speak-ai", "listnr"]
   },
   {
@@ -2886,6 +3750,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://palette.fm",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["simplified", "capcut"]
   },
   {
@@ -2989,6 +3885,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://fireflies.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["meetgeek", "reclaim", "taskade"]
   },
   {
@@ -3093,6 +4021,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://frase.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 16,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["koala", "rightblogger", "jasper"]
   },
   {
@@ -3197,6 +4157,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://10web.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["pineapple-builder", "marblism"]
   },
   {
@@ -3286,6 +4278,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://palabra.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 29,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["elevenlabs", "fliki"]
   },
   {
@@ -3375,6 +4399,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://postcrest.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 19,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["simplified", "decktopus"]
   },
   {
@@ -3477,6 +4533,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://pineapplebuilder.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["10web", "marblism"]
   },
   {
@@ -3566,6 +4654,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://sendpotion.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 29,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["ai-studios", "synthesia"]
   },
   {
@@ -3669,6 +4789,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://rytr.me",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["rightblogger", "jasper", "koala"]
   },
   {
@@ -3771,6 +4923,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://listnr.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["elevenlabs", "castmagic"]
   },
   {
@@ -3889,6 +5073,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://www.jotform.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 36,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["highlevel", "taskade"]
   },
   {
@@ -3992,6 +5208,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://lebesgue.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 39,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["adcreative", "quickads"]
   },
   {
@@ -4095,6 +5343,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://gamma.app",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["decktopus", "magicslides"]
   },
   {
@@ -4199,6 +5479,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://synthesia.io",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 4,
+        method: "RETENTION_FLOW",
+        clickCountToCancel: 4,
+        retentionScreensCount: 2,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window for accounts with zero generated video minutes",
+          vi: "Hoàn tiền trong 14 ngày nếu chưa sử dụng phút video nào trong tài khoản",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "All video avatars and text-to-speech rendering engines included",
+          vi: "Đã bao gồm toàn bộ avatar video và giọng đọc AI có sẵn",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 49,
+        overageRateDescription: {
+          en: "$2.50 per additional video minute beyond plan quota",
+          vi: "2.50$ cho mỗi phút video phát sinh ngoài gói định mức",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["ai-studios", "fliki", "akool"]
   },
   {
@@ -4304,6 +5616,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://jasper.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 3,
+        method: "RETENTION_FLOW",
+        clickCountToCancel: 6,
+        retentionScreensCount: 3,
+        refundPolicyDays: 7,
+        coolingOffPolicy: {
+          en: "7-day money-back guarantee with mandatory survey completion",
+          vi: "Cam kết hoàn tiền trong 7 ngày với 3 bước khảo sát lý do hủy",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Multi-model blend (GPT-4o, Claude 3.5, proprietary finetunes) included",
+          vi: "Bao gồm sẵn tổ hợp mô hình AI (GPT-4o, Claude 3.5, Jasper finetune)",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 69,
+        overageRateDescription: {
+          en: "$10 per additional 15,000 words beyond tier limit",
+          vi: "10$ cho mỗi 15,000 từ bổ sung ngoài gói",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: true,
+        autoChargesAfterTrial: true,
+      },
+    },
     alternatives: ["koala", "rightblogger", "frase"]
   },
   {
@@ -4408,6 +5752,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://opus.pro",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 19,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["submagic", "capcut"]
   },
   {
@@ -4498,6 +5874,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://originality.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 2,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "Instant self-serve cancellation; credits remain valid indefinitely",
+          vi: "Hủy tự phục vụ ngay lập tức; số credit đã mua được bảo lưu vĩnh viễn",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "AI content detection, fact-checking, and plagiarism scanning included",
+          vi: "Bao gồm phát hiện văn bản AI, kiểm chứng sự thật và quét đạo văn",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 29,
+        overageRateDescription: {
+          en: "$0.01 per 100 words scanned (pay-as-you-go credits)",
+          vi: "0.01$ cho mỗi 100 từ quét (mua credit dùng đến đâu trả đến đó)",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["winston", "undetectable"]
   },
   {
@@ -4587,6 +5995,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://speakai.co",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 29,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["fireflies", "castmagic"]
   },
   {
@@ -4676,6 +6116,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://undetectable.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["winston", "originality"]
   },
   {
@@ -4779,6 +6251,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://simplified.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 22,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["capcut", "gamma", "postcrest"]
   },
   {
@@ -4881,6 +6385,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://magicslides.app",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["gamma", "decktopus"]
   },
   {
@@ -4969,6 +6505,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://paperguide.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 15,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["textero", "browse-ai"]
   },
   {
@@ -5073,6 +6641,38 @@ export const TOOLS_DATA: ToolItem[] = [
       }
     ],
     officialUrl: "https://browse.ai",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 5,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 14,
+        coolingOffPolicy: {
+          en: "14-day refund window upon contacting support if unused",
+          vi: "Chính sách hoàn tiền trong 14 ngày khi liên hệ hỗ trợ nếu chưa dùng",
+        },
+        auditTimestamp: "2027-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        externalApiNote: {
+          en: "Standard AI compute & core features included in plan",
+          vi: "Đã bao gồm tài nguyên AI và các tính năng chính trong gói",
+        },
+        mandatorySetupFeeUsd: 0,
+        hiddenContractLockMonths: 0,
+        typicalRealMonthlyCost: 49,
+        overageRateDescription: {
+          en: "Standard pay-as-you-go credit expansions available",
+          vi: "Hỗ trợ mua thêm gói credit theo nhu cầu sử dụng",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
     alternatives: ["pickaxe", "marblism"]
   },
   {

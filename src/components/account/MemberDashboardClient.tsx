@@ -24,6 +24,7 @@ interface MemberDashboardClientProps {
   user: {
     userId: string;
     email: string;
+    role?: string;
     memberId: string;
     referralCode: string;
   };
@@ -139,6 +140,15 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
         </div>
 
         <div className="flex items-center gap-2">
+          {(user.role === "ADMIN" || user.email.startsWith("admin@") || user.email === "support@asmire.me") && (
+            <Link
+              href={`/${locale}/admin`}
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-full bg-brand-600 hover:bg-brand-700 text-white transition-all shadow-xs"
+            >
+              <Shield className="h-3.5 w-3.5" />
+              <span>{locale === "vi" ? "Bảng Quản Trị" : "Admin Console"}</span>
+            </Link>
+          )}
           {isPro ? (
             <Link
               href={`/${locale}/account/billing`}

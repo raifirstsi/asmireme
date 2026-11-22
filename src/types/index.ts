@@ -83,6 +83,31 @@ export interface ToolItem {
   officialUrl: string;
   logoUrl?: string;
   alternatives: string[]; // Slugs of alternative tools
+  empiricalAudit?: EmpiricalAuditData;
+}
+
+export interface EmpiricalAuditData {
+  cancellationAudit: {
+    frictionScore: 1 | 2 | 3 | 4 | 5; // 5: 1-Click instant self-serve; 1: Mandatory phone/chat gate
+    method: "SELF_SERVE_INSTANT" | "RETENTION_FLOW" | "EMAIL_OR_TICKET" | "LIVE_CHAT_MANDATORY" | "PHONE_CALL_MANDATORY";
+    clickCountToCancel: number;
+    retentionScreensCount: number;
+    refundPolicyDays: number;
+    coolingOffPolicy: { en: string; vi: string };
+    auditTimestamp: string; // e.g. "2027-Q1"
+  };
+  finePrintAudit: {
+    requiresExternalApiKey: boolean;
+    externalApiNote?: { en: string; vi: string };
+    mandatorySetupFeeUsd?: number;
+    hiddenContractLockMonths?: number;
+    typicalRealMonthlyCost: number; // Typical real monthly cost after essential addons/credits
+    overageRateDescription?: { en: string; vi: string };
+  };
+  trialAudit: {
+    requiresCreditCard: boolean;
+    autoChargesAfterTrial: boolean;
+  };
 }
 
 export interface CategoryHubItem {

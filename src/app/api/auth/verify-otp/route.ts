@@ -29,12 +29,21 @@ export async function POST(request: NextRequest) {
     let userId = "usr-" + Buffer.from(normalizedEmail).toString("hex").slice(0, 12);
     let memberId = "mem-" + Buffer.from(normalizedEmail).toString("hex").slice(0, 12);
     let referralCode = generateReferralCode();
+    let userRole: "USER" | "MEMBER" | "ADMIN" = "MEMBER";
+
+    const adminEmails = (process.env.ADMIN_EMAILS || "support@asmire.me,admin@asmire.me").toLowerCase().split(",").map(e => e.trim());
+    if (adminEmails.includes(normalizedEmail) || normalizedEmail.startsWith("admin@")) {
+      userRole = "ADMIN";
+    }
 
     try {
       // Check existing user
       const existingUsers = await db.select().from(users).where(eq(users.email, normalizedEmail));
       if (existingUsers.length > 0) {
         userId = existingUsers[0].id;
+        if (existingUsers[0].role === "ADMIN") {
+          userRole = "ADMIN";
+        }
         const profile = await db.select().from(memberProfiles).where(eq(memberProfiles.userId, userId));
         if (profile.length > 0) {
           memberId = profile[0].id;
@@ -44,7 +53,7 @@ export async function POST(request: NextRequest) {
         // Create new user & profile
         const [newUser] = await db.insert(users).values({
           email: normalizedEmail,
-          role: "MEMBER",
+          role: userRole,
         }).returning();
         userId = newUser.id;
 
@@ -63,7 +72,7 @@ export async function POST(request: NextRequest) {
     const token = createSessionToken({
       userId,
       email: normalizedEmail,
-      role: "MEMBER",
+      role: userRole,
       memberId,
       referralCode,
     });
