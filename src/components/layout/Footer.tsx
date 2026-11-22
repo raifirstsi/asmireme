@@ -25,10 +25,12 @@ export function Footer({ locale }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3.5 md:col-span-1">
-            <Link href={`/${locale}`} className="inline-flex items-center transition-opacity hover:opacity-80" aria-label="Asmire Home">
-              <span className="text-[17px] font-light tracking-[-0.03em] text-black dark:text-white select-none">
-                asmire
-              </span>
+            <Link href={`/${locale}`} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
+              <img
+                src="/brand/asmire-logo-black.png"
+                alt="Asmire"
+                className="h-5 w-auto object-contain dark:invert transition-[filter] duration-200"
+              />
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
               {dict.brandDescription}
