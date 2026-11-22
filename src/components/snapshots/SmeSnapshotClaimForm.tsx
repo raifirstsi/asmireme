@@ -120,8 +120,8 @@ export function SmeSnapshotClaimForm({ locale }: SmeSnapshotClaimFormProps) {
             </h3>
             <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
               {isVi
-                ? "Dành riêng cho các chủ doanh nghiệp vừa và nhỏ, phòng khám, cơ sở dịch vụ địa phương đăng ký 14 ngày dùng thử gói Starter ($97/tháng) qua Asmire."
-                : "Exclusively for small business owners, contractors, and local service providers activating the $97 Starter plan trial via Asmire."}
+                ? "Dành riêng cho các chủ doanh nghiệp vừa và nhỏ (SMEs), Small Business, cơ sở kinh doanh & dịch vụ đăng ký 14 ngày dùng thử gói Starter ($97/tháng) qua Asmire."
+                : "Exclusively for small and medium businesses (SMEs), Small Business founders, and service providers activating the $97 Starter plan trial via Asmire."}
             </p>
           </div>
 
