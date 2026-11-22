@@ -66,6 +66,7 @@ export function Header({ locale }: HeaderProps) {
   const secondaryNavItems = [
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
+    { label: locale === "vi" ? "Cắt Giảm SaaS" : "Cut SaaS Bill", href: `/${locale}/replace` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
   ];
 

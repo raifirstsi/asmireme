@@ -22,10 +22,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # Local deployment helper scripts with credentials
-scripts/deploy_vps.py
-scripts/vps_remote_exec.py
-scripts/setup_ops_tools.py
-scripts/port_scan.py
+scripts/*.py
+scratch/
+tsconfig.tsbuildinfo
 
 # OS & IDE
 .DS_Store

@@ -83,6 +83,11 @@ export function Footer({ locale }: FooterProps) {
             </h4>
             <ul className="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
               <li>
+                <Link href={`/${locale}/replace`} className="hover:text-black dark:hover:text-white transition-colors font-medium text-emerald-600 dark:text-emerald-400">
+                  {locale === "vi" ? "Ma Trận Cắt Giảm SaaS (Save $8k+) →" : "Cut My SaaS Bill (Save $8k+) →"}
+                </Link>
+              </li>
+              <li>
                 <Link href={`/${locale}/reviews`} className="hover:text-black dark:hover:text-white transition-colors font-medium">
                   {locale === "vi" ? "Kho 200+ Đánh Giá Thực Tế →" : "200+ Verified Reviews Hub →"}
                 </Link>
