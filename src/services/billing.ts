@@ -41,9 +41,9 @@ export interface UserSubscriptionStatus {
 }
 
 const DEFAULT_PRO_PRICE_VND = 725000;
-const DEFAULT_BANK_NAME = "MBBank";
-const DEFAULT_ACCOUNT_NUMBER = "16786106149";
-const DEFAULT_ACCOUNT_NAME = "ASMIRE VIETNAM";
+const DEFAULT_BANK_NAME = "TPBank";
+const DEFAULT_ACCOUNT_NUMBER = "00005510675";
+const DEFAULT_ACCOUNT_NAME = "Le Quang Cuong";
 
 export function getBillingConfig() {
   return {
