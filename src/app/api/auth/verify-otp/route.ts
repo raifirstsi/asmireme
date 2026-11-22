@@ -4,6 +4,7 @@ import { generateReferralCode } from "@/lib/referral";
 import { db } from "@/db";
 import { users, memberProfiles } from "@/db/schema";
 import { eq } from "drizzle-orm";
+import { notifyNewUserSignUp } from "@/services/telegram";
 
 export async function POST(request: NextRequest) {
   try {
@@ -45,6 +46,7 @@ export async function POST(request: NextRequest) {
       userRole = "ADMIN";
     }
 
+    let isNewUser = false;
     try {
       // Check existing user
       const existingUsers = await db.select().from(users).where(eq(users.email, normalizedEmail));
@@ -64,6 +66,7 @@ export async function POST(request: NextRequest) {
           referralCode = profile[0].referralCode;
         }
       } else {
+        isNewUser = true;
         // Create new user & profile
         const [newUser] = await db
           .insert(users)
@@ -86,6 +89,16 @@ export async function POST(request: NextRequest) {
       }
     } catch (dbErr) {
       console.warn("[Auth] DB sync skipped (using stateless session fallback):", (dbErr as Error).message);
+    }
+
+    // Send instant Telegram notification to Admin if a new member signed up
+    if (isNewUser) {
+      notifyNewUserSignUp({
+        email: normalizedEmail,
+        userId,
+        role: userRole,
+        referralCode,
+      }).catch((tgErr) => console.warn("[Telegram] Sign-up alert error:", tgErr?.message));
     }
 
     // Issue cryptographic session token

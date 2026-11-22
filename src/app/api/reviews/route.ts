@@ -244,6 +244,9 @@ export async function POST(request: NextRequest) {
         fileNameOriginal: originalName,
         fileSizeBytes: fileSize,
         reviewId: newReviewId || "unknown",
+        content,
+        pros,
+        cons,
       }).catch((tgErr) => console.warn("[Telegram] Non-blocking alert error:", tgErr?.message));
     } catch (dbErr: any) {
       console.error("Database insert error for community review:", dbErr);

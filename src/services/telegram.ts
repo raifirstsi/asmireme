@@ -63,28 +63,57 @@ export async function notifyNewReviewSubmitted(data: {
   fileNameOriginal?: string | null;
   fileSizeBytes?: number | null;
   reviewId: string;
+  content?: string | null;
+  pros?: string | null;
+  cons?: string | null;
 }) {
   const costText = data.realMonthlyCostPaid 
     ? `<b>$${data.realMonthlyCostPaid}/tháng</b>` 
     : "<i>Chưa cung cấp</i>";
   
   const evidenceText = data.hasEvidence 
-    ? `📎 Đính kèm: <b>${data.fileNameOriginal || "Hóa đơn"}</b> (${data.fileSizeBytes ? (data.fileSizeBytes / 1024).toFixed(1) : "?"} KB)`
-    : "⚪ <i>Không đính kèm hóa đơn</i>";
+    ? `📎 Hóa đơn đối soát: <b>${data.fileNameOriginal || "Hóa đơn"}</b> (${data.fileSizeBytes ? (data.fileSizeBytes / 1024).toFixed(1) : "?"} KB)`
+    : "⚪ <i>Review thành viên (không đính kèm hóa đơn)</i>";
 
   const stars = "⭐".repeat(Math.max(1, Math.min(5, data.ratingOverall)));
+  
+  let detailsText = "";
+  if (data.pros) detailsText += `\n👍 <b>Ưu điểm:</b> ${data.pros.slice(0, 150)}`;
+  if (data.cons) detailsText += `\n👎 <b>Nhược điểm:</b> ${data.cons.slice(0, 150)}`;
+  if (data.content) detailsText += `\n💬 <b>Nhận xét:</b> <i>"${data.content.slice(0, 200)}..."</i>`;
 
   const message = `
-🔔 <b>[ASMIRE] CÓ REVIEW THỰC CHỨNG MỚI!</b>
+🔔 <b>[ASMIRE] CÓ REVIEW MỚI VỪA GỬI!</b>
 ━━━━━━━━━━━━━━━━━━━━
 🛠️ <b>Công cụ:</b> ${data.toolName} (<code>${data.toolSlug}</code>)
 👤 <b>Tác giả:</b> ${data.authorName} (${data.authorRole})
 ⭐ <b>Đánh giá:</b> ${stars} (${data.ratingOverall}/5)
 💵 <b>Chi phí thực tế:</b> ${costText}
-${evidenceText}
+${evidenceText}${detailsText}
 
 🆔 <b>Review ID:</b> <code>${data.reviewId}</code>
-👉 <a href="https://asmire.me/vi/admin">Đăng nhập Admin Portal để đối soát</a>
+👉 <a href="https://asmire.me/vi/reviews">Xem trang đánh giá Asmire</a>
+`.trim();
+
+  return sendTelegramNotification(message);
+}
+
+export async function notifyNewUserSignUp(data: {
+  email: string;
+  userId?: string;
+  role?: string;
+  referralCode?: string;
+}) {
+  const message = `
+👤 <b>[ASMIRE] CÓ THÀNH VIÊN ĐĂNG KÝ MỚI (FREE ACCOUNT)!</b>
+━━━━━━━━━━━━━━━━━━━━
+📧 <b>Email:</b> <code>${data.email}</code>
+🏷️ <b>Gói thành viên:</b> <b>Free Member (Tài khoản Miễn Phí)</b>
+🎫 <b>Mã giới thiệu:</b> <code>${data.referralCode || "Tự động"}</code>
+🆔 <b>User ID:</b> <code>${data.userId || "Mới"}</code>
+
+⏰ <b>Thời gian:</b> ${new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" })}
+👉 <a href="https://asmire.me/vi/admin">Xem Bảng Quản Trị Asmire</a>
 `.trim();
 
   return sendTelegramNotification(message);
