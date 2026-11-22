@@ -174,14 +174,12 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             {/* Author Bar & Verification */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500 border-t border-zinc-100 dark:border-zinc-850">
               <div className="flex items-center gap-3">
-                <div
-                  className={`h-9 w-9 rounded-full flex items-center justify-center font-bold border ${
-                    isAiNews
-                      ? "bg-amber-50 dark:bg-amber-950 text-amber-950 dark:text-amber-200 border-amber-200 dark:border-amber-800"
-                      : "bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border-zinc-200/50 dark:border-zinc-750"
-                  }`}
-                >
-                  {post.author.name === "Asmire Team" ? "AT" : post.author.name.charAt(0)}
+                <div className="h-9 w-9 rounded-full flex items-center justify-center overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0 shadow-2xs">
+                  <img
+                    src="/icon.png"
+                    alt="Asmire"
+                    className="h-5 w-5 object-contain dark:invert transition-[filter] duration-200"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-zinc-900 dark:text-zinc-100">{post.author.name}</div>

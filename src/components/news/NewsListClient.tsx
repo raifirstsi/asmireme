@@ -183,6 +183,13 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
 
                 <div className="pt-2 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800/60">
                   <div className="flex items-center gap-2 text-xs text-zinc-400">
+                    <div className="h-5 w-5 rounded-full flex items-center justify-center overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0">
+                      <img
+                        src="/icon.png"
+                        alt="Asmire"
+                        className="h-3 w-3 object-contain dark:invert transition-[filter] duration-200"
+                      />
+                    </div>
                     <span className="font-medium text-zinc-700 dark:text-zinc-300">
                       {post.author.name}
                     </span>

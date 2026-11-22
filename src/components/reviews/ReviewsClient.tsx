@@ -323,9 +323,19 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
                 {/* Footer: Reviewer Info + Actions */}
                 <div className="pt-3 border-t border-border flex items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-500/10 text-brand-600 font-extrabold text-xs">
-                      {rev.author.charAt(0)}
-                    </div>
+                    {rev.author.toLowerCase().includes("asmire") ? (
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 overflow-hidden shrink-0">
+                        <img
+                          src="/icon.png"
+                          alt="Asmire"
+                          className="h-4.5 w-4.5 object-contain dark:invert transition-[filter] duration-200"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-500/10 text-brand-600 font-extrabold text-xs">
+                        {rev.author.charAt(0)}
+                      </div>
+                    )}
                     <div>
                       <div className="flex items-center gap-1.5">
                         <span className="font-bold text-foreground text-xs">{rev.author}</span>

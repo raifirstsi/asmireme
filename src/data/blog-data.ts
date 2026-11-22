@@ -47,7 +47,7 @@ const ORIGINAL_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Enterprise Growth Lab",
       role: "SaaS & CRM Automation Analysts",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "GoHighLevel (HighLevel) is the undisputed #1 all-in-one software platform for digital agencies, consultants, and SaaS resellers in 2027. For a flat monthly price ($97 Starter or $297 Unlimited), it replaces 10+ subscriptions including HubSpot, ClickFunnels, ActiveCampaign, Calendly, and CallRail with zero per-contact fees. Its standout capability is SaaS Mode ($497/mo), which allows agency founders to rebrand HighLevel as their own proprietary software and keep 100% of recurring subscription revenue from local business clients.",
@@ -269,7 +269,7 @@ Tính năng Voice AI của HighLevel có thể trực tổng đài 24/7, đàm t
     author: {
       name: "Asmire Video AI Lab",
       role: "Multimedia Benchmark Specialists",
-      avatarUrl: "/images/authors/video-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Synthesia remains the top corporate standard for professional avatar training videos. OpusClip and Submagic lead short-form video repurposing for TikTok and Reels, while CapCut offers the most complete mobile/desktop free editing suite.",
@@ -338,7 +338,7 @@ Khi sản xuất video người dẫn ảo mà không cần trường quay hay c
     author: {
       name: "Asmire SEO Intelligence",
       role: "Search Quality Researchers",
-      avatarUrl: "/images/authors/seo-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Koala AI is best for rapid long-form affiliate articles with live Google SERP citations. Frase is best for on-page content briefs and NLP keyword optimization. Jasper is best for enterprise brand voice and cross-channel marketing copy.",
@@ -399,7 +399,7 @@ Tính năng Brand Voice của Jasper huấn luyện AI theo đúng cẩm nang th
     author: {
       name: "Asmire Ethics & Integrity Board",
       role: "Content Verification Analysts",
-      avatarUrl: "/images/authors/ethics-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Originality.ai demonstrated 97.4% detection sensitivity on GPT-4o and Claude 3.5 Sonnet, with a 2.1% false-positive rate on human text. Winston AI achieved 96.1% sensitivity with superior scanning for student PDF uploads and handwritten OCR.",
@@ -446,7 +446,7 @@ Báo nhầm một bài viết do người tự viết thành AI có thể làm t
     author: {
       name: "Asmire Product Design Lab",
       role: "UI/UX & Presentation Analysts",
-      avatarUrl: "/images/authors/design-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Gamma is the overall winner for modern, visually stunning presentations that feel like interactive web experiences. Decktopus is best for lead-generation sales decks with interactive forms. MagicSlides is best for users committed to native Google Slides workflows.",
@@ -499,7 +499,7 @@ Decktopus được thiết kế riêng cho mục tiêu chốt sales: nhúng lị
     author: {
       name: "Asmire Enterprise Operations",
       role: "Workplace Productivity Specialists",
-      avatarUrl: "/images/authors/ops-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Fireflies.ai is the top choice for sales and dev teams needing deep CRM/Slack integrations and custom summary prompts. MeetGeek leads in video chapter highlights, while Speak AI is specialized in qualitative research and sentiment analysis.",
@@ -547,7 +547,7 @@ const ALL_REVIEWS_POSTS: BlogPost[] = [
   author: {
     name: "Asmire Team",
     role: "AI SaaS Research & Empirical Analysis",
-    avatarUrl: "/images/authors/asmire-team.png",
+    avatarUrl: "/icon.png",
   },
 }));
 

@@ -18,7 +18,7 @@ export const AI_NEWS_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "OpenAI announced that its frontier models autonomously refactored SystemVerilog RTL code for AMD's flagship silicon blocks, compressing a full year of human engineering into under 5 months and achieving up to a 14% improvement in power, performance, and area (PPA). Portions of this machine-authored code are already printed on physical wafers.",
@@ -197,7 +197,7 @@ Silicon đã bắt đầu tự tiến hóa.
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "OpenAI's latest benchmark, MedChemBench, tested frontier LLMs on 99 real-world medicinal chemistry challenges drawn from 117 patents and 761 molecules. While GPT-6.2 Astra scored 95.4% at parsing molecular structures and historical assay data, its ability to choose which novel compound to synthesize next collapsed to barely 50%—proving that analytical comprehension does not equal discretionary decision-making.",
@@ -384,7 +384,7 @@ Bản lĩnh dám ra quyết định và chịu trách nhiệm mới là thứ t�
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Runway released Praxis-1, an open-weight 27-billion parameter robotic foundation model created by converting a world video model into an action controller. Instead of rendering pixels and having a robot look at them, an internal 'action expert' reads the latent activations of how objects naturally move, collide, and interact, allowing a physical Franka arm to top the open-source RoboLab-120 benchmark.",
@@ -545,7 +545,7 @@ Runway không chỉ tung ra một mô hình mới.
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Anthropic closed its historic initial public offering on November 20, 2026, selling 1,127,000,000 Class A shares at $83.00 as underwriters fully exercised their 147-million-share greenshoe option due to unprecedented demand. The listing cemented a valuation exceeding $93.5 billion and created over 400 centi-millionaires within an organization operating with a tiny fraction of legacy enterprise headcount.",
@@ -720,7 +720,7 @@ Hãy ngừng đánh đổi thời gian sống hữu hạn để lấy sự an to
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Google has made its autonomous phone calling feature in Gemini Tasks freely accessible across the US, Canada, Australia, India, Japan, and Korea. The AI autonomously dials businesses, waits through hold queues, confirms appointments, and syncs directly with Google Calendar—all while transparently disclosing to human receptionists that it is an artificial intelligence.",
@@ -915,7 +915,7 @@ Thế giới đang tự cởi bỏ mọi rào cản ma sát.
     author: {
       name: "Asmire Team",
       role: "AI Research & Strategic Insights",
-      avatarUrl: "/images/authors/asmire-team.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "The events of late November 2026 represent a structural phase transition: OpenAI models designing physical AMD chip circuitry, Runway turning video generation into robot control, MedChemBench proving that knowledge does not equate to decision-making, and Anthropic's $93.5B IPO validating extreme per-capita leverage. The winners in this era will not be those who memorize tools, but those who master systemic judgment.",

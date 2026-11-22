@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -32,17 +33,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        {/* Google Tag Manager / Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TS2SM59D" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            `,
-          }}
+        {/* Google Tag Manager / Google Analytics with non-blocking hydration */}
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-TS2SM59D"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

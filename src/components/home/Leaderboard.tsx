@@ -42,7 +42,7 @@ export function Leaderboard({ locale }: LeaderboardProps) {
               </div>
 
               <div className="flex items-center gap-3 mb-2.5">
-                <ToolLogo slug={tool.slug} name={tool.name} size="md" />
+                <ToolLogo slug={tool.slug} name={tool.name} size="md" priority={true} />
                 <h4 className="font-semibold text-base text-zinc-900 dark:text-zinc-100 tracking-tight">
                   {tool.name}
                 </h4>
