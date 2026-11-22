@@ -25,7 +25,7 @@ export const TOOLS_DATA: ToolItem[] = [
     trialDays: 14,
     affiliateNetwork: "FirstPromoter",
     affiliateUrlTemplate: "https://www.gohighlevel.com/?fp_ref={code}",
-    adminAffiliateUrl: "https://www.gohighlevel.com/?fp_ref=asmire_admin",
+    adminAffiliateUrl: "https://www.gohighlevel.com/?fp_ref=lc7",
     allowMemberLinks: true,
     rating: 4.8,
     reviewCount: 4292,

@@ -19,8 +19,10 @@ export async function GET(
   const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "127.0.0.1";
   const visitorHash = generateVisitorHash(ip, userAgent);
 
-  // Target clean destination URL
-  const targetUrl = new URL("/en", baseUrl);
+  // Target clean destination URL (supports optional ?to= or ?next= relative path)
+  const nextParam = request.nextUrl.searchParams.get("to") || request.nextUrl.searchParams.get("next") || "/en";
+  const safePath = nextParam.startsWith("/") && !nextParam.startsWith("//") ? nextParam : "/en";
+  const targetUrl = new URL(safePath, baseUrl);
   const response = NextResponse.redirect(targetUrl, 307);
 
   // Security headers: No index, no referrer leakage
