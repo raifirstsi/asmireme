@@ -52,7 +52,7 @@ export default async function ComparePage({ params, searchParams }: ComparePageP
           </h1>
           <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
             {isVi
-              ? "Chọn tối đa 4 công cụ AI bất kỳ trong danh mục 50 tool để đối chiếu ma trận tính năng, bảng giá thực tế và ưu/nhược điểm đối kháng."
+              ? "Chọn tối đa 4 công cụ AI bất kỳ trong danh mục để đối chiếu ma trận tính năng, bảng giá thực tế và ưu/nhược điểm đối kháng."
               : "Compare up to 4 AI tools at once. Inspect feature coverage, hidden usage limits, and verified annual savings."}
           </p>
         </div>

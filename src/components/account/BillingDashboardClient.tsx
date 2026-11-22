@@ -736,7 +736,7 @@ export function BillingDashboardClient({
                   rows={2}
                   value={refundReason}
                   onChange={(e) => setRefundReason(e.target.value)}
-                  placeholder={isVi ? "Ví dụ: Tôi chưa có nhu cầu sử dụng 50 tool..." : "e.g. Found it was not suitable for my current project"}
+                  placeholder={isVi ? "Ví dụ: Tôi chưa có nhu cầu sử dụng các công cụ..." : "e.g. Found it was not suitable for my current project"}
                   className="w-full rounded-lg border border-border bg-secondary/50 px-3.5 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-brand-500"
                 />
               </div>

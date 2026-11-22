@@ -22,7 +22,7 @@ console.log("=======================================================\n");
 
 // SUITE 1: SaaS Tools Direct Answer & Semantic Density
 console.log("[SUITE 1] Catalog Completeness & Direct Answer Quality");
-assert("Catalog contains verified tools (>= 50 tools)", TOOLS_DATA.length >= 50);
+assert(`Catalog contains verified tools (>= 50 tools, current: ${TOOLS_DATA.length})`, TOOLS_DATA.length >= 50);
 
 let allToolsHaveDirectAnswers = true;
 let allToolsHaveBestFor = true;
@@ -48,11 +48,11 @@ for (const tool of TOOLS_DATA) {
   }
 }
 
-assert("All 50 tools have bilingual Direct Answer summaries for AI search engines", allToolsHaveDirectAnswers);
-assert("All 50 tools define bilingual 'Best For' ideal persona criteria", allToolsHaveBestFor);
-assert("All 50 tools define bilingual 'Who It Is NOT For' disqualification criteria", allToolsHaveNotFor);
-assert("All 50 tools have numeric starting price", allToolsHaveValidPrices);
-assert("All 50 tools have ISO-formatted editorial verification dates", allToolsHaveVerifiedDates);
+assert(`All ${TOOLS_DATA.length} tools have bilingual Direct Answer summaries for AI search engines`, allToolsHaveDirectAnswers);
+assert(`All ${TOOLS_DATA.length} tools define bilingual 'Best For' ideal persona criteria`, allToolsHaveBestFor);
+assert(`All ${TOOLS_DATA.length} tools define bilingual 'Who It Is NOT For' disqualification criteria`, allToolsHaveNotFor);
+assert(`All ${TOOLS_DATA.length} tools have numeric starting price`, allToolsHaveValidPrices);
+assert(`All ${TOOLS_DATA.length} tools have ISO-formatted editorial verification dates`, allToolsHaveVerifiedDates);
 
 // SUITE 2: Head-to-Head Comparison Integrity
 console.log("\n[SUITE 2] Head-to-Head Comparison Pairs Integrity");

@@ -82,7 +82,7 @@ export default async function AdminPage({ params }: AdminPageProps) {
               Member Links Allowed
             </span>
             <div className="text-3xl font-black text-brand-600 dark:text-brand-400">
-              {TOOLS_DATA.filter((t) => t.allowMemberLinks).length} / 50
+              {TOOLS_DATA.filter((t) => t.allowMemberLinks).length} / {TOOLS_DATA.length}
             </div>
             <span className="text-[11px] text-muted-foreground">Governed by vendor ToS</span>
           </div>

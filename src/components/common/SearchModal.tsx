@@ -118,7 +118,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
         {/* Modal Footer */}
         <div className="flex items-center justify-between px-4 py-2 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800 text-[10px] text-zinc-400">
           <span>Use <kbd className="px-1 py-0.5 rounded border border-zinc-200 dark:border-zinc-700 font-mono">Esc</kbd> to close</span>
-          <span>50 Verified AI Tools Indexed</span>
+          <span>{TOOLS_DATA.length}+ Verified AI Tools Indexed</span>
         </div>
       </div>
     </div>

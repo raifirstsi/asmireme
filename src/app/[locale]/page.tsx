@@ -117,7 +117,7 @@ export default async function HomePage({ params }: HomePageProps) {
             <div className="pt-8 max-w-md mx-auto">
               <div className="grid grid-cols-3 divide-x divide-zinc-200/80 dark:divide-zinc-800 rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-900/40 p-3 sm:p-4 text-center shadow-2xs backdrop-blur-xs">
                 <div>
-                  <span className="block text-lg sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">50</span>
+                  <span className="block text-lg sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">{TOOLS_DATA.length}+</span>
                   <span className="text-[10px] sm:text-[11px] font-medium text-zinc-500 dark:text-zinc-400">{dict.hero.stats.tools}</span>
                 </div>
                 <div>
