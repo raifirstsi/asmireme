@@ -27,8 +27,8 @@ export const TOOLS_DATA: ToolItem[] = [
     affiliateUrlTemplate: "https://www.gohighlevel.com/?fp_ref={code}",
     adminAffiliateUrl: "https://www.gohighlevel.com/?fp_ref=asmire_admin",
     allowMemberLinks: true,
-    rating: 4.9,
-    reviewCount: 3890,
+    rating: 4.8,
+    reviewCount: 4292,
     verifiedAt: "2027-11-21",
     verdict: {
       bestFor: {

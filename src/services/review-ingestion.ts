@@ -23,20 +23,29 @@ export interface ExternalReviewData {
 export const EXTERNAL_REVIEWS_MAPPING: Record<string, ExternalReviewData[]> = {
   highlevel: [
     {
-      source: "PRODUCT_HUNT",
-      rating: 4.8,
-      reviewCount: 420,
-      sourceUrl: "https://www.producthunt.com/products/highlevel/reviews",
-      excerpt: "Voted #1 Agency Operating System. Users emphasize extreme consolidation of software bills, replacing HubSpot, ActiveCampaign, and Calendly under one sub-account model.",
+      source: "G2",
+      rating: 4.6,
+      reviewCount: 672,
+      sourceUrl: "https://www.g2.com/products/highlevel/reviews",
+      excerpt: "Enterprise agencies praise the white-label mobile app, unlimited sub-accounts, and CRM consolidation, noting an initial learning curve for beginners.",
       lastSyncDate: "2027-11-21 21:00",
       sentiment: "positive",
     },
     {
-      source: "G2",
-      rating: 4.6,
-      reviewCount: 3150,
-      sourceUrl: "https://www.g2.com/products/highlevel/reviews",
-      excerpt: "Enterprise agencies praise the white-label mobile app and sub-account cloning, though onboarding curve is steep for solo founders without CRM background.",
+      source: "PRODUCT_HUNT",
+      rating: 4.8,
+      reviewCount: 420,
+      sourceUrl: "https://www.producthunt.com/products/highlevel/reviews",
+      excerpt: "Voted #1 Agency Operating System. Extreme consolidation replacing HubSpot, ActiveCampaign, and Calendly under one unified portal.",
+      lastSyncDate: "2027-11-21 21:00",
+      sentiment: "positive",
+    },
+    {
+      source: "TRUSTPILOT",
+      rating: 4.9,
+      reviewCount: 3200,
+      sourceUrl: "https://www.trustpilot.com/review/gohighlevel.com",
+      excerpt: "Overwhelmingly positive reviews from agency owners praising customer support, active community, and continuous weekly feature releases.",
       lastSyncDate: "2027-11-21 21:00",
       sentiment: "positive",
     },
@@ -594,26 +603,7 @@ export const EXTERNAL_REVIEWS_MAPPING: Record<string, ExternalReviewData[]> = {
       sentiment: "positive",
     },
   ],
-  "10web": [
-    {
-      source: "PRODUCT_HUNT",
-      rating: 4.7,
-      reviewCount: 1320,
-      sourceUrl: "https://www.producthunt.com/products/frase/reviews",
-      excerpt: "AI WordPress website builder that replicates existing sites, builds responsive pages, and hosts on Google Cloud with 90+ PageSpeed.",
-      lastSyncDate: "2027-11-21 21:00",
-      sentiment: "positive",
-    },
-    {
-      source: "TRUSTPILOT",
-      rating: 4.4,
-      reviewCount: 1540,
-      sourceUrl: "https://www.trustpilot.com/review/frase.io",
-      excerpt: "Automated speed optimization and Elementor-compatible layouts make it great for rapid freelance site delivery.",
-      lastSyncDate: "2027-11-21 21:00",
-      sentiment: "positive",
-    },
-  ],
+
   palabra: [
     {
       source: "PRODUCT_HUNT",

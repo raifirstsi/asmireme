@@ -5,7 +5,7 @@
  * Calls the local production endpoint: http://127.0.0.1:3000/api/cron/sync-reviews
  */
 
-const CRON_SECRET = process.env.CRON_SECRET || "asmire_cron_secret_2026";
+const CRON_SECRET = process.env.CRON_SECRET || "asmire_cron_secret_2027";
 const TARGET_URL = process.env.CRON_TARGET_URL || "http://127.0.0.1:3000/api/cron/sync-reviews";
 
 async function runCronSync() {

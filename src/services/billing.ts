@@ -340,21 +340,33 @@ export async function processSepayWebhook(
         day: "numeric",
       });
 
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://asmire.me";
+      const fromEmail = process.env.RESEND_FROM_EMAIL || "support@asmire.me";
+
       await resend.emails.send({
-        from: `Asmire <${process.env.RESEND_FROM_EMAIL || "support@asmire.me"}>`,
+        from: `Asmire Billing <${fromEmail}>`,
         to: targetUserEmail,
         subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
+        headers: {
+          "List-Unsubscribe": `<mailto:${fromEmail}?subject=unsubscribe>, <${siteUrl}/account/login?action=unsubscribe>`,
+          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        },
         html: `
-          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 580px; margin: 0 auto; padding: 24px; color: #1e293b; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;">
-            <div style="border-bottom: 2px solid #3b82f6; padding-bottom: 12px; margin-bottom: 20px;">
-              <h2 style="margin: 0; color: #0f172a;">Payment Confirmed - Asmire Pro Active</h2>
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 580px; margin: 0 auto; padding: 32px 24px; color: #1e293b; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;">
+            <div style="text-align: center; margin-bottom: 24px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px;">
+              <a href="${siteUrl}" target="_blank" style="display: inline-block; text-decoration: none;">
+                <img src="${siteUrl}/brand/asmire-logo-black.png" alt="Asmire" height="26" style="display: block; margin: 0 auto; height: 26px; width: auto; max-height: 28px; border: 0; outline: none;" />
+              </a>
+              <p style="margin: 6px 0 0; color: #64748b; font-size: 13px; font-weight: 500;">AI SaaS Review & Referral Platform</p>
             </div>
-            <p>Hello,</p>
-            <p>Your payment of <strong>${amountIn.toLocaleString("vi-VN")} VND</strong> (Order code: <code>${orderCode}</code>) via VietQR has been successfully verified.</p>
             
-            <div style="background-color: #f8fafc; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 4px;">
-              <p style="margin: 0 0 8px 0; font-weight: bold; color: #0f172a;">Your Pro Plan Details:</p>
-              <ul style="margin: 0; padding-left: 20px; color: #334155;">
+            <h2 style="margin: 0 0 16px 0; color: #0f172a; font-size: 20px;">Payment Confirmed - Asmire Pro Active</h2>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">Hello,</p>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">Your payment of <strong>${amountIn.toLocaleString("vi-VN")} VND</strong> (Order code: <code>${orderCode}</code>) via VietQR has been successfully verified.</p>
+            
+            <div style="background-color: #f8fafc; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 6px;">
+              <p style="margin: 0 0 8px 0; font-weight: bold; color: #0f172a; font-size: 14px;">Your Pro Plan Details:</p>
+              <ul style="margin: 0; padding-left: 20px; color: #334155; font-size: 13px; line-height: 1.6;">
                 <li><strong>Entitlement:</strong> All 50 AI SaaS Tool Affiliate Slots Unlocked</li>
                 <li><strong>Active Period:</strong> Until ${expiryFormatted} (30 days prepaid)</li>
                 <li><strong>14-Day Guarantee:</strong> Full money-back guarantee eligible until ${new Date(
@@ -363,15 +375,23 @@ export async function processSepayWebhook(
               </ul>
             </div>
 
-            <p>You can now go to your Member Dashboard and input your personal affiliate links for any or all of the 50 tools in our verified catalog.</p>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the 50 tools in our verified catalog.</p>
 
             <div style="text-align: center; margin: 28px 0;">
-              <a href="https://asmire.me/account" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 28px; font-weight: 600; text-decoration: none; border-radius: 6px;">Open Member Dashboard</a>
+              <a href="${siteUrl}/account" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 28px; font-weight: 600; text-decoration: none; border-radius: 6px; font-size: 14px;">Open Member Dashboard</a>
             </div>
 
-            <p style="font-size: 13px; color: #64748b; margin-top: 32px; border-top: 1px solid #e2e8f0; padding-top: 16px;">
-              Need support or want to request a refund within 14 days? Simply reply to this email or visit our <a href="https://asmire.me/refund-policy" style="color: #2563eb;">Refund Policy</a>.
-            </p>
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; color: #94a3b8; font-size: 11px; line-height: 1.6; margin-top: 32px;">
+              <p style="margin: 0 0 4px; color: #64748b;">
+                Need support or want to request a refund within 14 days? Visit our <a href="${siteUrl}/refund-policy" style="color: #2563eb; text-decoration: underline;">Refund Policy</a> or email <a href="mailto:${fromEmail}" style="color: #2563eb; text-decoration: underline;">${fromEmail}</a>.
+              </p>
+              <p style="margin: 0 0 8px; color: #94a3b8;">
+                This receipt was sent to <strong style="color: #334155;">${targetUserEmail}</strong>.
+              </p>
+              <p style="margin: 0; color: #94a3b8;">
+                Asmire Inc. • <a href="${siteUrl}" style="color: #64748b; text-decoration: underline;">asmire.me</a> • <a href="${siteUrl}/account/login?action=unsubscribe" style="color: #64748b; text-decoration: underline;">Unsubscribe</a> • <a href="${siteUrl}/privacy" style="color: #64748b; text-decoration: underline;">Privacy Policy</a>
+              </p>
+            </div>
           </div>
         `,
       });
