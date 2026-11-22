@@ -43,21 +43,16 @@ export function ToolLogo({
     <div
       className={`relative flex ${cfg.box} shrink-0 items-center justify-center overflow-hidden rounded-md bg-white shadow-2xs p-0.5 border border-zinc-200/60 dark:border-zinc-700/60 ${className}`}
     >
-      <picture className="flex items-center justify-center w-full h-full">
-        <source srcSet={`/logos/${slug}.webp`} type="image/webp" />
-        <img
-          src={`/logos/${slug}.png`}
-          alt={`${name} logo`}
-          width={cfg.img}
-          height={cfg.img}
-          className="object-contain max-h-full max-w-full"
-          onError={() => setError(true)}
-          decoding="async"
-          loading={priority ? "eager" : "lazy"}
-          // @ts-ignore
-          fetchPriority={priority ? "high" : "auto"}
-        />
-      </picture>
+      <img
+        src={`/logos/${slug}.png`}
+        alt={`${name} logo`}
+        width={cfg.img}
+        height={cfg.img}
+        className="object-contain max-h-full max-w-full"
+        onError={() => setError(true)}
+        decoding="async"
+        loading={priority ? "eager" : "lazy"}
+      />
     </div>
   );
 }
