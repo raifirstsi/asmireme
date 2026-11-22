@@ -459,7 +459,7 @@ export function BillingDashboardClient({
             </div>
 
             {/* Payment Method Switcher Tabs */}
-            <div className="flex items-center gap-1 p-1 rounded-full bg-zinc-100 dark:bg-zinc-850 border border-zinc-200 dark:border-zinc-800 w-fit">
+            <div className="flex items-center gap-1 p-1 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 w-fit">
               <button
                 type="button"
                 onClick={() => setPaymentMethod("vietqr")}

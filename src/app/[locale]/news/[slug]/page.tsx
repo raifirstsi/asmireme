@@ -186,7 +186,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             </p>
 
             {/* Author Bar & Verification */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500 border-t border-zinc-100 dark:border-zinc-850">
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500 border-t border-black/[0.05] dark:border-white/[0.07]">
               <div className="flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full flex items-center justify-center overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0 shadow-2xs">
                   <img
@@ -308,7 +308,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
           )}
 
           {/* Bottom Navigation */}
-          <div className="pt-8 flex items-center justify-between border-t border-zinc-200/70 dark:border-zinc-800/70">
+          <div className="pt-8 flex items-center justify-between border-t border-black/[0.05] dark:border-white/[0.07]">
             <Link
               href={`/${locale}/news`}
               className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
