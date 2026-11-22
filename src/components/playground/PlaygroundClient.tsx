@@ -157,7 +157,7 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
       {/* Main Suite Content Area */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* SUITE 1: VOICE AI BENCHMARK */}
-        {activeTab === "voice" && (
+        <div className={activeTab === "voice" ? "space-y-8 block" : "hidden"}>
           <div className="space-y-8">
             {/* Standardized Test Prompt Card */}
             <div className="rounded-2xl bg-[#14151a] border border-zinc-800 p-6">
@@ -220,10 +220,10 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
               </Link>
             </div>
           </div>
-        )}
+        </div>
 
         {/* SUITE 2: VIDEO AVATAR AI BENCHMARK */}
-        {activeTab === "video" && (
+        <div className={activeTab === "video" ? "space-y-8 block" : "hidden"}>
           <div className="space-y-8">
             {/* Standardized Test Prompt Card */}
             <div className="rounded-2xl bg-[#14151a] border border-zinc-800 p-6">
@@ -286,10 +286,10 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
               </Link>
             </div>
           </div>
-        )}
+        </div>
 
         {/* SUITE 3: AI CONTENT & SEO BENCHMARK */}
-        {activeTab === "content" && (
+        <div className={activeTab === "content" ? "space-y-8 block" : "hidden"}>
           <div className="space-y-8">
             {/* Standardized Test Prompt Card */}
             <div className="rounded-2xl bg-[#14151a] border border-zinc-800 p-6">
@@ -345,7 +345,7 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
               </Link>
             </div>
           </div>
-        )}
+        </div>
 
         {/* Global Multi-Suite Comparison Matrix */}
         <section className="mt-16 pt-10 border-t border-zinc-800/80">
