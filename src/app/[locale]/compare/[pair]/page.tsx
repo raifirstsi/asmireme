@@ -260,7 +260,7 @@ export default async function ComparePairPage({ params }: ComparePairPageProps) 
           <div className="p-6 sm:p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 space-y-2.5 shadow-sm">
             <span className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Sparkles className="h-4 w-4" />
-              <span>Direct Editorial Verdict (TL;DR)</span>
+              <span>{isVi ? "Đánh Giá Nhanh Của Ban Biên Tập" : "Direct Editorial Verdict"}</span>
             </span>
             <p className="text-sm sm:text-base font-semibold text-foreground leading-relaxed">
               {pair.directAnswer[locale as Locale]}

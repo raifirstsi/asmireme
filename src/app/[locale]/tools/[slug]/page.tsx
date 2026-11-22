@@ -208,7 +208,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
           <div className="p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/70 dark:bg-zinc-900/40 space-y-2.5 shadow-2xs">
             <span className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-100 flex items-center gap-1.5">
               <Sparkles className="h-4 w-4" />
-              Direct Editorial Answer (TL;DR)
+              <span>{isVi ? "Tóm Tắt Nhanh Từ Ban Biên Tập" : "Direct Editorial Verdict"}</span>
             </span>
             <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100 leading-relaxed">
               {tool.directAnswer[locale as Locale]}
