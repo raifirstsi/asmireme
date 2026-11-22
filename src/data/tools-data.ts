@@ -2922,6 +2922,1802 @@ export const TOOLS_DATA: ToolItem[] = [
     alternatives: ["pickaxe", "marblism"]
   },
 
+
+  {
+    id: "heygen",
+    slug: "heygen",
+    name: "HeyGen AI",
+    tagline: {
+      en: "Studio-quality AI video generator with interactive realistic avatars and voice translation.",
+      vi: "Tạo video AI chất lượng studio với nhân vật ảo siêu thực và dịch thuật video tự động.",
+    },
+    description: {
+      en: "HeyGen enables marketing and training teams to create professional spokesperson videos in 175+ languages without cameras, actors, or studio equipment.",
+      vi: "HeyGen cho phép các nhóm tiếp thị và đào tạo sản xuất video người dẫn chuyện chuyên nghiệp trên 175+ ngôn ngữ mà không cần máy quay, diễn viên hay phòng thu.",
+    },
+    directAnswer: {
+      en: "HeyGen is the market-leading generative AI avatar video platform in 2027. It allows businesses to produce studio-grade spokesperson and training videos by simply typing a script. Standout features include 4K instant avatar creation, real-time video translation with realistic lip-syncing, and interactive streaming avatars. Plans start at $29/month with a free starter tier.",
+      vi: "HeyGen là nền tảng tạo video người ảo (AI avatar) hàng đầu thị trường năm 2027. Phần mềm cho phép doanh nghiệp sản xuất video thuyết trình và đào tạo chất lượng studio chỉ bằng cách nhập văn bản. Điểm nổi bật gồm tạo avatar cá nhân 4K, dịch video đa ngôn ngữ khớp khẩu hình môi (lip-sync) và trợ lý ảo tương tác trực tiếp. Giá từ $29/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["AI Avatar", "Video Translation", "Lip Sync", "Text to Video", "Corporate Training"],
+    startingPrice: 29,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://www.heygen.com/?via={code}",
+    adminAffiliateUrl: "https://www.heygen.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 2450,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Enterprise training teams, global sales reps, and course creators seeking camera-free video production.",
+        vi: "Các bộ phận đào tạo doanh nghiệp, nhân viên bán hàng toàn cầu và giảng viên khóa học online.",
+      },
+      notFor: {
+        en: "Filmmakers wanting full custom 3D CGI physics environments without human presenters.",
+        vi: "Nhà làm phim cần kỹ xảo điện ảnh 3D phức tạp không liên quan đến người thuyết trình.",
+      },
+      bottomLine: {
+        en: "The premier choice for corporate spokesperson videos and multilingual video localization.",
+        vi: "Lựa chọn số 1 hiện nay cho video người thuyết trình doanh nghiệp và địa phương hóa video đa ngôn ngữ.",
+      },
+    },
+    pros: {
+      en: ["Ultra-realistic photo and studio avatar rendering with natural micro-expressions", "Video translation in 175+ languages with automated voice cloning and lip-sync", "Zapier, Canva, and REST API integrations for automated bulk video generation", "Custom digital twin creation from a 2-minute smartphone video upload"],
+      vi: ["Tạo avatar cực kỳ chân thực với biểu cảm khuôn mặt và cử chỉ tự nhiên", "Dịch thuật video sang 175+ ngôn ngữ tự động sao chép giọng nói và khớp khẩu hình", "Tích hợp Zapier, Canva và REST API giúp tự động hóa tạo hàng loạt video", "Tạo bản sao kỹ thuật số cá nhân chỉ từ đoạn video ngắn 2 phút quay bằng điện thoại"],
+    },
+    cons: {
+      en: ["Enterprise tier required for 4K rendering and custom multi-user team workspaces", "Credit-based pricing can deplete quickly on long-form 20+ minute video modules"],
+      vi: ["Cần gói doanh nghiệp để xuất video độ phân giải 4K và quản lý nhóm nhiều thành viên", "Cơ chế tính credit có thể tiêu tốn nhanh nếu làm video dài trên 20 phút"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1 Free Credit", "60+ Public Avatars", "300+ Voices", "720p Export"] },
+      { name: "Creator", priceMonthly: 29, priceAnnualMonthly: 24, currency: "USD", features: ["15 Credits/mo", "Fast Processing", "Custom Avatar Lite", "1080p Export"], isPopular: true },
+      { name: "Team", priceMonthly: 89, priceAnnualMonthly: 72, currency: "USD", features: ["30 Credits/mo", "3 User Seats", "4K Resolution", "Brand Kit Management"] }
+    ],
+    officialUrl: "https://www.heygen.com",
+    logoUrl: "/logos/heygen.png",
+    alternatives: ["synthesia", "fliki", "ai-studios"]
+  },
+  {
+    id: "invideo",
+    slug: "invideo",
+    name: "InVideo AI",
+    tagline: {
+      en: "Turn prompts into ready-to-publish videos with scripts, voiceovers, and dynamic B-roll.",
+      vi: "Biến câu lệnh thành video hoàn chỉnh kèm kịch bản, giọng đọc AI và cảnh quay minh họa.",
+    },
+    description: {
+      en: "InVideo AI generates complete YouTube videos, TikToks, and commercials from simple text prompts, automating scriptwriting, media sourcing, and video editing.",
+      vi: "InVideo AI tự động sản xuất video YouTube, TikTok và quảng cáo chỉ từ câu lệnh văn bản, đảm nhận trọn gói từ viết kịch bản, chọn cảnh quay minh họa đến lồng tiếng.",
+    },
+    directAnswer: {
+      en: "InVideo AI is an end-to-end automated video generation copilot. By entering a prompt like '5 tips for financial freedom in 2027', it writes a structured script, selects relevant stock B-roll from iStock, applies dynamic subtitles, and narrates with natural AI voiceovers. Plans start at $25/month with a generous free plan.",
+      vi: "InVideo AI là công cụ sản xuất video tự động từ A-Z bằng trí tuệ nhân tạo. Bạn chỉ cần nhập ý tưởng, AI sẽ tự động viết kịch bản, chọn các cảnh quay đắt giá từ kho iStock, chèn phụ đề hiệu ứng và lồng tiếng truyền cảm. Phần mềm có gói miễn phí và các gói trả phí từ $25/tháng.",
+    },
+    hubs: ["video-avatar", "content-seo"],
+    tags: ["Text to Video", "YouTube Automation", "Video Editor", "Faceless Channels", "Shorts"],
+    startingPrice: 25,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://invideo.io/?ref={code}",
+    adminAffiliateUrl: "https://invideo.io/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 3120,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Content creators, faceless YouTube channel operators, and social media agencies scaling video volume.",
+        vi: "Nhà sáng tạo nội dung, chủ kênh YouTube không lộ mặt và các agency tiếp thị mạng xã hội.",
+      },
+      notFor: {
+        en: "High-end narrative film directors requiring precise frame-by-frame CGI direction.",
+        vi: "Đạo diễn điện ảnh cần chỉ đạo từng khung hình và hiệu ứng 3D CGI chi tiết.",
+      },
+      bottomLine: {
+        en: "The most intuitive text-to-video copilot for building automated YouTube and TikTok channels.",
+        vi: "Công cụ chuyển ý tưởng thành video tốt nhất hiện nay cho người làm kênh YouTube và TikTok tự động.",
+      },
+    },
+    pros: {
+      en: ["Generates 10-minute long-form YouTube videos in under 3 minutes", "Access to 16M+ stock photos and video clips from iStock and Storyblocks", "Interactive prompt box allows text-based editing ('change voice to British female')", "Automated kinetic subtitles with trending social media caption styles"],
+      vi: ["Tạo video dài 10 phút cho YouTube chỉ trong vòng chưa đầy 3 phút", "Kho dữ liệu hơn 16 triệu cảnh quay và hình ảnh bản quyền từ iStock và Storyblocks", "Chỉnh sửa video bằng câu lệnh tiện lợi ('đổi giọng đọc sang nữ giọng miền Nam')", "Tự động tạo phụ đề động chuẩn xu hướng TikTok và YouTube Shorts"],
+    },
+    cons: {
+      en: ["Free export includes InVideo watermarks", "Occasional repetitive stock video selection on niche technical topics"],
+      vi: ["Video xuất ở gói miễn phí có đóng dấu watermark của InVideo", "Đôi khi các cảnh quay minh họa có thể bị lặp lại với các chủ đề quá đặc thù"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 mins/week AI generation", "4 exports/week with watermark", "10GB storage"] },
+      { name: "Plus", priceMonthly: 25, priceAnnualMonthly: 20, currency: "USD", features: ["50 mins/mo AI generation", "Unlimited exports", "80 iStock clips/mo", "100GB storage"], isPopular: true },
+      { name: "Max", priceMonthly: 60, priceAnnualMonthly: 48, currency: "USD", features: ["200 mins/mo AI generation", "Unlimited exports", "320 iStock clips/mo", "400GB storage"] }
+    ],
+    officialUrl: "https://invideo.io",
+    logoUrl: "/logos/invideo.png",
+    alternatives: ["fliki", "capcut", "submagic"]
+  },
+  {
+    id: "runway",
+    slug: "runway",
+    name: "Runway Gen-3",
+    tagline: {
+      en: "Next-generation generative AI video and creative visual effects sandbox.",
+      vi: "Mô hình sinh video AI thế hệ mới và bộ công cụ kỹ xảo hình ảnh điện ảnh.",
+    },
+    description: {
+      en: "Runway provides cutting-edge generative video models (Gen-3 Alpha) enabling creators to generate photorealistic video clips from text, images, or reference videos.",
+      vi: "Runway phát triển mô hình sinh video tiên tiến (Gen-3 Alpha) cho phép tạo các thước phim điện ảnh chân thực từ văn bản, hình ảnh hoặc video mẫu.",
+    },
+    directAnswer: {
+      en: "Runway is the gold standard for artistic generative AI video and Hollywood-grade visual effects. Featuring the flagship Gen-3 Alpha model, it offers motion brush controls, camera angle direction, text-to-video, and image-to-video generation with realistic physics and lighting. Plans start at $15/month with free starter credits.",
+      vi: "Runway là chuẩn mực hàng đầu về sinh video AI nghệ thuật và kỹ xảo điện ảnh. Với mô hình chủ lực Gen-3 Alpha, Runway cung cấp cọ chuyển động (motion brush), điều hướng góc máy quay, biến ảnh và văn bản thành video với mô phỏng vật lý và ánh sáng như thật. Giá từ $15/tháng kèm gói tín dụng dùng thử miễn phí.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["Gen-3", "Generative Video", "VFX", "Text to Video", "Motion Brush", "Cinema"],
+    startingPrice: 15,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://runwayml.com/?ref={code}",
+    adminAffiliateUrl: "https://runwayml.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4850,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "VFX artists, creative directors, commercial filmmakers, and experimental visual designers.",
+        vi: "Chuyên viên kỹ xảo VFX, giám đốc sáng tạo, đạo diễn TVC quảng cáo và nhà thiết kế hình ảnh.",
+      },
+      notFor: {
+        en: "Users looking for turnkey automated faceless YouTube voiceover generators.",
+        vi: "Người chỉ cần một công cụ tự động ghép video kèm giọng đọc cho kênh tin tức.",
+      },
+      bottomLine: {
+        en: "The definitive creative AI video suite for cinematic storytelling and visual effects.",
+        vi: "Bộ công cụ sinh video AI nghệ thuật đỉnh cao cho dựng phim điện ảnh và hiệu ứng thị giác.",
+      },
+    },
+    pros: {
+      en: ["Gen-3 Alpha produces stunning photorealism, temporal consistency, and human movement", "Motion Brush lets you paint specific areas of an image and control motion direction", "Camera control presets include pans, tilts, zooms, and custom velocity curves", "Comprehensive post-production toolset including inpainting, green screen, and frame interpolation"],
+      vi: ["Mô hình Gen-3 Alpha tạo hình ảnh chân thực, chuyển động nhất quán và mượt mà", "Tính năng Motion Brush cho phép tô chọn khu vực bất kỳ trên ảnh để điều khiển hướng chuyển động", "Cài đặt góc máy quay đa dạng gồm lia máy, nghiêng, phóng to/thu nhỏ và tốc độ chuyển động", "Bộ công cụ hậu kỳ đầy đủ gồm xóa vật thể, tách nền xanh và tăng số khung hình"],
+    },
+    cons: {
+      en: ["High compute demands mean video generations consume credits quickly", "Requires artistic prompt experimentation to master complex cinematic scenes"],
+      vi: ["Tác vụ kết xuất video nặng nên lượng credit tiêu hao khá nhanh", "Đòi hỏi kỹ năng viết câu lệnh (prompt) và tinh chỉnh nghệ thuật để đạt cảnh quay hoàn hảo"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["125 one-time credits", "3 video projects", "720p exports", "Standard assets"] },
+      { name: "Standard", priceMonthly: 15, priceAnnualMonthly: 12, currency: "USD", features: ["625 credits/mo", "Unlimited projects", "4K image upscale", "Gen-3 access"], isPopular: true },
+      { name: "Pro", priceMonthly: 35, priceAnnualMonthly: 28, currency: "USD", features: ["2250 credits/mo", "Custom voice generation", "High priority generation", "All AI tools"] }
+    ],
+    officialUrl: "https://runwayml.com",
+    logoUrl: "/logos/runway.png",
+    alternatives: ["kling", "invideo", "leonardo-ai"]
+  },
+  {
+    id: "cursor",
+    slug: "cursor",
+    name: "Cursor AI",
+    tagline: {
+      en: "The AI-first code editor designed for extreme developer productivity.",
+      vi: "Trình soạn thảo mã nguồn tích hợp AI toàn diện giúp tăng tốc lập trình đột phá.",
+    },
+    description: {
+      en: "Cursor is a fork of VS Code supercharged with deep codebase indexing, multi-file code editing, and intelligent agentic programming capabilities.",
+      vi: "Cursor được xây dựng trên nền tảng VS Code với khả năng đọc hiểu toàn bộ kho mã nguồn (codebase), sửa đổi đồng thời nhiều file và lập trình tự động.",
+    },
+    directAnswer: {
+      en: "Cursor is the definitive AI code editor of 2027. Built directly on VS Code, it indexes your entire repository to provide intelligent inline code generation, multi-file Composer edits, and terminal bug fixing. It supports Claude 3.5 Sonnet, GPT-4o, and custom local models. Pricing starts at $20/month with a generous free plan.",
+      vi: "Cursor là trình biên tập code AI số 1 thế giới năm 2027. Được phát triển dựa trên VS Code, Cursor phân tích toàn bộ cấu trúc dự án để gợi ý code thông minh, tự động sửa đồng thời nhiều file với tính năng Composer và sửa lỗi terminal ngay tức thì. Hỗ trợ các model hàng đầu như Claude 3.5 Sonnet và GPT-4o. Giá từ $20/tháng và có gói miễn phí.",
+    },
+    hubs: ["research-agent", "website-builder"],
+    tags: ["AI IDE", "Code Editor", "Developer Tools", "Composer", "VS Code", "Claude"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://cursor.com/?ref={code}",
+    adminAffiliateUrl: "https://cursor.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 6400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Software engineers, full-stack web developers, startup CTOs, and technical founders.",
+        vi: "Lập trình viên phần mềm, kỹ sư full-stack, CTO startup và người sáng lập công nghệ.",
+      },
+      notFor: {
+        en: "Non-technical individuals looking for zero-code drag-and-drop website builders.",
+        vi: "Người không biết lập trình muốn tìm công cụ kéo thả web hoàn toàn không cần code.",
+      },
+      bottomLine: {
+        en: "The highest-leverage developer tool in modern engineering, replacing standalone copilots.",
+        vi: "Công cụ lập trình AI mạnh nhất hiện nay, thay đổi hoàn toàn cách các kỹ sư viết và sửa phần mềm.",
+      },
+    },
+    pros: {
+      en: ["Seamless VS Code extension, keybinding, and theme compatibility in 1-click import", "Composer allows multi-file architectural refactoring across your entire project", "Deep codebase indexing accurately answers context-heavy questions about your repository", "Auto-debugs terminal build errors and applies suggested fixes directly"],
+      vi: ["Tương thích 100% với các extension, phím tắt và giao diện của VS Code chỉ với 1 click", "Tính năng Composer cho phép tái cấu trúc và sửa đổi cùng lúc nhiều file trong dự án", "Đọc hiểu toàn bộ kho code giúp trả lời chính xác các câu hỏi phức tạp về kiến trúc", "Tự động phát hiện lỗi biên dịch ở terminal và áp dụng bản vá lỗi ngay lập tức"],
+    },
+    cons: {
+      en: ["Fast requests quota on frontier models (Claude 3.5 Sonnet) requires Pro subscription", "Can occasionally suggest overly eager architectural changes if not guided by clear prompts"],
+      vi: ["Giới hạn lượt gọi model cao cấp tốc độ cao đòi hỏi duy trì gói Pro", "Đôi khi có thể sửa code quá đà nếu câu lệnh yêu cầu không đủ cụ thể"],
+    },
+    pricingTiers: [
+      { name: "Hobby", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2,000 completions/mo", "50 slow premium requests", "Full codebase indexing"] },
+      { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["Unlimited completions", "500 fast premium requests/mo", "Unlimited slow requests", "Composer multi-file"], isPopular: true },
+      { name: "Business", priceMonthly: 40, priceAnnualMonthly: 32, currency: "USD", features: ["Centralized billing", "Admin privacy mode", "SAML SSO", "Zero data retention"] }
+    ],
+    officialUrl: "https://cursor.com",
+    logoUrl: "/logos/cursor.png",
+    alternatives: ["windsurf", "replit", "github-copilot"]
+  },
+  {
+    id: "bolt-new",
+    slug: "bolt-new",
+    name: "Bolt.new",
+    tagline: {
+      en: "Prompt, build, and deploy full-stack web applications entirely in your browser.",
+      vi: "Lập trình, khởi tạo và triển khai ứng dụng web full-stack hoàn chỉnh ngay trên trình duyệt.",
+    },
+    description: {
+      en: "Bolt.new by StackBlitz provides an in-browser development sandbox where AI creates, executes, and deploys full-stack React, Node, and Next.js applications in real time.",
+      vi: "Bolt.new phát triển bởi StackBlitz cung cấp môi trường sandbox trên trình duyệt, nơi AI tự động tạo code, cài đặt thư viện và chạy ứng dụng full-stack hoàn chỉnh.",
+    },
+    directAnswer: {
+      en: "Bolt.new is a revolutionary AI-powered web development platform. Unlike code generators that just output snippets, Bolt.new runs a live WebContainer in your browser, installing NPM packages, executing backend Node.js code, running database integrations, and deploying live URLs with a single prompt. Plans start at $20/month with a free starter tier.",
+      vi: "Bolt.new là nền tảng lập trình web đột phá bằng AI. Khác với các công cụ chỉ sinh code đơn lẻ, Bolt.new chạy môi trường máy chủ WebContainer ngay trong trình duyệt, tự cài gói npm, chạy backend Node.js, kết nối database và xuất bản website trực tiếp chỉ từ câu lệnh mô tả. Giá từ $20/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["website-builder", "research-agent"],
+    tags: ["Full-Stack", "WebContainer", "React", "Next.js", "No-Code to Code", "Deployment"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://bolt.new/?ref={code}",
+    adminAffiliateUrl: "https://bolt.new/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3890,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Product managers, indie hackers, SaaS founders, and frontend developers building MVPs in hours.",
+        vi: "Giám đốc sản phẩm (PM), indie hacker, nhà sáng lập SaaS và lập trình viên cần dựng MVP trong vài giờ.",
+      },
+      notFor: {
+        en: "Legacy monolithic enterprise applications written in Java or COBOL requiring specialized hardware.",
+        vi: "Các hệ thống phần mềm doanh nghiệp cổ điển đòi hỏi hạ tầng máy chủ nội bộ phức tạp.",
+      },
+      bottomLine: {
+        en: "The fastest way to take a software concept from prompt to a live, working URL on the internet.",
+        vi: "Cách nhanh nhất để biến một ý tưởng phần mềm thành trang web hoạt động thật trên internet.",
+      },
+    },
+    pros: {
+      en: ["Executes real Node.js and NPM environments directly inside the browser using WebContainers", "Full-stack scaffolding including authentication, routing, Tailwind CSS, and databases", "1-click live deployment to Netlify or custom domains with SSL", "Enables live code inspection and interactive visual debugging side-by-side"],
+      vi: ["Chạy môi trường Node.js và npm thật ngay trong trình duyệt nhờ công nghệ WebContainer", "Tạo ứng dụng full-stack hoàn chỉnh gồm xác thực đăng nhập, định tuyến và giao diện Tailwind", "Triển khai trực tiếp lên Netlify hoặc tên miền riêng có SSL chỉ với 1 cú nhấp chuột", "Cho phép vừa xem kết quả chạy thật vừa chỉnh sửa code song song trực quan"],
+    },
+    cons: {
+      en: ["Token consumption is heavy for complex multi-page applications with extensive dependencies", "Requires basic understanding of web architecture to fix edge-case compilation errors"],
+      vi: ["Tiêu hao token khá nhanh đối với các ứng dụng nhiều trang phức tạp", "Cần kiến thức cơ bản về lập trình web để xử lý các lỗi phụ thuộc thư viện"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10M Tokens/mo", "Public Projects", "Community Support", "WebContainer sandbox"] },
+      { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["100M Tokens/mo", "Private Projects", "Priority Generation", "Custom Domains"], isPopular: true },
+      { name: "Team", priceMonthly: 50, priceAnnualMonthly: 40, currency: "USD", features: ["Unlimited Collaboration", "Centralized Billing", "Enterprise SSO", "Dedicated Support"] }
+    ],
+    officialUrl: "https://bolt.new",
+    logoUrl: "/logos/bolt-new.png",
+    alternatives: ["lovable", "cursor", "replit"]
+  },
+  {
+    id: "lovable",
+    slug: "lovable",
+    name: "Lovable",
+    tagline: {
+      en: "The AI software engineer that creates production-grade web apps from natural language.",
+      vi: "Kỹ sư phần mềm AI tạo ứng dụng web chuẩn doanh nghiệp từ ngôn ngữ tự nhiên.",
+    },
+    description: {
+      en: "Lovable transforms descriptions into full-stack web applications with polished UI components, Supabase database integration, authentication, and GitHub synchronization.",
+      vi: "Lovable biến mô tả ý tưởng thành ứng dụng web hoàn chỉnh với giao diện trau chuốt, kết nối cơ sở dữ liệu Supabase, xác thực tài khoản và đồng bộ mã nguồn lên GitHub.",
+    },
+    directAnswer: {
+      en: "Lovable is a premier AI app builder designed to empower founders and designers to build production software. It outputs clean, human-readable React and TypeScript code, integrates directly with Supabase for PostgreSQL databases and authentication, and syncs seamlessly with GitHub. Plans start at $20/month with free starter credits.",
+      vi: "Lovable là nền tảng tạo ứng dụng AI hàng đầu dành cho nhà sáng lập và nhà thiết kế. Công cụ xuất mã nguồn React và TypeScript sạch sẽ, kết nối trực tiếp với Supabase để lưu trữ database PostgreSQL và quản lý đăng nhập, đồng thời đồng bộ hai chiều với GitHub. Giá từ $20/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["website-builder", "research-agent"],
+    tags: ["App Builder", "React", "Supabase", "TypeScript", "GitHub Sync", "MVP"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://lovable.dev/?ref={code}",
+    adminAffiliateUrl: "https://lovable.dev/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 2650,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Non-technical founders, UI/UX designers, and product leaders validating software products.",
+        vi: "Nhà sáng lập không rành code, designer UI/UX và quản lý sản phẩm cần thử nghiệm ý tưởng nhanh.",
+      },
+      notFor: {
+        en: "Developers seeking purely low-level command line tools or non-web embedded software.",
+        vi: "Lập trình viên chuyên phần mềm nhúng hoặc các ứng dụng hệ thống không chạy trên web.",
+      },
+      bottomLine: {
+        en: "The most design-forward AI app builder with authentic backend and database connectivity.",
+        vi: "Công cụ tạo ứng dụng AI có chất lượng thiết kế giao diện đẹp nhất cùng khả năng kết nối database thật.",
+      },
+    },
+    pros: {
+      en: ["Stunning, publication-ready modern UI designs using Tailwind CSS and shadcn/ui", "Native 1-click integration with Supabase for user auth, PostgreSQL, and storage", "Full bidirectional GitHub sync: export and own your code with zero vendor lock-in", "Interactive chat allows conversational feature additions and visual styling tweaks"],
+      vi: ["Giao diện hiện đại, thẩm mỹ cao sử dụng các component chuẩn Tailwind và shadcn/ui", "Tích hợp 1 chạm với Supabase để quản lý người dùng, lưu dữ liệu PostgreSQL và file", "Đồng bộ hai chiều với GitHub: sở hữu toàn bộ mã nguồn, không bị khóa vào nền tảng", "Giao tiếp qua hội thoại để bổ sung tính năng và tinh chỉnh giao diện dễ dàng"],
+    },
+    cons: {
+      en: ["Advanced relational queries require checking the auto-generated Supabase schema", "Message quota resets monthly on standard tiers"],
+      vi: ["Các câu truy vấn quan hệ dữ liệu nâng cao cần kiểm tra lại schema trên Supabase", "Số lượt tin nhắn yêu cầu AI được giới hạn theo tháng ở các gói cơ bản"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["5 Messages/day", "Public Projects", "Supabase Integration"] },
+      { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["100 Messages/mo", "Private Projects", "GitHub Sync", "Custom Domains"], isPopular: true },
+      { name: "Scale", priceMonthly: 50, priceAnnualMonthly: 40, currency: "USD", features: ["500 Messages/mo", "Priority Support", "Team Access", "Unlimited Exports"] }
+    ],
+    officialUrl: "https://lovable.dev",
+    logoUrl: "/logos/lovable.png",
+    alternatives: ["bolt-new", "cursor", "marblism"]
+  },
+  {
+    id: "perplexity",
+    slug: "perplexity",
+    name: "Perplexity Pro",
+    tagline: {
+      en: "The conversational AI search engine delivering verified answers with real citations.",
+      vi: "Công cụ tìm kiếm AI đối thoại cung cấp câu trả lời có nguồn trích dẫn kiểm chứng tức thì.",
+    },
+    description: {
+      en: "Perplexity combines real-time web indexing with frontier LLMs to provide comprehensive, factual direct answers complete with verifiable academic and news citations.",
+      vi: "Perplexity kết hợp dữ liệu web thời gian thực với các mô hình AI tiên tiến để đưa ra câu trả lời trực tiếp chính xác, kèm đầy đủ nguồn trích dẫn từ báo chí và học thuật.",
+    },
+    directAnswer: {
+      en: "Perplexity Pro is the premier AI research assistant and Google search successor in 2027. It searches the live web, cross-references sources, and delivers concise factual synthesis with footnote citations. Features include Pro Search with multi-step reasoning, file uploads, Collections, and access to Claude 3.5 Sonnet and GPT-4o. Plans cost $20/month with a free basic version.",
+      vi: "Perplexity Pro là trợ lý nghiên cứu AI và công cụ tìm kiếm kế thừa Google hàng đầu năm 2027. Phần mềm tìm kiếm web theo thời gian thực, đối chiếu nguồn tin và tổng hợp câu trả lời chính xác có dẫn nguồn chú thích. Các tính năng gồm Pro Search với suy luận đa bước, phân tích tài liệu và chọn đổi model Claude 3.5 Sonnet hoặc GPT-4o. Giá $20/tháng kèm bản miễn phí.",
+    },
+    hubs: ["research-agent", "content-seo"],
+    tags: ["AI Search", "Research Engine", "Citations", "Pro Search", "Fact-Checking", "Claude"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.perplexity.ai/?ref={code}",
+    adminAffiliateUrl: "https://www.perplexity.ai/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 8900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Researchers, students, financial analysts, journalists, and professionals who require factual source attribution.",
+        vi: "Nhà nghiên cứu, học sinh sinh viên, chuyên viên phân tích tài chính, nhà báo và người làm chuyên môn.",
+      },
+      notFor: {
+        en: "Users looking solely for creative fictional storytelling without factual research.",
+        vi: "Người chỉ có nhu cầu sáng tác truyện hư cấu không cần kiểm chứng thông tin thực tế.",
+      },
+      bottomLine: {
+        en: "The most trusted AI information retrieval engine on the internet, completely replacing traditional search.",
+        vi: "Công cụ tìm kiếm và tra cứu thông tin AI đáng tin cậy nhất hiện nay, thay thế hoàn toàn Google truyền thống.",
+      },
+    },
+    pros: {
+      en: ["Every statement is backed by clickable footnote citations to primary web sources", "Pro Search breaks down complex queries into multiple investigative research stages", "Allows switching between frontier models: Claude 3.5 Sonnet, GPT-4o, and Sonar", "Upload and interrogate PDFs, CSVs, and documents with deep data synthesis"],
+      vi: ["Mỗi luận điểm đều có trích dẫn chú thích bấm vào được dẫn thẳng đến bài viết gốc", "Chế độ Pro Search tự động chia nhỏ câu hỏi phức tạp thành nhiều bước điều tra chuyên sâu", "Tự do chuyển đổi qua lại giữa các mô hình mạnh nhất như Claude 3.5 Sonnet và GPT-4o", "Tải lên và tra cứu trực tiếp nội dung tài liệu PDF, Excel, bảng dữ liệu chi tiết"],
+    },
+    cons: {
+      en: ["Daily limit of 300+ Pro searches on standard subscription", "Occasional paywalled articles cannot be indexed directly"],
+      vi: ["Giới hạn khoảng hơn 300 lượt tìm kiếm Pro chuyên sâu mỗi ngày", "Một số nguồn tin yêu cầu tài khoản trả phí không thể cào dữ liệu trực tiếp"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited Quick Search", "5 Pro Searches/day", "Standard Search Engine"] },
+      { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16.6, currency: "USD", features: ["300+ Pro Searches/day", "Switch between Claude & GPT-4o", "Unlimited File Uploads", "$5 API Credits/mo"], isPopular: true },
+      { name: "Enterprise", priceMonthly: 40, priceAnnualMonthly: 35, currency: "USD", features: ["SOC2 Security", "Internal Knowledge Search", "SAML SSO", "Admin Dashboard"] }
+    ],
+    officialUrl: "https://www.perplexity.ai",
+    logoUrl: "/logos/perplexity.png",
+    alternatives: ["chatgpt-plus", "claude-ai", "winston"]
+  },
+  {
+    id: "notion-ai",
+    slug: "notion-ai",
+    name: "Notion AI",
+    tagline: {
+      en: "Connected AI workspace assistant for automated notes, docs, and team knowledge search.",
+      vi: "Trợ lý AI kết nối không gian làm việc giúp tóm tắt ghi chú và tra cứu dữ liệu nhóm.",
+    },
+    description: {
+      en: "Notion AI integrates directly inside your workspace databases and documents, allowing you to draft content, summarize meeting notes, and query company knowledge instantly.",
+      vi: "Notion AI tích hợp trực tiếp trong tài liệu và cơ sở dữ liệu Notion, giúp soạn thảo văn bản, tóm tắt biên bản cuộc họp và tra cứu thông tin nội bộ doanh nghiệp tức thì.",
+    },
+    directAnswer: {
+      en: "Notion AI is an embedded enterprise workspace copilot. Rather than copying and pasting between ChatGPT and your notes, Notion AI operates inside your pages to write drafts, extract action items from meetings, autofill database properties, and answer questions across your entire company wiki. Pricing is an optional $10/member/month add-on.",
+      vi: "Notion AI là trợ lý thông minh tích hợp trực tiếp vào không gian làm việc của Notion. Thay vì phải sao chép qua lại giữa ChatGPT và sổ tay, Notion AI hoạt động ngay trên trang để soạn thảo, trích xuất việc cần làm sau cuộc họp, tự động điền bảng dữ liệu và tra cứu toàn bộ tài liệu công ty. Giá $10/thành viên/tháng.",
+    },
+    hubs: ["meeting-productivity", "content-seo"],
+    tags: ["Workspace", "Wiki", "Knowledge Management", "Notes", "Productivity", "Databases"],
+    startingPrice: 10,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.notion.so/?ref={code}",
+    adminAffiliateUrl: "https://www.notion.so/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 7800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Teams, executives, project managers, and agencies already managing workflows inside Notion.",
+        vi: "Các đội ngũ, nhà quản lý, trưởng dự án và agency đã sử dụng Notion trong công việc hàng ngày.",
+      },
+      notFor: {
+        en: "Individuals seeking an isolated external chatbot without a document workspace.",
+        vi: "Người chỉ tìm một chatbot đơn lẻ không có nhu cầu ghi chép và lưu trữ tài liệu.",
+      },
+      bottomLine: {
+        en: "The most seamless AI enhancement for knowledge bases, project wikis, and team documentation.",
+        vi: "Giải pháp AI tích hợp mượt mà nhất để quản lý tri thức, tài liệu dự án và văn bản nhóm.",
+      },
+    },
+    pros: {
+      en: ["Q&A feature answers factual questions by searching across thousands of workspace pages", "Autofill columns automatically summarize, translate, or extract keywords from database entries", "Instant meeting action items extraction and document polishing directly in-editor", "Zero context switching: operates directly where your projects and tasks live"],
+      vi: ["Tính năng Q&A tìm kiếm và trả lời câu hỏi dựa trên toàn bộ hàng ngàn trang tài liệu nội bộ", "Cột tự động điền (Autofill) tự tóm tắt, dịch thuật hoặc rút trích từ khóa trong cơ sở dữ liệu", "Trích xuất việc cần làm sau cuộc họp và trau chuốt câu từ ngay trong trình soạn thảo", "Không cần chuyển đổi ứng dụng: xử lý công việc ngay tại nơi lưu trữ dự án"],
+    },
+    cons: {
+      en: ["Requires an underlying Notion plan to utilize the AI add-on", "Can occasionally reference outdated workspace pages if historical docs are not archived"],
+      vi: ["Yêu cầu phải có tài khoản Notion nền tảng để mua thêm gói bổ trợ AI", "Đôi khi có thể trích dẫn thông tin từ tài liệu cũ nếu công ty không dọn dẹp kho dữ liệu"],
+    },
+    pricingTiers: [
+      { name: "Add-On", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["Unlimited AI Responses", "Q&A across workspace", "Autofill Database Properties", "Writing Assistant"], isPopular: true }
+    ],
+    officialUrl: "https://www.notion.so",
+    logoUrl: "/logos/notion-ai.png",
+    alternatives: ["taskade", "clickup-ai", "chatpdf"]
+  },
+  {
+    id: "gptzero",
+    slug: "gptzero",
+    name: "GPTZero",
+    tagline: {
+      en: "The gold-standard AI detection and plagiarism prevention platform for education and media.",
+      vi: "Nền tảng phát hiện nội dung do AI viết và chống đạo văn chuẩn mực cho giáo dục và xuất bản.",
+    },
+    description: {
+      en: "GPTZero analyzes text perplexity and burstiness to detect whether writing originated from ChatGPT, Claude, Gemini, or human authors with verified sentence-by-sentence confidence.",
+      vi: "GPTZero phân tích độ phức tạp (perplexity) và tính biến thiên câu (burstiness) để xác định chính xác văn bản do ChatGPT, Claude, Gemini hay con người viết theo từng câu.",
+    },
+    directAnswer: {
+      en: "GPTZero is the most widely cited AI content detector in the world. Originally created at Princeton University, it provides detailed sentence-by-sentence heatmaps, AI probability scores, and integrated plagiarism scanning against billions of web pages. It is trusted by major universities, publishers, and hiring teams. Plans start at $15/month with a free starter tool.",
+      vi: "GPTZero là công cụ kiểm tra văn bản AI uy tín và được trích dẫn nhiều nhất trên thế giới. Được phát triển ban đầu tại Đại học Princeton, GPTZero cung cấp bản đồ nhiệt câu văn chi tiết, tỷ lệ phần trăm nghi vấn AI và quét đạo văn so chiếu với hàng tỷ trang web. Giá từ $15/tháng kèm công cụ kiểm tra miễn phí.",
+    },
+    hubs: ["ai-detection"],
+    tags: ["AI Detector", "Plagiarism Checker", "Academic Integrity", "Education", "Perplexity"],
+    startingPrice: 15,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://gptzero.me/?via={code}",
+    adminAffiliateUrl: "https://gptzero.me/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Universities, K-12 educators, editorial teams, content publishers, and recruitment managers.",
+        vi: "Các trường đại học, giáo viên, ban biên tập báo chí, nhà xuất bản và nhà tuyển dụng.",
+      },
+      notFor: {
+        en: "Students looking to artificially bypass AI detection rules without doing authentic work.",
+        vi: "Học sinh muốn tìm cách lách luật kiểm tra mà không tự làm bài nghiêm túc.",
+      },
+      bottomLine: {
+        en: "The academic and industry standard for authenticating human writing and detecting LLM text.",
+        vi: "Tiêu chuẩn số 1 hiện nay trong việc xác thực bài viết của con người và phát hiện văn bản AI.",
+      },
+    },
+    pros: {
+      en: ["Color-coded sentence-by-sentence analysis shows exact sections flagged as synthetic", "Multi-model detection calibrated against ChatGPT, Claude, Gemini, and Llama outputs", "Batch file uploads supporting PDF, Word doc, and text scans in bulk", "Deep scan mode minimizes false positives on technical academic prose"],
+      vi: ["Phân tích từng câu được mã hóa màu giúp chỉ rõ chính xác đoạn văn bị nghi vấn là AI", "Nhận diện đa mô hình được hiệu chuẩn theo dữ liệu của ChatGPT, Claude, Gemini và Llama", "Hỗ trợ tải lên hàng loạt file tài liệu định dạng PDF, Word và Text nhanh chóng", "Chế độ quét sâu (Deep Scan) giảm thiểu tối đa các trường hợp báo động nhầm ở văn bản học thuật"],
+    },
+    cons: {
+      en: ["Heavily human-edited or hybridized AI text requires manual human review", "Premium features like Google Docs live writing report require paid plan"],
+      vi: ["Văn bản lai tạp kết hợp giữa người viết và AI chỉnh sửa vẫn cần con người đánh giá lại", "Các tính năng nâng cao như xem lịch sử viết trực tiếp trên Google Docs cần gói trả phí"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10,000 words/mo", "Basic AI detection", "Sentence breakdown"] },
+      { name: "Essential", priceMonthly: 15, priceAnnualMonthly: 10, currency: "USD", features: ["150,000 words/mo", "Deep Scan technology", "Plagiarism scans", "Chrome extension"], isPopular: true },
+      { name: "Premium", priceMonthly: 24, priceAnnualMonthly: 16, currency: "USD", features: ["300,000 words/mo", "Full plagiarism database", "Writing history report", "Team sharing"] }
+    ],
+    officialUrl: "https://gptzero.me",
+    logoUrl: "/logos/gptzero.png",
+    alternatives: ["winston", "originality", "undetectable"]
+  },
+  {
+    id: "otter-ai",
+    slug: "otter-ai",
+    name: "Otter.ai",
+    tagline: {
+      en: "Automated meeting recording, real-time transcription, and actionable team summaries.",
+      vi: "Tự động ghi âm cuộc họp, phiên âm thời gian thực và tóm tắt việc cần làm cho nhóm.",
+    },
+    description: {
+      en: "Otter.ai joins your Zoom, Google Meet, and Microsoft Teams calls to record audio, write live transcripts, capture slides, and generate actionable meeting summaries.",
+      vi: "Otter.ai tự động tham gia các cuộc họp Zoom, Google Meet và Teams để ghi âm, phiên âm trực tiếp, chụp slide thuyết trình và tóm tắt kết luận cuộc họp.",
+    },
+    directAnswer: {
+      en: "Otter.ai is an industry-leading AI meeting assistant. It connects to your calendar, automatically enters virtual meetings as OtterPilot, transcribes speakers with high accuracy, takes automated slide screenshots, and distributes a bulleted summary with assigned action items immediately after the call. Plans start at $16.99/month with a 300-minute free monthly tier.",
+      vi: "Otter.ai là trợ lý ghi chép cuộc họp AI hàng đầu thế giới. Phần mềm đồng bộ với lịch làm việc, tự động vào phòng họp Zoom/Meet/Teams, phiên âm chính xác từng người nói, chụp ảnh slide trình chiếu và gửi email tóm tắt công việc cho cả nhóm ngay khi cuộc họp kết thúc. Giá từ $16.99/tháng kèm gói miễn phí 300 phút/tháng.",
+    },
+    hubs: ["meeting-productivity"],
+    tags: ["Meeting AI", "Transcription", "Zoom", "Google Meet", "Action Items", "Notes"],
+    startingPrice: 16.99,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://otter.ai/?ref={code}",
+    adminAffiliateUrl: "https://otter.ai/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 6200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Remote teams, sales reps, consultants, and project managers spending hours in video conferences.",
+        vi: "Các nhóm làm việc từ xa, nhân viên kinh doanh, chuyên gia tư vấn và quản lý dự án.",
+      },
+      notFor: {
+        en: "In-person offline meetings with heavy ambient background restaurant noise.",
+        vi: "Các cuộc gặp trực tiếp ngoài quán cà phê ồn ào nhiều tạp âm không thể ghi rõ giọng.",
+      },
+      bottomLine: {
+        en: "The premier virtual assistant for eliminating manual note-taking during video calls.",
+        vi: "Trợ lý ảo số 1 giúp loại bỏ hoàn toàn việc phải vừa họp vừa cắm cúi ghi chép thủ công.",
+      },
+    },
+    pros: {
+      en: ["OtterPilot automatically joins scheduled Zoom, Google Meet, and Microsoft Teams calls", "Generates concise bulleted summaries and assigns action items to participants", "Automatically captures shared presentation slides and attaches them to timestamps", "Interactive chat allows asking questions about past meetings ('what did Sarah say about budget?')"],
+      vi: ["Trợ lý OtterPilot tự động tham gia các cuộc họp Zoom, Google Meet và Microsoft Teams theo lịch", "Tự động tạo tóm tắt ngắn gọn và phân chia đầu việc cho từng thành viên tham gia", "Tự chụp lại các trang slide thuyết trình và gắn tương ứng theo mốc thời gian cuộc họp", "Có thể chat hỏi lại nội dung cuộc họp cũ ('Sarah đã nói gì về ngân sách dự án?')"],
+    },
+    cons: {
+      en: ["Free tier caps individual meetings at 30 minutes duration", "Accent recognition can occasionally stumble on fast colloquial speech"],
+      vi: ["Gói miễn phí giới hạn thời lượng mỗi cuộc họp tối đa 30 phút", "Đôi khi có thể gặp chút khó khăn nếu người nói có ngữ điệu địa phương quá nặng"],
+    },
+    pricingTiers: [
+      { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["300 monthly transcription mins", "30 mins per conversation", "Join Zoom/Meet/Teams"] },
+      { name: "Pro", priceMonthly: 16.99, priceAnnualMonthly: 10, currency: "USD", features: ["1,200 monthly transcription mins", "90 mins per conversation", "Import audio/video", "Advanced search"], isPopular: true },
+      { name: "Business", priceMonthly: 30, priceAnnualMonthly: 20, currency: "USD", features: ["6,000 monthly transcription mins", "4 hours per conversation", "Admin analytics", "Usage reports"] }
+    ],
+    officialUrl: "https://otter.ai",
+    logoUrl: "/logos/otter-ai.png",
+    alternatives: ["fireflies", "meetgeek", "castmagic"]
+  },
+  {
+    id: "clickup-ai",
+    slug: "clickup-ai",
+    name: "ClickUp Brain",
+    tagline: {
+      en: "The neural network connecting tasks, documents, people, and company knowledge.",
+      vi: "Mạng lưới trí tuệ nhân tạo kết nối toàn bộ công việc, tài liệu và dữ liệu doanh nghiệp.",
+    },
+    description: {
+      en: "ClickUp Brain brings conversational AI directly into your project management suite, automating task updates, writing standup reports, and answering queries across your entire team workspace.",
+      vi: "ClickUp Brain tích hợp AI trực tiếp vào nền tảng quản lý dự án, tự động cập nhật tiến độ công việc, viết báo cáo hàng ngày và trả lời mọi thắc mắc trong tổ chức.",
+    },
+    directAnswer: {
+      en: "ClickUp Brain is an all-in-one AI project management copilot. Integrated natively into ClickUp, it combines an AI Knowledge Manager, AI Project Manager, and AI Writer. It writes progress updates, creates project plans from brief descriptions, transcribes task voice clips, and answers questions using all your workspace tasks and docs. Pricing is a flat $7/user/month add-on.",
+      vi: "ClickUp Brain là trợ lý quản lý dự án AI toàn diện được tích hợp trực tiếp vào ClickUp. Phần mềm kết hợp 3 vai trò: Quản lý tri thức AI, Quản lý dự án AI và Người viết nội dung AI. Công cụ tự viết báo cáo tiến độ, lập kế hoạch dự án từ mô tả ngắn và giải đáp thắc mắc dựa trên toàn bộ công việc và tài liệu của công ty. Giá $7/người dùng/tháng.",
+    },
+    hubs: ["meeting-productivity"],
+    tags: ["Project Management", "Productivity", "Task Automation", "Knowledge Base", "Collaboration"],
+    startingPrice: 7,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://clickup.com/?via={code}",
+    adminAffiliateUrl: "https://clickup.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 9400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Agile software teams, marketing agencies, enterprise project offices, and growing organizations.",
+        vi: "Các đội ngũ lập trình Agile, agency truyền thông, phòng quản lý dự án và doanh nghiệp đang phát triển.",
+      },
+      notFor: {
+        en: "Solo individuals looking for a bare-bones to-do list without team collaboration features.",
+        vi: "Cá nhân chỉ cần một danh sách việc cần làm đơn giản không dùng tính năng nhóm.",
+      },
+      bottomLine: {
+        en: "The most deeply integrated AI project management copilot available on the enterprise market.",
+        vi: "Trợ lý quản lý công việc và dự án AI được tích hợp sâu và toàn diện nhất trên thị trường hiện nay.",
+      },
+    },
+    pros: {
+      en: ["Answers questions instantly across all tasks, docs, wikis, and chat channels", "Automates standup updates and sprint progress summaries with zero manual typing", "Creates subtasks, assignees, and timeline estimates from broad task descriptions", "Extremely competitive pricing at only $7/user/month flat add-on fee"],
+      vi: ["Trả lời câu hỏi tức thì bằng cách tìm kiếm trên toàn bộ đầu việc, tài liệu và kênh chat", "Tự động tạo báo cáo tiến độ sprint và tóm tắt standup mà không cần gõ thủ công", "Tự sinh các việc con (subtask), phân bổ người phụ trách và ước lượng thời gian từ mô tả", "Mức giá bổ sung cực kỳ cạnh tranh chỉ $7/thành viên/tháng"],
+    },
+    cons: {
+      en: ["Requires an existing paid ClickUp plan to activate ClickUp Brain", "Workspace needs properly structured tasks to provide optimal contextual answers"],
+      vi: ["Yêu cầu công ty phải đang dùng tài khoản ClickUp trả phí để kích hoạt thêm Brain", "Cần dữ liệu công việc được nhập rõ ràng để AI đưa ra câu trả lời bối cảnh chuẩn xác nhất"],
+    },
+    pricingTiers: [
+      { name: "Add-On", priceMonthly: 7, priceAnnualMonthly: 7, currency: "USD", features: ["AI Knowledge Manager", "AI Project Manager", "AI Writer for Work", "Unlimited Workspace Queries"], isPopular: true }
+    ],
+    officialUrl: "https://clickup.com",
+    logoUrl: "/logos/clickup-ai.png",
+    alternatives: ["taskade", "notion-ai", "reclaim"]
+  },
+  {
+    id: "framer",
+    slug: "framer",
+    name: "Framer AI",
+    tagline: {
+      en: "Design-first responsive website builder with instant AI generation and CMS.",
+      vi: "Nền tảng thiết kế website responsive hàng đầu với khả năng sinh layout bằng AI và CMS.",
+    },
+    description: {
+      en: "Framer allows designers and creators to build lightning-fast, production-ready websites using freeform canvas design, AI page generation, and built-in publishing infrastructure.",
+      vi: "Framer cho phép các nhà thiết kế tạo ra những website tốc độ cao chuẩn sản xuất nhờ giao diện thiết kế tự do như Figma, tạo trang bằng AI và hạ tầng lưu trữ tích hợp sẵn.",
+    },
+    directAnswer: {
+      en: "Framer AI is the premier modern website builder for designers, startups, and agencies. Combining the visual freedom of Figma with the production code output of React, it lets you generate complete, beautifully animated, mobile-responsive web pages from a text prompt in seconds. Plans start at $10/month with a free tier.",
+      vi: "Framer AI là công cụ thiết kế website hiện đại hàng đầu cho designer, startup và agency. Kết hợp sự tự do trực quan của Figma với khả năng sinh mã React tối ưu, Framer cho phép bạn tạo một trang web hoàn chỉnh, có hiệu ứng chuyển động mượt mà và chuẩn responsive cho điện thoại chỉ sau vài giây gõ lệnh. Giá từ $10/tháng và có gói miễn phí.",
+    },
+    hubs: ["website-builder", "advertising"],
+    tags: ["Website Builder", "Figma to Web", "Responsive Design", "CMS", "Animations", "React"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://www.framer.com/?via={code}",
+    adminAffiliateUrl: "https://www.framer.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Product designers, creative agencies, SaaS marketing teams, and freelancers wanting bespoke aesthetics.",
+        vi: "Nhà thiết kế sản phẩm, agency sáng tạo, đội ngũ marketing SaaS và freelancer thiết kế web.",
+      },
+      notFor: {
+        en: "Heavy e-commerce sites needing multi-warehouse inventory systems like Shopify.",
+        vi: "Các trang thương mại điện tử quy mô lớn cần quản lý kho hàng phức tạp như Shopify.",
+      },
+      bottomLine: {
+        en: "The visual gold standard for modern startup websites, landing pages, and creative portfolios.",
+        vi: "Chuẩn mực thiết kế thị giác số 1 cho website startup, trang đích landing page và portfolio.",
+      },
+    },
+    pros: {
+      en: ["Copy and paste components directly from Figma into Framer with zero layout breakage", "AI page generator creates complete responsive layouts with bespoke copy and color palettes", "Unrivaled built-in scroll animations, spring physics, and interactive hover effects", "World-class global CDN hosting with 99+ Google Lighthouse performance scores"],
+      vi: ["Sao chép và dán trực tiếp thiết kế từ Figma vào Framer mà không bị vỡ layout", "AI tạo trang tự động sinh bố cục hoàn chỉnh kèm nội dung và bảng màu hài hòa", "Hiệu ứng cuộn trang, chuyển động vật lý và tương tác rê chuột mượt mà đỉnh cao", "Hạ tầng máy chủ CDN toàn cầu cho điểm hiệu năng Google Lighthouse trên 99 điểm"],
+    },
+    cons: {
+      en: ["Custom backend database interactions require third-party webhooks or APIs", "Steep learning curve for users unfamiliar with CSS Flexbox and auto-layout concepts"],
+      vi: ["Cần dùng webhook hoặc API ngoài nếu muốn kết nối cơ sở dữ liệu backend phức tạp", "Người dùng chưa quen với tư duy auto-layout hoặc CSS Flexbox cần thời gian làm quen"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Framer subdomain", "Framer badge", "Design editor", "Basic CMS"] },
+      { name: "Mini", priceMonthly: 10, priceAnnualMonthly: 5, currency: "USD", features: ["Custom domain", "1,000 visitors/mo", "Home + 404 page", "SSL certificate"] },
+      { name: "Basic", priceMonthly: 20, priceAnnualMonthly: 15, currency: "USD", features: ["10,000 visitors/mo", "Unlimited pages", "1 CMS collection", "Search feature"], isPopular: true },
+      { name: "Pro", priceMonthly: 40, priceAnnualMonthly: 30, currency: "USD", features: ["200,000 visitors/mo", "Staging environments", "Analytics", "Redirects"] }
+    ],
+    officialUrl: "https://www.framer.com",
+    logoUrl: "/logos/framer.png",
+    alternatives: ["10web", "pineapple-builder", "bolt-new"]
+  },
+  {
+    id: "murf-ai",
+    slug: "murf-ai",
+    name: "Murf AI",
+    tagline: {
+      en: "Studio-quality AI voiceover generator with fine-tuned pitch, speed, and emphasis control.",
+      vi: "Phần mềm lồng tiếng AI chất lượng phòng thu với khả năng chỉnh cao độ, tốc độ và ngữ điệu chi tiết.",
+    },
+    description: {
+      en: "Murf AI converts scripts into natural, human-sounding voiceovers across 120+ voices in 20+ languages, complete with integrated video sync, background music, and timing controls.",
+      vi: "Murf AI chuyển đổi kịch bản thành giọng lồng tiếng tự nhiên với hơn 120 giọng đọc trên 20+ ngôn ngữ, hỗ trợ căn khớp trực tiếp với video, nhạc nền và thời lượng.",
+    },
+    directAnswer: {
+      en: "Murf AI is an enterprise-grade AI voiceover and speech synthesis studio. Designed for e-learning, explainer videos, commercials, and corporate presentations, it offers granular control over pitch, speed, pauses, and word emphasis, allowing users to direct voice actors digitally. Plans start at $29/month with a free starter tier.",
+      vi: "Murf AI là studio lồng tiếng trí tuệ nhân tạo chuyên nghiệp dành cho doanh nghiệp. Phù hợp làm video bài giảng e-learning, video giải thích, quảng cáo và thuyết trình nội bộ, Murf cho phép bạn tinh chỉnh cao độ, tốc độ, khoảng ngắt nghỉ và nhấn nhá từng từ ngữ như đạo diễn diễn viên thật. Giá từ $29/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["voice-audio"],
+    tags: ["AI Voice", "Text to Speech", "Voiceover Studio", "E-learning", "Audio Editor"],
+    startingPrice: 29,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://murf.ai/?via={code}",
+    adminAffiliateUrl: "https://murf.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 3800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "E-learning developers, corporate training creators, YouTube educators, and commercial video editors.",
+        vi: "Chuyên viên phát triển khóa học trực tuyến, người làm đào tạo doanh nghiệp và biên tập viên video.",
+      },
+      notFor: {
+        en: "Conversational real-time telephone voice bots requiring millisecond latency.",
+        vi: "Các hệ thống tổng đài phản hồi theo thời gian thực cần độ trễ vài mili-giây.",
+      },
+      bottomLine: {
+        en: "The most controllable voiceover studio for professional training and corporate media.",
+        vi: "Studio lồng tiếng AI có khả năng tinh chỉnh giọng đọc chi tiết nhất cho video đào tạo và truyền thông.",
+      },
+    },
+    pros: {
+      en: ["Over 120+ natural-sounding voices curated across diverse accents, ages, and tones", "Granular word-level emphasis and pitch sliders give precise emotional delivery", "Integrated studio timeline lets you sync audio directly against video and background music", "Commercial usage rights included on all paid tiers"],
+      vi: ["Hơn 120 giọng đọc tự nhiên đa dạng theo độ tuổi, giới tính và ngữ điệu vùng miền", "Thanh trượt điều chỉnh cao độ và nhấn trọng âm từng từ tạo cảm xúc chân thật", "Giao diện timeline tích hợp sẵn cho phép khớp âm thanh trực tiếp với video và nhạc nền", "Đầy đủ quyền thương mại hóa âm thanh trên mọi gói trả phí"],
+    },
+    cons: {
+      en: ["Free tier only permits generating voice samples without download capabilities", "Higher tiers needed to unlock unlimited voice generation time"],
+      vi: ["Gói miễn phí chỉ cho phép nghe thử giọng đọc chứ không hỗ trợ tải file âm thanh về máy", "Cần gói cao cấp để mở khóa thời lượng tạo giọng nói không giới hạn"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 mins voice generation", "Share link only", "All 120+ voices to try"] },
+      { name: "Creator", priceMonthly: 29, priceAnnualMonthly: 23, currency: "USD", features: ["24 hours voice gen/year", "Unlimited downloads", "Commercial rights", "8,000+ licensed tracks"], isPopular: true },
+      { name: "Business", priceMonthly: 99, priceAnnualMonthly: 79, currency: "USD", features: ["96 hours voice gen/year", "Collaboration workspace", "AI Voice Changer", "Priority support"] }
+    ],
+    officialUrl: "https://murf.ai",
+    logoUrl: "/logos/murf-ai.png",
+    alternatives: ["elevenlabs", "listnr", "speechify"]
+  },
+  {
+    id: "speechify",
+    slug: "speechify",
+    name: "Speechify",
+    tagline: {
+      en: "Leading AI text-to-speech reader for web, PDFs, books, and articles.",
+      vi: "Ứng dụng đọc văn bản AI hàng đầu cho website, tài liệu PDF, sách và báo điện tử.",
+    },
+    description: {
+      en: "Speechify transforms any text—from research papers to entire books—into high-quality audio spoken by natural voices including celebrity narrators, boosting reading speed up to 4.5x.",
+      vi: "Speechify chuyển đổi mọi loại văn bản từ tài liệu học thuật đến sách dài thành giọng đọc tự nhiên chất lượng cao, hỗ trợ tăng tốc độ đọc lên đến 4.5 lần giúp tiết kiệm thời gian.",
+    },
+    directAnswer: {
+      en: "Speechify is the world's most popular text-to-speech reading assistant. With over 20 million users, it lets students, professionals, and individuals with dyslexia listen to physical books, Google Docs, PDFs, and web articles at up to 4.5x speed. Features include realistic AI voices (like Snoop Dogg and Gwyneth Paltrow), iOS/Android/Chrome sync, and AI voice dubbing. Premium costs $11.58/month billed annually.",
+      vi: "Speechify là ứng dụng đọc văn bản thành giọng nói phổ biến nhất thế giới với hơn 20 triệu người dùng. Ứng dụng hỗ trợ học sinh, người đi làm và người mắc chứng khó đọc nghe sách in, tài liệu Google Docs, PDF và bài báo với tốc độ gấp tới 4.5 lần. Tích hợp các giọng đọc AI siêu thực, đồng bộ đa nền tảng và dịch thuật lồng tiếng. Giá từ $11.58/tháng thanh toán năm.",
+    },
+    hubs: ["voice-audio", "meeting-productivity"],
+    tags: ["Text to Speech", "Audiobook", "Reading Assistant", "Productivity", "Accessibility"],
+    startingPrice: 11.58,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 3,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://speechify.com/?ref={code}",
+    adminAffiliateUrl: "https://speechify.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 9800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Students, busy executives, auditory learners, and individuals with ADHD or dyslexia.",
+        vi: "Học sinh sinh viên, người bận rộn muốn đọc sách bằng cách nghe, người mắc chứng khó đọc hoặc ADHD.",
+      },
+      notFor: {
+        en: "Sound engineers looking for multi-track audio mixing and DAWs.",
+        vi: "Kỹ sư âm thanh cần phần mềm xử lý phòng thu và phối khí nhiều track chuyên nghiệp.",
+      },
+      bottomLine: {
+        en: "The premier productivity reader for turning written text into high-speed audio across all devices.",
+        vi: "Ứng dụng hỗ trợ đọc số 1 giúp biến mọi văn bản thành âm thanh chất lượng cao trên mọi thiết bị.",
+      },
+    },
+    pros: {
+      en: ["Speed listening up to 4.5x with zero audio distortion or robotic pitch artifacts", "Optical Character Recognition (OCR) snaps photos of physical book pages and reads aloud", "Seamless synchronization across iPhone, iPad, Android, Mac, and Chrome extension", "Human-grade celebrity voice options alongside 100+ standard neural voices"],
+      vi: ["Hỗ trợ tăng tốc độ nghe lên tới 4.5 lần mà không bị méo tiếng hay biến dạng âm", "Công nghệ quét ảnh (OCR) chụp trang sách giấy và đọc thành lời ngay lập tức", "Đồng bộ liên tục giữa điện thoại iPhone, Android, máy tính Mac và tiện ích Chrome", "Tùy chọn giọng đọc AI siêu thực cùng hơn 100 giọng đọc tiêu chuẩn mượt mà"],
+    },
+    cons: {
+      en: ["Annual billing commitment required to access the lowest monthly rate", "Free version restricts access to basic robotic voice tier"],
+      vi: ["Cần thanh toán theo năm để được hưởng mức giá ưu đãi nhất", "Gói miễn phí bị giới hạn ở các giọng đọc tiêu chuẩn cơ bản"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 standard reading voices", "Listen at up to 2x speed", "Text scanning"] },
+      { name: "Premium", priceMonthly: 19, priceAnnualMonthly: 11.58, currency: "USD", features: ["100+ natural HD voices", "Listen at up to 4.5x speed", "OCR physical book scanning", "Full cross-device sync"], isPopular: true }
+    ],
+    officialUrl: "https://speechify.com",
+    logoUrl: "/logos/speechify.png",
+    alternatives: ["elevenlabs", "murf-ai", "listnr"]
+  },
+  {
+    id: "suno",
+    slug: "suno",
+    name: "Suno AI",
+    tagline: {
+      en: "Create full broadcast-quality songs with vocals, lyrics, and instruments from any prompt.",
+      vi: "Sáng tác bài hát hoàn chỉnh kèm giọng hát, lời ca và nhạc cụ chuyên nghiệp từ câu lệnh.",
+    },
+    description: {
+      en: "Suno generates complete, multi-genre musical tracks—including realistic vocal performances, lyrics, and studio instrumentation—from simple descriptive prompts in seconds.",
+      vi: "Suno sản xuất các bản nhạc hoàn chỉnh đa thể loại gồm cả giọng ca truyền cảm, lời bài hát và phối khí chuyên nghiệp chỉ sau vài giây gõ lệnh.",
+    },
+    directAnswer: {
+      en: "Suno AI is the leading generative AI music studio. Powered by advanced audio diffusion models (V3.5 and V4), it composes radio-ready songs across any genre—from acoustic pop and EDM to cinematic orchestral scores—featuring custom lyrics, authentic vocal timbre, and verse-chorus song structures. Plans start at $10/month with 50 daily free credits.",
+      vi: "Suno AI là phòng thu âm nhạc AI hàng đầu thế giới. Ứng dụng mô hình sinh âm thanh tiên tiến (V3.5 và V4), Suno sáng tác bài hát đạt chuẩn phát thanh trên mọi thể loại từ Pop, Rock, EDM đến nhạc giao hưởng kèm giọng ca truyền cảm và cấu trúc bài hát hoàn chỉnh. Giá từ $10/tháng và có 50 credit miễn phí mỗi ngày.",
+    },
+    hubs: ["voice-audio"],
+    tags: ["AI Music", "Song Generator", "Vocals", "Audio Studio", "Composition", "Entertainment"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://suno.com/?ref={code}",
+    adminAffiliateUrl: "https://suno.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 8200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Musicians, video creators, advertisers, game developers, and hobbyists needing original music.",
+        vi: "Nhạc sĩ, nhà sáng tạo video, nhà làm quảng cáo, lập trình viên game và người yêu âm nhạc.",
+      },
+      notFor: {
+        en: "Audio producers looking solely for traditional non-AI MIDI piano roll sequencers.",
+        vi: "Nhà sản xuất âm nhạc truyền thống chỉ cần phần mềm vẽ nốt MIDI thủ công.",
+      },
+      bottomLine: {
+        en: "The undisputed pioneer in full-song generative AI composition and vocal production.",
+        vi: "Công cụ tiên phong và dẫn đầu tuyệt đối trong lĩnh vực sáng tác bài hát và giọng hát AI trọn vẹn.",
+      },
+    },
+    pros: {
+      en: ["Generates 4-minute full-fidelity songs with verse, chorus, bridge, and vocal harmonies", "Understands complex genre fusions (e.g., '1980s synthwave with female Japanese vocals')", "Allows custom lyrics input and audio extensions to build multi-part tracks", "Commercial ownership of tracks generated on Pro and Premier subscriptions"],
+      vi: ["Tạo bài hát dài tới 4 phút đầy đủ các đoạn phiên khúc, điệp khúc và bè giọng hài hòa", "Hiểu sâu các phong cách âm nhạc phối hợp (như 'nhạc Lo-Fi thư giãn kết hợp guitar acoustic')", "Hỗ trợ nhập lời bài hát tự viết và nối dài bản nhạc không giới hạn", "Toàn quyền sở hữu thương mại đối với các bài hát tạo ra từ gói Pro trở lên"],
+    },
+    cons: {
+      en: ["Free tier songs cannot be monetized commercially on streaming platforms", "Exact vocal timbre consistency across completely separate sessions requires careful prompt seeding"],
+      vi: ["Các bài hát tạo ở gói miễn phí không được phép bật kiếm tiền trên Spotify hay Apple Music", "Giữ nguyên màu giọng chính xác giữa các bài hát khác nhau đòi hỏi kỹ năng tinh chỉnh hạt giống"],
+    },
+    pricingTiers: [
+      { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["50 credits daily (10 songs)", "Non-commercial terms", "Standard generation queue"] },
+      { name: "Pro", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["2,500 credits/mo (500 songs)", "General commercial terms", "Optional credit top-ups", "Priority generation"], isPopular: true },
+      { name: "Premier", priceMonthly: 30, priceAnnualMonthly: 24, currency: "USD", features: ["10,000 credits/mo (2,000 songs)", "Commercial terms", "Fastest queue", "Highest priority"] }
+    ],
+    officialUrl: "https://suno.com",
+    logoUrl: "/logos/suno.png",
+    alternatives: ["elevenlabs", "murf-ai"]
+  },
+  {
+    id: "copy-ai",
+    slug: "copy-ai",
+    name: "Copy.ai",
+    tagline: {
+      en: "The enterprise AI GTM platform for automated sales, marketing, and content workflows.",
+      vi: "Hệ thống AI tự động hóa toàn bộ quy trình tiếp thị, bán hàng và sáng tạo nội dung.",
+    },
+    description: {
+      en: "Copy.ai automates go-to-market workflows, generating SEO-optimized blog posts, personalized outbound sales emails, and social media campaigns aligned with your brand guidelines.",
+      vi: "Copy.ai tự động hóa quy trình tiếp cận thị trường (GTM), tạo các bài viết chuẩn SEO, email bán hàng cá nhân hóa và chiến dịch mạng xã hội tuân thủ quy chuẩn thương hiệu.",
+    },
+    directAnswer: {
+      en: "Copy.ai is an enterprise-ready AI marketing operating system. Unlike simple chat assistants, Copy.ai features Workflows that run multi-step automated content pipelines—such as turning a product URL into 10 social posts, an email newsletter, and an SEO article simultaneously. Plans start at $49/month with a free starter tier.",
+      vi: "Copy.ai là hệ điều hành marketing AI dành cho doanh nghiệp. Khác với các chatbot đơn lẻ, Copy.ai sở hữu tính năng Workflows tự động hóa các chuỗi tác vụ phức tạp — ví dụ biến 1 link sản phẩm thành 10 bài đăng mạng xã hội, 1 bản tin email và 1 bài viết chuẩn SEO cùng một lúc. Giá từ $49/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["content-seo", "sales-crm"],
+    tags: ["Copywriting", "GTM AI", "Marketing Automation", "Sales Emails", "Workflows", "SEO"],
+    startingPrice: 49,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.copy.ai/?via={code}",
+    adminAffiliateUrl: "https://www.copy.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 5400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "B2B marketing teams, sales development reps (SDRs), growth agencies, and demand-gen leaders.",
+        vi: "Các nhóm marketing B2B, nhân viên phát triển kinh doanh (SDR), agency và chuyên gia tăng trưởng.",
+      },
+      notFor: {
+        en: "Solo users needing only a quick grammar check on personal text messages.",
+        vi: "Người dùng cá nhân chỉ cần công cụ kiểm tra lỗi chính tả cho tin nhắn thông thường.",
+      },
+      bottomLine: {
+        en: "The premier workflow automation engine for scaling demand generation and sales outreach.",
+        vi: "Cỗ máy tự động hóa tiếp thị mạnh mẽ nhất để mở rộng phễu khách hàng tiềm năng và email bán hàng.",
+      },
+    },
+    pros: {
+      en: ["Workflows automate complex multi-stage content pipelines with zero manual copy-pasting", "Infobase stores company facts, target personas, and brand voice rules for consistent output", "Chat integrated with real-time web search for competitor benchmarking and factual research", "Team collaboration with role-based permissions and shared prompt libraries"],
+      vi: ["Tính năng Workflows tự động hóa quy trình nội dung nhiều giai đoạn không cần copy paste thủ công", "Kho tri thức Infobase lưu trữ thông tin sản phẩm và giọng điệu thương hiệu nhất quán", "Chat kết hợp tìm kiếm web thời gian thực để phân tích đối thủ và cập nhật số liệu chính xác", "Hỗ trợ làm việc nhóm với tính năng phân quyền và chia sẻ thư viện prompt nội bộ"],
+    },
+    cons: {
+      en: ["Starter paid tier ($49/mo) represents a notable investment for solo entrepreneurs", "Setting up automated multi-branch workflows requires an initial workflow design phase"],
+      vi: ["Mức giá khởi điểm $49/tháng có thể hơi cao đối với người kinh doanh tự do", "Cần dành thời gian cấu hình ban đầu để thiết lập các luồng tự động hóa nhiều bước"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2,000 words in chat", "1 seat", "Brand Voice setup", "Basic chat tools"] },
+      { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 36, currency: "USD", features: ["Unlimited chat words", "500 workflow credits/mo", "Unlimited brand voices", "All LLMs"], isPopular: true },
+      { name: "Advanced", priceMonthly: 249, priceAnnualMonthly: 186, currency: "USD", features: ["5 seats included", "2,000 workflow credits/mo", "API access", "Dedicated manager"] }
+    ],
+    officialUrl: "https://www.copy.ai",
+    logoUrl: "/logos/copy-ai.png",
+    alternatives: ["jasper", "frase", "rightblogger"]
+  },
+  {
+    id: "quillbot",
+    slug: "quillbot",
+    name: "QuillBot",
+    tagline: {
+      en: "The premier AI paraphrasing tool, grammar checker, and text summarizer.",
+      vi: "Công cụ viết lại câu, sửa lỗi ngữ pháp và tóm tắt văn bản thông minh hàng đầu.",
+    },
+    description: {
+      en: "QuillBot rewrites sentences, checks grammar in real time, summarizes articles, and cites research sources to enhance writing clarity and tone across all platforms.",
+      vi: "QuillBot viết lại câu văn linh hoạt, kiểm tra lỗi ngữ pháp tức thì, tóm tắt bài báo và trích dẫn tài liệu giúp câu văn mượt mà và chuẩn mực trên mọi nền tảng.",
+    },
+    directAnswer: {
+      en: "QuillBot is the world's most widely used AI paraphrasing and editing tool. Featuring 7 distinct paraphrasing modes (Standard, Fluency, Formal, Creative, Expand, Shorten), it helps students and professionals overcome writer's block, polish academic papers, and enhance sentence flow. Integrated tools include a grammar checker, citation generator, and summarizer. Pricing starts at $9.95/month with a free version.",
+      vi: "QuillBot là công cụ viết lại câu (paraphrase) và biên tập văn bản phổ biến nhất thế giới. Với 7 chế độ viết chuyên biệt (Tiêu chuẩn, Trôi chảy, Trang trọng, Sáng tạo, Mở rộng, Rút gọn), QuillBot giúp học sinh và người đi làm nâng tầm văn phong và câu chữ. Tích hợp sẵn bộ sửa ngữ pháp, tạo trích dẫn và tóm tắt bài. Giá từ $9.95/tháng kèm bản miễn phí.",
+    },
+    hubs: ["content-seo"],
+    tags: ["Paraphrasing", "Grammar Checker", "Summarizer", "Academic Writing", "Editor", "Citations"],
+    startingPrice: 9.95,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 3,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://quillbot.com/?ref={code}",
+    adminAffiliateUrl: "https://quillbot.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 8900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Non-native English speakers, ESL students, academics, researchers, and professional writers.",
+        vi: "Người học tiếng Anh, du học sinh, nhà nghiên cứu và người viết nội dung chuyên nghiệp.",
+      },
+      notFor: {
+        en: "Teams needing fully autonomous long-form blog post generators from a single title.",
+        vi: "Người cần công cụ tự viết toàn bộ bài blog dài 2000 từ tự động chỉ từ một tiêu đề.",
+      },
+      bottomLine: {
+        en: "The quintessential sentence refinement and clarity tool for academic and professional writing.",
+        vi: "Công cụ hoàn hảo nhất để trau chuốt từng câu chữ và nâng cao độ mạch lạc cho văn bản.",
+      },
+    },
+    pros: {
+      en: ["7 customizable paraphrasing modes tailor sentence tone from academic formal to concise", "Interactive synonym slider lets you choose exactly how much vocabulary changes", "Extensions for Chrome, Microsoft Word, and Google Docs provide seamless writing assistance", "Built-in citation generator formats APA, MLA, and Chicago styles instantly"],
+      vi: ["7 chế độ viết lại câu tùy biến giúp điều chỉnh giọng điệu từ học thuật đến ngắn gọn", "Thanh trượt từ đồng nghĩa cho phép kiểm soát mức độ thay đổi từ ngữ theo ý muốn", "Tiện ích mở rộng cho Chrome, Word và Google Docs hỗ trợ viết bài mượt mà mọi lúc", "Bộ tạo trích dẫn tự động theo đúng định dạng học thuật chuẩn APA, MLA và Chicago"],
+    },
+    cons: {
+      en: ["Free tier limits paraphrasing to 125 words per individual scan", "Plagiarism checker scans are restricted to a monthly page quota on Premium"],
+      vi: ["Gói miễn phí giới hạn mỗi lần viết lại tối đa 125 từ", "Tính năng quét đạo văn bị giới hạn số lượng trang quét mỗi tháng ở gói Premium"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["125 words paraphraser", "Standard & Fluency modes", "Limited synonym options", "Grammar check"] },
+      { name: "Premium", priceMonthly: 19.95, priceAnnualMonthly: 9.95, currency: "USD", features: ["Unlimited words", "All 7 modes + custom", "Highest synonym setting", "Plagiarism check (20 pages/mo)"], isPopular: true }
+    ],
+    officialUrl: "https://quillbot.com",
+    logoUrl: "/logos/quillbot.png",
+    alternatives: ["frase", "rightblogger", "copy-ai"]
+  },
+  {
+    id: "klaviyo",
+    slug: "klaviyo",
+    name: "Klaviyo AI",
+    tagline: {
+      en: "Intelligent marketing automation, predictive analytics, and revenue-driven email/SMS.",
+      vi: "Nền tảng tự động hóa marketing, phân tích dự đoán và tạo doanh thu qua Email & SMS.",
+    },
+    description: {
+      en: "Klaviyo powers e-commerce growth by unifying customer data, automating personalized email and SMS flows, and predicting customer churn risk and lifetime value with AI.",
+      vi: "Klaviyo thúc đẩy tăng trưởng thương mại điện tử bằng cách hợp nhất dữ liệu khách hàng, tự động hóa chuỗi email và tin nhắn SMS cá nhân hóa, đồng thời dùng AI dự đoán giá trị vòng đời khách hàng.",
+    },
+    directAnswer: {
+      en: "Klaviyo is the premier marketing automation platform for e-commerce brands on Shopify, WooCommerce, and BigCommerce. Powered by proprietary predictive AI, it forecasts next order dates, churn likelihood, and personalized product recommendations. Built-in generative AI writes high-converting subject lines, email templates, and SMS campaigns. Free for up to 250 contacts, with paid plans starting at $45/month.",
+      vi: "Klaviyo là nền tảng tiếp thị tự động số 1 cho các cửa hàng online trên Shopify, WooCommerce và BigCommerce. Nhờ trí tuệ nhân tạo dự đoán (Predictive AI), Klaviyo tính toán thời điểm khách mua lại, nguy cơ rời bỏ và gợi ý sản phẩm phù hợp. Tích hợp AI tự động viết tiêu đề email hút khách và kịch bản SMS tăng doanh số. Miễn phí đến 250 liên hệ, trả phí từ $45/tháng.",
+    },
+    hubs: ["advertising", "sales-crm"],
+    tags: ["E-commerce", "Email Marketing", "SMS", "Predictive Analytics", "Shopify", "Automation"],
+    startingPrice: 45,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.klaviyo.com/?ref={code}",
+    adminAffiliateUrl: "https://www.klaviyo.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 6800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Shopify merchants, direct-to-consumer (DTC) brands, and e-commerce agencies maximizing retention.",
+        vi: "Chủ shop Shopify, thương hiệu bán hàng trực tiếp (DTC) và các agency thương mại điện tử.",
+      },
+      notFor: {
+        en: "Simple non-transactional blogs that only send a monthly text-only newsletter.",
+        vi: "Các trang blog tin tức đơn giản chỉ gửi bản tin chữ thông thường hàng tháng.",
+      },
+      bottomLine: {
+        en: "The absolute benchmark for e-commerce revenue attribution and predictive retention marketing.",
+        vi: "Chuẩn mực tiếp thị số 1 để tối ưu doanh thu và giữ chân khách hàng cho ngành thương mại điện tử.",
+      },
+    },
+    pros: {
+      en: ["Deep native integrations with Shopify, WooCommerce, and Magento sync historical data instantly", "Predictive AI calculates customer lifetime value (CLV), churn risk, and optimal send times", "Generative AI creates on-brand email copy, SMS messages, and subject lines in seconds", "Granular behavioral segmentation targets customers based on exact browsing and purchasing events"],
+      vi: ["Tích hợp sâu với Shopify, WooCommerce và Magento đồng bộ toàn bộ lịch sử mua hàng ngay lập tức", "AI dự đoán chính xác giá trị vòng đời khách hàng (CLV), tỷ lệ rời bỏ và khung giờ gửi tốt nhất", "Tự động tạo nội dung email, tin nhắn SMS và tiêu đề hấp dẫn chuẩn phong cách thương hiệu", "Phân khúc khách hàng chi tiết dựa trên từng hành vi xem sản phẩm và thêm giỏ hàng thực tế"],
+    },
+    cons: {
+      en: ["Pricing scales steeply as subscriber contact lists expand into the tens of thousands", "Advanced multi-branch logic flows require careful strategic setup"],
+      vi: ["Chi phí tăng dần theo quy mô danh sách liên hệ khi dữ liệu lên tới hàng chục nghìn khách", "Hệ thống luồng tự động hóa nhiều nhánh rẽ đòi hỏi tư duy thiết kế bài bản"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Up to 250 contacts", "500 monthly email sends", "150 free SMS credits", "Email support"] },
+      { name: "Email", priceMonthly: 45, priceAnnualMonthly: 45, currency: "USD", features: ["Up to 1,500 contacts", "15,000 monthly sends", "Predictive analytics", "Full automation"], isPopular: true },
+      { name: "Email + SMS", priceMonthly: 60, priceAnnualMonthly: 60, currency: "USD", features: ["Email features", "1,250 monthly SMS credits", "Two-way text messaging", "Priority support"] }
+    ],
+    officialUrl: "https://www.klaviyo.com",
+    logoUrl: "/logos/klaviyo.png",
+    alternatives: ["getresponse", "highlevel", "mailerlite"]
+  },
+  {
+    id: "make",
+    slug: "make",
+    name: "Make.com",
+    tagline: {
+      en: "Visual no-code automation platform connecting thousands of apps and AI services.",
+      vi: "Nền tảng tự động hóa trực quan kết nối hàng ngàn ứng dụng và dịch vụ AI không cần code.",
+    },
+    description: {
+      en: "Make (formerly Integromat) allows you to visually design, build, and automate complex multi-app workflows, integrating OpenAI, Anthropic, databases, and webhooks on an infinite canvas.",
+      vi: "Make (trước đây là Integromat) cho phép bạn thiết kế và tự động hóa các luồng công việc đa ứng dụng trên giao diện trực quan, kết nối OpenAI, Anthropic, cơ sở dữ liệu và webhook dễ dàng.",
+    },
+    directAnswer: {
+      en: "Make.com is the most powerful visual workflow automation platform available today. Unlike rigid automation tools, Make provides an infinite drag-and-drop canvas where you can branch, filter, parse JSON, execute routers, and connect AI models like ChatGPT with 2,000+ business applications. Pricing starts at $9/month with a free plan offering 1,000 monthly operations.",
+      vi: "Make.com là nền tảng tự động hóa quy trình làm việc trực quan mạnh mẽ nhất hiện nay. Khác với các công cụ tự động hóa cứng nhắc, Make cung cấp bảng vẽ vô cực cho phép bạn kéo thả, rẽ nhánh điều kiện, xử lý dữ liệu JSON và kết nối các mô hình AI với hơn 2,000 ứng dụng doanh nghiệp. Giá từ $9/tháng kèm gói miễn phí 1,000 lượt thao tác/tháng.",
+    },
+    hubs: ["meeting-productivity", "sales-crm"],
+    tags: ["Automation", "No-Code", "Integrations", "Workflow", "Zapier Alternative", "Webhooks"],
+    startingPrice: 9,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.make.com/?via={code}",
+    adminAffiliateUrl: "https://www.make.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 7100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "No-code builders, operations managers, growth engineers, and digital agencies building custom logic.",
+        vi: "Người làm tự động hóa no-code, quản lý vận hành, kỹ sư tăng trưởng và các digital agency.",
+      },
+      notFor: {
+        en: "Users who only need a single 2-step trigger without data transformations or filters.",
+        vi: "Người chỉ cần liên kết đơn giản 2 bước không có nhu cầu biến đổi dữ liệu hay rẽ nhánh.",
+      },
+      bottomLine: {
+        en: "The superior, cost-effective visual alternative to Zapier for building sophisticated automated systems.",
+        vi: "Lựa chọn thay thế vượt trội và tiết kiệm chi phí hơn hẳn Zapier để xây dựng hệ thống tự động hóa nâng cao.",
+      },
+    },
+    pros: {
+      en: ["Infinite visual canvas lets you see data flow through every step in real-time execution", "Advanced routing, conditional error handling, and array aggregators included on all tiers", "Significantly more cost-effective per operation compared to traditional alternatives like Zapier", "Direct modules for OpenAI, Anthropic, Webhooks, Google Sheets, Airtable, and CRMs"],
+      vi: ["Bảng vẽ trực quan vô cực cho phép xem dữ liệu chạy qua từng bước theo thời gian thực", "Khả năng rẽ nhánh đa luồng, xử lý lỗi thông minh và gom mảng dữ liệu chuyên sâu", "Chi phí cho mỗi lượt thực thi tiết kiệm hơn đáng kể so với các giải pháp như Zapier", "Tích hợp sẵn các module cho OpenAI, Anthropic, Webhook, Google Sheets, Airtable và CRM"],
+    },
+    cons: {
+      en: ["Steeper learning curve than Zapier for users unfamiliar with data objects and JSON", "Failed operations require monitoring and error-handling branch design"],
+      vi: ["Đòi hỏi thời gian làm quen ban đầu với người chưa quen cấu trúc dữ liệu JSON", "Cần thiết kế thêm nhánh xử lý lỗi dự phòng để đảm bảo quy trình chạy thông suốt"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1,000 operations/mo", "Active scenarios: 2", "15-minute minimum interval", "Full visual builder"] },
+      { name: "Core", priceMonthly: 10.59, priceAnnualMonthly: 9, currency: "USD", features: ["10,000 operations/mo", "Unlimited active scenarios", "1-minute execution interval", "Over 2,000 apps"], isPopular: true },
+      { name: "Pro", priceMonthly: 18.82, priceAnnualMonthly: 16, currency: "USD", features: ["10,000 operations/mo", "Custom variables", "Full-text execution search", "Priority scenario execution"] }
+    ],
+    officialUrl: "https://www.make.com",
+    logoUrl: "/logos/make.png",
+    alternatives: ["zapier", "highlevel", "taskade"]
+  },
+  {
+    id: "zapier",
+    slug: "zapier",
+    name: "Zapier Central",
+    tagline: {
+      en: "The enterprise automation platform connecting 6,000+ business applications with AI bots.",
+      vi: "Nền tảng tự động hóa doanh nghiệp kết nối hơn 6,000 ứng dụng với trợ lý AI thông minh.",
+    },
+    description: {
+      en: "Zapier connects your apps and automates repetitive tasks across 6,000+ integrations, now supercharged with AI Central bots that take action directly in your software stack.",
+      vi: "Zapier liên kết các ứng dụng và tự động hóa công việc lặp lại trên hơn 6,000 dịch vụ, nay được nâng cấp với AI Central cho phép bot tự động thực hiện tác vụ theo lệnh.",
+    },
+    directAnswer: {
+      en: "Zapier is the undisputed market leader in cloud application integration. With support for over 6,000 software tools, it enables anyone to automate workflows (Zaps) without coding. Its latest innovations include Zapier Central (AI agents that take action across your apps), Canvas for system design, and AI-assisted Zap creation. Plans start at $29.99/month with a free starter tier.",
+      vi: "Zapier là nền tảng kết nối ứng dụng đám mây dẫn đầu thị trường toàn cầu. Hỗ trợ hơn 6,000 phần mềm doanh nghiệp, Zapier cho phép bất kỳ ai cũng có thể tự động hóa quy trình (gọi là Zaps) mà không cần lập trình. Tính năng đột phá gồm Zapier Central (bot AI tự hành), Zapier Canvas và tự tạo quy trình bằng câu lệnh. Giá từ $29.99/tháng kèm gói miễn phí.",
+    },
+    hubs: ["meeting-productivity", "sales-crm"],
+    tags: ["Automation", "Integrations", "App Connector", "AI Bots", "No-Code", "Productivity"],
+    startingPrice: 29.99,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://zapier.com/?ref={code}",
+    adminAffiliateUrl: "https://zapier.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 9800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Growing businesses, non-technical teams, marketing departments, and enterprises demanding plug-and-play reliability.",
+        vi: "Doanh nghiệp đang phát triển, các phòng ban phi kỹ thuật, đội ngũ marketing và tổ chức lớn.",
+      },
+      notFor: {
+        en: "Developers seeking ultra-high-frequency sub-second financial trading operations.",
+        vi: "Các hệ thống giao dịch tài chính tốc độ cao đòi hỏi thời gian phản hồi dưới một giây.",
+      },
+      bottomLine: {
+        en: "The most widely supported, dependable, and user-friendly automation ecosystem on the web.",
+        vi: "Hệ sinh thái tự động hóa dễ dùng, ổn định và có lượng ứng dụng tích hợp lớn nhất thế giới.",
+      },
+    },
+    pros: {
+      en: ["Over 6,000+ official app integrations—virtually every modern SaaS is supported", "Zapier Central creates persistent AI agents that listen for events and take action", "Describe what you want in plain English to automatically build the entire Zap structure", "Enterprise-grade 99.99% uptime with SOC2 Type II compliance and bank-level encryption"],
+      vi: ["Hơn 6,000 ứng dụng tích hợp chính thức — hầu như mọi phần mềm SaaS hiện đại đều được hỗ trợ", "Zapier Central cho phép tạo các trợ lý AI thường trực tự lắng nghe sự kiện và xử lý công việc", "Chỉ cần mô tả bằng tiếng Anh hoặc tiếng Việt để AI tự dựng cấu trúc quy trình hoàn chỉnh", "Độ ổn định 99.99% chuẩn doanh nghiệp, đạt chứng chỉ bảo mật SOC2 Type II và mã hóa cao cấp"],
+    },
+    cons: {
+      en: ["Higher price per task than visual competitor Make.com on high-volume operations", "Multi-step Zaps require a paid subscription"],
+      vi: ["Chi phí cho mỗi tác vụ cao hơn so với Make.com nếu vận hành lượng dữ liệu lớn", "Các quy trình tự động hóa từ 3 bước trở lên yêu cầu phải đăng ký gói trả phí"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["100 tasks/mo", "Unlimited 2-step Zaps", "15-minute update time", "Basic AI features"] },
+      { name: "Professional", priceMonthly: 29.99, priceAnnualMonthly: 19.99, currency: "USD", features: ["750 tasks/mo", "Multi-step Zaps", "2-minute update time", "Webhooks & Filters"], isPopular: true },
+      { name: "Team", priceMonthly: 103.5, priceAnnualMonthly: 69, currency: "USD", features: ["2,000 tasks/mo", "Unlimited users", "Shared app connections", "Premier support"] }
+    ],
+    officialUrl: "https://zapier.com",
+    logoUrl: "/logos/zapier.png",
+    alternatives: ["make", "highlevel", "taskade"]
+  },
+  {
+    id: "hubspot-crm",
+    slug: "hubspot-crm",
+    name: "HubSpot AI CRM",
+    tagline: {
+      en: "Enterprise inbound marketing, sales pipeline, and customer service with Breeze AI.",
+      vi: "Hệ thống CRM, phễu bán hàng và chăm sóc khách hàng hàng đầu với trợ lý Breeze AI.",
+    },
+    description: {
+      en: "HubSpot unites sales, marketing, and customer service teams around a single source of customer truth, supercharged with Breeze AI agents and predictive analytics.",
+      vi: "HubSpot hợp nhất các bộ phận kinh doanh, tiếp thị và dịch vụ khách hàng vào một nền tảng dữ liệu duy nhất, được hỗ trợ bởi các AI agent Breeze và phân tích dự đoán.",
+    },
+    directAnswer: {
+      en: "HubSpot is the global standard for inbound marketing and CRM. Now enhanced with Breeze AI, HubSpot provides autonomous agents for customer support, content creation, and prospecting, alongside automated lead scoring and pipeline management. Features include email marketing, landing pages, deal tracking, and ticketing. Free CRM available, with paid Hubs starting at $20/month.",
+      vi: "HubSpot là chuẩn mực toàn cầu về inbound marketing và quản trị quan hệ khách hàng (CRM). Được nâng cấp với Breeze AI, HubSpot cung cấp các trợ lý AI tự động hỗ trợ khách hàng, sáng tạo nội dung và tìm kiếm khách tiềm năng, kết hợp chấm điểm lead và quản lý phễu doanh số. Có gói CRM miễn phí trọn đời, các gói chuyên sâu từ $20/tháng.",
+    },
+    hubs: ["sales-crm", "advertising"],
+    tags: ["CRM", "Inbound Marketing", "Sales Pipeline", "Breeze AI", "Lead Scoring", "Email Marketing"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://www.hubspot.com/?ref={code}",
+    adminAffiliateUrl: "https://www.hubspot.com/?ref=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 11200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Mid-market companies, scaling startups, inbound sales teams, and customer service departments.",
+        vi: "Doanh nghiệp vừa và lớn, startup đang mở rộng, đội ngũ bán hàng B2B và chăm sóc khách hàng.",
+      },
+      notFor: {
+        en: "Agencies looking for unlimited client sub-account white-labeling under a flat $97 license (use HighLevel instead).",
+        vi: "Các agency cần mô hình gắn thương hiệu riêng và tạo tài khoản con không giới hạn (nên dùng HighLevel).",
+      },
+      bottomLine: {
+        en: "The most polished, widely respected inbound sales and marketing CRM platform in the world.",
+        vi: "Nền tảng CRM và Inbound Marketing toàn diện, chuyên nghiệp và có uy tín nhất thế giới.",
+      },
+    },
+    pros: {
+      en: ["Extremely generous 100% free CRM tier supports unlimited contacts and core deal tracking", "Breeze AI agents handle automated customer service chat and personalized prospect research", "All-in-one ecosystem: seamlessly unites email marketing, landing pages, forms, and sales pipeline", "World-class HubSpot Academy certification and extensive App Marketplace with 1,500+ tools"],
+      vi: ["Gói CRM miễn phí trọn đời hỗ trợ lưu trữ liên hệ không giới hạn và theo dõi giao dịch cơ bản", "Trợ lý Breeze AI tự động trả lời hỗ trợ khách hàng và nghiên cứu thông tin khách hàng tiềm năng", "Hệ sinh thái tất cả trong một kết nối mượt mà giữa email marketing, landing page và phễu bán hàng", "Hệ thống đào tạo chứng chỉ HubSpot Academy uy tín và chợ ứng dụng với hơn 1,500 tiện ích"],
+    },
+    cons: {
+      en: ["Enterprise tier pricing increases significantly as contacts and advanced marketing hubs grow", "Mandatory onboarding fees apply on higher-tier Professional and Enterprise packages"],
+      vi: ["Chi phí nâng cấp lên các gói doanh nghiệp lớn tăng khá nhanh theo số lượng liên hệ tiếp thị", "Áp dụng phí đào tạo triển khai ban đầu bắt buộc đối với các gói Professional và Enterprise"],
+    },
+    pricingTiers: [
+      { name: "Free Tools", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Free CRM", "Forms & Landing pages", "Email marketing (2,000/mo)", "Shared inbox"] },
+      { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 15, currency: "USD", features: ["1,000 Marketing Contacts", "Remove HubSpot branding", "Email & Chat support", "Form automation"], isPopular: true },
+      { name: "Professional", priceMonthly: 890, priceAnnualMonthly: 800, currency: "USD", features: ["2,000 Contacts", "Omnichannel marketing automation", "Custom reporting", "Breeze AI"] }
+    ],
+    officialUrl: "https://www.hubspot.com",
+    logoUrl: "/logos/hubspot-crm.png",
+    alternatives: ["highlevel", "nutshell", "pipedrive"]
+  },
+  {
+    id: "pipedrive",
+    slug: "pipedrive",
+    name: "Pipedrive AI",
+    tagline: {
+      en: "The sales-first CRM with intelligent deal tracking, pipeline automation, and AI Sales Assistant.",
+      vi: "Phần mềm CRM chuyên sâu cho đội ngũ bán hàng với phễu giao dịch trực quan và AI hỗ trợ.",
+    },
+    description: {
+      en: "Pipedrive is designed by sales experts to help reps close more deals with visual sales pipelines, automated follow-up sequences, and AI-powered win-probability scoring.",
+      vi: "Pipedrive được thiết kế bởi các chuyên gia bán hàng hàng đầu, giúp nhân viên kinh doanh chốt nhiều đơn hơn nhờ phễu trực quan, tự động hóa chăm sóc và AI dự đoán tỷ lệ thành công.",
+    },
+    directAnswer: {
+      en: "Pipedrive is the industry's favorite visual sales CRM. Centered entirely on activity-based selling, it guides sales representatives through every stage of a deal with clear kanban pipelines, integrated email and calling, and an AI Sales Assistant that analyzes performance patterns and recommends immediate high-leverage actions. Plans start at $14/user/month with a 14-day free trial.",
+      vi: "Pipedrive là phần mềm CRM quản lý phễu bán hàng được yêu thích nhất hiện nay. Tập trung vào phương pháp bán hàng dựa trên hành động cụ thể, Pipedrive dẫn dắt nhân viên kinh doanh qua từng giai đoạn giao dịch với bảng kanban trực quan, gọi điện và gửi email trực tiếp, cùng Trợ lý AI phân tích và đưa ra lời khuyên chốt đơn kịp thời. Giá từ $14/người dùng/tháng kèm 14 ngày dùng thử.",
+    },
+    hubs: ["sales-crm"],
+    tags: ["Sales CRM", "Pipeline Management", "Sales Automation", "Lead Management", "Kanban"],
+    startingPrice: 14,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://www.pipedrive.com/?via={code}",
+    adminAffiliateUrl: "https://www.pipedrive.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.6,
+    reviewCount: 5400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "B2B sales teams, commercial real estate brokers, account executives, and closing-driven agencies.",
+        vi: "Các đội ngũ bán hàng B2B, môi giới bất động sản thương mại, nhân viên sales và các agency chốt deal.",
+      },
+      notFor: {
+        en: "Companies looking for full e-commerce shopping cart management or consumer ticket support.",
+        vi: "Doanh nghiệp thương mại điện tử cần giỏ hàng trực tuyến hoặc hệ thống tổng đài giải quyết khiếu nại.",
+      },
+      bottomLine: {
+        en: "The cleanest, most intuitive visual pipeline CRM for active sales teams and deal closers.",
+        vi: "Phần mềm quản lý phễu bán hàng trực quan, dễ dùng và thực dụng nhất cho đội ngũ kinh doanh.",
+      },
+    },
+    pros: {
+      en: ["Superb visual drag-and-drop Kanban pipeline gives instant visibility over deal stages", "AI Sales Assistant calculates win probability and highlights neglected high-value deals", "Full two-way email synchronization with automated open and click tracking notifications", "Native mobile app with audio call recording, geolocated client maps, and offline mode"],
+      vi: ["Bảng Kanban trực quan kéo thả giúp nắm bắt trạng thái từng thương vụ trong nháy mắt", "Trợ lý AI tính toán xác suất thắng đơn và cảnh báo các thương vụ giá trị cao bị bỏ quên", "Đồng bộ email 2 chiều đầy đủ với thông báo tức thì khi khách hàng mở thư hoặc bấm link", "Ứng dụng di động tiện lợi có ghi âm cuộc gọi, bản đồ định vị khách hàng và chế độ offline"],
+    },
+    cons: {
+      en: ["No free permanent tier available after the 14-day trial period", "Marketing email campaigns and phone caller features require separate add-on packs"],
+      vi: ["Không có gói miễn phí vĩnh viễn sau khi hết hạn 14 ngày dùng thử", "Các tính năng gửi email hàng loạt hoặc tổng đài gọi điện cần mua thêm gói tiện ích mở rộng"],
+    },
+    pricingTiers: [
+      { name: "Essential", priceMonthly: 14, priceAnnualMonthly: 14, currency: "USD", features: ["Lead & deal management", "Customizable pipelines", "Mobile app", "24/7 support"] },
+      { name: "Advanced", priceMonthly: 29, priceAnnualMonthly: 29, currency: "USD", features: ["Full email sync", "Automated email sequences", "AI Sales Assistant", "Custom field grouping"], isPopular: true },
+      { name: "Professional", priceMonthly: 49, priceAnnualMonthly: 49, currency: "USD", features: ["Streamlined team calling", "Document e-signing", "Advanced revenue reporting", "Team management"] }
+    ],
+    officialUrl: "https://www.pipedrive.com",
+    logoUrl: "/logos/pipedrive.png",
+    alternatives: ["nutshell", "highlevel", "hubspot-crm"]
+  },
+  {
+    id: "slides-ai",
+    slug: "slides-ai",
+    name: "SlidesAI",
+    tagline: {
+      en: "AI presentation maker that transforms text into designed slides in Google Slides.",
+      vi: "Tạo slide thuyết trình tự động từ văn bản ngay trong Google Slides chỉ với vài giây.",
+    },
+    description: {
+      en: "SlidesAI summarizes your text, notes, or research papers and automatically designs structured, formatted presentation slides directly inside Google Slides.",
+      vi: "SlidesAI tóm tắt nội dung văn bản, ghi chú hoặc tài liệu nghiên cứu và tự động tạo các slide thuyết trình đẹp mắt trực tiếp trong Google Slides.",
+    },
+    directAnswer: {
+      en: "SlidesAI is a seamless Google Slides extension that automates presentation design. By pasting any raw text or article, SlidesAI writes titles, formats bullet points, picks relevant stock photography, and designs slides in 100+ languages. Used by over 10 million students and professionals. Plans start at $10/month with a free tier of 3 presentations per month.",
+      vi: "SlidesAI là tiện ích mở rộng thông minh cho Google Slides giúp tự động hóa việc làm slide. Bằng cách dán nội dung thô hoặc bài viết, SlidesAI sẽ tự viết tiêu đề, căn chỉnh luận điểm, chọn hình ảnh minh họa phù hợp và dàn trang trên hơn 100 ngôn ngữ. Hơn 10 triệu người dùng tin cậy. Giá từ $10/tháng kèm gói miễn phí 3 bài/tháng.",
+    },
+    hubs: ["presentation-design"],
+    tags: ["Google Slides", "Presentation AI", "Slides", "Education", "Productivity"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.slidesai.io/?via={code}",
+    adminAffiliateUrl: "https://www.slidesai.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.6,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Students, teachers, business analysts, and corporate presenters who live inside Google Workspace.",
+        vi: "Học sinh, giáo viên, nhà phân tích và nhân viên văn phòng thường xuyên dùng Google Workspace.",
+      },
+      notFor: {
+        en: "Designers needing complex custom animations and kinetic 3D stage effects.",
+        vi: "Nhà thiết kế chuyên nghiệp cần các hiệu ứng chuyển động 3D phức tạp trên sân khấu.",
+      },
+      bottomLine: {
+        en: "The easiest way to turn written documents into Google Slides decks without opening new tabs.",
+        vi: "Cách thuận tiện nhất để biến văn bản thành slide Google Slides hoàn chỉnh mà không cần rời ứng dụng.",
+      },
+    },
+    pros: {
+      en: ["Operates directly inside Google Slides as an official Google Workspace Marketplace add-on", "Supports text summarization and slide formatting in over 100 languages", "Automatically cites sources and inserts high-resolution unsplash imagery", "Allows selecting presentation type (Educational, Sales, Conference, Summary)"],
+      vi: ["Hoạt động trực tiếp bên trong Google Slides thông qua tiện ích mở rộng chính thức", "Hỗ trợ tóm tắt văn bản và định dạng trang trình chiếu trên hơn 100 ngôn ngữ", "Tự động trích dẫn nguồn và chèn ảnh minh họa chất lượng cao phù hợp nội dung", "Cho phép tùy chọn phong cách bài thuyết trình (Giáo dục, Bán hàng, Hội nghị, Báo cáo)"],
+    },
+    cons: {
+      en: ["Free tier is restricted to 3 presentations per month with a 2,500 character limit per input", "Requires manual fine-tuning for complex branded enterprise slide masters"],
+      vi: ["Gói miễn phí giới hạn 3 bài thuyết trình mỗi tháng và tối đa 2,500 ký tự mỗi lần nhập", "Cần chỉnh sửa lại thủ công nếu doanh nghiệp có bộ nhận diện mẫu slide khắt khe"],
+    },
+    pricingTiers: [
+      { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["3 presentations/mo", "2,500 characters input", "Google Slides integration"] },
+      { name: "Pro", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["10 presentations/mo", "6,000 characters input", "AI topic search", "Export to PowerPoint"], isPopular: true },
+      { name: "Premium", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["Unlimited presentations", "12,000 characters input", "Custom brand templates", "Priority support"] }
+    ],
+    officialUrl: "https://www.slidesai.io",
+    logoUrl: "/logos/slides-ai.png",
+    alternatives: ["decktopus", "magicslides", "gamma"]
+  },
+  {
+    id: "canva-ai",
+    slug: "canva-ai",
+    name: "Canva Magic Studio",
+    tagline: {
+      en: "The complete all-in-one graphic design platform powered by intuitive AI Magic tools.",
+      vi: "Nền tảng thiết kế đồ họa toàn diện hàng đầu tích hợp bộ công cụ ma thuật AI Magic Studio.",
+    },
+    description: {
+      en: "Canva Magic Studio empowers anyone to generate custom graphics, presentations, social media banners, and video animations with generative text-to-image and Magic Switch resizing.",
+      vi: "Canva Magic Studio giúp bất kỳ ai cũng có thể tự thiết kế hình ảnh, slide thuyết trình, banner quảng cáo và video sinh động nhờ AI tạo ảnh từ văn bản và Magic Switch đổi kích thước thông minh.",
+    },
+    directAnswer: {
+      en: "Canva Magic Studio is the world's most accessible creative suite for individuals, teams, and enterprises. Featuring Magic Design, Magic Media (text-to-image and text-to-video), Magic Expand, and Magic Switch (instantly converting a presentation into a blog post or multi-format social campaign), it removes all technical friction from graphic design. Free tier available, Pro costs $15/month.",
+      vi: "Canva Magic Studio là bộ công cụ sáng tạo đồ họa phổ biến nhất hành tinh. Với các tính năng đột phá như Magic Design, Magic Media (tạo ảnh và video từ câu lệnh), Magic Expand và Magic Switch (chuyển đổi tức thì từ slide thuyết trình thành bài blog hoặc bộ banner mạng xã hội), Canva giúp việc thiết kế trở nên dễ dàng cho mọi người. Giá $15/tháng kèm gói miễn phí.",
+    },
+    hubs: ["advertising", "presentation-design"],
+    tags: ["Graphic Design", "Social Media", "Magic Studio", "Banner Design", "Presentations", "Templates"],
+    startingPrice: 15,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 30,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://partner.canva.com/c/{code}/",
+    adminAffiliateUrl: "https://partner.canva.com/c/asmire_admin/",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 16500,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Small business owners, social media managers, marketing agencies, educators, and creators.",
+        vi: "Chủ doanh nghiệp nhỏ, quản lý mạng xã hội, agency tiếp thị, giáo viên và nhà sáng tạo nội dung.",
+      },
+      notFor: {
+        en: "Advanced 3D game asset modellers requiring Blender or Maya geometry workflows.",
+        vi: "Kỹ sư dựng hình 3D game phức tạp cần các phần mềm chuyên sâu như Blender hay Maya.",
+      },
+      bottomLine: {
+        en: "The universally acclaimed leader in fast, beautiful, and accessible graphic and presentation design.",
+        vi: "Nền tảng thiết kế đồ họa và trình chiếu nhanh chóng, đẹp mắt và tiện lợi số 1 thế giới.",
+      },
+    },
+    pros: {
+      en: ["Massive library of 100M+ photos, videos, audio tracks, and professionally designed templates", "Magic Switch transforms one design into 20+ social media aspect ratios and document formats in 1-click", "Magic Grab allows selecting and moving any element inside a flat photograph effortlessly", "Generous 30-day free trial on Canva Pro with brand kit color and typography locks"],
+      vi: ["Kho tài nguyên khổng lồ hơn 100 triệu hình ảnh, video, âm thanh và mẫu thiết kế chuẩn", "Magic Switch tự động đổi kích thước một thiết kế sang hơn 20 tỷ lệ khung hình mạng xã hội trong 1 click", "Magic Grab cho phép tách và di chuyển bất kỳ chủ thể nào trong bức ảnh tĩnh một cách kỳ diệu", "Gói dùng thử 30 ngày đầy đủ tính năng Pro gồm quản lý bộ nhận diện thương hiệu chuẩn mực"],
+    },
+    cons: {
+      en: ["Exporting ultra-high-resolution print files with custom spot colors requires Pro tier", "Heavy web app can lag slightly on older mobile devices with complex 100+ layer designs"],
+      vi: ["Xuất file in ấn chất lượng cao không nén đòi hỏi phải duy trì gói Pro", "Ứng dụng web có thể hơi nặng trên các máy cấu hình yếu nếu mở file thiết kế có hàng trăm layer"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1M+ free templates", "Magic Design lite", "5GB cloud storage", "Real-time collaboration"] },
+      { name: "Canva Pro", priceMonthly: 15, priceAnnualMonthly: 10, currency: "USD", features: ["100M+ premium assets", "Unlimited Magic Studio tools", "Brand Kits", "1TB cloud storage"], isPopular: true },
+      { name: "Canva for Teams", priceMonthly: 30, priceAnnualMonthly: 25, currency: "USD", features: ["5 team members included", "Brand control workflows", "Approval systems", "Dedicated support"] }
+    ],
+    officialUrl: "https://www.canva.com",
+    logoUrl: "/logos/canva-ai.png",
+    alternatives: ["adcreative", "decktopus", "framer"]
+  },
+  {
+    id: "leonardo-ai",
+    slug: "leonardo-ai",
+    name: "Leonardo.Ai",
+    tagline: {
+      en: "Creative generative AI platform for concept art, game assets, and high-fidelity production design.",
+      vi: "Nền tảng AI sáng tạo hàng đầu cho thiết kế ý tưởng, tài nguyên game và hình ảnh thương mại chất lượng cao.",
+    },
+    description: {
+      en: "Leonardo.Ai empowers visual artists and creative teams to generate production-ready assets with fine-tuned custom models, interactive canvas editing, and 3D texture generation.",
+      vi: "Leonardo.Ai trao quyền cho các nghệ sĩ và nhóm thiết kế sáng tạo tài nguyên đồ họa chất lượng cao thông qua các mô hình AI tùy chỉnh, trình chỉnh sửa canvas trực quan và tạo vân bề mặt 3D.",
+    },
+    directAnswer: {
+      en: "Leonardo.Ai is a powerhouse generative image platform tailored for production artists, game studios, and marketing agencies. Unlike basic prompt-to-image tools, it offers fine-tuned LoRA model training, real-time Canvas inpainting/outpainting, and motion generation. It features a generous free tier (150 daily tokens) and paid plans from $12/month.",
+      vi: "Leonardo.Ai là nền tảng đồ họa AI chuyên sâu dành cho nghệ sĩ, studio phát triển game và nhóm thiết kế thương mại. Điểm vượt trội so với các công cụ tạo ảnh thông thường là khả năng tự huấn luyện mô hình LoRA riêng, trình chỉnh sửa Canvas mở rộng ảnh trực quan và chuyển ảnh thành video ngắn. Có gói miễn phí 150 token/ngày và các gói trả phí từ $12/tháng.",
+    },
+    hubs: ["presentation-design", "advertising"],
+    tags: ["AI Art", "Game Assets", "Image Generator", "LoRA Training", "Canvas Editor"],
+    startingPrice: 12,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://leonardo.ai/?via={code}",
+    adminAffiliateUrl: "https://leonardo.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3600,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Game developers, digital illustrators, and branding teams seeking full control over artistic style and model fine-tuning.",
+        vi: "Nhà phát triển game, họa sĩ kỹ thuật số và đội ngũ thương hiệu cần kiểm soát tuyệt đối phong cách nghệ thuật.",
+      },
+      notFor: {
+        en: "Users looking only for raw photorealistic stock photos without artistic stylization.",
+        vi: "Người dùng chỉ có nhu cầu tìm ảnh chụp đời thực cơ bản không cần tinh chỉnh nghệ thuật.",
+      },
+      bottomLine: {
+        en: "The most versatile and production-focused AI art generator available, bridging the gap between Midjourney aesthetic and Photoshop control.",
+        vi: "Công cụ đồ họa AI đa năng và hướng tới sản xuất hàng đầu hiện nay, kết hợp hoàn hảo giữa độ thẩm mỹ của Midjourney và quyền kiểm soát của Photoshop.",
+      },
+    },
+    pros: {
+      en: ["150 daily fast tokens on the permanently free plan", "Ability to train custom LoRA models on your own brand assets and character sheets", "Real-time AI Canvas for inpainting, outpainting, and element repositioning", "Motion generation converting still images into 4-second cinematic clips"],
+      vi: ["Cung cấp 150 token miễn phí mỗi ngày duy trì vĩnh viễn", "Cho phép huấn luyện mô hình LoRA tùy chỉnh theo nhận diện thương hiệu hoặc nhân vật riêng", "AI Canvas cho phép vẽ bù, mở rộng khung hình và thay đổi chi tiết trực quan theo thời gian thực", "Tính năng tạo chuyển động biến ảnh tĩnh thành video điện ảnh ngắn 4 giây mượt mà"],
+    },
+    cons: {
+      en: ["Advanced settings (guidance scale, prompt weights, scheduler) can overwhelm casual beginners", "Ultra-high resolution 4K upscaling consumes significant token credits"],
+      vi: ["Các thông số kỹ thuật chuyên sâu (guidance scale, trọng số prompt) có thể hơi phức tạp cho người mới", "Tính năng phóng to ảnh siêu nét 4K tiêu tốn khá nhiều token"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["150 fast tokens/day", "Up to 30 upscale/day", "Standard models", "Community feed"] },
+      { name: "Apprentice", priceMonthly: 12, priceAnnualMonthly: 10, currency: "USD", features: ["8,500 fast tokens/mo", "Unlimited slow generations", "10 concurrent jobs", "Private generations"], isPopular: true },
+      { name: "Artisan Unlimited", priceMonthly: 30, priceAnnualMonthly: 24, currency: "USD", features: ["25,000 fast tokens/mo", "Unlimited relaxed generations", "Custom model training", "Priority support"] }
+    ],
+    officialUrl: "https://leonardo.ai",
+    logoUrl: "/logos/leonardo-ai.png",
+    alternatives: ["canva-ai", "adcreative", "runway"]
+  },
+  {
+    id: "ideogram",
+    slug: "ideogram",
+    name: "Ideogram AI",
+    tagline: {
+      en: "State-of-the-art AI image generator renowned for flawless typography and graphic design compositions.",
+      vi: "Công cụ tạo ảnh AI đột phá nổi tiếng với khả năng hiển thị chữ viết chính xác tuyệt đối và bố cục đồ họa đẹp mắt.",
+    },
+    description: {
+      en: "Ideogram solves the hardest challenge in generative image models: coherent, stylized text rendering. It is the premier tool for creating typography posters, t-shirt prints, logos, and advertising graphics.",
+      vi: "Ideogram giải quyết thách thức lớn nhất của các mô hình vẽ tranh AI: hiển thị chữ viết chính xác, đúng chính tả và có tính thẩm mỹ cao. Đây là lựa chọn số một để thiết kế poster, áo thun, logo và ấn phẩm quảng cáo.",
+    },
+    directAnswer: {
+      en: "Ideogram 2.0 is the gold standard for text-in-image generation and graphic typography. While other models produce gibberish lettering, Ideogram renders long words, quotes, and brand slogans with crisp vector-like fidelity and color palettes. Plans start at $8/month with a free daily plan.",
+      vi: "Ideogram 2.0 là thước đo chuẩn mực cho việc vẽ chữ trong hình ảnh và thiết kế typography. Trong khi các công cụ AI khác thường làm biến dạng con chữ, Ideogram hiển thị chính xác từng từ ngữ, câu trích dẫn và slogan thương hiệu với độ sắc nét như đồ họa vector. Giá từ $8/tháng kèm gói miễn phí hàng ngày.",
+    },
+    hubs: ["advertising", "presentation-design"],
+    tags: ["AI Typography", "Graphic Design", "Logo Design", "T-Shirt Design", "Text to Image"],
+    startingPrice: 8,
+    hasFreePlan: true,
+    hasFreeTrial: false,
+    trialDays: 0,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://ideogram.ai/?via={code}",
+    adminAffiliateUrl: "https://ideogram.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 2100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Graphic designers, print-on-demand sellers, and marketers needing accurate text, slogans, and typography on visual assets.",
+        vi: "Nhà thiết kế đồ họa, người làm Print-on-Demand (POD) và marketer cần chèn chữ, slogan chuẩn xác lên ấn phẩm hình ảnh.",
+      },
+      notFor: {
+        en: "Video editors seeking animated motion or timeline-based video generation.",
+        vi: "Biên tập viên video cần dựng chuyển động hoạt họa hoặc dựng video theo dòng thời gian.",
+      },
+      bottomLine: {
+        en: "If your creative visual requires readable words, logos, or typography layouts, Ideogram is unchallenged across the AI landscape.",
+        vi: "Nếu thiết kế của bạn cần hiển thị chữ rõ ràng, logo hoặc bố cục typography, Ideogram là công cụ số một không đối thủ.",
+      },
+    },
+    pros: {
+      en: ["Unrivaled accuracy in rendering English and Latin typography without spelling artifacts", "Magic Prompt feature automatically enriches brief prompts into photorealistic instructions", "Style palettes and aspect ratio locks for social media and merchandise sizing", "Fast web generation with free daily credits for registered users"],
+      vi: ["Độ chính xác vô song trong việc vẽ chữ viết không bị lỗi chính tả hay biến dạng ký tự", "Tính năng Magic Prompt tự động làm giàu câu lệnh ngắn thành hướng dẫn chi tiết sống động", "Hỗ trợ sẵn các bảng phối màu phong cách và cố định tỷ lệ khung hình cho mạng xã hội", "Tốc độ tạo ảnh nhanh trên trình duyệt kèm lượt dùng miễn phí mỗi ngày"],
+    },
+    cons: {
+      en: ["Free tier generations are publicly visible in the community explorer", "Limited inpainting and brush-based localized editing compared to Photoshop"],
+      vi: ["Các ảnh tạo ở gói miễn phí được công khai trên bảng tin cộng đồng", "Tính năng xóa sửa vùng chọn cục bộ (inpainting) còn cơ bản hơn Photoshop"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 slow prompts/day", "Public gallery", "Standard resolution", "Magic Prompt"] },
+      { name: "Basic", priceMonthly: 8, priceAnnualMonthly: 7, currency: "USD", features: ["400 priority prompts/mo", "100 slow prompts/day", "Private generation mode", "Image editor access"], isPopular: true },
+      { name: "Plus", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["1,000 priority prompts/mo", "Unlimited slow prompts", "Bulk generation", "Top priority rendering"] }
+    ],
+    officialUrl: "https://ideogram.ai",
+    logoUrl: "/logos/ideogram.png",
+    alternatives: ["canva-ai", "leonardo-ai", "adcreative"]
+  },
+  {
+    id: "replit",
+    slug: "replit",
+    name: "Replit AI Agent",
+    tagline: {
+      en: "Cloud-based collaborative IDE with an autonomous AI agent that builds, tests, and deploys full-stack apps.",
+      vi: "Môi trường lập trình đám mây tích hợp trợ lý AI tự động xây dựng, kiểm thử và triển khai ứng dụng trọn gói.",
+    },
+    description: {
+      en: "Replit combines an online multi-language IDE with Replit Agent, an autonomous software engineer capable of taking plain-English requirements and constructing working web applications, databases, and APIs in minutes.",
+      vi: "Replit kết hợp môi trường lập trình đám mây đa ngôn ngữ với Replit Agent - kỹ sư phần mềm AI tự trị có khả năng nhận yêu cầu bằng văn bản và xây dựng hoàn chỉnh ứng dụng web, cơ sở dữ liệu và API trong vài phút.",
+    },
+    directAnswer: {
+      en: "Replit Agent is an autonomous cloud coding assistant that handles everything from scaffolding project files and installing dependencies to configuring PostgreSQL databases and deploying live URLs. It operates directly inside Replit's cloud container environment. Plans start at $25/month for Replit Core with agent access.",
+      vi: "Replit Agent là trợ lý lập trình đám mây tự động đảm nhiệm toàn bộ quy trình: từ khởi tạo cấu trúc thư mục, cài đặt gói phụ thuộc, thiết lập cơ sở dữ liệu PostgreSQL cho đến xuất bản đường dẫn website chạy thực tế. Giá gói Replit Core từ $25/tháng kèm quyền truy cập AI Agent.",
+    },
+    hubs: ["research-agent", "website-builder"],
+    tags: ["AI Coding Agent", "Cloud IDE", "Full-Stack Deployment", "PostgreSQL", "No-Setup Coding"],
+    startingPrice: 25,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Impact",
+    affiliateUrlTemplate: "https://replit.com/?via={code}",
+    adminAffiliateUrl: "https://replit.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Founders, solo entrepreneurs, and developers who want to prototype and host full-stack SaaS apps without setting up local dev environments.",
+        vi: "Nhà sáng lập, lập trình viên độc lập muốn tạo mẫu nhanh và triển khai ứng dụng SaaS trực tiếp lên mạng mà không cần cài đặt môi trường máy cá nhân.",
+      },
+      notFor: {
+        en: "Large enterprise engineering organizations bound strictly to on-premise air-gapped repositories.",
+        vi: "Các tập đoàn lớn bắt buộc phải lưu trữ mã nguồn nội bộ trên máy chủ bảo mật vật lý riêng biệt.",
+      },
+      bottomLine: {
+        en: "Replit Agent removes 95% of developer friction, turning conversational prompts into live, clickable web applications with database backends.",
+        vi: "Replit Agent xóa bỏ 95% rào cản kỹ thuật thiết lập ban đầu, biến những câu mô tả bằng văn bản thành ứng dụng web hoạt động thực tế có cơ sở dữ liệu.",
+      },
+    },
+    pros: {
+      en: ["Complete zero-setup development: works instantly from any modern web browser or iPad", "Replit Agent autonomously installs npm/pip packages, fixes runtime bugs, and runs dev servers", "Built-in one-click cloud hosting with custom domains, SSL certificates, and serverless Postgres", "Real-time multiplayer coding and pair programming with team members"],
+      vi: ["Hoàn toàn không cần cài đặt phần mềm: lập trình ngay trên trình duyệt web hoặc máy tính bảng", "Replit Agent tự động cài đặt thư viện phụ thuộc, tự sửa lỗi phát sinh và khởi chạy máy chủ", "Triển khai đám mây chỉ bằng 1 cú nhấp chuột có sẵn tên miền tùy chỉnh, chứng chỉ SSL và Postgres", "Hỗ trợ làm việc nhóm thời gian thực (multiplayer) mượt mà như Google Docs"],
+    },
+    cons: {
+      en: ["Requires active internet connection since all computation runs on Replit cloud containers", "Cloud resource scaling costs can grow for high-traffic production workloads"],
+      vi: ["Bắt buộc phải có mạng internet vì toàn bộ mã nguồn và máy chủ chạy trên đám mây Replit", "Chi phí tài nguyên đám mây có thể tăng khi ứng dụng có lượng truy cập lớn trong thực tế"],
+    },
+    pricingTiers: [
+      { name: "Starter", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Basic cloud workspaces", "Community access", "Standard compute", "Public repls"] },
+      { name: "Replit Core", priceMonthly: 25, priceAnnualMonthly: 20, currency: "USD", features: ["Replit Agent access", "Unlimited private repls", "Fast cloud compute", "$10/mo deployment credits"], isPopular: true },
+      { name: "Teams", priceMonthly: 40, priceAnnualMonthly: 35, currency: "USD", features: ["Centralized billing", "Role-based access control", "Shared agent memory", "Dedicated support"] }
+    ],
+    officialUrl: "https://replit.com",
+    logoUrl: "/logos/replit.png",
+    alternatives: ["cursor", "bolt-new", "lovable"]
+  },
+  {
+    id: "windsurf",
+    slug: "windsurf",
+    name: "Windsurf Editor",
+    tagline: {
+      en: "Agentic AI code editor by Codeium featuring Cascade flow for synchronized multi-file reasoning and deep codebase context.",
+      vi: "Trình soạn thảo mã nguồn tích hợp AI Agent từ Codeium với luồng Cascade thấu hiểu sâu toàn bộ codebase và đồng bộ nhiều file.",
+    },
+    description: {
+      en: "Windsurf is an agentic IDE designed to keep developers in deep flow. Its Cascade engine acts as a collaborative partner that reasons across your entire project, anticipates terminal commands, and edits code alongside you in real time.",
+      vi: "Windsurf là IDE tích hợp AI Agent thế hệ mới từ Codeium. Công nghệ Cascade đóng vai trò như một cộng sự lập trình thông minh: thấu hiểu toàn bộ dự án, dự đoán lệnh terminal và tự động chỉnh sửa code đồng bộ trên nhiều tệp tin.",
+    },
+    directAnswer: {
+      en: "Windsurf (created by Codeium) is a native fork of VS Code built from the ground up for agentic programming. Its standout feature, Cascade, combines conversational AI with proactive autonomous action—reading linter errors, running shell commands, and applying multi-file edits simultaneously. Plans start at $15/month with a free starter plan.",
+      vi: "Windsurf (được phát triển bởi đội ngũ Codeium) là phiên bản tối ưu của VS Code dành riêng cho kỷ nguyên AI Agent. Điểm cốt lõi là Cascade - kết hợp giữa trò chuyện thông minh và hành động tự trị: đọc thông báo lỗi của linter, thực thi lệnh terminal và sửa nhiều file cùng lúc. Giá từ $15/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["research-agent"],
+    tags: ["AI IDE", "Cascade Agent", "Codeium", "Multi-File Editing", "Context Awareness"],
+    startingPrice: 15,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://codeium.com/windsurf?via={code}",
+    adminAffiliateUrl: "https://codeium.com/windsurf?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 1850,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Software engineers and full-stack developers who want a seamless, fast AI coding assistant that feels deeply native to VS Code.",
+        vi: "Lập trình viên phần mềm và full-stack developer muốn một trợ lý AI viết code tốc độ cao, thấu hiểu dự án và tương thích hoàn toàn với VS Code.",
+      },
+      notFor: {
+        en: "Non-technical users looking for no-code visual drag-and-drop website builders.",
+        vi: "Người dùng không chuyên kỹ thuật muốn kéo thả web không cần chạm vào code.",
+      },
+      bottomLine: {
+        en: "The chief rival to Cursor, Windsurf delivers unmatched flow state responsiveness and revolutionary multi-file context tracking.",
+        vi: "Đối thủ cạnh tranh trực tiếp lớn nhất của Cursor, Windsurf mang đến trải nghiệm lập trình tập trung cao độ và khả năng đồng bộ ngữ cảnh đa file vượt trội.",
+      },
+    },
+    pros: {
+      en: ["Cascade engine deeply coordinates terminal actions, directory traversal, and code edits", "Superfast response latency powered by Codeium's proprietary indexing infrastructure", "100% compatibility with existing VS Code extensions, themes, and keybindings", "Generous free tier with real-time autocompletions and basic Cascade access"],
+      vi: ["Công cụ Cascade kết hợp chặt chẽ giữa lệnh dòng lệnh terminal, duyệt cây thư mục và chỉnh sửa code", "Độ trễ phản hồi cực thấp nhờ hạ tầng lập chỉ mục mã nguồn độc quyền của Codeium", "Tương thích 100% với các tiện ích mở rộng (extension), giao diện và phím tắt của VS Code", "Gói miễn phí hào phóng với tính năng gợi ý code thời gian thực và trải nghiệm Cascade cơ bản"],
+    },
+    cons: {
+      en: ["Still rolling out advanced enterprise administrative audit dashboards", "Requires initial full codebase indexing on massive gigabyte-scale repositories"],
+      vi: ["Các tính năng quản trị bảng điều khiển kiểm toán cấp doanh nghiệp lớn đang được tiếp tục hoàn thiện", "Cần thời gian lập chỉ mục ban đầu đối với các kho mã nguồn khổng lồ hàng chục gigabyte"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited fast autocomplete", "Basic Cascade agent credits", "Context indexation", "Community support"] },
+      { name: "Pro", priceMonthly: 15, priceAnnualMonthly: 12, currency: "USD", features: ["Unlimited Cascade agent access", "Claude 3.5 Sonnet & GPT-4o models", "Priority index servers", "Zero data training lock"], isPopular: true },
+      { name: "Enterprise", priceMonthly: 30, priceAnnualMonthly: 25, currency: "USD", features: ["SAML SSO & audit logs", "Custom self-hosted indexing", "Dedicated customer success", "SOC2 Type II compliance"] }
+    ],
+    officialUrl: "https://codeium.com/windsurf",
+    logoUrl: "/logos/windsurf.png",
+    alternatives: ["cursor", "bolt-new", "replit"]
+  },
+  {
+    id: "chatpdf",
+    slug: "chatpdf",
+    name: "ChatPDF",
+    tagline: {
+      en: "Instant AI document assistant that analyzes, extracts, and summarizes lengthy PDF documents and research papers.",
+      vi: "Trợ lý tài liệu AI thông minh giúp phân tích, trích xuất dữ liệu và tóm tắt nhanh các file PDF và bài nghiên cứu dài.",
+    },
+    description: {
+      en: "ChatPDF turns any PDF into a conversational partner. Students, researchers, and legal professionals upload textbooks, financial statements, and contracts to extract instant citations, summaries, and answers.",
+      vi: "ChatPDF biến bất kỳ tài liệu PDF nào thành một đối tác trò chuyện thông minh. Sinh viên, nhà nghiên cứu và luật sư có thể tải lên sách giáo trình, báo cáo tài chính hay hợp đồng để trích xuất ngay trích dẫn, tóm tắt và lời giải đáp chính xác.",
+    },
+    directAnswer: {
+      en: "ChatPDF is the world's most widely adopted document Q&A assistant. Using semantic embeddings, it reads through 1,000+ page technical manuals, annual reports, and research papers, answering questions with exact page references. Plans start at $5/month with a free daily plan.",
+      vi: "ChatPDF là công cụ hỏi đáp tài liệu phổ biến nhất hiện nay. Ứng dụng công nghệ vector embedding, phần mềm có thể đọc hiểu tài liệu hướng dẫn kỹ thuật dày hơn 1.000 trang, báo cáo tài chính và luận văn, trả lời kèm số trang trích dẫn chính xác. Giá từ $5/tháng kèm gói dùng thử miễn phí.",
+    },
+    hubs: ["research-agent", "meeting-productivity"],
+    tags: ["PDF AI", "Document Q&A", "Research Assistant", "Academic Summaries", "Paper Reader"],
+    startingPrice: 5,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.chatpdf.com/?via={code}",
+    adminAffiliateUrl: "https://www.chatpdf.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Students, academic researchers, accountants, and lawyers reviewing dense technical or legal PDF files.",
+        vi: "Sinh viên, nhà nghiên cứu học thuật, kế toán viên và luật sư thường xuyên phải đọc tài liệu kỹ thuật hoặc hợp đồng pháp lý dày đặc.",
+      },
+      notFor: {
+        en: "Teams needing complex spreadsheet calculations or formula execution.",
+        vi: "Người dùng cần tính toán công thức bảng tính Excel phức tạp.",
+      },
+      bottomLine: {
+        en: "The easiest and most dependable tool for extracting factual information, executive summaries, and citations from any PDF.",
+        vi: "Công cụ đơn giản và đáng tin cậy nhất để trích xuất thông tin thực tế, bản tóm tắt điều hành và nguồn trích dẫn từ bất kỳ file PDF nào.",
+      },
+    },
+    pros: {
+      en: ["Upload and chat instantly without mandatory sign-up or complex onboarding", "Exact page number citations for every fact or quotation referenced in the answer", "Multi-language support: ask questions in Vietnamese or English on foreign-language PDFs", "Organized folder collections and multi-PDF synthesis on the Plus tier"],
+      vi: ["Tải file lên và hỏi đáp được ngay mà không bắt buộc phải đăng ký tài khoản rườm rà", "Trích dẫn số trang chính xác cho từng dữ kiện hoặc câu trích dẫn trong câu trả lời", "Hỗ trợ đa ngôn ngữ vượt trội: hỏi bằng tiếng Việt trên tài liệu gốc bằng tiếng Anh hoặc tiếng Đức", "Quản lý theo thư mục và tổng hợp thông tin từ nhiều file PDF cùng lúc trên gói Plus"],
+    },
+    cons: {
+      en: ["Free tier caps PDF file size at 120 pages (32MB) per document", "Scanned handwritten documents require OCR pre-processing for best accuracy"],
+      vi: ["Gói miễn phí giới hạn dung lượng file tối đa 120 trang (32MB) cho mỗi tài liệu", "Tài liệu viết tay chụp mờ cần được quét OCR rõ nét trước để đạt độ chính xác cao nhất"],
+    },
+    pricingTiers: [
+      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2 PDFs/day (up to 120 pages)", "50 questions/day", "32MB file limit", "Export chat history"] },
+      { name: "Plus", priceMonthly: 5, priceAnnualMonthly: 4.16, currency: "USD", features: ["Unlimited PDFs & questions", "Up to 2,000 pages/PDF (50MB)", "Multi-PDF folder chats", "Priority AI model reasoning"], isPopular: true },
+      { name: "Team", priceMonthly: 15, priceAnnualMonthly: 12, currency: "USD", features: ["Shared team workspaces", "Centralized PDF vault", "Admin controls", "Dedicated API access"] }
+    ],
+    officialUrl: "https://www.chatpdf.com",
+    logoUrl: "/logos/chatpdf.png",
+    alternatives: ["perplexity", "paperguide", "notion-ai"]
+  },
+  {
+    id: "turnitin",
+    slug: "turnitin",
+    name: "Turnitin AI Detector",
+    tagline: {
+      en: "Industry-standard academic integrity platform for detecting AI-generated text and cross-institutional plagiarism.",
+      vi: "Nền tảng kiểm định tính liêm chính học thuật chuẩn mực thế giới về phát hiện văn bản AI và chống đạo văn liên trường.",
+    },
+    description: {
+      en: "Turnitin is the premier plagiarism and AI writing detection system used by 16,000+ educational institutions globally, offering comprehensive similarity scoring and machine-learning text classification.",
+      vi: "Turnitin là hệ thống kiểm tra đạo văn và phát hiện văn bản do AI tạo hàng đầu thế giới được hơn 16.000 trường đại học và viện nghiên cứu tin dùng, cung cấp điểm tương đồng toàn diện và phân tích cấu trúc ngôn ngữ.",
+    },
+    directAnswer: {
+      en: "Turnitin is the global academic benchmark for plagiarism and AI text detection. Its AI Writing Detection model boasts a 98% confidence score in identifying content generated by GPT-4, Claude, and Gemini, cross-referencing against an archive of 1.8 billion student papers and scholarly journals. Institutional pricing with custom quote models.",
+      vi: "Turnitin là chuẩn mực học thuật quốc tế về phát hiện đạo văn và văn bản AI. Mô hình AI Writing Detection đạt độ tin cậy tới 98% khi nhận diện nội dung do GPT-4, Claude và Gemini tạo ra, đối soát với kho dữ liệu khổng lồ gồm 1,8 tỷ bài luận và tạp chí khoa học toàn cầu. Báo giá tùy chỉnh theo quy mô trường học và viện nghiên cứu.",
+    },
+    hubs: ["ai-detection"],
+    tags: ["AI Detection", "Plagiarism Checker", "Academic Integrity", "University Standard", "Similarity Report"],
+    startingPrice: 20,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.turnitin.com/?via={code}",
+    adminAffiliateUrl: "https://www.turnitin.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.6,
+    reviewCount: 5100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Universities, academic faculties, publishers, and schools requiring certified anti-plagiarism and AI writing verification.",
+        vi: "Các trường đại học, hội đồng học thuật, nhà xuất bản và cơ sở đào tạo cần chứng nhận chống đạo văn và kiểm định văn bản AI chuẩn mực.",
+      },
+      notFor: {
+        en: "Individual casual bloggers looking for a 1-click free grammar fix.",
+        vi: "Người viết blog cá nhân thông thường chỉ cần kiểm tra lỗi ngữ pháp cơ bản miễn phí.",
+      },
+      bottomLine: {
+        en: "The universally recognized gold standard in higher education integrity, offering the most extensive global comparison database.",
+        vi: "Thước đo tiêu chuẩn vàng được công nhận trên toàn thế giới trong giáo dục đại học, sở hữu kho dữ liệu đối chiếu học thuật rộng lớn nhất.",
+      },
+    },
+    pros: {
+      en: ["Massive global repository of 1.8B+ student papers, 91B+ active web pages, and 190M+ scholarly articles", "Specialized AI writing detection trained specifically on synthetic model patterns", "Comprehensive color-coded Similarity Report showing matched sentence sources", "Seamless integration into Canvas, Blackboard, Moodle, and Google Classroom"],
+      vi: ["Kho lưu trữ toàn cầu khổng lồ với hơn 1,8 tỷ bài luận sinh viên, 91 tỷ trang web và 190 triệu bài báo khoa học", "Thuật toán phát hiện văn bản AI chuyên biệt được huấn luyện trên cấu trúc tạo từ của các mô hình LLM lớn", "Báo cáo tương đồng (Similarity Report) trực quan phân biệt bằng mã màu rõ ràng chỉ rõ từng nguồn gốc", "Tích hợp hoàn hảo vào các hệ thống quản lý học tập phổ biến như Canvas, Blackboard, Moodle"],
+    },
+    cons: {
+      en: ["Primarily sold via institutional educational licenses rather than self-serve monthly credit card plans", "False positive considerations require human pedagogical review for fair grading"],
+      vi: ["Chủ yếu phân phối qua giấy phép tổ chức trường học thay vì đăng ký tự động theo tháng cho cá nhân", "Cần sự đánh giá đối chiếu của giảng viên để đảm bảo tính công bằng trước tỷ lệ dương tính giả"],
+    },
+    pricingTiers: [
+      { name: "Instructor / Pilot", priceMonthly: 20, priceAnnualMonthly: 15, currency: "USD", features: ["Similarity Report", "AI writing percentage", "LMS integration", "Standard support"] },
+      { name: "Campus License", priceMonthly: 50, priceAnnualMonthly: 40, currency: "USD", features: ["Unlimited student submissions", "Full institutional database", "Originality checking", "Custom API integration"], isPopular: true },
+      { name: "Enterprise Consortium", priceMonthly: 120, priceAnnualMonthly: 100, currency: "USD", features: ["Multi-campus federation", "Dedicated account director", "Custom data retention", "SLA uptime guarantee"] }
+    ],
+    officialUrl: "https://www.turnitin.com",
+    logoUrl: "/logos/turnitin.png",
+    alternatives: ["gptzero", "originality", "winston"]
+  },
 ];
 
 export function getToolBySlug(slug: string): ToolItem | undefined {

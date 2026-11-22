@@ -315,7 +315,188 @@ export const TOOL_PLATFORM_META: Record<string, PlatformReviewMeta> = {
     "g2": "browse-ai",
     "ph": "browse-ai",
     "reddit": "r/webscraping/search/?q=browse+ai"
-  }
+  },
+
+  "heygen": {
+    "domain": "heygen.com",
+    "g2": "heygen",
+    "ph": "heygen",
+    "reddit": "r/HeyGen"
+  },
+  "invideo": {
+    "domain": "invideo.io",
+    "g2": "invideo",
+    "ph": "invideo",
+    "reddit": "r/InVideo"
+  },
+  "runway": {
+    "domain": "runwayml.com",
+    "g2": "runway",
+    "ph": "runway-gen-3",
+    "reddit": "r/runwayml"
+  },
+  "cursor": {
+    "domain": "cursor.com",
+    "g2": "cursor",
+    "ph": "cursor-ai",
+    "reddit": "r/cursor"
+  },
+  "bolt-new": {
+    "domain": "bolt.new",
+    "g2": "stackblitz",
+    "ph": "bolt-new",
+    "reddit": "r/BoltNew"
+  },
+  "lovable": {
+    "domain": "lovable.dev",
+    "g2": "lovable",
+    "ph": "lovable",
+    "reddit": "r/LovableDev"
+  },
+  "perplexity": {
+    "domain": "perplexity.ai",
+    "g2": "perplexity-ai",
+    "ph": "perplexity-ai",
+    "reddit": "r/perplexity_ai"
+  },
+  "notion-ai": {
+    "domain": "notion.so",
+    "g2": "notion",
+    "ph": "notion",
+    "reddit": "r/Notion"
+  },
+  "gptzero": {
+    "domain": "gptzero.me",
+    "g2": "gptzero",
+    "ph": "gptzero",
+    "reddit": "r/GPTZero"
+  },
+  "otter-ai": {
+    "domain": "otter.ai",
+    "g2": "otter-ai",
+    "ph": "otter-ai",
+    "reddit": "r/OtterAI"
+  },
+  "clickup-ai": {
+    "domain": "clickup.com",
+    "g2": "clickup",
+    "ph": "clickup",
+    "reddit": "r/clickup"
+  },
+  "framer": {
+    "domain": "framer.com",
+    "g2": "framer",
+    "ph": "framer",
+    "reddit": "r/framer"
+  },
+  "murf-ai": {
+    "domain": "murf.ai",
+    "g2": "murf-ai",
+    "ph": "murf-ai",
+    "reddit": "r/MurfAI"
+  },
+  "speechify": {
+    "domain": "speechify.com",
+    "g2": "speechify",
+    "ph": "speechify",
+    "reddit": "r/Speechify"
+  },
+  "suno": {
+    "domain": "suno.com",
+    "g2": "suno-ai",
+    "ph": "suno",
+    "reddit": "r/SunoAI"
+  },
+  "copy-ai": {
+    "domain": "copy.ai",
+    "g2": "copy-ai",
+    "ph": "copy-ai",
+    "reddit": "r/copyai"
+  },
+  "quillbot": {
+    "domain": "quillbot.com",
+    "g2": "quillbot",
+    "ph": "quillbot",
+    "reddit": "r/Quillbot"
+  },
+  "klaviyo": {
+    "domain": "klaviyo.com",
+    "g2": "klaviyo",
+    "ph": "klaviyo",
+    "reddit": "r/Klaviyo"
+  },
+  "make": {
+    "domain": "make.com",
+    "g2": "make",
+    "ph": "make-formerly-integromat",
+    "reddit": "r/Integromat"
+  },
+  "zapier": {
+    "domain": "zapier.com",
+    "g2": "zapier",
+    "ph": "zapier",
+    "reddit": "r/zapier"
+  },
+  "hubspot-crm": {
+    "domain": "hubspot.com",
+    "g2": "hubspot-crm",
+    "ph": "hubspot-crm",
+    "reddit": "r/hubspot"
+  },
+  "pipedrive": {
+    "domain": "pipedrive.com",
+    "g2": "pipedrive",
+    "ph": "pipedrive",
+    "reddit": "r/pipedrive"
+  },
+  "slides-ai": {
+    "domain": "slidesai.io",
+    "g2": "slidesai",
+    "ph": "slidesai",
+    "reddit": "r/SlidesAI"
+  },
+  "canva-ai": {
+    "domain": "canva.com",
+    "g2": "canva",
+    "ph": "canva",
+    "reddit": "r/canva"
+  },
+  "leonardo-ai": {
+    "domain": "leonardo.ai",
+    "g2": "leonardo-ai",
+    "ph": "leonardo-ai",
+    "reddit": "r/leonardoai"
+  },
+  "ideogram": {
+    "domain": "ideogram.ai",
+    "g2": "ideogram",
+    "ph": "ideogram-ai",
+    "reddit": "r/ideogramai"
+  },
+  "replit": {
+    "domain": "replit.com",
+    "g2": "replit",
+    "ph": "replit",
+    "reddit": "r/replit"
+  },
+  "windsurf": {
+    "domain": "codeium.com",
+    "g2": "codeium",
+    "ph": "windsurf-by-codeium",
+    "reddit": "r/Codeium"
+  },
+  "chatpdf": {
+    "domain": "chatpdf.com",
+    "g2": "chatpdf",
+    "ph": "chatpdf",
+    "reddit": "r/ChatPDF"
+  },
+  "turnitin": {
+    "domain": "turnitin.com",
+    "g2": "turnitin",
+    "ph": "turnitin",
+    "reddit": "r/Turnitin"
+  },
 };
 
 export function getVerifiedReviewUrl(
