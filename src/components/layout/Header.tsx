@@ -58,7 +58,7 @@ export function Header({ locale }: HeaderProps) {
     { label: dict.nav.tools, href: `/${locale}/tools` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
-    { label: dict.nav.blog, href: `/${locale}/blog` },
+    { label: dict.nav.news || dict.nav.blog, href: `/${locale}/news` },
     { label: "Member", href: `/${locale}/membership` },
   ];
 

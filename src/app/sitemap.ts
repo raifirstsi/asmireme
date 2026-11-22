@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
 
     // Main section hubs
-    const mainSections = ["tools", "categories", "compare", "rankings", "deals", "blog", "membership", "methodology", "editorial-policy", "affiliate-disclosure", "member-terms", "refund-policy", "terms", "privacy", "about", "contact"];
+    const mainSections = ["tools", "categories", "compare", "rankings", "deals", "news", "membership", "methodology", "editorial-policy", "affiliate-disclosure", "member-terms", "refund-policy", "terms", "privacy", "about", "contact"];
     for (const section of mainSections) {
       entries.push({
         url: `${baseUrl}/${locale}/${section}`,
@@ -79,18 +79,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    // In-Depth Blog Guides
+    // In-Depth News & Reviews
     for (const post of BLOG_POSTS) {
       entries.push({
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        url: `${baseUrl}/${locale}/news/${post.slug}`,
         lastModified: post.lastReviewedDate,
         changeFrequency: "weekly",
         priority: 0.88,
         alternates: {
           languages: {
-            en: `${baseUrl}/en/blog/${post.slug}`,
-            vi: `${baseUrl}/vi/blog/${post.slug}`,
-            "x-default": `${baseUrl}/en/blog/${post.slug}`,
+            en: `${baseUrl}/en/news/${post.slug}`,
+            vi: `${baseUrl}/vi/news/${post.slug}`,
+            "x-default": `${baseUrl}/en/news/${post.slug}`,
           },
         },
       });

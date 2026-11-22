@@ -4,7 +4,7 @@ import { Locale } from "@/lib/i18n";
 import { CATEGORY_HUBS } from "@/data/categories-data";
 import { 
   Video, Mic, FileText, ShieldAlert, Presentation, 
-  Clock, Headphones, Sparkles, Layout, Cpu 
+  Clock, Headphones, Sparkles, Layout, Cpu, Palette, Code2 
 } from "lucide-react";
 
 interface CategoryGridProps {
@@ -16,8 +16,10 @@ export function CategoryGrid({ locale }: CategoryGridProps) {
     switch (iconName) {
       case "Video": return <Video className="h-5 w-5" />;
       case "Mic": return <Mic className="h-5 w-5" />;
+      case "Palette": return <Palette className="h-5 w-5" />;
       case "FileText": return <FileText className="h-5 w-5" />;
       case "ShieldAlert": return <ShieldAlert className="h-5 w-5" />;
+      case "Code2": return <Code2 className="h-5 w-5" />;
       case "Presentation": return <Presentation className="h-5 w-5" />;
       case "Clock": return <Clock className="h-5 w-5" />;
       case "Headphones": return <Headphones className="h-5 w-5" />;
@@ -28,7 +30,7 @@ export function CategoryGrid({ locale }: CategoryGridProps) {
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
       {CATEGORY_HUBS.map((hub) => (
         <Link
           key={hub.slug}

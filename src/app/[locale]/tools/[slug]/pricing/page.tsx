@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { getToolBySlug, TOOLS_DATA } from "@/data/tools-data";
 import { PriceCalculator } from "@/components/tools/PriceCalculator";
-import { Check, Calendar, ExternalLink, ArrowLeft } from "lucide-react";
+import { Check, Calendar, ExternalLink, ArrowLeft, ShieldCheck } from "lucide-react";
 
 interface PricingPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -96,14 +96,30 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
         </Link>
 
         <div className="space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
-            {isVi ? `Bảng Giá & Chi Phí ${tool.name} (2027)` : `${tool.name} Pricing & Plans (2027)`}
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            {isVi
-              ? `Xác thực ngày ${tool.verifiedAt}. So sánh giá theo tháng, giá theo năm và các tính năng đi kèm.`
-              : `Verified on ${tool.verifiedAt}. Compare monthly vs annual pricing, credit allowances, and features.`}
-          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <h1 className="text-3xl sm:text-4xl font-black text-foreground tracking-tight">
+              {isVi ? `Bảng Giá & Chi Phí ${tool.name} (2027)` : `${tool.name} Pricing & Plans (2027)`}
+            </h1>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+            <span>
+              {isVi
+                ? `Đã xác thực & kiểm toán ngày ${tool.verifiedAt}.`
+                : `Audited & verified on ${tool.verifiedAt}.`}
+            </span>
+            {tool.pricingEvidenceUrl && (
+              <a
+                href={tool.pricingEvidenceUrl}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-1 font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-2 py-0.5 rounded-md transition-colors"
+              >
+                <ShieldCheck className="h-3.5 w-3.5" />
+                {isVi ? "Trang giá chính thức của hãng" : "Official Vendor Pricing Source"}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Interactive Usage & Team Seat Calculator */}
@@ -115,7 +131,7 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
             <div
               key={tier.name}
               className={`p-6 rounded-2xl border bg-card flex flex-col justify-between ${
-                tier.isPopular ? "border-brand-500 shadow-md" : "border-border"
+                tier.isPopular ? "border-brand-500 shadow-md ring-1 ring-brand-500" : "border-border"
               }`}
             >
               <div className="space-y-4">
@@ -128,11 +144,23 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
                   )}
                 </div>
                 <div>
-                  <span className="text-3xl font-black text-foreground">${tier.priceMonthly}</span>
-                  <span className="text-xs text-muted-foreground">/mo</span>
-                  <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-3xl font-black text-foreground">${tier.priceMonthly}</span>
+                    <span className="text-xs text-muted-foreground">/mo</span>
+                  </div>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-medium">
                     ${tier.priceAnnualMonthly}/mo when billed annually
                   </p>
+                  {tier.userLimit && (
+                    <div className="inline-block mt-2 px-2 py-0.5 rounded-md text-[11px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                      ✓ {tier.userLimit}
+                    </div>
+                  )}
+                  {tier.usageLimit && (
+                    <p className="text-[11px] text-muted-foreground font-medium mt-1">
+                      • {tier.usageLimit}
+                    </p>
+                  )}
                 </div>
                 <div className="pt-3 border-t border-border space-y-2">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground block">

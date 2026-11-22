@@ -128,6 +128,34 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
     newCount: 1,
   },
   {
+    slug: "image-design",
+    name: {
+      en: "AI Image & Graphic Design",
+      vi: "Tạo ảnh, Đồ họa & Thiết kế AI",
+    },
+    description: {
+      en: "State-of-the-art text-to-image models, photorealistic rendering, AI canvas, vector graphics, and visual design suites.",
+      vi: "Mô hình vẽ tranh AI thế hệ mới, kết xuất ảnh chân thực, chỉnh sửa canvas, đồ họa vector và thiết kế thương mại.",
+    },
+    iconName: "Palette",
+    count: 10,
+    newCount: 2,
+  },
+  {
+    slug: "code-developer",
+    name: {
+      en: "AI Coding & Developer Tools",
+      vi: "Lập trình, IDE & Công cụ Dev",
+    },
+    description: {
+      en: "AI-native code editors, full-codebase reasoning, autonomous coding agents, LLM frameworks, and dev workflow automation.",
+      vi: "Trình soạn thảo mã nguồn AI, thấu hiểu toàn bộ dự án, AI Agent viết code tự trị và nền tảng phát triển phần mềm.",
+    },
+    iconName: "Code2",
+    count: 12,
+    newCount: 2,
+  },
+  {
     slug: "research-agent",
     name: {
       en: "Research, Data & Agents",

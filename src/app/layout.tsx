@@ -32,6 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        {/* Google Tag Manager / Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TS2SM59D" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            `,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

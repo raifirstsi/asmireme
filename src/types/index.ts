@@ -1,14 +1,18 @@
 export type ToolHub =
   | "video-avatar"
   | "voice-audio"
+  | "image-design"
   | "content-seo"
   | "ai-detection"
+  | "code-developer"
   | "presentation-design"
   | "meeting-productivity"
   | "sales-crm"
   | "advertising"
   | "website-builder"
   | "research-agent";
+
+export type PricingModel = "flat" | "per_seat" | "usage" | "freemium";
 
 export interface PricingTier {
   name: string;
@@ -18,6 +22,8 @@ export interface PricingTier {
   features: string[];
   isPopular?: boolean;
   creditDetails?: string;
+  userLimit?: string;
+  usageLimit?: string;
 }
 
 export interface ToolItem {
@@ -72,6 +78,8 @@ export interface ToolItem {
     vi: string[];
   };
   pricingTiers: PricingTier[];
+  pricingModel?: PricingModel;
+  pricingEvidenceUrl?: string;
   officialUrl: string;
   logoUrl?: string;
   alternatives: string[]; // Slugs of alternative tools

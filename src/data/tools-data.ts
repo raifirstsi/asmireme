@@ -72,9 +72,58 @@ export const TOOLS_DATA: ToolItem[] = [
         "Giao diện quản trị nhiều tính năng có thể khiến khách hàng không rành kỹ thuật bị choáng nếu không phân quyền hợp lý",
       ],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://www.gohighlevel.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 97, priceAnnualMonthly: 77.6, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 213.4, priceAnnualMonthly: 174.6, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Starter",
+        priceMonthly: 97,
+        priceAnnualMonthly: 81,
+        currency: "USD",
+        userLimit: "Unlimited Users",
+        usageLimit: "Up to 3 Sub-Accounts",
+        features: [
+          "3 Sub-Accounts included",
+          "Unlimited Users & Unlimited Contacts",
+          "Complete CRM & pipeline management",
+          "Drag-and-drop funnel & website builder",
+          "Email marketing & two-way SMS automation",
+          "Calendar appointment booking & workflows"
+        ]
+      },
+      {
+        name: "Unlimited",
+        priceMonthly: 297,
+        priceAnnualMonthly: 248,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Unlimited Users",
+        usageLimit: "Unlimited Sub-Accounts",
+        features: [
+          "Unlimited Sub-Accounts for client accounts",
+          "Unlimited Users & Unlimited Contacts",
+          "Branded desktop app on your own custom domain",
+          "Full REST API & Webhooks access",
+          "Snapshot cloning (replicate funnels in 1 click)",
+          "Unified company & multi-location reporting"
+        ]
+      },
+      {
+        name: "Agency Pro (SaaS Mode)",
+        priceMonthly: 497,
+        priceAnnualMonthly: 414,
+        currency: "USD",
+        userLimit: "Unlimited Users",
+        usageLimit: "Unlimited Sub-Accounts + SaaS Resale",
+        features: [
+          "Everything in Unlimited tier",
+          "SaaS Mode configurator (resell as your proprietary SaaS)",
+          "Automated Stripe client billing & signup funnels",
+          "SMS, Email & AI rebilling with custom margin markups",
+          "Custom mobile app branding (iOS & Android)",
+          "Advanced split testing & priority agency support"
+        ]
+      }
     ],
     officialUrl: "https://www.gohighlevel.com",
     alternatives: ["nutshell", "getresponse"]
@@ -97,7 +146,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["presentation-design"],
     tags: ["Presentations", "Slides", "Pitch Decks", "Sales"],
-    startingPrice: 14.99,
+    startingPrice: 9.99,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 7,
@@ -130,9 +179,40 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://decktopus.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 14.99, priceAnnualMonthly: 11.99, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 32.98, priceAnnualMonthly: 26.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Pro AI",
+        priceMonthly: 14.99,
+        priceAnnualMonthly: 9.99,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "750 AI credits per month",
+        features: [
+          "750 AI presentation creation credits / month",
+          "Remove Decktopus watermark from slides",
+          "Export presentations to PDF & editable PowerPoint",
+          "Presentation slide view analytics & lead capture",
+          "AI voiceover narration generator"
+        ]
+      },
+      {
+        name: "Business AI",
+        priceMonthly: 47.99,
+        priceAnnualMonthly: 34.99,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "1,000 AI credits / month",
+        features: [
+          "1,000 AI presentation credits per month",
+          "Custom domain for sharing web presentations",
+          "Lead generation forms embedded in slide decks",
+          "Team collaboration with shared folder workspace",
+          "Custom brand fonts, colors, and logos"
+        ]
+      }
     ],
     officialUrl: "https://decktopus.com",
     alternatives: ["gamma", "magicslides"]
@@ -188,9 +268,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.taskade.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 8, priceAnnualMonthly: 6.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 17.6, priceAnnualMonthly: 14.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "Up to 3 Members",
+        usageLimit: "1 Workspace, 250 MB storage",
+        features: [
+          "1 workspace with task & mind map views",
+          "1,000 AI credits per month",
+          "Build up to 5 custom AI agents",
+          "Real-time video chat and team collaboration"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 10,
+        priceAnnualMonthly: 8,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "3 Workspaces, 5 GB storage",
+        features: [
+          "3 team workspaces included",
+          "50,000 AI credits per month",
+          "Create up to 20 autonomous AI agents",
+          "Automated workflow recipes with Zapier & Make",
+          "Guest collaborator permissions"
+        ]
+      },
+      {
+        name: "for Teams",
+        priceMonthly: 20,
+        priceAnnualMonthly: 16,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited Workspaces, 50 GB storage",
+        features: [
+          "Unlimited team workspaces",
+          "250,000 AI credits per month",
+          "Unlimited autonomous AI agents",
+          "Custom AI agent persona training on team docs",
+          "Advanced team permissions and audit trail"
+        ]
+      }
     ],
     officialUrl: "https://www.taskade.com",
     alternatives: ["reclaim", "fireflies"]
@@ -213,7 +338,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["sales-crm", "website-builder"],
     tags: ["Email Marketing", "Automation", "Funnels", "Webinars"],
-    startingPrice: 19,
+    startingPrice: 15.6,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 30,
@@ -246,9 +371,55 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://www.getresponse.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Email Marketing",
+        priceMonthly: 19,
+        priceAnnualMonthly: 15.6,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "1,000 Contacts, Unlimited Sends",
+        features: [
+          "1,000 contacts included (expandable tiers)",
+          "Unlimited email newsletters & autoresponders",
+          "AI email subject line & content generator",
+          "Drag-and-drop website & landing page builder",
+          "Signup forms and popups to capture leads"
+        ]
+      },
+      {
+        name: "Marketing Automation",
+        priceMonthly: 59,
+        priceAnnualMonthly: 48.4,
+        currency: "USD",
+        userLimit: "3 User Seats",
+        usageLimit: "1,000 Contacts, Advanced Workflows",
+        features: [
+          "Everything in Email Marketing tier",
+          "Visual workflow builder with event-based automation",
+          "Contact tagging, lead scoring & behavioral tracking",
+          "Webinars hosting (up to 100 attendees)",
+          "Sales funnels and automated abandoned cart sequences"
+        ]
+      },
+      {
+        name: "Ecommerce Marketing",
+        priceMonthly: 119,
+        priceAnnualMonthly: 97.6,
+        currency: "USD",
+        userLimit: "5 User Seats",
+        usageLimit: "1,000 Contacts, Full Store Sync",
+        features: [
+          "Native Shopify, WooCommerce & Magento sync",
+          "Quick transactional emails via dedicated servers",
+          "AI product recommendations on web and email",
+          "Promo codes & automated cart recovery emails",
+          "Web push notifications for store visitors"
+        ]
+      }
     ],
     officialUrl: "https://www.getresponse.com",
     alternatives: ["highlevel", "nutshell"]
@@ -304,6 +475,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://omniseo.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 39.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 107.8, priceAnnualMonthly: 88.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -362,9 +535,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://reclaim.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 8, priceAnnualMonthly: 6.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 17.6, priceAnnualMonthly: 14.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Lite (Free)",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "2 Habits, 1 Calendar Sync",
+        features: [
+          "Smart calendar defense for 2 automated habits",
+          "1 personal calendar sync to work calendar",
+          "Up to 3 weeks scheduling horizon",
+          "Google Calendar integration"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 10,
+        priceAnnualMonthly: 8,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "3 Habits, 3 Calendar Syncs",
+        features: [
+          "Defend up to 3 habits with flexible scheduling",
+          "Sync across 3 work and personal calendars",
+          "Auto-schedule tasks directly from ClickUp, Asana, Linear",
+          "Buffer time between meetings to prevent burnout",
+          "8 weeks scheduling horizon"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 15,
+        priceAnnualMonthly: 12,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited Habits & Syncs",
+        features: [
+          "Unlimited smart habits & calendar syncs",
+          "High-priority 1:1 meeting auto-rescheduling",
+          "Smart Meeting scheduling links with auto-prioritization",
+          "Advanced productivity analytics & time audits",
+          "Team calendar sharing & admin controls"
+        ]
+      }
     ],
     officialUrl: "https://reclaim.ai",
     alternatives: ["taskade", "fireflies"]
@@ -420,6 +638,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://marblism.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -478,6 +698,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://rightblogger.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29.99, priceAnnualMonthly: 23.99, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 65.98, priceAnnualMonthly: 53.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -536,6 +758,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://pickaxe.co/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 16.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 44.0, priceAnnualMonthly: 36.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -561,7 +785,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["ai-detection"],
     tags: ["AI Detection", "Plagiarism", "SEO Compliance", "Academic Integrity"],
-    startingPrice: 18,
+    startingPrice: 12,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 7,
@@ -594,9 +818,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://gowinston.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 18, priceAnnualMonthly: 14.4, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 39.6, priceAnnualMonthly: 32.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free Trial",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "2,000 words (7-day trial)",
+        features: [
+          "2,000 free words to test AI detection",
+          "OCR handwritten document scanning",
+          "Basic sentence-by-sentence analysis",
+          "Email support"
+        ]
+      },
+      {
+        name: "Essential",
+        priceMonthly: 18,
+        priceAnnualMonthly: 12,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "80,000 words / month",
+        features: [
+          "80,000 words scanned per month",
+          "AI detection verified 99.98% accurate on ChatGPT & Claude",
+          "Plagiarism checking against billions of web pages",
+          "OCR technology for images and scanned student PDFs",
+          "Printable PDF audit reports for schools & publishers"
+        ]
+      },
+      {
+        name: "Growth",
+        priceMonthly: 29,
+        priceAnnualMonthly: 19,
+        currency: "USD",
+        userLimit: "Unlimited Team Members",
+        usageLimit: "200,000 words / month",
+        features: [
+          "200,000 words scanned per month",
+          "Unlimited team members included with shared credit pool",
+          "Advanced plagiarism checker with source highlighting",
+          "Full API access for LMS and CMS integration",
+          "Multi-language AI detection (EN, FR, ES, DE, PT)"
+        ]
+      }
     ],
     officialUrl: "https://gowinston.ai",
     alternatives: ["originality", "undetectable"]
@@ -652,6 +921,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.deepbrain.io/aistudios/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -710,6 +981,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.capcut.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 9.99, priceAnnualMonthly: 7.99, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 21.98, priceAnnualMonthly: 17.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -768,6 +1041,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://akool.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 21, priceAnnualMonthly: 16.8, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 46.2, priceAnnualMonthly: 37.8, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -793,7 +1068,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["sales-crm"],
     tags: ["CRM", "Sales Pipeline", "Email Sequences", "B2B"],
-    startingPrice: 19,
+    startingPrice: 16,
     hasFreePlan: false,
     hasFreeTrial: true,
     trialDays: 14,
@@ -826,9 +1101,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.nutshell.com/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Foundation",
+        priceMonthly: 19,
+        priceAnnualMonthly: 16,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited contacts & storage",
+        features: [
+          "Unlimited contacts & company records",
+          "Visual sales pipeline management",
+          "Two-way email sync (Gmail & Office 365)",
+          "Mobile CRM app for iOS and Android",
+          "Standard sales reporting and activity log"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 49,
+        priceAnnualMonthly: 42,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Per User / Seat",
+        usageLimit: "Unlimited sales pipelines",
+        features: [
+          "Unlimited custom sales pipelines",
+          "Automated sales sequences & task guidance",
+          "Activity tracking & sales rep quotas",
+          "Advanced custom sales funnel reporting",
+          "Click-to-call phone dialing & recording"
+        ]
+      },
+      {
+        name: "Enterprise",
+        priceMonthly: 67,
+        priceAnnualMonthly: 59,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Dedicated account manager",
+        features: [
+          "Dedicated success manager & custom onboarding",
+          "Priority white-glove phone support",
+          "Unlimited custom field tracking",
+          "Audit logs & strict data governance"
+        ]
+      }
     ],
     officialUrl: "https://www.nutshell.com",
     alternatives: ["highlevel", "getresponse"]
@@ -884,9 +1204,70 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://elevenlabs.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 5, priceAnnualMonthly: 4.0, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 11.0, priceAnnualMonthly: 9.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "10,000 characters/mo (~10 mins audio)",
+        features: [
+          "10,000 characters per month",
+          "Speech synthesis in 32 languages",
+          "Access to 120+ default AI voices",
+          "Create up to 3 custom voices",
+          "Requires attribution for commercial use"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 5,
+        priceAnnualMonthly: 4,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "30,000 characters/mo (~30 mins audio)",
+        features: [
+          "30,000 characters per month",
+          "Instant Voice Cloning from 1 min sample",
+          "Commercial use license included",
+          "Dubbing studio access",
+          "Additional character top-ups ($0.30 per 1k chars)"
+        ]
+      },
+      {
+        name: "Creator",
+        priceMonthly: 22,
+        priceAnnualMonthly: 18,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User",
+        usageLimit: "100,000 characters/mo (~2 hours audio)",
+        features: [
+          "100,000 characters per month (~2 hours)",
+          "Professional Voice Cloning (PVC) high fidelity",
+          "High quality 192kbps audio output",
+          "Create up to 30 custom voices",
+          "Projects tool for long-form audiobooks & podcasts"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 99,
+        priceAnnualMonthly: 82,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "500,000 characters/mo (~10 hours audio)",
+        features: [
+          "500,000 characters per month",
+          "44.1kHz PCM ultra-low latency audio via API",
+          "Create up to 160 custom voices",
+          "Highest concurrency limit for streaming API",
+          "Dedicated priority queue"
+        ]
+      }
     ],
     officialUrl: "https://elevenlabs.io",
     alternatives: ["listnr", "castmagic", "speak-ai"]
@@ -942,6 +1323,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://adcreative.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1000,6 +1383,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://krispcall.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1058,6 +1443,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://myaifrontdesk.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 44.99, priceAnnualMonthly: 35.99, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 98.98, priceAnnualMonthly: 80.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1116,6 +1503,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://fliki.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 28, priceAnnualMonthly: 22.4, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 61.6, priceAnnualMonthly: 50.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1174,6 +1563,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://describely.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 28, priceAnnualMonthly: 22.4, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 61.6, priceAnnualMonthly: 50.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1232,6 +1623,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://koala.sh/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1290,6 +1683,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://submagic.co/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 16.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 44.0, priceAnnualMonthly: 36.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1348,6 +1743,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://videogen.io/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 18, priceAnnualMonthly: 14.4, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 39.6, priceAnnualMonthly: 32.4, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1406,6 +1803,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://textero.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 16.99, priceAnnualMonthly: 13.59, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 37.38, priceAnnualMonthly: 30.58, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1464,6 +1863,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://quickads.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1522,6 +1923,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://meetgeek.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1580,6 +1983,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://castmagic.io/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1638,6 +2043,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://palette.fm/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1696,6 +2103,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://fireflies.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1754,6 +2163,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://frase.io/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1812,6 +2223,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://10web.io/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1870,6 +2283,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://palabra.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1928,6 +2343,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://postcrest.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -1986,6 +2403,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://pineapplebuilder.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 12, priceAnnualMonthly: 9.6, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 26.4, priceAnnualMonthly: 21.6, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2044,6 +2463,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://sendpotion.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2102,6 +2523,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://rytr.me/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 9, priceAnnualMonthly: 7.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 19.8, priceAnnualMonthly: 16.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2160,6 +2583,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://listnr.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2218,6 +2643,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://www.jotform.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 34, priceAnnualMonthly: 27.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 74.8, priceAnnualMonthly: 61.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2276,6 +2703,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://lebesgue.io/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 39, priceAnnualMonthly: 31.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 85.8, priceAnnualMonthly: 70.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2334,6 +2763,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://gamma.app/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 10, priceAnnualMonthly: 8.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 22.0, priceAnnualMonthly: 18.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2392,9 +2823,55 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.synthesia.io/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 22, priceAnnualMonthly: 17.6, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 48.4, priceAnnualMonthly: 39.6, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "3 minutes video / month",
+        features: [
+          "3 minutes of generated video per month",
+          "6 AI avatars & 60+ languages",
+          "Watermark on video exports",
+          "Basic video templates"
+        ]
+      },
+      {
+        name: "Starter",
+        priceMonthly: 29,
+        priceAnnualMonthly: 22,
+        currency: "USD",
+        userLimit: "1 Editor Seat",
+        usageLimit: "120 video mins/year (10 mins/mo)",
+        features: [
+          "10 video minutes per month (120 mins/year)",
+          "1 editor seat & 3 guest viewers",
+          "90+ diverse stock AI avatars",
+          "120+ languages and natural accents",
+          "No watermark, 1080p Full HD downloads"
+        ]
+      },
+      {
+        name: "Creator",
+        priceMonthly: 89,
+        priceAnnualMonthly: 67,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 Editor Seat",
+        usageLimit: "360 video mins/year (30 mins/mo)",
+        features: [
+          "30 video minutes per month (360 mins/year)",
+          "1 editor seat & 5 guest viewers",
+          "105+ premium studio AI avatars",
+          "Custom avatar creator add-on eligible",
+          "Audio voiceover upload & automatic lip-sync",
+          "Brand kit with custom fonts & colors"
+        ]
+      }
     ],
     officialUrl: "https://synthesia.io",
     alternatives: ["ai-studios", "fliki", "akool"]
@@ -2450,9 +2927,56 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.jasper.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 39, priceAnnualMonthly: 31.2, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 85.8, priceAnnualMonthly: 70.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Creator",
+        priceMonthly: 49,
+        priceAnnualMonthly: 39,
+        currency: "USD",
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited AI words generated",
+        features: [
+          "1 user seat included",
+          "1 brand voice & tone consistency",
+          "50 knowledge assets / documents",
+          "SEO mode via Surfer SEO integration",
+          "Browser extension for Chrome & Edge"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 69,
+        priceAnnualMonthly: 59,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 to 5 User Seats ($59/mo per seat)",
+        usageLimit: "Unlimited AI words generated",
+        features: [
+          "Up to 5 team seats",
+          "3 brand voices & style guidelines",
+          "10 knowledge base assets per seat",
+          "Jasper Art image generator included",
+          "Collaborative workspace & document lock",
+          "Campaign workflows for multi-channel assets"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 125,
+        priceAnnualMonthly: 99,
+        currency: "USD",
+        userLimit: "Custom Team Seats",
+        usageLimit: "Unlimited AI words + Custom API",
+        features: [
+          "Unlimited brand voices & style guides",
+          "Custom API access & automated triggers",
+          "Enterprise SSO (SAML, Okta) security",
+          "Performance analytics & content scoring",
+          "Dedicated account manager & SLA guarantee"
+        ]
+      }
     ],
     officialUrl: "https://jasper.ai",
     alternatives: ["koala", "rightblogger", "frase"]
@@ -2508,6 +3032,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://opus.pro/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 19, priceAnnualMonthly: 15.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 41.8, priceAnnualMonthly: 34.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2566,9 +3092,41 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://originality.ai/pricing",
     pricingTiers: [
-      { name: "Starter", priceMonthly: 14.95, priceAnnualMonthly: 11.96, currency: "USD", features: ["Core features", "Standard support"] },
-      { name: "Pro", priceMonthly: 32.89, priceAnnualMonthly: 26.91, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
+      {
+        name: "Pay As You Go",
+        priceMonthly: 30,
+        priceAnnualMonthly: 30,
+        currency: "USD",
+        userLimit: "Unlimited Team Members",
+        usageLimit: "3,000 credits (300,000 words)",
+        features: [
+          "3,000 one-time credits ($0.01 per 100 words)",
+          "Credits valid for 2 full years",
+          "AI content detection (GPT-4o, Claude 3.5, Gemini 1.5)",
+          "Plagiarism checker & fact checking assistance",
+          "Full scan history and shareable audit reports"
+        ]
+      },
+      {
+        name: "Base Subscription",
+        priceMonthly: 14.95,
+        priceAnnualMonthly: 12.45,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "Unlimited Team Members",
+        usageLimit: "2,000 credits/mo (200,000 words)",
+        features: [
+          "2,000 monthly credits automatically refreshed",
+          "Unlimited team members with role-based access",
+          "Full REST API access for automated editorial pipelines",
+          "Website scan (full domain crawl for AI content)",
+          "Multilingual AI detection (English, Spanish, French, etc.)",
+          "Top-up credits at discounted $0.01/credit rate"
+        ]
+      }
     ],
     officialUrl: "https://originality.ai",
     alternatives: ["winston", "undetectable"]
@@ -2624,6 +3182,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://speakai.co/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 29, priceAnnualMonthly: 23.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 63.8, priceAnnualMonthly: 52.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2682,6 +3242,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://undetectable.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 14.99, priceAnnualMonthly: 11.99, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 32.98, priceAnnualMonthly: 26.98, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2740,6 +3302,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://simplified.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 24, priceAnnualMonthly: 19.2, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 52.8, priceAnnualMonthly: 43.2, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2798,6 +3362,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://magicslides.app/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 12.99, priceAnnualMonthly: 10.39, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 28.58, priceAnnualMonthly: 23.38, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2856,6 +3422,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://paperguide.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 15, priceAnnualMonthly: 12.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 33.0, priceAnnualMonthly: 27.0, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2914,6 +3482,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced enterprise features require higher tier", "Requires stable internet connection"],
       vi: ["Các tính năng nâng cao yêu cầu gói trả phí cao hơn", "Đòi hỏi kết nối internet ổn định"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://browse.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 48.75, priceAnnualMonthly: 39.0, currency: "USD", features: ["Core features", "Standard support"] },
       { name: "Pro", priceMonthly: 107.25, priceAnnualMonthly: 87.75, currency: "USD", features: ["All features", "Priority support", "Full limits"], isPopular: true }
@@ -2921,8 +3491,6 @@ export const TOOLS_DATA: ToolItem[] = [
     officialUrl: "https://browse.ai",
     alternatives: ["pickaxe", "marblism"]
   },
-
-
   {
     id: "heygen",
     slug: "heygen",
@@ -2941,7 +3509,7 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     hubs: ["video-avatar"],
     tags: ["AI Avatar", "Video Translation", "Lip Sync", "Text to Video", "Corporate Training"],
-    startingPrice: 29,
+    startingPrice: 24,
     hasFreePlan: true,
     hasFreeTrial: true,
     trialDays: 14,
@@ -2974,10 +3542,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Enterprise tier required for 4K rendering and custom multi-user team workspaces", "Credit-based pricing can deplete quickly on long-form 20+ minute video modules"],
       vi: ["Cần gói doanh nghiệp để xuất video độ phân giải 4K và quản lý nhóm nhiều thành viên", "Cơ chế tính credit có thể tiêu tốn nhanh nếu làm video dài trên 20 phút"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.heygen.com/pricing",
     pricingTiers: [
-      { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1 Free Credit", "60+ Public Avatars", "300+ Voices", "720p Export"] },
-      { name: "Creator", priceMonthly: 29, priceAnnualMonthly: 24, currency: "USD", features: ["15 Credits/mo", "Fast Processing", "Custom Avatar Lite", "1080p Export"], isPopular: true },
-      { name: "Team", priceMonthly: 89, priceAnnualMonthly: 72, currency: "USD", features: ["30 Credits/mo", "3 User Seats", "4K Resolution", "Brand Kit Management"] }
+      {
+        name: "Free",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "1 Free Credit (~1 min video)",
+        features: [
+          "1 free credit to test avatar creation",
+          "60+ public avatars",
+          "300+ voices in 40+ languages",
+          "720p export resolution"
+        ]
+      },
+      {
+        name: "Creator",
+        priceMonthly: 29,
+        priceAnnualMonthly: 24,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "15 credits/mo (~15 mins video)",
+        features: [
+          "15 video generation credits per month",
+          "3 instant avatars created from webcam/phone",
+          "Unlimited video generation duration",
+          "1080p Full HD video exports with no watermark",
+          "Auto-generated captions & dynamic styling"
+        ]
+      },
+      {
+        name: "Team",
+        priceMonthly: 89,
+        priceAnnualMonthly: 72,
+        currency: "USD",
+        userLimit: "3 User Seats Included",
+        usageLimit: "30 credits/mo (~30 mins video)",
+        features: [
+          "30 credits per month with rollover support",
+          "3 user seats included for team collaboration",
+          "4K Ultra HD video export quality",
+          "Brand kits with shared assets and templates",
+          "Fast queue processing priority"
+        ]
+      }
     ],
     officialUrl: "https://www.heygen.com",
     logoUrl: "/logos/heygen.png",
@@ -3034,6 +3646,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free export includes InVideo watermarks", "Occasional repetitive stock video selection on niche technical topics"],
       vi: ["Video xuất ở gói miễn phí có đóng dấu watermark của InVideo", "Đôi khi các cảnh quay minh họa có thể bị lặp lại với các chủ đề quá đặc thù"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://invideo.io/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 mins/week AI generation", "4 exports/week with watermark", "10GB storage"] },
       { name: "Plus", priceMonthly: 25, priceAnnualMonthly: 20, currency: "USD", features: ["50 mins/mo AI generation", "Unlimited exports", "80 iStock clips/mo", "100GB storage"], isPopular: true },
@@ -3094,6 +3708,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["High compute demands mean video generations consume credits quickly", "Requires artistic prompt experimentation to master complex cinematic scenes"],
       vi: ["Tác vụ kết xuất video nặng nên lượng credit tiêu hao khá nhanh", "Đòi hỏi kỹ năng viết câu lệnh (prompt) và tinh chỉnh nghệ thuật để đạt cảnh quay hoàn hảo"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://runwayml.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["125 one-time credits", "3 video projects", "720p exports", "Standard assets"] },
       { name: "Standard", priceMonthly: 15, priceAnnualMonthly: 12, currency: "USD", features: ["625 credits/mo", "Unlimited projects", "4K image upscale", "Gen-3 access"], isPopular: true },
@@ -3119,7 +3735,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Cursor is the definitive AI code editor of 2027. Built directly on VS Code, it indexes your entire repository to provide intelligent inline code generation, multi-file Composer edits, and terminal bug fixing. It supports Claude 3.5 Sonnet, GPT-4o, and custom local models. Pricing starts at $20/month with a generous free plan.",
       vi: "Cursor là trình biên tập code AI số 1 thế giới năm 2027. Được phát triển dựa trên VS Code, Cursor phân tích toàn bộ cấu trúc dự án để gợi ý code thông minh, tự động sửa đồng thời nhiều file với tính năng Composer và sửa lỗi terminal ngay tức thì. Hỗ trợ các model hàng đầu như Claude 3.5 Sonnet và GPT-4o. Giá từ $20/tháng và có gói miễn phí.",
     },
-    hubs: ["research-agent", "website-builder"],
+    hubs: ["code-developer", "research-agent", "website-builder"],
     tags: ["AI IDE", "Code Editor", "Developer Tools", "Composer", "VS Code", "Claude"],
     startingPrice: 20,
     hasFreePlan: true,
@@ -3154,10 +3770,54 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Fast requests quota on frontier models (Claude 3.5 Sonnet) requires Pro subscription", "Can occasionally suggest overly eager architectural changes if not guided by clear prompts"],
       vi: ["Giới hạn lượt gọi model cao cấp tốc độ cao đòi hỏi duy trì gói Pro", "Đôi khi có thể sửa code quá đà nếu câu lệnh yêu cầu không đủ cụ thể"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.cursor.com/pricing",
     pricingTiers: [
-      { name: "Hobby", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2,000 completions/mo", "50 slow premium requests", "Full codebase indexing"] },
-      { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["Unlimited completions", "500 fast premium requests/mo", "Unlimited slow requests", "Composer multi-file"], isPopular: true },
-      { name: "Business", priceMonthly: 40, priceAnnualMonthly: 32, currency: "USD", features: ["Centralized billing", "Admin privacy mode", "SAML SSO", "Zero data retention"] }
+      {
+        name: "Hobby",
+        priceMonthly: 0,
+        priceAnnualMonthly: 0,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "2,000 completions/mo",
+        features: [
+          "2,000 AI code completions per month",
+          "50 slow premium requests (Claude 3.5 Sonnet / GPT-4o)",
+          "Full codebase indexing & semantic search",
+          "Community Discord support"
+        ]
+      },
+      {
+        name: "Pro",
+        priceMonthly: 20,
+        priceAnnualMonthly: 20,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User Seat",
+        usageLimit: "Unlimited completions, 500 fast requests",
+        features: [
+          "Unlimited AI code completions",
+          "500 fast premium requests / mo (Claude 3.5 Sonnet, GPT-4o)",
+          "Unlimited slow premium requests once fast quota used",
+          "Composer multi-file editor & automatic diff reviews",
+          "Custom system rules & terminal command generation"
+        ]
+      },
+      {
+        name: "Business",
+        priceMonthly: 40,
+        priceAnnualMonthly: 40,
+        currency: "USD",
+        userLimit: "Per User / Seat",
+        usageLimit: "Enterprise privacy & admin dashboard",
+        features: [
+          "Everything in Pro tier per seat",
+          "Enforced privacy mode (zero code retention by AI vendors)",
+          "Centralized team admin dashboard & license management",
+          "SAML / Okta Single Sign-On (SSO)",
+          "Usage analytics and consolidated billing"
+        ]
+      }
     ],
     officialUrl: "https://cursor.com",
     logoUrl: "/logos/cursor.png",
@@ -3179,7 +3839,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Bolt.new is a revolutionary AI-powered web development platform. Unlike code generators that just output snippets, Bolt.new runs a live WebContainer in your browser, installing NPM packages, executing backend Node.js code, running database integrations, and deploying live URLs with a single prompt. Plans start at $20/month with a free starter tier.",
       vi: "Bolt.new là nền tảng lập trình web đột phá bằng AI. Khác với các công cụ chỉ sinh code đơn lẻ, Bolt.new chạy môi trường máy chủ WebContainer ngay trong trình duyệt, tự cài gói npm, chạy backend Node.js, kết nối database và xuất bản website trực tiếp chỉ từ câu lệnh mô tả. Giá từ $20/tháng kèm gói dùng thử miễn phí.",
     },
-    hubs: ["website-builder", "research-agent"],
+    hubs: ["code-developer", "website-builder", "research-agent"],
     tags: ["Full-Stack", "WebContainer", "React", "Next.js", "No-Code to Code", "Deployment"],
     startingPrice: 20,
     hasFreePlan: true,
@@ -3214,6 +3874,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Token consumption is heavy for complex multi-page applications with extensive dependencies", "Requires basic understanding of web architecture to fix edge-case compilation errors"],
       vi: ["Tiêu hao token khá nhanh đối với các ứng dụng nhiều trang phức tạp", "Cần kiến thức cơ bản về lập trình web để xử lý các lỗi phụ thuộc thư viện"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://bolt.new/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10M Tokens/mo", "Public Projects", "Community Support", "WebContainer sandbox"] },
       { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["100M Tokens/mo", "Private Projects", "Priority Generation", "Custom Domains"], isPopular: true },
@@ -3239,7 +3901,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Lovable is a premier AI app builder designed to empower founders and designers to build production software. It outputs clean, human-readable React and TypeScript code, integrates directly with Supabase for PostgreSQL databases and authentication, and syncs seamlessly with GitHub. Plans start at $20/month with free starter credits.",
       vi: "Lovable là nền tảng tạo ứng dụng AI hàng đầu dành cho nhà sáng lập và nhà thiết kế. Công cụ xuất mã nguồn React và TypeScript sạch sẽ, kết nối trực tiếp với Supabase để lưu trữ database PostgreSQL và quản lý đăng nhập, đồng thời đồng bộ hai chiều với GitHub. Giá từ $20/tháng kèm gói dùng thử miễn phí.",
     },
-    hubs: ["website-builder", "research-agent"],
+    hubs: ["code-developer", "website-builder", "research-agent"],
     tags: ["App Builder", "React", "Supabase", "TypeScript", "GitHub Sync", "MVP"],
     startingPrice: 20,
     hasFreePlan: true,
@@ -3274,6 +3936,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced relational queries require checking the auto-generated Supabase schema", "Message quota resets monthly on standard tiers"],
       vi: ["Các câu truy vấn quan hệ dữ liệu nâng cao cần kiểm tra lại schema trên Supabase", "Số lượt tin nhắn yêu cầu AI được giới hạn theo tháng ở các gói cơ bản"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://lovable.dev/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["5 Messages/day", "Public Projects", "Supabase Integration"] },
       { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["100 Messages/mo", "Private Projects", "GitHub Sync", "Custom Domains"], isPopular: true },
@@ -3334,6 +3998,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Daily limit of 300+ Pro searches on standard subscription", "Occasional paywalled articles cannot be indexed directly"],
       vi: ["Giới hạn khoảng hơn 300 lượt tìm kiếm Pro chuyên sâu mỗi ngày", "Một số nguồn tin yêu cầu tài khoản trả phí không thể cào dữ liệu trực tiếp"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.perplexity.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited Quick Search", "5 Pro Searches/day", "Standard Search Engine"] },
       { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 16.6, currency: "USD", features: ["300+ Pro Searches/day", "Switch between Claude & GPT-4o", "Unlimited File Uploads", "$5 API Credits/mo"], isPopular: true },
@@ -3394,6 +4060,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires an underlying Notion plan to utilize the AI add-on", "Can occasionally reference outdated workspace pages if historical docs are not archived"],
       vi: ["Yêu cầu phải có tài khoản Notion nền tảng để mua thêm gói bổ trợ AI", "Đôi khi có thể trích dẫn thông tin từ tài liệu cũ nếu công ty không dọn dẹp kho dữ liệu"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.notion.so/pricing",
     pricingTiers: [
       { name: "Add-On", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["Unlimited AI Responses", "Q&A across workspace", "Autofill Database Properties", "Writing Assistant"], isPopular: true }
     ],
@@ -3452,6 +4120,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Heavily human-edited or hybridized AI text requires manual human review", "Premium features like Google Docs live writing report require paid plan"],
       vi: ["Văn bản lai tạp kết hợp giữa người viết và AI chỉnh sửa vẫn cần con người đánh giá lại", "Các tính năng nâng cao như xem lịch sử viết trực tiếp trên Google Docs cần gói trả phí"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://gptzero.me/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10,000 words/mo", "Basic AI detection", "Sentence breakdown"] },
       { name: "Essential", priceMonthly: 15, priceAnnualMonthly: 10, currency: "USD", features: ["150,000 words/mo", "Deep Scan technology", "Plagiarism scans", "Chrome extension"], isPopular: true },
@@ -3512,6 +4182,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier caps individual meetings at 30 minutes duration", "Accent recognition can occasionally stumble on fast colloquial speech"],
       vi: ["Gói miễn phí giới hạn thời lượng mỗi cuộc họp tối đa 30 phút", "Đôi khi có thể gặp chút khó khăn nếu người nói có ngữ điệu địa phương quá nặng"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://otter.ai/pricing",
     pricingTiers: [
       { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["300 monthly transcription mins", "30 mins per conversation", "Join Zoom/Meet/Teams"] },
       { name: "Pro", priceMonthly: 16.99, priceAnnualMonthly: 10, currency: "USD", features: ["1,200 monthly transcription mins", "90 mins per conversation", "Import audio/video", "Advanced search"], isPopular: true },
@@ -3572,6 +4244,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires an existing paid ClickUp plan to activate ClickUp Brain", "Workspace needs properly structured tasks to provide optimal contextual answers"],
       vi: ["Yêu cầu công ty phải đang dùng tài khoản ClickUp trả phí để kích hoạt thêm Brain", "Cần dữ liệu công việc được nhập rõ ràng để AI đưa ra câu trả lời bối cảnh chuẩn xác nhất"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://clickup.com/pricing",
     pricingTiers: [
       { name: "Add-On", priceMonthly: 7, priceAnnualMonthly: 7, currency: "USD", features: ["AI Knowledge Manager", "AI Project Manager", "AI Writer for Work", "Unlimited Workspace Queries"], isPopular: true }
     ],
@@ -3630,6 +4304,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Custom backend database interactions require third-party webhooks or APIs", "Steep learning curve for users unfamiliar with CSS Flexbox and auto-layout concepts"],
       vi: ["Cần dùng webhook hoặc API ngoài nếu muốn kết nối cơ sở dữ liệu backend phức tạp", "Người dùng chưa quen với tư duy auto-layout hoặc CSS Flexbox cần thời gian làm quen"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://www.framer.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Framer subdomain", "Framer badge", "Design editor", "Basic CMS"] },
       { name: "Mini", priceMonthly: 10, priceAnnualMonthly: 5, currency: "USD", features: ["Custom domain", "1,000 visitors/mo", "Home + 404 page", "SSL certificate"] },
@@ -3691,6 +4367,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier only permits generating voice samples without download capabilities", "Higher tiers needed to unlock unlimited voice generation time"],
       vi: ["Gói miễn phí chỉ cho phép nghe thử giọng đọc chứ không hỗ trợ tải file âm thanh về máy", "Cần gói cao cấp để mở khóa thời lượng tạo giọng nói không giới hạn"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://murf.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 mins voice generation", "Share link only", "All 120+ voices to try"] },
       { name: "Creator", priceMonthly: 29, priceAnnualMonthly: 23, currency: "USD", features: ["24 hours voice gen/year", "Unlimited downloads", "Commercial rights", "8,000+ licensed tracks"], isPopular: true },
@@ -3751,6 +4429,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Annual billing commitment required to access the lowest monthly rate", "Free version restricts access to basic robotic voice tier"],
       vi: ["Cần thanh toán theo năm để được hưởng mức giá ưu đãi nhất", "Gói miễn phí bị giới hạn ở các giọng đọc tiêu chuẩn cơ bản"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://speechify.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 standard reading voices", "Listen at up to 2x speed", "Text scanning"] },
       { name: "Premium", priceMonthly: 19, priceAnnualMonthly: 11.58, currency: "USD", features: ["100+ natural HD voices", "Listen at up to 4.5x speed", "OCR physical book scanning", "Full cross-device sync"], isPopular: true }
@@ -3810,6 +4490,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier songs cannot be monetized commercially on streaming platforms", "Exact vocal timbre consistency across completely separate sessions requires careful prompt seeding"],
       vi: ["Các bài hát tạo ở gói miễn phí không được phép bật kiếm tiền trên Spotify hay Apple Music", "Giữ nguyên màu giọng chính xác giữa các bài hát khác nhau đòi hỏi kỹ năng tinh chỉnh hạt giống"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://suno.com/pricing",
     pricingTiers: [
       { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["50 credits daily (10 songs)", "Non-commercial terms", "Standard generation queue"] },
       { name: "Pro", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["2,500 credits/mo (500 songs)", "General commercial terms", "Optional credit top-ups", "Priority generation"], isPopular: true },
@@ -3870,6 +4552,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Starter paid tier ($49/mo) represents a notable investment for solo entrepreneurs", "Setting up automated multi-branch workflows requires an initial workflow design phase"],
       vi: ["Mức giá khởi điểm $49/tháng có thể hơi cao đối với người kinh doanh tự do", "Cần dành thời gian cấu hình ban đầu để thiết lập các luồng tự động hóa nhiều bước"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.copy.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2,000 words in chat", "1 seat", "Brand Voice setup", "Basic chat tools"] },
       { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 36, currency: "USD", features: ["Unlimited chat words", "500 workflow credits/mo", "Unlimited brand voices", "All LLMs"], isPopular: true },
@@ -3930,6 +4614,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier limits paraphrasing to 125 words per individual scan", "Plagiarism checker scans are restricted to a monthly page quota on Premium"],
       vi: ["Gói miễn phí giới hạn mỗi lần viết lại tối đa 125 từ", "Tính năng quét đạo văn bị giới hạn số lượng trang quét mỗi tháng ở gói Premium"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://quillbot.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["125 words paraphraser", "Standard & Fluency modes", "Limited synonym options", "Grammar check"] },
       { name: "Premium", priceMonthly: 19.95, priceAnnualMonthly: 9.95, currency: "USD", features: ["Unlimited words", "All 7 modes + custom", "Highest synonym setting", "Plagiarism check (20 pages/mo)"], isPopular: true }
@@ -3989,6 +4675,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Pricing scales steeply as subscriber contact lists expand into the tens of thousands", "Advanced multi-branch logic flows require careful strategic setup"],
       vi: ["Chi phí tăng dần theo quy mô danh sách liên hệ khi dữ liệu lên tới hàng chục nghìn khách", "Hệ thống luồng tự động hóa nhiều nhánh rẽ đòi hỏi tư duy thiết kế bài bản"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.klaviyo.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Up to 250 contacts", "500 monthly email sends", "150 free SMS credits", "Email support"] },
       { name: "Email", priceMonthly: 45, priceAnnualMonthly: 45, currency: "USD", features: ["Up to 1,500 contacts", "15,000 monthly sends", "Predictive analytics", "Full automation"], isPopular: true },
@@ -4049,6 +4737,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Steeper learning curve than Zapier for users unfamiliar with data objects and JSON", "Failed operations require monitoring and error-handling branch design"],
       vi: ["Đòi hỏi thời gian làm quen ban đầu với người chưa quen cấu trúc dữ liệu JSON", "Cần thiết kế thêm nhánh xử lý lỗi dự phòng để đảm bảo quy trình chạy thông suốt"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.make.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1,000 operations/mo", "Active scenarios: 2", "15-minute minimum interval", "Full visual builder"] },
       { name: "Core", priceMonthly: 10.59, priceAnnualMonthly: 9, currency: "USD", features: ["10,000 operations/mo", "Unlimited active scenarios", "1-minute execution interval", "Over 2,000 apps"], isPopular: true },
@@ -4109,6 +4799,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Higher price per task than visual competitor Make.com on high-volume operations", "Multi-step Zaps require a paid subscription"],
       vi: ["Chi phí cho mỗi tác vụ cao hơn so với Make.com nếu vận hành lượng dữ liệu lớn", "Các quy trình tự động hóa từ 3 bước trở lên yêu cầu phải đăng ký gói trả phí"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://zapier.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["100 tasks/mo", "Unlimited 2-step Zaps", "15-minute update time", "Basic AI features"] },
       { name: "Professional", priceMonthly: 29.99, priceAnnualMonthly: 19.99, currency: "USD", features: ["750 tasks/mo", "Multi-step Zaps", "2-minute update time", "Webhooks & Filters"], isPopular: true },
@@ -4169,6 +4861,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Enterprise tier pricing increases significantly as contacts and advanced marketing hubs grow", "Mandatory onboarding fees apply on higher-tier Professional and Enterprise packages"],
       vi: ["Chi phí nâng cấp lên các gói doanh nghiệp lớn tăng khá nhanh theo số lượng liên hệ tiếp thị", "Áp dụng phí đào tạo triển khai ban đầu bắt buộc đối với các gói Professional và Enterprise"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.hubspot.com/pricing",
     pricingTiers: [
       { name: "Free Tools", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Free CRM", "Forms & Landing pages", "Email marketing (2,000/mo)", "Shared inbox"] },
       { name: "Starter", priceMonthly: 20, priceAnnualMonthly: 15, currency: "USD", features: ["1,000 Marketing Contacts", "Remove HubSpot branding", "Email & Chat support", "Form automation"], isPopular: true },
@@ -4229,6 +4923,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["No free permanent tier available after the 14-day trial period", "Marketing email campaigns and phone caller features require separate add-on packs"],
       vi: ["Không có gói miễn phí vĩnh viễn sau khi hết hạn 14 ngày dùng thử", "Các tính năng gửi email hàng loạt hoặc tổng đài gọi điện cần mua thêm gói tiện ích mở rộng"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.pipedrive.com/pricing",
     pricingTiers: [
       { name: "Essential", priceMonthly: 14, priceAnnualMonthly: 14, currency: "USD", features: ["Lead & deal management", "Customizable pipelines", "Mobile app", "24/7 support"] },
       { name: "Advanced", priceMonthly: 29, priceAnnualMonthly: 29, currency: "USD", features: ["Full email sync", "Automated email sequences", "AI Sales Assistant", "Custom field grouping"], isPopular: true },
@@ -4289,6 +4985,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier is restricted to 3 presentations per month with a 2,500 character limit per input", "Requires manual fine-tuning for complex branded enterprise slide masters"],
       vi: ["Gói miễn phí giới hạn 3 bài thuyết trình mỗi tháng và tối đa 2,500 ký tự mỗi lần nhập", "Cần chỉnh sửa lại thủ công nếu doanh nghiệp có bộ nhận diện mẫu slide khắt khe"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.slidesai.io/pricing",
     pricingTiers: [
       { name: "Basic", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["3 presentations/mo", "2,500 characters input", "Google Slides integration"] },
       { name: "Pro", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["10 presentations/mo", "6,000 characters input", "AI topic search", "Export to PowerPoint"], isPopular: true },
@@ -4349,6 +5047,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Exporting ultra-high-resolution print files with custom spot colors requires Pro tier", "Heavy web app can lag slightly on older mobile devices with complex 100+ layer designs"],
       vi: ["Xuất file in ấn chất lượng cao không nén đòi hỏi phải duy trì gói Pro", "Ứng dụng web có thể hơi nặng trên các máy cấu hình yếu nếu mở file thiết kế có hàng trăm layer"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.canva.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1M+ free templates", "Magic Design lite", "5GB cloud storage", "Real-time collaboration"] },
       { name: "Canva Pro", priceMonthly: 15, priceAnnualMonthly: 10, currency: "USD", features: ["100M+ premium assets", "Unlimited Magic Studio tools", "Brand Kits", "1TB cloud storage"], isPopular: true },
@@ -4374,7 +5074,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Leonardo.Ai is a powerhouse generative image platform tailored for production artists, game studios, and marketing agencies. Unlike basic prompt-to-image tools, it offers fine-tuned LoRA model training, real-time Canvas inpainting/outpainting, and motion generation. It features a generous free tier (150 daily tokens) and paid plans from $12/month.",
       vi: "Leonardo.Ai là nền tảng đồ họa AI chuyên sâu dành cho nghệ sĩ, studio phát triển game và nhóm thiết kế thương mại. Điểm vượt trội so với các công cụ tạo ảnh thông thường là khả năng tự huấn luyện mô hình LoRA riêng, trình chỉnh sửa Canvas mở rộng ảnh trực quan và chuyển ảnh thành video ngắn. Có gói miễn phí 150 token/ngày và các gói trả phí từ $12/tháng.",
     },
-    hubs: ["presentation-design", "advertising"],
+    hubs: ["image-design", "presentation-design", "advertising"],
     tags: ["AI Art", "Game Assets", "Image Generator", "LoRA Training", "Canvas Editor"],
     startingPrice: 12,
     hasFreePlan: true,
@@ -4409,6 +5109,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced settings (guidance scale, prompt weights, scheduler) can overwhelm casual beginners", "Ultra-high resolution 4K upscaling consumes significant token credits"],
       vi: ["Các thông số kỹ thuật chuyên sâu (guidance scale, trọng số prompt) có thể hơi phức tạp cho người mới", "Tính năng phóng to ảnh siêu nét 4K tiêu tốn khá nhiều token"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://leonardo.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["150 fast tokens/day", "Up to 30 upscale/day", "Standard models", "Community feed"] },
       { name: "Apprentice", priceMonthly: 12, priceAnnualMonthly: 10, currency: "USD", features: ["8,500 fast tokens/mo", "Unlimited slow generations", "10 concurrent jobs", "Private generations"], isPopular: true },
@@ -4434,7 +5136,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Ideogram 2.0 is the gold standard for text-in-image generation and graphic typography. While other models produce gibberish lettering, Ideogram renders long words, quotes, and brand slogans with crisp vector-like fidelity and color palettes. Plans start at $8/month with a free daily plan.",
       vi: "Ideogram 2.0 là thước đo chuẩn mực cho việc vẽ chữ trong hình ảnh và thiết kế typography. Trong khi các công cụ AI khác thường làm biến dạng con chữ, Ideogram hiển thị chính xác từng từ ngữ, câu trích dẫn và slogan thương hiệu với độ sắc nét như đồ họa vector. Giá từ $8/tháng kèm gói miễn phí hàng ngày.",
     },
-    hubs: ["advertising", "presentation-design"],
+    hubs: ["image-design", "advertising", "presentation-design"],
     tags: ["AI Typography", "Graphic Design", "Logo Design", "T-Shirt Design", "Text to Image"],
     startingPrice: 8,
     hasFreePlan: true,
@@ -4469,6 +5171,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier generations are publicly visible in the community explorer", "Limited inpainting and brush-based localized editing compared to Photoshop"],
       vi: ["Các ảnh tạo ở gói miễn phí được công khai trên bảng tin cộng đồng", "Tính năng xóa sửa vùng chọn cục bộ (inpainting) còn cơ bản hơn Photoshop"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://ideogram.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 slow prompts/day", "Public gallery", "Standard resolution", "Magic Prompt"] },
       { name: "Basic", priceMonthly: 8, priceAnnualMonthly: 7, currency: "USD", features: ["400 priority prompts/mo", "100 slow prompts/day", "Private generation mode", "Image editor access"], isPopular: true },
@@ -4494,7 +5198,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Replit Agent is an autonomous cloud coding assistant that handles everything from scaffolding project files and installing dependencies to configuring PostgreSQL databases and deploying live URLs. It operates directly inside Replit's cloud container environment. Plans start at $25/month for Replit Core with agent access.",
       vi: "Replit Agent là trợ lý lập trình đám mây tự động đảm nhiệm toàn bộ quy trình: từ khởi tạo cấu trúc thư mục, cài đặt gói phụ thuộc, thiết lập cơ sở dữ liệu PostgreSQL cho đến xuất bản đường dẫn website chạy thực tế. Giá gói Replit Core từ $25/tháng kèm quyền truy cập AI Agent.",
     },
-    hubs: ["research-agent", "website-builder"],
+    hubs: ["code-developer", "research-agent", "website-builder"],
     tags: ["AI Coding Agent", "Cloud IDE", "Full-Stack Deployment", "PostgreSQL", "No-Setup Coding"],
     startingPrice: 25,
     hasFreePlan: true,
@@ -4529,6 +5233,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires active internet connection since all computation runs on Replit cloud containers", "Cloud resource scaling costs can grow for high-traffic production workloads"],
       vi: ["Bắt buộc phải có mạng internet vì toàn bộ mã nguồn và máy chủ chạy trên đám mây Replit", "Chi phí tài nguyên đám mây có thể tăng khi ứng dụng có lượng truy cập lớn trong thực tế"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://replit.com/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Basic cloud workspaces", "Community access", "Standard compute", "Public repls"] },
       { name: "Replit Core", priceMonthly: 25, priceAnnualMonthly: 20, currency: "USD", features: ["Replit Agent access", "Unlimited private repls", "Fast cloud compute", "$10/mo deployment credits"], isPopular: true },
@@ -4554,7 +5260,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Windsurf (created by Codeium) is a native fork of VS Code built from the ground up for agentic programming. Its standout feature, Cascade, combines conversational AI with proactive autonomous action—reading linter errors, running shell commands, and applying multi-file edits simultaneously. Plans start at $15/month with a free starter plan.",
       vi: "Windsurf (được phát triển bởi đội ngũ Codeium) là phiên bản tối ưu của VS Code dành riêng cho kỷ nguyên AI Agent. Điểm cốt lõi là Cascade - kết hợp giữa trò chuyện thông minh và hành động tự trị: đọc thông báo lỗi của linter, thực thi lệnh terminal và sửa nhiều file cùng lúc. Giá từ $15/tháng kèm gói dùng thử miễn phí.",
     },
-    hubs: ["research-agent"],
+    hubs: ["code-developer", "research-agent"],
     tags: ["AI IDE", "Cascade Agent", "Codeium", "Multi-File Editing", "Context Awareness"],
     startingPrice: 15,
     hasFreePlan: true,
@@ -4589,6 +5295,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Still rolling out advanced enterprise administrative audit dashboards", "Requires initial full codebase indexing on massive gigabyte-scale repositories"],
       vi: ["Các tính năng quản trị bảng điều khiển kiểm toán cấp doanh nghiệp lớn đang được tiếp tục hoàn thiện", "Cần thời gian lập chỉ mục ban đầu đối với các kho mã nguồn khổng lồ hàng chục gigabyte"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://codeium.com/windsurf/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited fast autocomplete", "Basic Cascade agent credits", "Context indexation", "Community support"] },
       { name: "Pro", priceMonthly: 15, priceAnnualMonthly: 12, currency: "USD", features: ["Unlimited Cascade agent access", "Claude 3.5 Sonnet & GPT-4o models", "Priority index servers", "Zero data training lock"], isPopular: true },
@@ -4649,6 +5357,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier caps PDF file size at 120 pages (32MB) per document", "Scanned handwritten documents require OCR pre-processing for best accuracy"],
       vi: ["Gói miễn phí giới hạn dung lượng file tối đa 120 trang (32MB) cho mỗi tài liệu", "Tài liệu viết tay chụp mờ cần được quét OCR rõ nét trước để đạt độ chính xác cao nhất"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://www.chatpdf.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["2 PDFs/day (up to 120 pages)", "50 questions/day", "32MB file limit", "Export chat history"] },
       { name: "Plus", priceMonthly: 5, priceAnnualMonthly: 4.16, currency: "USD", features: ["Unlimited PDFs & questions", "Up to 2,000 pages/PDF (50MB)", "Multi-PDF folder chats", "Priority AI model reasoning"], isPopular: true },
@@ -4709,6 +5419,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Primarily sold via institutional educational licenses rather than self-serve monthly credit card plans", "False positive considerations require human pedagogical review for fair grading"],
       vi: ["Chủ yếu phân phối qua giấy phép tổ chức trường học thay vì đăng ký tự động theo tháng cho cá nhân", "Cần sự đánh giá đối chiếu của giảng viên để đảm bảo tính công bằng trước tỷ lệ dương tính giả"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.turnitin.com/pricing",
     pricingTiers: [
       { name: "Instructor / Pilot", priceMonthly: 20, priceAnnualMonthly: 15, currency: "USD", features: ["Similarity Report", "AI writing percentage", "LMS integration", "Standard support"] },
       { name: "Campus License", priceMonthly: 50, priceAnnualMonthly: 40, currency: "USD", features: ["Unlimited student submissions", "Full institutional database", "Originality checking", "Custom API integration"], isPopular: true },
@@ -4718,7 +5430,6 @@ export const TOOLS_DATA: ToolItem[] = [
     logoUrl: "/logos/turnitin.png",
     alternatives: ["gptzero", "originality", "winston"]
   },
-
   {
     id: "chatgpt",
     slug: "chatgpt",
@@ -4770,6 +5481,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Advanced reasoning models have message caps during peak global hours", "Enterprise data privacy guarantees require Team or Enterprise subscription tiers"],
       vi: ["Các mô hình suy luận sâu có giới hạn số lượng tin nhắn trong khung giờ cao điểm", "Cam kết bảo mật dữ liệu doanh nghiệp không dùng để huấn luyện đòi hỏi gói Team hoặc Enterprise"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://chatgpt.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["GPT-4o mini access", "Limited GPT-4o access", "Data analysis", "Custom GPT browsing"] },
       { name: "Plus", priceMonthly: 20, priceAnnualMonthly: 20, currency: "USD", features: ["Full GPT-4o access", "OpenAI o1 reasoning", "DALL-E 3 image generation", "Canvas workspace"], isPopular: true },
@@ -4830,6 +5543,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Usage limits on the Pro plan can be reached quickly during heavy multi-turn coding sessions", "No native image generation capability (focuses strictly on text, code, and vision analysis)"],
       vi: ["Hạn mức lượt dùng của gói Pro có thể hết nhanh khi làm việc liên tục với các dự án code lớn", "Không có tính năng sinh ảnh trực tiếp từ văn bản (tập trung tối đa vào văn bản, code và đọc ảnh)"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://claude.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Claude 3.5 Sonnet access", "Web, iOS & Android apps", "Artifacts viewer", "Vision analysis"] },
       { name: "Pro", priceMonthly: 20, priceAnnualMonthly: 20, currency: "USD", features: ["5x more usage than free", "Claude 3.5 Sonnet & Opus access", "Priority access during peak traffic", "Early access to new features"], isPopular: true },
@@ -4855,7 +5570,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Midjourney v6.1 is universally recognized as the aesthetic pinnacle of generative text-to-image software. Accessible via Discord and its dedicated web creation interface, it excels at cinematic portraits, architectural concepts, and photorealistic textures. Paid plans start at $10/month.",
       vi: "Midjourney v6.1 được công nhận rộng rãi là đỉnh cao thẩm mỹ của phần mềm vẽ tranh AI. Người dùng có thể sử dụng qua Discord hoặc giao diện web riêng biệt, vượt trội trong chân dung điện ảnh, thiết kế kiến trúc và mô phỏng vật liệu chân thực. Giá từ $10/tháng.",
     },
-    hubs: ["advertising", "presentation-design"],
+    hubs: ["image-design", "advertising", "presentation-design"],
     tags: ["AI Art", "Midjourney", "Image Generation", "Photorealism", "Concept Art"],
     startingPrice: 10,
     hasFreePlan: false,
@@ -4890,6 +5605,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["No permanent free tier; requires monthly subscription to generate images", "Basic tier generations are publicly viewable on the community feed unless Stealth mode is purchased"],
       vi: ["Không có gói miễn phí vĩnh viễn; người dùng cần đăng ký thuê bao hàng tháng để tạo ảnh", "Gói cơ bản sẽ hiển thị ảnh công khai trên bảng tin cộng đồng trừ khi nâng cấp chế độ Stealth"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.midjourney.com/pricing",
     pricingTiers: [
       { name: "Basic", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["3.3 hours Fast GPU/mo (~200 images)", "General commercial terms", "Access to member gallery"] },
       { name: "Standard", priceMonthly: 30, priceAnnualMonthly: 24, currency: "USD", features: ["15 hours Fast GPU/mo", "Unlimited Relax GPU generations", "Web creation interface access"], isPopular: true },
@@ -4950,6 +5667,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Full feature set requires an active X Premium subscription", "Real-time social data can occasionally pick up early unverified rumors during fast-moving events"],
       vi: ["Để trải nghiệm đầy đủ các tính năng nâng cao cần có tài khoản X Premium", "Dữ liệu mạng xã hội trực tiếp đôi khi có thể phản ánh tin đồn chưa được kiểm chứng trong các sự kiện mới phát sinh"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://x.ai/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Basic Grok queries on web", "Standard rate limits", "Text responses", "Community access"] },
       { name: "X Premium", priceMonthly: 8, priceAnnualMonthly: 7, currency: "USD", features: ["Full Grok-2 access", "Real-time search synthesis", "Flux-1 image generation", "Verified checkmark on X"], isPopular: true },
@@ -5010,6 +5729,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Occasional server busy capacity during global viral traffic surges", "Does not feature proprietary native visual canvas or audio streaming features"],
       vi: ["Đôi khi máy chủ có thể phản hồi chậm trong những khung giờ có lượng truy cập đột biến toàn cầu", "Chưa tích hợp sẵn các công cụ canvas vẽ trực quan hay xử lý giọng nói thời gian thực như một số ứng dụng trả phí"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.deepseek.com/pricing",
     pricingTiers: [
       { name: "Web & Mobile Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["DeepSeek-V3 standard chat", "DeepSeek-R1 deep thinking", "Document search & upload", "Chat history"] },
       { name: "API Pay-As-You-Go", priceMonthly: 2, priceAnnualMonthly: 2, currency: "USD", features: ["$0.14 per 1M input tokens (cache hit)", "$0.55 per 1M input tokens (cache miss)", "$2.19 per 1M output tokens", "OpenAI SDK compatible"], isPopular: true },
@@ -5070,6 +5791,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Heavy desktop application can require significant RAM on lengthy 4K multi-track projects", "Automated transcription requires a quick manual review on complex technical terminology"],
       vi: ["Ứng dụng máy tính đòi hỏi dung lượng RAM tương đối khi xử lý các dự án video 4K nhiều góc quay dài hàng giờ", "Bản chép lời tự động cần kiểm tra lại đối với các thuật ngữ chuyên môn quá đặc thù"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.descript.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["1 transcription hour/mo", "720p watermark-free export", "Studio Sound basic", "Trial of AI features"] },
       { name: "Hobbyist", priceMonthly: 19, priceAnnualMonthly: 12, currency: "USD", features: ["10 transcription hours/mo", "4K watermark-free export", "Unlimited Studio Sound", "Full filler word removal"], isPopular: true },
@@ -5095,7 +5818,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "n8n is an advanced workflow automation platform built specifically for technical teams and AI engineers. Unlike rigid no-code tools, n8n supports custom JavaScript/Python execution, native LangChain nodes, and self-hosted on-premise deployments. Cloud plans start at $20/month with a free self-hosted edition.",
       vi: "n8n là nền tảng tự động hóa quy trình chuyên sâu dành cho đội ngũ kỹ thuật và kỹ sư AI. Khác với các công cụ kéo thả hạn chế, n8n hỗ trợ chạy code JavaScript/Python trực tiếp, tích hợp sẵn các nút LangChain và cho phép tự cài đặt trên máy chủ riêng không giới hạn số lượng tác vụ. Giá gói Cloud từ $20/tháng kèm bản tự lưu trữ miễn phí.",
     },
-    hubs: ["research-agent", "meeting-productivity"],
+    hubs: ["code-developer", "research-agent", "meeting-productivity"],
     tags: ["Workflow Automation", "AI Agents", "Self-Hosted", "LangChain", "Open Source"],
     startingPrice: 20,
     hasFreePlan: true,
@@ -5130,6 +5853,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Self-hosting requires server administration, backup management, and monitoring skills", "Steeper learning curve for non-developers compared to basic no-code tools"],
       vi: ["Việc tự vận hành trên máy chủ đòi hỏi kiến thức quản trị hệ thống, sao lưu dữ liệu và giám sát", "Đòi hỏi tư duy lập trình và xử lý dữ liệu cao hơn so với các phần mềm kéo thả đơn giản"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://n8n.io/pricing",
     pricingTiers: [
       { name: "Community (Self-Hosted)", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited workflow runs", "Self-hosted Docker deploy", "All core integrations", "Community support"] },
       { name: "Cloud Starter", priceMonthly: 26, priceAnnualMonthly: 20, currency: "USD", features: ["2,500 executions/mo", "Fully managed cloud hosting", "Automatic updates & backups", "Email support"], isPopular: true },
@@ -5190,6 +5915,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Free tier token quotas can deplete quickly with high-volume public chat bots", "Advanced multi-agent coordination logic requires understanding of variable state passing"],
       vi: ["Hạn mức token miễn phí có thể tiêu hao nhanh nếu bot phục vụ lượng người dùng công khai quá đông", "Cần hiểu biết cơ bản về truyền tham số trạng thái khi xây dựng các hệ thống phối hợp nhiều bot"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.coze.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Access to GPT-4o & Claude", "Standard plugin library", "Deploy to Telegram & Discord", "Basic knowledge base"] },
       { name: "Premium", priceMonthly: 9, priceAnnualMonthly: 7.5, currency: "USD", features: ["10x daily compute credits", "Advanced workflow triggers", "Larger document upload limit", "Priority customer support"], isPopular: true },
@@ -5215,7 +5942,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Adobe Firefly is Adobe's flagship family of creative generative models. Unlike controversial image generators, Firefly guarantees commercial indemnity, ensuring generated assets can be used in corporate ad campaigns without copyright risk. Plans start at $4.99/month with a free monthly credit plan.",
       vi: "Adobe Firefly là hệ thống mô hình AI sáng tạo của Adobe. Khác với các công cụ tạo ảnh gây tranh cãi về bản quyền, Firefly cam kết bồi thường pháp lý thương mại, đảm bảo tài nguyên tạo ra có thể dùng an tâm trong các chiến dịch quảng cáo lớn. Giá từ $4.99/tháng kèm gói dùng thử miễn phí.",
     },
-    hubs: ["presentation-design", "advertising"],
+    hubs: ["image-design", "presentation-design", "advertising"],
     tags: ["Adobe Firefly", "Photoshop", "Generative Fill", "Commercial Safe", "Vector AI"],
     startingPrice: 4.99,
     hasFreePlan: true,
@@ -5250,6 +5977,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Strict content moderation policies restrict certain fantasy or sensitive art concepts", "Consumes Generative Credits monthly, requiring top-ups for heavy production workflows"],
       vi: ["Chính sách kiểm duyệt nội dung an toàn tương đối chặt chẽ giới hạn một số phong cách phá cách", "Tiêu tốn hạn mức Generative Credits mỗi tháng, cần nạp thêm nếu có nhu cầu sản xuất khối lượng lớn"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.adobe.com/products/firefly.html/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["25 Generative Credits/mo", "Web access", "Standard resolution exports", "Adobe Stock watermark"] },
       { name: "Firefly Premium", priceMonthly: 4.99, priceAnnualMonthly: 4.99, currency: "USD", features: ["100 Generative Credits/mo", "No watermarks", "Full commercial usage rights", "Adobe Fonts access"], isPopular: true },
@@ -5310,6 +6039,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Premium plan pricing is relatively high compared to basic standalone AI chat tools", "Occasionally over-simplifies nuanced technical or literary phrasing"],
       vi: ["Mức giá thuê bao gói Premium tương đối cao so với các công cụ chatbot đơn thuần", "Đôi khi đề xuất đơn giản hóa quá mức một số câu văn mang tính thuật ngữ kỹ thuật chuyên sâu"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.grammarly.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Grammar, spelling & punctuation", "Conciseness suggestions", "Tone detection basic", "100 AI prompts/mo"] },
       { name: "Premium", priceMonthly: 30, priceAnnualMonthly: 12, currency: "USD", features: ["Full-sentence rewrites", "Vocabulary enhancements", "Plagiarism detection", "2,000 AI prompts/mo"], isPopular: true },
@@ -5335,7 +6066,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Hugging Face is the global platform where machine learning engineers collaborate on open-source models, datasets, and interactive demos. It provides Model Hub, Dataset Hub, Spaces for hosting Gradio/Streamlit apps, and Inference Endpoints for dedicated production GPUs. Free community tier; Pro is $9/month.",
       vi: "Hugging Face là nền tảng toàn cầu nơi cộng đồng kỹ sư máy tính cộng tác phát triển mô hình mã nguồn mở, tập dữ liệu và ứng dụng thử nghiệm. Nền tảng cung cấp Model Hub, Dataset Hub, Spaces để chạy demo Gradio/Streamlit và Inference Endpoints triển khai GPU riêng. Miễn phí cho cộng đồng; gói Pro giá $9/tháng.",
     },
-    hubs: ["research-agent"],
+    hubs: ["code-developer", "research-agent"],
     tags: ["Machine Learning", "Open Source", "Model Hub", "Inference API", "Spaces"],
     startingPrice: 9,
     hasFreePlan: true,
@@ -5370,6 +6101,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Dedicated GPU compute for heavy model hosting billed by the hour", "Requires Python, PyTorch, and command-line familiarity to unlock full capability"],
       vi: ["Chi phí thuê máy chủ GPU chuyên dụng cho các mô hình lớn được tính phí theo giờ sử dụng", "Cần có kiến thức lập trình Python, thư viện PyTorch và dòng lệnh để khai thác tối đa sức mạnh"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://huggingface.co/pricing",
     pricingTiers: [
       { name: "Community", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Unlimited public models & datasets", "Free CPU Spaces", "Community forums", "Access to public models"] },
       { name: "Pro Account", priceMonthly: 9, priceAnnualMonthly: 9, currency: "USD", features: ["Higher free Inference API rate limits", "Early access to new features", "Pro badge on profile", "Discounted GPU compute"], isPopular: true },
@@ -5430,6 +6163,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Smaller developer third-party plugin ecosystem compared to OpenAI's GPT Store", "Le Chat mobile application is newer with evolving UI refinements"],
       vi: ["Hệ sinh thái tiện ích plugin bên thứ ba chưa dày đặc bằng kho GPT Store của OpenAI", "Ứng dụng di động của Le Chat mới ra mắt và đang tiếp tục hoàn thiện thêm các tính năng nhỏ"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://mistral.ai/pricing",
     pricingTiers: [
       { name: "Le Chat Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["Mistral Large 2 access", "Codestral access", "Web search enabled", "Vision & document analysis"] },
       { name: "API Developer", priceMonthly: 2, priceAnnualMonthly: 2, currency: "USD", features: ["Pay-per-token pricing", "Mistral Small & Large endpoints", "Embeddings API", "Function calling support"], isPopular: true },
@@ -5490,6 +6225,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Default clip duration is 3 to 4 seconds, requiring extensions to create longer narratives", "High-resolution 1080p and watermark removal requires paid subscription"],
       vi: ["Độ dài clip cơ bản từ 3 đến 4 giây, cần bấm nối dài thêm để ghép thành câu chuyện dài", "Xuất video độ nét cao 1080p và xóa hình mờ watermark đòi hỏi gói trả phí"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://pika.art/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["150 initial credits + 30 daily", "Standard generation speed", "Pikaffects access", "Pika watermark"] },
       { name: "Standard", priceMonthly: 10, priceAnnualMonthly: 8, currency: "USD", features: ["700 credits/mo", "Watermark-free downloads", "1080p video upscaling", "Commercial usage rights"], isPopular: true },
@@ -5550,6 +6287,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Word generation credits deplete faster when using premium frontier model configurations", "Auto-generated articles still require human editorial review for unique personal perspectives"],
       vi: ["Hạn mức số từ tiêu hao nhanh hơn khi lựa chọn sử dụng các mô hình AI cao cấp", "Bài viết tự động vẫn cần biên tập viên người thật rà soát lại để bổ sung trải nghiệm và góc nhìn độc đáo"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://writesonic.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10,000 words one-time", "Chatsonic standard", "Templates access", "WordPress 1-click export"] },
       { name: "Individual", priceMonthly: 20, priceAnnualMonthly: 16, currency: "USD", features: ["Unlimited words (standard)", "AI Article Writer 6.0", "Brand Voice settings", "SEO checker integration"], isPopular: true },
@@ -5610,6 +6349,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Consumes credits per scan page (250 words per page credit)", "Heavily rewritten AI text may require manual human pedagogical review"],
       vi: ["Hệ thống tính phí theo trang quét (quy chuẩn 250 từ cho mỗi credit)", "Văn bản AI được người dùng biên tập lại nhiều lần vẫn cần chuyên gia đánh giá ngữ cảnh trực tiếp"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://copyleaks.com/pricing",
     pricingTiers: [
       { name: "Free Trial", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 scan pages", "Chrome browser extension", "Basic AI score", "Standard report"] },
       { name: "AI + Plagiarism", priceMonthly: 13.99, priceAnnualMonthly: 9.99, currency: "USD", features: ["1,200 pages/year ($10.99/mo billed annually)", "Full AI model breakdown", "Plagiarism source links", "Code analysis"], isPopular: true },
@@ -5670,6 +6411,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Heavily compressed or low-resolution social media screenshots can reduce detection confidence", "API tier pricing scales by volume for enterprise batch processing"],
       vi: ["Hình ảnh bị nén mờ nhiều lần trên mạng xã hội có thể làm giảm độ tin cậy của thuật toán phân tích", "Chi phí gói API doanh nghiệp tăng theo khối lượng hình ảnh và âm thanh cần quét hàng tháng"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://www.aiornot.com/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["10 image checks/mo", "Web upload scanner", "Confidence percentage", "Basic report"] },
       { name: "Pro", priceMonthly: 5, priceAnnualMonthly: 4.16, currency: "USD", features: ["200 checks/mo (Image, Audio, Text)", "High-resolution file uploads", "Priority queue", "Exportable audit certificates"], isPopular: true },
@@ -5730,6 +6473,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Emerging discipline requires active experimentation and ongoing content strategy adjustments", "Higher starting price tier targeted primarily at established SaaS and enterprise brands"],
       vi: ["Lĩnh vực GEO còn mới mẻ đòi hỏi doanh nghiệp phải chủ động thử nghiệm và điều chỉnh chiến lược nội dung liên tục", "Mức giá khởi điểm hướng tới các công ty phần mềm và thương hiệu đã có ngân sách tiếp thị"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://convertos.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 39, currency: "USD", features: ["50 tracked AI prompts", "Daily citation monitoring", "ChatGPT & Perplexity coverage", "Weekly executive report"] },
       { name: "Growth", priceMonthly: 129, priceAnnualMonthly: 99, currency: "USD", features: ["200 tracked AI prompts", "All 4 major LLM engines", "Competitor gap analysis", "Actionable GEO optimization tips"], isPopular: true },
@@ -5790,6 +6535,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Requires initial setup of business FAQ and appointment booking constraints", "Monthly plans include minute allocations; extra high-volume minutes billed as incurred"],
       vi: ["Cần dành thời gian ban đầu để nhập dữ liệu câu hỏi thường gặp (FAQ) và quy định đặt lịch của quán/phòng khám", "Gói tháng đi kèm số phút gọi định mức; nếu vượt quá số phút sẽ tính thêm phụ phí"],
     },
+    pricingModel: "per_seat",
+    pricingEvidenceUrl: "https://voicefleet.ai/pricing",
     pricingTiers: [
       { name: "Starter", priceMonthly: 49, priceAnnualMonthly: 39, currency: "USD", features: ["100 call minutes/mo", "Dedicated phone number", "Google Calendar booking", "Email transcripts"] },
       { name: "Business", priceMonthly: 129, priceAnnualMonthly: 99, currency: "USD", features: ["350 call minutes/mo", "SMS confirmation workflows", "Custom caller ID transfer", "CRM webhook integration"], isPopular: true },
@@ -5815,7 +6562,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "Stable Diffusion is the world's most adopted open-weights text-to-image foundation model. Developed by Stability AI, versions like SD3.5 Large deliver cinematic photorealism, typography fidelity, and complex prompt understanding. Can be run 100% free locally on your own GPU or accessed via Stability AI cloud APIs.",
       vi: "Stable Diffusion là mô hình nền tảng tạo ảnh từ văn bản mã nguồn mở phổ biến nhất hành tinh. Các phiên bản như SD3.5 Large mang lại hình ảnh sắc nét, hiển thị chữ chuẩn xác và khả năng hiểu câu lệnh phức tạp. Có thể chạy hoàn toàn miễn phí trên card đồ họa cá nhân hoặc dùng qua API đám mây.",
     },
-    hubs: ["advertising", "presentation-design"],
+    hubs: ["image-design", "advertising", "presentation-design"],
     tags: ["Stable Diffusion", "Open Source AI", "Text to Image", "ControlNet", "Local GPU"],
     startingPrice: 0,
     hasFreePlan: true,
@@ -5850,6 +6597,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Local generation requires a modern GPU with at least 8GB to 12GB of VRAM for smooth performance", "Steeper technical setup curve compared to simple web-based SaaS tools like Midjourney"],
       vi: ["Chạy trên máy tính cá nhân đòi hỏi card đồ họa hiện đại với tối thiểu 8GB - 12GB VRAM để đạt tốc độ tốt", "Đòi hỏi các bước cài đặt kỹ thuật ban đầu phức tạp hơn so với các ứng dụng web ăn liền như Midjourney"],
     },
+    pricingModel: "usage",
+    pricingEvidenceUrl: "https://stability.ai/pricing",
     pricingTiers: [
       { name: "Local Self-Hosted", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["100% free open weights", "Unlimited generations on local GPU", "Full ComfyUI & WebUI support", "Commercial use under license"] },
       { name: "Stability Cloud API", priceMonthly: 10, priceAnnualMonthly: 10, currency: "USD", features: ["$0.03 per SD3.5 image", "High-speed enterprise cloud GPUs", "Inpainting & outpainting API", "No hardware required"], isPopular: true },
@@ -5875,7 +6624,7 @@ export const TOOLS_DATA: ToolItem[] = [
       en: "v0 is Vercel's generative user interface platform. Tailored specifically for modern Next.js and React developers, it transforms plain text prompts and design screenshots into semantic, accessible, production-grade components that run immediately in your browser. Plans start at $20/month with a free starter tier.",
       vi: "v0 là nền tảng khởi tạo giao diện người dùng AI của Vercel. Được thiết kế chuyên biệt cho các lập trình viên Next.js và React, phần mềm biến văn bản hoặc ảnh chụp màn hình thiết kế thành các component React chuẩn mực, dễ bảo trì và có thể chạy thử trực tiếp. Giá từ $20/tháng kèm gói miễn phí.",
     },
-    hubs: ["website-builder", "research-agent"],
+    hubs: ["code-developer", "website-builder", "research-agent"],
     tags: ["v0", "Vercel", "Generative UI", "React", "shadcn/ui", "Tailwind CSS"],
     startingPrice: 20,
     hasFreePlan: true,
@@ -5910,6 +6659,8 @@ export const TOOLS_DATA: ToolItem[] = [
       en: ["Premium usage credits are consumed for complex iterations and image-to-code conversions", "Focused strictly on frontend UI components rather than full server-side backend logic"],
       vi: ["Hạn mức credit tiêu hao khi yêu cầu chỉnh sửa tinh chỉnh nhiều lần hoặc chuyển đổi từ ảnh thiết kế phức tạp", "Tập trung chuyên biệt cho giao diện frontend chứ không tự dựng toàn bộ logic cơ sở dữ liệu backend phức tạp"],
     },
+    pricingModel: "flat",
+    pricingEvidenceUrl: "https://v0.dev/pricing",
     pricingTiers: [
       { name: "Free", priceMonthly: 0, priceAnnualMonthly: 0, currency: "USD", features: ["200 credits/mo", "Public generations", "React & Tailwind exports", "Interactive live preview"] },
       { name: "Premium", priceMonthly: 20, priceAnnualMonthly: 20, currency: "USD", features: ["5,000 credits/mo", "Private generations mode", "Image-to-UI uploads", "Unlimited CLI imports"], isPopular: true },
@@ -5919,6 +6670,7 @@ export const TOOLS_DATA: ToolItem[] = [
     logoUrl: "/logos/v0-dev.png",
     alternatives: ["bolt-new", "lovable", "framer"]
   },
+
 ];
 
 export function getToolBySlug(slug: string): ToolItem | undefined {

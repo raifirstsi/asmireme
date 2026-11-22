@@ -88,8 +88,8 @@ export function Footer({ locale }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/blog`} className="hover:text-black dark:hover:text-white transition-colors">
-                  AI Research Blog & Guides
+                <Link href={`/${locale}/news`} className="hover:text-black dark:hover:text-white transition-colors">
+                  {locale === "vi" ? "Tin Tức & Đánh Giá AI (News) →" : "AI News & In-Depth Reviews →"}
                 </Link>
               </li>
               <li>

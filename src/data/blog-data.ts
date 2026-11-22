@@ -9,6 +9,7 @@ import { ADVERTISING_BLOG_POSTS } from "./blog-posts/advertising-posts";
 import { BUILDER_BLOG_POSTS } from "./blog-posts/builder-posts";
 import { DETECTION_BLOG_POSTS } from "./blog-posts/detection-posts";
 import { AGENT_BLOG_POSTS } from "./blog-posts/agent-posts";
+import { AI_NEWS_POSTS } from "./news-posts/ai-news-posts";
 
 export interface BlogPost {
   slug: string;
@@ -528,7 +529,7 @@ Với hơn 40 cổng tích hợp sẵn (HubSpot, Salesforce, Slack, Notion), Fir
   },
 ];
 
-export const BLOG_POSTS: BlogPost[] = [
+const ALL_REVIEWS_POSTS: BlogPost[] = [
   ...CRM_BLOG_POSTS,
   ...CONTENT_BLOG_POSTS,
   ...VIDEO_BLOG_POSTS,
@@ -540,8 +541,20 @@ export const BLOG_POSTS: BlogPost[] = [
   ...DETECTION_BLOG_POSTS,
   ...AGENT_BLOG_POSTS,
   ...ORIGINAL_BLOG_POSTS,
+].map((post) => ({
+  ...post,
+  category: "Reviews",
+}));
+
+export const NEWS_POSTS: BlogPost[] = [
+  ...AI_NEWS_POSTS,
+  ...ALL_REVIEWS_POSTS,
 ];
 
+export const BLOG_POSTS: BlogPost[] = NEWS_POSTS;
+
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return BLOG_POSTS.find((p) => p.slug === slug);
+  return NEWS_POSTS.find((p) => p.slug === slug);
 }
+
+export const getNewsPostBySlug = getBlogPostBySlug;

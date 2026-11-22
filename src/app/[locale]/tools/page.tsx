@@ -40,7 +40,7 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
           <p className="text-sm text-muted-foreground max-w-2xl leading-relaxed">
             {locale === "vi"
               ? `Tất cả ${count} công cụ trong danh mục chuẩn của Asmire đã được kiểm tra tính năng, xác thực bảng giá và đối soát điều khoản affiliate.`
-              : `Search, filter, and inspect ${count} verified tools across 10 specialized hubs. Real testing artifacts, transparent limitations, and zero paid placement.`}
+              : `Search, filter, and inspect ${count} verified tools across specialized software hubs. Real testing artifacts, transparent limitations, and zero paid placement.`}
           </p>
         </div>
 

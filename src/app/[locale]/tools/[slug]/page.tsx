@@ -317,6 +317,16 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                           ${tier.priceAnnualMonthly}/mo billed annually
                         </div>
                       )}
+                      {tier.userLimit && (
+                        <div className="mt-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+                          ✓ {tier.userLimit}
+                        </div>
+                      )}
+                      {tier.usageLimit && (
+                        <div className="text-[11px] text-muted-foreground">
+                          • {tier.usageLimit}
+                        </div>
+                      )}
                     </div>
                     <ul className="space-y-1.5 text-xs text-muted-foreground pt-2">
                       {tier.features.map((feat, i) => (
