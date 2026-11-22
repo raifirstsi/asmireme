@@ -16,7 +16,7 @@ export const DETECTION_BLOG_POSTS: BlogPost[] = [
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -209,7 +209,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -402,7 +402,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },

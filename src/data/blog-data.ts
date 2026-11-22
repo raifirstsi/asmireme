@@ -46,7 +46,7 @@ const ORIGINAL_BLOG_POSTS: BlogPost[] = [
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 18,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "SaaS & CRM Automation Analysts",
       avatarUrl: "/icon.png",
     },
@@ -268,7 +268,7 @@ Tính năng Voice AI của HighLevel có thể trực tổng đài 24/7, đàm t
     lastReviewedDate: "2027-11-20",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Video AI Lab",
+      name: "Asmire Team",
       role: "Multimedia Benchmark Specialists",
       avatarUrl: "/icon.png",
     },
@@ -337,7 +337,7 @@ Khi sản xuất video người dẫn ảo mà không cần trường quay hay c
     lastReviewedDate: "2027-11-19",
     readingTimeMinutes: 10,
     author: {
-      name: "Asmire SEO Intelligence",
+      name: "Asmire Team",
       role: "Search Quality Researchers",
       avatarUrl: "/icon.png",
     },
@@ -398,7 +398,7 @@ Tính năng Brand Voice của Jasper huấn luyện AI theo đúng cẩm nang th
     lastReviewedDate: "2027-11-18",
     readingTimeMinutes: 8,
     author: {
-      name: "Asmire Ethics & Integrity Board",
+      name: "Asmire Team",
       role: "Content Verification Analysts",
       avatarUrl: "/icon.png",
     },
@@ -445,7 +445,7 @@ Báo nhầm một bài viết do người tự viết thành AI có thể làm t
     lastReviewedDate: "2027-11-17",
     readingTimeMinutes: 7,
     author: {
-      name: "Asmire Product Design Lab",
+      name: "Asmire Team",
       role: "UI/UX & Presentation Analysts",
       avatarUrl: "/icon.png",
     },
@@ -498,7 +498,7 @@ Decktopus được thiết kế riêng cho mục tiêu chốt sales: nhúng lị
     lastReviewedDate: "2027-11-16",
     readingTimeMinutes: 9,
     author: {
-      name: "Asmire Enterprise Operations",
+      name: "Asmire Team",
       role: "Workplace Productivity Specialists",
       avatarUrl: "/icon.png",
     },
@@ -557,6 +557,11 @@ export const NEWS_POSTS: BlogPost[] = [
   ...ALL_REVIEWS_POSTS,
 ].map((post) => ({
   ...post,
+  author: {
+    name: "Asmire Team",
+    role: post.author?.role || "AI SaaS Research & Empirical Analysis",
+    avatarUrl: post.author?.avatarUrl || "/icon.png",
+  },
   coverImage: post.coverImage || `/thumbnails/news/${post.slug}.webp`,
 }));
 

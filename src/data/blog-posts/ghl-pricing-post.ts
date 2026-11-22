@@ -15,7 +15,7 @@ export const GHL_PRICING_BLOG_POST: BlogPost = {
   lastReviewedDate: "2027-11-22",
   readingTimeMinutes: 14,
   author: {
-    name: "Asmire Enterprise Growth Lab",
+    name: "Asmire Team",
     role: "Direct-Response ROI & SaaS Economics Team",
     avatarUrl: "/images/authors/crm-lab.png",
   },

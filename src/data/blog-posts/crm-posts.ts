@@ -22,7 +22,7 @@ export const CRM_BLOG_POSTS: BlogPost[] = [
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -215,7 +215,7 @@ Với chính sách **dùng thử 14 ngày miễn phí**, bạn hoàn toàn khôn
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -408,7 +408,7 @@ Với chính sách **dùng thử 30 ngày miễn phí**, bạn hoàn toàn khôn
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -601,7 +601,7 @@ Với chính sách **dùng thử 14 ngày miễn phí**, bạn hoàn toàn khôn
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },
@@ -794,7 +794,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     lastReviewedDate: "2027-11-21",
     readingTimeMinutes: 12,
     author: {
-      name: "Asmire Enterprise Growth Lab",
+      name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
       avatarUrl: "/images/authors/crm-lab.png",
     },

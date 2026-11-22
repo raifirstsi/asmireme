@@ -15,7 +15,7 @@ export const GHL_VS_CLICKFUNNELS_BLOG_POST: BlogPost = {
   lastReviewedDate: "2027-11-22",
   readingTimeMinutes: 16,
   author: {
-    name: "Asmire Enterprise Growth Lab",
+    name: "Asmire Team",
     role: "Direct-Response ROI & SaaS Economics Team",
     avatarUrl: "/images/authors/crm-lab.png",
   },
