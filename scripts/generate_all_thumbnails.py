@@ -1,12 +1,12 @@
 """
-Generate International-Standard AI SaaS Article Thumbnails for Asmire
-Matches strict user layout requirements:
-- Restore original subtle background (step=45 delicate grid fill 8, smooth radial Gaussian glows)
-- NO Vietnamese description text inserted into thumbnails
-- NO bottom diagram boxes inside the card
-- Asmire Favicon 'a' badge enlarged and centered
-- Illustration / Tool Logo in the right card enlarged, prominent, and centered
-- Large, bold high-contrast English title typography
+Generate Luxury Black 3D Article Thumbnails for Asmire
+Specifications:
+- 100% Black 3D Background with volumetric studio lighting and depth vignette (NO grid lines / no square stripes)
+- Floating 3D Glassmorphic Card on the right with soft shadow & top glass highlight rim
+- Centered, prominent Tool Logo (148px) inside a 3D squircle / Custom 3D Vector Artwork for AI News
+- "Tiêu đề vừa phải": Moderate, elegant title typography (40px bold Segoe UI with text shadow)
+- NO Vietnamese description text
+- Centered 3D Asmire Favicon 'a' badge (50px) perfectly aligned above title
 """
 
 import os
@@ -20,124 +20,117 @@ FONT_BOLD = "C:\\Windows\\Fonts\\segoeuib.ttf"
 FONT_SEMI = "C:\\Windows\\Fonts\\seguisb.ttf"
 FONT_REG = "C:\\Windows\\Fonts\\segoeui.ttf"
 
-# Original, subtle background radial glow from version 1
-def add_radial_glow(base, center, radius, color):
-    glow = Image.new("RGBA", base.size, (0, 0, 0, 0))
-    gdraw = ImageDraw.Draw(glow)
-    cx, cy = center
-    for r in range(radius, 0, -12):
-        alpha = int((1 - (r / radius) ** 1.8) * color[3])
-        if alpha <= 0:
-            continue
-        c = (color[0], color[1], color[2], alpha)
-        gdraw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=c)
-    glow = glow.filter(ImageFilter.GaussianBlur(radius=28))
-    return Image.alpha_composite(base, glow)
-
-# Original delicate grid from version 1 (step=45, fill 8, crosses fill 20)
-def draw_grid_and_crosses(draw, width, height, step=45):
-    for x in range(0, width, step):
-        draw.line([(x, 0), (x, height)], fill=(255, 255, 255, 8), width=1)
-    for y in range(0, height, step):
-        draw.line([(0, y), (width, y)], fill=(255, 255, 255, 8), width=1)
-    for x in range(0, width, step * 3):
-        for y in range(0, height, step * 3):
-            draw.line([(x - 3, y), (x + 3, y)], fill=(255, 255, 255, 20), width=1)
-            draw.line([(x, y - 3), (x, y + 3)], fill=(255, 255, 255, 20), width=1)
-
-def wrap_text(text, font, max_width, draw):
-    words = text.split()
-    lines = []
-    current_line = []
-    for word in words:
-        test_line = " ".join(current_line + [word])
-        bbox = draw.textbbox((0, 0), test_line, font=font)
-        w = bbox[2] - bbox[0]
-        if w <= max_width:
-            current_line.append(word)
-        else:
-            if current_line:
-                lines.append(" ".join(current_line))
-                current_line = [word]
-            else:
-                lines.append(word)
-                current_line = []
-    if current_line:
-        lines.append(" ".join(current_line))
-    return lines
-
 THEMES = {
-    "AI News": {
-        "glow_main": (245, 158, 11, 80),
-        "glow_sec": (234, 88, 12, 60),
-        "accent": (245, 158, 11),
-    },
-    "VIDEO & AVATAR": {
-        "glow_main": (139, 92, 246, 80),
-        "glow_sec": (99, 102, 241, 60),
-        "accent": (139, 92, 246),
-    },
-    "VOICE & AUDIO": {
-        "glow_main": (6, 182, 212, 80),
-        "glow_sec": (14, 165, 233, 60),
-        "accent": (6, 182, 212),
-    },
-    "SEO & CONTENT": {
-        "glow_main": (16, 185, 129, 80),
-        "glow_sec": (5, 150, 105, 60),
-        "accent": (16, 185, 129),
-    },
-    "CRM & GROWTH": {
-        "glow_main": (59, 130, 246, 80),
-        "glow_sec": (37, 99, 235, 60),
-        "accent": (59, 130, 246),
-    },
-    "AI DETECTION": {
-        "glow_main": (239, 68, 68, 80),
-        "glow_sec": (245, 158, 11, 60),
-        "accent": (239, 68, 68),
-    },
-    "PRODUCTIVITY & NOTES": {
-        "glow_main": (168, 85, 247, 80),
-        "glow_sec": (192, 132, 252, 60),
-        "accent": (168, 85, 247),
-    },
-    "PRESENTATIONS & SLIDES": {
-        "glow_main": (236, 72, 153, 80),
-        "glow_sec": (244, 114, 182, 60),
-        "accent": (236, 72, 153),
-    },
-    "DESIGN & AD CREATIVE": {
-        "glow_main": (249, 115, 22, 80),
-        "glow_sec": (251, 146, 60, 60),
-        "accent": (249, 115, 22),
-    },
-    "DEFAULT": {
-        "glow_main": (99, 102, 241, 80),
-        "glow_sec": (139, 92, 246, 60),
-        "accent": (99, 102, 241),
-    }
+    "AI News": (245, 158, 11),
+    "VIDEO & AVATAR": (139, 92, 246),
+    "VOICE & AUDIO": (6, 182, 212),
+    "SEO & CONTENT": (16, 185, 129),
+    "CRM & GROWTH": (59, 130, 246),
+    "AI DETECTION": (239, 68, 68),
+    "PRODUCTIVITY & NOTES": (168, 85, 247),
+    "PRESENTATIONS & SLIDES": (236, 72, 153),
+    "DESIGN & AD CREATIVE": (249, 115, 22),
+    "DEFAULT": (99, 102, 241),
 }
 
-def get_theme_for_article(art):
+def get_accent_for_article(art):
     cat = (art.get("category") or "").upper()
     for k in THEMES:
         if k in cat:
-            return k, THEMES[k]
+            return THEMES[k]
     slug = art.get("slug", "").lower()
     if "video" in slug or "avatar" in slug or "synthesia" in slug or "opus" in slug:
-        return "VIDEO & AVATAR", THEMES["VIDEO & AVATAR"]
+        return THEMES["VIDEO & AVATAR"]
     if "voice" in slug or "audio" in slug or "elevenlabs" in slug or "listnr" in slug:
-        return "VOICE & AUDIO", THEMES["VOICE & AUDIO"]
+        return THEMES["VOICE & AUDIO"]
     if "seo" in slug or "content" in slug or "writer" in slug or "textero" in slug or "jasper" in slug:
-        return "SEO & CONTENT", THEMES["SEO & CONTENT"]
+        return THEMES["SEO & CONTENT"]
     if "crm" in slug or "highlevel" in slug or "gohighlevel" in slug or "nutshell" in slug:
-        return "CRM & GROWTH", THEMES["CRM & GROWTH"]
+        return THEMES["CRM & GROWTH"]
     if "detection" in slug or "originality" in slug or "winston" in slug:
-        return "AI DETECTION", THEMES["AI DETECTION"]
-    return "DEFAULT", THEMES["DEFAULT"]
+        return THEMES["AI DETECTION"]
+    return THEMES["DEFAULT"]
 
-def draw_centered_tool_logo(im, draw, logo_slug, cx, cy, size=150):
+def create_3d_black_canvas(width, height, accent_color):
+    # 1. Base dark obsidian canvas with vertical 3D depth gradient
+    base = Image.new("RGBA", (width, height), (5, 6, 8, 255))
+    draw_base = ImageDraw.Draw(base)
+    
+    for y in range(height):
+        factor = 1.0 - math.pow(abs(y - height * 0.45) / (height * 0.55), 1.6)
+        r = int(5 + 10 * factor)
+        g = int(6 + 11 * factor)
+        b = int(8 + 15 * factor)
+        draw_base.line([(0, y), (width, y)], fill=(r, g, b, 255))
+
+    # 2. 3D Volumetric Ambient Lighting
+    glow_layer = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    gdraw = ImageDraw.Draw(glow_layer)
+    
+    rx, ry = 920, 315
+    ar, ag, ab = accent_color
+    for rad in range(380, 0, -20):
+        alpha = int((1.0 - (rad / 380) ** 1.5) * 65)
+        gdraw.ellipse([rx - rad, ry - rad, rx + rad, ry + rad], fill=(ar, ag, ab, alpha))
+        
+    for rad in range(300, 0, -25):
+        alpha = int((1.0 - (rad / 300) ** 1.8) * 35)
+        gdraw.ellipse([600 - rad, 40 - rad, 600 + rad, 40 + rad], fill=(120, 140, 180, alpha))
+        
+    glow_blurred = glow_layer.filter(ImageFilter.GaussianBlur(radius=36))
+    canvas = Image.alpha_composite(base, glow_blurred)
+
+    # 3. 3D Camera Depth Vignette
+    vignette = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    vdraw = ImageDraw.Draw(vignette)
+    cx, cy = width // 2, height // 2
+    max_dist = math.sqrt(cx**2 + cy**2)
+    for r in range(int(max_dist), int(height * 0.4), -30):
+        norm = (r - height * 0.4) / (max_dist - height * 0.4)
+        alpha = int(math.pow(norm, 2.2) * 160)
+        vdraw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(0, 0, 0, alpha), width=30)
+        
+    vignette = vignette.filter(ImageFilter.GaussianBlur(radius=30))
+    canvas = Image.alpha_composite(canvas, vignette)
+    
+    # 4. Subtle 3D Top Studio Bevel
+    top_rim = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    tdraw = ImageDraw.Draw(top_rim)
+    tdraw.line([(60, 0), (width - 60, 0)], fill=(255, 255, 255, 25), width=1)
+    tdraw.line([(0, 0), (0, height)], fill=(255, 255, 255, 10), width=1)
+    tdraw.line([(width - 1, 0), (width - 1, height)], fill=(255, 255, 255, 10), width=1)
+    canvas = Image.alpha_composite(canvas, top_rim)
+
+    return canvas
+
+def draw_3d_card(canvas, card_x, card_y, card_w, card_h, accent_color):
+    # 3D Floating Shadow (Deep ambient occlusion)
+    shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    sdraw = ImageDraw.Draw(shadow)
+    sdraw.rounded_rectangle(
+        [(card_x - 10, card_y + 14), (card_x + card_w + 10, card_y + card_h + 28)],
+        radius=36,
+        fill=(0, 0, 0, 180)
+    )
+    shadow = shadow.filter(ImageFilter.GaussianBlur(radius=22))
+    canvas = Image.alpha_composite(canvas, shadow)
+
+    # 3D Glass Body
+    card_img = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    cdraw = ImageDraw.Draw(card_img)
+    
+    cdraw.rounded_rectangle(
+        [(card_x, card_y), (card_x + card_w, card_y + card_h)],
+        radius=30,
+        fill=(13, 15, 22, 235),
+        outline=(accent_color[0], accent_color[1], accent_color[2], 75),
+        width=1
+    )
+    cdraw.line([(card_x + 35, card_y + 1), (card_x + card_w - 35, card_y + 1)], fill=(255, 255, 255, 60), width=1)
+    
+    return Image.alpha_composite(canvas, card_img)
+
+def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=148):
     logo_path = f"public/logos/{logo_slug}.png"
     if os.path.exists(logo_path):
         try:
@@ -145,12 +138,18 @@ def draw_centered_tool_logo(im, draw, logo_slug, cx, cy, size=150):
             lw, lh = logo.size
             lx = cx - lw // 2
             ly = cy - lh // 2
-            card_pad = 28
+            card_pad = 26
+            
+            draw.rounded_rectangle(
+                [(lx - card_pad, ly - card_pad + 6), (lx + lw + card_pad, ly + lh + card_pad + 10)],
+                radius=32,
+                fill=(0, 0, 0, 90)
+            )
             draw.rounded_rectangle(
                 [(lx - card_pad, ly - card_pad), (lx + lw + card_pad, ly + lh + card_pad)],
-                radius=32,
-                fill=(255, 255, 255, 250),
-                outline=(255, 255, 255, 80),
+                radius=30,
+                fill=(255, 255, 255, 252),
+                outline=(255, 255, 255, 100),
                 width=1
             )
             im.paste(logo, (lx, ly), logo)
@@ -159,11 +158,7 @@ def draw_centered_tool_logo(im, draw, logo_slug, cx, cy, size=150):
             pass
     return False
 
-def draw_clean_card_artwork(im, draw, slug, cat_name, card_x, card_y, card_w, card_h, accent, tools):
-    cx = card_x + card_w // 2
-    cy = card_y + card_h // 2
-
-    # 1. AI News Custom Vector Artworks (Large, beautifully centered, no bottom boxes)
+def draw_3d_news_artwork(draw, slug, cx, cy, accent):
     if "frictionless" in slug or "gemini" in slug:
         draw.ellipse([(cx - 48, cy - 48), (cx + 48, cy + 48)], fill=(accent[0], accent[1], accent[2], 230))
         font_bold = ImageFont.truetype(FONT_BOLD, 15)
@@ -215,10 +210,10 @@ def draw_clean_card_artwork(im, draw, slug, cat_name, card_x, card_y, card_w, ca
         return
 
     if "anthropic" in slug or "ipo" in slug:
-        draw.line([(card_x + 40, cy + 110), (card_x + card_w - 40, cy + 110)], fill=(255, 255, 255, 30), width=1)
+        draw.line([(cx - 160, cy + 110), (cx + 160, cy + 110)], fill=(255, 255, 255, 30), width=1)
         points = []
-        for x in range(card_x + 40, card_x + card_w - 40, 10):
-            norm = (x - (card_x + 40)) / (card_w - 80)
+        for x in range(cx - 160, cx + 160, 10):
+            norm = (x - (cx - 160)) / 320
             y = (cy + 110) - int(math.pow(norm, 2.5) * 210)
             points.append((x, y))
         for i in range(len(points) - 1):
@@ -233,10 +228,69 @@ def draw_clean_card_artwork(im, draw, slug, cat_name, card_x, card_y, card_w, ca
         for i in range(1, 6):
             r = i * 32
             draw.arc([(cx - r, cy - r), (cx + r, cy + r)], start=180, end=360, fill=accent, width=2)
-        draw.line([(card_x + 40, cy), (card_x + card_w - 40, cy)], fill=(255, 255, 255, 120), width=2)
+        draw.line([(cx - 160, cy), (cx + 160, cy)], fill=(255, 255, 255, 120), width=2)
         return
 
-    # 2. Tool Review Articles: Derive tool logo (Enlarged & Perfectly Centered)
+def wrap_text(text, font, max_width, draw):
+    words = text.split()
+    lines = []
+    current_line = []
+    for word in words:
+        test_line = " ".join(current_line + [word])
+        bbox = draw.textbbox((0, 0), test_line, font=font)
+        w = bbox[2] - bbox[0]
+        if w <= max_width:
+            current_line.append(word)
+        else:
+            if current_line:
+                lines.append(" ".join(current_line))
+                current_line = [word]
+            else:
+                lines.append(word)
+                current_line = []
+    if current_line:
+        lines.append(" ".join(current_line))
+    return lines
+
+def generate_single_thumbnail(art, asmire_icon_white):
+    width, height = 1200, 630
+    slug = art["slug"]
+    title_raw = art.get("title_en", slug)
+
+    # Clean and format English title gracefully
+    clean_title = re.sub(r'\s*\(202\d\):.*', ' (2027)', title_raw)
+    if ":" in title_raw:
+        parts = title_raw.split(":", 1)
+        p0 = parts[0].strip()
+        p1 = parts[1].strip()
+        if len(p1) > 42:
+            words1 = p1.split()
+            trunc = []
+            cur_l = 0
+            for w in words1:
+                if cur_l + len(w) + 1 > 38:
+                    break
+                trunc.append(w)
+                cur_l += len(w) + 1
+            p1 = " ".join(trunc)
+        clean_title = f"{p0}:\n{p1}"
+
+    accent = get_accent_for_article(art)
+
+    # 1. 3D Black Canvas (NO GRID LINES)
+    im = create_3d_black_canvas(width, height, accent)
+
+    # 2. 3D Floating Glass Card on Right (400x400)
+    card_x, card_y = 730, 115
+    card_w, card_h = 400, 400
+    im = draw_3d_card(im, card_x, card_y, card_w, card_h, accent)
+
+    draw = ImageDraw.Draw(im)
+    cx = card_x + card_w // 2
+    cy = card_y + card_h // 2
+
+    # Draw Artwork or Logo
+    tools = art.get("tools", [])
     primary_tool = tools[0] if tools else None
     if not primary_tool:
         match_slug = re.match(r'^([a-z0-9\-]+)-review', slug)
@@ -244,68 +298,25 @@ def draw_clean_card_artwork(im, draw, slug, cat_name, card_x, card_y, card_w, ca
             primary_tool = match_slug.group(1)
 
     logo_drawn = False
-    if primary_tool and "AI News" not in cat_name:
-        logo_drawn = draw_centered_tool_logo(im, draw, primary_tool, cx, cy, size=150)
+    if primary_tool and "AI News" not in (art.get("category") or ""):
+        logo_drawn = draw_3d_tool_logo(im, draw, primary_tool, cx, cy, size=148)
 
     if not logo_drawn:
         if "vs" in slug or len(tools) >= 2:
             t1 = tools[0] if len(tools) > 0 else "gamma"
             t2 = tools[1] if len(tools) > 1 else "decktopus"
-            draw_centered_tool_logo(im, draw, t1, cx - 85, cy, size=110)
-            draw_centered_tool_logo(im, draw, t2, cx + 85, cy, size=110)
+            draw_3d_tool_logo(im, draw, t1, cx - 85, cy, size=110)
+            draw_3d_tool_logo(im, draw, t2, cx + 85, cy, size=110)
             font_vs = ImageFont.truetype(FONT_BOLD, 24)
             draw.text((cx - 17, cy - 14), "VS", font=font_vs, fill=accent)
-            logo_drawn = True
+        else:
+            draw_3d_news_artwork(draw, slug, cx, cy, accent)
 
-def generate_single_thumbnail(art, asmire_icon_white):
-    width, height = 1200, 630
-    slug = art["slug"]
-    title_raw = art.get("title_en", slug)
+    # 3. Left Section: "Tiêu đề vừa phải" (Font 40px) + Centered 3D Favicon 'a'
+    col_center_x = 380
+    max_title_w = 600
 
-    # Clean and format English title (no chopped words)
-    clean_title = re.sub(r'\s*\(202\d\):.*', ' (2027)', title_raw)
-    if ":" in title_raw:
-        parts = title_raw.split(":", 1)
-        part0 = parts[0].strip()
-        part1 = parts[1].strip()
-        if len(part1) > 46:
-            words1 = part1.split()
-            trunc = []
-            cur_l = 0
-            for w in words1:
-                if cur_l + len(w) + 1 > 42:
-                    break
-                trunc.append(w)
-                cur_l += len(w) + 1
-            part1 = " ".join(trunc)
-        clean_title = f"{part0}:\n{part1}"
-
-    cat_label, theme = get_theme_for_article(art)
-
-    # 1. Base Image Canvas with original subtle radial glow
-    im = Image.new("RGBA", (width, height), (9, 10, 13, 255))
-    im = add_radial_glow(im, (960, 315), 360, theme["glow_main"])
-    im = add_radial_glow(im, (1120, 140), 260, theme["glow_sec"])
-    im = add_radial_glow(im, (400, 315), 260, (theme["accent"][0], theme["accent"][1], theme["accent"][2], 28))
-
-    draw = ImageDraw.Draw(im)
-    draw_grid_and_crosses(draw, width, height, step=45)
-    draw.rectangle([(0, 0), (width - 1, height - 1)], outline=(255, 255, 255, 18), width=1)
-
-    # 2. Right Card: Symmetrical & Clean 400x400 (Centered at y=315)
-    card_x, card_y = 730, 115
-    card_w, card_h = 400, 400
-    card_border = (theme["accent"][0], theme["accent"][1], theme["accent"][2], 80)
-    draw.rounded_rectangle([(card_x, card_y), (card_x + card_w, card_y + card_h)], radius=28, fill=(13, 14, 20, 235), outline=card_border, width=1)
-
-    tools = art.get("tools", [])
-    draw_clean_card_artwork(im, draw, slug, cat_label, card_x, card_y, card_w, card_h, theme["accent"], tools)
-
-    # 3. Left Section: Centered Favicon 'a' + Bold English Title (NO Vietnamese text!)
-    col_center_x = 385
-    max_title_w = 620
-
-    font_title = ImageFont.truetype(FONT_BOLD, 48)
+    font_title = ImageFont.truetype(FONT_BOLD, 40)
 
     if "\n" in clean_title:
         p0, p1 = clean_title.split("\n", 1)
@@ -316,24 +327,31 @@ def generate_single_thumbnail(art, asmire_icon_white):
     if len(lines_en) > 4:
         lines_en = lines_en[:4]
 
-    # Larger, harmonious Asmire Favicon Icon
-    icon_size = 56
+    # Favicon 'a' badge: Balanced size (50px icon in 68px squircle)
+    icon_size = 50
     badge_w = icon_size + 18
-    gap_icon = 32
-    line_h_title = 62
+    gap_icon = 28
+    line_h_title = 54
 
     total_h = badge_w + gap_icon + len(lines_en) * line_h_title
     start_y = (height - total_h) // 2
 
-    # Draw Favicon 'a' badge centered
+    # Draw 3D Favicon badge centered
     bx = col_center_x - badge_w // 2
+    draw.rounded_rectangle(
+        [(bx, start_y + 4), (bx + badge_w, start_y + badge_w + 6)],
+        radius=18,
+        fill=(0, 0, 0, 100)
+    )
     draw.rounded_rectangle(
         [(bx, start_y), (bx + badge_w, start_y + badge_w)],
         radius=18,
-        fill=(22, 23, 30, 240),
-        outline=(255, 255, 255, 45),
+        fill=(18, 20, 28, 245),
+        outline=(255, 255, 255, 50),
         width=1
     )
+    draw.line([(bx + 12, start_y + 1), (bx + badge_w - 12, start_y + 1)], fill=(255, 255, 255, 80), width=1)
+    
     ico_scaled = asmire_icon_white.resize((icon_size, icon_size), Image.Resampling.LANCZOS)
     im.paste(ico_scaled, (bx + 9, start_y + 9), ico_scaled)
 
@@ -342,6 +360,8 @@ def generate_single_thumbnail(art, asmire_icon_white):
     for l in lines_en:
         bbox = draw.textbbox((0, 0), l, font=font_title)
         lw = bbox[2] - bbox[0]
+        # Text shadow for subtle 3D pop
+        draw.text((col_center_x - lw // 2 + 1, curr_y + 2), l, font=font_title, fill=(0, 0, 0, 130))
         draw.text((col_center_x - lw // 2, curr_y), l, font=font_title, fill=(255, 255, 255, 255))
         curr_y += line_h_title
 
@@ -358,7 +378,6 @@ def main():
 
     print(f"Loaded {len(articles)} articles from metadata.")
 
-    # Load Asmire Icon White
     icon_orig = Image.open("public/icon.png").convert("RGBA")
     r, g, b, a = icon_orig.split()
     white_img = Image.new("L", icon_orig.size, 255)
@@ -381,11 +400,11 @@ def main():
 
             success_count += 1
             if (i + 1) % 10 == 0 or (i + 1) == len(articles):
-                print(f"[{i+1}/{len(articles)}] Generated thumbnail for {slug}")
+                print(f"[{i+1}/{len(articles)}] Generated 3D thumbnail for {slug}")
         except Exception as e:
             print(f"Error generating {slug}: {e}")
 
-    print(f"\nSuccessfully generated {success_count} / {len(articles)} thumbnail pairs in {out_dir}")
+    print(f"\nSuccessfully generated {success_count} / {len(articles)} 3D thumbnail pairs in {out_dir}")
 
 if __name__ == "__main__":
     main()
