@@ -603,6 +603,26 @@ export const EXTERNAL_REVIEWS_MAPPING: Record<string, ExternalReviewData[]> = {
       sentiment: "positive",
     },
   ],
+  "10web": [
+    {
+      source: "G2",
+      rating: 4.6,
+      reviewCount: 840,
+      sourceUrl: "https://www.g2.com/products/10web/reviews",
+      excerpt: "AI WordPress builder that recreates any website with automated 90+ PageSpeed optimization and hosting.",
+      lastSyncDate: "2027-11-21 21:00",
+      sentiment: "positive",
+    },
+    {
+      source: "TRUSTPILOT",
+      rating: 4.5,
+      reviewCount: 1960,
+      sourceUrl: "https://www.trustpilot.com/review/10web.io",
+      excerpt: "Highly rated for hands-off WordPress migration, fast automated Google Cloud infrastructure, and Elementor sync.",
+      lastSyncDate: "2027-11-21 21:00",
+      sentiment: "positive",
+    },
+  ],
 
   palabra: [
     {
