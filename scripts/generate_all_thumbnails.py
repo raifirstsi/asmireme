@@ -1,11 +1,11 @@
 """
-Generate Harmonious, Luxury Black 3D Article Thumbnails for Asmire
-- 100% Black 3D Background with volumetric studio lighting and depth vignette (NO grid lines / no square stripes)
-- Floating 3D Glassmorphic Card on the right with soft shadow & top glass highlight rim
-- Centered, prominent Tool Logo (150px) inside a 3D squircle / Custom 3D Vector Artwork for AI News
-- "Tiêu đề vừa phải": Perfectly proportioned 2-line title hierarchy (Main Title 42px Bold + Subtitle 24px Semibold)
-- NO clipping, NO text overflow, NO dangling words, NO Vietnamese subtitle clutter
-- Centered 3D Asmire Favicon 'a' badge (52px) perfectly aligned on the vertical center axis
+Generate Harmonious, Ultra-HD 3D Article Thumbnails for Asmire (2x Super-Sampled)
+- 2400x1260 canvas downscaled to 1200x630 via Lanczos for flawless sub-pixel anti-aliasing
+- 100% Deep Luxury Black 3D Background with smooth, balanced volumetric lighting
+- Floating 3D Glassmorphic Card on the right with UNIFORM, continuous 360-degree border
+- Centered, crystal-clear Tool Logos in 3D squircles or Dual-Tool VS Comparison
+- Asmire Favicon 'a' badge with perfectly smooth anti-aliased border & centered white 'a'
+- Balanced 2-line title hierarchy with zero text overflow or dangling words
 """
 
 import os
@@ -50,176 +50,6 @@ def get_accent_for_article(art):
         return THEMES["AI DETECTION"]
     return THEMES["DEFAULT"]
 
-def create_3d_black_canvas(width, height, accent_color):
-    base = Image.new("RGBA", (width, height), (5, 6, 8, 255))
-    draw_base = ImageDraw.Draw(base)
-    for y in range(height):
-        factor = 1.0 - math.pow(abs(y - height * 0.45) / (height * 0.55), 1.6)
-        r = int(5 + 10 * factor)
-        g = int(6 + 11 * factor)
-        b = int(8 + 15 * factor)
-        draw_base.line([(0, y), (width, y)], fill=(r, g, b, 255))
-
-    glow_layer = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    gdraw = ImageDraw.Draw(glow_layer)
-    rx, ry = 920, 315
-    ar, ag, ab = accent_color
-    for rad in range(380, 0, -20):
-        alpha = int((1.0 - (rad / 380) ** 1.5) * 65)
-        gdraw.ellipse([rx - rad, ry - rad, rx + rad, ry + rad], fill=(ar, ag, ab, alpha))
-        
-    for rad in range(300, 0, -25):
-        alpha = int((1.0 - (rad / 300) ** 1.8) * 35)
-        gdraw.ellipse([600 - rad, 40 - rad, 600 + rad, 40 + rad], fill=(120, 140, 180, alpha))
-        
-    glow_blurred = glow_layer.filter(ImageFilter.GaussianBlur(radius=36))
-    canvas = Image.alpha_composite(base, glow_blurred)
-
-    vignette = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    vdraw = ImageDraw.Draw(vignette)
-    cx, cy = width // 2, height // 2
-    max_dist = math.sqrt(cx**2 + cy**2)
-    for r in range(int(max_dist), int(height * 0.4), -30):
-        norm = (r - height * 0.4) / (max_dist - height * 0.4)
-        alpha = int(math.pow(norm, 2.2) * 160)
-        vdraw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(0, 0, 0, alpha), width=30)
-        
-    vignette = vignette.filter(ImageFilter.GaussianBlur(radius=30))
-    canvas = Image.alpha_composite(canvas, vignette)
-    
-    top_rim = Image.new("RGBA", (width, height), (0, 0, 0, 0))
-    tdraw = ImageDraw.Draw(top_rim)
-    tdraw.line([(60, 0), (width - 60, 0)], fill=(255, 255, 255, 25), width=1)
-    tdraw.line([(0, 0), (0, height)], fill=(255, 255, 255, 10), width=1)
-    tdraw.line([(width - 1, 0), (width - 1, height)], fill=(255, 255, 255, 10), width=1)
-    canvas = Image.alpha_composite(canvas, top_rim)
-
-    return canvas
-
-def draw_3d_card(canvas, card_x, card_y, card_w, card_h, accent_color):
-    shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    sdraw = ImageDraw.Draw(shadow)
-    sdraw.rounded_rectangle(
-        [(card_x - 10, card_y + 14), (card_x + card_w + 10, card_y + card_h + 28)],
-        radius=36,
-        fill=(0, 0, 0, 180)
-    )
-    shadow = shadow.filter(ImageFilter.GaussianBlur(radius=22))
-    canvas = Image.alpha_composite(canvas, shadow)
-
-    card_img = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    cdraw = ImageDraw.Draw(card_img)
-    cdraw.rounded_rectangle(
-        [(card_x, card_y), (card_x + card_w, card_y + card_h)],
-        radius=30,
-        fill=(13, 15, 22, 235),
-        outline=(accent_color[0], accent_color[1], accent_color[2], 75),
-        width=1
-    )
-    cdraw.line([(card_x + 35, card_y + 1), (card_x + card_w - 35, card_y + 1)], fill=(255, 255, 255, 60), width=1)
-    return Image.alpha_composite(canvas, card_img)
-
-def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=150):
-    logo_path = f"public/logos/{logo_slug}.png"
-    if os.path.exists(logo_path):
-        try:
-            logo = Image.open(logo_path).convert("RGBA").resize((size, size), Image.Resampling.LANCZOS)
-            lw, lh = logo.size
-            lx = cx - lw // 2
-            ly = cy - lh // 2
-            card_pad = 28
-            
-            draw.rounded_rectangle(
-                [(lx - card_pad, ly - card_pad + 6), (lx + lw + card_pad, ly + lh + card_pad + 10)],
-                radius=34,
-                fill=(0, 0, 0, 100)
-            )
-            draw.rounded_rectangle(
-                [(lx - card_pad, ly - card_pad), (lx + lw + card_pad, ly + lh + card_pad)],
-                radius=32,
-                fill=(255, 255, 255, 252),
-                outline=(255, 255, 255, 100),
-                width=1
-            )
-            im.paste(logo, (lx, ly), logo)
-            return True
-        except Exception:
-            pass
-    return False
-
-def draw_3d_news_artwork(draw, slug, cx, cy, accent, card_x, card_w):
-    if "frictionless" in slug or "gemini" in slug:
-        draw.ellipse([(cx - 48, cy - 48), (cx + 48, cy + 48)], fill=(accent[0], accent[1], accent[2], 230))
-        font_b = ImageFont.truetype(FONT_BOLD, 15)
-        draw.text((cx - 30, cy - 11), "SWARM", font=font_b, fill=(10, 10, 15, 255))
-        for angle in [45, 135, 225, 315]:
-            rad = math.radians(angle)
-            nx = cx + int(math.cos(rad) * 135)
-            ny = cy + int(math.sin(rad) * 135)
-            draw.line([(cx, cy), (nx, ny)], fill=accent, width=2)
-            draw.ellipse([(nx - 20, ny - 20), (nx + 20, ny + 20)], outline=accent, width=2)
-            draw.ellipse([(nx - 7, ny - 7), (nx + 7, ny + 7)], fill=(255, 255, 255, 240))
-        return
-
-    if "amd-silicon" in slug:
-        chip_size = 170
-        draw.rounded_rectangle([(cx - chip_size//2, cy - chip_size//2), (cx + chip_size//2, cy + chip_size//2)], radius=20, fill=(24, 24, 32, 255), outline=accent, width=2)
-        core_s = 90
-        draw.rounded_rectangle([(cx - core_s//2, cy - core_s//2), (cx + core_s//2, cy + core_s//2)], radius=12, fill=(accent[0]//4, accent[1]//4, accent[2]//4, 255), outline=(255, 255, 255, 80), width=1)
-        font_b = ImageFont.truetype(FONT_BOLD, 18)
-        draw.text((cx - 36, cy - 12), "AI CORE", font=font_b, fill=(255, 255, 255, 255))
-        for offset in [-50, -25, 0, 25, 50]:
-            draw.line([(cx + offset, cy - chip_size//2), (cx + offset, cy - chip_size//2 - 28)], fill=accent, width=2)
-            draw.line([(cx + offset, cy + chip_size//2), (cx + offset, cy + chip_size//2 + 28)], fill=accent, width=2)
-            draw.line([(cx - chip_size//2, cy + offset), (cx - chip_size//2 - 28, cy + offset)], fill=accent, width=2)
-            draw.line([(cx + chip_size//2, cy + offset), (cx + chip_size//2 + 28, cy + offset)], fill=accent, width=2)
-        return
-
-    if "knowledge-trap" in slug:
-        font_semi = ImageFont.truetype(FONT_SEMI, 14)
-        font_bold = ImageFont.truetype(FONT_BOLD, 15)
-        draw.ellipse([(cx - 28, cy - 90), (cx + 28, cy - 34)], fill=(24, 24, 36, 255), outline=(255, 255, 255, 140), width=2)
-        draw.text((cx - 18, cy - 70), "Root", font=font_semi, fill=(255, 255, 255, 220))
-        draw.line([(cx, cy - 34), (cx - 95, cy + 25)], fill=(239, 68, 68, 220), width=3)
-        draw.line([(cx, cy - 34), (cx + 95, cy + 25)], fill=accent, width=3)
-        draw.ellipse([(cx - 120, cy + 25), (cx - 70, cy + 75)], fill=(239, 68, 68, 40), outline=(239, 68, 68, 220), width=2)
-        draw.text((cx - 110, cy + 40), "Trap", font=font_semi, fill=(239, 68, 68, 240))
-        draw.ellipse([(cx + 70, cy + 25), (cx + 120, cy + 75)], fill=(accent[0], accent[1], accent[2], 220))
-        draw.text((cx + 80, cy + 40), "Apex", font=font_bold, fill=(10, 10, 15, 255))
-        draw.line([(cx + 95, cy + 75), (cx + 50, cy + 135)], fill=accent, width=2)
-        draw.line([(cx + 95, cy + 75), (cx + 140, cy + 135)], fill=accent, width=2)
-        return
-
-    if "intuition-engine" in slug or "robot" in slug:
-        draw.arc([(cx - 105, cy - 105), (cx + 105, cy + 105)], start=25, end=335, fill=accent, width=3)
-        draw.ellipse([(cx - 24, cy - 24), (cx + 24, cy + 24)], fill=(255, 255, 255, 245))
-        draw.line([(cx, cy), (cx + 115, cy - 58)], fill=(239, 68, 68, 220), width=3)
-        draw.line([(cx, cy), (cx - 75, cy - 88)], fill=(34, 197, 94, 220), width=3)
-        draw.line([(cx, cy), (cx, cy + 115)], fill=(59, 130, 246, 220), width=3)
-        return
-
-    if "anthropic" in slug or "ipo" in slug:
-        draw.line([(cx - 160, cy + 110), (cx + 160, cy + 110)], fill=(255, 255, 255, 30), width=1)
-        points = []
-        for x in range(cx - 160, cx + 160, 10):
-            norm = (x - (cx - 160)) / 320
-            y = (cy + 110) - int(math.pow(norm, 2.5) * 210)
-            points.append((x, y))
-        for i in range(len(points) - 1):
-            draw.line([points[i], points[i+1]], fill=accent, width=4)
-        last_pt = points[-1]
-        draw.ellipse([(last_pt[0] - 12, last_pt[1] - 12), (last_pt[0] + 12, last_pt[1] + 12)], fill=(255, 255, 255, 255))
-        font_bold = ImageFont.truetype(FONT_BOLD, 18)
-        draw.text((last_pt[0] - 130, last_pt[1] - 35), "$40B+ IPO", font=font_bold, fill=accent)
-        return
-
-    if "intelligence-shift" in slug:
-        for i in range(1, 6):
-            r = i * 32
-            draw.arc([(cx - r, cy - r), (cx + r, cy + r)], start=180, end=360, fill=accent, width=2)
-        draw.line([(cx - 160, cy), (cx + 160, cy)], fill=(255, 255, 255, 120), width=2)
-        return
-
 def format_thumbnail_title(art):
     slug = art["slug"]
     title_raw = art.get("title_en", slug)
@@ -238,6 +68,8 @@ def format_thumbnail_title(art):
         
     # 2. Megaguides / Comparisons
     if "vs" in slug:
+        if "clickfunnels" in slug:
+            return ("GoHighLevel vs ClickFunnels", "Agency War & Funnel Tax Breakdown (2027)")
         if "gamma-vs-decktopus" in slug:
             return ("Gamma vs Decktopus", "AI Presentation Benchmark (2027)")
         if "meeting" in slug:
@@ -249,11 +81,15 @@ def format_thumbnail_title(art):
         if "video" in slug:
             return ("Best AI Video Generators", "Avatar & Realism Benchmark (2027)")
 
-    # 3. Dedicated Pricing breakdown
+    # 3. SaaS Playbook
+    if "saas-mode" in slug or "playbook" in slug:
+        return ("GoHighLevel SaaS Playbook", "How to Build a $10,000/Mo Software Agency")
+
+    # 4. Dedicated Pricing breakdown
     if "pricing" in slug or "cost" in slug:
         return ("GoHighLevel Pricing", "Hidden Costs & Real Margins (2027)")
 
-    # 4. Single-tool Reviews
+    # 5. Single-tool Reviews
     match_review = re.match(r"^([a-z0-9\-]+)-review", slug)
     if match_review:
         tool_slug = match_review.group(1)
@@ -316,128 +152,330 @@ def format_thumbnail_title(art):
     parts = title_raw.split(":", 1)
     return (parts[0].strip()[:32], parts[1].strip()[:36] if len(parts) > 1 else "Empirical Evaluation (2027)")
 
-def wrap_text(text, font, max_width, draw):
-    words = text.split()
-    lines = []
-    current_line = []
-    for word in words:
-        test_line = " ".join(current_line + [word])
-        bbox = draw.textbbox((0, 0), test_line, font=font)
-        w = bbox[2] - bbox[0]
-        if w <= max_width:
-            current_line.append(word)
-        else:
-            if current_line:
-                lines.append(" ".join(current_line))
-                current_line = [word]
-            else:
-                lines.append(word)
-                current_line = []
-    if current_line:
-        lines.append(" ".join(current_line))
-    return lines
+def draw_2x_news_artwork(draw, slug, cx, cy, accent):
+    # Vector illustration at 2x resolution
+    if "frictionless" in slug or "gemini" in slug:
+        draw.ellipse([(cx - 96, cy - 96), (cx + 96, cy + 96)], fill=(accent[0], accent[1], accent[2], 230))
+        font_b = ImageFont.truetype(FONT_BOLD, 30)
+        draw.text((cx - 60, cy - 22), "SWARM", font=font_b, fill=(10, 10, 15, 255))
+        for angle in [45, 135, 225, 315]:
+            rad = math.radians(angle)
+            nx = cx + int(math.cos(rad) * 270)
+            ny = cy + int(math.sin(rad) * 270)
+            draw.line([(cx, cy), (nx, ny)], fill=accent, width=4)
+            draw.ellipse([(nx - 40, ny - 40), (nx + 40, ny + 40)], outline=accent, width=4)
+            draw.ellipse([(nx - 14, ny - 14), (nx + 14, ny + 14)], fill=(255, 255, 255, 240))
+        return
 
-def generate_single_thumbnail(art, asmire_icon_white):
-    width, height = 1200, 630
+    if "amd-silicon" in slug:
+        chip_size = 340
+        draw.rounded_rectangle([(cx - chip_size//2, cy - chip_size//2), (cx + chip_size//2, cy + chip_size//2)], radius=40, fill=(24, 24, 32, 255), outline=accent, width=4)
+        core_s = 180
+        draw.rounded_rectangle([(cx - core_s//2, cy - core_s//2), (cx + core_s//2, cy + core_s//2)], radius=24, fill=(accent[0]//4, accent[1]//4, accent[2]//4, 255), outline=(255, 255, 255, 80), width=2)
+        font_b = ImageFont.truetype(FONT_BOLD, 36)
+        draw.text((cx - 72, cy - 24), "AI CORE", font=font_b, fill=(255, 255, 255, 255))
+        for offset in [-100, -50, 0, 50, 100]:
+            draw.line([(cx + offset, cy - chip_size//2), (cx + offset, cy - chip_size//2 - 56)], fill=accent, width=4)
+            draw.line([(cx + offset, cy + chip_size//2), (cx + offset, cy + chip_size//2 + 56)], fill=accent, width=4)
+            draw.line([(cx - chip_size//2, cy + offset), (cx - chip_size//2 - 56, cy + offset)], fill=accent, width=4)
+            draw.line([(cx + chip_size//2, cy + offset), (cx + chip_size//2 + 56, cy + offset)], fill=accent, width=4)
+        return
+
+    if "knowledge-trap" in slug:
+        font_semi = ImageFont.truetype(FONT_SEMI, 28)
+        font_bold = ImageFont.truetype(FONT_BOLD, 30)
+        draw.ellipse([(cx - 56, cy - 180), (cx + 56, cy - 68)], fill=(24, 24, 36, 255), outline=(255, 255, 255, 140), width=4)
+        draw.text((cx - 36, cy - 140), "Root", font=font_semi, fill=(255, 255, 255, 220))
+        draw.line([(cx, cy - 68), (cx - 190, cy + 50)], fill=(239, 68, 68, 220), width=6)
+        draw.line([(cx, cy - 68), (cx + 190, cy + 50)], fill=accent, width=6)
+        draw.ellipse([(cx - 240, cy + 50), (cx - 140, cy + 150)], fill=(239, 68, 68, 40), outline=(239, 68, 68, 220), width=4)
+        draw.text((cx - 220, cy + 80), "Trap", font=font_semi, fill=(239, 68, 68, 240))
+        draw.ellipse([(cx + 140, cy + 50), (cx + 240, cy + 150)], fill=(accent[0], accent[1], accent[2], 220))
+        draw.text((cx + 160, cy + 80), "Apex", font=font_bold, fill=(10, 10, 15, 255))
+        draw.line([(cx + 190, cy + 150), (cx + 100, cy + 270)], fill=accent, width=4)
+        draw.line([(cx + 190, cy + 150), (cx + 280, cy + 270)], fill=accent, width=4)
+        return
+
+    if "intuition-engine" in slug or "robot" in slug:
+        draw.arc([(cx - 210, cy - 210), (cx + 210, cy + 210)], start=25, end=335, fill=accent, width=6)
+        draw.ellipse([(cx - 48, cy - 48), (cx + 48, cy + 48)], fill=(255, 255, 255, 245))
+        draw.line([(cx, cy), (cx + 230, cy - 116)], fill=(239, 68, 68, 220), width=6)
+        draw.line([(cx, cy), (cx - 150, cy - 176)], fill=(34, 197, 94, 220), width=6)
+        draw.line([(cx, cy), (cx, cy + 230)], fill=(59, 130, 246, 220), width=6)
+        return
+
+    if "anthropic" in slug or "ipo" in slug:
+        draw.line([(cx - 320, cy + 220), (cx + 320, cy + 220)], fill=(255, 255, 255, 30), width=2)
+        points = []
+        for x in range(cx - 320, cx + 320, 20):
+            norm = (x - (cx - 320)) / 640
+            y = (cy + 220) - int(math.pow(norm, 2.5) * 420)
+            points.append((x, y))
+        for i in range(len(points) - 1):
+            draw.line([points[i], points[i+1]], fill=accent, width=8)
+        last_pt = points[-1]
+        draw.ellipse([(last_pt[0] - 24, last_pt[1] - 24), (last_pt[0] + 24, last_pt[1] + 24)], fill=(255, 255, 255, 255))
+        font_bold = ImageFont.truetype(FONT_BOLD, 36)
+        draw.text((last_pt[0] - 260, last_pt[1] - 70), "$40B+ IPO", font=font_bold, fill=accent)
+        return
+
+    if "intelligence-shift" in slug:
+        for i in range(1, 6):
+            r = i * 64
+            draw.arc([(cx - r, cy - r), (cx + r, cy + r)], start=180, end=360, fill=accent, width=4)
+        draw.line([(cx - 320, cy), (cx + 320, cy)], fill=(255, 255, 255, 120), width=4)
+        return
+
+def generate_2x_thumbnail(art, white_a_img):
+    W, H = 2400, 1260
     slug = art["slug"]
-    
-    t_main, t_sub = format_thumbnail_title(art)
+    category = art.get("category", "")
     accent = get_accent_for_article(art)
+    t_main, t_sub = format_thumbnail_title(art)
 
-    # 1. 3D Black Canvas
-    im = create_3d_black_canvas(width, height, accent)
+    # 1. 3D Luxury Black Canvas with smooth ambient depth
+    base = Image.new("RGBA", (W, H), (6, 7, 10, 255))
+    draw_base = ImageDraw.Draw(base)
+    for y in range(H):
+        factor = 1.0 - math.pow(abs(y - H * 0.45) / (H * 0.55), 1.6)
+        r = int(6 + 8 * factor)
+        g = int(7 + 9 * factor)
+        b = int(10 + 14 * factor)
+        draw_base.line([(0, y), (W, y)], fill=(r, g, b, 255))
 
-    # 2. 3D Floating Glass Card on Right
-    card_x, card_y = 730, 115
-    card_w, card_h = 400, 400
-    im = draw_3d_card(im, card_x, card_y, card_w, card_h, accent)
+    # Ambient Right-Side Glow (smooth Gaussian)
+    glow_layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gdraw = ImageDraw.Draw(glow_layer)
+    rx, ry = 1680, 630
+    ar, ag, ab = accent
+    for rad in range(700, 0, -35):
+        alpha = int((1.0 - (rad / 700) ** 1.6) * 45)
+        gdraw.ellipse([rx - rad, ry - rad, rx + rad, ry + rad], fill=(ar, ag, ab, alpha))
+    glow_blurred = glow_layer.filter(ImageFilter.GaussianBlur(radius=60))
+    canvas = Image.alpha_composite(base, glow_blurred)
 
-    draw = ImageDraw.Draw(im)
-    cx = card_x + card_w // 2
-    cy = card_y + card_h // 2
+    # Vignette
+    vignette = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    vdraw = ImageDraw.Draw(vignette)
+    cx, cy = W // 2, H // 2
+    max_dist = math.sqrt(cx**2 + cy**2)
+    for r in range(int(max_dist), int(H * 0.4), -50):
+        norm = (r - H * 0.4) / (max_dist - H * 0.4)
+        alpha = int(math.pow(norm, 2.2) * 140)
+        vdraw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(0, 0, 0, alpha), width=50)
+    vignette = vignette.filter(ImageFilter.GaussianBlur(radius=50))
+    canvas = Image.alpha_composite(canvas, vignette)
 
-    # Draw Artwork or Logo
+    # 2. Right Column: 3D Floating Glassmorphic Card (800x800 at 2x)
+    card_x, card_y = 1460, 230
+    card_w, card_h = 800, 800
+    card_r = 60
+
+    # Ambient Drop Shadow
+    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sdraw = ImageDraw.Draw(shadow)
+    sdraw.rounded_rectangle(
+        [(card_x - 20, card_y + 30), (card_x + card_w + 20, card_y + card_h + 60)],
+        radius=card_r + 10,
+        fill=(0, 0, 0, 190)
+    )
+    shadow = shadow.filter(ImageFilter.GaussianBlur(radius=40))
+    canvas = Image.alpha_composite(canvas, shadow)
+
+    # Card Body & UNIFORM 360-DEGREE BORDER (Zero patchy lines, completely uniform)
+    card_img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    cdraw = ImageDraw.Draw(card_img)
+    cdraw.rounded_rectangle(
+        [(card_x, card_y), (card_x + card_w, card_y + card_h)],
+        radius=card_r,
+        fill=(13, 16, 23, 240)
+    )
+    # Continuous elegant border (1.5px equivalent at 1x)
+    cdraw.rounded_rectangle(
+        [(card_x, card_y), (card_x + card_w, card_y + card_h)],
+        radius=card_r,
+        outline=(255, 255, 255, 45),
+        width=3
+    )
+    canvas = Image.alpha_composite(canvas, card_img)
+
+    card_cx = card_x + card_w // 2
+    card_cy = card_y + card_h // 2
+    draw = ImageDraw.Draw(canvas)
+
     tools = art.get("tools", [])
-    primary_tool = tools[0] if tools else None
-    if not primary_tool:
-        match_slug = re.match(r"^([a-z0-9\-]+)-review", slug)
-        if match_slug:
-            primary_tool = match_slug.group(1)
+    is_vs = "vs" in slug or len(tools) >= 2
+    is_ai_news = "AI News" in category
 
-    logo_drawn = False
-    if primary_tool and "AI News" not in (art.get("category") or ""):
-        logo_drawn = draw_3d_tool_logo(im, draw, primary_tool, cx, cy, size=150)
+    if is_ai_news:
+        draw_2x_news_artwork(draw, slug, card_cx, card_cy, accent)
+    elif is_vs and len(tools) >= 2:
+        # Comparison: 2 Floating Tool Squircles + Glowing VS badge
+        t1, t2 = tools[0], tools[1]
+        t1_x = card_cx - 175
+        t2_x = card_cx + 175
+        for tx, tslug in [(t1_x, t1), (t2_x, t2)]:
+            box_s = 240
+            draw.rounded_rectangle(
+                [(tx - box_s//2, card_cy - box_s//2 + 12), (tx + box_s//2, card_cy + box_s//2 + 18)],
+                radius=44,
+                fill=(0, 0, 0, 90)
+            )
+            draw.rounded_rectangle(
+                [(tx - box_s//2, card_cy - box_s//2), (tx + box_s//2, card_cy + box_s//2)],
+                radius=42,
+                fill=(250, 250, 252, 255),
+                outline=(255, 255, 255, 120),
+                width=3
+            )
+            logo_path = f"public/logos/{tslug}.png"
+            if os.path.exists(logo_path):
+                try:
+                    logo = Image.open(logo_path).convert("RGBA")
+                    logo_size = 150
+                    logo = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
+                    canvas.paste(logo, (tx - logo_size//2, card_cy - logo_size//2), logo)
+                except Exception:
+                    pass
 
-    if not logo_drawn:
-        if "vs" in slug or len(tools) >= 2:
-            t1 = tools[0] if len(tools) > 0 else "gamma"
-            t2 = tools[1] if len(tools) > 1 else "decktopus"
-            draw_3d_tool_logo(im, draw, t1, cx - 85, cy, size=110)
-            draw_3d_tool_logo(im, draw, t2, cx + 85, cy, size=110)
-            font_vs = ImageFont.truetype(FONT_BOLD, 24)
-            draw.text((cx - 17, cy - 14), "VS", font=font_vs, fill=accent)
-        else:
-            draw_3d_news_artwork(draw, slug, cx, cy, accent, card_x, card_w)
+        vs_r = 50
+        draw.ellipse([(card_cx - vs_r, card_cy - vs_r), (card_cx + vs_r, card_cy + vs_r)], fill=(20, 24, 34, 255), outline=(255, 255, 255, 50), width=3)
+        font_vs = ImageFont.truetype(FONT_BOLD, 36)
+        draw.text((card_cx - 24, card_cy - 24), "VS", font=font_vs, fill=(ar, ag, ab, 255))
+    else:
+        # Single Tool
+        primary_tool = tools[0] if tools else None
+        if not primary_tool:
+            m = re.match(r"^([a-z0-9\-]+)-review", slug)
+            if m:
+                primary_tool = m.group(1)
 
-    # 3. Left Section: Harmonious, Well-Proportioned Typography
-    col_center_x = 370
-    max_text_w = 540
+        box_s = 340
+        draw.rounded_rectangle(
+            [(card_cx - box_s//2, card_cy - box_s//2 + 16), (card_cx + box_s//2, card_cy + box_s//2 + 24)],
+            radius=64,
+            fill=(0, 0, 0, 110)
+        )
+        draw.rounded_rectangle(
+            [(card_cx - box_s//2, card_cy - box_s//2), (card_cx + box_s//2, card_cy + box_s//2)],
+            radius=60,
+            fill=(250, 250, 252, 255),
+            outline=(255, 255, 255, 140),
+            width=3
+        )
+        if primary_tool:
+            logo_path = f"public/logos/{primary_tool}.png"
+            if os.path.exists(logo_path):
+                try:
+                    logo = Image.open(logo_path).convert("RGBA")
+                    logo_size = 220
+                    logo = logo.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
+                    canvas.paste(logo, (card_cx - logo_size//2, card_cy - logo_size//2), logo)
+                except Exception:
+                    pass
 
-    font_main = ImageFont.truetype(FONT_BOLD, 42)
-    font_sub = ImageFont.truetype(FONT_SEMI, 24)
+        # Optional Special Badge Pill
+        badge_label = None
+        if "saas-mode" in slug or "playbook" in slug:
+            badge_label = "SAAS PRO MODE"
+        elif "pricing" in slug:
+            badge_label = "PRICING AUDIT"
 
-    lines_main = wrap_text(t_main, font_main, max_text_w, draw)
-    lines_sub = wrap_text(t_sub, font_sub, max_text_w, draw)
+        if badge_label:
+            font_pill = ImageFont.truetype(FONT_BOLD, 26)
+            bbox = draw.textbbox((0, 0), badge_label, font=font_pill)
+            pw = (bbox[2] - bbox[0]) + 40
+            ph = 48
+            py = card_cy + box_s//2 + 30
+            draw.rounded_rectangle(
+                [(card_cx - pw//2, py), (card_cx + pw//2, py + ph)],
+                radius=24,
+                fill=(ar, ag, ab, 240),
+                outline=(255, 255, 255, 80),
+                width=2
+            )
+            draw.text((card_cx - (bbox[2] - bbox[0])//2, py + 9), badge_label, font=font_pill, fill=(10, 12, 16, 255))
 
-    icon_size = 52
-    badge_w = icon_size + 18
-    gap_icon = 26
-    line_h_main = 54
-    gap_sub = 18
-    line_h_sub = 34
+    # 3. Left Section: Asmire "a" Logo Badge + Typography
+    left_cx = 740
+    badge_size = 120
+    badge_r = 34
 
-    total_h = badge_w + gap_icon + len(lines_main) * line_h_main + gap_sub + len(lines_sub) * line_h_sub
-    start_y = (height - total_h) // 2
+    font_main = ImageFont.truetype(FONT_BOLD, 82)
+    font_sub = ImageFont.truetype(FONT_SEMI, 46)
 
-    # Draw 3D Favicon badge centered
-    bx = col_center_x - badge_w // 2
+    def wrap_at_2x(text, font, max_w):
+        words = text.split()
+        lines = []
+        cur = []
+        for w in words:
+            test = " ".join(cur + [w])
+            bb = draw.textbbox((0, 0), test, font=font)
+            if bb[2] - bb[0] <= max_w:
+                cur.append(w)
+            else:
+                if cur:
+                    lines.append(" ".join(cur))
+                    cur = [w]
+                else:
+                    lines.append(w)
+                    cur = []
+        if cur:
+            lines.append(" ".join(cur))
+        return lines
+
+    lines_main = wrap_at_2x(t_main, font_main, 1100)
+    lines_sub = wrap_at_2x(t_sub, font_sub, 1100)
+
+    line_h_main = 108
+    line_h_sub = 66
+    gap_badge = 54
+    gap_sub = 36
+
+    total_h = badge_size + gap_badge + len(lines_main) * line_h_main + gap_sub + len(lines_sub) * line_h_sub
+    start_y = (H - total_h) // 2
+
+    # Draw Asmire "a" Badge (Uniform, smooth, anti-aliased border)
+    bx = left_cx - badge_size // 2
+    by = start_y
     draw.rounded_rectangle(
-        [(bx, start_y + 4), (bx + badge_w, start_y + badge_w + 6)],
-        radius=18,
+        [(bx, by + 8), (bx + badge_size, by + badge_size + 14)],
+        radius=badge_r,
         fill=(0, 0, 0, 100)
     )
     draw.rounded_rectangle(
-        [(bx, start_y), (bx + badge_w, start_y + badge_w)],
-        radius=18,
-        fill=(18, 20, 28, 245),
-        outline=(255, 255, 255, 50),
-        width=1
+        [(bx, by), (bx + badge_size, by + badge_size)],
+        radius=badge_r,
+        fill=(18, 21, 30, 255),
+        outline=(255, 255, 255, 55),
+        width=3
     )
-    draw.line([(bx + 12, start_y + 1), (bx + badge_w - 12, start_y + 1)], fill=(255, 255, 255, 80), width=1)
-    
-    ico_scaled = asmire_icon_white.resize((icon_size, icon_size), Image.Resampling.LANCZOS)
-    im.paste(ico_scaled, (bx + 9, start_y + 9), ico_scaled)
 
-    # Draw Main Title Lines centered
-    curr_y = start_y + badge_w + gap_icon
-    for l in lines_main:
-        bbox = draw.textbbox((0, 0), l, font=font_main)
-        lw = bbox[2] - bbox[0]
-        # Text 3D shadow
-        draw.text((col_center_x - lw // 2 + 1, curr_y + 2), l, font=font_main, fill=(0, 0, 0, 140))
-        draw.text((col_center_x - lw // 2, curr_y), l, font=font_main, fill=(255, 255, 255, 255))
+    # Place crisp white "a" inside
+    a_size = 72
+    white_a_scaled = white_a_img.resize((a_size, a_size), Image.Resampling.LANCZOS)
+    canvas.paste(white_a_scaled, (left_cx - a_size // 2, by + (badge_size - a_size) // 2), white_a_scaled)
+
+    # Draw Main Title
+    curr_y = by + badge_size + gap_badge
+    for line in lines_main:
+        bb = draw.textbbox((0, 0), line, font=font_main)
+        lw = bb[2] - bb[0]
+        draw.text((left_cx - lw // 2 + 2, curr_y + 4), line, font=font_main, fill=(0, 0, 0, 160))
+        draw.text((left_cx - lw // 2, curr_y), line, font=font_main, fill=(255, 255, 255, 255))
         curr_y += line_h_main
 
-    # Draw Subtitle Line centered
-    curr_y += gap_sub - 10
-    for l in lines_sub:
-        bbox = draw.textbbox((0, 0), l, font=font_sub)
-        lw = bbox[2] - bbox[0]
-        draw.text((col_center_x - lw // 2 + 1, curr_y + 1), l, font=font_sub, fill=(0, 0, 0, 110))
-        draw.text((col_center_x - lw // 2, curr_y), l, font=font_sub, fill=(160, 168, 188, 220))
+    # Draw Subtitle
+    curr_y += gap_sub - 16
+    for line in lines_sub:
+        bb = draw.textbbox((0, 0), line, font=font_sub)
+        lw = bb[2] - bb[0]
+        draw.text((left_cx - lw // 2 + 2, curr_y + 2), line, font=font_sub, fill=(0, 0, 0, 120))
+        draw.text((left_cx - lw // 2, curr_y), line, font=font_sub, fill=(160, 172, 192, 230))
         curr_y += line_h_sub
 
-    return im
+    # 4. Final High-Precision Lanczos Downscale to 1200x630
+    return canvas.resize((1200, 630), Image.Resampling.LANCZOS)
 
 def main():
     metadata_path = "scripts/all_articles_metadata.json"
@@ -450,10 +488,18 @@ def main():
 
     print(f"Loaded {len(articles)} articles from metadata.")
 
-    icon_orig = Image.open("public/icon.png").convert("RGBA")
-    r, g, b, a = icon_orig.split()
-    white_img = Image.new("L", icon_orig.size, 255)
-    asmire_icon_white = Image.merge("RGBA", (white_img, white_img, white_img, a))
+    # Prepare crisp white 'a' logo
+    white_a_path = "scratch_white_a.png"
+    if not os.path.exists(white_a_path):
+        icon_orig = Image.open("public/icon.png").convert("RGBA")
+        bbox = icon_orig.getbbox()
+        crop = icon_orig.crop(bbox)
+        r, g, b, a = crop.split()
+        white = Image.new("L", crop.size, 255)
+        white_a_img = Image.merge("RGBA", (white, white, white, a))
+        white_a_img.save(white_a_path)
+    else:
+        white_a_img = Image.open(white_a_path).convert("RGBA")
 
     out_dir = "public/thumbnails/news"
     os.makedirs(out_dir, exist_ok=True)
@@ -462,7 +508,7 @@ def main():
     for i, art in enumerate(articles):
         slug = art["slug"]
         try:
-            im = generate_single_thumbnail(art, asmire_icon_white)
+            im = generate_2x_thumbnail(art, white_a_img)
             png_path = os.path.join(out_dir, f"{slug}.png")
             webp_path = os.path.join(out_dir, f"{slug}.webp")
 
@@ -472,11 +518,11 @@ def main():
 
             success_count += 1
             if (i + 1) % 10 == 0 or (i + 1) == len(articles):
-                print(f"[{i+1}/{len(articles)}] Generated Harmonious 3D thumbnail for {slug}")
+                print(f"[{i+1}/{len(articles)}] Generated Ultra-HD 3D thumbnail for {slug}")
         except Exception as e:
             print(f"Error generating {slug}: {e}")
 
-    print(f"\nSuccessfully generated {success_count} / {len(articles)} Harmonious 3D thumbnail pairs in {out_dir}")
+    print(f"\nSuccessfully generated {success_count} / {len(articles)} Ultra-HD 3D thumbnail pairs in {out_dir}")
 
 if __name__ == "__main__":
     main()

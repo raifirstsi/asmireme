@@ -841,5 +841,26 @@
       "getresponse"
     ],
     "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "gohighlevel-vs-clickfunnels-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "GoHighLevel vs ClickFunnels (2027): The Agency Bloodbath & The Death of The 'Funnel Tax'",
+    "title_vi": "GoHighLevel vs ClickFunnels (2027): Cuộc Chiến Đẫm Máu Của Agency & Bản Án Tử Cho 'Thuê Phễu' Truyền Thống",
+    "tools": [
+      "highlevel",
+      "clickfunnels"
+    ],
+    "source_file": "ghl-vs-clickfunnels-post.ts"
+  },
+  {
+    "slug": "gohighlevel-saas-mode-playbook-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "The 2027 GoHighLevel SaaS Mode Playbook: How to Build a $5,000–$10,000/Month Recurring Software Agency",
+    "title_vi": "Playbook Bán Lại GoHighLevel (SaaS Mode) 2027: Cách Xây Dựng Cỗ Máy Kiếm $5,000–$10,000/Tháng Thu Nhập Định Kỳ",
+    "tools": [
+      "highlevel"
+    ],
+    "source_file": "ghl-saas-playbook-post.ts"
   }
 ]
