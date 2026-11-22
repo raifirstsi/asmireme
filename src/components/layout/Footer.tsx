@@ -27,7 +27,7 @@ export function Footer({ locale }: FooterProps) {
           <div className="space-y-3.5 md:col-span-1">
             <Link href={`/${locale}`} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
               <img
-                src="/brand/asmire-logo-black.png"
+                src="/brand/asmire-logo-black.png?v=3"
                 alt="Asmire"
                 className="h-5 w-auto object-contain dark:invert transition-[filter] duration-200"
               />

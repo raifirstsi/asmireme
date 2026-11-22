@@ -83,7 +83,7 @@ export function Header({ locale }: HeaderProps) {
           <div className="flex items-center justify-start flex-1 shrink-0">
             <Link href={`/${locale}`} prefetch={true} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
               <img
-                src="/brand/asmire-logo-black.png"
+                src="/brand/asmire-logo-black.png?v=3"
                 alt="Asmire"
                 className="h-5 w-auto object-contain dark:invert transition-[filter] duration-200"
               />
