@@ -7,13 +7,14 @@
  */
 
 const DEFAULT_BOT_TOKEN = "9124593455:AAH3yJZF8NOCPUSUQcj_hAITdATSvTffKTE";
+const DEFAULT_CHAT_ID = "5781808621";
 
 export async function sendTelegramNotification(
   message: string,
   parseMode: "HTML" | "Markdown" = "HTML"
 ): Promise<{ success: boolean; error?: string }> {
   const botToken = process.env.TELEGRAM_BOT_TOKEN || DEFAULT_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_ADMIN_CHAT_ID;
+  const chatId = process.env.TELEGRAM_ADMIN_CHAT_ID || DEFAULT_CHAT_ID;
 
   if (!botToken) {
     console.warn("[Telegram] No bot token provided.");
