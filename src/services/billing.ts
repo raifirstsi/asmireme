@@ -170,6 +170,170 @@ export function verifySepayWebhookSignature({
   return false;
 }
 
+export interface ActivateProSubscriptionParams {
+  userId: string;
+  orderCode: string;
+  paymentMethod: "SEPAY" | "PAYPAL" | "CRYPTO";
+  externalTransactionId: string;
+  amount: number;
+  currency: string;
+  rawPayload?: any;
+}
+
+/**
+ * Universal Pro Subscription Activation
+ * Handles invoice marking, subscription extension (+30 days), payment event logging, and receipt email
+ */
+export async function activateProSubscription({
+  userId,
+  orderCode,
+  paymentMethod,
+  externalTransactionId,
+  amount,
+  currency,
+  rawPayload,
+}: ActivateProSubscriptionParams): Promise<{ success: boolean; expiresAt: Date }> {
+  const now = new Date();
+  let newPeriodEnd = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+
+  // 1. Mark matched invoice as PAID
+  try {
+    const matchedInvoices = await db
+      .select()
+      .from(invoices)
+      .where(eq(invoices.orderCode, orderCode));
+
+    if (matchedInvoices.length > 0) {
+      await db
+        .update(invoices)
+        .set({
+          status: "PAID",
+          paymentDate: now,
+        })
+        .where(eq(invoices.id, matchedInvoices[0].id));
+    }
+  } catch (err) {
+    console.error("[Billing] Failed to mark invoice PAID:", err);
+  }
+
+  // 2. Extend or Create Pro Subscription
+  try {
+    const existingSub = await db
+      .select()
+      .from(subscriptions)
+      .where(and(eq(subscriptions.userId, userId), eq(subscriptions.status, "ACTIVE")));
+
+    if (existingSub.length > 0 && existingSub[0].currentPeriodEnd > now) {
+      newPeriodEnd = new Date(existingSub[0].currentPeriodEnd.getTime() + 30 * 24 * 60 * 60 * 1000);
+      await db
+        .update(subscriptions)
+        .set({
+          currentPeriodEnd: newPeriodEnd,
+          orderReference: orderCode,
+          updatedAt: now,
+        })
+        .where(eq(subscriptions.id, existingSub[0].id));
+    } else {
+      await db.insert(subscriptions).values({
+        userId,
+        planId: "PRO",
+        status: "ACTIVE",
+        currentPeriodStart: now,
+        currentPeriodEnd: newPeriodEnd,
+        paymentMethod,
+        orderReference: orderCode,
+      });
+    }
+  } catch (err) {
+    console.error("[Billing] Subscription update failed:", err);
+  }
+
+  // 3. Record Payment Event (Idempotent by externalTransactionId)
+  try {
+    await db.insert(paymentEvents).values({
+      gateway: paymentMethod,
+      externalTransactionId,
+      amount,
+      currency,
+      orderCode,
+      rawPayload: rawPayload as any,
+    });
+  } catch (err) {
+    console.warn("[Billing] Failed to record payment event (may already exist):", err);
+  }
+
+  // 4. Send Confirmation Email via Resend
+  try {
+    const userRecord = await db.select().from(users).where(eq(users.id, userId));
+    const targetEmail = userRecord[0]?.email;
+
+    if (targetEmail && process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      const expiryFormatted = newPeriodEnd.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://asmire.me";
+      const fromEmail = process.env.RESEND_FROM_EMAIL || "support@asmire.me";
+
+      await resend.emails.send({
+        from: `Asmire <${fromEmail}>`,
+        to: targetEmail,
+        subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
+        headers: {
+          "List-Unsubscribe": `<mailto:${fromEmail}?subject=unsubscribe>, <${siteUrl}/account/login?action=unsubscribe>`,
+          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        },
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 580px; margin: 0 auto; padding: 32px 24px; color: #1e293b; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px;">
+            <div style="text-align: center; margin-bottom: 24px; border-bottom: 1px solid #f1f5f9; padding-bottom: 16px;">
+              <a href="${siteUrl}" target="_blank" style="display: inline-block; text-decoration: none;">
+                <img src="${siteUrl}/brand/asmire-logo-black.png" alt="Asmire" height="26" style="display: block; margin: 0 auto; height: 26px; width: auto; max-height: 28px; border: 0; outline: none;" />
+              </a>
+              <p style="margin: 6px 0 0; color: #64748b; font-size: 13px; font-weight: 500;">AI SaaS Review & Referral Platform</p>
+            </div>
+            
+            <h2 style="margin: 0 0 16px 0; color: #0f172a; font-size: 20px;">Payment Confirmed - Asmire Pro Active</h2>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">Hello,</p>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">Your payment via <strong>${paymentMethod}</strong> (Order: <code>${orderCode}</code>) has been successfully verified.</p>
+            
+            <div style="background-color: #f8fafc; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 6px;">
+              <p style="margin: 0 0 8px 0; font-weight: bold; color: #0f172a; font-size: 14px;">Your Pro Plan Details:</p>
+              <ul style="margin: 0; padding-left: 20px; color: #334155; font-size: 13px; line-height: 1.6;">
+                <li><strong>Entitlement:</strong> All 50 AI SaaS Tool Affiliate Slots Unlocked</li>
+                <li><strong>Active Period:</strong> Until ${expiryFormatted} (30 days prepaid)</li>
+                <li><strong>14-Day Guarantee:</strong> Full money-back guarantee eligible until ${new Date(
+                  now.getTime() + 14 * 24 * 60 * 60 * 1000
+                ).toLocaleDateString("en-US")}</li>
+              </ul>
+            </div>
+
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the 50 tools in our verified catalog.</p>
+
+            <div style="text-align: center; margin: 28px 0;">
+              <a href="${siteUrl}/account" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 12px 28px; font-weight: 600; text-decoration: none; border-radius: 9999px; font-size: 14px;">Open Member Dashboard</a>
+            </div>
+
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; color: #94a3b8; font-size: 11px; line-height: 1.6; margin-top: 32px;">
+              <p style="margin: 0 0 4px; color: #64748b;">
+                Need support or want to request a refund within 14 days? Visit our <a href="${siteUrl}/refund-policy" style="color: #2563eb; text-decoration: underline;">Refund Policy</a> or email <a href="mailto:${fromEmail}" style="color: #2563eb; text-decoration: underline;">${fromEmail}</a>.
+              </p>
+              <p style="margin: 0 0 8px; color: #94a3b8;">
+                This receipt was sent to <strong style="color: #334155;">${targetEmail}</strong>.
+              </p>
+            </div>
+          </div>
+        `,
+      });
+    }
+  } catch (emailErr) {
+    console.error("[Billing] Failed to send activation email:", emailErr);
+  }
+
+  return { success: true, expiresAt: newPeriodEnd };
+}
+
 /**
  * Process incoming SePay webhook payload with idempotency, amount verification,
  * subscription extension, and confirmation email.

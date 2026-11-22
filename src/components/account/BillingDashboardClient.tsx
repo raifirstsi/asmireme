@@ -6,7 +6,7 @@ import { Locale } from "@/lib/i18n";
 import { UserSubscriptionStatus, ProOrderResult } from "@/services/billing";
 import { 
   Shield, Check, QrCode, Copy, CheckCheck, Sparkles, 
-  AlertCircle, ArrowRight, RefreshCw, Calendar, ArrowLeft, Clock
+  AlertCircle, ArrowRight, RefreshCw, Calendar, ArrowLeft, Clock, CreditCard
 } from "lucide-react";
 
 interface BillingDashboardClientProps {
@@ -32,6 +32,13 @@ export function BillingDashboardClient({
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [upgradeSuccess, setUpgradeSuccess] = useState(false);
 
+  // Payment Method Selection
+  const [showCheckout, setShowCheckout] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<"vietqr" | "paypal">("vietqr");
+  const [paypalLoading, setPaypalLoading] = useState(false);
+  const [paypalProcessing, setPaypalProcessing] = useState(false);
+  const [paypalError, setPaypalError] = useState<string | null>(null);
+
   // Refund Modal State
   const [showRefundModal, setShowRefundModal] = useState(false);
   const [refundBankName, setRefundBankName] = useState("");
@@ -50,21 +57,136 @@ export function BillingDashboardClient({
 
   // Generate Pro Upgrade Order
   const handleCreateOrder = async () => {
-    setLoading(true);
-    try {
-      const res = await fetch("/api/account/billing/create-order", {
-        method: "POST",
-      });
-      const data = await res.json();
-      if (data.success && data.order) {
-        setActiveOrder(data.order);
+    setShowCheckout(true);
+    if (!activeOrder) {
+      setLoading(true);
+      try {
+        const res = await fetch("/api/account/billing/create-order", {
+          method: "POST",
+        });
+        const data = await res.json();
+        if (data.success && data.order) {
+          setActiveOrder(data.order);
+        }
+      } catch (err) {
+        console.error("Order creation failed", err);
+      } finally {
+        setLoading(false);
       }
-    } catch (err) {
-      console.error("Order creation failed", err);
-    } finally {
-      setLoading(false);
     }
   };
+
+  // PayPal Smart Buttons Initialization
+  useEffect(() => {
+    if (paymentMethod !== "paypal" || status.isPro || !showCheckout) return;
+
+    const clientId =
+      process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ||
+      "BAAOVsab586blJV_Z-RRQbzQwQpcoU2hS1fWcmGN0HLkvvxsodTt3TV6WwlLheX1o2dpu74YDIYg6Uy8Z0";
+
+    let isMounted = true;
+
+    const renderButtons = () => {
+      const container = document.getElementById("paypal-button-container");
+      if (!container || !(window as any).paypal) return;
+
+      container.innerHTML = "";
+      (window as any).paypal
+        .Buttons({
+          style: {
+            layout: "vertical",
+            color: "gold",
+            shape: "pill",
+            label: "pay",
+            height: 44,
+          },
+          createOrder: async () => {
+            setPaypalError(null);
+            const res = await fetch("/api/account/billing/paypal-create-order", {
+              method: "POST",
+            });
+            const data = await res.json();
+            if (!data.success || !data.orderId) {
+              throw new Error(data.message || "Failed to initialize PayPal order");
+            }
+            return data.orderId;
+          },
+          onApprove: async (data: any) => {
+            setPaypalProcessing(true);
+            setPaypalError(null);
+            try {
+              const res = await fetch("/api/account/billing/paypal-capture", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ orderId: data.orderID }),
+              });
+              const result = await res.json();
+              if (result.success) {
+                setUpgradeSuccess(true);
+                setShowCheckout(false);
+                const statusRes = await fetch("/api/account/billing/status");
+                const statusData = await statusRes.json();
+                if (statusData.success && statusData.status) {
+                  setStatus(statusData.status);
+                }
+              } else {
+                setPaypalError(result.message || "Failed to capture PayPal payment");
+              }
+            } catch (err: any) {
+              setPaypalError(err?.message || "Payment confirmation error");
+            } finally {
+              setPaypalProcessing(false);
+            }
+          },
+          onError: (err: any) => {
+            console.error("[PayPal Checkout Error]", err);
+            setPaypalError(
+              isVi
+                ? "Thanh toán PayPal không thành công hoặc bị gián đoạn. Vui lòng thử lại."
+                : "PayPal checkout was cancelled or failed. Please try again."
+            );
+          },
+        })
+        .render("#paypal-button-container");
+    };
+
+    if ((window as any).paypal) {
+      renderButtons();
+    } else {
+      setPaypalLoading(true);
+      const scriptId = "paypal-sdk-script";
+      let existingScript = document.getElementById(scriptId) as HTMLScriptElement;
+
+      if (!existingScript) {
+        existingScript = document.createElement("script");
+        existingScript.id = scriptId;
+        existingScript.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD&intent=capture`;
+        existingScript.async = true;
+        document.body.appendChild(existingScript);
+      }
+
+      existingScript.onload = () => {
+        if (isMounted) {
+          setPaypalLoading(false);
+          renderButtons();
+        }
+      };
+      existingScript.onerror = () => {
+        if (isMounted) {
+          setPaypalLoading(false);
+          setPaypalError(
+            isVi
+              ? "Không thể tải cổng thanh toán PayPal. Vui lòng kiểm tra kết nối mạng."
+              : "Failed to load PayPal SDK."
+          );
+        }
+      };
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [paymentMethod, status.isPro, showCheckout, isVi]);
 
   // Polling for automated payment completion when order is active
   useEffect(() => {
@@ -300,16 +422,16 @@ export function BillingDashboardClient({
             </ul>
           </div>
 
-          {!status.isPro && !activeOrder && (
+          {!status.isPro && !showCheckout && (
             <button
               onClick={handleCreateOrder}
               disabled={loading}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-xs py-3 px-5 shadow-sm transition-all"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-bold text-xs py-3 px-5 shadow-sm transition-all cursor-pointer"
             >
               {loading ? (
                 <>
                   <RefreshCw className="h-4 w-4 animate-spin" />
-                  <span>{isVi ? "Đang tạo mã VietQR..." : "Generating VietQR..."}</span>
+                  <span>{isVi ? "Đang khởi tạo cổng thanh toán..." : "Initializing Checkout..."}</span>
                 </>
               ) : (
                 <>
@@ -322,115 +444,217 @@ export function BillingDashboardClient({
         </div>
       </div>
 
-      {/* Dynamic VietQR Payment Box (Shown when user clicks upgrade) */}
-      {activeOrder && !status.isPro && (
+      {/* Unified Multi-Gateway Payment Box (VietQR & PayPal) */}
+      {showCheckout && !status.isPro && (
         <div className="rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-card p-6 sm:p-8 space-y-6 shadow-md animate-in fade-in duration-300">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
             <div>
               <div className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">
-                <QrCode className="h-4 w-4" />
-                <span>{isVi ? "Cổng thanh toán tự động VietQR (SePay)" : "Automated VietQR Banking (SePay)"}</span>
+                <Sparkles className="h-4 w-4 text-emerald-600" />
+                <span>{isVi ? "Chọn phương thức thanh toán" : "Select Payment Method"}</span>
               </div>
               <h3 className="text-xl font-black text-foreground mt-1">
-                {isVi ? "Quét mã để kích hoạt Pro tự động" : "Scan to Activate Pro Automatically"}
+                {isVi ? "Nâng cấp Asmire Pro (Thời hạn 30 ngày)" : "Upgrade to Asmire Pro (30-Day Cycle)"}
               </h3>
             </div>
 
-            <div className="flex items-center gap-2 text-xs font-semibold text-foreground bg-zinc-100 dark:bg-zinc-800 px-3.5 py-1.5 rounded-full border border-border">
-              <RefreshCw className="h-3.5 w-3.5 animate-spin" />
-              <span>{isVi ? "Đang chờ thanh toán (Tự động cập nhật)..." : "Waiting for payment (Auto-polling)..."}</span>
+            {/* Payment Method Switcher Tabs */}
+            <div className="flex items-center gap-1 p-1 rounded-full bg-zinc-100 dark:bg-zinc-850 border border-zinc-200 dark:border-zinc-800 w-fit">
+              <button
+                type="button"
+                onClick={() => setPaymentMethod("vietqr")}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  paymentMethod === "vietqr"
+                    ? "bg-white dark:bg-zinc-900 text-foreground shadow-xs font-bold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <QrCode className="h-3.5 w-3.5" />
+                <span>{isVi ? "VietQR (725.000đ)" : "VietQR Banking"}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setPaymentMethod("paypal")}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  paymentMethod === "paypal"
+                    ? "bg-white dark:bg-zinc-900 text-foreground shadow-xs font-bold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <CreditCard className="h-3.5 w-3.5 text-[#0070ba]" />
+                <span>{isVi ? "PayPal / Thẻ ($29)" : "PayPal / Cards ($29)"}</span>
+              </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            {/* QR Image */}
-            <div className="md:col-span-5 flex flex-col items-center justify-center bg-white p-4 rounded-2xl border border-border shadow-sm">
-              <img
-                src={activeOrder.qrUrl}
-                alt={`VietQR ${activeOrder.orderCode}`}
-                className="w-56 h-56 object-contain rounded-lg"
-              />
-              <p className="text-[11px] text-zinc-500 text-center mt-3 font-medium">
-                {isVi ? "Mở app ngân hàng (Vietcombank, MB, Techcombank...) để quét" : "Open any banking app to scan this QR"}
-              </p>
-            </div>
-
-            {/* Bank details & Copy buttons */}
-            <div className="md:col-span-7 space-y-4">
-              <div className="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/50 p-3.5 text-zinc-800 dark:text-zinc-200 text-xs">
-                <span className="font-bold flex items-center gap-1.5 mb-1 text-foreground">
-                  <AlertCircle className="h-4 w-4 text-zinc-600 dark:text-zinc-400 shrink-0" />
-                  {isVi ? "Lưu ý quan trọng về Nội dung chuyển khoản:" : "Critical Transfer Note Requirement:"}
-                </span>
-                <span>
-                  {isVi
-                    ? `Bạn phải giữ nguyên cú pháp nội dung "${activeOrder.orderCode}" để hệ thống SePay nhận diện và kích hoạt tài khoản trong 2–5 giây.`
-                    : `Please keep the exact transfer memo "${activeOrder.orderCode}" so SePay can instantly recognize and activate your plan.`}
-                </span>
-              </div>
-
-              <div className="space-y-3 text-xs">
-                {/* Bank Name */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
-                  <span className="text-muted-foreground">{isVi ? "Ngân hàng:" : "Bank:"}</span>
-                  <span className="font-bold text-foreground text-sm">{activeOrder.bankName}</span>
-                </div>
-
-                {/* Account Number */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
-                  <div>
-                    <span className="text-muted-foreground block">{isVi ? "Số tài khoản:" : "Account Number:"}</span>
-                    <span className="font-mono font-bold text-foreground text-sm">{activeOrder.accountNumber}</span>
+          {/* TAB 1: VIETQR (SEPAY) */}
+          {paymentMethod === "vietqr" && (
+            <>
+              {activeOrder ? (
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                  {/* QR Image */}
+                  <div className="md:col-span-5 flex flex-col items-center justify-center bg-white p-4 rounded-2xl border border-border shadow-sm">
+                    <img
+                      src={activeOrder.qrUrl}
+                      alt={`VietQR ${activeOrder.orderCode}`}
+                      className="w-56 h-56 object-contain rounded-lg"
+                    />
+                    <div className="flex items-center gap-2 text-xs font-semibold text-zinc-700 bg-zinc-100 px-3 py-1.5 rounded-full mt-3 border border-zinc-200">
+                      <RefreshCw className="h-3 w-3 animate-spin text-emerald-600" />
+                      <span>{isVi ? "Tự động kích hoạt khi nhận tiền..." : "Auto-polling for payment..."}</span>
+                    </div>
                   </div>
-                  <button
-                    onClick={() => handleCopy(activeOrder.accountNumber, "acc")}
-                    className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors"
-                  >
-                    {copiedField === "acc" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
-                    <span>{copiedField === "acc" ? "Copied" : "Copy"}</span>
-                  </button>
-                </div>
 
-                {/* Account Holder */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
-                  <span className="text-muted-foreground">{isVi ? "Chủ tài khoản:" : "Account Holder:"}</span>
-                  <span className="font-bold text-foreground text-sm uppercase">{activeOrder.accountName}</span>
-                </div>
+                  {/* Bank details & Copy buttons */}
+                  <div className="md:col-span-7 space-y-4">
+                    <div className="rounded-xl border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900/50 p-3.5 text-zinc-800 dark:text-zinc-200 text-xs">
+                      <span className="font-bold flex items-center gap-1.5 mb-1 text-foreground">
+                        <AlertCircle className="h-4 w-4 text-zinc-600 dark:text-zinc-400 shrink-0" />
+                        {isVi ? "Lưu ý quan trọng về Nội dung chuyển khoản:" : "Critical Transfer Note Requirement:"}
+                      </span>
+                      <span>
+                        {isVi
+                          ? `Bạn phải giữ nguyên cú pháp nội dung "${activeOrder.orderCode}" để hệ thống SePay nhận diện và kích hoạt tài khoản trong 2–5 giây.`
+                          : `Please keep the exact transfer memo "${activeOrder.orderCode}" so SePay can instantly recognize and activate your plan.`}
+                      </span>
+                    </div>
 
-                {/* Amount */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
-                  <div>
-                    <span className="text-muted-foreground block">{isVi ? "Số tiền:" : "Amount:"}</span>
-                    <span className="font-mono font-black text-foreground text-base">
-                      {activeOrder.amountVnd.toLocaleString("vi-VN")} VND
+                    <div className="space-y-3 text-xs">
+                      {/* Bank Name */}
+                      <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
+                        <span className="text-muted-foreground">{isVi ? "Ngân hàng:" : "Bank:"}</span>
+                        <span className="font-bold text-foreground text-sm">{activeOrder.bankName}</span>
+                      </div>
+
+                      {/* Account Number */}
+                      <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
+                        <div>
+                          <span className="text-muted-foreground block">{isVi ? "Số tài khoản:" : "Account Number:"}</span>
+                          <span className="font-mono font-bold text-foreground text-sm">{activeOrder.accountNumber}</span>
+                        </div>
+                        <button
+                          onClick={() => handleCopy(activeOrder.accountNumber, "acc")}
+                          className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors cursor-pointer"
+                        >
+                          {copiedField === "acc" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
+                          <span>{copiedField === "acc" ? "Copied" : "Copy"}</span>
+                        </button>
+                      </div>
+
+                      {/* Account Holder */}
+                      <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
+                        <span className="text-muted-foreground">{isVi ? "Chủ tài khoản:" : "Account Holder:"}</span>
+                        <span className="font-bold text-foreground text-sm uppercase">{activeOrder.accountName}</span>
+                      </div>
+
+                      {/* Amount */}
+                      <div className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/50 border border-border">
+                        <div>
+                          <span className="text-muted-foreground block">{isVi ? "Số tiền:" : "Amount:"}</span>
+                          <span className="font-mono font-black text-foreground text-base">
+                            {activeOrder.amountVnd.toLocaleString("vi-VN")} VND
+                          </span>
+                        </div>
+                        <button
+                          onClick={() => handleCopy(String(activeOrder.amountVnd), "amount")}
+                          className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors cursor-pointer"
+                        >
+                          {copiedField === "amount" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
+                          <span>{copiedField === "amount" ? "Copied" : "Copy"}</span>
+                        </button>
+                      </div>
+
+                      {/* Memo */}
+                      <div className="flex items-center justify-between p-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700">
+                        <div>
+                          <span className="text-zinc-900 dark:text-zinc-100 font-bold block">{isVi ? "Nội dung chuyển khoản (Memo):" : "Transfer Memo:"}</span>
+                          <span className="font-mono font-black text-foreground text-base tracking-wider">{activeOrder.orderCode}</span>
+                        </div>
+                        <button
+                          onClick={() => handleCopy(activeOrder.orderCode, "memo")}
+                          className="flex items-center gap-1 text-[11px] font-semibold text-zinc-950 dark:text-white bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-300 dark:border-zinc-700 transition-colors shadow-sm cursor-pointer"
+                        >
+                          {copiedField === "memo" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
+                          <span>{copiedField === "memo" ? "Copied" : "Copy"}</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-12 space-y-3">
+                  <RefreshCw className="h-6 w-6 animate-spin text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">{isVi ? "Đang tạo mã VietQR..." : "Generating VietQR..."}</span>
+                </div>
+              )}
+            </>
+          )}
+
+          {/* TAB 2: PAYPAL & CREDIT CARDS */}
+          {paymentMethod === "paypal" && (
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-6 space-y-4">
+                <div className="rounded-2xl border border-border bg-secondary/30 p-5 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                      {isVi ? "Gói nâng cấp" : "Subscription"}
+                    </span>
+                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                      {isVi ? "Kích hoạt tự động" : "Instant Activation"}
                     </span>
                   </div>
-                  <button
-                    onClick={() => handleCopy(String(activeOrder.amountVnd), "amount")}
-                    className="flex items-center gap-1 text-[11px] font-semibold text-foreground bg-card hover:bg-secondary px-3 py-1.5 rounded-full border border-border transition-colors"
-                  >
-                    {copiedField === "amount" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
-                    <span>{copiedField === "amount" ? "Copied" : "Copy"}</span>
-                  </button>
-                </div>
-
-                {/* Memo */}
-                <div className="flex items-center justify-between p-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700">
-                  <div>
-                    <span className="text-zinc-900 dark:text-zinc-100 font-bold block">{isVi ? "Nội dung chuyển khoản (Memo):" : "Transfer Memo:"}</span>
-                    <span className="font-mono font-black text-foreground text-base tracking-wider">{activeOrder.orderCode}</span>
+                  <div className="flex items-baseline justify-between">
+                    <h4 className="text-lg font-bold text-foreground">Asmire Pro (30 Days)</h4>
+                    <span className="text-2xl font-black text-foreground">$29.00 USD</span>
                   </div>
-                  <button
-                    onClick={() => handleCopy(activeOrder.orderCode, "memo")}
-                    className="flex items-center gap-1 text-[11px] font-semibold text-zinc-950 dark:text-white bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-300 dark:border-zinc-700 transition-colors shadow-sm"
-                  >
-                    {copiedField === "memo" ? <CheckCheck className="h-3.5 w-3.5 text-emerald-600" /> : <Copy className="h-3.5 w-3.5" />}
-                    <span>{copiedField === "memo" ? "Copied" : "Copy"}</span>
-                  </button>
+                  <ul className="text-xs text-muted-foreground space-y-1.5 pt-2 border-t border-border">
+                    <li className="flex items-center gap-2">
+                      <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                      <span>{isVi ? "Mở khóa trọn bộ 50 công cụ AI SaaS" : "Unlock all 50 AI SaaS Tools"}</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                      <span>{isVi ? "Chấp nhận số dư ví PayPal & Thẻ Visa, Mastercard, AMEX" : "Accepts PayPal balance, Visa, Mastercard, AMEX"}</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                      <span>{isVi ? "Bảo đảm hoàn tiền 100% trong 14 ngày" : "14-Day 100% Money-Back Guarantee"}</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
+              <div className="md:col-span-6 flex flex-col items-center justify-center space-y-3 p-4">
+                {paypalLoading && (
+                  <div className="flex flex-col items-center justify-center py-8 space-y-2 text-muted-foreground text-xs">
+                    <RefreshCw className="h-5 w-5 animate-spin" />
+                    <span>{isVi ? "Đang tải cổng thanh toán PayPal..." : "Loading PayPal Gateway..."}</span>
+                  </div>
+                )}
+
+                {paypalProcessing && (
+                  <div className="flex flex-col items-center justify-center py-8 space-y-2 text-foreground text-xs">
+                    <RefreshCw className="h-6 w-6 animate-spin text-emerald-600" />
+                    <span className="font-bold text-sm">
+                      {isVi ? "Đang xác thực giao dịch & kích hoạt Pro..." : "Verifying payment & activating Pro..."}
+                    </span>
+                  </div>
+                )}
+
+                {paypalError && (
+                  <div className="w-full p-3.5 rounded-xl border border-rose-300 dark:border-rose-800 bg-rose-50 dark:bg-rose-950/40 text-rose-800 dark:text-rose-200 text-xs flex items-center gap-2">
+                    <AlertCircle className="h-4 w-4 shrink-0 text-rose-600" />
+                    <span>{paypalError}</span>
+                  </div>
+                )}
+
+                <div
+                  id="paypal-button-container"
+                  className={paypalProcessing ? "hidden" : "w-full max-w-sm min-h-[140px]"}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
 
