@@ -504,18 +504,18 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
             {/* Exclusive Deep Dive Callouts for HighLevel */}
             {tool.slug === "highlevel" && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
                 <div className="p-4 sm:p-5 rounded-2xl border border-brand-500/30 bg-gradient-to-br from-brand-500/10 via-amber-500/5 to-transparent dark:from-brand-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col justify-between gap-3 text-xs shadow-xs">
                   <div className="space-y-1">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">
-                      {isVi ? "Báo Cáo Bảng Giá & Chi Phí" : "Pricing & Hidden Costs"}
+                      {isVi ? "Báo Cáo Chi Phí" : "Pricing Audit"}
                     </span>
                     <div className="font-bold text-foreground text-sm">
-                      {isVi ? "Bóc Trần Toàn Bộ Chi Phí Ẩn & Mô Hình Kiếm Tiền GoHighLevel 2027" : "GoHighLevel Pricing & Hidden Costs (2027): Uncensored Audit"}
+                      {isVi ? "Bóc Trần Chi Phí Ẩn & Mô Hình Bảng Giá 2027" : "GoHighLevel Pricing & Hidden Costs (2027)"}
                     </div>
                     <p className="text-muted-foreground line-clamp-2">
                       {isVi 
-                        ? "Bóc tách cước viễn thông LC Phone/Twilio, email, A2P 10DLC và bí quyết nhận bộ Agency Snapshot $1,997."
+                        ? "Bóc tách cước viễn thông LC Phone, email, A2P 10DLC và bí quyết nhận bộ Agency Snapshot $1,997."
                         : "Detailed audit of LC Phone, SMS rates, email delivery, A2P 10DLC fees, and the $1,997 Agency Snapshot bonus."}
                     </p>
                   </div>
@@ -523,7 +523,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
                     className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
                   >
-                    <span>{isVi ? "Xem bảng giá chi tiết" : "Read Pricing Audit"}</span>
+                    <span>{isVi ? "Xem bảng giá" : "Read Pricing"}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
@@ -531,22 +531,45 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                 <div className="p-4 sm:p-5 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent dark:from-purple-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col justify-between gap-3 text-xs shadow-xs">
                   <div className="space-y-1">
                     <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
-                      {isVi ? "So Sánh Quyết Định Mua" : "Head-to-Head Showdown"}
+                      {isVi ? "So Sánh Quyết Định" : "Head-to-Head"}
                     </span>
                     <div className="font-bold text-foreground text-sm">
-                      {isVi ? "GoHighLevel vs ClickFunnels (2027): Bản Án Tử Cho 'Thuế Phễu'" : "GoHighLevel vs ClickFunnels (2027): Death of The Funnel Tax"}
+                      {isVi ? "GoHighLevel vs ClickFunnels: Bản Án Tử 'Thuế Phễu'" : "GoHighLevel vs ClickFunnels: Death of Funnel Tax"}
                     </div>
                     <p className="text-muted-foreground line-clamp-2">
                       {isVi 
-                        ? "Phân tích không khoan nhượng theo phong cách Dan Kennedy & Dan Koe: Bóc trần cái bẫy $297/tháng và đòn bẩy Agency."
-                        : "No-BS comparison in the style of Dan Kennedy & Dan Koe: Exposing the $297/mo funnel trap and the speed-to-lead advantage."}
+                        ? "Phân tích không khoan nhượng theo phong cách Dan Kennedy & Dan Koe: Bóc trần cái bẫy $297/tháng."
+                        : "No-BS comparison in the style of Dan Kennedy & Dan Koe: Exposing the $297/mo funnel trap."}
                     </p>
                   </div>
                   <Link
                     href={`/${locale}/news/gohighlevel-vs-clickfunnels-2027`}
                     className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
                   >
-                    <span>{isVi ? "Đọc bài so sánh" : "Read Comparison"}</span>
+                    <span>{isVi ? "Đọc so sánh" : "Read Comparison"}</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+
+                <div className="p-4 sm:p-5 rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent dark:from-emerald-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col justify-between gap-3 text-xs shadow-xs">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                      {isVi ? "Cẩm Nang Kiếm Tiền" : "SaaS Playbook"}
+                    </span>
+                    <div className="font-bold text-foreground text-sm">
+                      {isVi ? "Playbook SaaS Mode: Kiếm $5,000–$10,000/Tháng MRR" : "GoHighLevel SaaS Playbook: Hit $10k/Mo MRR"}
+                    </div>
+                    <p className="text-muted-foreground line-clamp-2">
+                      {isVi 
+                        ? "Cách chọn ngách dịch vụ giá cao, đóng gói giá $197–$297/tháng và nạp Snapshot onboarding khách trong 5 phút."
+                        : "How to pick high-ticket niches, package at $197–$297/mo, and onboard clients in 5 minutes with snapshots."}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/${locale}/news/gohighlevel-saas-mode-playbook-2027`}
+                    className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <span>{isVi ? "Xem Playbook" : "Read Playbook"}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>

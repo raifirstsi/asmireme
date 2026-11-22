@@ -146,13 +146,22 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
                   : "Complete breakdown of telephony usage fees, LC Email rates, A2P 10DLC carrier compliance, and how to claim the $1,997 Asmire Turnkey Agency Snapshot bonus."}
               </p>
             </div>
-            <Link
-              href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
-              className="shrink-0 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity"
-            >
-              <span>{isVi ? "Đọc bài phân tích" : "Read Full Audit"}</span>
-              <ExternalLink className="h-3.5 w-3.5" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <Link
+                href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
+                className="shrink-0 inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity"
+              >
+                <span>{isVi ? "Đọc bài phân tích giá" : "Read Pricing Audit"}</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </Link>
+              <Link
+                href={`/${locale}/news/gohighlevel-saas-mode-playbook-2027`}
+                className="shrink-0 inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition-colors shadow-xs"
+              >
+                <span>{isVi ? "Playbook Kiếm $10k/Tháng" : "SaaS Playbook ($10k/mo)"}</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
         )}
 

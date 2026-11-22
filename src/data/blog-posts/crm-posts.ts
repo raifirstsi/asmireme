@@ -1,10 +1,12 @@
 import type { BlogPost } from "../blog-data";
 import { GHL_PRICING_BLOG_POST } from "./ghl-pricing-post";
 import { GHL_VS_CLICKFUNNELS_BLOG_POST } from "./ghl-vs-clickfunnels-post";
+import { GHL_SAAS_PLAYBOOK_BLOG_POST } from "./ghl-saas-playbook-post";
 
 export const CRM_BLOG_POSTS: BlogPost[] = [
   GHL_PRICING_BLOG_POST,
   GHL_VS_CLICKFUNNELS_BLOG_POST,
+  GHL_SAAS_PLAYBOOK_BLOG_POST,
   {
     slug: "highlevel-review-roi-guide-2027",
     category: "Sales CRM & Growth Systems",
