@@ -29,7 +29,7 @@ export function Footer({ locale }: FooterProps) {
               <img
                 src="/brand/asmire-logo-black.png?v=3"
                 alt="Asmire"
-                className="h-5 w-auto object-contain dark:invert transition-[filter] duration-150"
+                className="h-5 w-auto object-contain dark:invert"
               />
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">

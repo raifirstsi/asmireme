@@ -15,25 +15,45 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   }, []);
 
   const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
+    const isDark = document.documentElement.classList.contains("dark");
+    const nextTheme = isDark ? "light" : "dark";
 
-    const applyTheme = () => {
-      setTheme(nextTheme);
-      if (nextTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-    };
+    // 1. Temporarily disable all transitions to eliminate sluggish color drag and paint lag
+    const disableTransitions = document.createElement("style");
+    disableTransitions.appendChild(
+      document.createTextNode(
+        `*, *::before, *::after {
+          -webkit-transition: none !important;
+          -moz-transition: none !important;
+          -o-transition: none !important;
+          -ms-transition: none !important;
+          transition: none !important;
+        }`
+      )
+    );
+    document.head.appendChild(disableTransitions);
 
-    // Modern View Transitions API for 60/120fps hardware-accelerated instant crossfade
-    if (typeof document !== "undefined" && "startViewTransition" in document) {
-      (document as unknown as { startViewTransition: (cb: () => void) => void }).startViewTransition(applyTheme);
+    // 2. Instantaneous DOM class change (0ms latency, zero repaint stutter)
+    if (nextTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      try { localStorage.setItem("theme", "dark"); } catch (e) {}
     } else {
-      applyTheme();
+      document.documentElement.classList.remove("dark");
+      try { localStorage.setItem("theme", "light"); } catch (e) {}
     }
+
+    // 3. Update React state
+    setTheme(nextTheme);
+
+    // 4. Force reflow and re-enable hover transitions after the theme snaps
+    window.getComputedStyle(document.body);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        try {
+          document.head.removeChild(disableTransitions);
+        } catch (e) {}
+      });
+    });
   };
 
   return (
@@ -41,14 +61,14 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       onClick={toggleTheme}
       type="button"
       suppressHydrationWarning
-      className={`flex h-9 w-9 items-center justify-center border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-all duration-150 active:scale-90 cursor-pointer outline-none focus:outline-none ${className}`}
+      className={`flex h-9 w-9 items-center justify-center border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white active:scale-90 transition-transform duration-75 cursor-pointer outline-none focus:outline-none ${className}`}
       aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       title={theme === "dark" ? "Chuyển sang giao diện Sáng" : "Chuyển sang giao diện Tối"}
     >
       {mounted && theme === "light" ? (
-        <Moon className="h-4 w-4 transition-transform duration-150" />
+        <Moon className="h-4 w-4" />
       ) : (
-        <Sun className="h-4 w-4 transition-transform duration-150" />
+        <Sun className="h-4 w-4" />
       )}
     </button>
   );

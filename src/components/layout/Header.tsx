@@ -72,7 +72,7 @@ export function Header({ locale }: HeaderProps) {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-[background-color,border-color,box-shadow] duration-150 ease-out border-b ${
+        className={`sticky top-0 z-50 w-full border-b ${
           isScrolled
             ? "bg-white/80 dark:bg-black/80 backdrop-blur-xl border-black/[0.08] dark:border-white/[0.12] shadow-[0_1px_3px_rgba(0,0,0,0.02)]"
             : "bg-white/95 dark:bg-black/95 backdrop-blur-md border-black/[0.04] dark:border-white/[0.06]"
@@ -85,7 +85,7 @@ export function Header({ locale }: HeaderProps) {
               <img
                 src="/brand/asmire-logo-black.png?v=3"
                 alt="Asmire"
-                className="h-5 w-auto object-contain dark:invert transition-[filter] duration-150"
+                className="h-5 w-auto object-contain dark:invert"
               />
             </Link>
           </div>
