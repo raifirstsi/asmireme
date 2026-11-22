@@ -9,8 +9,9 @@ import { getExternalReviewsForTool } from "@/services/review-ingestion";
 import { getDetailedReviewsForTool } from "@/data/reviews-dataset";
 import { getVerifiedReviewUrl } from "@/data/platform-review-links";
 import { 
-  Star, ShieldCheck, Check, X, ExternalLink, Calendar, 
-  HelpCircle, Sparkles, AlertCircle, ArrowRight, Layers, MessageSquare, ThumbsUp, Gift 
+  Star, ShieldCheck, Check, CheckCircle2, X, ExternalLink, Calendar, 
+  HelpCircle, Sparkles, AlertCircle, ArrowRight, Layers, MessageSquare, ThumbsUp, Gift,
+  Mic, Video, FileText
 } from "lucide-react";
 
 interface ToolPageProps {
@@ -705,6 +706,57 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
+              </div>
+            )}
+
+            {/* Empirical Output Playground Callout (Bidirectional Moat) */}
+            {["elevenlabs", "murf-ai", "listnr", "heygen", "synthesia", "d-id", "koala", "jasper", "copy-ai"].includes(tool.slug) && (
+              <div className="p-4 sm:p-5 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-transparent flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs shadow-xs">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                    {["elevenlabs", "murf-ai", "listnr"].includes(tool.slug) && <Mic className="h-5 w-5" />}
+                    {["heygen", "synthesia", "d-id"].includes(tool.slug) && <Video className="h-5 w-5" />}
+                    {["koala", "jasper", "copy-ai"].includes(tool.slug) && <FileText className="h-5 w-5" />}
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-sm flex items-center gap-1.5">
+                      <span>
+                        {isVi
+                          ? `Phòng Thử Nghiệm: Nghe & Xem Kết Quả Thực Tế Của ${tool.name}`
+                          : `Empirical Lab: Test & Inspect Real ${tool.name} Output`}
+                      </span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+                        {isVi ? "Không Cần Đăng Ký" : "Zero Signup"}
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground mt-0.5">
+                      {["elevenlabs", "murf-ai", "listnr"].includes(tool.slug) &&
+                        (isVi
+                          ? "Nghe trực tiếp đoạn văn bản tài chính 50 từ đối đầu giữa ElevenLabs, Murf AI và Listnr."
+                          : "Listen to 50-word fintech benchmark audio side-by-side with latency and naturalness MOS scores.")}
+                      {["heygen", "synthesia", "d-id"].includes(tool.slug) &&
+                        (isVi
+                          ? "Xem video 720p 30fps đối chiếu độ khớp khẩu hình âm vị giữa HeyGen, Synthesia và D-ID."
+                          : "Watch 720p 30fps video avatars comparing phoneme lip-sync accuracy across HeyGen, Synthesia, and D-ID.")}
+                      {["koala", "jasper", "copy-ai"].includes(tool.slug) &&
+                        (isVi
+                          ? "So sánh thực tế bài viết CRM Bất động sản với tỷ lệ phát hiện AI (Originality.ai) và độ sâu SERP."
+                          : "Inspect side-by-side real estate CRM articles with Originality.ai AI detection scores and factual SERP depth.")}
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href={`/${locale}/playground?suite=${
+                    ["elevenlabs", "murf-ai", "listnr"].includes(tool.slug)
+                      ? "voice"
+                      : ["heygen", "synthesia", "d-id"].includes(tool.slug)
+                      ? "video"
+                      : "content"
+                  }`}
+                  className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs shadow-xs transition-all"
+                >
+                  <span>{isVi ? "Vào Phòng Thử Nghiệm →" : "Enter Playground →"}</span>
+                </Link>
               </div>
             )}
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Locale } from "@/lib/i18n";
 import {
   VOICE_BENCHMARKS,
@@ -34,6 +34,27 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
   const [activeTab, setActiveTab] = useState<"voice" | "video" | "content">("voice");
   const [activeMediaId, setActiveMediaId] = useState<string | null>(null);
 
+  // Sync with URL Query Param (?suite=voice | video | content)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const suiteParam = params.get("suite");
+      if (suiteParam === "video" || suiteParam === "content" || suiteParam === "voice") {
+        setActiveTab(suiteParam);
+      }
+    }
+  }, []);
+
+  const switchTab = (tab: "voice" | "video" | "content") => {
+    setActiveTab(tab);
+    setActiveMediaId(null);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("suite", tab);
+      window.history.replaceState({}, "", url.toString());
+    }
+  };
+
   const handleMediaPlay = (id: string) => {
     setActiveMediaId(id);
   };
@@ -46,8 +67,21 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
 
   return (
     <div className="min-h-screen bg-[#0d0e12] text-zinc-100 selection:bg-emerald-500 selection:text-black">
+      {/* Breadcrumb Navigation - Apple Minimalist */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+        <nav className="flex items-center gap-1.5 text-xs text-zinc-400 font-normal">
+          <Link href={`/${locale}`} className="hover:text-white transition-colors">
+            {isVi ? "Trang chủ" : "Home"}
+          </Link>
+          <span className="text-zinc-600">/</span>
+          <span className="text-zinc-200 font-medium">
+            {isVi ? "Thử Nghiệm Thực Tế (Playground)" : "Output Playground"}
+          </span>
+        </nav>
+      </div>
+
       {/* Hero Section - Apple Minimalist Dark */}
-      <section className="relative pt-12 pb-8 sm:pt-20 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-b border-zinc-800/80">
+      <section className="relative pt-6 pb-8 sm:pt-14 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-b border-zinc-800/80">
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           {/* Empirical Lab Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
@@ -105,10 +139,7 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
           <div className="inline-flex p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 shadow-inner">
             <button
               type="button"
-              onClick={() => {
-                setActiveTab("voice");
-                setActiveMediaId(null);
-              }}
+              onClick={() => switchTab("voice")}
               className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "voice"
                   ? "bg-emerald-500 text-black shadow-md shadow-emerald-500/20"
@@ -121,10 +152,7 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
 
             <button
               type="button"
-              onClick={() => {
-                setActiveTab("video");
-                setActiveMediaId(null);
-              }}
+              onClick={() => switchTab("video")}
               className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "video"
                   ? "bg-emerald-500 text-black shadow-md shadow-emerald-500/20"
@@ -137,10 +165,7 @@ export function PlaygroundClient({ locale }: PlaygroundClientProps) {
 
             <button
               type="button"
-              onClick={() => {
-                setActiveTab("content");
-                setActiveMediaId(null);
-              }}
+              onClick={() => switchTab("content")}
               className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === "content"
                   ? "bg-emerald-500 text-black shadow-md shadow-emerald-500/20"

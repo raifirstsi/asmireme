@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { Locale } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { SAAS_STACK_REPLACEMENTS } from "@/data/saas-stacks-data";
@@ -16,19 +17,52 @@ interface SearchModalProps {
 
 export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
   const [query, setQuery] = useState("");
+  const router = useRouter();
+  const pathname = usePathname();
   const isVi = locale === "vi";
+  const prevPathname = useRef(pathname);
+
+  // Auto-close on route change
+  useEffect(() => {
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      onClose();
+    }
+  }, [pathname, onClose]);
 
   useEffect(() => {
     if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
 
     // Lock body scroll on mobile and desktop
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     return () => {
+      window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = originalOverflow;
     };
-  }, [isOpen]);
+  }, [isOpen, onClose]);
+
+  // Robust navigation handler ensuring reliable routing without unmount cancellation
+  const handleSelect = (href: string, e?: React.MouseEvent) => {
+    if (e && (e.metaKey || e.ctrlKey || e.button === 1)) {
+      // Allow opening in a new tab if command/ctrl/middle click
+      onClose();
+      return;
+    }
+    if (e) {
+      e.preventDefault();
+    }
+    router.push(href);
+    onClose();
+  };
 
   // Match tools
   const filteredTools = useMemo(() => {
@@ -90,6 +124,22 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
     );
   }, [query]);
 
+  // Keyboard Enter navigation
+  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (isPlaygroundMatch) {
+        handleSelect(`/${locale}/playground`);
+      } else if (matchedStacks.length > 0) {
+        handleSelect(`/${locale}/replace#${matchedStacks[0].id}`);
+      } else if (filteredTools.length > 0) {
+        handleSelect(`/${locale}/tools/${filteredTools[0].slug}`);
+      } else if (query.trim()) {
+        handleSelect(`/${locale}/tools?q=${encodeURIComponent(query.trim())}`);
+      }
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -100,20 +150,34 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
       }}
     >
       <div className="w-full max-w-2xl bg-white dark:bg-[#151516] border border-zinc-200/90 dark:border-zinc-700/70 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.3)] overflow-hidden animate-in zoom-in-95 duration-150">
-        {/* Search Input Bar - Apple Spotlight Style */}
-        <div className="flex items-center px-4 h-13 border-b border-zinc-100 dark:border-zinc-800">
+        {/* Search Input Bar - Apple Spotlight Style with refined font-size */}
+        <div className="flex items-center px-3.5 sm:px-4 h-12 border-b border-zinc-100 dark:border-zinc-800">
           <Search className="h-4 w-4 text-zinc-400 shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleInputKeyDown}
             placeholder={isVi ? "Tìm công cụ, từ khóa thay thế (HubSpot, Zapier, ClickFunnels)..." : "Search tools, replacements (HubSpot, Zapier, ClickFunnels)..."}
-            className="w-full h-full bg-transparent px-3 text-sm sm:text-base text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none tracking-tight"
+            className="w-full h-full bg-transparent px-3 text-xs sm:text-[13.5px] text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none tracking-normal font-normal"
             autoFocus
           />
+          {query ? (
+            <button
+              onClick={() => setQuery("")}
+              className="p-1 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 transition-colors mr-1 cursor-pointer"
+              aria-label="Clear search"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          ) : (
+            <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-medium text-zinc-400 bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 mr-2 select-none">
+              ESC
+            </kbd>
+          )}
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+            className="p-1.5 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors cursor-pointer"
             aria-label="Close search"
           >
             <X className="h-4 w-4" />
@@ -131,8 +195,8 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
               </div>
               <Link
                 href={`/${locale}/playground`}
-                onClick={onClose}
-                className="flex items-center justify-between p-2.5 rounded-xl bg-cyan-500/5 hover:bg-cyan-500/10 border border-cyan-500/20 transition-all group"
+                onClick={(e) => handleSelect(`/${locale}/playground`, e)}
+                className="flex items-center justify-between p-2.5 rounded-xl bg-cyan-500/5 hover:bg-cyan-500/10 border border-cyan-500/20 transition-all group cursor-pointer"
               >
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="h-8 w-8 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
@@ -163,8 +227,8 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                 <Link
                   key={stack.id}
                   href={`/${locale}/replace#${stack.id}`}
-                  onClick={onClose}
-                  className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/20 transition-all group"
+                  onClick={(e) => handleSelect(`/${locale}/replace#${stack.id}`, e)}
+                  className="flex items-center justify-between p-2.5 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/20 transition-all group cursor-pointer"
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <div className="h-8 w-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -197,8 +261,8 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
                   key={tool.id}
                   href={`/${locale}/tools/${tool.slug}`}
                   prefetch={true}
-                  onClick={onClose}
-                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors group"
+                  onClick={(e) => handleSelect(`/${locale}/tools/${tool.slug}`, e)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800/80 transition-colors group cursor-pointer"
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <ToolLogo slug={tool.slug} name={tool.name} size="md" />
@@ -236,7 +300,7 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
 
         {/* Modal Footer */}
         <div className="flex items-center justify-between px-4 py-2 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800 text-[10px] text-zinc-400">
-          <span>{isVi ? "Nhấn Esc để đóng" : "Use Esc to close"}</span>
+          <span>{isVi ? "Nhấn Esc để đóng hoặc Enter để chọn" : "Press Esc to close, Enter to open"}</span>
           <span>{TOOLS_DATA.length}+ {isVi ? "Công Cụ & Ma Trận Cắt Giảm SaaS" : "Verified AI Tools & Lean Stacks"}</span>
         </div>
       </div>

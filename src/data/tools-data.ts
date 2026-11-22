@@ -15582,6 +15582,145 @@ export const TOOLS_DATA: ToolItem[] = [
     },
     alternatives: ["highlevel", "marblism"],
   },
+  {
+    id: "tool-did",
+    slug: "d-id",
+    name: "D-ID",
+    tagline: {
+      en: "Generative AI video platform transforming still photos into talking interactive avatars.",
+      vi: "Nền tảng video AI biến bất kỳ ảnh chân dung tĩnh thành nhân vật ảo nói chuyện chuyển động.",
+    },
+    description: {
+      en: "D-ID is an AI video generation platform that enables users to animate still photos and create streaming conversational agents with fast 2D rendering and API connectivity.",
+      vi: "D-ID là nền tảng video AI chuyên biến ảnh chân dung tĩnh thành nhân vật nói chuyện với biểu cảm 2D và hỗ trợ API streaming thời gian thực.",
+    },
+    directAnswer: {
+      en: "D-ID excels at lightweight still-photo animation and real-time streaming agents starting at $5.90/month, though fast speech can show slight 2D neck warping compared to full 3D neural avatars like HeyGen.",
+      vi: "D-ID rất mạnh về làm chuyển động ảnh tĩnh và chatbot video thời gian thực từ $5.90/tháng, tuy nhiên khi nói nhanh có thể xuất hiện hiện tượng biến dạng viền cổ 2D so với HeyGen.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["Video Avatar", "Photo Animation", "AI Agents", "Text-to-Video"],
+    startingPrice: 5.9,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.d-id.com/?via={code}",
+    adminAffiliateUrl: "https://www.d-id.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.3,
+    reviewCount: 2850,
+    verifiedAt: "2026-01-15",
+    verdict: {
+      bestFor: {
+        en: "Developers needing real-time streaming avatars for web agents, and creators animating historical figures or still portraits.",
+        vi: "Lập trình viên cần streaming avatar thời gian thực cho chatbot web, và nhà sáng tạo muốn làm sống dậy các bức ảnh chân dung tĩnh.",
+      },
+      notFor: {
+        en: "Enterprises seeking cinema-grade photorealistic 4K presentations with complex full-body gestures (HeyGen or Synthesia are superior).",
+        vi: "Doanh nghiệp cần video thuyết trình 4K chân thực như người thật với cử chỉ toàn thân tự nhiên (HeyGen hoặc Synthesia phù hợp hơn).",
+      },
+      bottomLine: {
+        en: "An affordable, fast solution for lightweight photo animation and streaming agents with entry pricing under $6/month.",
+        vi: "Giải pháp kinh tế và nhanh chóng cho chuyển động ảnh tĩnh và đại lý streaming với chi phí khởi điểm dưới $6/tháng.",
+      },
+    },
+    pros: {
+      en: [
+        "Turns any still image into a speaking video in seconds",
+        "Low-latency streaming API for real-time web conversational bots",
+        "Affordable entry pricing starting at just $5.90/month",
+      ],
+      vi: [
+        "Biến bất kỳ bức ảnh tĩnh nào thành video nói chuyện chỉ trong vài giây",
+        "API streaming độ trễ thấp phục vụ chatbot tương tác trực tiếp",
+        "Chi phí khởi điểm rất mềm chỉ từ $5.90/tháng",
+      ],
+    },
+    cons: {
+      en: [
+        "Noticeable 2D warping artifacts around collar and jaw boundaries",
+        "Credits expire at the end of each billing cycle",
+      ],
+      vi: [
+        "Dễ bị biến dạng co kéo 2D ở vùng cổ và viền hàm khi nói nhanh",
+        "Credit hết hạn sau mỗi chu kỳ thanh toán hàng tháng",
+      ],
+    },
+    pricingTiers: [
+      {
+        name: "Lite",
+        priceMonthly: 5.9,
+        priceAnnualMonthly: 4.7,
+        currency: "USD",
+        userLimit: "1 User",
+        usageLimit: "10 minutes video / mo",
+        features: [
+          "10 minutes video / mo",
+          "AI photo generator",
+          "Standard voices",
+          "Personal license",
+        ],
+      },
+      {
+        name: "Pro",
+        priceMonthly: 16,
+        priceAnnualMonthly: 12.8,
+        currency: "USD",
+        isPopular: true,
+        userLimit: "1 User",
+        usageLimit: "15 minutes video / mo",
+        features: [
+          "15 minutes video / mo",
+          "Commercial usage rights",
+          "AI script generator",
+          "Custom premium voices",
+        ],
+      },
+      {
+        name: "Advanced",
+        priceMonthly: 108,
+        priceAnnualMonthly: 86.4,
+        currency: "USD",
+        userLimit: "Team access",
+        usageLimit: "100 minutes video / mo",
+        features: [
+          "100 minutes video / mo",
+          "Priority render queue",
+          "Full streaming API access",
+          "Dedicated support",
+        ],
+      },
+    ],
+    officialUrl: "https://www.d-id.com",
+    empiricalAudit: {
+      cancellationAudit: {
+        frictionScore: 4,
+        method: "SELF_SERVE_INSTANT",
+        clickCountToCancel: 3,
+        retentionScreensCount: 1,
+        refundPolicyDays: 7,
+        coolingOffPolicy: {
+          en: "7-day partial refund on unused monthly credits upon written support request.",
+          vi: "Hoàn tiền tỷ lệ trong 7 ngày cho credit chưa sử dụng khi gửi yêu cầu hỗ trợ.",
+        },
+        auditTimestamp: "2026-Q1",
+      },
+      finePrintAudit: {
+        requiresExternalApiKey: false,
+        typicalRealMonthlyCost: 16,
+        overageRateDescription: {
+          en: "Credits expire monthly; API video generation billed per 15s segment",
+          vi: "Credit hết hạn theo tháng; API video tính phí theo mỗi 15 giây",
+        },
+      },
+      trialAudit: {
+        requiresCreditCard: false,
+        autoChargesAfterTrial: false,
+      },
+    },
+    alternatives: ["heygen", "synthesia", "elai"],
+  },
 ];
 
 export function getToolBySlug(slug: string): ToolItem | undefined {

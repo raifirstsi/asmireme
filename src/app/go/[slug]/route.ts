@@ -24,12 +24,22 @@ const BOT_USER_AGENTS = [
 // 2. In-memory click deduplication debounce cache (5-second window per visitor + tool)
 const clickDedupeCache = new Map<string, number>();
 
+// Slug aliases map to ensure zero affiliate 404 leakage
+const SLUG_ALIASES: Record<string, string> = {
+  murf: "murf-ai",
+  did: "d-id",
+  ghl: "highlevel",
+  make: "make",
+};
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  const tool = getToolBySlug(slug);
+  const normalizedSlug = (slug || "").toLowerCase();
+  const resolvedSlug = SLUG_ALIASES[normalizedSlug] || normalizedSlug;
+  const tool = getToolBySlug(resolvedSlug);
 
   if (!tool) {
     return new NextResponse("Requested AI tool was not found in catalog.", { status: 404 });

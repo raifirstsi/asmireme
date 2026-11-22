@@ -138,7 +138,7 @@ export const VOICE_BENCHMARKS: AudioBenchmarkItem[] = [
   },
   {
     id: "murf-voice-test",
-    toolSlug: "murf",
+    toolSlug: "murf-ai",
     name: "Murf AI Studio",
     category: "voice-ai",
     rank: 2,
@@ -181,7 +181,7 @@ export const VOICE_BENCHMARKS: AudioBenchmarkItem[] = [
       en: ["Higher rendering latency, not suitable for real-time streaming"],
       vi: ["Độ trễ render cao hơn, không phù hợp cho tương tác đàm thoại thời gian thực"],
     },
-    affiliateUrl: "/go/murf",
+    affiliateUrl: "/go/murf-ai",
   },
   {
     id: "listnr-voice-test",
