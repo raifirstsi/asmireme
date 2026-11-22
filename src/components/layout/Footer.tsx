@@ -156,11 +156,6 @@ export function Footer({ locale }: FooterProps) {
                   {dict.footer.contact}
                 </Link>
               </li>
-              <li>
-                <Link href={`/${locale}/admin`} className="hover:text-black dark:hover:text-white transition-colors text-[11px] opacity-75">
-                  {locale === "vi" ? "Bảng Quản Trị (Admin)" : "Admin Console"}
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
