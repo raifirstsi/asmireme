@@ -91,11 +91,8 @@ export async function GET(
     if (verifiedRef) {
       const memberId = verifiedRef.memberId;
 
-      // Self-referral guard
-      if (loggedInUser && loggedInUser.memberId === memberId) {
-        reasonCode = "self_referral_blocked";
-        return issueRedirect(targetUrl, reasonCode, true, null, visitorHash, tool.slug, referer);
-      }
+      // Self-referral handling: allow member to test and verify their own affiliate links
+      const isSelfVisit = Boolean(loggedInUser && loggedInUser.memberId === memberId);
 
       try {
         const profile = await db.select().from(memberProfiles).where(eq(memberProfiles.id, memberId));
@@ -133,7 +130,7 @@ export async function GET(
 
             if (links.length > 0 && links[0].status === "VALID" && links[0].affiliateUrl) {
               targetUrl = links[0].affiliateUrl;
-              reasonCode = "attributed_member";
+              reasonCode = isSelfVisit ? "self_test_attributed" : "attributed_member";
               attributedMemberId = memberId;
               isFallback = false;
             } else {

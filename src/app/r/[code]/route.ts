@@ -35,13 +35,12 @@ export async function GET(
     return response;
   }
 
-  // Rule 2: Self-referral guard: authenticated member cannot refer themselves
+  // Rule 2: Self-referral handling: allow member to test their own referral landing
   const sessionCookie = request.cookies.get("asmire_session")?.value;
   if (sessionCookie) {
     const session = verifySessionToken(sessionCookie);
     if (session && session.referralCode.toUpperCase() === code.toUpperCase()) {
-      console.log(`[Referral] Self-referral blocked for user ${session.userId}`);
-      return response;
+      console.log(`[Referral] Member ${session.userId} visited own referral link - setting referral cookie for testing`);
     }
   }
 

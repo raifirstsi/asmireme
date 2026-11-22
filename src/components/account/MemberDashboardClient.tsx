@@ -31,37 +31,49 @@ interface MemberDashboardClientProps {
   locale: Locale;
   isPro?: boolean;
   daysRemaining?: number;
+  initialSlots?: MemberSlot[];
 }
 
-export function MemberDashboardClient({ user, locale, isPro = false, daysRemaining = 0 }: MemberDashboardClientProps) {
+export function MemberDashboardClient({ 
+  user, 
+  locale, 
+  isPro = false, 
+  daysRemaining = 0,
+  initialSlots
+}: MemberDashboardClientProps) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"LINKS" | "ANALYTICS" | "BILLING">("LINKS");
 
-  // Initial 3 active slots for Standard plan
-  const [slots, setSlots] = useState<MemberSlot[]>([
-    {
-      slotIndex: 1,
-      toolSlug: "highlevel",
-      affiliateUrl: "https://www.gohighlevel.com/?fp_ref=my_sample_code",
-      status: "VALID",
-      lastSwappedAt: "2027-11-20",
-    },
-    {
-      slotIndex: 2,
-      toolSlug: "elevenlabs",
-      affiliateUrl: "https://elevenlabs.io/?via=my_voice_ref",
-      status: "VALID",
-      lastSwappedAt: "2027-11-18",
-    },
-    {
-      slotIndex: 3,
-      toolSlug: "capcut",
-      affiliateUrl: "",
-      status: "EMPTY",
-      lastSwappedAt: "2027-11-15",
-    },
-  ]);
+  // Initial active slots from server DB or standard fallbacks
+  const [slots, setSlots] = useState<MemberSlot[]>(() => {
+    if (initialSlots && initialSlots.length > 0) {
+      return initialSlots;
+    }
+    return [
+      {
+        slotIndex: 1,
+        toolSlug: "highlevel",
+        affiliateUrl: "",
+        status: "EMPTY",
+        lastSwappedAt: "",
+      },
+      {
+        slotIndex: 2,
+        toolSlug: "elevenlabs",
+        affiliateUrl: "",
+        status: "EMPTY",
+        lastSwappedAt: "",
+      },
+      {
+        slotIndex: 3,
+        toolSlug: "capcut",
+        affiliateUrl: "",
+        status: "EMPTY",
+        lastSwappedAt: "",
+      },
+    ];
+  });
 
   const [savingIndex, setSavingIndex] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<{ slotIndex: number; text: string; isError: boolean } | null>(null);
@@ -74,36 +86,57 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleUpdateSlot = (slotIndex: number, toolSlug: string, affiliateUrl: string) => {
+  const handleUpdateSlot = async (slotIndex: number, toolSlug: string, affiliateUrl: string) => {
     setSavingIndex(slotIndex);
     setFeedback(null);
 
-    // Validate using strict allowlist
+    // Validate using strict allowlist first on client
     const validation = validateMemberAffiliateLink(toolSlug, affiliateUrl);
+    if (!validation.isValid) {
+      setFeedback({
+        slotIndex,
+        text: validation.error || "Invalid link.",
+        isError: true,
+      });
+      setSavingIndex(null);
+      return;
+    }
 
-    setTimeout(() => {
-      if (!validation.isValid) {
+    try {
+      const res = await fetch("/api/account/slots", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slotIndex, toolSlug, affiliateUrl }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
         setFeedback({
           slotIndex,
-          text: validation.error || "Invalid link.",
+          text: data.message || "Failed to save slot to database.",
           isError: true,
         });
       } else {
         setSlots((prev) =>
-          prev.map((s) =>
-            s.slotIndex === slotIndex
-              ? { ...s, toolSlug, affiliateUrl: validation.normalizedUrl!, status: "VALID" }
-              : s
-          )
+          prev.map((s) => (s.slotIndex === slotIndex ? data.slot : s))
         );
         setFeedback({
           slotIndex,
-          text: "Link successfully verified & active!",
+          text: locale === "vi" 
+            ? "Đã lưu vào cơ sở dữ liệu và kích hoạt thành công!" 
+            : "Saved to database & verified successfully!",
           isError: false,
         });
       }
+    } catch (err: any) {
+      setFeedback({
+        slotIndex,
+        text: err?.message || "Lỗi mạng khi lưu liên kết.",
+        isError: true,
+      });
+    } finally {
       setSavingIndex(null);
-    }, 400);
+    }
   };
 
   const handleLogout = async () => {
