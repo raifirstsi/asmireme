@@ -27,6 +27,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
+    // Dedicated Snapshot Bonus Landing Page
+    entries.push({
+      url: `${baseUrl}/${locale}/snapshots/agency-os`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/snapshots/agency-os`,
+          vi: `${baseUrl}/vi/snapshots/agency-os`,
+          "x-default": `${baseUrl}/en/snapshots/agency-os`,
+        },
+      },
+    });
+
     // Main section hubs
     const mainSections = ["tools", "categories", "compare", "rankings", "deals", "news", "membership", "methodology", "editorial-policy", "affiliate-disclosure", "member-terms", "refund-policy", "terms", "privacy", "about", "contact"];
     for (const section of mainSections) {

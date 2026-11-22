@@ -10,7 +10,7 @@ import { getDetailedReviewsForTool } from "@/data/reviews-dataset";
 import { getVerifiedReviewUrl } from "@/data/platform-review-links";
 import { 
   Star, ShieldCheck, Check, X, ExternalLink, Calendar, 
-  HelpCircle, Sparkles, AlertCircle, ArrowRight, Layers, MessageSquare, ThumbsUp 
+  HelpCircle, Sparkles, AlertCircle, ArrowRight, Layers, MessageSquare, ThumbsUp, Gift 
 } from "lucide-react";
 
 interface ToolPageProps {
@@ -646,6 +646,35 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
+              </div>
+            )}
+
+            {/* Exclusive Snapshot Bonus Callout for HighLevel */}
+            {tool.slug === "highlevel" && (
+              <div className="p-4 sm:p-5 rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-brand-500/10 to-transparent flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs shadow-xs">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                    <Gift className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-sm flex items-center gap-1.5">
+                      <span>{isVi ? "Tặng Kèm Trọn Bộ AI Agency Snapshot Trị Giá $1,997 (Free)" : "Includes Free $1,997 AI Agency Snapshot Bonus"}</span>
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Verified</span>
+                    </div>
+                    <p className="text-muted-foreground mt-0.5">
+                      {isVi 
+                        ? "Dựng sẵn 4 phễu ngành (Nhà hàng, Bất động sản, HVAC, Salon), kịch bản SMS/Email 45s và tài liệu onboarding khi đăng ký qua Asmire."
+                        : "Pre-built funnels for 4 niches (Restaurants, Real Estate, HVAC, Salons), email/SMS sequences, and onboarding guide."}
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href={`/${locale}/snapshots/agency-os`}
+                  className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white font-bold text-xs shadow-xs transition-all"
+                >
+                  <span>{isVi ? "Xem Chi Tiết Quà Tặng" : "Explore Bonus"}</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               </div>
             )}
           </div>

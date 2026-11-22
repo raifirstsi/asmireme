@@ -139,3 +139,15 @@ export const auditLogs = pgTable("audit_logs", {
   metadata: jsonb("metadata"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
+
+export const snapshotClaims = pgTable("snapshot_claims", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  fullName: text("full_name").notNull(),
+  email: text("email").notNull(),
+  ghlEmail: text("ghl_email").notNull(),
+  niche: text("niche"),
+  status: text("status").default("PENDING").notNull(), // PENDING, DELIVERED
+  ipAddress: text("ip_address"),
+  userAgent: text("user_agent"),
+  claimedAt: timestamp("claimed_at").defaultNow().notNull(),
+});
