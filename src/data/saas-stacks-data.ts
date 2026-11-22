@@ -105,7 +105,7 @@ export const SAAS_STACK_REPLACEMENTS: SaaSStackReplacement[] = [
       plan: "Agency Starter / Unlimited",
       monthlyCost: 97,
       annualCost: 970, // With 2 months free annual discount
-      officialAffiliateUrl: "https://www.gohighlevel.com/?fp_ref=asmire",
+      officialAffiliateUrl: "/go/highlevel",
       advantages: {
         en: [
           "100% Unlimited Users & Team Members with Zero per-seat surcharge",
@@ -190,7 +190,7 @@ export const SAAS_STACK_REPLACEMENTS: SaaSStackReplacement[] = [
       plan: "Core / Pro Tier",
       monthlyCost: 16,
       annualCost: 192,
-      officialAffiliateUrl: "https://www.make.com/en/register?pc=asmire",
+      officialAffiliateUrl: "/go/make",
       advantages: {
         en: [
           "Massive 10,000 operations for just $16/mo (vs 5,000 tasks for $74 on Zapier)",
@@ -274,7 +274,7 @@ export const SAAS_STACK_REPLACEMENTS: SaaSStackReplacement[] = [
       plan: "Professional (45,000 words/mo)",
       monthlyCost: 25,
       annualCost: 300,
-      officialAffiliateUrl: "https://koala.sh/?via=asmire",
+      officialAffiliateUrl: "/go/koala",
       advantages: {
         en: [
           "Real-time Google search integration: Pulls top-ranking factual data automatically",
@@ -357,7 +357,7 @@ export const SAAS_STACK_REPLACEMENTS: SaaSStackReplacement[] = [
       plan: "Creator Tier",
       monthlyCost: 29,
       annualCost: 348,
-      officialAffiliateUrl: "https://www.heygen.com/?via=asmire",
+      officialAffiliateUrl: "/go/heygen",
       advantages: {
         en: [
           "World-class natural lip-syncing and facial emotion dynamics powered by latest AI models",
@@ -441,7 +441,7 @@ export const SAAS_STACK_REPLACEMENTS: SaaSStackReplacement[] = [
       plan: "All-in-One Engine",
       monthlyCost: 97,
       annualCost: 970,
-      officialAffiliateUrl: "https://www.gohighlevel.com/?fp_ref=asmire",
+      officialAffiliateUrl: "/go/highlevel",
       advantages: {
         en: [
           "Unlimited High-Speed Funnels, Landing Pages, and Multi-Step Conditional Surveys",

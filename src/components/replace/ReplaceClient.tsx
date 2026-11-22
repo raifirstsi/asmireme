@@ -229,7 +229,8 @@ export function ReplaceClient({ stacks, locale }: ReplaceClientProps) {
           return (
             <div
               key={stack.id}
-              className="rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-[#141415] overflow-hidden shadow-xs space-y-6 p-6 sm:p-8"
+              id={stack.id}
+              className="scroll-mt-24 rounded-2xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-[#141415] overflow-hidden shadow-xs space-y-6 p-6 sm:p-8"
             >
               {/* Stack Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-zinc-200 dark:border-zinc-800">
@@ -454,6 +455,14 @@ export function ReplaceClient({ stacks, locale }: ReplaceClientProps) {
                 ? "Khi đăng ký tài khoản qua liên kết kiểm định trên Asmire, bạn tự động mở khóa bộ Snapshot GoHighLevel độc quyền và 10 kịch bản Make.com dựng sẵn tại trung tâm thành viên Asmire Pro."
                 : "Registering through Asmire's verified links automatically unlocks pre-built GoHighLevel Agency Snapshots and 10 production Make.com blueprints in the Asmire Pro member portal."}
             </p>
+            <div className="pt-2">
+              <Link
+                href={`/${locale}/membership`}
+                className="inline-flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+              >
+                <span>{isVi ? "Xem đặc quyền thành viên Asmire Pro →" : "Explore Asmire Pro Member Perks →"}</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Locale, getDictionary } from "@/lib/i18n";
 import { getToolBySlug, TOOLS_DATA } from "@/data/tools-data";
+import { SAAS_STACK_REPLACEMENTS } from "@/data/saas-stacks-data";
 import { ToolLogo } from "@/components/common/ToolLogo";
 import { getExternalReviewsForTool } from "@/services/review-ingestion";
 import { getDetailedReviewsForTool } from "@/data/reviews-dataset";
@@ -54,6 +55,21 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
 
   const dict = getDictionary(locale as Locale);
   const isVi = locale === "vi";
+
+  // Check if current tool is part of the 5 Golden Lean Stacks (either as legacy replaced tool or recommended lean tool)
+  const legacyMatch = SAAS_STACK_REPLACEMENTS.find(
+    (s) =>
+      s.id.startsWith(tool.slug) ||
+      s.legacyStack.name.toLowerCase().includes(tool.slug.toLowerCase()) ||
+      s.legacyStack.items.some((item) =>
+        item.name.toLowerCase().includes(tool.name.toLowerCase()) ||
+        item.name.toLowerCase().includes(tool.slug.toLowerCase())
+      )
+  );
+
+  const leanMatch = SAAS_STACK_REPLACEMENTS.find(
+    (s) => s.leanStack.toolSlug === tool.slug
+  );
 
   // Structured Data (JSON-LD) - Strict Google Review Policy & AEO Compliance
   const jsonLd = {
@@ -246,6 +262,63 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               <span>Verified on {tool.verifiedAt} by Asmire Benchmark Team</span>
             </div>
           </div>
+
+          {/* Lean Stack Replacement Alert for Legacy Tools */}
+          {legacyMatch && (
+            <div className="p-5 rounded-2xl border border-amber-500/30 bg-amber-500/5 dark:bg-amber-500/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full">
+                    {isVi ? "Tối Ưu Chi Phí SaaS" : "SaaS Cost Alert"}
+                  </span>
+                  <span className="text-xs font-bold text-zinc-900 dark:text-white">
+                    {isVi ? `Tiết kiệm tới ${legacyMatch.savings.percentSavings}% (-$${legacyMatch.savings.monthlyDollar}/tháng)` : `Save up to ${legacyMatch.savings.percentSavings}% (-$${legacyMatch.savings.monthlyDollar}/mo)`}
+                  </span>
+                </div>
+                <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  {isVi
+                    ? `Bạn đang cân nhắc ${tool.name}? Kiểm tra phương án thay thế tinh gọn bằng ${legacyMatch.leanStack.toolName} trong Ma Trận Cắt Giảm SaaS để giữ lại $${legacyMatch.savings.annualDollar.toLocaleString()}/năm.`
+                    : `Evaluating ${tool.name}? See how replacing it with ${legacyMatch.leanStack.toolName} in our Lean Stack Matrix retains $${legacyMatch.savings.annualDollar.toLocaleString()}/year.`}
+                </p>
+              </div>
+              <Link
+                href={`/${locale}/replace#${legacyMatch.id}`}
+                className="shrink-0 px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-zinc-950 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs"
+              >
+                <span>{isVi ? "Xem So Sánh Chi Tiết" : "View Stack Comparison"}</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          )}
+
+          {/* Verified Lean Stack Hero Callout for Winner Tools */}
+          {leanMatch && (
+            <div className="p-5 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 dark:bg-emerald-500/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <ShieldCheck className="h-3 w-3" />
+                    {isVi ? "Top 5 Lean Stack Asmire" : "Asmire Top 5 Lean Stack"}
+                  </span>
+                  <span className="text-xs font-bold text-zinc-900 dark:text-white">
+                    {isVi ? `Tiết kiệm $${leanMatch.savings.annualDollar.toLocaleString()}/năm` : `Retains $${leanMatch.savings.annualDollar.toLocaleString()}/yr`}
+                  </span>
+                </div>
+                <p className="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  {isVi
+                    ? `${tool.name} được Asmire kiểm nghiệm là giải pháp thay thế tinh gọn số 1 cho ${leanMatch.legacyStack.name}, giúp cắt giảm ${leanMatch.savings.percentSavings}% ngân sách phần mềm.`
+                    : `${tool.name} is verified by Asmire as the #1 lean replacement for ${leanMatch.legacyStack.name}, slashing ${leanMatch.savings.percentSavings}% in software overhead.`}
+                </p>
+              </div>
+              <Link
+                href={`/${locale}/replace#${leanMatch.id}`}
+                className="shrink-0 px-4 py-2 rounded-xl border border-emerald-500/30 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white hover:border-emerald-500 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs"
+              >
+                <span>{isVi ? "Xem Ma Trận Cắt Giảm" : "View Lean Matrix"}</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          )}
 
           {/* Verdict Snapshot Card (Above the fold) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

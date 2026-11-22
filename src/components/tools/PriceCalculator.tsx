@@ -45,9 +45,9 @@ export function PriceCalculator({ tool, locale }: PriceCalculatorProps) {
   const finePrint = audit?.finePrintAudit;
   const requiresApi = finePrint?.requiresExternalApiKey ?? false;
   
-  // Calculate raw external API estimate (if typicalRealMonthlyCost > base price, the delta is external/infra cost)
+  // Calculate raw external API / infrastructure delta based on baseline startingPrice so it remains consistent across all tier selections
   const estimatedApiBase = finePrint?.typicalRealMonthlyCost 
-    ? Math.max(0, finePrint.typicalRealMonthlyCost - tier.priceMonthly)
+    ? Math.max(0, finePrint.typicalRealMonthlyCost - tool.startingPrice)
     : (requiresApi ? 25 : 0);
 
   // Estimated external API / Token burn

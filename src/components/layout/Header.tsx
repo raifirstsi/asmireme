@@ -12,6 +12,13 @@ interface HeaderProps {
   locale: Locale;
 }
 
+interface AuthUser {
+  email: string;
+  role: "USER" | "MEMBER" | "ADMIN";
+  memberId?: string;
+  referralCode?: string;
+}
+
 export function Header({ locale }: HeaderProps) {
   const dict = getDictionary(locale);
   const pathname = usePathname();
@@ -20,6 +27,35 @@ export function Header({ locale }: HeaderProps) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch("/api/auth/me", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => {
+        if (isMounted) {
+          if (data.authenticated && data.user) {
+            setCurrentUser(data.user);
+          } else {
+            setCurrentUser(null);
+          }
+        }
+      })
+      .catch(() => {
+        if (isMounted) setCurrentUser(null);
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [pathname]);
+
+  const isLoggedIn = !!currentUser;
+  const accountHref = currentUser?.role === "ADMIN" ? `/${locale}/admin` : `/${locale}/account`;
+  const buttonText = isLoggedIn 
+    ? (locale === "vi" ? "Tài khoản" : "Account")
+    : (locale === "vi" ? "Đăng nhập" : "Sign In");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,13 +185,13 @@ export function Header({ locale }: HeaderProps) {
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Login CTA Button - Balanced Luxury Pill */}
+            {/* Account / Login CTA Button - Balanced Luxury Pill */}
             <Link
-              href={`/${locale}/account/login`}
-              prefetch={true}
+              href={isLoggedIn ? accountHref : `/${locale}/account/login`}
+              prefetch={false}
               className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-[13px] font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              {locale === "vi" ? "Đăng nhập" : "Sign In"}
+              {buttonText}
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
@@ -218,12 +254,12 @@ export function Header({ locale }: HeaderProps) {
 
             <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <Link
-                href={`/${locale}/account/login`}
-                prefetch={true}
+                href={isLoggedIn ? accountHref : `/${locale}/account/login`}
+                prefetch={false}
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-[13px] shadow-xs block transition-all"
               >
-                {locale === "vi" ? "Đăng nhập" : "Sign In"}
+                {buttonText}
               </Link>
             </div>
           </div>
