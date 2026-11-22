@@ -53,13 +53,12 @@ export function Header({ locale }: HeaderProps) {
     router.push(segments.join("/") || `/${targetLocale}`);
   };
 
-  // Apple-style streamlined primary navigation: 5 core links
+  // Apple-style streamlined primary navigation: 4 core links
   const primaryNavItems = [
     { label: dict.nav.tools, href: `/${locale}/tools` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
     { label: dict.nav.blog, href: `/${locale}/blog` },
-    { label: "Member", href: `/${locale}/membership` },
   ];
 
   // Secondary links for mobile drawer and search
@@ -67,6 +66,7 @@ export function Header({ locale }: HeaderProps) {
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
+    { label: "Member", href: `/${locale}/membership` },
   ];
 
   return (
@@ -129,38 +129,38 @@ export function Header({ locale }: HeaderProps) {
             {/* Mobile search icon - Borderless */}
             <button
               onClick={openSearch}
-              className="sm:hidden flex h-9 w-9 items-center justify-center rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+              className="sm:hidden flex h-9 w-9 items-center justify-center border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer outline-none focus:outline-none"
               aria-label="Open search modal"
             >
               <Search className="h-4 w-4" />
             </button>
 
             {/* Theme Toggle (Light / Dark - Borderless) */}
-            <ThemeToggle className="h-9 w-9 rounded-full" />
+            <ThemeToggle className="h-9 w-9" />
 
-            {/* Language Switcher - Borderless */}
+            {/* Language Switcher - Borderless, Zero Hover Background */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 h-9 px-3 text-xs font-semibold rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors active:scale-95 cursor-pointer"
+              className="flex items-center gap-1.5 h-9 px-2 text-xs font-semibold border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer outline-none focus:outline-none"
               title="Switch Language"
             >
-              <Globe className="h-3.5 w-3.5 text-zinc-400" />
+              <Globe className="h-3.5 w-3.5 opacity-80" />
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Login CTA Button - Balanced Luxury Pill */}
+            {/* Member CTA Button - Balanced Luxury Pill */}
             <Link
-              href={`/${locale}/account/login`}
+              href={`/${locale}/membership`}
               prefetch={true}
               className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              Đăng nhập
+              Member
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="md:hidden flex h-9 w-9 items-center justify-center rounded-full border-0 bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-850 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+              className="md:hidden flex h-9 w-9 items-center justify-center border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer outline-none focus:outline-none"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -213,12 +213,12 @@ export function Header({ locale }: HeaderProps) {
 
             <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <Link
-                href={`/${locale}/account/login`}
+                href={`/${locale}/membership`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
               >
-                Đăng nhập
+                Member
               </Link>
             </div>
           </div>
