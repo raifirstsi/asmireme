@@ -9,7 +9,7 @@ import { ToolCard } from "@/components/tools/ToolCard";
 import { CATEGORY_HUBS } from "@/data/categories-data";
 import { 
   Filter, Search, SlidersHorizontal, ArrowUpDown, 
-  Check, RotateCcw, X, Sparkles, Plus, Layers
+  Check, RotateCcw, X, Sparkles, Plus, Layers, ShieldCheck
 } from "lucide-react";
 
 interface DirectoryClientProps {
@@ -29,6 +29,9 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
   const selectedPriceTier = searchParams.get("price") || "all";
   const freePlanOnly = searchParams.get("freePlan") === "true";
   const freeTrialOnly = searchParams.get("freeTrial") === "true";
+  const easyCancelOnly = searchParams.get("easyCancel") === "true";
+  const noCardTrialOnly = searchParams.get("noCardTrial") === "true";
+  const noApiNeededOnly = searchParams.get("noApiNeeded") === "true";
   const sortBy = searchParams.get("sort") || "rating";
   const searchQuery = searchParams.get("q") || "";
 
@@ -91,6 +94,10 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
         // Free flags
         if (freePlanOnly && !tool.hasFreePlan) return false;
         if (freeTrialOnly && !tool.hasFreeTrial) return false;
+        // Empirical audit filters
+        if (easyCancelOnly && (tool.empiricalAudit?.cancellationAudit?.frictionScore || 0) < 4) return false;
+        if (noCardTrialOnly && tool.empiricalAudit?.trialAudit?.requiresCreditCard !== false) return false;
+        if (noApiNeededOnly && tool.empiricalAudit?.finePrintAudit?.requiresExternalApiKey !== false) return false;
         // Search query filter
         if (query.trim()) {
           const q = query.toLowerCase();
@@ -110,7 +117,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
         if (sortBy === "name") return a.name.localeCompare(b.name);
         return 0;
       });
-  }, [initialTools, selectedHub, selectedPriceTier, freePlanOnly, freeTrialOnly, sortBy, query, locale]);
+  }, [initialTools, selectedHub, selectedPriceTier, freePlanOnly, freeTrialOnly, easyCancelOnly, noCardTrialOnly, noApiNeededOnly, sortBy, query, locale]);
 
   return (
     <div className="space-y-8">
@@ -155,7 +162,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             <option value="name">Alphabetical (A-Z)</option>
           </select>
 
-          {(selectedHub !== "all" || selectedPriceTier !== "all" || freePlanOnly || freeTrialOnly || query) && (
+          {(selectedHub !== "all" || selectedPriceTier !== "all" || freePlanOnly || freeTrialOnly || easyCancelOnly || noCardTrialOnly || noApiNeededOnly || query) && (
             <button
               onClick={clearAllFilters}
               className="flex items-center gap-1.5 h-10 px-3.5 text-xs font-medium rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-100 hover:bg-zinc-200/80 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-200 transition-colors active:scale-95 cursor-pointer"
@@ -254,6 +261,44 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             }`}
           >
             Free Trial Available
+          </button>
+        </div>
+
+        {/* Empirical Audit Micro-Filters - Apple Hairline Minimalist */}
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-zinc-200/60 dark:border-zinc-800/60">
+          <span className="text-zinc-400 font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1">
+            <ShieldCheck className="h-3 w-3 text-emerald-500" />
+            {locale === "vi" ? "Kiểm thử thực tế:" : "Empirical Filters:"}
+          </span>
+          <button
+            onClick={() => updateParams({ easyCancel: easyCancelOnly ? null : "true" })}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+              easyCancelOnly
+                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
+                : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
+            }`}
+          >
+            {locale === "vi" ? "✓ 1-Click Hủy Gói" : "✓ 1-Click Cancel"}
+          </button>
+          <button
+            onClick={() => updateParams({ noCardTrial: noCardTrialOnly ? null : "true" })}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+              noCardTrialOnly
+                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
+                : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
+            }`}
+          >
+            {locale === "vi" ? "✓ Thử Không Cần Thẻ" : "✓ No CC Free Trial"}
+          </button>
+          <button
+            onClick={() => updateParams({ noApiNeeded: noApiNeededOnly ? null : "true" })}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer active:scale-95 border ${
+              noApiNeededOnly
+                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 border-zinc-900 dark:border-zinc-100 font-semibold shadow-2xs"
+                : "bg-white dark:bg-[#141415] border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-zinc-400 dark:hover:border-zinc-600"
+            }`}
+          >
+            {locale === "vi" ? "✓ Không Mua API Ngoài" : "✓ No Extra API Key"}
           </button>
         </div>
       </div>

@@ -130,6 +130,34 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                 : `${tool.name} starts at $${tool.startingPrice}/mo. Verified by Asmire on ${tool.verifiedAt}.`,
             },
           },
+          ...(tool.empiricalAudit
+            ? [
+                {
+                  "@type": "Question",
+                  name: isVi
+                    ? `Chính sách hủy gói và hoàn tiền của ${tool.name} như thế nào?`
+                    : `How easy is it to cancel ${tool.name} and what is the refund policy?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: isVi
+                      ? `${tool.name} đạt điểm hủy gói ${tool.empiricalAudit.cancellationAudit.frictionScore}/5 theo chuẩn kiểm thử Asmire (${tool.empiricalAudit.cancellationAudit.clickCountToCancel} lần nhấp chuột, hình thức ${tool.empiricalAudit.cancellationAudit.method}). Chính sách hoàn tiền: ${tool.empiricalAudit.cancellationAudit.coolingOffPolicy.vi}.`
+                      : `${tool.name} received a cancellation score of ${tool.empiricalAudit.cancellationAudit.frictionScore}/5 by Asmire benchmarks (${tool.empiricalAudit.cancellationAudit.clickCountToCancel} clicks via ${tool.empiricalAudit.cancellationAudit.method}). Refund policy: ${tool.empiricalAudit.cancellationAudit.coolingOffPolicy.en}.`,
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: isVi
+                    ? `${tool.name} có chi phí ẩn nào không và chi phí thực tế là bao nhiêu?`
+                    : `Are there hidden costs with ${tool.name} and what is the real monthly expense?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: isVi
+                      ? `Chi phí thực tế hàng tháng điển hình của ${tool.name} ước tính khoảng $${tool.empiricalAudit.finePrintAudit.typicalRealMonthlyCost}/tháng (giá công bố từ $${tool.startingPrice}/tháng). Phụ phí vượt mức: ${tool.empiricalAudit.finePrintAudit.overageRateDescription?.vi || "Theo lượng dùng thực tế"}. Yêu cầu thẻ tín dụng khi dùng thử: ${tool.empiricalAudit.trialAudit.requiresCreditCard ? "Có" : "Không"}.`
+                      : `Typical real monthly expense for ${tool.name} is around $${tool.empiricalAudit.finePrintAudit.typicalRealMonthlyCost}/mo (advertised starting price $${tool.startingPrice}/mo). Usage overage: ${tool.empiricalAudit.finePrintAudit.overageRateDescription?.en || "Usage-based"}. Requires credit card for trial: ${tool.empiricalAudit.trialAudit.requiresCreditCard ? "Yes" : "No"}.`,
+                  },
+                },
+              ]
+            : []),
         ],
       },
     ],
@@ -278,6 +306,130 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
             </div>
           </div>
 
+          {/* Empirical Lab Audit - Cancellation Friction & Fine-Print Costs */}
+          {tool.empiricalAudit && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="h-5 w-5 text-emerald-500" />
+                  <h2 className="text-xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50">
+                    {isVi ? "Kiểm Thử Thực Nghiệm: Hủy Gói & Phí Ẩn" : "Empirical Audit: Cancellation & Fine Print"}
+                  </h2>
+                </div>
+                <span className="text-[11px] font-medium text-zinc-400 bg-zinc-100 dark:bg-zinc-800/80 px-2.5 py-1 rounded-full border border-zinc-200/60 dark:border-zinc-800/60">
+                  {isVi ? "Đối soát: Quý 1/2027" : "Audited: 2027-Q1"}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Column 1: Cancellation Friction */}
+                <div className="p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-4 shadow-2xs">
+                  <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800/60">
+                    <span className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+                      {isVi ? "Chỉ Số Hủy Gói" : "Cancellation Friction"}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                      <Star className="h-3.5 w-3.5 fill-emerald-500 text-emerald-500" />
+                      {tool.empiricalAudit.cancellationAudit.frictionScore} / 5
+                    </span>
+                  </div>
+
+                  <div className="space-y-2.5 text-xs">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Thao tác hủy:" : "Clicks to Cancel:"}
+                      </span>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+                        {tool.empiricalAudit.cancellationAudit.clickCountToCancel} {isVi ? "lần click" : "clicks"}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Màn hình níu kéo:" : "Retention Screens:"}
+                      </span>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+                        {tool.empiricalAudit.cancellationAudit.retentionScreensCount} {isVi ? "bước khảo sát" : "screens"}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Phương thức hủy:" : "Cancellation Method:"}
+                      </span>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+                        {tool.empiricalAudit.cancellationAudit.method === "SELF_SERVE_INSTANT"
+                          ? (isVi ? "Tự phục vụ 1-Click" : "Instant Self-Serve")
+                          : tool.empiricalAudit.cancellationAudit.method === "RETENTION_FLOW"
+                          ? (isVi ? "Khảo sát níu kéo" : "Retention Offer Flow")
+                          : (isVi ? "Mở ticket hỗ trợ" : "Ticket / Email Gate")}
+                      </span>
+                    </div>
+
+                    <div className="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
+                      <span className="text-zinc-500 dark:text-zinc-400 block mb-1">
+                        {isVi ? "Chính sách hoàn tiền:" : "Refund Guarantee:"}
+                      </span>
+                      <p className="text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed">
+                        {tool.empiricalAudit.cancellationAudit.coolingOffPolicy[locale as Locale]}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Column 2: Fine Print & Real Cost */}
+                <div className="p-6 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] space-y-4 shadow-2xs">
+                  <div className="flex items-center justify-between pb-3 border-b border-zinc-100 dark:border-zinc-800/60">
+                    <span className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+                      {isVi ? "Bóc Tách Phí Thực Tế" : "Fine-Print & Real Burn"}
+                    </span>
+                    <span className="text-xs font-bold text-zinc-900 dark:text-zinc-100">
+                      ~${tool.empiricalAudit.finePrintAudit.typicalRealMonthlyCost}/mo
+                    </span>
+                  </div>
+
+                  <div className="space-y-2.5 text-xs">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Giá công bố ban đầu:" : "Advertised Base Price:"}
+                      </span>
+                      <span className="font-semibold text-zinc-900 dark:text-zinc-100">
+                        ${tool.startingPrice}/mo
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Dùng thử không cần thẻ:" : "No Credit Card Trial:"}
+                      </span>
+                      <span className={`font-semibold ${tool.empiricalAudit.trialAudit.requiresCreditCard ? "text-amber-600 dark:text-amber-400" : "text-emerald-600 dark:text-emerald-400"}`}>
+                        {tool.empiricalAudit.trialAudit.requiresCreditCard ? (isVi ? "Cần thẻ visa" : "Card Required") : (isVi ? "Không cần thẻ" : "No Card Needed")}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-zinc-500 dark:text-zinc-400">
+                        {isVi ? "Yêu cầu API key ngoài:" : "External API Required:"}
+                      </span>
+                      <span className={`font-semibold ${tool.empiricalAudit.finePrintAudit.requiresExternalApiKey ? "text-amber-600 dark:text-amber-400" : "text-emerald-600 dark:text-emerald-400"}`}>
+                        {tool.empiricalAudit.finePrintAudit.requiresExternalApiKey ? (isVi ? "Cần mua thêm API" : "Requires Own Key") : (isVi ? "Bao gồm sẵn 100%" : "Fully Included")}
+                      </span>
+                    </div>
+
+                    <div className="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
+                      <span className="text-zinc-500 dark:text-zinc-400 block mb-1">
+                        {isVi ? "Phụ phí vượt hạn mức (Overage):" : "Overage Charges:"}
+                      </span>
+                      <p className="text-zinc-700 dark:text-zinc-300 font-medium leading-relaxed">
+                        {tool.empiricalAudit.finePrintAudit.overageRateDescription?.[locale as Locale] || (isVi ? "Theo lượng dùng thực tế" : "Usage-based")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Verified Pricing Breakdown */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -350,26 +502,54 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               ))}
             </div>
 
-            {/* Exclusive Deep Dive Callout for HighLevel */}
+            {/* Exclusive Deep Dive Callouts for HighLevel */}
             {tool.slug === "highlevel" && (
-              <div className="p-4 sm:p-5 rounded-2xl border border-brand-500/30 bg-gradient-to-r from-brand-500/10 via-amber-500/5 to-transparent dark:from-brand-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
-                <div className="space-y-0.5">
-                  <div className="font-bold text-foreground text-sm">
-                    {isVi ? "Bóc Trần Toàn Bộ Chi Phí Ẩn & Mô Hình Kiếm Tiền GoHighLevel 2027" : "GoHighLevel Pricing & Hidden Costs (2027): Uncensored Audit"}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                <div className="p-4 sm:p-5 rounded-2xl border border-brand-500/30 bg-gradient-to-br from-brand-500/10 via-amber-500/5 to-transparent dark:from-brand-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col justify-between gap-3 text-xs shadow-xs">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">
+                      {isVi ? "Báo Cáo Bảng Giá & Chi Phí" : "Pricing & Hidden Costs"}
+                    </span>
+                    <div className="font-bold text-foreground text-sm">
+                      {isVi ? "Bóc Trần Toàn Bộ Chi Phí Ẩn & Mô Hình Kiếm Tiền GoHighLevel 2027" : "GoHighLevel Pricing & Hidden Costs (2027): Uncensored Audit"}
+                    </div>
+                    <p className="text-muted-foreground line-clamp-2">
+                      {isVi 
+                        ? "Bóc tách cước viễn thông LC Phone/Twilio, email, A2P 10DLC và bí quyết nhận bộ Agency Snapshot $1,997."
+                        : "Detailed audit of LC Phone, SMS rates, email delivery, A2P 10DLC fees, and the $1,997 Agency Snapshot bonus."}
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    {isVi 
-                      ? "Phân tích tường tận cước viễn thông LC Phone/Twilio, email, A2P 10DLC và bí quyết nhận bộ Agency Snapshot $1,997."
-                      : "Detailed audit of LC Phone, SMS rates, email delivery, A2P 10DLC fees, and the $1,997 Agency Snapshot bonus."}
-                  </p>
+                  <Link
+                    href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
+                    className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <span>{isVi ? "Xem bảng giá chi tiết" : "Read Pricing Audit"}</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
                 </div>
-                <Link
-                  href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
-                  className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
-                >
-                  <span>{isVi ? "Xem bài phân tích" : "Read Full Audit"}</span>
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
+
+                <div className="p-4 sm:p-5 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent dark:from-purple-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col justify-between gap-3 text-xs shadow-xs">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                      {isVi ? "So Sánh Quyết Định Mua" : "Head-to-Head Showdown"}
+                    </span>
+                    <div className="font-bold text-foreground text-sm">
+                      {isVi ? "GoHighLevel vs ClickFunnels (2027): Bản Án Tử Cho 'Thuế Phễu'" : "GoHighLevel vs ClickFunnels (2027): Death of The Funnel Tax"}
+                    </div>
+                    <p className="text-muted-foreground line-clamp-2">
+                      {isVi 
+                        ? "Phân tích không khoan nhượng theo phong cách Dan Kennedy & Dan Koe: Bóc trần cái bẫy $297/tháng và đòn bẩy Agency."
+                        : "No-BS comparison in the style of Dan Kennedy & Dan Koe: Exposing the $297/mo funnel trap and the speed-to-lead advantage."}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/${locale}/news/gohighlevel-vs-clickfunnels-2027`}
+                    className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    <span>{isVi ? "Đọc bài so sánh" : "Read Comparison"}</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
               </div>
             )}
           </div>

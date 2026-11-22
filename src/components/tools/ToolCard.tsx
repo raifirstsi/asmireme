@@ -72,6 +72,29 @@ export function ToolCard({ tool, locale }: ToolCardProps) {
             </span>
           )}
         </div>
+
+        {/* Empirical Transparency Pill: Friction & Real Cost */}
+        <div className="pt-2.5 pb-1 border-t border-zinc-100 dark:border-zinc-800/60 flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-400">
+          {tool.empiricalAudit ? (
+            <>
+              <span className="inline-flex items-center gap-1 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                {locale === "vi" 
+                  ? `Hủy gói: ${tool.empiricalAudit.cancellationAudit.frictionScore}/5★ (${tool.empiricalAudit.cancellationAudit.clickCountToCancel} clicks)`
+                  : `Cancel: ${tool.empiricalAudit.cancellationAudit.frictionScore}/5★ (${tool.empiricalAudit.cancellationAudit.clickCountToCancel} clicks)`}
+              </span>
+              <span className="font-semibold text-zinc-700 dark:text-zinc-300">
+                {locale === "vi" ? "Thực chi: " : "Real Cost: "}
+                ~${tool.empiricalAudit.finePrintAudit.typicalRealMonthlyCost}/mo
+              </span>
+            </>
+          ) : (
+            <span className="inline-flex items-center gap-1 font-normal text-zinc-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 shrink-0" />
+              {locale === "vi" ? "Audit: Đang kiểm nghiệm" : "Audit: Lab in progress"}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Card Footer: Pricing & Action Buttons - Zero Squeeze & No Text Wrapping */}
