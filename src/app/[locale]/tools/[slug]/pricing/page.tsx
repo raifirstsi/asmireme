@@ -163,9 +163,16 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
               </Link>
               <Link
                 href={`/${locale}/snapshots/agency-os`}
-                className="shrink-0 inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white text-xs font-bold transition-all shadow-xs"
+                className="shrink-0 inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white text-xs font-bold transition-all shadow-xs"
               >
-                <span>{isVi ? "Nhận Snapshot $1,997 (Free)" : "Claim $1,997 Snapshot"}</span>
+                <span>{isVi ? "Agency Snapshot $1,997" : "Agency Snapshot $1,997"}</span>
+                <ExternalLink className="h-3.5 w-3.5" />
+              </Link>
+              <Link
+                href={`/${locale}/snapshots/sme-os`}
+                className="shrink-0 inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-bold transition-all shadow-xs"
+              >
+                <span>{isVi ? "SMEs Snapshot (Gói $97)" : "SMEs Snapshot ($97 Plan)"}</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </Link>
             </div>
