@@ -125,6 +125,37 @@ export default async function ToolPricingPage({ params }: PricingPageProps) {
         {/* Interactive Usage & Team Seat Calculator */}
         <PriceCalculator tool={tool} locale={locale as Locale} />
 
+        {/* Exclusive Deep Dive Callout for HighLevel */}
+        {tool.slug === "highlevel" && (
+          <div className="p-5 sm:p-6 rounded-2xl border border-brand-500/30 bg-gradient-to-r from-brand-500/5 via-amber-500/5 to-transparent dark:from-brand-950/20 dark:via-zinc-900/40 dark:to-transparent flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">
+                  {isVi ? "Báo Cáo Phân Tích Độc Quyền" : "Exclusive Deep Dive Guide"}
+                </span>
+                <span className="text-xs text-muted-foreground">• 14 min read</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-foreground">
+                {isVi
+                  ? "Bảng Giá GoHighLevel & Bóc Trần Chi Phí Ẩn (2027): Gói $97, $297, $497 & Bài Toán SaaS Rebilling"
+                  : "GoHighLevel Pricing Breakdown & Hidden Costs (2027): $97 vs $297 vs $497 Audit"}
+              </h3>
+              <p className="text-xs text-muted-foreground max-w-xl">
+                {isVi
+                  ? "Phân tích tường tận mọi chi phí viễn thông LC Phone/Twilio, cước SMS, email, lệ phí A2P 10DLC và cách nhận bộ Asmire Turnkey Agency Snapshot ($1,997) miễn phí."
+                  : "Complete breakdown of telephony usage fees, LC Email rates, A2P 10DLC carrier compliance, and how to claim the $1,997 Asmire Turnkey Agency Snapshot bonus."}
+              </p>
+            </div>
+            <Link
+              href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
+              className="shrink-0 inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-foreground text-background text-xs font-semibold hover:opacity-90 transition-opacity"
+            >
+              <span>{isVi ? "Đọc bài phân tích" : "Read Full Audit"}</span>
+              <ExternalLink className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        )}
+
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {tool.pricingTiers.map((tier) => (

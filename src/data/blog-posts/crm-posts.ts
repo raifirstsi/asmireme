@@ -1,6 +1,8 @@
 import type { BlogPost } from "../blog-data";
+import { GHL_PRICING_BLOG_POST } from "./ghl-pricing-post";
 
 export const CRM_BLOG_POSTS: BlogPost[] = [
+  GHL_PRICING_BLOG_POST,
   {
     slug: "highlevel-review-roi-guide-2027",
     category: "Sales CRM & Growth Systems",

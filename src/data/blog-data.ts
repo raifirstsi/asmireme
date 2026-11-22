@@ -543,8 +543,8 @@ const ALL_REVIEWS_POSTS: BlogPost[] = [
   ...ORIGINAL_BLOG_POSTS,
 ].map((post) => ({
   ...post,
-  category: "Reviews",
-  author: {
+  category: post.category || "Reviews",
+  author: post.author || {
     name: "Asmire Team",
     role: "AI SaaS Research & Empirical Analysis",
     avatarUrl: "/icon.png",

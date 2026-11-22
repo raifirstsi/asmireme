@@ -349,6 +349,29 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                 </div>
               ))}
             </div>
+
+            {/* Exclusive Deep Dive Callout for HighLevel */}
+            {tool.slug === "highlevel" && (
+              <div className="p-4 sm:p-5 rounded-2xl border border-brand-500/30 bg-gradient-to-r from-brand-500/10 via-amber-500/5 to-transparent dark:from-brand-950/30 dark:via-zinc-900/40 dark:to-transparent flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs">
+                <div className="space-y-0.5">
+                  <div className="font-bold text-foreground text-sm">
+                    {isVi ? "Bóc Trần Toàn Bộ Chi Phí Ẩn & Mô Hình Kiếm Tiền GoHighLevel 2027" : "GoHighLevel Pricing & Hidden Costs (2027): Uncensored Audit"}
+                  </div>
+                  <p className="text-muted-foreground">
+                    {isVi 
+                      ? "Phân tích tường tận cước viễn thông LC Phone/Twilio, email, A2P 10DLC và bí quyết nhận bộ Agency Snapshot $1,997."
+                      : "Detailed audit of LC Phone, SMS rates, email delivery, A2P 10DLC fees, and the $1,997 Agency Snapshot bonus."}
+                  </p>
+                </div>
+                <Link
+                  href={`/${locale}/news/gohighlevel-pricing-hidden-costs-guide-2027`}
+                  className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-foreground text-background font-semibold hover:opacity-90 transition-opacity"
+                >
+                  <span>{isVi ? "Xem bài phân tích" : "Read Full Audit"}</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Verified External Community Sentiment & Reviews Center */}
