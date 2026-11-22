@@ -82,7 +82,7 @@ export function Header({ locale }: HeaderProps) {
           {/* Brand Logo - Left Column (flex-1 guarantees center alignment) */}
           <div className="flex items-center justify-start flex-1 shrink-0">
             <Link href={`/${locale}`} prefetch={true} className="inline-flex items-center transition-opacity hover:opacity-80" aria-label="Asmire Home">
-              <span className="text-[17px] font-light tracking-[-0.03em] text-black dark:text-white select-none">
+              <span className="text-[16px] font-bold tracking-tight text-black dark:text-white select-none">
                 asmire
               </span>
             </Link>
@@ -152,7 +152,7 @@ export function Header({ locale }: HeaderProps) {
               prefetch={true}
               className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-[13px] font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              Đăng nhập
+              {locale === "vi" ? "Đăng nhập" : "Sign In"}
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
@@ -191,7 +191,7 @@ export function Header({ locale }: HeaderProps) {
               ))}
             </div>
 
-            {/* Secondary Links */}
+            {/* Secondary Links - Uniform size with Core Links */}
             <div className="space-y-1 pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block px-3 mb-1">
                 {locale === "vi" ? "Tính Năng Khác" : "More"}
@@ -202,7 +202,11 @@ export function Header({ locale }: HeaderProps) {
                   href={item.href}
                   prefetch={true}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 text-xs font-medium text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white rounded-md transition-colors"
+                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    pathname === item.href
+                      ? "bg-zinc-100 dark:bg-zinc-800 text-black dark:text-white font-semibold"
+                      : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -216,7 +220,7 @@ export function Header({ locale }: HeaderProps) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-[13px] shadow-xs block transition-all"
               >
-                Đăng nhập
+                {locale === "vi" ? "Đăng nhập" : "Sign In"}
               </Link>
             </div>
           </div>
