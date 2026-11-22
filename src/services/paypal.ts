@@ -4,14 +4,14 @@
  */
 
 export function getPaypalConfig() {
-  const mode = (process.env.PAYPAL_MODE || "sandbox").toLowerCase();
+  const mode = (process.env.PAYPAL_MODE || "live").toLowerCase();
   const clientId =
     process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ||
     process.env.PAYPAL_CLIENT_ID ||
-    "BAAOVsab586blJV_Z-RRQbzQwQpcoU2hS1fWcmGN0HLkvvxsodTt3TV6WwlLheX1o2dpu74YDIYg6Uy8Z0";
+    "BAAm68UlfXj36eNIFzu8cy9KSy5fxanB-ptNbPkbqpe4F-jm0sB_P4S-XwgaKtqooPqrvinZCSb7fhk_Ag";
   const clientSecret =
     process.env.PAYPAL_CLIENT_SECRET ||
-    "ELXWNLNmi-hlXBbsvp6GxCmbrytDIANaBfhGyNpx77l203drYNLo4zjBhzbWMQGyTfjM0nHGOS-IBUM4";
+    "EE2-qZb3Ot5JpHUgpVGjuVI3z2DmwCBq9tEj3Lum0xYtClIFv349J26flbAuQ6qqg226mwjzy4fpNhrW";
   const baseUrl = mode === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com";
 
   return { mode, clientId, clientSecret, baseUrl };

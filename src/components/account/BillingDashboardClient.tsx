@@ -82,7 +82,7 @@ export function BillingDashboardClient({
 
     const clientId =
       process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID ||
-      "BAAOVsab586blJV_Z-RRQbzQwQpcoU2hS1fWcmGN0HLkvvxsodTt3TV6WwlLheX1o2dpu74YDIYg6Uy8Z0";
+      "BAAm68UlfXj36eNIFzu8cy9KSy5fxanB-ptNbPkbqpe4F-jm0sB_P4S-XwgaKtqooPqrvinZCSb7fhk_Ag";
 
     let isMounted = true;
 
@@ -284,8 +284,8 @@ export function BillingDashboardClient({
           </div>
           <p className="text-xs leading-relaxed">
             {isVi
-              ? "Hệ thống đã tự động mở khóa toàn bộ 50 công cụ SaaS AI. Bạn có thể quay lại dashboard và gắn link affiliate của tất cả các tool ngay bây giờ."
-              : "All 50 AI SaaS tool affiliate slots have been unlocked for your account. You can now return to your dashboard and insert links for any tool."}
+              ? "Hệ thống đã tự động mở khóa toàn bộ công cụ SaaS AI. Bạn có thể quay lại dashboard và gắn link affiliate của tất cả các tool ngay bây giờ."
+              : "All AI SaaS tool affiliate slots have been unlocked for your account. You can now return to your dashboard and insert links for any tool."}
           </p>
           <div className="pt-2">
             <Link
@@ -334,8 +334,8 @@ export function BillingDashboardClient({
               <p className="text-sm font-bold text-foreground">
                 {status.isPro
                   ? isVi
-                    ? "Tất cả 50 Công cụ SaaS AI"
-                    : "All 50 AI SaaS Tools"
+                    ? "Toàn bộ Công cụ SaaS AI"
+                    : "All AI SaaS Tools"
                   : isVi
                   ? "Tối đa 3 Công cụ SaaS AI"
                   : "Up to 3 SaaS Tools"}
@@ -415,7 +415,7 @@ export function BillingDashboardClient({
                 )}
                 <span>
                   {status.isPro
-                    ? isVi ? "50/50 công cụ SaaS AI" : "50/50 AI SaaS tools"
+                    ? isVi ? "Toàn bộ công cụ SaaS AI (Không giới hạn)" : "All AI SaaS tools (Unlimited)"
                     : isVi ? "Giới hạn 3 công cụ SaaS" : "Limited to 3 SaaS tools"}
                 </span>
               </li>
@@ -610,7 +610,7 @@ export function BillingDashboardClient({
                   <ul className="text-xs text-muted-foreground space-y-1.5 pt-2 border-t border-border">
                     <li className="flex items-center gap-2">
                       <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                      <span>{isVi ? "Mở khóa trọn bộ 50 công cụ AI SaaS" : "Unlock all 50 AI SaaS Tools"}</span>
+                      <span>{isVi ? "Mở khóa trọn bộ công cụ AI SaaS" : "Unlock all AI SaaS Tools"}</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
