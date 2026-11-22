@@ -344,7 +344,7 @@ export async function processSepayWebhook(
       const fromEmail = process.env.RESEND_FROM_EMAIL || "support@asmire.me";
 
       await resend.emails.send({
-        from: `Asmire Billing <${fromEmail}>`,
+        from: `Asmire <${fromEmail}>`,
         to: targetUserEmail,
         subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
         headers: {

@@ -53,12 +53,13 @@ export function Header({ locale }: HeaderProps) {
     router.push(segments.join("/") || `/${targetLocale}`);
   };
 
-  // Apple-style streamlined primary navigation: 4 core links
+  // Apple-style streamlined primary navigation: 5 core links
   const primaryNavItems = [
     { label: dict.nav.tools, href: `/${locale}/tools` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
     { label: dict.nav.blog, href: `/${locale}/blog` },
+    { label: "Member", href: `/${locale}/membership` },
   ];
 
   // Secondary links for mobile drawer and search
@@ -66,7 +67,6 @@ export function Header({ locale }: HeaderProps) {
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
-    { label: "Member", href: `/${locale}/membership` },
   ];
 
   return (
@@ -99,10 +99,10 @@ export function Header({ locale }: HeaderProps) {
                   key={item.href}
                   href={item.href}
                   prefetch={true}
-                  className={`text-xs font-medium tracking-normal transition-colors py-1 ${
+                  className={`text-[14px] lg:text-[15px] font-medium tracking-normal transition-colors py-1 ${
                     isActive
                       ? "text-black dark:text-white font-semibold"
-                      : "text-zinc-500 hover:text-black dark:text-zinc-400 dark:hover:text-white"
+                      : "text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -116,12 +116,12 @@ export function Header({ locale }: HeaderProps) {
             {/* Desktop Quick Search Trigger (Cmd+K) - Clean Minimalist Pill with harmonious height */}
             <button
               onClick={openSearch}
-              className="hidden sm:flex items-center gap-2 h-9 px-3.5 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 bg-zinc-100/80 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-full border-0 transition-colors cursor-pointer"
+              className="hidden sm:flex items-center gap-2 h-9 px-3.5 text-xs sm:text-[13px] text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 bg-zinc-100/80 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:hover:bg-zinc-800 rounded-full border-0 transition-colors cursor-pointer"
               aria-label="Search tools"
             >
               <Search className="h-3.5 w-3.5 text-zinc-400 shrink-0" />
-              <span className="hidden xl:inline text-xs truncate max-w-[80px]">Search...</span>
-              <kbd className="pointer-events-none inline-flex h-4.5 select-none items-center rounded bg-white dark:bg-zinc-800 px-1.5 font-mono text-[9px] font-medium text-zinc-400 shadow-2xs">
+              <span className="hidden xl:inline truncate max-w-[80px]">Search...</span>
+              <kbd className="pointer-events-none inline-flex h-4.5 select-none items-center rounded bg-white dark:bg-zinc-800 px-1.5 font-mono text-[10px] font-medium text-zinc-400 shadow-2xs">
                 ⌘K
               </kbd>
             </button>
@@ -141,20 +141,20 @@ export function Header({ locale }: HeaderProps) {
             {/* Language Switcher - Borderless, Zero Hover Background */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-1.5 h-9 px-2 text-xs font-semibold border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer outline-none focus:outline-none"
+              className="flex items-center gap-1.5 h-9 px-2 text-[13px] font-semibold border-0 bg-transparent text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors cursor-pointer outline-none focus:outline-none"
               title="Switch Language"
             >
               <Globe className="h-3.5 w-3.5 opacity-80" />
               <span>{locale.toUpperCase()}</span>
             </button>
 
-            {/* Member CTA Button - Balanced Luxury Pill */}
+            {/* Login CTA Button - Balanced Luxury Pill */}
             <Link
-              href={`/${locale}/membership`}
+              href={`/${locale}/account/login`}
               prefetch={true}
-              className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-xs font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
+              className="hidden sm:inline-flex items-center justify-center h-9 px-5 text-[13.5px] font-semibold rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black transition-all shadow-xs tracking-normal"
             >
-              Member
+              Đăng nhập
             </Link>
 
             {/* Mobile Menu Hamburger - Borderless */}
@@ -213,12 +213,12 @@ export function Header({ locale }: HeaderProps) {
 
             <div className="pt-3 border-t border-zinc-100 dark:border-zinc-900">
               <Link
-                href={`/${locale}/membership`}
+                href={`/${locale}/account/login`}
                 prefetch={true}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-xs shadow-xs block transition-all"
+                className="w-full text-center py-2.5 rounded-full bg-black hover:bg-zinc-800 text-white dark:bg-white dark:text-black dark:hover:bg-zinc-200 font-semibold text-sm shadow-xs block transition-all"
               >
-                Member
+                Đăng nhập
               </Link>
             </div>
           </div>

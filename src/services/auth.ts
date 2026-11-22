@@ -51,7 +51,7 @@ export async function sendOtpEmail(email: string): Promise<{ success: boolean; m
     
     // Dispatch via Resend API
     await resend.emails.send({
-      from: `Asmire Security <${fromEmail}>`,
+      from: `Asmire <${fromEmail}>`,
       to: normalizedEmail,
       subject: `Your Asmire Verification Code: ${code}`,
       headers: {

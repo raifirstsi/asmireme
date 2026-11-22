@@ -79,10 +79,10 @@ export default function LoginPage() {
               className="h-9 w-9 object-contain dark:invert transition-[filter] duration-200"
             />
           </div>
-          <h1 className="text-2xl font-black text-foreground">
+          <h1 className="text-2xl sm:text-3xl font-black text-foreground">
             {step === "EMAIL" ? "Welcome to Asmire" : "Enter Verification Code"}
           </h1>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm text-muted-foreground">
             {step === "EMAIL"
               ? "Passwordless access for member referral management."
               : `We sent a 6-digit login code from support@asmire.me to ${email}`}
@@ -91,7 +91,7 @@ export default function LoginPage() {
 
         {message && (
           <div
-            className={`p-3 rounded-xl text-xs font-medium border ${
+            className={`p-3.5 rounded-xl text-sm font-medium border ${
               message.isError
                 ? "bg-rose-500/10 border-rose-500/30 text-rose-600 dark:text-rose-400"
                 : "bg-emerald-500/10 border-emerald-500/30 text-emerald-600 dark:text-emerald-400"
@@ -104,7 +104,7 @@ export default function LoginPage() {
         {step === "EMAIL" ? (
           <form onSubmit={handleSendOtp} className="space-y-4">
             <div className="space-y-1.5">
-              <label className="text-xs font-bold text-foreground">Email Address</label>
+              <label className="text-sm font-bold text-foreground">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
@@ -121,7 +121,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-11 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
+              className="w-full h-11 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
             >
               <span>{loading ? "Sending Code..." : "Continue with Email"}</span>
               <ArrowRight className="h-4 w-4" />
@@ -130,7 +130,7 @@ export default function LoginPage() {
         ) : (
           <form onSubmit={handleVerifyOtp} className="space-y-4">
             <div className="space-y-1.5">
-              <label className="text-xs font-bold text-foreground">6-Digit Verification Code</label>
+              <label className="text-sm font-bold text-foreground">6-Digit Verification Code</label>
               <div className="relative">
                 <KeyRound className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <input
@@ -148,7 +148,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-11 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
+              className="w-full h-11 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2"
             >
               <span>{loading ? "Verifying..." : "Verify & Sign In"}</span>
               <CheckCircle2 className="h-4 w-4" />
@@ -158,7 +158,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setStep("EMAIL")}
-                className="text-xs text-muted-foreground hover:text-foreground font-semibold"
+                className="text-sm text-muted-foreground hover:text-foreground font-semibold"
               >
                 ← Use a different email address
               </button>
@@ -166,7 +166,7 @@ export default function LoginPage() {
           </form>
         )}
 
-        <div className="pt-4 border-t border-border flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
+        <div className="pt-4 border-t border-border flex items-center justify-center gap-2 text-xs text-muted-foreground">
           <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
           <span>Zero passwords • Signed cryptographic sessions</span>
         </div>
