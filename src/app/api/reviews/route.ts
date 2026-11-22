@@ -4,6 +4,7 @@ import { communityReviews, reviewEvidences, auditLogs } from "@/db/schema";
 import { DETAILED_REVIEWS_DATASET, DetailedReviewItem } from "@/data/reviews-dataset";
 import { getToolBySlug } from "@/data/tools-data";
 import { verifySessionToken } from "@/services/auth";
+import { notifyNewReviewSubmitted } from "@/services/telegram";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
@@ -229,6 +230,21 @@ export async function POST(request: NextRequest) {
           submittedAt: new Date().toISOString(),
         },
       });
+
+      // Send instant Telegram notification to Admin
+      const toolInfo = getToolBySlug(toolSlug);
+      notifyNewReviewSubmitted({
+        toolName: toolInfo ? toolInfo.name : toolSlug,
+        toolSlug,
+        authorName,
+        authorRole,
+        ratingOverall,
+        realMonthlyCostPaid,
+        hasEvidence: !!privateFilePath,
+        fileNameOriginal: originalName,
+        fileSizeBytes: fileSize,
+        reviewId: newReviewId || "unknown",
+      }).catch((tgErr) => console.warn("[Telegram] Non-blocking alert error:", tgErr?.message));
     } catch (dbErr: any) {
       console.error("Database insert error for community review:", dbErr);
     }

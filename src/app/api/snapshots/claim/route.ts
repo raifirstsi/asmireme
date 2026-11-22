@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
 import { snapshotClaims } from "@/db/schema";
+import { notifyNewSnapshotClaimed } from "@/services/telegram";
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,6 +41,15 @@ export async function POST(request: NextRequest) {
     } catch (dbErr) {
       console.warn("[SnapshotClaim] DB insert warning, continuing gracefully:", dbErr);
     }
+
+    // Send instant Telegram notification to Admin
+    notifyNewSnapshotClaimed({
+      fullName: fullName.trim(),
+      email: email.trim().toLowerCase(),
+      ghlEmail: ghlEmail.trim().toLowerCase(),
+      niche: niche || "ALL_NICHES",
+      snapshotType: niche && niche.toLowerCase().includes("sme") ? "SME_OS" : "AGENCY_OS",
+    }).catch((tgErr) => console.warn("[Telegram] Snapshot alert error:", tgErr?.message));
 
     return NextResponse.json({
       success: true,
