@@ -111,7 +111,7 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredPosts.map((post) => {
+          {filteredPosts.map((post, idx) => {
             const isAiNews = post.category === "AI News";
             return (
               <article
@@ -125,15 +125,17 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
                 {/* Modern SaaS 16:9 Card Thumbnail */}
                 <Link
                   href={`/${locale}/news/${post.slug}`}
-                  className="block relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-950 group-hover:border-zinc-400 dark:group-hover:border-zinc-600 transition-all shrink-0 shadow-2xs"
+                  className="block relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-100 dark:bg-zinc-900 group-hover:border-zinc-400 dark:group-hover:border-zinc-600 transition-all shrink-0 shadow-2xs"
                 >
                   <picture>
                     <source srcSet={`/thumbnails/news/${post.slug}.webp`} type="image/webp" />
                     <img
-                      src={`/thumbnails/news/${post.slug}.png`}
+                      src={`/thumbnails/news/${post.slug}.webp`}
                       alt={post.title[locale]}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
+                      loading={idx < 4 ? "eager" : "lazy"}
+                      fetchPriority={idx < 2 ? "high" : "auto"}
+                      decoding="async"
                     />
                   </picture>
                 </Link>
@@ -199,12 +201,8 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
 
                 <div className="pt-2 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800/60">
                   <div className="flex items-center gap-2 text-xs text-zinc-400">
-                    <div className="h-5 w-5 rounded-full flex items-center justify-center overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0">
-                      <img
-                        src="/icon.png"
-                        alt="Asmire"
-                        className="h-3 w-3 object-contain dark:invert transition-[filter] duration-200"
-                      />
+                    <div className="h-5 w-5 rounded-full flex items-center justify-center border border-zinc-200/80 dark:border-zinc-800 bg-zinc-950 dark:bg-zinc-900 text-white font-black text-[11px] select-none shrink-0">
+                      a
                     </div>
                     <span className="font-medium text-zinc-700 dark:text-zinc-300">
                       {post.author.name}

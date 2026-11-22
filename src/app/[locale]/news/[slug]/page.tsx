@@ -126,6 +126,13 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
 
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href={`/thumbnails/news/${post.slug}.webp`}
+        type="image/webp"
+        fetchPriority="high"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -188,12 +195,8 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
             {/* Author Bar & Verification */}
             <div className="flex flex-wrap items-center justify-between gap-4 pt-4 text-xs text-zinc-500 border-t border-black/[0.05] dark:border-white/[0.07]">
               <div className="flex items-center gap-3">
-                <div className="h-9 w-9 rounded-full flex items-center justify-center overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shrink-0 shadow-2xs">
-                  <img
-                    src="/icon.png"
-                    alt="Asmire"
-                    className="h-5 w-5 object-contain dark:invert transition-[filter] duration-200"
-                  />
+                <div className="h-9 w-9 rounded-full flex items-center justify-center border border-zinc-200/80 dark:border-zinc-800 bg-zinc-950 dark:bg-zinc-900 text-white font-black text-sm select-none shrink-0 shadow-2xs">
+                  a
                 </div>
                 <div>
                   <div className="font-semibold text-zinc-900 dark:text-zinc-100">{post.author.name}</div>
@@ -219,14 +222,16 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
           </div>
 
           {/* Article Hero Thumbnail (International Standard 16:9 Modern SaaS Layout) */}
-          <div className="relative w-full aspect-[16/9] sm:aspect-[1.91/1] rounded-2xl overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-950 shadow-md">
+          <div className="relative w-full aspect-[16/9] sm:aspect-[1.91/1] rounded-2xl overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shadow-md">
             <picture>
               <source srcSet={`/thumbnails/news/${post.slug}.webp`} type="image/webp" />
               <img
-                src={`/thumbnails/news/${post.slug}.png`}
+                src={`/thumbnails/news/${post.slug}.webp`}
                 alt={post.title[locale as Locale]}
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.01]"
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </picture>
           </div>
