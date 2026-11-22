@@ -5,6 +5,10 @@ interface PageProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "vi" }];
+}
+
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {

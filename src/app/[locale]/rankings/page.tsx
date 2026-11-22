@@ -1,12 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { Locale } from "@/lib/i18n";
+import { Locale, locales } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { ToolLogo } from "@/components/common/ToolLogo";
 import { Trophy, Star, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface RankingsPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: RankingsPageProps) {

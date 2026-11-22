@@ -1,14 +1,19 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/lib/i18n";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SearchModalWrapper } from "@/components/common/SearchModalWrapper";
 import { ReferralTransparencyBanner } from "@/components/common/ReferralTransparencyBanner";
+import { NavigationProgressBar } from "@/components/common/NavigationProgressBar";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
@@ -37,6 +42,9 @@ export default async function LocaleLayout({
 
   return (
     <SearchModalWrapper locale={locale as Locale}>
+      <Suspense fallback={null}>
+        <NavigationProgressBar />
+      </Suspense>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -8,7 +8,8 @@ import { getVerifiedReviewUrl } from "@/data/platform-review-links";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { 
   Star, Search, Filter, ExternalLink, ThumbsUp, ShieldCheck, 
-  MessageSquare, Sparkles, CheckCircle2, RotateCcw, Plus, X 
+  MessageSquare, Sparkles, CheckCircle2, RotateCcw, Plus, X,
+  Lock, UploadCloud, ShieldAlert, DollarSign, Award, Check
 } from "lucide-react";
 
 interface ReviewsClientProps {
@@ -34,14 +35,19 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [evidenceFile, setEvidenceFile] = useState<File | null>(null);
   const [formData, setFormData] = useState({
     toolSlug: "highlevel",
     authorName: "",
     authorRole: "",
     rating: 5,
+    ratingValueForMoney: 5,
+    ratingEaseOfUse: 5,
+    realMonthlyCostPaid: "",
     pros: "",
     cons: "",
     content: "",
+    evidenceType: "INVOICE_SCREENSHOT",
   });
 
   const handleHelpful = (id: string, initialCount: number) => {
@@ -57,26 +63,49 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
     e.preventDefault();
     setSubmitting(true);
     try {
+      const data = new FormData();
+      data.append("toolSlug", formData.toolSlug);
+      data.append("authorName", formData.authorName);
+      data.append("authorRole", formData.authorRole);
+      data.append("ratingOverall", formData.rating.toString());
+      data.append("ratingValueForMoney", formData.ratingValueForMoney.toString());
+      data.append("ratingEaseOfUse", formData.ratingEaseOfUse.toString());
+      if (formData.realMonthlyCostPaid) {
+        data.append("realMonthlyCostPaid", formData.realMonthlyCostPaid);
+      }
+      data.append("pros", formData.pros);
+      data.append("cons", formData.cons);
+      data.append("content", formData.content);
+      data.append("evidenceType", formData.evidenceType);
+      if (evidenceFile) {
+        data.append("evidenceFile", evidenceFile);
+      }
+
       const res = await fetch("/api/reviews", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: data,
       });
+
       if (res.ok) {
         setSubmitSuccess(true);
         setTimeout(() => {
           setSubmitSuccess(false);
           setModalOpen(false);
+          setEvidenceFile(null);
           setFormData({
             toolSlug: "highlevel",
             authorName: "",
             authorRole: "",
             rating: 5,
+            ratingValueForMoney: 5,
+            ratingEaseOfUse: 5,
+            realMonthlyCostPaid: "",
             pros: "",
             cons: "",
             content: "",
+            evidenceType: "INVOICE_SCREENSHOT",
           });
-        }, 2000);
+        }, 2500);
       }
     } catch {
       // Fallback
@@ -283,6 +312,29 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
                       <Star className="h-3.5 w-3.5 fill-current mr-1" />
                       {rev.rating}.0 / 5.0
                     </span>
+
+                    {/* Verified Buyer Badge */}
+                    {rev.verifiedBuyer && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                        <ShieldCheck className="h-3 w-3" />
+                        {isVi ? "Đã xác thực hóa đơn" : "Verified Buyer"}
+                      </span>
+                    )}
+
+                    {/* Real Monthly Cost Chip */}
+                    {rev.realMonthlyCostPaid && (
+                      <span className="text-[11px] font-mono text-zinc-600 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md border border-zinc-200 dark:border-zinc-700/60">
+                        {isVi ? "Chi phí thực:" : "Cost:"} ${rev.realMonthlyCostPaid}/mo
+                      </span>
+                    )}
+
+                    {/* Testing Grant Badge */}
+                    {rev.testingGrantAwarded && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-md border border-amber-500/30">
+                        <Award className="h-3 w-3" />
+                        {isVi ? `Quỹ Kiểm Thử ($${rev.testingGrantAmount || 100})` : `Testing Grant ($${rev.testingGrantAmount || 100})`}
+                      </span>
+                    )}
                   </div>
 
                   <Link
@@ -477,21 +529,136 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div>
+                    <label className="font-bold text-foreground block mb-1">
+                      {isVi ? "Đánh giá chung" : "Overall Rating"}
+                    </label>
+                    <select
+                      value={formData.rating}
+                      onChange={(e) => setFormData({ ...formData, rating: Number(e.target.value) })}
+                      className="w-full h-10 px-2 rounded-xl border border-border bg-secondary font-semibold text-foreground focus:outline-none text-xs"
+                    >
+                      <option value={5}>★★★★★ 5</option>
+                      <option value={4}>★★★★☆ 4</option>
+                      <option value={3}>★★★☆☆ 3</option>
+                      <option value={2}>★★☆☆☆ 2</option>
+                      <option value={1}>★☆☆☆☆ 1</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="font-bold text-foreground block mb-1">
+                      {isVi ? "Đáng giá tiền (P/P)" : "Value for Money"}
+                    </label>
+                    <select
+                      value={formData.ratingValueForMoney}
+                      onChange={(e) => setFormData({ ...formData, ratingValueForMoney: Number(e.target.value) })}
+                      className="w-full h-10 px-2 rounded-xl border border-border bg-secondary font-semibold text-foreground focus:outline-none text-xs"
+                    >
+                      <option value={5}>5/5 - Rất xứng đáng</option>
+                      <option value={4}>4/5 - Tương đối tốt</option>
+                      <option value={3}>3/5 - Bình thường</option>
+                      <option value={2}>2/5 - Khá đắt</option>
+                      <option value={1}>1/5 - Quá đắt so với giá trị</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="font-bold text-foreground block mb-1">
+                      {isVi ? "Dễ sử dụng (UX)" : "Ease of Use"}
+                    </label>
+                    <select
+                      value={formData.ratingEaseOfUse}
+                      onChange={(e) => setFormData({ ...formData, ratingEaseOfUse: Number(e.target.value) })}
+                      className="w-full h-10 px-2 rounded-xl border border-border bg-secondary font-semibold text-foreground focus:outline-none text-xs"
+                    >
+                      <option value={5}>5/5 - Rất trực quan</option>
+                      <option value={4}>4/5 - Dễ làm quen</option>
+                      <option value={3}>3/5 - Trung bình</option>
+                      <option value={2}>2/5 - Hơi phức tạp</option>
+                      <option value={1}>1/5 - Cực khó dùng</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div>
                   <label className="font-bold text-foreground block mb-1">
-                    {isVi ? "Điểm số trải nghiệm (1-5 sao)" : "Rating (1 to 5 Stars)"}
+                    {isVi ? "Chi phí thực tế chi trả ($/tháng hoặc $/năm)" : "Actual Monthly/Annual Cost Paid ($/mo)"}
                   </label>
-                  <select
-                    value={formData.rating}
-                    onChange={(e) => setFormData({ ...formData, rating: Number(e.target.value) })}
-                    className="w-full h-10 px-3 rounded-xl border border-border bg-secondary font-semibold text-foreground focus:outline-none"
+                  <div className="relative">
+                    <span className="absolute left-3 top-2.5 text-muted-foreground font-semibold">$</span>
+                    <input
+                      type="number"
+                      min={0}
+                      step="any"
+                      placeholder={isVi ? "Ví dụ: 29 (hoặc để trống nếu dùng bản Free)" : "e.g. 29 (or leave blank if free)"}
+                      value={formData.realMonthlyCostPaid}
+                      onChange={(e) => setFormData({ ...formData, realMonthlyCostPaid: e.target.value })}
+                      className="w-full h-10 pl-7 pr-3 rounded-xl border border-border bg-card text-foreground focus:outline-none"
+                    />
+                  </div>
+                  <span className="text-[11px] text-muted-foreground mt-0.5 block">
+                    {isVi
+                      ? "Cung cấp chi phí thực tế giúp cộng đồng đối chiếu với bảng giá công bố của hãng."
+                      : "Helps the community verify if the advertised pricing matches real invoices."}
+                  </span>
+                </div>
+
+                {/* Evidence Upload Section with Zero-Leak Guarantee */}
+                <div className="p-3.5 rounded-xl border border-border/70 bg-secondary/30 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <label className="font-bold text-foreground flex items-center gap-1.5">
+                      <UploadCloud className="h-4 w-4 text-brand-500" />
+                      {isVi ? "Tải lên Hóa đơn / Biên lai thanh toán (Đính kèm xác thực)" : "Upload Invoice / Proof of Payment"}
+                    </label>
+                    <span className="text-[10px] uppercase font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                      {isVi ? "Tùy chọn" : "Optional"}
+                    </span>
+                  </div>
+
+                  <input
+                    type="file"
+                    id="evidence-file-input"
+                    accept="image/png,image/jpeg,image/webp,application/pdf"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0] || null;
+                      setEvidenceFile(file);
+                    }}
+                    className="hidden"
+                  />
+
+                  <label
+                    htmlFor="evidence-file-input"
+                    className="flex flex-col items-center justify-center p-4 border border-dashed border-border rounded-xl bg-card hover:bg-secondary/50 cursor-pointer transition-colors text-center"
                   >
-                    <option value={5}>★★★★★ 5 Stars (Excellent)</option>
-                    <option value={4}>★★★★☆ 4 Stars (Very Good)</option>
-                    <option value={3}>★★★☆☆ 3 Stars (Average)</option>
-                    <option value={2}>★★☆☆☆ 2 Stars (Needs Improvement)</option>
-                    <option value={1}>★☆☆☆☆ 1 Star (Poor)</option>
-                  </select>
+                    {evidenceFile ? (
+                      <div className="flex items-center gap-2 text-foreground font-semibold">
+                        <Check className="h-4 w-4 text-emerald-500" />
+                        <span className="truncate max-w-[280px]">{evidenceFile.name}</span>
+                        <span className="text-[11px] text-muted-foreground">
+                          ({(evidenceFile.size / 1024).toFixed(1)} KB)
+                        </span>
+                      </div>
+                    ) : (
+                      <>
+                        <UploadCloud className="h-6 w-6 text-muted-foreground mb-1" />
+                        <span className="font-semibold text-foreground text-xs">
+                          {isVi ? "Bấm vào đây để chọn ảnh chụp hóa đơn hoặc file PDF" : "Click to select invoice screenshot or PDF"}
+                        </span>
+                        <span className="text-[11px] text-muted-foreground">PNG, JPG, WEBP, PDF (Tối đa 5MB)</span>
+                      </>
+                    )}
+                  </label>
+
+                  {/* Zero-Leak Security Protocol Commitment Box */}
+                  <div className="p-2.5 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-emerald-700 dark:text-emerald-300 flex items-start gap-2">
+                    <Lock className="h-4 w-4 shrink-0 mt-0.5 text-emerald-600 dark:text-emerald-400" />
+                    <div className="text-[11px] leading-relaxed">
+                      <strong>{isVi ? "Cam kết bảo mật Zero-Leak: " : "Zero-Leak Security Protocol: "}</strong>
+                      {isVi
+                        ? "Hóa đơn được mã hóa lưu trữ ở vùng đệm riêng biệt ngoài web-root. Chỉ Quản trị viên Asmire được quyền đối soát để cấp Huy hiệu Verified Buyer & Quỹ Kiểm Thử ($50 - $200). Mọi thông tin thẻ / PII cá nhân tuyệt đối không bao giờ bị public."
+                        : "Invoices are stored encrypted in isolated private storage outside web-root. Only Asmire Admins inspect them to award Verified Buyer badges and Testing Grants ($50-$200). Your payment details & PII are never made public."}
+                    </div>
+                  </div>
                 </div>
 
                 <div>

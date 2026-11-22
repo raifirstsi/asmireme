@@ -20,6 +20,12 @@ export interface DetailedReviewItem {
   helpfulCount: number;
   verifiedBuyer: boolean;
   syncDate: string;
+  realMonthlyCostPaid?: number;
+  testingGrantAwarded?: boolean;
+  testingGrantAmount?: number;
+  ratingValueForMoney?: number;
+  ratingEaseOfUse?: number;
+  verificationStatus?: "PENDING" | "VERIFIED" | "REJECTED";
 }
 
 export const DETAILED_REVIEWS_DATASET: DetailedReviewItem[] = [

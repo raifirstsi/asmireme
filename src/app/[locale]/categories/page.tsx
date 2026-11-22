@@ -1,12 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { Locale } from "@/lib/i18n";
+import { Locale, locales } from "@/lib/i18n";
 import { CATEGORY_HUBS } from "@/data/categories-data";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { Layers } from "lucide-react";
 
 interface CategoriesPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: CategoriesPageProps) {

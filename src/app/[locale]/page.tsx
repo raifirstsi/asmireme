@@ -13,6 +13,10 @@ interface HomePageProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "vi" }];
+}
+
 export async function generateMetadata({ params }: HomePageProps) {
   const { locale } = await params;
   const dict = getDictionary(locale as Locale);

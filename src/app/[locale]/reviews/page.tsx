@@ -8,6 +8,10 @@ interface ReviewsPageProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "vi" }];
+}
+
 export async function generateMetadata({ params }: ReviewsPageProps) {
   const { locale } = await params;
   const isVi = locale === "vi";

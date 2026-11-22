@@ -31,25 +31,34 @@ export function Header({ locale }: HeaderProps) {
 
   useEffect(() => {
     let isMounted = true;
-    fetch("/api/auth/me", { cache: "no-store" })
-      .then((res) => res.json())
-      .then((data) => {
-        if (isMounted) {
-          if (data.authenticated && data.user) {
-            setCurrentUser(data.user);
-          } else {
-            setCurrentUser(null);
+    const fetchUser = () => {
+      fetch("/api/auth/me", { cache: "no-store" })
+        .then((res) => res.json())
+        .then((data) => {
+          if (isMounted) {
+            if (data.authenticated && data.user) {
+              setCurrentUser(data.user);
+            } else {
+              setCurrentUser(null);
+            }
           }
-        }
-      })
-      .catch(() => {
-        if (isMounted) setCurrentUser(null);
-      });
+        })
+        .catch(() => {
+          if (isMounted) setCurrentUser(null);
+        });
+    };
+
+    fetchUser();
+
+    // Listen for custom auth change events (e.g. login/logout)
+    const handleAuthChange = () => fetchUser();
+    window.addEventListener("auth-state-changed", handleAuthChange);
 
     return () => {
       isMounted = false;
+      window.removeEventListener("auth-state-changed", handleAuthChange);
     };
-  }, [pathname]);
+  }, []); // Run once on mount, zero network delay on page-to-page navigation
 
   const isLoggedIn = !!currentUser;
   const accountHref = currentUser?.role === "ADMIN" ? `/${locale}/admin` : `/${locale}/account`;

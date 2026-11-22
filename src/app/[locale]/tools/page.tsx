@@ -1,11 +1,15 @@
 import React, { Suspense } from "react";
-import { Locale } from "@/lib/i18n";
+import { Locale, locales } from "@/lib/i18n";
 import { TOOLS_DATA } from "@/data/tools-data";
 import { DirectoryClient } from "@/components/tools/DirectoryClient";
 import { Layers } from "lucide-react";
 
 interface ToolsPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: ToolsPageProps) {

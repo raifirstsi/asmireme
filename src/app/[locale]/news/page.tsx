@@ -1,11 +1,15 @@
 import React from "react";
-import { Locale, getDictionary } from "@/lib/i18n";
+import { Locale, locales, getDictionary } from "@/lib/i18n";
 import { NEWS_POSTS } from "@/data/blog-data";
 import { NewsListClient } from "@/components/news/NewsListClient";
 import { Newspaper, Sparkles, ShieldCheck } from "lucide-react";
 
 interface NewsIndexProps {
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: NewsIndexProps) {

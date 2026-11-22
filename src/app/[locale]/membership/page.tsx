@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "next/link";
-import { Locale, getDictionary } from "@/lib/i18n";
+import { Locale, locales, getDictionary } from "@/lib/i18n";
 import { Check, Shield, HelpCircle, ArrowRight, Zap, QrCode } from "lucide-react";
 
 interface MembershipPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: MembershipPageProps) {

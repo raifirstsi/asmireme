@@ -10,6 +10,6 @@ def run(cmd):
         raise Exception(f"Command failed with exit code {res.returncode}")
 
 run("git add -A")
-run('git commit -m "fix(css): remove destructive global 44px min-size on links/buttons and unify breadcrumb inline baseline"')
+run('git commit -m "feat: eliminate page navigation delay with static prerendering, client router caching, and instant tactile progress bar"')
 run("git push origin master")
 run("git push origin master:main")

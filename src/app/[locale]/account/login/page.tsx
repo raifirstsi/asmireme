@@ -67,6 +67,7 @@ function LoginForm() {
       const data = await res.json();
 
       if (data.success) {
+        window.dispatchEvent(new Event("auth-state-changed"));
         router.push(data.redirect || (locale === "vi" ? "/vi/account" : "/en/account"));
       } else {
         setMessage({ text: data.message, isError: true });

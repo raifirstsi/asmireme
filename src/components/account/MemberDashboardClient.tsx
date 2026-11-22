@@ -108,6 +108,7 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
+    window.dispatchEvent(new Event("auth-state-changed"));
     router.push(`/${locale}`);
   };
 

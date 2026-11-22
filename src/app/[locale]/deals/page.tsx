@@ -9,6 +9,10 @@ interface DealsPageProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "vi" }];
+}
+
 export async function generateMetadata({ params }: DealsPageProps) {
   const { locale } = await params;
   const isVi = locale === "vi";

@@ -151,3 +151,37 @@ export const snapshotClaims = pgTable("snapshot_claims", {
   userAgent: text("user_agent"),
   claimedAt: timestamp("claimed_at").defaultNow().notNull(),
 });
+
+export const communityReviews = pgTable("community_reviews", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  toolSlug: text("tool_slug").notNull(),
+  userId: uuid("user_id").references(() => users.id),
+  authorName: text("author_name").notNull(),
+  authorRole: text("author_role").notNull(),
+  ratingOverall: integer("rating_overall").notNull(),
+  ratingValueForMoney: integer("rating_value_for_money").notNull(),
+  ratingEaseOfUse: integer("rating_ease_of_use").notNull(),
+  pros: text("pros").notNull(),
+  cons: text("cons").notNull(),
+  content: text("content").notNull(),
+  realMonthlyCostPaid: doublePrecision("real_monthly_cost_paid"),
+  verificationStatus: text("verification_status").default("PENDING").notNull(), // PENDING, VERIFIED, REJECTED
+  verifiedBadge: boolean("verified_badge").default(false).notNull(),
+  testingGrantAwarded: boolean("testing_grant_awarded").default(false).notNull(),
+  testingGrantAmount: doublePrecision("testing_grant_amount"),
+  rewardPerks: text("reward_perks"),
+  helpfulVotesCount: integer("helpful_votes_count").default(0).notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
+export const reviewEvidences = pgTable("review_evidences", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  reviewId: uuid("review_id").references(() => communityReviews.id, { onDelete: "cascade" }).notNull(),
+  evidenceType: text("evidence_type").notNull(), // INVOICE_SCREENSHOT, WORKSPACE_SCREENSHOT, RECEIPT_PDF
+  evidenceFilePathPrivate: text("evidence_file_path_private").notNull(), // Secure private disk path, never exposed to public web
+  fileNameOriginal: text("file_name_original").notNull(),
+  fileSizeBytes: integer("file_size_bytes").notNull(),
+  mimeType: text("mime_type").notNull(),
+  uploadedAt: timestamp("uploaded_at").defaultNow().notNull(),
+});
