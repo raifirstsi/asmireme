@@ -200,7 +200,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
     elements.push(
       <p
         key={`p-${i}`}
-        className="text-sm sm:text-base leading-[1.85] text-zinc-800 dark:text-zinc-250 my-4 sm:my-5 font-normal tracking-normal"
+        className="text-sm sm:text-base leading-[1.85] text-zinc-800 dark:text-zinc-300 my-4 sm:my-5 font-normal tracking-normal"
       >
         {renderInline(line)}
       </p>
