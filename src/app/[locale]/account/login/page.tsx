@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Sparkles, Mail, KeyRound, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Mail, KeyRound, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -72,8 +72,12 @@ export default function LoginPage() {
     <div className="py-16 md:py-24 px-4 flex items-center justify-center">
       <div className="w-full max-w-md bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
         <div className="text-center space-y-2">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 font-extrabold text-xl border border-brand-500/20 mb-2">
-            <Sparkles className="h-6 w-6" />
+          <div className="inline-flex h-[52px] w-[52px] items-center justify-center rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-xs mb-2 transition-transform duration-200 hover:scale-105">
+            <img
+              src="/icon.png"
+              alt="Asmire"
+              className="h-9 w-9 object-contain dark:invert transition-[filter] duration-200"
+            />
           </div>
           <h1 className="text-2xl font-black text-foreground">
             {step === "EMAIL" ? "Welcome to Asmire" : "Enter Verification Code"}
