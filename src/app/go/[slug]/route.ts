@@ -11,6 +11,9 @@ import {
 import { eq, and } from "drizzle-orm";
 
 // 1. Comprehensive bot and crawler list
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const BOT_USER_AGENTS = [
   "googlebot", "bingbot", "gptbot", "perplexitybot", "claudebot", "applebot",
   "bot", "crawler", "spider", "headless", "slurp", "facebookexternalhit",
@@ -66,16 +69,9 @@ export async function GET(
     return createCleanRedirect(targetUrl);
   }
 
-  // Session check for Admin testing & self-referral
+  // Session check for self-referral guard
   const sessionCookie = request.cookies.get("asmire_session")?.value;
   const loggedInUser = sessionCookie ? verifySessionToken(sessionCookie) : null;
-
-  // If Admin is testing links from the dashboard or logged in, redirect directly without polluting customer analytics
-  const isFromAdminDashboard = referer.includes("/admin");
-  const isAdminTesting = isFromAdminDashboard || loggedInUser?.role === "ADMIN" || loggedInUser?.email === "striverle@gmail.com";
-  if (isAdminTesting) {
-    return createCleanRedirect(targetUrl);
-  }
 
   // Read 365-day signed HMAC referral cookie
   const refCookie = request.cookies.get("asmire_ref")?.value;
@@ -200,8 +196,9 @@ async function issueRedirect(
         reasonCode,
         targetUrlHost: parsed.hostname,
       });
+      console.log(`[Click Logged] tool=${toolSlug} fallback=${isFallback} reason=${reasonCode} host=${parsed.hostname}`);
     } catch (err) {
-      // Non-blocking log
+      console.error("[Click Tracker DB Error]:", err);
     }
   }
 

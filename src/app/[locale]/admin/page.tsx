@@ -12,6 +12,9 @@ interface AdminPageProps {
   params: Promise<{ locale: string }>;
 }
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ params }: AdminPageProps) {
   const { locale } = await params;
   return {
