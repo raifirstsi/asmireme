@@ -181,7 +181,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
                       : "bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border-zinc-200/50 dark:border-zinc-750"
                   }`}
                 >
-                  {isAiNews ? "DK" : post.author.name.charAt(0)}
+                  {post.author.name === "Asmire Team" ? "AT" : post.author.name.charAt(0)}
                 </div>
                 <div>
                   <div className="font-semibold text-zinc-900 dark:text-zinc-100">{post.author.name}</div>

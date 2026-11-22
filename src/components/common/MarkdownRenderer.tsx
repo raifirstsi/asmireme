@@ -123,10 +123,10 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       flushList(`line-${i}`);
     }
 
-    // Horizontal divider
+    // Spacing divider (no visible line border to prevent clutter)
     if (line === "---" || line === "***") {
       elements.push(
-        <hr key={`hr-${i}`} className="my-8 border-zinc-200 dark:border-zinc-800" />
+        <div key={`spacer-${i}`} className="py-2.5" />
       );
       continue;
     }
@@ -196,11 +196,11 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       }
     }
 
-    // Standard Paragraph
+    // Standard Paragraph - Mobile-friendly, airy spacing, high readability
     elements.push(
       <p
         key={`p-${i}`}
-        className="text-sm sm:text-base leading-relaxed text-zinc-700 dark:text-zinc-300 my-3 font-normal"
+        className="text-sm sm:text-base leading-[1.85] text-zinc-800 dark:text-zinc-250 my-4 sm:my-5 font-normal tracking-normal"
       >
         {renderInline(line)}
       </p>
@@ -210,7 +210,7 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   if (inTable) flushTable("end");
   if (inList) flushList("end");
 
-  return <div className="space-y-1">{elements}</div>;
+  return <div className="space-y-4 sm:space-y-6">{elements}</div>;
 }
 
 // Inline formatting helper for bold, italic, code, and links

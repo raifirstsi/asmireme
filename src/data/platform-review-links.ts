@@ -618,6 +618,186 @@ export const TOOL_PLATFORM_META: Record<string, PlatformReviewMeta> = {
     "ph": "v0-by-vercel",
     "reddit": "r/nextjs"
   },
+  "kling-ai": {
+    "domain": "klingai.com",
+    "g2": "kling-ai",
+    "ph": "kling-ai",
+    "reddit": "r/KlingAI"
+  },
+  "luma-dream-machine": {
+    "domain": "lumalabs.ai",
+    "g2": "luma-dream-machine",
+    "ph": "luma-dream-machine",
+    "reddit": "r/LumaAI"
+  },
+  "minimax-video": {
+    "domain": "hailuoai.video",
+    "g2": "minimax-video",
+    "ph": "minimax-video",
+    "reddit": "r/AIVideo"
+  },
+  "ltx-studio": {
+    "domain": "ltx.studio",
+    "g2": "ltx-studio",
+    "ph": "ltx-studio",
+    "reddit": "r/Filmmakers"
+  },
+  "udio": {
+    "domain": "udio.com",
+    "g2": "udio",
+    "ph": "udio",
+    "reddit": "r/udio"
+  },
+  "soundraw": {
+    "domain": "soundraw.io",
+    "g2": "soundraw",
+    "ph": "soundraw",
+    "reddit": "r/WeAreTheMusicMakers"
+  },
+  "stable-audio": {
+    "domain": "stableaudio.com",
+    "g2": "stable-audio",
+    "ph": "stable-audio",
+    "reddit": "r/StabilityAI"
+  },
+  "flux-ai": {
+    "domain": "blackforestlabs.ai",
+    "g2": "flux-ai",
+    "ph": "flux-1",
+    "reddit": "r/FluxAI"
+  },
+  "krea-ai": {
+    "domain": "krea.ai",
+    "g2": "krea-ai",
+    "ph": "krea-ai",
+    "reddit": "r/KreaAI"
+  },
+  "recraft-ai": {
+    "domain": "recraft.ai",
+    "g2": "recraft-ai",
+    "ph": "recraft-ai",
+    "reddit": "r/graphic_design"
+  },
+  "freepik-mystic": {
+    "domain": "freepik.com",
+    "g2": "freepik",
+    "ph": "freepik",
+    "reddit": "r/Freepik"
+  },
+  "surfer-seo": {
+    "domain": "surferseo.com",
+    "g2": "surfer-seo",
+    "ph": "surfer-seo",
+    "reddit": "r/SEO"
+  },
+  "marketmuse": {
+    "domain": "marketmuse.com",
+    "g2": "marketmuse",
+    "ph": "marketmuse",
+    "reddit": "r/content_marketing"
+  },
+  "scalenut": {
+    "domain": "scalenut.com",
+    "g2": "scalenut",
+    "ph": "scalenut",
+    "reddit": "r/Blogging"
+  },
+  "fathom-ai": {
+    "domain": "fathom.video",
+    "g2": "fathom",
+    "ph": "fathom",
+    "reddit": "r/sales"
+  },
+  "tldv": {
+    "domain": "tldv.io",
+    "g2": "tldv",
+    "ph": "tldv",
+    "reddit": "r/remotework"
+  },
+  "supernormal": {
+    "domain": "supernormal.com",
+    "g2": "supernormal",
+    "ph": "supernormal",
+    "reddit": "r/ProductManagement"
+  },
+  "clay-ai": {
+    "domain": "clay.com",
+    "g2": "clay-data",
+    "ph": "clay-com",
+    "reddit": "r/sales"
+  },
+  "apollo-ai": {
+    "domain": "apollo.io",
+    "g2": "apollo-io",
+    "ph": "apollo-io",
+    "reddit": "r/sales"
+  },
+  "instantly-ai": {
+    "domain": "instantly.ai",
+    "g2": "instantly-ai",
+    "ph": "instantly-ai",
+    "reddit": "r/Emailmarketing"
+  },
+  "beautiful-ai": {
+    "domain": "beautiful.ai",
+    "g2": "beautiful-ai",
+    "ph": "beautiful-ai",
+    "reddit": "r/PowerPoint"
+  },
+  "napkin-ai": {
+    "domain": "napkin.ai",
+    "g2": "napkin-ai",
+    "ph": "napkin-ai",
+    "reddit": "r/productivity"
+  },
+  "glide-apps": {
+    "domain": "glideapps.com",
+    "g2": "glide-apps",
+    "ph": "glide",
+    "reddit": "r/nocode"
+  },
+  "flutterflow": {
+    "domain": "flutterflow.io",
+    "g2": "flutterflow",
+    "ph": "flutterflow",
+    "reddit": "r/FlutterFlow"
+  },
+  "bubble-io": {
+    "domain": "bubble.io",
+    "g2": "bubble",
+    "ph": "bubble",
+    "reddit": "r/BubbleIO"
+  },
+  "webflow": {
+    "domain": "webflow.com",
+    "g2": "webflow",
+    "ph": "webflow",
+    "reddit": "r/webflow"
+  },
+  "cohere": {
+    "domain": "cohere.com",
+    "g2": "cohere",
+    "ph": "cohere",
+    "reddit": "r/MachineLearning"
+  },
+  "groq": {
+    "domain": "groq.com",
+    "g2": "groq",
+    "ph": "groq",
+    "reddit": "r/Groq"
+  },
+  "langchain": {
+    "domain": "langchain.com",
+    "g2": "langchain",
+    "ph": "langchain",
+    "reddit": "r/LangChain"
+  },
+  "codeium": {
+    "domain": "codeium.com",
+    "g2": "codeium",
+    "ph": "codeium",
+    "reddit": "r/Codeium"
+  },
 };
 
 export function getVerifiedReviewUrl(

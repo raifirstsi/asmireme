@@ -544,6 +544,11 @@ const ALL_REVIEWS_POSTS: BlogPost[] = [
 ].map((post) => ({
   ...post,
   category: "Reviews",
+  author: {
+    name: "Asmire Team",
+    role: "AI SaaS Research & Empirical Analysis",
+    avatarUrl: "/images/authors/asmire-team.png",
+  },
 }));
 
 export const NEWS_POSTS: BlogPost[] = [

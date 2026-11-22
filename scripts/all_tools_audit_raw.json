@@ -1,0 +1,2390 @@
+[
+  {
+    "slug": "highlevel",
+    "name": "HighLevel (GoHighLevel)",
+    "url": "https://www.gohighlevel.com",
+    "startingPrice": 97.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 97.0,
+        "annual": 77.6,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 213.4,
+        "annual": 174.6,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "decktopus",
+    "name": "Decktopus AI",
+    "url": "https://decktopus.com",
+    "startingPrice": 14.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 14.99,
+        "annual": 11.99,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 32.98,
+        "annual": 26.98,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "taskade",
+    "name": "Taskade",
+    "url": "https://www.taskade.com",
+    "startingPrice": 8.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 8.0,
+        "annual": 6.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 17.6,
+        "annual": 14.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "getresponse",
+    "name": "GetResponse",
+    "url": "https://www.getresponse.com",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "omniseo",
+    "name": "OmniSEO",
+    "url": "https://omniseo.ai",
+    "startingPrice": 49.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 49.0,
+        "annual": 39.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 107.8,
+        "annual": 88.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim.ai",
+    "url": "https://reclaim.ai",
+    "startingPrice": 8.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 8.0,
+        "annual": 6.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 17.6,
+        "annual": 14.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "marblism",
+    "name": "Marblism",
+    "url": "https://marblism.com",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "rightblogger",
+    "name": "RightBlogger",
+    "url": "https://rightblogger.com",
+    "startingPrice": 29.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.99,
+        "annual": 23.99,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 65.98,
+        "annual": 53.98,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "pickaxe",
+    "name": "Pickaxe",
+    "url": "https://pickaxe.co",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 44.0,
+        "annual": 36.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "winston",
+    "name": "Winston AI",
+    "url": "https://gowinston.ai",
+    "startingPrice": 18.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 18.0,
+        "annual": 14.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 39.6,
+        "annual": 32.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "ai-studios",
+    "name": "AI Studios (DeepBrain)",
+    "url": "https://www.deepbrain.io/aistudios",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "capcut",
+    "name": "CapCut",
+    "url": "https://www.capcut.com",
+    "startingPrice": 9.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 9.99,
+        "annual": 7.99,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 21.98,
+        "annual": 17.98,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "akool",
+    "name": "AKOOL",
+    "url": "https://akool.com",
+    "startingPrice": 21.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 21.0,
+        "annual": 16.8,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 46.2,
+        "annual": 37.8,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "nutshell",
+    "name": "Nutshell",
+    "url": "https://www.nutshell.com",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "startingPrice": 5.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 5.0,
+        "annual": 4.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 11.0,
+        "annual": 9.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "adcreative",
+    "name": "AdCreative.ai",
+    "url": "https://adcreative.ai",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "krispcall",
+    "name": "KrispCall",
+    "url": "https://krispcall.com",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 33.0,
+        "annual": 27.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "my-ai-front-desk",
+    "name": "My AI Front Desk",
+    "url": "https://myaifrontdesk.com",
+    "startingPrice": 44.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 44.99,
+        "annual": 35.99,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 98.98,
+        "annual": 80.98,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "fliki",
+    "name": "Fliki",
+    "url": "https://fliki.ai",
+    "startingPrice": 28.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 28.0,
+        "annual": 22.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 61.6,
+        "annual": 50.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "describely",
+    "name": "Describely",
+    "url": "https://describely.ai",
+    "startingPrice": 28.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 28.0,
+        "annual": 22.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 61.6,
+        "annual": 50.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "koala",
+    "name": "Koala AI",
+    "url": "https://koala.sh",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 9.0,
+        "annual": 7.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 19.8,
+        "annual": 16.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "submagic",
+    "name": "Submagic",
+    "url": "https://submagic.co",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 44.0,
+        "annual": 36.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "videogen",
+    "name": "VideoGen",
+    "url": "https://videogen.io",
+    "startingPrice": 18.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 18.0,
+        "annual": 14.4,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 39.6,
+        "annual": 32.4,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "textero",
+    "name": "Textero AI",
+    "url": "https://textero.ai",
+    "startingPrice": 16.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 16.99,
+        "annual": 13.59,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 37.38,
+        "annual": 30.58,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "quickads",
+    "name": "QuickAds",
+    "url": "https://quickads.ai",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "meetgeek",
+    "name": "MeetGeek",
+    "url": "https://meetgeek.ai",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 33.0,
+        "annual": 27.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "castmagic",
+    "name": "Castmagic",
+    "url": "https://castmagic.io",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "palette",
+    "name": "Palette.fm",
+    "url": "https://palette.fm",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 9.0,
+        "annual": 7.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 19.8,
+        "annual": 16.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 22.0,
+        "annual": 18.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "url": "https://frase.io",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 33.0,
+        "annual": 27.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "10web",
+    "name": "10Web",
+    "url": "https://10web.io",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 22.0,
+        "annual": 18.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "palabra",
+    "name": "Palabra.ai",
+    "url": "https://palabra.ai",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "postcrest",
+    "name": "Postcrest",
+    "url": "https://postcrest.com",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "pineapple-builder",
+    "name": "Pineapple Builder",
+    "url": "https://pineapplebuilder.com",
+    "startingPrice": 12.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 12.0,
+        "annual": 9.6,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 26.4,
+        "annual": 21.6,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "potion",
+    "name": "Potion",
+    "url": "https://sendpotion.com",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 9.0,
+        "annual": 7.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 19.8,
+        "annual": 16.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "listnr",
+    "name": "Listnr",
+    "url": "https://listnr.ai",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "jotform",
+    "name": "Jotform",
+    "url": "https://www.jotform.com",
+    "startingPrice": 34.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 34.0,
+        "annual": 27.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 74.8,
+        "annual": 61.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "lebesgue",
+    "name": "Lebesgue",
+    "url": "https://lebesgue.io",
+    "startingPrice": 39.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 39.0,
+        "annual": 31.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 85.8,
+        "annual": 70.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 22.0,
+        "annual": 18.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "url": "https://synthesia.io",
+    "startingPrice": 22.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 22.0,
+        "annual": 17.6,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 48.4,
+        "annual": 39.6,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "url": "https://jasper.ai",
+    "startingPrice": 39.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 39.0,
+        "annual": 31.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 85.8,
+        "annual": 70.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "opusclip",
+    "name": "OpusClip",
+    "url": "https://opus.pro",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 19.0,
+        "annual": 15.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 41.8,
+        "annual": 34.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "originality",
+    "name": "Originality.ai",
+    "url": "https://originality.ai",
+    "startingPrice": 14.95,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 14.95,
+        "annual": 11.96,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 32.89,
+        "annual": 26.91,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "speak-ai",
+    "name": "Speak AI",
+    "url": "https://speakai.co",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 29.0,
+        "annual": 23.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 63.8,
+        "annual": 52.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "undetectable",
+    "name": "Undetectable AI",
+    "url": "https://undetectable.ai",
+    "startingPrice": 14.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 14.99,
+        "annual": 11.99,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 32.98,
+        "annual": 26.98,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "simplified",
+    "name": "Simplified",
+    "url": "https://simplified.com",
+    "startingPrice": 24.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 24.0,
+        "annual": 19.2,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 52.8,
+        "annual": 43.2,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "magicslides",
+    "name": "MagicSlides",
+    "url": "https://magicslides.app",
+    "startingPrice": 12.99,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 12.99,
+        "annual": 10.39,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 28.58,
+        "annual": 23.38,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "paperguide",
+    "name": "Paperguide",
+    "url": "https://paperguide.ai",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 33.0,
+        "annual": 27.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "browse-ai",
+    "name": "Browse AI",
+    "url": "https://browse.ai",
+    "startingPrice": 48.75,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 48.75,
+        "annual": 39.0,
+        "features": [
+          "Core features",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 107.25,
+        "annual": 87.75,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen AI",
+    "url": "https://www.heygen.com",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "1 Free Credit",
+          "60+ Public Avatars",
+          "300+ Voices",
+          "720p Export"
+        ]
+      },
+      {
+        "name": "Creator",
+        "monthly": 29.0,
+        "annual": 24.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "invideo",
+    "name": "InVideo AI",
+    "url": "https://invideo.io",
+    "startingPrice": 25.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 mins/week AI generation",
+          "4 exports/week with watermark",
+          "10GB storage"
+        ]
+      },
+      {
+        "name": "Plus",
+        "monthly": 25.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "runway",
+    "name": "Runway Gen-3",
+    "url": "https://runwayml.com",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "125 one-time credits",
+          "3 video projects",
+          "720p exports",
+          "Standard assets"
+        ]
+      },
+      {
+        "name": "Standard",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor AI",
+    "url": "https://cursor.com",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Hobby",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "2",
+          "000 completions/mo",
+          "50 slow premium requests",
+          "Full codebase indexing"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt.new",
+    "url": "https://bolt.new",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10M Tokens/mo",
+          "Public Projects",
+          "Community Support",
+          "WebContainer sandbox"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "5 Messages/day",
+          "Public Projects",
+          "Supabase Integration"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity Pro",
+    "url": "https://www.perplexity.ai",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Unlimited Quick Search",
+          "5 Pro Searches/day",
+          "Standard Search Engine"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 20.0,
+        "annual": 16.6,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://www.notion.so",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Add-On",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "gptzero",
+    "name": "GPTZero",
+    "url": "https://gptzero.me",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10",
+          "000 words/mo",
+          "Basic AI detection",
+          "Sentence breakdown"
+        ]
+      },
+      {
+        "name": "Essential",
+        "monthly": 15.0,
+        "annual": 10.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "startingPrice": 16.99,
+    "tiers": [
+      {
+        "name": "Basic",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "300 monthly transcription mins",
+          "30 mins per conversation",
+          "Join Zoom/Meet/Teams"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 16.99,
+        "annual": 10.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "clickup-ai",
+    "name": "ClickUp Brain",
+    "url": "https://clickup.com",
+    "startingPrice": 7.0,
+    "tiers": [
+      {
+        "name": "Add-On",
+        "monthly": 7.0,
+        "annual": 7.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "framer",
+    "name": "Framer AI",
+    "url": "https://www.framer.com",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Framer subdomain",
+          "Framer badge",
+          "Design editor",
+          "Basic CMS"
+        ]
+      },
+      {
+        "name": "Mini",
+        "monthly": 10.0,
+        "annual": 5.0,
+        "features": [
+          "Custom domain",
+          "1",
+          "000 visitors/mo",
+          "Home + 404 page",
+          "SSL certificate"
+        ]
+      },
+      {
+        "name": "Basic",
+        "monthly": 20.0,
+        "annual": 15.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "murf-ai",
+    "name": "Murf AI",
+    "url": "https://murf.ai",
+    "startingPrice": 29.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 mins voice generation",
+          "Share link only",
+          "All 120+ voices to try"
+        ]
+      },
+      {
+        "name": "Creator",
+        "monthly": 29.0,
+        "annual": 23.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com",
+    "startingPrice": 11.58,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 standard reading voices",
+          "Listen at up to 2x speed",
+          "Text scanning"
+        ]
+      },
+      {
+        "name": "Premium",
+        "monthly": 19.0,
+        "annual": 11.58,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "suno",
+    "name": "Suno AI",
+    "url": "https://suno.com",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Basic",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "50 credits daily (10 songs)",
+          "Non-commercial terms",
+          "Standard generation queue"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "startingPrice": 49.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "2",
+          "000 words in chat",
+          "1 seat",
+          "Brand Voice setup",
+          "Basic chat tools"
+        ]
+      },
+      {
+        "name": "Starter",
+        "monthly": 49.0,
+        "annual": 36.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "url": "https://quillbot.com",
+    "startingPrice": 9.95,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "125 words paraphraser",
+          "Standard & Fluency modes",
+          "Limited synonym options",
+          "Grammar check"
+        ]
+      },
+      {
+        "name": "Premium",
+        "monthly": 19.95,
+        "annual": 9.95,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "klaviyo",
+    "name": "Klaviyo AI",
+    "url": "https://www.klaviyo.com",
+    "startingPrice": 45.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Up to 250 contacts",
+          "500 monthly email sends",
+          "150 free SMS credits",
+          "Email support"
+        ]
+      },
+      {
+        "name": "Email",
+        "monthly": 45.0,
+        "annual": 45.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "make",
+    "name": "Make.com",
+    "url": "https://www.make.com",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "1",
+          "000 operations/mo",
+          "Active scenarios: 2",
+          "15-minute minimum interval",
+          "Full visual builder"
+        ]
+      },
+      {
+        "name": "Core",
+        "monthly": 10.59,
+        "annual": 9.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier Central",
+    "url": "https://zapier.com",
+    "startingPrice": 29.99,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "100 tasks/mo",
+          "Unlimited 2-step Zaps",
+          "15-minute update time",
+          "Basic AI features"
+        ]
+      },
+      {
+        "name": "Professional",
+        "monthly": 29.99,
+        "annual": 19.99,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "hubspot-crm",
+    "name": "HubSpot AI CRM",
+    "url": "https://www.hubspot.com",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free Tools",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Free CRM",
+          "Forms & Landing pages",
+          "Email marketing (2",
+          "000/mo)",
+          "Shared inbox"
+        ]
+      },
+      {
+        "name": "Starter",
+        "monthly": 20.0,
+        "annual": 15.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive AI",
+    "url": "https://www.pipedrive.com",
+    "startingPrice": 14.0,
+    "tiers": [
+      {
+        "name": "Essential",
+        "monthly": 14.0,
+        "annual": 14.0,
+        "features": [
+          "Lead & deal management",
+          "Customizable pipelines",
+          "Mobile app",
+          "24/7 support"
+        ]
+      },
+      {
+        "name": "Advanced",
+        "monthly": 29.0,
+        "annual": 29.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "slides-ai",
+    "name": "SlidesAI",
+    "url": "https://www.slidesai.io",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Basic",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "3 presentations/mo",
+          "2",
+          "500 characters input",
+          "Google Slides integration"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "canva-ai",
+    "name": "Canva Magic Studio",
+    "url": "https://www.canva.com",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "1M+ free templates",
+          "Magic Design lite",
+          "5GB cloud storage",
+          "Real-time collaboration"
+        ]
+      },
+      {
+        "name": "Canva Pro",
+        "monthly": 15.0,
+        "annual": 10.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo.Ai",
+    "url": "https://leonardo.ai",
+    "startingPrice": 12.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "150 fast tokens/day",
+          "Up to 30 upscale/day",
+          "Standard models",
+          "Community feed"
+        ]
+      },
+      {
+        "name": "Apprentice",
+        "monthly": 12.0,
+        "annual": 10.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "ideogram",
+    "name": "Ideogram AI",
+    "url": "https://ideogram.ai",
+    "startingPrice": 8.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 slow prompts/day",
+          "Public gallery",
+          "Standard resolution",
+          "Magic Prompt"
+        ]
+      },
+      {
+        "name": "Basic",
+        "monthly": 8.0,
+        "annual": 7.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "replit",
+    "name": "Replit AI Agent",
+    "url": "https://replit.com",
+    "startingPrice": 25.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Basic cloud workspaces",
+          "Community access",
+          "Standard compute",
+          "Public repls"
+        ]
+      },
+      {
+        "name": "Replit Core",
+        "monthly": 25.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf Editor",
+    "url": "https://codeium.com/windsurf",
+    "startingPrice": 15.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Unlimited fast autocomplete",
+          "Basic Cascade agent credits",
+          "Context indexation",
+          "Community support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 15.0,
+        "annual": 12.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com",
+    "startingPrice": 5.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "2 PDFs/day (up to 120 pages)",
+          "50 questions/day",
+          "32MB file limit",
+          "Export chat history"
+        ]
+      },
+      {
+        "name": "Plus",
+        "monthly": 5.0,
+        "annual": 4.16,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "turnitin",
+    "name": "Turnitin AI Detector",
+    "url": "https://www.turnitin.com",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Instructor / Pilot",
+        "monthly": 20.0,
+        "annual": 15.0,
+        "features": [
+          "Similarity Report",
+          "AI writing percentage",
+          "LMS integration",
+          "Standard support"
+        ]
+      },
+      {
+        "name": "Campus License",
+        "monthly": 50.0,
+        "annual": 40.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT Plus / Team",
+    "url": "https://chatgpt.com",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "GPT-4o mini access",
+          "Limited GPT-4o access",
+          "Data analysis",
+          "Custom GPT browsing"
+        ]
+      },
+      {
+        "name": "Plus",
+        "monthly": 20.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "claude-ai",
+    "name": "Claude AI (Anthropic)",
+    "url": "https://claude.ai",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Claude 3.5 Sonnet access",
+          "Web",
+          "iOS & Android apps",
+          "Artifacts viewer",
+          "Vision analysis"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 20.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Basic",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": [
+          "3.3 hours Fast GPU/mo (~200 images)",
+          "General commercial terms",
+          "Access to member gallery"
+        ]
+      },
+      {
+        "name": "Standard",
+        "monthly": 30.0,
+        "annual": 24.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "grok",
+    "name": "Grok (xAI)",
+    "url": "https://x.ai",
+    "startingPrice": 8.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Basic Grok queries on web",
+          "Standard rate limits",
+          "Text responses",
+          "Community access"
+        ]
+      },
+      {
+        "name": "X Premium",
+        "monthly": 8.0,
+        "annual": 7.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek R1",
+    "url": "https://www.deepseek.com",
+    "startingPrice": 0.0,
+    "tiers": [
+      {
+        "name": "Web & Mobile Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "DeepSeek-V3 standard chat",
+          "DeepSeek-R1 deep thinking",
+          "Document search & upload",
+          "Chat history"
+        ]
+      },
+      {
+        "name": "API Pay-As-You-Go",
+        "monthly": 2.0,
+        "annual": 2.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "startingPrice": 12.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "1 transcription hour/mo",
+          "720p watermark-free export",
+          "Studio Sound basic",
+          "Trial of AI features"
+        ]
+      },
+      {
+        "name": "Hobbyist",
+        "monthly": 19.0,
+        "annual": 12.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n (AI Agent Workflows)",
+    "url": "https://n8n.io",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Community (Self-Hosted)",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Unlimited workflow runs",
+          "Self-hosted Docker deploy",
+          "All core integrations",
+          "Community support"
+        ]
+      },
+      {
+        "name": "Cloud Starter",
+        "monthly": 26.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "coze",
+    "name": "Coze (ByteDance)",
+    "url": "https://www.coze.com",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Access to GPT-4o & Claude",
+          "Standard plugin library",
+          "Deploy to Telegram & Discord",
+          "Basic knowledge base"
+        ]
+      },
+      {
+        "name": "Premium",
+        "monthly": 9.0,
+        "annual": 7.5,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "url": "https://www.adobe.com/products/firefly.html",
+    "startingPrice": 4.99,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "25 Generative Credits/mo",
+          "Web access",
+          "Standard resolution exports",
+          "Adobe Stock watermark"
+        ]
+      },
+      {
+        "name": "Firefly Premium",
+        "monthly": 4.99,
+        "annual": 4.99,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly AI",
+    "url": "https://www.grammarly.com",
+    "startingPrice": 12.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Grammar",
+          "spelling & punctuation",
+          "Conciseness suggestions",
+          "Tone detection basic",
+          "100 AI prompts/mo"
+        ]
+      },
+      {
+        "name": "Premium",
+        "monthly": 30.0,
+        "annual": 12.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "hugging-face",
+    "name": "Hugging Face Hub",
+    "url": "https://huggingface.co",
+    "startingPrice": 9.0,
+    "tiers": [
+      {
+        "name": "Community",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Unlimited public models & datasets",
+          "Free CPU Spaces",
+          "Community forums",
+          "Access to public models"
+        ]
+      },
+      {
+        "name": "Pro Account",
+        "monthly": 9.0,
+        "annual": 9.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral AI (Le Chat)",
+    "url": "https://mistral.ai",
+    "startingPrice": 0.0,
+    "tiers": [
+      {
+        "name": "Le Chat Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "Mistral Large 2 access",
+          "Codestral access",
+          "Web search enabled",
+          "Vision & document analysis"
+        ]
+      },
+      {
+        "name": "API Developer",
+        "monthly": 2.0,
+        "annual": 2.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "pika-labs",
+    "name": "Pika Labs",
+    "url": "https://pika.art",
+    "startingPrice": 10.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "150 initial credits + 30 daily",
+          "Standard generation speed",
+          "Pikaffects access",
+          "Pika watermark"
+        ]
+      },
+      {
+        "name": "Standard",
+        "monthly": 10.0,
+        "annual": 8.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic (Chatsonic)",
+    "url": "https://writesonic.com",
+    "startingPrice": 19.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10",
+          "000 words one-time",
+          "Chatsonic standard",
+          "Templates access",
+          "WordPress 1-click export"
+        ]
+      },
+      {
+        "name": "Individual",
+        "monthly": 20.0,
+        "annual": 16.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "copyleaks",
+    "name": "Copyleaks",
+    "url": "https://copyleaks.com",
+    "startingPrice": 9.99,
+    "tiers": [
+      {
+        "name": "Free Trial",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 scan pages",
+          "Chrome browser extension",
+          "Basic AI score",
+          "Standard report"
+        ]
+      },
+      {
+        "name": "AI + Plagiarism",
+        "monthly": 13.99,
+        "annual": 9.99,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "ai-or-not",
+    "name": "AI or Not",
+    "url": "https://www.aiornot.com",
+    "startingPrice": 5.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "10 image checks/mo",
+          "Web upload scanner",
+          "Confidence percentage",
+          "Basic report"
+        ]
+      },
+      {
+        "name": "Pro",
+        "monthly": 5.0,
+        "annual": 4.16,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "convertos-ai",
+    "name": "Convertos.ai",
+    "url": "https://convertos.ai",
+    "startingPrice": 49.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 49.0,
+        "annual": 39.0,
+        "features": [
+          "50 tracked AI prompts",
+          "Daily citation monitoring",
+          "ChatGPT & Perplexity coverage",
+          "Weekly executive report"
+        ]
+      },
+      {
+        "name": "Growth",
+        "monthly": 129.0,
+        "annual": 99.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "voicefleet",
+    "name": "VoiceFleet",
+    "url": "https://voicefleet.ai",
+    "startingPrice": 49.0,
+    "tiers": [
+      {
+        "name": "Starter",
+        "monthly": 49.0,
+        "annual": 39.0,
+        "features": [
+          "100 call minutes/mo",
+          "Dedicated phone number",
+          "Google Calendar booking",
+          "Email transcripts"
+        ]
+      },
+      {
+        "name": "Business",
+        "monthly": 129.0,
+        "annual": 99.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion (Stability AI)",
+    "url": "https://stability.ai",
+    "startingPrice": 0.0,
+    "tiers": [
+      {
+        "name": "Local Self-Hosted",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "100% free open weights",
+          "Unlimited generations on local GPU",
+          "Full ComfyUI & WebUI support",
+          "Commercial use under license"
+        ]
+      },
+      {
+        "name": "Stability Cloud API",
+        "monthly": 10.0,
+        "annual": 10.0,
+        "features": []
+      }
+    ]
+  },
+  {
+    "slug": "v0-dev",
+    "name": "v0 by Vercel",
+    "url": "https://v0.dev",
+    "startingPrice": 20.0,
+    "tiers": [
+      {
+        "name": "Free",
+        "monthly": 0.0,
+        "annual": 0.0,
+        "features": [
+          "200 credits/mo",
+          "Public generations",
+          "React & Tailwind exports",
+          "Interactive live preview"
+        ]
+      },
+      {
+        "name": "Premium",
+        "monthly": 20.0,
+        "annual": 20.0,
+        "features": []
+      }
+    ]
+  }
+]

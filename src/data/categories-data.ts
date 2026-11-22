@@ -12,7 +12,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Tạo video AI, nhân vật đại diện chân thực, tự động tạo phụ đề và cắt ghép video ngắn.",
     },
     iconName: "Video",
-    count: 14,
+    count: 18,
     newCount: 2,
   },
   {
@@ -26,7 +26,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Chuyển văn bản thành giọng nói siêu thực, nhân bản giọng nói, lọc âm và sản xuất podcast.",
     },
     iconName: "Mic",
-    count: 11,
+    count: 14,
     newCount: 1,
   },
   {
@@ -40,7 +40,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Viết bài chuẩn SEO, quy trình programmatic SEO, sáng tạo nội dung và tối ưu thứ hạng tìm kiếm.",
     },
     iconName: "FileText",
-    count: 21,
+    count: 25,
     newCount: 1,
   },
   {
@@ -68,7 +68,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Chuyển đổi ý tưởng và tài liệu thành slide thuyết trình chuyên nghiệp chỉ sau vài giây.",
     },
     iconName: "Presentation",
-    count: 11,
+    count: 15,
     newCount: 1,
   },
   {
@@ -82,7 +82,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Tự động ghi chép biên bản cuộc họp, tóm tắt ý chính, sắp xếp lịch thông minh và quản lý công việc.",
     },
     iconName: "Clock",
-    count: 13,
+    count: 16,
     newCount: 1,
   },
   {
@@ -96,7 +96,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Quản lý khách hàng đa kênh, tổng đài lễ tân ảo trực 24/7 và tự động hóa quy trình chốt đơn.",
     },
     iconName: "Headphones",
-    count: 12,
+    count: 15,
     newCount: 1,
   },
   {
@@ -110,7 +110,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Tạo hình ảnh quảng cáo chuyển đổi cao, banner đa nền tảng và phân tích dữ liệu bán hàng.",
     },
     iconName: "Sparkles",
-    count: 13,
+    count: 17,
     newCount: 0,
   },
   {
@@ -124,7 +124,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Tạo website WordPress tự động, landing page không cần code, biểu mẫu thông minh và dựng mẫu nhanh.",
     },
     iconName: "Layout",
-    count: 13,
+    count: 17,
     newCount: 1,
   },
   {
@@ -166,7 +166,7 @@ export const CATEGORY_HUBS: CategoryHubItem[] = [
       vi: "Trích xuất dữ liệu web tự động, tổng hợp tài liệu học thuật, sinh mã nguồn ứng dụng và bot tùy chỉnh.",
     },
     iconName: "Cpu",
-    count: 22,
+    count: 25,
     newCount: 1,
   },
 ];

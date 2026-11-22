@@ -6671,6 +6671,2821 @@ export const TOOLS_DATA: ToolItem[] = [
     alternatives: ["bolt-new", "lovable", "framer"]
   },
 
+
+  {
+    id: "kling-ai",
+    slug: "kling-ai",
+    name: "Kling AI",
+    tagline: {
+      en: "Cinematic text-to-video generator with native 4K output, accurate physics, and full stereo audio.",
+      vi: "C\u1ed7 m\u00e1y t\u1ea1o video AI \u0111i\u1ec7n \u1ea3nh \u0111\u1ed9 ph\u00e2n gi\u1ea3i 4K g\u1ed1c, m\u00f4 ph\u1ecfng v\u1eadt l\u00fd ch\u00ednh x\u00e1c v\u00e0 \u00e2m thanh stereo s\u1ed1ng \u0111\u1ed9ng.",
+    },
+    description: {
+      en: "Kling AI is developed by Kuaishou, celebrated globally for generating realistic 30-second continuous scenes, fluid character motion, and accurate physical simulations from simple prompts.",
+      vi: "Kling AI do Kuaishou ph\u00e1t tri\u1ec3n, n\u1ed5i danh to\u00e0n c\u1ea7u v\u1edbi kh\u1ea3 n\u0103ng t\u1ea1o c\u00e1c th\u01b0\u1edbc phim d\u00e0i 30 gi\u00e2y m\u01b0\u1ee3t m\u00e0, chuy\u1ec3n \u0111\u1ed9ng nh\u00e2n v\u1eadt uy\u1ec3n chuy\u1ec3n v\u00e0 m\u00f4 ph\u1ecfng v\u1eadt l\u00fd th\u1ef1c t\u1ebf t\u1eeb c\u00e2u l\u1ec7nh \u0111\u01a1n gi\u1ea3n.",
+    },
+    directAnswer: {
+      en: "Kling AI 4.0 is a frontier generative video system capable of producing native 4K/1080p video clips up to 2 minutes with character consistency and realistic physics. Plans start at $10/month with free daily trial credits.",
+      vi: "Kling AI 4.0 l\u00e0 c\u1ed7 m\u00e1y t\u1ea1o video AI h\u00e0ng \u0111\u1ea7u c\u00f3 kh\u1ea3 n\u0103ng k\u1ebft xu\u1ea5t video chu\u1ea9n 4K/1080p d\u00e0i t\u1edbi 2 ph\u00fat v\u1edbi nh\u00e2n v\u1eadt \u0111\u1ed3ng nh\u1ea5t v\u00e0 chuy\u1ec3n \u0111\u1ed9ng v\u1eadt l\u00fd chu\u1ea9n x\u00e1c. Gi\u00e1 t\u1eeb $10/th\u00e1ng k\u00e8m l\u01b0\u1ee3t d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed h\u00e0ng ng\u00e0y.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["AI Video", "Kling AI", "Cinematic Video", "Text to Video", "4K Video"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://klingai.com/?via={code}",
+    adminAffiliateUrl: "https://klingai.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Commercial filmmakers, advertisers, and creative directors needing high-fidelity video clips with accurate physical motion.",
+        vi: "Nh\u00e0 l\u00e0m phim qu\u1ea3ng c\u00e1o, c\u00f4ng ty truy\u1ec1n th\u00f4ng v\u00e0 \u0111\u1ea1o di\u1ec5n s\u00e1ng t\u1ea1o c\u1ea7n c\u00e1c c\u1ea3nh quay ch\u00e2n th\u1ef1c v\u1edbi chuy\u1ec3n \u0111\u1ed9ng c\u01a1 th\u1ec3 chu\u1ea9n.",
+      },
+      notFor: {
+        en: "Casual users looking strictly for 1-click text transcription or subtitle styling.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng ch\u1ec9 c\u00f3 nhu c\u1ea7u ch\u00e9p l\u1eddi v\u0103n b\u1ea3n ho\u1eb7c t\u1ea1o ph\u1ee5 \u0111\u1ec1 \u0111\u01a1n gi\u1ea3n.",
+      },
+      bottomLine: {
+        en: "One of the most capable video models in existence, rivaling OpenAI Sora in cinematic realism and shot duration.",
+        vi: "M\u1ed9t trong nh\u1eefng m\u00f4 h\u00ecnh video m\u1ea1nh m\u1ebd nh\u1ea5t hi\u1ec7n nay, c\u1ea1nh tranh s\u00f2ng ph\u1eb3ng v\u1edbi OpenAI Sora v\u1ec1 \u0111\u1ed9 ch\u00e2n th\u1ef1c v\u00e0 th\u1eddi l\u01b0\u1ee3ng c\u1ea3nh quay.",
+      },
+    },
+    pros: {
+      en: ["Native 1080p and 4K output with exceptional physical simulation of fluids, cloth, and light", "Continuous multi-shot sequences up to 2 minutes with camera trajectory controls", "High-precision lip syncing and facial expression alignment from audio tracks", "Generous daily free trial credits for new creators"],
+      vi: ["K\u1ebft xu\u1ea5t video 1080p v\u00e0 4K s\u1eafc n\u00e9t v\u1edbi kh\u1ea3 n\u0103ng m\u00f4 ph\u1ecfng ch\u1ea5t l\u1ecfng, s\u1ee3i v\u1ea3i v\u00e0 \u00e1nh s\u00e1ng t\u1ef1 nhi\u00ean", "T\u1ea1o c\u1ea3nh quay n\u1ed1i ti\u1ebfp d\u00e0i t\u1edbi 2 ph\u00fat v\u1edbi quy\u1ec1n \u0111i\u1ec1u khi\u1ec3n g\u00f3c m\u00e1y \u0111i\u1ec7n \u1ea3nh \u0111a h\u01b0\u1edbng", "Kh\u1edbp kh\u1ea9u h\u00ecnh m\u00f4i (Lip-sync) v\u00e0 bi\u1ec3u c\u1ea3m khu\u00f4n m\u1eb7t \u0111\u1ed9 ch\u00ednh x\u00e1c cao theo t\u1ec7p \u00e2m thanh", "T\u1eb7ng \u0111i\u1ec3m t\u00edn d\u1ee5ng mi\u1ec5n ph\u00ed h\u00e0ng ng\u00e0y cho ng\u01b0\u1eddi d\u00f9ng m\u1edbi tr\u1ea3i nghi\u1ec7m"],
+    },
+    cons: {
+      en: ["Peak generation times can experience rendering queue delays on free accounts", "4K master video upscaling requires higher tier credit consumption"],
+      vi: ["Khung gi\u1edd cao \u0111i\u1ec3m c\u00f3 th\u1ec3 ph\u1ea3i ch\u1edd x\u1ebfp h\u00e0ng render \u0111\u1ed1i v\u1edbi c\u00e1c t\u00e0i kho\u1ea3n mi\u1ec5n ph\u00ed", "T\u00ednh n\u0103ng ph\u00f3ng to video chu\u1ea9n 4K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng h\u01a1n"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "66 daily credits",
+                  "Standard generation queue",
+                  "720p resolution",
+                  "Watermarked exports"
+            ]
+      },
+      {
+            "name": "Standard",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 8,
+            "currency": "USD",
+            "features": [
+                  "660 credits/mo",
+                  "Fast generation queue",
+                  "Watermark-free 1080p",
+                  "Camera motion controls"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 37,
+            "priceAnnualMonthly": 30,
+            "currency": "USD",
+            "features": [
+                  "3,000 credits/mo",
+                  "Priority GPU servers",
+                  "4K video upscaling",
+                  "Commercial licensing"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://klingai.com",
+    logoUrl: "/logos/kling-ai.png",
+    alternatives: ["runway", "luma-dream-machine", "pika-labs"],
+  },
+  {
+    id: "luma-dream-machine",
+    slug: "luma-dream-machine",
+    name: "Luma Dream Machine",
+    tagline: {
+      en: "High-fidelity AI video model renowned for rapid rendering, 3D spatial coherence, and dynamic camera moves.",
+      vi: "M\u00f4 h\u00ecnh video AI t\u1ed1c \u0111\u1ed9 cao n\u1ed5i b\u1eadt v\u1edbi s\u1ef1 nh\u1ea5t qu\u00e1n kh\u00f4ng gian 3D v\u00e0 c\u00e1c g\u00f3c l\u01b0\u1ee3n m\u00e1y quay \u0111i\u1ec7n \u1ea3nh s\u1ed1ng \u0111\u1ed9ng.",
+    },
+    description: {
+      en: "Dream Machine by Luma AI generates cinematic 5-second video shots from text and images. Built on universal transformer architectures, it excels at dramatic drone pans, dolly zooms, and believable character physics.",
+      vi: "Dream Machine do Luma AI ph\u00e1t tri\u1ec3n t\u1ea1o c\u00e1c c\u1ea3nh quay \u0111i\u1ec7n \u1ea3nh 5 gi\u00e2y t\u1eeb v\u0103n b\u1ea3n v\u00e0 \u1ea3nh t\u0129nh. X\u00e2y d\u1ef1ng tr\u00ean ki\u1ebfn tr\u00fac transformer ti\u00ean ti\u1ebfn, ph\u1ea7n m\u1ec1m v\u01b0\u1ee3t tr\u1ed9i trong c\u00e1c c\u00fa quay flycam, c\u00fa m\u00e1y dolly v\u00e0 chuy\u1ec3n \u0111\u1ed9ng nh\u00e2n v\u1eadt ch\u00e2n th\u1ef1c.",
+    },
+    directAnswer: {
+      en: "Luma Dream Machine is a cutting-edge video generation platform capable of rapid 120-frame cinematic video creation. Key features include Camera Keyframes, Start/End frame bridging, and realistic 3D lighting. Plans start at $9.99/month with 30 free generations per month.",
+      vi: "Luma Dream Machine l\u00e0 n\u1ec1n t\u1ea3ng t\u1ea1o video AI th\u1ebf h\u1ec7 m\u1edbi v\u1edbi t\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t 120 khung h\u00ecnh \u0111i\u1ec7n \u1ea3nh nhanh ch\u00f3ng. \u0110i\u1ec3m n\u1ed5i b\u1eadt l\u00e0 t\u00ednh n\u0103ng Camera Keyframes \u0111i\u1ec1u h\u01b0\u1edbng g\u00f3c quay, n\u1ed1i m\u01b0\u1ee3t m\u00e0 gi\u1eefa khung h\u00ecnh \u0111\u1ea7u v\u00e0 cu\u1ed1i (Start/End Frame). Gi\u00e1 t\u1eeb $9.99/th\u00e1ng k\u00e8m 30 l\u01b0\u1ee3t t\u1ea1o mi\u1ec5n ph\u00ed m\u1ed7i th\u00e1ng.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["AI Video", "Luma AI", "Dream Machine", "Camera Controls", "Image to Video"],
+    startingPrice: 9.99,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://lumalabs.ai/dream-machine?via={code}",
+    adminAffiliateUrl: "https://lumalabs.ai/dream-machine?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "VFX artists, game developers, filmmakers, and digital storytellers looking for expressive camera movements and rapid video iteration.",
+        vi: "Ngh\u1ec7 s\u0129 k\u1ef9 x\u1ea3o VFX, nh\u00e0 ph\u00e1t tri\u1ec3n game, nh\u00e0 l\u00e0m phim v\u00e0 ng\u01b0\u1eddi k\u1ec3 chuy\u1ec7n th\u1ecb gi\u00e1c c\u1ea7n g\u00f3c m\u00e1y \u0111i\u1ec7n \u1ea3nh linh ho\u1ea1t.",
+      },
+      notFor: {
+        en: "Users looking for slide presentation deck generation or document summaries.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u1ea7n t\u1ea1o b\u00e0i thuy\u1ebft tr\u00ecnh slide ho\u1eb7c t\u00f3m t\u1eaft t\u00e0i li\u1ec7u v\u0103n b\u1ea3n.",
+      },
+      bottomLine: {
+        en: "The fastest high-quality video model for directional camera control and realistic spatial 3D navigation.",
+        vi: "M\u00f4 h\u00ecnh video AI ch\u1ea5t l\u01b0\u1ee3ng cao c\u00f3 t\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t nhanh nh\u1ea5t hi\u1ec7n nay v\u1edbi kh\u1ea3 n\u0103ng l\u00e0m ch\u1ee7 g\u00f3c m\u00e1y kh\u00f4ng gian 3D \u1ea5n t\u01b0\u1ee3ng.",
+      },
+    },
+    pros: {
+      en: ["Extremely fast rendering speeds compared to older diffusion models", "Camera control feature allows specifying exact dolly, pan, tilt, and zoom movements", "Start and End frame bridging generates seamless transitions between two separate images", "30 free monthly video generations for registered accounts"],
+      vi: ["T\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t video c\u1ef1c nhanh so v\u1edbi c\u00e1c m\u00f4 h\u00ecnh khu\u1ebfch t\u00e1n truy\u1ec1n th\u1ed1ng", "T\u00ednh n\u0103ng Camera Control cho ph\u00e9p thi\u1ebft l\u1eadp ch\u00ednh x\u00e1c c\u00e1c chuy\u1ec3n \u0111\u1ed9ng m\u00e1y dolly, pan, tilt v\u00e0 zoom", "T\u00ednh n\u0103ng n\u1ed1i khung h\u00ecnh \u0111\u1ea7u - cu\u1ed1i t\u1ea1o chuy\u1ec3n c\u1ea3nh m\u01b0\u1ee3t m\u00e0 gi\u1eefa 2 b\u1ee9c \u1ea3nh t\u0129nh \u0111\u1ed9c l\u1eadp", "Cung c\u1ea5p 30 l\u01b0\u1ee3t t\u1ea1o video mi\u1ec5n ph\u00ed m\u1ed7i th\u00e1ng cho ng\u01b0\u1eddi d\u00f9ng \u0111\u0103ng k\u00fd"],
+    },
+    cons: {
+      en: ["High motion scenes can occasionally produce subtle morphing artifacts", "Watermark removal and commercial generation rights require a paid subscription"],
+      vi: ["C\u00e1c c\u1ea3nh c\u00f3 chuy\u1ec3n \u0111\u1ed9ng qu\u00e1 nhanh \u0111\u00f4i khi c\u00f3 th\u1ec3 xu\u1ea5t hi\u1ec7n hi\u1ec7n t\u01b0\u1ee3ng bi\u1ebfn d\u1ea1ng nh\u1eb9", "X\u00f3a h\u00ecnh m\u1edd watermark v\u00e0 quy\u1ec1n s\u1eed d\u1ee5ng th\u01b0\u01a1ng m\u1ea1i \u0111\u1ea7y \u0111\u1ee7 y\u00eau c\u1ea7u g\u00f3i tr\u1ea3 ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "30 generations/mo",
+                  "Standard speed queue",
+                  "Commercial use restricted",
+                  "Watermark on exports"
+            ]
+      },
+      {
+            "name": "Standard",
+            "priceMonthly": 9.99,
+            "priceAnnualMonthly": 7.99,
+            "currency": "USD",
+            "features": [
+                  "120 generations/mo",
+                  "Priority rendering queue",
+                  "Commercial rights",
+                  "No watermarks"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 29.99,
+            "priceAnnualMonthly": 23.99,
+            "currency": "USD",
+            "features": [
+                  "400 generations/mo",
+                  "High-priority GPU access",
+                  "Camera motion keyframes",
+                  "Full commercial license"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://lumalabs.ai/dream-machine",
+    logoUrl: "/logos/luma-dream-machine.png",
+    alternatives: ["kling-ai", "runway", "minimax-video"],
+  },
+  {
+    id: "minimax-video",
+    slug: "minimax-video",
+    name: "MiniMax Hailuo AI",
+    tagline: {
+      en: "Breakthrough Chinese generative video model celebrated for exceptional human expressions and fluid anatomy.",
+      vi: "M\u00f4 h\u00ecnh video AI \u0111\u1ed9t ph\u00e1 n\u1ed5i danh th\u1ebf gi\u1edbi v\u1edbi bi\u1ec3u c\u1ea3m g\u01b0\u01a1ng m\u1eb7t t\u1ef1 nhi\u00ean v\u00e0 chuy\u1ec3n \u0111\u1ed9ng c\u01a1 th\u1ec3 ng\u01b0\u1eddi uy\u1ec3n chuy\u1ec3n.",
+    },
+    description: {
+      en: "MiniMax (known as Hailuo AI) took the video creation community by storm with its hyper-realistic character animations. It produces 6-second cinematic clips with lifelike hand gestures, facial nuance, and dynamic interaction.",
+      vi: "MiniMax (hay Hailuo AI) g\u00e2y \u1ea5n t\u01b0\u1ee3ng m\u1ea1nh m\u1ebd v\u1edbi gi\u1edbi s\u00e1ng t\u1ea1o video to\u00e0n c\u1ea7u nh\u1edd kh\u1ea3 n\u0103ng t\u00e1i hi\u1ec7n nh\u00e2n v\u1eadt s\u1ed1ng \u0111\u1ed9ng. T\u1ea1o c\u00e1c \u0111o\u1ea1n phim 6 gi\u00e2y v\u1edbi c\u1eed ch\u1ec9 b\u00e0n tay chu\u1ea9n x\u00e1c, bi\u1ec3u c\u1ea3m tinh t\u1ebf v\u00e0 t\u01b0\u01a1ng t\u00e1c v\u1eadt l\u00fd ch\u00e2n th\u1ef1c.",
+    },
+    directAnswer: {
+      en: "MiniMax Video-01 (Hailuo AI) is a top-tier generative video model that solves the hardest challenges in AI cinematography: human hands, realistic eye contact, and continuous natural body movement. Plans start at $10/month with generous free daily generations.",
+      vi: "MiniMax Video-01 (Hailuo AI) l\u00e0 m\u00f4 h\u00ecnh t\u1ea1o video AI \u0111\u1ec9nh cao gi\u1ea3i quy\u1ebft tri\u1ec7t \u0111\u1ec3 nh\u1eefng th\u00e1ch th\u1ee9c kh\u00f3 nh\u1ea5t: ng\u00f3n tay ng\u01b0\u1eddi t\u1ef1 nhi\u00ean, \u00e1nh m\u1eaft c\u00f3 h\u1ed3n v\u00e0 chuy\u1ec3n \u0111\u1ed9ng to\u00e0n th\u00e2n li\u1ec1n m\u1ea1ch. Gi\u00e1 t\u1eeb $10/th\u00e1ng k\u00e8m c\u00e1c l\u01b0\u1ee3t d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed h\u00e0ng ng\u00e0y.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["AI Video", "MiniMax", "Hailuo AI", "Human Animation", "Character Motion"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://hailuoai.video/?via={code}",
+    adminAffiliateUrl: "https://hailuoai.video/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Narrative video creators, influencers, and digital agencies focusing on human-centric stories, drama, and character acting.",
+        vi: "Nh\u00e0 l\u00e0m phim k\u1ec3 chuy\u1ec7n, nh\u00e0 s\u00e1ng t\u1ea1o n\u1ed9i dung v\u00e0 agency qu\u1ea3ng c\u00e1o t\u1eadp trung v\u00e0o nh\u00e2n v\u1eadt con ng\u01b0\u1eddi, c\u1ea3m x\u00fac v\u00e0 di\u1ec5n xu\u1ea5t.",
+      },
+      notFor: {
+        en: "Teams requiring technical code refactoring or financial spreadsheet analysis.",
+        vi: "C\u00e1c \u0111\u1ed9i ng\u0169 c\u1ea7n l\u1eadp tr\u00ecnh ph\u1ea7n m\u1ec1m ho\u1eb7c ph\u00e2n t\u00edch b\u1ea3ng t\u00ednh t\u00e0i ch\u00ednh.",
+      },
+      bottomLine: {
+        en: "Unquestionably the best AI video tool for human character acting, realistic hands, and emotive facial close-ups.",
+        vi: "C\u00f4ng c\u1ee5 l\u00e0m video AI xu\u1ea5t s\u1eafc nh\u1ea5t hi\u1ec7n nay v\u1ec1 di\u1ec5n xu\u1ea5t nh\u00e2n v\u1eadt, gi\u1ea3i quy\u1ebft ho\u00e0n h\u1ea3o chuy\u1ec3n \u0111\u1ed9ng b\u00e0n tay v\u00e0 g\u00f3c quay c\u1eadn c\u1ea3nh bi\u1ec3u c\u1ea3m.",
+      },
+    },
+    pros: {
+      en: ["Flawless human anatomy and hand movements with virtually zero grotesque morphing", "Expressive emotional acting: laughs, smiles, tears, and subtle eye movements rendered authentically", "Fast 720p and 1080p generation with high prompt obedience", "Generous free web tier allowing multiple video creations daily"],
+      vi: ["C\u1ea5u tr\u00fac gi\u1ea3i ph\u1eabu ng\u01b0\u1eddi v\u00e0 c\u1eed ch\u1ec9 b\u00e0n tay chu\u1ea9n m\u1ef1c g\u1ea7n nh\u01b0 kh\u00f4ng b\u1ecb bi\u1ebfn d\u1ea1ng", "Bi\u1ec3u c\u1ea3m c\u1ea3m x\u00fac phong ph\u00fa: n\u1ee5 c\u01b0\u1eddi, \u00e1nh m\u1eaft, n\u01b0\u1edbc m\u1eaft \u0111\u01b0\u1ee3c t\u00e1i hi\u1ec7n ch\u00e2n th\u1ef1c c\u00f3 h\u1ed3n", "T\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t nhanh chu\u1ea9n 720p v\u00e0 1080p v\u1edbi \u0111\u1ed9 b\u00e1m s\u00e1t c\u00e2u l\u1ec7nh m\u00f4 t\u1ea3 cao", "G\u00f3i web mi\u1ec5n ph\u00ed h\u1ed7 tr\u1ee3 t\u1ea1o nhi\u1ec1u video m\u1ed7i ng\u00e0y cho c\u1ed9ng \u0111\u1ed3ng"],
+    },
+    cons: {
+      en: ["Web interface is straightforward with fewer manual camera slider dials than Runway", "Max single generation length is currently capped at 6 seconds"],
+      vi: ["Giao di\u1ec7n web tr\u1ef1c quan nh\u01b0ng \u00edt thanh tr\u01b0\u1ee3t ch\u1ec9nh camera th\u1ee7 c\u00f4ng h\u01a1n so v\u1edbi Runway", "Th\u1eddi l\u01b0\u1ee3ng m\u1ed9t l\u1ea7n k\u1ebft xu\u1ea5t hi\u1ec7n t\u1ea1i gi\u1edbi h\u1ea1n \u1edf m\u1ee9c 6 gi\u00e2y"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free Tier",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Daily free generation points",
+                  "Standard generation speed",
+                  "720p output",
+                  "Watermarked clips"
+            ]
+      },
+      {
+            "name": "Starter",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 8,
+            "currency": "USD",
+            "features": [
+                  "1,000 points/mo",
+                  "Fast generation queue",
+                  "1080p resolution",
+                  "No watermark",
+                  "Commercial license"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 30,
+            "priceAnnualMonthly": 25,
+            "currency": "USD",
+            "features": [
+                  "3,500 points/mo",
+                  "Priority GPU servers",
+                  "Batch generation",
+                  "Full commercial rights"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://hailuoai.video",
+    logoUrl: "/logos/minimax-video.png",
+    alternatives: ["kling-ai", "luma-dream-machine", "runway"],
+  },
+  {
+    id: "ltx-studio",
+    slug: "ltx-studio",
+    name: "LTX Studio (Lightricks)",
+    tagline: {
+      en: "AI-assisted filmmaking and visual pre-production workspace with multi-character continuity and shot storyboard control.",
+      vi: "Kh\u00f4ng gian ti\u1ec1n k\u1ef3 v\u00e0 s\u1ea3n xu\u1ea5t phim AI v\u1edbi kh\u1ea3 n\u0103ng \u0111\u1ed3ng b\u1ed9 nh\u00e2n v\u1eadt \u0111a c\u1ea3nh v\u00e0 b\u1ea3ng ph\u00e2n c\u1ea3nh storyboard chuy\u00ean nghi\u1ec7p.",
+    },
+    description: {
+      en: "LTX Studio by Lightricks gives storytellers complete control over visual filmmaking. Instead of one-off video clips, it manages full scene sequences with consistent character models, camera angles, lighting styles, and audio.",
+      vi: "LTX Studio c\u1ee7a Lightricks trao quy\u1ec1n ki\u1ec3m so\u00e1t to\u00e0n di\u1ec7n cho c\u00e1c nh\u00e0 l\u00e0m phim. Thay v\u00ec ch\u1ec9 t\u1ea1o c\u00e1c clip ng\u1eafn r\u1eddi r\u1ea1c, ph\u1ea7n m\u1ec1m qu\u1ea3n l\u00fd to\u00e0n b\u1ed9 ph\u00e2n c\u1ea3nh v\u1edbi nh\u00e2n v\u1eadt \u0111\u1ed3ng nh\u1ea5t, g\u00f3c m\u00e1y, \u00e1nh s\u00e1ng v\u00e0 \u00e2m thanh xuy\u00ean su\u1ed1t k\u1ecbch b\u1ea3n.",
+    },
+    directAnswer: {
+      en: "LTX Studio is the world's first comprehensive AI filmmaking suite. It allows directors to input an idea or script, automatically generating a multi-scene storyboard with synchronized dialogue, sound effects, and character continuity across camera cuts. Plans start at $15/month with free project trials.",
+      vi: "LTX Studio l\u00e0 b\u1ed9 c\u00f4ng c\u1ee5 l\u00e0m phim AI to\u00e0n di\u1ec7n \u0111\u1ea7u ti\u00ean tr\u00ean th\u1ebf gi\u1edbi. \u0110\u1ea1o di\u1ec5n ch\u1ec9 c\u1ea7n nh\u1eadp \u00fd t\u01b0\u1edfng ho\u1eb7c k\u1ecbch b\u1ea3n, h\u1ec7 th\u1ed1ng s\u1ebd t\u1ef1 \u0111\u1ed9ng t\u1ea1o b\u1ea3ng ph\u00e2n c\u1ea3nh nhi\u1ec1u shot h\u00ecnh v\u1edbi l\u1eddi tho\u1ea1i kh\u1edbp kh\u1ea9u h\u00ecnh, ti\u1ebfng \u0111\u1ed9ng v\u00e0 nh\u00e2n v\u1eadt gi\u1eef nguy\u00ean qua t\u1eebng g\u00f3c m\u00e1y. Gi\u00e1 t\u1eeb $15/th\u00e1ng k\u00e8m g\u00f3i d\u00f9ng th\u1eed.",
+    },
+    hubs: ["video-avatar"],
+    tags: ["AI Filmmaking", "LTX Studio", "Storyboard", "Character Consistency", "Video Director"],
+    startingPrice: 15,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://ltx.studio/?via={code}",
+    adminAffiliateUrl: "https://ltx.studio/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 2400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Filmmakers, advertising directors, creative agencies, and screenwriters creating comprehensive visual pitch decks and pre-production animatics.",
+        vi: "Nh\u00e0 l\u00e0m phim, \u0111\u1ea1o di\u1ec5n qu\u1ea3ng c\u00e1o, agency s\u00e1ng t\u1ea1o v\u00e0 bi\u00ean k\u1ecbch c\u1ea7n d\u1ef1ng b\u1ea3ng ph\u00e2n c\u1ea3nh tr\u1ef1c quan (animatics) \u0111\u1ec3 thuy\u1ebft tr\u00ecnh d\u1ef1 \u00e1n.",
+      },
+      notFor: {
+        en: "Casual TikTokers wanting a 5-second automatic dancing meme video.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng m\u1ea1ng x\u00e3 h\u1ed9i ch\u1ec9 c\u1ea7n gh\u00e9p video nh\u1ea3y nh\u00f3t ng\u1eafn 5 gi\u00e2y \u0111\u01a1n gi\u1ea3n.",
+      },
+      bottomLine: {
+        en: "The most structured AI pre-production suite, turning screenplay concepts into coherent, shot-by-shot cinematic storyboards.",
+        vi: "B\u1ed9 c\u00f4ng c\u1ee5 ti\u1ec1n k\u1ef3 AI b\u00e0i b\u1ea3n nh\u1ea5t hi\u1ec7n nay, chuy\u1ec3n k\u1ecbch b\u1ea3n ch\u1eef th\u00e0nh chu\u1ed7i ph\u00e2n c\u1ea3nh \u0111i\u1ec7n \u1ea3nh m\u1ea1ch l\u1ea1c v\u00e0 chuy\u00ean nghi\u1ec7p.",
+      },
+    },
+    pros: {
+      en: ["Character consistency lock keeps the same actor's appearance across multiple angles and cuts", "Automatic screenplay breakdown into structured scene blocks and individual camera shots", "Granular director controls for lens focal lengths, camera movement (pan, crane, tracking), and lighting", "Built-in sound design generates synchronized dialogue, ambient sound, and dramatic score"],
+      vi: ["Kh\u00f3a nh\u1eadn di\u1ec7n nh\u00e2n v\u1eadt gi\u00fap gi\u1eef nguy\u00ean g\u01b0\u01a1ng m\u1eb7t di\u1ec5n vi\u00ean qua nhi\u1ec1u g\u00f3c m\u00e1y v\u00e0 c\u1ea3nh quay kh\u00e1c nhau", "T\u1ef1 \u0111\u1ed9ng ph\u00e2n r\u00e3 k\u1ecbch b\u1ea3n th\u00e0nh c\u00e1c kh\u1ed1i ph\u00e2n c\u1ea3nh v\u00e0 t\u1eebng shot quay c\u1ee5 th\u1ec3 b\u00e0i b\u1ea3n", "Quy\u1ec1n \u0111i\u1ec1u khi\u1ec3n \u0111\u1ea1o di\u1ec5n chuy\u00ean s\u00e2u: ch\u1ecdn ti\u00eau c\u1ef1 \u1ed1ng k\u00ednh, g\u00f3c m\u00e1y (pan, c\u1ea9u m\u00e1y, tracking) v\u00e0 ngu\u1ed3n s\u00e1ng", "T\u1ef1 \u0111\u1ed9ng t\u1ea1o \u00e2m thanh \u0111\u1ed3ng b\u1ed9: l\u1eddi tho\u1ea1i l\u1ed3ng ti\u1ebfng, ti\u1ebfng \u0111\u1ed9ng m\u00f4i tr\u01b0\u1eddng v\u00e0 nh\u1ea1c n\u1ec1n \u0111i\u1ec7n \u1ea3nh"],
+    },
+    cons: {
+      en: ["Comprehensive workflow involves a creative learning curve compared to simple prompt-box tools", "Exporting lengthy 4K master sequences consumes credits faster"],
+      vi: ["Quy tr\u00ecnh l\u00e0m phim chuy\u00ean nghi\u1ec7p \u0111\u00f2i h\u1ecfi ng\u01b0\u1eddi d\u00f9ng d\u00e0nh th\u1eddi gian l\u00e0m quen v\u1edbi thu\u1eadt ng\u1eef \u0111\u1ea1o di\u1ec5n", "Xu\u1ea5t to\u00e0n b\u1ed9 b\u1ed9 phim d\u00e0i \u1edf \u0111\u1ed9 ph\u00e2n gi\u1ea3i 4K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free Pilot",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "1 active film project",
+                  "Standard rendering speed",
+                  "720p storyboard export",
+                  "Core character lock"
+            ]
+      },
+      {
+            "name": "Creator",
+            "priceMonthly": 15,
+            "priceAnnualMonthly": 12,
+            "currency": "USD",
+            "features": [
+                  "5 active film projects",
+                  "1080p full HD export",
+                  "Advanced camera controls",
+                  "No watermarks",
+                  "Commercial rights"
+            ]
+      },
+      {
+            "name": "Pro Studio",
+            "priceMonthly": 40,
+            "priceAnnualMonthly": 32,
+            "currency": "USD",
+            "features": [
+                  "Unlimited film projects",
+                  "4K master exports",
+                  "Custom character voice cloning",
+                  "Priority rendering queue"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://ltx.studio",
+    logoUrl: "/logos/ltx-studio.png",
+    alternatives: ["runway", "kling-ai", "invideo"],
+  },
+  {
+    id: "udio",
+    slug: "udio",
+    name: "Udio AI",
+    tagline: {
+      en: "State-of-the-art AI music creation platform producing broadcast-quality vocals, intricate melodies, and full song arrangements.",
+      vi: "N\u1ec1n t\u1ea3ng s\u00e1ng t\u00e1c \u00e2m nh\u1ea1c AI h\u00e0ng \u0111\u1ea7u t\u1ea1o gi\u1ecdng h\u00e1t chu\u1ea9n ph\u00f2ng thu, h\u00f2a \u00e2m ph\u1ee9c t\u1ea1p v\u00e0 c\u1ea5u tr\u00fac b\u00e0i h\u00e1t ho\u00e0n ch\u1ec9nh.",
+    },
+    description: {
+      en: "Udio was founded by former Google DeepMind researchers to democratize musical composition. From emotional ballads to electronic EDM, Udio synthesizes expressive vocals, full instrumentation, and complex song structures.",
+      vi: "Udio \u0111\u01b0\u1ee3c s\u00e1ng l\u1eadp b\u1edfi c\u00e1c c\u1ef1u nh\u00e0 nghi\u00ean c\u1ee9u Google DeepMind nh\u1eb1m ph\u1ed5 c\u1eadp h\u00f3a vi\u1ec7c s\u00e1ng t\u00e1c \u00e2m nh\u1ea1c. T\u1eeb nh\u1eefng b\u1ea3n ballad truy\u1ec1n c\u1ea3m \u0111\u1ebfn nh\u1ea1c \u0111i\u1ec7n t\u1eed EDM, Udio t\u1ea1o gi\u1ecdng ca \u0111\u1ea7y c\u1ea3m x\u00fac, nh\u1ea1c c\u1ee5 ch\u00e2n th\u1ef1c v\u00e0 c\u1ea5u tr\u00fac b\u00e0i h\u00e1t tr\u1ecdn v\u1eb9n.",
+    },
+    directAnswer: {
+      en: "Udio (Udio v1.5) is a premier generative music platform that transforms text prompts into studio-quality tracks with vocals and instrumentation. Standout capabilities include audio stem separation, custom lyrics timing, and song extension. Plans start at $10/month with a free starter tier (100 credits/mo).",
+      vi: "Udio (phi\u00ean b\u1ea3n v1.5) l\u00e0 n\u1ec1n t\u1ea3ng s\u00e1ng t\u00e1c nh\u1ea1c AI \u0111\u1ec9nh cao bi\u1ebfn c\u00e2u l\u1ec7nh th\u00e0nh b\u00e0i h\u00e1t ho\u00e0n ch\u1ec9nh c\u00f3 l\u1eddi ca v\u00e0 h\u00f2a \u00e2m ph\u1ed1i kh\u00ed ch\u1ea5t l\u01b0\u1ee3ng ph\u00f2ng thu. \u0110i\u1ec3m n\u1ed5i b\u1eadt g\u1ed3m t\u00e1ch t\u1eebng track nh\u1ea1c c\u1ee5 (stems), \u0111i\u1ec1u ch\u1ec9nh th\u1eddi gian l\u1eddi h\u00e1t v\u00e0 n\u1ed1i d\u00e0i b\u00e0i h\u00e1t. Gi\u00e1 t\u1eeb $10/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed 100 b\u00e0i/th\u00e1ng.",
+    },
+    hubs: ["voice-audio"],
+    tags: ["AI Music", "Song Generator", "Vocals", "Stem Separation", "Music Production"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.udio.com/?via={code}",
+    adminAffiliateUrl: "https://www.udio.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 8600,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Songwriters, video producers, game developers, and creators needing broadcast-ready vocal tracks and original background scores.",
+        vi: "Nh\u1ea1c s\u0129, nh\u00e0 s\u1ea3n xu\u1ea5t video, nh\u00e0 ph\u00e1t tri\u1ec3n game v\u00e0 creator c\u1ea7n b\u00e0i h\u00e1t c\u00f3 gi\u1ecdng h\u00e1t ch\u00e2n th\u1ef1c v\u00e0 nh\u1ea1c n\u1ec1n \u0111\u1ed9c quy\u1ec1n.",
+      },
+      notFor: {
+        en: "Users looking for voice cloning of living celebrity artists without legal consent.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng mu\u1ed1n gi\u1ea3 m\u1ea1o gi\u1ecdng ca c\u1ee7a c\u00e1c ca s\u0129 n\u1ed5i ti\u1ebfng m\u00e0 kh\u00f4ng c\u00f3 b\u1ea3n quy\u1ec1n.",
+      },
+      bottomLine: {
+        en: "Alongside Suno, Udio represents the peak of generative music, noted for exceptionally rich vocal emotion and nuanced instrumentation.",
+        vi: "C\u00f9ng v\u1edbi Suno, Udio l\u00e0 \u0111\u1ec9nh cao c\u1ee7a \u00e2m nh\u1ea1c t\u1ea1o sinh, n\u1ed5i ti\u1ebfng v\u1edbi gi\u1ecdng h\u00e1t gi\u00e0u c\u1ea3m x\u00fac v\u00e0 k\u1ef9 thu\u1eadt h\u00f2a \u00e2m ph\u1ed1i kh\u00ed tinh t\u1ebf.",
+      },
+    },
+    pros: {
+      en: ["Extraordinary vocal clarity with authentic emotional delivery, vibrato, and breath nuance", "Audio Stem Separation allows downloading separate isolated tracks (vocals, drums, bass, instruments)", "Remix and Inpainting features allow regenerating specific bars or modifying lyrical phrases", "Support for dozens of musical genres: pop, jazz, rap, classical, rock, and ambient"],
+      vi: ["\u0110\u1ed9 trong tr\u1ebbo c\u1ee7a gi\u1ecdng h\u00e1t \u0111\u00e1ng kinh ng\u1ea1c v\u1edbi \u0111\u1ea7y \u0111\u1ee7 \u0111\u1ed9 rung (vibrato), luy\u1ebfn l\u00e1y v\u00e0 ti\u1ebfng l\u1ea5y h\u01a1i t\u1ef1 nhi\u00ean", "T\u00ednh n\u0103ng t\u00e1ch track (Stem Separation) cho ph\u00e9p t\u1ea3i ri\u00eang bi\u1ec7t t\u1eebng k\u00eanh \u00e2m thanh (vocal, tr\u1ed1ng, bass, nh\u1ea1c c\u1ee5)", "T\u00ednh n\u0103ng Remix v\u00e0 Inpainting gi\u00fap t\u1ea1o l\u1ea1i t\u1eebng \u0111o\u1ea1n khu\u00f4ng nh\u1ea1c c\u1ee5 th\u1ec3 ho\u1eb7c s\u1eeda l\u1eddi b\u00e0i h\u00e1t linh ho\u1ea1t", "H\u1ed7 tr\u1ee3 h\u00e0ng ch\u1ee5c th\u1ec3 lo\u1ea1i \u00e2m nh\u1ea1c phong ph\u00fa: t\u1eeb pop, jazz, rap \u0111\u1ebfn rock v\u00e0 giao h\u01b0\u1edfng th\u00ednh ph\u00f2ng"],
+    },
+    cons: {
+      en: ["Songs generate in 32-second sections initially, requiring successive extensions to build full 3-minute songs", "Stem separation is reserved for paid subscriber tiers"],
+      vi: ["B\u00e0i h\u00e1t ban \u0111\u1ea7u \u0111\u01b0\u1ee3c t\u1ea1o theo c\u00e1c ph\u00e2n \u0111o\u1ea1n 32 gi\u00e2y, c\u1ea7n b\u1ea5m n\u1ed1i ti\u1ebfp \u0111\u1ec3 t\u1ea1o th\u00e0nh b\u00e0i ho\u00e0n ch\u1ec9nh 3 ph\u00fat", "T\u00ednh n\u0103ng t\u00e1ch t\u1eebng d\u1ea3i \u00e2m thanh (Stems) ch\u1ec9 \u00e1p d\u1ee5ng cho c\u00e1c g\u00f3i tr\u1ea3 ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "100 credits/mo (~100 song generations)",
+                  "Standard audio quality",
+                  "Public community feed",
+                  "Commercial use restricted"
+            ]
+      },
+      {
+            "name": "Standard",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 8,
+            "currency": "USD",
+            "features": [
+                  "1,200 credits/mo",
+                  "Audio stem separation",
+                  "Custom cover art",
+                  "Priority generation speed",
+                  "Full commercial rights"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 30,
+            "priceAnnualMonthly": 24,
+            "currency": "USD",
+            "features": [
+                  "4,800 credits/mo",
+                  "Concurrent generation slots",
+                  "Top-tier audio bitrates",
+                  "Direct WAV exports"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.udio.com",
+    logoUrl: "/logos/udio.png",
+    alternatives: ["suno", "soundraw", "stable-audio"],
+  },
+  {
+    id: "soundraw",
+    slug: "soundraw",
+    name: "SOUNDRAW",
+    tagline: {
+      en: "Royalty-free AI music generator allowing creators to customize tempo, instruments, and track structure with zero copyright strikes.",
+      vi: "Tr\u00ecnh t\u1ea1o nh\u1ea1c AI b\u1ea3n quy\u1ec1n s\u1ea1ch cho ph\u00e9p t\u00f9y ch\u1ec9nh nh\u1ecbp \u0111\u1ed9, nh\u1ea1c c\u1ee5 v\u00e0 c\u1ea5u tr\u00fac b\u00e0i h\u00e1t, 100% kh\u00f4ng lo g\u1eady b\u1ea3n quy\u1ec1n.",
+    },
+    description: {
+      en: "SOUNDRAW gives content creators, YouTubers, and advertisers full control over background music. Select mood, genre, and duration, then customize energy levels and instrument mutes section by section.",
+      vi: "SOUNDRAW trao cho c\u00e1c YouTuber, nh\u00e0 s\u00e1ng t\u1ea1o n\u1ed9i dung v\u00e0 nh\u00e0 qu\u1ea3ng c\u00e1o quy\u1ec1n l\u00e0m ch\u1ee7 nh\u1ea1c n\u1ec1n. Ch\u1ec9 c\u1ea7n ch\u1ecdn t\u00e2m tr\u1ea1ng, th\u1ec3 lo\u1ea1i v\u00e0 \u0111\u1ed9 d\u00e0i, sau \u0111\u00f3 t\u00f9y ch\u1ec9nh cao tr\u00e0o v\u00e0 b\u1eadt t\u1eaft t\u1eebng nh\u1ea1c c\u1ee5 tr\u00ean timeline tr\u1ef1c quan.",
+    },
+    directAnswer: {
+      en: "SOUNDRAW is an AI-powered royalty-free music composition tool designed specifically for content creators and businesses. Unlike black-box song generators, SOUNDRAW features an interactive timeline where you can shorten intros, raise chorus energy, and mute instruments. Paid plans start at $19.99/month ($16.60 billed annually).",
+      vi: "SOUNDRAW l\u00e0 c\u00f4ng c\u1ee5 s\u00e1ng t\u00e1c nh\u1ea1c n\u1ec1n AI mi\u1ec5n ph\u00ed b\u1ea3n quy\u1ec1n (royalty-free) d\u00e0nh ri\u00eang cho YouTuber v\u00e0 doanh nghi\u1ec7p. \u0110i\u1ec3m v\u01b0\u1ee3t tr\u1ed9i l\u00e0 giao di\u1ec7n timeline tr\u1ef1c quan cho ph\u00e9p r\u00fat ng\u1eafn kh\u00fac d\u1ea1o \u0111\u1ea7u (intro), \u0111\u1ea9y cao tr\u00e0o \u0111o\u1ea1n \u0111i\u1ec7p kh\u00fac v\u00e0 t\u1eaft m\u1edf t\u1eebng nh\u1ea1c c\u1ee5 t\u00f9y \u00fd. Gi\u00e1 t\u1eeb $16.60/th\u00e1ng (thanh to\u00e1n n\u0103m).",
+    },
+    hubs: ["voice-audio"],
+    tags: ["Royalty-Free Music", "Background Music", "SOUNDRAW", "YouTube Audio", "Music Customizer"],
+    startingPrice: 16.6,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://soundraw.io/?via={code}",
+    adminAffiliateUrl: "https://soundraw.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 3500,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "YouTubers, podcast producers, game developers, and marketing agencies needing customized, copyright-safe background music that never triggers strikes.",
+        vi: "YouTuber, podcaster, nh\u00e0 ph\u00e1t tri\u1ec3n game v\u00e0 agency c\u1ea7n nh\u1ea1c n\u1ec1n an to\u00e0n b\u1ea3n quy\u1ec1n tuy\u1ec7t \u0111\u1ed1i, kh\u00f4ng bao gi\u1edd b\u1ecb \u0111\u00e1nh g\u1eady YouTube.",
+      },
+      notFor: {
+        en: "Singers looking for synthetic AI vocal cloning with customized English/Vietnamese lyrics.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng t\u00ecm ki\u1ebfm c\u00f4ng c\u1ee5 t\u1ea1o gi\u1ecdng ca s\u0129 h\u00e1t l\u1eddi b\u00e0i h\u00e1t ri\u00eang bi\u1ec7t.",
+      },
+      bottomLine: {
+        en: "The safest and most modular background music platform for commercial video creators, guaranteeing zero copyright headaches on YouTube or broadcast.",
+        vi: "N\u1ec1n t\u1ea3ng nh\u1ea1c n\u1ec1n an to\u00e0n v\u00e0 linh ho\u1ea1t nh\u1ea5t cho gi\u1edbi l\u00e0m video th\u01b0\u01a1ng m\u1ea1i, \u0111\u1ea3m b\u1ea3o 100% kh\u00f4ng bao gi\u1edd g\u1eb7p r\u1eafc r\u1ed1i b\u1ea3n quy\u1ec1n tr\u00ean YouTube.",
+      },
+    },
+    pros: {
+      en: ["100% royalty-free commercial license: monetize on YouTube, TV commercials, and podcasts with zero copyright strikes", "Modular timeline editor allows adjusting energy levels (low, medium, high) for each song section", "Mute or solo specific instruments (kick, snare, bass, guitar, melody) directly in the web app", "Export stems and high-fidelity uncompressed WAV files for audio mixing"],
+      vi: ["Gi\u1ea5y ph\u00e9p th\u01b0\u01a1ng m\u1ea1i b\u1ea3n quy\u1ec1n s\u1ea1ch 100%: b\u1eadt ki\u1ebfm ti\u1ec1n YouTube, qu\u1ea3ng c\u00e1o truy\u1ec1n h\u00ecnh v\u00e0 podcast an t\u00e2m tuy\u1ec7t \u0111\u1ed1i", "Tr\u00ecnh ch\u1ec9nh s\u1eeda timeline module cho ph\u00e9p t\u0103ng gi\u1ea3m m\u1ee9c n\u0103ng l\u01b0\u1ee3ng (\u00eam d\u1ecbu, s\u00f4i \u0111\u1ed9ng, cao tr\u00e0o) cho t\u1eebng ph\u00e2n \u0111o\u1ea1n", "B\u1eadt t\u1eaft (mute/solo) ri\u00eang t\u1eebng lo\u1ea1i nh\u1ea1c c\u1ee5 (tr\u1ed1ng kick, snare, bass, guitar, giai \u0111i\u1ec7u) ngay tr\u00ean web", "Xu\u1ea5t file \u00e2m thanh ch\u1ea5t l\u01b0\u1ee3ng cao kh\u00f4ng n\u00e9n chu\u1ea9n WAV v\u00e0 c\u00e1c k\u00eanh stems ri\u00eang ph\u1ee5c v\u1ee5 mix nh\u1ea1c"],
+    },
+    cons: {
+      en: ["Focuses primarily on instrumental tracks and musical beds rather than full vocal songs", "Free tier allows unlimited song generation but requires subscription to download audio files"],
+      vi: ["T\u1eadp trung chuy\u00ean s\u00e2u cho nh\u1ea1c n\u1ec1n nh\u1ea1c c\u1ee5 (instrumental) ch\u1ee9 kh\u00f4ng ch\u00fa tr\u1ecdng b\u00e0i h\u00e1t c\u00f3 ca s\u0129 h\u00e1t l\u1eddi", "G\u00f3i mi\u1ec5n ph\u00ed cho ph\u00e9p t\u1ea1o nh\u1ea1c kh\u00f4ng gi\u1edbi h\u1ea1n nh\u01b0ng c\u1ea7n \u0111\u0103ng k\u00fd thu\u00ea bao \u0111\u1ec3 t\u1ea3i file \u00e2m thanh v\u1ec1 m\u00e1y"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Unlimited song creations",
+                  "Interactive timeline customization",
+                  "Bookmark favorite tracks",
+                  "In-app playback"
+            ]
+      },
+      {
+            "name": "Creator",
+            "priceMonthly": 19.99,
+            "priceAnnualMonthly": 16.6,
+            "currency": "USD",
+            "features": [
+                  "Unlimited song downloads",
+                  "Monetize on YouTube & social media",
+                  "Commercial license",
+                  "MP3 & WAV exports"
+            ]
+      },
+      {
+            "name": "Artist / Pro",
+            "priceMonthly": 39.99,
+            "priceAnnualMonthly": 29.99,
+            "currency": "USD",
+            "features": [
+                  "Stem track downloads",
+                  "Distribute songs to Spotify & Apple Music",
+                  "Keep 100% recording royalties",
+                  "Priority support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://soundraw.io",
+    logoUrl: "/logos/soundraw.png",
+    alternatives: ["udio", "suno", "stable-audio"],
+  },
+  {
+    id: "stable-audio",
+    slug: "stable-audio",
+    name: "Stable Audio (Stability AI)",
+    tagline: {
+      en: "High-fidelity generative audio model producing full musical tracks and custom sound effects up to 3 minutes in 44.1kHz stereo.",
+      vi: "M\u00f4 h\u00ecnh \u00e2m thanh AI ch\u1ea5t l\u01b0\u1ee3ng cao t\u1ea1o nh\u1ea1c n\u1ec1n v\u00e0 hi\u1ec7u \u1ee9ng \u00e2m thanh Sound FX d\u00e0i t\u1edbi 3 ph\u00fat chu\u1ea9n stereo 44.1kHz.",
+    },
+    description: {
+      en: "Stable Audio by Stability AI utilizes latent diffusion to generate coherent musical compositions and sound effects. Fast and flexible, it crafts complete 3-minute instrumentals, foley sound effects, and audio samples.",
+      vi: "Stable Audio do Stability AI ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng c\u00f4ng ngh\u1ec7 khu\u1ebfch t\u00e1n ti\u1ec1m \u1ea9n \u0111\u1ec3 t\u1ea1o ra \u00e2m nh\u1ea1c v\u00e0 hi\u1ec7u \u1ee9ng \u00e2m thanh s\u1ed1ng \u0111\u1ed9ng. D\u1ec5 d\u00e0ng t\u1ea1o c\u00e1c b\u1ea3n nh\u1ea1c c\u1ee5 ho\u00e0n ch\u1ec9nh d\u00e0i t\u1edbi 3 ph\u00fat, ti\u1ebfng \u0111\u1ed9ng foley v\u00e0 m\u1eabu \u00e2m thanh (samples).",
+    },
+    directAnswer: {
+      en: "Stable Audio 2.0 is an advanced audio generation architecture from Stability AI. It can produce full-length tracks up to 3 minutes with structured intros, development, and outros, alongside audio-to-audio style transfer. Plans start at $11.99/month with a free monthly tier (20 generations/mo).",
+      vi: "Stable Audio 2.0 l\u00e0 ki\u1ebfn tr\u00fac \u00e2m thanh AI ti\u00ean ti\u1ebfn t\u1eeb Stability AI. C\u00f3 kh\u1ea3 n\u0103ng t\u1ea1o b\u1ea3n nh\u1ea1c ho\u00e0n ch\u1ec9nh d\u00e0i t\u1edbi 3 ph\u00fat c\u00f3 c\u1ea5u tr\u00fac m\u1edf \u0111\u1ea7u, ph\u00e1t tri\u1ec3n v\u00e0 k\u1ebft th\u00fac b\u00e0i b\u1ea3n, \u0111i k\u00e8m t\u00ednh n\u0103ng bi\u1ebfn \u0111\u1ed5i phong c\u00e1ch \u00e2m thanh (Audio-to-Audio). Gi\u00e1 t\u1eeb $11.99/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed 20 b\u1ea3n nh\u1ea1c/th\u00e1ng.",
+    },
+    hubs: ["voice-audio"],
+    tags: ["AI Audio", "Sound Effects", "Foley Audio", "Music Production", "Stability AI"],
+    startingPrice: 11.99,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://stableaudio.com/?via={code}",
+    adminAffiliateUrl: "https://stableaudio.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 2800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Game sound designers, film sound editors, electronic music producers, and podcast creators needing custom foley effects and ambient tracks.",
+        vi: "Chuy\u00ean vi\u00ean thi\u1ebft k\u1ebf \u00e2m thanh game, bi\u00ean t\u1eadp vi\u00ean \u00e2m thanh phim, nh\u00e0 s\u1ea3n xu\u1ea5t nh\u1ea1c \u0111i\u1ec7n t\u1eed c\u1ea7n ti\u1ebfng \u0111\u1ed9ng foley v\u00e0 nh\u1ea1c kh\u00f4ng gian.",
+      },
+      notFor: {
+        en: "Users looking for human vocal singing with explicit song lyric recitation.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng mu\u1ed1n t\u1ea1o b\u00e0i h\u00e1t c\u00f3 ca s\u0129 h\u00e1t r\u00f5 l\u1eddi ca theo k\u1ecbch b\u1ea3n v\u0103n b\u1ea3n.",
+      },
+      bottomLine: {
+        en: "The premier tool for bespoke sound design, foley creation, and long-form instrumental music generation.",
+        vi: "C\u00f4ng c\u1ee5 h\u00e0ng \u0111\u1ea7u cho vi\u1ec7c thi\u1ebft k\u1ebf ti\u1ebfng \u0111\u1ed9ng foley ri\u00eang bi\u1ec7t v\u00e0 s\u1ea3n xu\u1ea5t nh\u1ea1c n\u1ec1n kh\u00f4ng l\u1eddi \u0111\u1ed9 d\u00e0i l\u00ean t\u1edbi 3 ph\u00fat.",
+      },
+    },
+    pros: {
+      en: ["Generates continuous audio tracks up to 3 minutes in length with clear structural progression", "Audio-to-Audio feature allows uploading a voice or humming sample to guide the generated music style", "Unrivaled sound effect (SFX) creation for game development: footsteps, laser blasts, rain, and crowd murmurs", "Trained exclusively on licensed AudioSparx audio datasets for commercial peace of mind"],
+      vi: ["T\u1ea1o c\u00e1c b\u1ea3n nh\u1ea1c k\u00e9o d\u00e0i li\u00ean t\u1ee5c t\u1edbi 3 ph\u00fat v\u1edbi c\u1ea5u tr\u00fac ph\u00e1t tri\u1ec3n giai \u0111i\u1ec7u r\u00f5 r\u00e0ng", "T\u00ednh n\u0103ng Audio-to-Audio cho ph\u00e9p t\u1ea3i l\u00ean m\u1ed9t \u0111o\u1ea1n ng\u00e2m nga b\u1eb1ng gi\u1ecdng n\u00f3i \u0111\u1ec3 AI ph\u1ed5 nh\u1ea1c th\u00e0nh nh\u1ea1c c\u1ee5", "Kh\u1ea3 n\u0103ng t\u1ea1o hi\u1ec7u \u1ee9ng \u00e2m thanh (SFX) v\u00f4 \u0111\u1ed1i cho l\u1eadp tr\u00ecnh game: ti\u1ebfng b\u01b0\u1edbc ch\u00e2n, ti\u1ebfng s\u00fang laser, m\u01b0a r\u01a1i", "\u0110\u01b0\u1ee3c hu\u1ea5n luy\u1ec7n \u0111\u1ed9c quy\u1ec1n tr\u00ean t\u1eadp d\u1eef li\u1ec7u AudioSparx c\u00f3 b\u1ea3n quy\u1ec1n b\u1ea3o \u0111\u1ea3m an to\u00e0n th\u01b0\u01a1ng m\u1ea1i"],
+    },
+    cons: {
+      en: ["Free tier generations do not include commercial usage rights", "Synthesizing complex multi-singer pop choruses is better suited for Udio or Suno"],
+      vi: ["C\u00e1c b\u1ea3n nh\u1ea1c t\u1ea1o \u1edf g\u00f3i mi\u1ec5n ph\u00ed kh\u00f4ng bao g\u1ed3m quy\u1ec1n s\u1eed d\u1ee5ng th\u01b0\u01a1ng m\u1ea1i", "Vi\u1ec7c t\u1ea1o b\u00e0i h\u00e1t c\u00f3 nhi\u1ec1u ca s\u0129 h\u00e1t h\u00f2a gi\u1ecdng th\u00ec Suno ho\u1eb7c Udio s\u1ebd chuy\u00ean bi\u1ec7t h\u01a1n"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "20 tracks/mo (up to 3 min each)",
+                  "Standard generation speed",
+                  "Web player access",
+                  "Non-commercial license"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 11.99,
+            "priceAnnualMonthly": 9.99,
+            "currency": "USD",
+            "features": [
+                  "500 tracks/mo",
+                  "Audio-to-audio uploads",
+                  "Commercial licensing",
+                  "Uncompressed 44.1kHz WAV download"
+            ]
+      },
+      {
+            "name": "Studio",
+            "priceMonthly": 29.99,
+            "priceAnnualMonthly": 24.99,
+            "currency": "USD",
+            "features": [
+                  "1,500 tracks/mo",
+                  "Enterprise commercial rights",
+                  "Priority GPU servers",
+                  "Early access to new checkpoints"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://stableaudio.com",
+    logoUrl: "/logos/stable-audio.png",
+    alternatives: ["soundraw", "udio", "suno"],
+  },
+  {
+    id: "flux-ai",
+    slug: "flux-ai",
+    name: "FLUX.1 (Black Forest Labs)",
+    tagline: {
+      en: "Open-weights frontier text-to-image foundation model setting the world record for photorealism and anatomy accuracy.",
+      vi: "M\u00f4 h\u00ecnh t\u1ea1o \u1ea3nh n\u1ec1n t\u1ea3ng m\u00e3 ngu\u1ed3n m\u1edf h\u00e0ng \u0111\u1ea7u th\u1ebf gi\u1edbi l\u1eadp k\u1ef7 l\u1ee5c v\u1ec1 \u0111\u1ed9 ch\u00e2n th\u1ef1c quang h\u1ecdc v\u00e0 gi\u1ea3i ph\u1eabu con ng\u01b0\u1eddi.",
+    },
+    description: {
+      en: "FLUX.1 is developed by the original creators of Stable Diffusion at Black Forest Labs. With a 12-billion parameter hybrid transformer architecture, it sets new visual records for skin textures, hands, and typography.",
+      vi: "FLUX.1 \u0111\u01b0\u1ee3c ph\u00e1t tri\u1ec3n b\u1edfi \u0111\u1ed9i ng\u0169 k\u1ef9 s\u01b0 s\u00e1ng l\u1eadp Stable Diffusion t\u1ea1i Black Forest Labs. V\u1edbi ki\u1ebfn tr\u00fac transformer 12 t\u1ef7 tham s\u1ed1, m\u00f4 h\u00ecnh l\u1eadp k\u1ef7 l\u1ee5c th\u1ebf gi\u1edbi m\u1edbi v\u1ec1 \u0111\u1ed9 s\u1eafc n\u00e9t c\u1ee7a da, ng\u00f3n tay v\u00e0 kh\u1ea3 n\u0103ng v\u1ebd ch\u1eef typography chu\u1ea9n x\u00e1c.",
+    },
+    directAnswer: {
+      en: "FLUX.1 by Black Forest Labs is the reigning champion of generative image quality. Available in three variants (FLUX.1 [pro], [dev], and [schnell]), it produces photorealistic skin details, complex crowd scenes, and readable text. Open weights can be run locally for free, with cloud APIs starting at $0.03/image.",
+      vi: "FLUX.1 c\u1ee7a Black Forest Labs l\u00e0 qu\u00e1n qu\u00e2n th\u1ebf gi\u1edbi hi\u1ec7n nay v\u1ec1 ch\u1ea5t l\u01b0\u1ee3ng \u1ea3nh t\u1ea1o sinh. Ra m\u1eaft v\u1edbi 3 bi\u1ebfn th\u1ec3 (FLUX.1 [pro], [dev] v\u00e0 [schnell]), ph\u1ea7n m\u1ec1m t\u1ea1o ra k\u1ebft c\u1ea5u da ng\u01b0\u1eddi si\u00eau th\u1ef1c, c\u1ea3nh \u0111\u00f4ng ng\u01b0\u1eddi ph\u1ee9c t\u1ea1p v\u00e0 ch\u1eef vi\u1ebft r\u00f5 r\u00e0ng. B\u1ea3n m\u00e3 ngu\u1ed3n m\u1edf c\u00f3 th\u1ec3 t\u1ea3i v\u1ec1 ch\u1ea1y mi\u1ec5n ph\u00ed tr\u00ean m\u00e1y t\u00ednh ho\u1eb7c qua API t\u1eeb $0.03/\u1ea3nh.",
+    },
+    hubs: ["image-design", "advertising"],
+    tags: ["FLUX.1", "Black Forest Labs", "Photorealism", "Image Generation", "Open Weights"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://blackforestlabs.ai/?via={code}",
+    adminAffiliateUrl: "https://blackforestlabs.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 9200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Photographers, commercial advertisers, visual artists, and developers wanting state-of-the-art photorealism without proprietary Midjourney walls.",
+        vi: "Nhi\u1ebfp \u1ea3nh gia, chuy\u00ean vi\u00ean qu\u1ea3ng c\u00e1o th\u01b0\u01a1ng m\u1ea1i, ngh\u1ec7 s\u0129 th\u1ecb gi\u00e1c v\u00e0 l\u1eadp tr\u00ecnh vi\u00ean c\u1ea7n ch\u1ea5t l\u01b0\u1ee3ng \u1ea3nh ch\u00e2n th\u1ef1c \u0111\u1ec9nh cao kh\u00f4ng ph\u1ee5 thu\u1ed9c Midjourney.",
+      },
+      notFor: {
+        en: "Casual mobile users wanting quick 1-click video animations or voice translation.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng di \u0111\u1ed9ng ch\u1ec9 c\u1ea7n l\u00e0m hi\u1ec7u \u1ee9ng video chuy\u1ec3n \u0111\u1ed9ng ng\u1eafn ho\u1eb7c d\u1ecbch gi\u1ecdng n\u00f3i.",
+      },
+      bottomLine: {
+        en: "The definitive new benchmark in generative imaging, combining open weights flexibility with jaw-dropping photorealistic beauty.",
+        vi: "Th\u01b0\u1edbc \u0111o ti\u00eau chu\u1ea9n m\u1edbi s\u1ed1 m\u1ed9t th\u1ebf gi\u1edbi v\u1ec1 t\u1ea1o \u1ea3nh AI, k\u1ebft h\u1ee3p s\u1ef1 t\u1ef1 do c\u1ee7a m\u00e3 ngu\u1ed3n m\u1edf v\u1edbi v\u1ebb \u0111\u1eb9p ch\u00e2n th\u1ef1c kinh ng\u1ea1c.",
+      },
+    },
+    pros: {
+      en: ["Flawless human hands, fingernails, skin pores, and natural eye reflections", "Superb typography rendering capable of writing complete quotes, signs, and apparel logos", "Open-weights variants (FLUX.1 [schnell] and [dev]) can be downloaded and run locally on ComfyUI", "High prompt compliance that faithfully follows complex spatial relationships and styling cues"],
+      vi: ["B\u00e0n tay ng\u01b0\u1eddi ho\u00e0n h\u1ea3o t\u1eebng m\u00f3ng tay, l\u1ed7 ch\u00e2n l\u00f4ng v\u00e0 \u00e1nh m\u1eaft ph\u1ea3n chi\u1ebfu ch\u00e2n th\u1ef1c tuy\u1ec7t \u0111\u1ed1i", "V\u1ebd ch\u1eef vi\u1ebft typography chu\u1ea9n x\u00e1c c\u00f3 th\u1ec3 in r\u00f5 t\u1eebng c\u00e2u slogan, bi\u1ec3n hi\u1ec7u v\u00e0 logo \u00e1o qu\u1ea7n", "C\u00e1c phi\u00ean b\u1ea3n m\u00e3 ngu\u1ed3n m\u1edf (FLUX.1 [schnell] v\u00e0 [dev]) c\u00f3 th\u1ec3 t\u1ea3i v\u1ec1 ch\u1ea1y ho\u00e0n to\u00e0n mi\u1ec5n ph\u00ed tr\u00ean ComfyUI", "\u0110\u1ed9 b\u00e1m s\u00e1t c\u00e2u l\u1ec7nh si\u00eau cao: hi\u1ec3u \u0111\u00fang b\u1ed1 c\u1ee5c kh\u00f4ng gian ph\u1ee9c t\u1ea1p v\u00e0 c\u00e1c s\u1eafc th\u00e1i phong c\u00e1ch"],
+    },
+    cons: {
+      en: ["Local execution of the full 12B parameter model requires 16GB+ VRAM on modern Nvidia GPUs", "Commercial rights for the top-tier FLUX.1 [pro] model require API licensing"],
+      vi: ["Ch\u1ea1y m\u00f4 h\u00ecnh 12 t\u1ef7 tham s\u1ed1 tr\u00ean m\u00e1y t\u00ednh \u0111\u00f2i h\u1ecfi card m\u00e0n h\u00ecnh Nvidia c\u00f3 t\u1ed1i thi\u1ec3u 16GB VRAM", "Quy\u1ec1n th\u01b0\u01a1ng m\u1ea1i cho phi\u00ean b\u1ea3n cao nh\u1ea5t FLUX.1 [pro] y\u00eau c\u1ea7u d\u00f9ng qua API c\u00f3 tr\u1ea3 ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "FLUX.1 [schnell] Open",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "100% free open weights (Apache 2.0)",
+                  "Fast 4-step generation",
+                  "Run locally on PC",
+                  "Commercial use permitted"
+            ]
+      },
+      {
+            "name": "FLUX Cloud API",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 10,
+            "currency": "USD",
+            "features": [
+                  "$0.03 to $0.05 per image",
+                  "Instant cloud inference",
+                  "Access to FLUX.1 [pro]",
+                  "No hardware required"
+            ]
+      },
+      {
+            "name": "Enterprise BFL Hub",
+            "priceMonthly": 100,
+            "priceAnnualMonthly": 85,
+            "currency": "USD",
+            "features": [
+                  "Dedicated enterprise endpoints",
+                  "Custom LoRA hosting",
+                  "SLA uptime guarantee",
+                  "Volume discounts"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://blackforestlabs.ai",
+    logoUrl: "/logos/flux-ai.png",
+    alternatives: ["midjourney", "stable-diffusion", "ideogram"],
+  },
+  {
+    id: "krea-ai",
+    slug: "krea-ai",
+    name: "Krea AI",
+    tagline: {
+      en: "Real-time generative canvas with instant brush response, high-definition upscaling, and creative video animation.",
+      vi: "Canvas \u0111\u1ed3 h\u1ecda AI th\u1eddi gian th\u1ef1c v\u1edbi n\u00e9t c\u1ecd ph\u1ea3n h\u1ed3i t\u1ee9c th\u00ec, ph\u00f3ng to \u1ea3nh si\u00eau n\u00e9t v\u00e0 t\u1ea1o chuy\u1ec3n \u0111\u1ed9ng video s\u00e1ng t\u1ea1o.",
+    },
+    description: {
+      en: "Krea AI revolutionized creative ideation with its real-time canvas. As you draw basic shapes or move objects on the left, high-fidelity AI artwork generates instantaneously on the right with zero render delay.",
+      vi: "Krea AI c\u00e1ch m\u1ea1ng h\u00f3a vi\u1ec7c t\u00ecm ki\u1ebfm \u00fd t\u01b0\u1edfng thi\u1ebft k\u1ebf b\u1eb1ng canvas th\u1eddi gian th\u1ef1c. Khi b\u1ea1n v\u1eeba \u0111\u1eb7t n\u00e9t v\u1ebd ho\u1eb7c di chuy\u1ec3n h\u00ecnh kh\u1ed1i \u1edf b\u00ean tr\u00e1i, t\u00e1c ph\u1ea9m AI \u0111\u1ed9 n\u00e9t cao s\u1ebd hi\u1ec7n ra ngay l\u1eadp t\u1ee9c \u1edf b\u00ean ph\u1ea3i m\u00e0 kh\u00f4ng c\u00f3 \u0111\u1ed9 tr\u1ec5.",
+    },
+    directAnswer: {
+      en: "Krea AI is a real-time creative visual suite. It combines instant low-latency drawing canvas with an industry-leading AI Enhancer & Upscaler that transforms blurry photos into sharp 4K/8K images with added realistic texture. Plans start at $10/month with a free daily plan.",
+      vi: "Krea AI l\u00e0 b\u1ed9 c\u00f4ng c\u1ee5 s\u00e1ng t\u1ea1o th\u1ecb gi\u00e1c th\u1eddi gian th\u1ef1c. Ph\u1ea7n m\u1ec1m k\u1ebft h\u1ee3p canvas v\u1ebd \u0111\u1ed9 tr\u1ec5 th\u1ea5p v\u1edbi c\u00f4ng c\u1ee5 AI Enhancer & Upscaler h\u00e0ng \u0111\u1ea7u th\u1ecb tr\u01b0\u1eddng, bi\u1ebfn c\u00e1c b\u1ee9c \u1ea3nh m\u1edd th\u00e0nh \u1ea3nh 4K/8K si\u00eau n\u00e9t v\u1edbi v\u00e2n b\u1ec1 m\u1eb7t \u0111\u01b0\u1ee3c b\u00f9 \u0111\u1eafp ch\u00e2n th\u1ef1c. Gi\u00e1 t\u1eeb $10/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed h\u00e0ng ng\u00e0y.",
+    },
+    hubs: ["image-design", "presentation-design"],
+    tags: ["Real-time AI", "AI Upscaler", "Krea AI", "Image Enhancer", "Creative Canvas"],
+    startingPrice: 10,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.krea.ai/?via={code}",
+    adminAffiliateUrl: "https://www.krea.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4700,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Digital illustrators, concept artists, graphic designers, and photographers looking for instant visual feedback and hyper-resolution upscaling.",
+        vi: "H\u1ecda s\u0129 k\u1ef9 thu\u1eadt s\u1ed1, ngh\u1ec7 s\u0129 concept, nh\u00e0 thi\u1ebft k\u1ebf v\u00e0 nhi\u1ebfp \u1ea3nh gia c\u1ea7n nh\u00ecn th\u1ea5y ngay k\u1ebft qu\u1ea3 khi v\u1ebd v\u00e0 ph\u00f3ng to \u1ea3nh si\u00eau n\u00e9t.",
+      },
+      notFor: {
+        en: "Teams seeking automated multi-channel CRM lead distribution.",
+        vi: "C\u00e1c \u0111\u1ed9i ng\u0169 t\u00ecm ki\u1ebfm gi\u1ea3i ph\u00e1p ph\u00e2n b\u1ed5 kh\u00e1ch h\u00e0ng ti\u1ec1m n\u0103ng CRM.",
+      },
+      bottomLine: {
+        en: "The most responsive and interactive AI drawing canvas available, backed by an upscaler that works genuine miracles on low-resolution imagery.",
+        vi: "Canvas v\u1ebd AI t\u01b0\u01a1ng t\u00e1c nh\u1ea1y b\u00e9n nh\u1ea5t hi\u1ec7n nay, \u0111i k\u00e8m c\u00f4ng c\u1ee5 ph\u1ee5c ch\u1ebf ph\u00f3ng to \u1ea3nh l\u00e0m n\u00ean \u0111i\u1ec1u k\u1ef3 di\u1ec7u cho c\u00e1c b\u1ee9c \u1ea3nh ch\u1ee5p m\u1edd.",
+      },
+    },
+    pros: {
+      en: ["Real-time canvas updates live at 30+ FPS as you draw, move circles, or change prompts", "AI Enhancer & Upscaler reconstructs pores, hair strands, and fabric textures up to 8K resolution", "Video generation tool converts keyframes into surreal animated loops and cinematic camera pans", "Screen to AI feature captures your Figma, 3D viewport, or screen and translates it into photorealism"],
+      vi: ["Canvas v\u1ebd ph\u1ea3n h\u1ed3i th\u1eddi gian th\u1ef1c v\u1edbi t\u1ed1c \u0111\u1ed9 h\u01a1n 30 FPS ngay khi b\u1ea1n di chuy\u1ec3n n\u00e9t v\u1ebd ho\u1eb7c g\u00f5 ch\u1eef", "C\u00f4ng c\u1ee5 AI Enhancer & Upscaler t\u00e1i t\u1ea1o t\u1eebng s\u1ee3i t\u00f3c, l\u1ed7 ch\u00e2n l\u00f4ng v\u00e0 v\u00e2n v\u1ea3i s\u1eafc n\u00e9t l\u00ean \u0111\u1ebfn chu\u1ea9n 8K", "C\u00f4ng c\u1ee5 t\u1ea1o video AI chuy\u1ec3n \u0111\u1ed5i \u1ea3nh th\u00e0nh c\u00e1c v\u00f2ng l\u1eb7p ho\u1ea1t h\u1ecda v\u00e0 chuy\u1ec3n \u0111\u1ed9ng m\u00e1y quay m\u1ec1m m\u1ea1i", "T\u00ednh n\u0103ng Screen-to-AI ch\u1ee5p tr\u1ef1c ti\u1ebfp m\u00e0n h\u00ecnh Figma ho\u1eb7c ph\u1ea7n m\u1ec1m 3D \u0111\u1ec3 AI k\u1ebft xu\u1ea5t th\u00e0nh \u1ea3nh \u0111\u1eddi th\u1ef1c"],
+    },
+    cons: {
+      en: ["Extreme 8K upscaling requires higher tier credit packages", "Real-time mode requires a reasonably modern desktop browser and stable internet connection"],
+      vi: ["Ph\u00f3ng to \u0111\u1ed9 n\u00e9t c\u1ef1c \u0111\u1ea1i 8K ti\u00eau t\u1ed1n nhi\u1ec1u \u0111i\u1ec3m t\u00edn d\u1ee5ng \u1edf c\u00e1c g\u00f3i cao", "Ch\u1ebf \u0111\u1ed9 v\u1ebd th\u1eddi gian th\u1ef1c \u0111\u00f2i h\u1ecfi tr\u00ecnh duy\u1ec7t m\u00e1y t\u00ednh hi\u1ec7n \u0111\u1ea1i v\u00e0 \u0111\u01b0\u1eddng truy\u1ec1n internet \u1ed5n \u0111\u1ecbnh"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Real-time canvas standard access",
+                  "Up to 50 image upscales/mo",
+                  "Public generations feed",
+                  "Standard speeds"
+            ]
+      },
+      {
+            "name": "Basic",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 8,
+            "currency": "USD",
+            "features": [
+                  "Unlimited real-time generation",
+                  "Fast AI upscales (up to 4K)",
+                  "Private mode generation",
+                  "Commercial rights"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 30,
+            "priceAnnualMonthly": 24,
+            "currency": "USD",
+            "features": [
+                  "Up to 8K ultra upscaling",
+                  "Priority GPU servers",
+                  "Advanced AI video animation",
+                  "Early feature access"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.krea.ai",
+    logoUrl: "/logos/krea-ai.png",
+    alternatives: ["leonardo-ai", "midjourney", "flux-ai"],
+  },
+  {
+    id: "recraft-ai",
+    slug: "recraft-ai",
+    name: "Recraft AI",
+    tagline: {
+      en: "Infinite design canvas for generating brand-consistent vector art (SVG), 3D illustrations, and digital icons.",
+      vi: "Kh\u00f4ng gian thi\u1ebft k\u1ebf v\u00f4 t\u1eadn \u0111\u1ec3 t\u1ea1o \u0111\u1ed3 h\u1ecda vector (SVG), h\u00ecnh minh h\u1ecda 3D v\u00e0 b\u1ed9 icon \u0111\u1ed3ng b\u1ed9 nh\u1eadn di\u1ec7n th\u01b0\u01a1ng hi\u1ec7u.",
+    },
+    description: {
+      en: "Recraft is designed specifically for professional graphic designers. It generates clean, layered vector graphics, 3D style icons, and marketing assets while enforcing strict brand color palettes and geometric style consistency.",
+      vi: "Recraft \u0111\u01b0\u1ee3c thi\u1ebft k\u1ebf chuy\u00ean bi\u1ec7t cho gi\u1edbi thi\u1ebft k\u1ebf \u0111\u1ed3 h\u1ecda chuy\u00ean nghi\u1ec7p. Ph\u1ea7n m\u1ec1m t\u1ea1o ra c\u00e1c file vector SVG nhi\u1ec1u l\u1edbp s\u1ea1ch \u0111\u1eb9p, icon 3D v\u00e0 \u1ea5n ph\u1ea9m ti\u1ebfp th\u1ecb, kh\u00f3a ch\u1eb7t b\u1ea3ng m\u00e0u nh\u1eadn di\u1ec7n th\u01b0\u01a1ng hi\u1ec7u v\u00e0 phong c\u00e1ch h\u00ecnh h\u1ecdc.",
+    },
+    directAnswer: {
+      en: "Recraft AI is an infinite visual design canvas that outputs true editable vector SVGs and raster graphics. Unlike casual prompt tools, Recraft allows designers to define color palettes, maintain style consistency across 100+ assets, and export production-ready vector paths. Plans start at $20/month with a free daily plan.",
+      vi: "Recraft AI l\u00e0 kh\u00f4ng gian thi\u1ebft k\u1ebf v\u00f4 t\u1eadn xu\u1ea5t ra c\u00e1c t\u1ec7p vector SVG ch\u1ec9nh s\u1eeda \u0111\u01b0\u1ee3c t\u1eebng \u0111\u01b0\u1eddng n\u00e9t v\u00e0 \u0111\u1ed3 h\u1ecda raster ch\u1ea5t l\u01b0\u1ee3ng cao. N\u1ec1n t\u1ea3ng cho ph\u00e9p nh\u00e0 thi\u1ebft k\u1ebf c\u00e0i \u0111\u1eb7t b\u1ea3ng m\u00e3 m\u00e0u th\u01b0\u01a1ng hi\u1ec7u, \u0111\u1ed3ng b\u1ed9 phong c\u00e1ch cho h\u00e0ng tr\u0103m icon c\u00f9ng l\u00fac v\u00e0 xu\u1ea5t file in \u1ea5n chu\u1ea9n m\u1ef1c. Gi\u00e1 t\u1eeb $20/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed h\u00e0ng ng\u00e0y.",
+    },
+    hubs: ["image-design", "presentation-design"],
+    tags: ["Vector AI", "SVG Generator", "Icon Design", "Brand Consistency", "Recraft AI"],
+    startingPrice: 20,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.recraft.ai/?via={code}",
+    adminAffiliateUrl: "https://www.recraft.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 3900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "UI/UX designers, brand identity creators, marketing teams, and vector illustrators needing editable SVGs and consistent design systems.",
+        vi: "Nh\u00e0 thi\u1ebft k\u1ebf UI/UX, chuy\u00ean vi\u00ean nh\u1eadn di\u1ec7n th\u01b0\u01a1ng hi\u1ec7u v\u00e0 h\u1ecda s\u0129 v\u1ebd minh h\u1ecda c\u1ea7n xu\u1ea5t file SVG ch\u1ec9nh s\u1eeda \u0111\u01b0\u1ee3c tr\u00ean Illustrator/Figma.",
+      },
+      notFor: {
+        en: "Videographers looking for multi-camera video timelines and audio stem mixing.",
+        vi: "Ng\u01b0\u1eddi d\u1ef1ng video c\u1ea7n timeline c\u1eaft gh\u00e9p phim v\u00e0 l\u1ecdc \u00e2m thanh.",
+      },
+      bottomLine: {
+        en: "The single best generative tool for vector graphics, icons, and branded design assets that need to be edited in Figma or Illustrator.",
+        vi: "C\u00f4ng c\u1ee5 AI t\u1ed1t nh\u1ea5t hi\u1ec7n nay v\u1ec1 \u0111\u1ed3 h\u1ecda vector, icon v\u00e0 t\u00e0i nguy\u00ean th\u01b0\u01a1ng hi\u1ec7u \u0111\u1ec3 nh\u1eadp tr\u1ef1c ti\u1ebfp v\u00e0o Figma hay Illustrator.",
+      },
+    },
+    pros: {
+      en: ["Generates genuine, clean vector SVGs with editable paths, anchor points, and layered groups", "Brand Palette lock ensures all generated assets strictly adhere to your exact hex color codes", "Huge variety of specialized visual styles: 3D clay, hand-drawn vector, pixel art, flat icon, and linework", "Infinite canvas allows creating entire design systems and app icon sets side by side"],
+      vi: ["T\u1ea1o ra c\u00e1c t\u1ec7p vector SVG chu\u1ea9n m\u1ef1c v\u1edbi \u0111\u01b0\u1eddng n\u00e9t, \u0111i\u1ec3m neo (anchor points) v\u00e0 c\u00e1c l\u1edbp layer c\u00f3 th\u1ec3 ch\u1ec9nh s\u1eeda", "Kh\u00f3a b\u1ea3ng m\u00e0u th\u01b0\u01a1ng hi\u1ec7u (Brand Palette) gi\u00fap m\u1ecdi \u1ea5n ph\u1ea9m tu\u00e2n th\u1ee7 ch\u00ednh x\u00e1c t\u1eebng m\u00e3 m\u00e0u hex quy \u0111\u1ecbnh", "\u0110a d\u1ea1ng phong c\u00e1ch thi\u1ebft k\u1ebf chuy\u00ean s\u00e2u: \u0111\u1ea5t s\u00e9t 3D, minh h\u1ecda v\u1ebd tay, pixel art, icon ph\u1eb3ng v\u00e0 n\u00e9t v\u1ebd \u0111\u01a1n", "Kh\u00f4ng gian l\u00e0m vi\u1ec7c v\u00f4 c\u1ef1c (Infinite Canvas) cho ph\u00e9p thi\u1ebft k\u1ebf to\u00e0n b\u1ed9 h\u1ec7 th\u1ed1ng icon \u1ee9ng d\u1ee5ng c\u00f9ng l\u00fac"],
+    },
+    cons: {
+      en: ["Complex raster photorealism is less detailed than Midjourney (focus is heavily vector and design-centric)", "Free tier generations are visible in the public community gallery"],
+      vi: ["C\u00e1c \u1ea3nh ch\u1ee5p ng\u01b0\u1eddi \u0111\u1eddi th\u1ef1c si\u00eau th\u1ef1c kh\u00f4ng qu\u00e1 chuy\u00ean s\u00e2u nh\u01b0 Midjourney (th\u1ebf m\u1ea1nh l\u00e0 vector v\u00e0 \u0111\u1ed3 h\u1ecda)", "\u1ea4n ph\u1ea9m t\u1ea1o \u1edf g\u00f3i mi\u1ec5n ph\u00ed s\u1ebd hi\u1ec3n th\u1ecb c\u00f4ng khai tr\u00ean b\u1ea3ng tin c\u1ed9ng \u0111\u1ed3ng Recraft"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "50 daily generation credits",
+                  "Infinite canvas workspace",
+                  "SVG vector exports",
+                  "Public community gallery"
+            ]
+      },
+      {
+            "name": "Basic",
+            "priceMonthly": 20,
+            "priceAnnualMonthly": 16,
+            "currency": "USD",
+            "features": [
+                  "1,000 priority credits/mo",
+                  "Private generation mode",
+                  "High-res commercial rights",
+                  "Custom style training"
+            ]
+      },
+      {
+            "name": "Pro Team",
+            "priceMonthly": 40,
+            "priceAnnualMonthly": 32,
+            "currency": "USD",
+            "features": [
+                  "2,500 priority credits/mo",
+                  "Multiplayer team collaboration",
+                  "Shared brand libraries",
+                  "Priority customer success"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.recraft.ai",
+    logoUrl: "/logos/recraft-ai.png",
+    alternatives: ["canva-ai", "adobe-firefly", "ideogram"],
+  },
+  {
+    id: "freepik-mystic",
+    slug: "freepik-mystic",
+    name: "Freepik Mystic",
+    tagline: {
+      en: "Photorealistic generative AI model and design suite built for commercial advertising and marketing visual production.",
+      vi: "M\u00f4 h\u00ecnh \u0111\u1ed3 h\u1ecda AI ch\u00e2n th\u1ef1c v\u00e0 b\u1ed9 c\u00f4ng c\u1ee5 thi\u1ebft k\u1ebf chuy\u00ean nghi\u1ec7p d\u00e0nh cho qu\u1ea3ng c\u00e1o th\u01b0\u01a1ng m\u1ea1i v\u00e0 ti\u1ebfp th\u1ecb.",
+    },
+    description: {
+      en: "Freepik Mystic is a dedicated high-end image model developed by Freepik. It allows creative teams to produce ultra-photorealistic marketing photography, product showcases, and campaign assets with guaranteed commercial licensing.",
+      vi: "Freepik Mystic l\u00e0 m\u00f4 h\u00ecnh t\u1ea1o \u1ea3nh cao c\u1ea5p do Freepik ph\u00e1t tri\u1ec3n. Cho ph\u00e9p c\u00e1c \u0111\u1ed9i ng\u0169 s\u00e1ng t\u1ea1o s\u1ea3n xu\u1ea5t \u1ea3nh ch\u1ee5p th\u01b0\u01a1ng m\u1ea1i ch\u00e2n th\u1ef1c, h\u00ecnh \u1ea3nh s\u1ea3n ph\u1ea9m n\u1ed5i b\u1eadt cho c\u00e1c chi\u1ebfn d\u1ecbch ti\u1ebfp th\u1ecb v\u1edbi \u0111\u1ea7y \u0111\u1ee7 b\u1ea3n quy\u1ec1n th\u01b0\u01a1ng m\u1ea1i.",
+    },
+    directAnswer: {
+      en: "Freepik Mystic is an elite text-to-image engine embedded directly inside Freepik's massive creative platform. It renders cinematic light, accurate human anatomy, and product photography without complex prompt engineering. Plans start at $12/month as part of Freepik Premium.",
+      vi: "Freepik Mystic l\u00e0 c\u1ed7 m\u00e1y t\u1ea1o \u1ea3nh AI cao c\u1ea5p t\u00edch h\u1ee3p trong kho t\u00e0i nguy\u00ean kh\u1ed5ng l\u1ed3 c\u1ee7a Freepik. Ph\u1ea7n m\u1ec1m k\u1ebft xu\u1ea5t \u00e1nh s\u00e1ng \u0111i\u1ec7n \u1ea3nh, h\u00ecnh th\u1ec3 chu\u1ea9n x\u00e1c v\u00e0 \u1ea3nh ch\u1ee5p s\u1ea3n ph\u1ea9m m\u00e0 kh\u00f4ng \u0111\u00f2i h\u1ecfi c\u00e2u l\u1ec7nh ph\u1ee9c t\u1ea1p. Gi\u00e1 t\u1eeb $12/th\u00e1ng \u0111i k\u00e8m to\u00e0n b\u1ed9 quy\u1ec1n l\u1ee3i Freepik Premium.",
+    },
+    hubs: ["image-design", "advertising"],
+    tags: ["AI Photography", "Freepik Mystic", "Commercial Assets", "Product Photography", "Ad Design"],
+    startingPrice: 12,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.freepik.com/ai?via={code}",
+    adminAffiliateUrl: "https://www.freepik.com/ai?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 5400,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Marketing agencies, ecommerce store owners, and graphic designers wanting instant commercial stock photography without paying individual photo fees.",
+        vi: "Agency truy\u1ec1n th\u00f4ng, ch\u1ee7 shop th\u01b0\u01a1ng m\u1ea1i \u0111i\u1ec7n t\u1eed v\u00e0 designer c\u1ea7n kho \u1ea3nh th\u01b0\u01a1ng m\u1ea1i ch\u1ea5t l\u01b0\u1ee3ng cao m\u00e0 kh\u00f4ng t\u1ed1n ph\u00ed mua l\u1ebb t\u1eebng t\u1ea5m.",
+      },
+      notFor: {
+        en: "Software engineers seeking terminal-based IDE code autocomplete.",
+        vi: "L\u1eadp tr\u00ecnh vi\u00ean c\u1ea7n ti\u1ec7n \u00edch g\u1ee3i \u00fd code tr\u00ean d\u00f2ng l\u1ec7nh terminal.",
+      },
+      bottomLine: {
+        en: "An outstanding commercial asset generator coupled with millions of stock templates, fonts, and vector assets under one unified subscription.",
+        vi: "C\u00f4ng c\u1ee5 t\u1ea1o \u1ea3nh th\u01b0\u01a1ng m\u1ea1i xu\u1ea5t s\u1eafc k\u1ebft h\u1ee3p c\u00f9ng kho t\u00e0i nguy\u00ean h\u00e0ng tri\u1ec7u m\u1eabu thi\u1ebft k\u1ebf, font ch\u1eef v\u00e0 vector trong m\u1ed9t g\u00f3i thu\u00ea bao duy nh\u1ea5t.",
+      },
+    },
+    pros: {
+      en: ["Mystic model delivers stunning cinematic lighting and natural skin textures out of the box", "Includes access to Freepik's vast library of millions of premium stock photos, mockups, and PSDs", "Built-in Pikaso real-time sketching tool and AI background replacer for product shoots", "Full commercial usage rights with clear legal licensing for agency client work"],
+      vi: ["M\u00f4 h\u00ecnh Mystic mang l\u1ea1i \u00e1nh s\u00e1ng \u0111i\u1ec7n \u1ea3nh s\u1ed1ng \u0111\u1ed9ng v\u00e0 k\u1ebft c\u1ea5u da ng\u01b0\u1eddi t\u1ef1 nhi\u00ean ngay t\u1eeb c\u00e2u l\u1ec7nh \u0111\u1ea7u ti\u00ean", "Bao g\u1ed3m quy\u1ec1n truy c\u1eadp kho t\u00e0i nguy\u00ean kh\u1ed5ng l\u1ed3 c\u1ee7a Freepik v\u1edbi h\u00e0ng tri\u1ec7u \u1ea3nh stock, mockup v\u00e0 file PSD", "T\u00edch h\u1ee3p c\u00f4ng c\u1ee5 v\u1ebd ph\u00e1c th\u1ea3o th\u1eddi gian th\u1ef1c Pikaso v\u00e0 t\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng thay n\u1ec1n \u1ea3nh s\u1ea3n ph\u1ea9m", "\u0110\u1ea7y \u0111\u1ee7 quy\u1ec1n s\u1edf h\u1eefu th\u01b0\u01a1ng m\u1ea1i v\u1edbi gi\u1ea5y ph\u00e9p ph\u00e1p l\u00fd minh b\u1ea1ch cho c\u00e1c d\u1ef1 \u00e1n l\u00e0m cho kh\u00e1ch h\u00e0ng"],
+    },
+    cons: {
+      en: ["Subscription covers the full Freepik ecosystem, which may include more assets than simple AI users need", "Daily AI generation credit caps vary between monthly and annual plans"],
+      vi: ["G\u00f3i thu\u00ea bao bao g\u1ed3m to\u00e0n b\u1ed9 h\u1ec7 sinh th\u00e1i Freepik, c\u00f3 th\u1ec3 th\u1eeba th\u00e3i n\u1ebfu ng\u01b0\u1eddi d\u00f9ng ch\u1ec9 c\u00f3 nhu c\u1ea7u t\u1ea1o \u1ea3nh AI", "H\u1ea1n m\u1ee9c t\u1ea1o \u1ea3nh AI m\u1ed7i ng\u00e0y c\u00f3 s\u1ef1 kh\u00e1c bi\u1ec7t gi\u1eefa g\u00f3i thanh to\u00e1n theo th\u00e1ng v\u00e0 theo n\u0103m"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "3 AI image creations/day",
+                  "Standard Freepik search",
+                  "Watermarked downloads",
+                  "Community access"
+            ]
+      },
+      {
+            "name": "Premium",
+            "priceMonthly": 15,
+            "priceAnnualMonthly": 12,
+            "currency": "USD",
+            "features": [
+                  "Unlimited AI Mystic generations (fair use)",
+                  "Full commercial license",
+                  "Access to 150M+ stock assets",
+                  "No watermarks"
+            ]
+      },
+      {
+            "name": "Enterprise Team",
+            "priceMonthly": 29,
+            "priceAnnualMonthly": 22,
+            "currency": "USD",
+            "features": [
+                  "Multi-seat centralized billing",
+                  "Shared brand folders",
+                  "Legal indemnity protection",
+                  "Priority technical support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.freepik.com/ai",
+    logoUrl: "/logos/freepik-mystic.png",
+    alternatives: ["canva-ai", "midjourney", "leonardo-ai"],
+  },
+  {
+    id: "surfer-seo",
+    slug: "surfer-seo",
+    name: "Surfer SEO",
+    tagline: {
+      en: "Data-driven SEO content optimization platform that reverse-engineers top Google SERPs to guide article rankings.",
+      vi: "N\u1ec1n t\u1ea3ng t\u1ed1i \u01b0u h\u00f3a n\u1ed9i dung SEO d\u1ef1a tr\u00ean d\u1eef li\u1ec7u gi\u1ea3i m\u00e3 thu\u1eadt to\u00e1n top \u0111\u1ea7u Google \u0111\u1ec3 \u0111\u01b0a b\u00e0i vi\u1ebft l\u00ean th\u1ee9 h\u1ea1ng cao.",
+    },
+    description: {
+      en: "Surfer SEO analyzes 500+ on-page ranking factors of top-performing search results. It provides a real-time Content Score, keyword frequency suggestions, heading structures, and AI-assisted article generation.",
+      vi: "Surfer SEO ph\u00e2n t\u00edch h\u01a1n 500 y\u1ebfu t\u1ed1 x\u1ebfp h\u1ea1ng on-page c\u1ee7a c\u00e1c b\u00e0i vi\u1ebft top \u0111\u1ea7u Google. Cung c\u1ea5p \u0111i\u1ec3m s\u1ed1 Content Score th\u1eddi gian th\u1ef1c, m\u1eadt \u0111\u1ed9 t\u1eeb kh\u00f3a g\u1ee3i \u00fd, c\u1ea5u tr\u00fac th\u1ebb ti\u00eau \u0111\u1ec1 v\u00e0 tr\u1ee3 l\u00fd vi\u1ebft b\u00e0i AI ho\u00e0n ch\u1ec9nh.",
+    },
+    directAnswer: {
+      en: "Surfer SEO is the gold standard in on-page content optimization. By comparing your article against live competitors ranking in Google SERPs, its real-time Content Editor indicates exactly which terms, headers, and images to add to hit position 1. Plans start at $89/month.",
+      vi: "Surfer SEO l\u00e0 chu\u1ea9n m\u1ef1c h\u00e0ng \u0111\u1ea7u v\u1ec1 t\u1ed1i \u01b0u h\u00f3a n\u1ed9i dung on-page. B\u1eb1ng vi\u1ec7c \u0111\u1ed1i so\u00e1t tr\u1ef1c ti\u1ebfp b\u00e0i vi\u1ebft c\u1ee7a b\u1ea1n v\u1edbi c\u00e1c \u0111\u1ed1i th\u1ee7 \u0111ang x\u1ebfp h\u1ea1ng tr\u00ean Google, tr\u00ecnh so\u1ea1n th\u1ea3o Content Editor ch\u1ec9 r\u00f5 ch\u00ednh x\u00e1c t\u1eebng t\u1eeb kh\u00f3a, s\u1ed1 l\u01b0\u1ee3ng th\u1ebb H2/H3 v\u00e0 h\u00ecnh \u1ea3nh c\u1ea7n ch\u00e8n \u0111\u1ec3 leo top 1. Gi\u00e1 t\u1eeb $89/th\u00e1ng.",
+    },
+    hubs: ["content-seo"],
+    tags: ["Surfer SEO", "On-Page SEO", "Content Optimization", "SERP Analyzer", "Keyword Research"],
+    startingPrice: 89,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://surferseo.com/?via={code}",
+    adminAffiliateUrl: "https://surferseo.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 6800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "SEO agencies, affiliate publishers, niche site builders, and content marketing teams serious about dominating competitive organic Google rankings.",
+        vi: "Agency SEO, ng\u01b0\u1eddi l\u00e0m affiliate marketing, qu\u1ea3n tr\u1ecb website v\u00e0 \u0111\u1ed9i ng\u0169 ti\u1ebfp th\u1ecb n\u1ed9i dung mu\u1ed1n th\u1ed1ng tr\u1ecb th\u1ee9 h\u1ea1ng t\u00ecm ki\u1ebfm t\u1ef1 nhi\u00ean c\u1ee7a Google.",
+      },
+      notFor: {
+        en: "Hobby bloggers seeking a cheap $5/month casual grammar check tool.",
+        vi: "Blogger c\u00e1 nh\u00e2n nh\u1ecf ch\u1ec9 c\u1ea7n c\u00f4ng c\u1ee5 s\u1eeda l\u1ed7i ch\u00ednh t\u1ea3 c\u01a1 b\u1ea3n gi\u00e1 r\u1ebb.",
+      },
+      bottomLine: {
+        en: "The most scientifically proven on-page SEO tool on the market, turning guessing games into quantifiable Content Scores that reliably rank.",
+        vi: "C\u00f4ng c\u1ee5 t\u1ed1i \u01b0u SEO on-page khoa h\u1ecdc v\u00e0 hi\u1ec7u qu\u1ea3 nh\u1ea5t hi\u1ec7n nay, bi\u1ebfn vi\u1ec7c vi\u1ebft b\u00e0i m\u00f2 m\u1eabm th\u00e0nh \u0111i\u1ec3m s\u1ed1 \u0111\u1ecbnh l\u01b0\u1ee3ng Content Score gi\u00fap b\u00e0i vi\u1ebft leo top v\u1eefng ch\u1eafc.",
+      },
+    },
+    pros: {
+      en: ["Real-time Content Score (0-100) measures your draft against the top 10 Google search competitors", "Direct integration with Google Docs, WordPress, and Jasper for frictionless writing workflows", "Keyword Research module groups keywords into topical clusters and search intent buckets", "Audit tool inspects existing published URLs to uncover missing keywords and structural gaps"],
+      vi: ["\u0110i\u1ec3m s\u1ed1 Content Score (0-100) th\u1eddi gian th\u1ef1c \u0111\u1ed1i chi\u1ebfu b\u00e0i vi\u1ebft c\u1ee7a b\u1ea1n v\u1edbi top 10 \u0111\u1ed1i th\u1ee7 \u0111ang \u0111\u1ee9ng \u0111\u1ea7u Google", "T\u00edch h\u1ee3p tr\u1ef1c ti\u1ebfp v\u00e0o Google Docs, WordPress v\u00e0 Jasper gi\u00fap quy tr\u00ecnh vi\u1ebft b\u00e0i li\u1ec1n m\u1ea1ch thu\u1eadn ti\u1ec7n", "B\u1ed9 nghi\u00ean c\u1ee9u t\u1eeb kh\u00f3a (Keyword Research) t\u1ef1 \u0111\u1ed9ng nh\u00f3m c\u00e1c t\u1eeb kh\u00f3a th\u00e0nh c\u1ee5m ch\u1ee7 \u0111\u1ec1 (topical clusters) chu\u1ea9n \u00fd \u0111\u1ecbnh t\u00ecm ki\u1ebfm", "C\u00f4ng c\u1ee5 Audit ki\u1ec3m tra c\u00e1c b\u00e0i vi\u1ebft c\u0169 tr\u00ean website \u0111\u1ec3 ph\u00e1t hi\u1ec7n nh\u1eefng t\u1eeb kh\u00f3a c\u00f2n thi\u1ebfu v\u00e0 \u0111i\u1ec3m y\u1ebfu c\u1ea5u tr\u00fac"],
+    },
+    cons: {
+      en: ["Starting price point ($89/mo) is an investment targeted at professional publishers and businesses", "Keyword density targets must be balanced with human readability to avoid robotic phrasing"],
+      vi: ["M\u1ee9c gi\u00e1 kh\u1edfi \u0111i\u1ec3m ($89/th\u00e1ng) l\u00e0 m\u1ed9t kho\u1ea3n \u0111\u1ea7u t\u01b0 h\u01b0\u1edbng t\u1edbi doanh nghi\u1ec7p v\u00e0 ng\u01b0\u1eddi l\u00e0m xu\u1ea5t b\u1ea3n chuy\u00ean nghi\u1ec7p", "C\u1ea7n k\u1ebft h\u1ee3p linh ho\u1ea1t v\u1edbi v\u0103n phong t\u1ef1 nhi\u00ean \u0111\u1ec3 tr\u00e1nh b\u00e0i vi\u1ebft b\u1ecb g\u01b0\u1ee3ng g\u1ea1o do nh\u1ed3i nh\u00e9t qu\u00e1 nhi\u1ec1u t\u1eeb kh\u00f3a"],
+    },
+    pricingTiers: [
+      {
+            "name": "Essential",
+            "priceMonthly": 89,
+            "priceAnnualMonthly": 79,
+            "currency": "USD",
+            "features": [
+                  "30 Content Editor articles/mo",
+                  "Keyword research tool",
+                  "Competitor SERP analysis",
+                  "2 team member seats"
+            ]
+      },
+      {
+            "name": "Scale",
+            "priceMonthly": 129,
+            "priceAnnualMonthly": 99,
+            "currency": "USD",
+            "features": [
+                  "100 Content Editor articles/mo",
+                  "Audit tool access",
+                  "Internal links analyzer",
+                  "5 team member seats"
+            ]
+      },
+      {
+            "name": "Enterprise",
+            "priceMonthly": 399,
+            "priceAnnualMonthly": 299,
+            "currency": "USD",
+            "features": [
+                  "Custom article limits",
+                  "API access",
+                  "White-label client reporting",
+                  "Dedicated account director"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://surferseo.com",
+    logoUrl: "/logos/surfer-seo.png",
+    alternatives: ["frase", "writesonic", "omniseo"],
+  },
+  {
+    id: "marketmuse",
+    slug: "marketmuse",
+    name: "MarketMuse",
+    tagline: {
+      en: "Enterprise AI content strategy and topical authority platform analyzing site-wide competitive content gaps.",
+      vi: "N\u1ec1n t\u1ea3ng chi\u1ebfn l\u01b0\u1ee3c n\u1ed9i dung v\u00e0 x\u00e2y d\u1ef1ng quy\u1ec1n uy ch\u1ee7 \u0111\u1ec1 (Topical Authority) c\u1ea5p doanh nghi\u1ec7p, ph\u00e2n t\u00edch l\u1ed7 h\u1ed5ng n\u1ed9i dung to\u00e0n di\u1ec7n.",
+    },
+    description: {
+      en: "MarketMuse uses patented natural language processing to evaluate entire domain content quality. It scores how authoritatively your website covers specific topics, identifying critical content gaps before you write a single word.",
+      vi: "MarketMuse \u1ee9ng d\u1ee5ng c\u00f4ng ngh\u1ec7 x\u1eed l\u00fd ng\u00f4n ng\u1eef t\u1ef1 nhi\u00ean \u0111\u01b0\u1ee3c c\u1ea5p b\u1eb1ng s\u00e1ng ch\u1ebf \u0111\u1ec3 \u0111\u00e1nh gi\u00e1 ch\u1ea5t l\u01b0\u1ee3ng to\u00e0n b\u1ed9 n\u1ed9i dung website. \u0110o l\u01b0\u1eddng m\u1ee9c \u0111\u1ed9 uy t\u00edn c\u1ee7a t\u00ean mi\u1ec1n tr\u00ean t\u1eebng ch\u1ee7 \u0111\u1ec1 v\u00e0 ch\u1ec9 ra c\u00e1c b\u00e0i vi\u1ebft c\u1ea7n b\u1ed5 sung \u0111\u1ec3 v\u01b0\u1ee3t \u0111\u1ed1i th\u1ee7.",
+    },
+    directAnswer: {
+      en: "MarketMuse is an enterprise-tier content intelligence and SEO strategy suite. While basic tools analyze single keywords, MarketMuse assesses your entire website's topical authority, generating comprehensive content briefs and predictive difficulty scores. Plans start at $149/month with a free starter tier.",
+      vi: "MarketMuse l\u00e0 n\u1ec1n t\u1ea3ng chi\u1ebfn l\u01b0\u1ee3c n\u1ed9i dung v\u00e0 ph\u00e2n t\u00edch SEO th\u00f4ng minh c\u1ea5p doanh nghi\u1ec7p. Thay v\u00ec ch\u1ec9 ki\u1ec3m tra t\u1eebng t\u1eeb kh\u00f3a \u0111\u01a1n l\u1ebb, MarketMuse \u0111\u00e1nh gi\u00e1 \u0111\u1ed9 ph\u1ee7 uy quy\u1ec1n c\u1ee7a to\u00e0n b\u1ed9 website, t\u1ea1o d\u00e0n \u00fd b\u00e0i vi\u1ebft chi ti\u1ebft v\u00e0 d\u1ef1 \u0111o\u00e1n \u0111\u1ed9 kh\u00f3 x\u1ebfp h\u1ea1ng th\u1ef1c t\u1ebf. Gi\u00e1 t\u1eeb $149/th\u00e1ng k\u00e8m g\u00f3i d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["content-seo"],
+    tags: ["Content Strategy", "Topical Authority", "Enterprise SEO", "MarketMuse", "Content Briefs"],
+    startingPrice: 149,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.marketmuse.com/?via={code}",
+    adminAffiliateUrl: "https://www.marketmuse.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 2100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Enterprise content teams, high-volume publishers, and B2B SaaS marketing leaders building deep topical dominance across competitive sectors.",
+        vi: "Doanh nghi\u1ec7p l\u1edbn, c\u00e1c t\u00f2a so\u1ea1n c\u00f3 kh\u1ed1i l\u01b0\u1ee3ng b\u00e0i vi\u1ebft kh\u1ed5ng l\u1ed3 v\u00e0 c\u00f4ng ty B2B SaaS mu\u1ed1n x\u00e2y d\u1ef1ng v\u1ecb th\u1ebf s\u1ed1 m\u1ed9t trong ng\u00e0nh.",
+      },
+      notFor: {
+        en: "Single-author hobby blogs without dedicated marketing budgets.",
+        vi: "Blogger vi\u1ebft s\u1edf th\u00edch c\u00e1 nh\u00e2n kh\u00f4ng c\u00f3 ng\u00e2n s\u00e1ch ti\u1ebfp th\u1ecb doanh nghi\u1ec7p.",
+      },
+      bottomLine: {
+        en: "The most sophisticated strategic SEO platform available, focusing on overarching topical authority rather than superficial keyword counts.",
+        vi: "N\u1ec1n t\u1ea3ng chi\u1ebfn l\u01b0\u1ee3c SEO chuy\u00ean s\u00e2u nh\u1ea5t hi\u1ec7n nay, t\u1eadp trung x\u00e2y d\u1ef1ng quy\u1ec1n uy ch\u1ee7 \u0111\u1ec1 b\u1ec1n v\u1eefng thay v\u00ec ch\u1ec9 \u0111\u1ebfm s\u1ed1 l\u01b0\u1ee3ng t\u1eeb kh\u00f3a b\u1ec1 n\u1ed5i.",
+      },
+    },
+    pros: {
+      en: ["Personalized Difficulty metric calculates your domain's unique likelihood of ranking for any given topic", "Automated Content Brief generator provides writers with subheadings, questions, and topic models", "Content Inventory scans your entire website to highlight outdated or underperforming pages", "Topic cluster mapping prevents keyword cannibalization across large editorial teams"],
+      vi: ["Ch\u1ec9 s\u1ed1 Personalized Difficulty t\u00ednh to\u00e1n c\u01a1 h\u1ed9i leo top ri\u00eang bi\u1ec7t c\u1ee7a website b\u1ea1n cho t\u1eebng ch\u1ee7 \u0111\u1ec1 c\u1ee5 th\u1ec3", "T\u1ef1 \u0111\u1ed9ng t\u1ea1o b\u1ea3n brief n\u1ed9i dung ho\u00e0n ch\u1ec9nh cung c\u1ea5p s\u1eb5n th\u1ebb ti\u00eau \u0111\u1ec1 ph\u1ee5, c\u00e2u h\u1ecfi th\u01b0\u1eddng g\u1eb7p v\u00e0 ch\u1ee7 \u0111\u1ec1 c\u1ea7n \u0111\u00e0o s\u00e2u", "T\u00ednh n\u0103ng Content Inventory qu\u00e9t to\u00e0n b\u1ed9 trang web \u0111\u1ec3 ph\u00e1t hi\u1ec7n nh\u1eefng b\u00e0i vi\u1ebft c\u0169 c\u1ea7n c\u1eadp nh\u1eadt ho\u1eb7c k\u00e9m hi\u1ec7u qu\u1ea3", "B\u1ea3n \u0111\u1ed3 c\u1ee5m ch\u1ee7 \u0111\u1ec1 (Topic Cluster) ng\u0103n ch\u1eb7n hi\u1ec7n t\u01b0\u1ee3ng t\u1ef1 '\u0103n th\u1ecbt' t\u1eeb kh\u00f3a gi\u1eefa c\u00e1c t\u00e1c gi\u1ea3 trong t\u00f2a so\u1ea1n"],
+    },
+    cons: {
+      en: ["Higher enterprise price tier makes it an institutional investment", "Complex data models require onboarding time to master strategic workflows"],
+      vi: ["M\u1ee9c gi\u00e1 thu\u00ea bao c\u1ea5p doanh nghi\u1ec7p kh\u00e1 cao, ph\u00f9 h\u1ee3p v\u1edbi c\u00e1c \u0111\u01a1n v\u1ecb kinh doanh b\u00e0i b\u1ea3n", "H\u1ec7 th\u1ed1ng d\u1eef li\u1ec7u chuy\u00ean s\u00e2u c\u1ea7n th\u1eddi gian \u0111\u00e0o t\u1ea1o ban \u0111\u1ea7u \u0111\u1ec3 khai th\u00e1c h\u1ebft ti\u1ec1m n\u0103ng chi\u1ebfn l\u01b0\u1ee3c"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "1 user seat",
+                  "5 queries/mo",
+                  "Basic topic model",
+                  "Standard support"
+            ]
+      },
+      {
+            "name": "Standard",
+            "priceMonthly": 149,
+            "priceAnnualMonthly": 125,
+            "currency": "USD",
+            "features": [
+                  "1 user seat",
+                  "Full topic modeling & briefs",
+                  "Personalized difficulty score",
+                  "Tracked topics",
+                  "Content editor"
+            ]
+      },
+      {
+            "name": "Custom Enterprise",
+            "priceMonthly": 499,
+            "priceAnnualMonthly": 399,
+            "currency": "USD",
+            "features": [
+                  "Unlimited queries",
+                  "Full site-wide domain inventory",
+                  "Team collaboration",
+                  "Dedicated content strategist"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.marketmuse.com",
+    logoUrl: "/logos/marketmuse.png",
+    alternatives: ["surfer-seo", "frase", "writesonic"],
+  },
+  {
+    id: "scalenut",
+    slug: "scalenut",
+    name: "Scalenut",
+    tagline: {
+      en: "End-to-end AI SEO platform from keyword clustering and automated planning to factual 5-minute article generation.",
+      vi: "N\u1ec1n t\u1ea3ng SEO AI to\u00e0n di\u1ec7n t\u1eeb gom c\u1ee5m t\u1eeb kh\u00f3a, l\u1eadp k\u1ebf ho\u1ea1ch t\u1ef1 \u0111\u1ed9ng \u0111\u1ebfn s\u1ea3n xu\u1ea5t b\u00e0i vi\u1ebft chu\u1ea9n SEO trong 5 ph\u00fat.",
+    },
+    description: {
+      en: "Scalenut unites the entire organic search lifecycle under one roof. Its Cruise Mode generates 3,000-word ranking articles in 5 simple steps, complete with competitor research, NLP terms, and automated interlinking.",
+      vi: "Scalenut k\u1ebft h\u1ee3p tr\u1ecdn v\u1eb9n quy tr\u00ecnh t\u00ecm ki\u1ebfm t\u1ef1 nhi\u00ean v\u00e0o m\u1ed9t n\u1ec1n t\u1ea3ng duy nh\u1ea5t. Ch\u1ebf \u0111\u1ed9 Cruise Mode cho ph\u00e9p t\u1ea1o b\u00e0i vi\u1ebft 3.000 t\u1eeb chu\u1ea9n SEO ch\u1ec9 qua 5 b\u01b0\u1edbc \u0111\u01a1n gi\u1ea3n, t\u1ef1 \u0111\u1ed9ng \u0111\u1ed1i so\u00e1t \u0111\u1ed1i th\u1ee7, \u0111\u1ec1 xu\u1ea5t t\u1eeb kh\u00f3a NLP v\u00e0 g\u1eafn li\u00ean k\u1ebft n\u1ed9i b\u1ed9.",
+    },
+    directAnswer: {
+      en: "Scalenut is an all-in-one AI-powered SEO and content marketing platform. Known for its 5-minute Cruise Mode article builder and automated keyword clustering, it helps marketers build topical clusters and produce rankable articles at scale. Plans start at $39/month ($19/mo on annual billing).",
+      vi: "Scalenut l\u00e0 n\u1ec1n t\u1ea3ng ti\u1ebfp th\u1ecb n\u1ed9i dung v\u00e0 SEO t\u00edch h\u1ee3p AI to\u00e0n di\u1ec7n. N\u1ed5i b\u1eadt v\u1edbi ch\u1ebf \u0111\u1ed9 Cruise Mode vi\u1ebft b\u00e0i 3.000 t\u1eeb ch\u1ec9 trong 5 ph\u00fat v\u00e0 t\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng gom c\u1ee5m t\u1eeb kh\u00f3a, ph\u1ea7n m\u1ec1m gi\u00fap x\u00e2y d\u1ef1ng c\u1ee5m ch\u1ee7 \u0111\u1ec1 v\u00e0 s\u1ea3n xu\u1ea5t n\u1ed9i dung quy m\u00f4 l\u1edbn. Gi\u00e1 t\u1eeb $19/th\u00e1ng (thanh to\u00e1n n\u0103m).",
+    },
+    hubs: ["content-seo"],
+    tags: ["Scalenut", "AI SEO", "Cruise Mode", "Keyword Clustering", "Article Writer"],
+    startingPrice: 19,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 7,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.scalenut.com/?via={code}",
+    adminAffiliateUrl: "https://www.scalenut.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 3200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Content creators, freelance SEO writers, and digital marketing agencies who want an affordable, all-in-one alternative to juggling Surfer and Jasper separately.",
+        vi: "Ng\u01b0\u1eddi s\u00e1ng t\u1ea1o n\u1ed9i dung, ng\u01b0\u1eddi vi\u1ebft b\u00e0i SEO t\u1ef1 do v\u00e0 agency ti\u1ebfp th\u1ecb mu\u1ed1n gi\u1ea3i ph\u00e1p tr\u1ecdn g\u00f3i ti\u1ebft ki\u1ec7m thay v\u00ec ph\u1ea3i mua l\u1ebb c\u1ea3 Surfer l\u1eabn Jasper.",
+      },
+      notFor: {
+        en: "Developers seeking autonomous coding terminal tools.",
+        vi: "L\u1eadp tr\u00ecnh vi\u00ean c\u1ea7n c\u00f4ng c\u1ee5 vi\u1ebft code t\u1ef1 \u0111\u1ed9ng tr\u00ean terminal.",
+      },
+      bottomLine: {
+        en: "An excellent mid-market SEO powerhouse that seamlessly marries keyword research, topical planning, and long-form AI writing.",
+        vi: "C\u1ed7 m\u00e1y SEO t\u1ea7m trung xu\u1ea5t s\u1eafc k\u1ebft h\u1ee3p m\u01b0\u1ee3t m\u00e0 gi\u1eefa nghi\u00ean c\u1ee9u t\u1eeb kh\u00f3a, l\u1eadp k\u1ebf ho\u1ea1ch theo ch\u1ee7 \u0111\u1ec1 v\u00e0 s\u1ea3n xu\u1ea5t b\u00e0i vi\u1ebft d\u00e0i nhanh ch\u00f3ng.",
+      },
+    },
+    pros: {
+      en: ["Cruise Mode generates complete, long-form, cited articles with headings and FAQs in under 5 minutes", "Keyword Planner automatically groups thousands of keywords into organized topical clusters", "Real-time SEO score provides actionable recommendations based on top Google SERPs", "Automated internal linking engine recommends and inserts links across your published WordPress catalog"],
+      vi: ["Ch\u1ebf \u0111\u1ed9 Cruise Mode t\u1ea1o b\u00e0i vi\u1ebft d\u00e0i ho\u00e0n ch\u1ec9nh c\u00f3 tr\u00edch d\u1eabn, ti\u00eau \u0111\u1ec1 ph\u1ee5 v\u00e0 m\u1ee5c FAQ trong ch\u01b0a \u0111\u1ea7y 5 ph\u00fat", "Keyword Planner t\u1ef1 \u0111\u1ed9ng ph\u00e2n lo\u1ea1i h\u00e0ng ng\u00e0n t\u1eeb kh\u00f3a th\u00e0nh c\u00e1c c\u1ee5m ch\u1ee7 \u0111\u1ec1 khoa h\u1ecdc", "\u0110i\u1ec3m s\u1ed1 SEO th\u1eddi gian th\u1ef1c \u0111\u01b0a ra h\u01b0\u1edbng d\u1eabn t\u1ed1i \u01b0u c\u1ee5 th\u1ec3 d\u1ef1a tr\u00ean \u0111\u1ed1i th\u1ee7 \u0111\u1ee9ng \u0111\u1ea7u Google", "C\u00f4ng c\u1ee5 g\u1eafn li\u00ean k\u1ebft n\u1ed9i b\u1ed9 t\u1ef1 \u0111\u1ed9ng \u0111\u1ec1 xu\u1ea5t v\u00e0 ch\u00e8n link xuy\u00ean su\u1ed1t c\u00e1c b\u00e0i vi\u1ebft tr\u00ean WordPress"],
+    },
+    cons: {
+      en: ["Requires human editing to add brand-specific anecdotes, personal stories, and original data", "Does not offer a permanent free plan (7-day free trial available)"],
+      vi: ["V\u1eabn c\u1ea7n ng\u01b0\u1eddi th\u1eadt bi\u00ean t\u1eadp \u0111\u1ec3 l\u1ed3ng gh\u00e9p c\u00e2u chuy\u1ec7n th\u01b0\u01a1ng hi\u1ec7u v\u00e0 d\u1eef li\u1ec7u \u0111\u1ed9c quy\u1ec1n c\u1ee7a doanh nghi\u1ec7p", "Kh\u00f4ng c\u00f3 g\u00f3i mi\u1ec5n ph\u00ed v\u0129nh vi\u1ec5n (ch\u1ec9 c\u00f3 b\u1ea3n d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed 7 ng\u00e0y)"],
+    },
+    pricingTiers: [
+      {
+            "name": "Essential",
+            "priceMonthly": 39,
+            "priceAnnualMonthly": 19,
+            "currency": "USD",
+            "features": [
+                  "100,000 AI words/mo",
+                  "5 SEO articles/mo",
+                  "Competitor research",
+                  "SERP analysis"
+            ]
+      },
+      {
+            "name": "Growth",
+            "priceMonthly": 79,
+            "priceAnnualMonthly": 39,
+            "currency": "USD",
+            "features": [
+                  "Unlimited AI words",
+                  "30 SEO articles/mo",
+                  "Keyword clustering",
+                  "Automated internal linking"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 149,
+            "priceAnnualMonthly": 75,
+            "currency": "USD",
+            "features": [
+                  "Unlimited AI words",
+                  "75 SEO articles/mo",
+                  "Custom brand voices",
+                  "Dedicated account manager"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.scalenut.com",
+    logoUrl: "/logos/scalenut.png",
+    alternatives: ["surfer-seo", "writesonic", "frase"],
+  },
+  {
+    id: "fathom-ai",
+    slug: "fathom-ai",
+    name: "Fathom AI",
+    tagline: {
+      en: "Free, lightning-fast AI meeting recorder for Zoom, Google Meet, and Microsoft Teams with instant human-quality summaries.",
+      vi: "Tr\u1ee3 l\u00fd ghi \u00e2m cu\u1ed9c h\u1ecdp AI mi\u1ec5n ph\u00ed cho Zoom, Google Meet v\u00e0 Teams v\u1edbi b\u1ea3n t\u00f3m t\u1eaft \u00fd ch\u00ednh chu\u1ea9n x\u00e1c t\u1ee9c th\u00ec.",
+    },
+    description: {
+      en: "Fathom eliminates manual note-taking in video meetings. It joins your calls, transcribes conversation in real time, generates crisp action items, and syncs summaries directly to HubSpot, Salesforce, and Notion.",
+      vi: "Fathom x\u00f3a b\u1ecf vi\u1ec7c ph\u1ea3i ghi ch\u00e9p tay trong c\u00e1c cu\u1ed9c h\u1ecdp tr\u1ef1c tuy\u1ebfn. T\u1ef1 \u0111\u1ed9ng tham gia cu\u1ed9c g\u1ecdi, ch\u00e9p l\u1eddi th\u1eddi gian th\u1ef1c, t\u00f3m t\u1eaft c\u00e1c vi\u1ec7c c\u1ea7n l\u00e0m v\u00e0 \u0111\u1ed3ng b\u1ed9 ngay v\u00e0o HubSpot, Salesforce v\u00e0 Notion.",
+    },
+    directAnswer: {
+      en: "Fathom is the highest-rated AI meeting assistant across G2. Loved for its exceptionally generous 100% free plan with unlimited recording and transcription, Fathom captures key meeting moments and syncs CRM notes automatically. Free forever for individuals, with Team plans from $19/user/month.",
+      vi: "Fathom l\u00e0 tr\u1ee3 l\u00fd ghi ch\u00e9p cu\u1ed9c h\u1ecdp AI \u0111\u01b0\u1ee3c \u0111\u00e1nh gi\u00e1 cao nh\u1ea5t tr\u00ean G2. N\u1ed5i ti\u1ebfng v\u1edbi g\u00f3i mi\u1ec5n ph\u00ed 100% kh\u00f4ng gi\u1edbi h\u1ea1n th\u1eddi l\u01b0\u1ee3ng ghi \u00e2m v\u00e0 ch\u00e9p l\u1eddi, Fathom t\u1ef1 \u0111\u1ed9ng ghi l\u1ea1i c\u00e1c kho\u1ea3nh kh\u1eafc quan tr\u1ecdng v\u00e0 \u0111\u1ed3ng b\u1ed9 ghi ch\u00fa v\u00e0o CRM. Mi\u1ec5n ph\u00ed tr\u1ecdn \u0111\u1eddi cho c\u00e1 nh\u00e2n, g\u00f3i Team t\u1eeb $19/ng\u01b0\u1eddi/th\u00e1ng.",
+    },
+    hubs: ["meeting-productivity"],
+    tags: ["Meeting AI", "Fathom", "Zoom Transcriber", "Note Taking", "CRM Sync"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://fathom.video/?via={code}",
+    adminAffiliateUrl: "https://fathom.video/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 5.0,
+    reviewCount: 9800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Account executives, sales reps, consultants, and remote team managers who want effortless, instant meeting summaries without paying a monthly fee.",
+        vi: "Nh\u00e2n vi\u00ean kinh doanh, t\u01b0 v\u1ea5n vi\u00ean v\u00e0 qu\u1ea3n l\u00fd nh\u00f3m l\u00e0m vi\u1ec7c t\u1eeb xa c\u1ea7n b\u1ea3n t\u00f3m t\u1eaft cu\u1ed9c h\u1ecdp chu\u1ea9n x\u00e1c m\u00e0 kh\u00f4ng mu\u1ed1n t\u1ed1n ph\u00ed thu\u00ea bao.",
+      },
+      notFor: {
+        en: "Users looking for text-to-image graphic design or AI video avatars.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u1ea7n v\u1ebd tranh \u0111\u1ed3 h\u1ecda ho\u1eb7c t\u1ea1o video ng\u01b0\u1eddi \u1ea3o.",
+      },
+      bottomLine: {
+        en: "The universally acclaimed favorite among sales professionals, offering the most generous free tier and cleanest CRM integration in the meeting tech space.",
+        vi: "\u1ee8ng d\u1ee5ng ghi ch\u00e9p cu\u1ed9c h\u1ecdp \u0111\u01b0\u1ee3c y\u00eau th\u00edch nh\u1ea5t trong gi\u1edbi b\u00e1n h\u00e0ng, s\u1edf h\u1eefu g\u00f3i mi\u1ec5n ph\u00ed h\u00e0o ph\u00f3ng nh\u1ea5t v\u00e0 kh\u1ea3 n\u0103ng \u0111\u1ed3ng b\u1ed9 CRM m\u01b0\u1ee3t m\u00e0.",
+      },
+    },
+    pros: {
+      en: ["Permanently free tier includes unlimited recording, transcription, and AI summaries for individuals", "Instant summary generation: meeting notes are ready literally seconds after you hit End Call", "Automatic CRM sync populates meeting notes and action items into HubSpot, Salesforce, and Close", "Clicking any bullet point in the summary immediately jumps to that exact moment in the video recording"],
+      vi: ["G\u00f3i mi\u1ec5n ph\u00ed v\u0129nh vi\u1ec5n kh\u00f4ng gi\u1edbi h\u1ea1n s\u1ed1 l\u01b0\u1ee3ng cu\u1ed9c g\u1ecdi ghi \u00e2m, ch\u00e9p l\u1eddi v\u00e0 t\u00f3m t\u1eaft AI cho c\u00e1 nh\u00e2n", "T\u1ed1c \u0111\u1ed9 t\u00f3m t\u1eaft c\u1ef1c nhanh: b\u1ea3n ghi ch\u00fa xu\u1ea5t hi\u1ec7n ch\u1ec9 v\u00e0i gi\u00e2y ngay sau khi b\u1ea1n b\u1ea5m k\u1ebft th\u00fac cu\u1ed9c h\u1ecdp", "T\u1ef1 \u0111\u1ed9ng \u0111\u1ed3ng b\u1ed9 ghi ch\u00fa v\u00e0 danh s\u00e1ch vi\u1ec7c c\u1ea7n l\u00e0m v\u00e0o h\u1ec7 th\u1ed1ng CRM HubSpot, Salesforce v\u00e0 Close", "Nh\u1ea5p chu\u1ed9t v\u00e0o b\u1ea5t k\u1ef3 g\u1ea1ch \u0111\u1ea7u d\u00f2ng n\u00e0o trong b\u1ea3n t\u00f3m t\u1eaft s\u1ebd nh\u1ea3y ngay \u0111\u1ebfn \u0111\u00fang \u0111o\u1ea1n video t\u01b0\u01a1ng \u1ee9ng"],
+    },
+    cons: {
+      en: ["Advanced team-wide deal intelligence and keyword tracking require paid Team Edition", "Participants receive a standard bot notification upon joining the call"],
+      vi: ["C\u00e1c t\u00ednh n\u0103ng theo d\u00f5i t\u1eeb kh\u00f3a th\u01b0\u01a1ng v\u1ee5 v\u00e0 ph\u00e2n t\u00edch to\u00e0n \u0111\u1ed9i ng\u0169 kinh doanh y\u00eau c\u1ea7u g\u00f3i Team Edition", "C\u00e1c th\u00e0nh vi\u00ean tham gia cu\u1ed9c h\u1ecdp s\u1ebd nh\u1eadn \u0111\u01b0\u1ee3c th\u00f4ng b\u00e1o bot Fathom tham gia ghi ch\u00e9p"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free Forever",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Unlimited recording & transcription",
+                  "AI meeting summaries",
+                  "Zoom, Meet & Teams support",
+                  "Shareable clip links"
+            ]
+      },
+      {
+            "name": "Standard Team",
+            "priceMonthly": 19,
+            "priceAnnualMonthly": 15,
+            "currency": "USD",
+            "features": [
+                  "Team shared repository",
+                  "Custom summary templates",
+                  "HubSpot & Salesforce automated sync",
+                  "Zapier integration"
+            ]
+      },
+      {
+            "name": "Pro Team",
+            "priceMonthly": 32,
+            "priceAnnualMonthly": 24,
+            "currency": "USD",
+            "features": [
+                  "Deal intelligence & coaching",
+                  "Competitor mention alerts",
+                  "Advanced security & SOC2",
+                  "Dedicated customer success"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://fathom.video",
+    logoUrl: "/logos/fathom-ai.png",
+    alternatives: ["otter-ai", "fireflies", "meetgeek"],
+  },
+  {
+    id: "tldv",
+    slug: "tldv",
+    name: "tl;dv",
+    tagline: {
+      en: "AI meeting recorder for Google Meet, Zoom, and Teams with multi-language transcription and automatic CRM coaching.",
+      vi: "Tr\u1ee3 l\u00fd ghi ch\u00e9p cu\u1ed9c h\u1ecdp AI cho Google Meet, Zoom v\u00e0 Teams h\u1ed7 tr\u1ee3 d\u1ecbch thu\u1eadt \u0111a ng\u00f4n ng\u1eef v\u00e0 hu\u1ea5n luy\u1ec7n b\u00e1n h\u00e0ng.",
+    },
+    description: {
+      en: "tl;dv captures, transcribes, and summarizes video meetings in 30+ languages. Perfect for product, sales, and customer success teams, it turns hours of discussions into searchable timestamps and bite-sized video reels.",
+      vi: "tl;dv ghi \u00e2m, ch\u00e9p l\u1eddi v\u00e0 t\u00f3m t\u1eaft cu\u1ed9c h\u1ecdp tr\u1ef1c tuy\u1ebfn tr\u00ean h\u01a1n 30 ng\u00f4n ng\u1eef. Gi\u1ea3i ph\u00e1p ho\u00e0n h\u1ea3o cho \u0111\u1ed9i ng\u0169 s\u1ea3n ph\u1ea9m v\u00e0 b\u00e1n h\u00e0ng, bi\u1ebfn h\u00e0ng gi\u1edd h\u1ecdp h\u00e0nh th\u00e0nh c\u00e1c m\u1ed1c th\u1eddi gian c\u00f3 th\u1ec3 t\u00ecm ki\u1ebfm v\u00e0 c\u00e1c \u0111o\u1ea1n clip ng\u1eafn.",
+    },
+    directAnswer: {
+      en: "tl;dv is an award-winning AI meeting recorder tailored for customer-facing teams. Beyond standard transcriptions, tl;dv excels in global multi-language recognition (supporting Vietnamese, Japanese, European languages) and automatic video reels creation. Free tier available; Pro starts at $25/seat/month ($18 billed annually).",
+      vi: "tl;dv l\u00e0 ph\u1ea7n m\u1ec1m ghi \u00e2m v\u00e0 t\u00f3m t\u1eaft cu\u1ed9c h\u1ecdp AI h\u00e0ng \u0111\u1ea7u d\u00e0nh cho \u0111\u1ed9i ng\u0169 ti\u1ebfp x\u00fac kh\u00e1ch h\u00e0ng. N\u1ed5i tr\u1ed9i v\u1edbi kh\u1ea3 n\u0103ng nh\u1eadn di\u1ec7n \u0111a ng\u00f4n ng\u1eef (h\u1ed7 tr\u1ee3 ti\u1ebfng Vi\u1ec7t, Nh\u1eadt v\u00e0 c\u00e1c ti\u1ebfng ch\u00e2u \u00c2u) v\u00e0 t\u1ef1 c\u1eaft gh\u00e9p video reel ng\u1eafn. C\u00f3 g\u00f3i mi\u1ec5n ph\u00ed; g\u00f3i Pro t\u1eeb $18/ng\u01b0\u1eddi/th\u00e1ng (thanh to\u00e1n n\u0103m).",
+    },
+    hubs: ["meeting-productivity"],
+    tags: ["Meeting Recorder", "tl;dv", "Google Meet AI", "Multi-Language", "Sales Coaching"],
+    startingPrice: 18,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://tldv.io/?via={code}",
+    adminAffiliateUrl: "https://tldv.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 6200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "International remote teams, product managers conducting user interviews, and sales teams needing multi-language meeting intelligence.",
+        vi: "\u0110\u1ed9i ng\u0169 l\u00e0m vi\u1ec7c qu\u1ed1c t\u1ebf, qu\u1ea3n l\u00fd s\u1ea3n ph\u1ea9m ph\u1ecfng v\u1ea5n ng\u01b0\u1eddi d\u00f9ng v\u00e0 \u0111\u1ed9i ng\u0169 b\u00e1n h\u00e0ng c\u1ea7n ghi ch\u00e9p cu\u1ed9c h\u1ecdp \u0111a ng\u00f4n ng\u1eef.",
+      },
+      notFor: {
+        en: "Users looking for AI image generation or logo vectorization.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u1ea7n t\u1ea1o \u1ea3nh AI ho\u1eb7c v\u1ebd logo vector.",
+      },
+      bottomLine: {
+        en: "The best meeting recorder for international teams, offering phenomenal multi-language accuracy and intuitive bite-sized clip sharing.",
+        vi: "Ph\u1ea7n m\u1ec1m ghi ch\u00e9p cu\u1ed9c h\u1ecdp xu\u1ea5t s\u1eafc nh\u1ea5t cho c\u00e1c \u0111\u1ed9i nh\u00f3m to\u00e0n c\u1ea7u, n\u1ed5i tr\u1ed9i v\u1ec1 \u0111\u1ed9 ch\u00ednh x\u00e1c \u0111a ng\u00f4n ng\u1eef v\u00e0 chia s\u1ebb clip ng\u1eafn ti\u1ec7n l\u1ee3i.",
+      },
+    },
+    pros: {
+      en: ["Flawless multi-language transcription across 30+ languages including Vietnamese, French, and Spanish", "Clip Creator: easily highlight a 30-second customer testimonial and share it directly into Slack", "Global semantic search across all historical company meetings to find exact phrases spoken", "Generous free plan with unlimited Google Meet and Zoom recordings"],
+      vi: ["B\u1ea3n ch\u00e9p l\u1eddi \u0111a ng\u00f4n ng\u1eef chu\u1ea9n x\u00e1c tr\u00ean h\u01a1n 30 th\u1ee9 ti\u1ebfng bao g\u1ed3m c\u1ea3 ti\u1ebfng Vi\u1ec7t, Ph\u00e1p v\u00e0 T\u00e2y Ban Nha", "T\u00ednh n\u0103ng Clip Creator: d\u1ec5 d\u00e0ng c\u1eaft \u0111o\u1ea1n ph\u1ea3n h\u1ed3i 30 gi\u00e2y c\u1ee7a kh\u00e1ch h\u00e0ng \u0111\u1ec3 g\u1eedi nhanh v\u00e0o Slack cho c\u1ea3 team", "T\u00ecm ki\u1ebfm ng\u1eef ngh\u0129a th\u00f4ng minh tr\u00ean to\u00e0n b\u1ed9 kho l\u01b0u tr\u1eef c\u00e1c cu\u1ed9c h\u1ecdp c\u0169 trong c\u00f4ng ty theo t\u1eeb kh\u00f3a", "G\u00f3i mi\u1ec5n ph\u00ed h\u00e0o ph\u00f3ng h\u1ed7 tr\u1ee3 ghi \u00e2m kh\u00f4ng gi\u1edbi h\u1ea1n c\u00e1c cu\u1ed9c h\u1ecdp tr\u00ean Google Meet v\u00e0 Zoom"],
+    },
+    cons: {
+      en: ["Advanced CRM field automation requires the paid Pro subscription", "Requires granting bot access to your calendar to automatically join calls"],
+      vi: ["T\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng \u0111i\u1ec1n c\u00e1c tr\u01b0\u1eddng d\u1eef li\u1ec7u CRM n\u00e2ng cao y\u00eau c\u1ea7u g\u00f3i thu\u00ea bao Pro", "C\u1ea7n c\u1ea5p quy\u1ec1n \u0111\u1ed3ng b\u1ed9 l\u1ecbch \u0111\u1ec3 bot t\u1ef1 \u0111\u1ed9ng tham gia c\u00e1c cu\u1ed9c h\u1ecdp \u0111\u00fang gi\u1edd"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Unlimited recording on Meet & Zoom",
+                  "Transcription in 30+ languages",
+                  "AI meeting summaries",
+                  "Create & share video clips"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 25,
+            "priceAnnualMonthly": 18,
+            "currency": "USD",
+            "features": [
+                  "HubSpot & Salesforce integration",
+                  "Download audio & video files",
+                  "Custom AI meeting templates",
+                  "Analytics dashboard"
+            ]
+      },
+      {
+            "name": "Enterprise",
+            "priceMonthly": 49,
+            "priceAnnualMonthly": 39,
+            "currency": "USD",
+            "features": [
+                  "Unlimited team workspaces",
+                  "Custom data retention policies",
+                  "SAML SSO & audit logs",
+                  "Dedicated customer success"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://tldv.io",
+    logoUrl: "/logos/tldv.png",
+    alternatives: ["fathom-ai", "otter-ai", "fireflies"],
+  },
+  {
+    id: "supernormal",
+    slug: "supernormal",
+    name: "Supernormal",
+    tagline: {
+      en: "Executive AI note-taking platform providing structured agendas, decision tracking, and enterprise team compliance.",
+      vi: "N\u1ec1n t\u1ea3ng ghi ch\u00e9p cu\u1ed9c h\u1ecdp AI c\u1ea5p \u0111i\u1ec1u h\u00e0nh, theo d\u00f5i quy\u1ebft \u0111\u1ecbnh, ph\u00e2n c\u00f4ng nhi\u1ec7m v\u1ee5 v\u00e0 \u0111\u1ea3m b\u1ea3o b\u1ea3o m\u1eadt doanh nghi\u1ec7p.",
+    },
+    description: {
+      en: "Supernormal is trusted by over 100,000 organizations to automate meeting documentation. It creates formatted executive summaries, tracks key decisions, flags action items, and stores notes in a secure company repository.",
+      vi: "Supernormal \u0111\u01b0\u1ee3c h\u01a1n 100.000 t\u1ed5 ch\u1ee9c tin d\u00f9ng \u0111\u1ec3 t\u1ef1 \u0111\u1ed9ng h\u00f3a bi\u00ean b\u1ea3n cu\u1ed9c h\u1ecdp. T\u1ea1o c\u00e1c b\u1ea3n t\u00f3m t\u1eaft \u0111i\u1ec1u h\u00e0nh ch\u1ec9n chu, theo d\u00f5i c\u00e1c quy\u1ebft \u0111\u1ecbnh quan tr\u1ecdng, ph\u00e2n c\u00f4ng \u0111\u1ea7u vi\u1ec7c v\u00e0 l\u01b0u tr\u1eef b\u1ea3o m\u1eadt trong kho tri th\u1ee9c c\u00f4ng ty.",
+    },
+    directAnswer: {
+      en: "Supernormal is an enterprise-focused AI meeting notepad designed for leadership, project managers, and HR teams. It distinguishes itself with custom executive note templates, SOC 2 Type II compliance, and seamless multi-calendar integration. Plans start at $18/month with a free starter tier.",
+      vi: "Supernormal l\u00e0 s\u1ed5 tay ghi ch\u00e9p cu\u1ed9c h\u1ecdp AI \u0111\u1ecbnh h\u01b0\u1edbng doanh nghi\u1ec7p d\u00e0nh cho ban l\u00e3nh \u0111\u1ea1o, qu\u1ea3n l\u00fd d\u1ef1 \u00e1n v\u00e0 nh\u00e2n s\u1ef1. N\u1ed5i b\u1eadt v\u1edbi c\u00e1c m\u1eabu bi\u00ean b\u1ea3n h\u1ecdp \u0111i\u1ec1u h\u00e0nh t\u00f9y bi\u1ebfn, ch\u1ee9ng nh\u1eadn b\u1ea3o m\u1eadt SOC 2 Type II v\u00e0 k\u1ebft n\u1ed1i \u0111a l\u1ecbch m\u01b0\u1ee3t m\u00e0. Gi\u00e1 t\u1eeb $18/th\u00e1ng k\u00e8m g\u00f3i d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["meeting-productivity"],
+    tags: ["Executive Notes", "Supernormal", "Meeting AI", "Action Items", "SOC2 Compliance"],
+    startingPrice: 18,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://supernormal.com/?via={code}",
+    adminAffiliateUrl: "https://supernormal.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 2900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Executives, board members, HR leaders, and project directors who need clean, professional meeting documentation without conversational fluff.",
+        vi: "Ban gi\u00e1m \u0111\u1ed1c, th\u00e0nh vi\u00ean h\u1ed9i \u0111\u1ed3ng qu\u1ea3n tr\u1ecb, tr\u01b0\u1edfng ph\u00f2ng nh\u00e2n s\u1ef1 c\u1ea7n bi\u00ean b\u1ea3n h\u1ecdp c\u00f4 \u0111\u1ecdng, b\u1ea3o m\u1eadt v\u00e0 chu\u1ea9n m\u1ef1c.",
+      },
+      notFor: {
+        en: "Users looking for video editing or consumer social meme creation.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng mu\u1ed1n d\u1ef1ng video ho\u1eb7c l\u00e0m meme m\u1ea1ng x\u00e3 h\u1ed9i gi\u1ea3i tr\u00ed.",
+      },
+      bottomLine: {
+        en: "The most professional and executive-ready meeting notepad on the market, built with corporate governance and security at its core.",
+        vi: "S\u1ed5 tay ghi ch\u00e9p cu\u1ed9c h\u1ecdp chuy\u00ean nghi\u1ec7p v\u00e0 ch\u1ec9n chu nh\u1ea5t cho gi\u1edbi qu\u1ea3n l\u00fd, \u0111\u1eb7t qu\u1ea3n tr\u1ecb doanh nghi\u1ec7p v\u00e0 b\u1ea3o m\u1eadt th\u00f4ng tin l\u00ean h\u00e0ng \u0111\u1ea7u.",
+      },
+    },
+    pros: {
+      en: ["Structured executive templates: 1-on-1s, Board Meetings, Product Sprints, and Candidate Interviews", "Clear separation of Decisions Made versus Action Items Assigned with owner tags", "Enterprise-grade security: SOC 2 Type II certified with zero customer data model training", "Direct integration with Slack, Google Drive, Notion, and HubSpot"],
+      vi: ["C\u00e1c m\u1eabu bi\u00ean b\u1ea3n \u0111i\u1ec1u h\u00e0nh b\u00e0i b\u1ea3n: h\u1ecdp 1-on-1, h\u1ecdp h\u1ed9i \u0111\u1ed3ng qu\u1ea3n tr\u1ecb, h\u1ecdp sprint s\u1ea3n ph\u1ea9m v\u00e0 ph\u1ecfng v\u1ea5n \u1ee9ng vi\u00ean", "Ph\u00e2n \u0111\u1ecbnh r\u1ea1ch r\u00f2i gi\u1eefa 'Quy\u1ebft \u0111\u1ecbnh \u0111\u00e3 th\u1ed1ng nh\u1ea5t' v\u00e0 'Nhi\u1ec7m v\u1ee5 c\u1ea7n l\u00e0m' k\u00e8m t\u00ean ng\u01b0\u1eddi ch\u1ecbu tr\u00e1ch nhi\u1ec7m", "B\u1ea3o m\u1eadt c\u1ea5p doanh nghi\u1ec7p: ch\u1ee9ng nh\u1eadn SOC 2 Type II cam k\u1ebft kh\u00f4ng s\u1eed d\u1ee5ng d\u1eef li\u1ec7u kh\u00e1ch h\u00e0ng \u0111\u1ec3 hu\u1ea5n luy\u1ec7n AI", "K\u1ebft n\u1ed1i tr\u1ef1c ti\u1ebfp m\u01b0\u1ee3t m\u00e0 v\u1edbi Slack, Google Drive, Notion v\u00e0 HubSpot"],
+    },
+    cons: {
+      en: ["Free tier is capped at 1,000 monthly meeting minutes", "Fewer sales-specific pipeline scoring features compared to Fathom"],
+      vi: ["G\u00f3i mi\u1ec5n ph\u00ed gi\u1edbi h\u1ea1n \u1edf m\u1ee9c 1.000 ph\u00fat h\u1ecdp m\u1ed7i th\u00e1ng", "\u00cdt t\u00ednh n\u0103ng ch\u1ea5m \u0111i\u1ec3m th\u01b0\u01a1ng v\u1ee5 b\u00e1n h\u00e0ng chuy\u00ean s\u00e2u h\u01a1n so v\u1edbi Fathom"],
+    },
+    pricingTiers: [
+      {
+            "name": "Starter",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "1,000 meeting minutes/mo",
+                  "Standard AI templates",
+                  "Google Meet, Teams & Zoom",
+                  "Searchable transcripts"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 18,
+            "priceAnnualMonthly": 15,
+            "currency": "USD",
+            "features": [
+                  "Unlimited meeting minutes",
+                  "Custom template builder",
+                  "HubSpot & Pipedrive sync",
+                  "Export to Google Docs & Notion"
+            ]
+      },
+      {
+            "name": "Business",
+            "priceMonthly": 29,
+            "priceAnnualMonthly": 24,
+            "currency": "USD",
+            "features": [
+                  "Team knowledge repository",
+                  "Admin analytics dashboard",
+                  "SAML SSO & SOC2 report",
+                  "Dedicated onboarding specialist"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://supernormal.com",
+    logoUrl: "/logos/supernormal.png",
+    alternatives: ["fathom-ai", "tldv", "otter-ai"],
+  },
+  {
+    id: "clay-ai",
+    slug: "clay-ai",
+    name: "Clay.com",
+    tagline: {
+      en: "Data enrichment and automated outbound prospecting engine connecting 50+ data providers with creative AI agents.",
+      vi: "C\u1ed7 m\u00e1y l\u00e0m gi\u00e0u d\u1eef li\u1ec7u v\u00e0 t\u00ecm ki\u1ebfm kh\u00e1ch h\u00e0ng ti\u1ec1m n\u0103ng B2B k\u1ebft n\u1ed1i h\u01a1n 50 ngu\u1ed3n d\u1eef li\u1ec7u v\u1edbi AI Agent th\u00f4ng minh.",
+    },
+    description: {
+      en: "Clay transformed outbound sales and growth marketing. By orchestrating 50+ data vendors into a unified spreadsheet, Clay's AI agents find verified work emails, research prospect websites, and write hyper-personalized outreach at scale.",
+      vi: "Clay \u0111\u1ecbnh ngh\u0129a l\u1ea1i c\u00e1ch l\u00e0m outbound marketing v\u00e0 b\u00e1n h\u00e0ng B2B. B\u1eb1ng c\u00e1ch k\u1ebft n\u1ed1i h\u01a1n 50 nh\u00e0 cung c\u1ea5p d\u1eef li\u1ec7u v\u00e0o m\u1ed9t b\u1ea3ng t\u00ednh th\u00f4ng minh, AI Agent c\u1ee7a Clay t\u1ef1 \u0111\u1ed9ng t\u00ecm email c\u00f4ng vi\u1ec7c, nghi\u00ean c\u1ee9u website kh\u00e1ch h\u00e0ng v\u00e0 c\u00e1 nh\u00e2n h\u00f3a email ti\u1ebfp c\u1eadn h\u00e0ng lo\u1ea1t.",
+    },
+    directAnswer: {
+      en: "Clay is the market leader in modern B2B data enrichment and outbound orchestration. Its spreadsheet-style canvas pulls from providers like Apollo, Clearbit, and LinkedIn, using AI (Claygent) to scrape websites and compose customized sales pitches. Plans start at $149/month with a free starter tier (100 credits).",
+      vi: "Clay l\u00e0 n\u1ec1n t\u1ea3ng d\u1eabn \u0111\u1ea7u v\u1ec1 l\u00e0m gi\u00e0u d\u1eef li\u1ec7u B2B v\u00e0 t\u1ef1 \u0111\u1ed9ng h\u00f3a quy tr\u00ecnh outbound. Giao di\u1ec7n b\u1ea3ng t\u00ednh th\u00f4ng minh k\u1ebft n\u1ed1i v\u1edbi Apollo, Clearbit, LinkedIn, k\u1ebft h\u1ee3p c\u00f9ng AI Agent (Claygent) t\u1ef1 \u0111\u1ecdc website kh\u00e1ch h\u00e0ng v\u00e0 vi\u1ebft l\u1eddi ch\u00e0o h\u00e0ng c\u00e1 nh\u00e2n h\u00f3a \u0111\u1ed9c nh\u1ea5t. Gi\u00e1 t\u1eeb $149/th\u00e1ng k\u00e8m g\u00f3i d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed 100 credits.",
+    },
+    hubs: ["sales-crm", "advertising"],
+    tags: ["Data Enrichment", "Outbound Sales", "B2B Lead Gen", "Claygent", "Cold Email"],
+    startingPrice: 149,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.clay.com/?via={code}",
+    adminAffiliateUrl: "https://www.clay.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 4600,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Growth marketers, B2B sales development reps (SDRs), agency founders, and RevOps teams wanting 10x higher reply rates on outbound campaigns.",
+        vi: "Marketer m\u1ea3ng B2B, chuy\u00ean vi\u00ean ph\u00e1t tri\u1ec3n kinh doanh (SDR), ch\u1ee7 agency v\u00e0 \u0111\u1ed9i ng\u0169 RevOps mu\u1ed1n t\u0103ng t\u1ef7 l\u1ec7 ph\u1ea3n h\u1ed3i email l\u1ea1nh l\u00ean g\u1ea5p 10 l\u1ea7n.",
+      },
+      notFor: {
+        en: "Consumer B2C ecommerce stores selling low-ticket retail items directly to shoppers.",
+        vi: "C\u1eeda h\u00e0ng b\u00e1n l\u1ebb B2C b\u00e1n c\u00e1c s\u1ea3n ph\u1ea9m gi\u00e1 tr\u1ecb nh\u1ecf tr\u1ef1c ti\u1ebfp cho ng\u01b0\u1eddi ti\u00eau d\u00f9ng.",
+      },
+      bottomLine: {
+        en: "The modern sales development secret weapon, replacing clunky single-database scrapers with a dynamic, multi-provider AI waterfall.",
+        vi: "V\u0169 kh\u00ed b\u00ed m\u1eadt c\u1ee7a c\u00e1c \u0111\u1ed9i ng\u0169 b\u00e1n h\u00e0ng B2B hi\u1ec7n \u0111\u1ea1i, thay th\u1ebf c\u00e1c c\u00f4ng c\u1ee5 qu\u00e9t \u0111\u01a1n l\u1ebb b\u1eb1ng quy tr\u00ecnh l\u00e0m gi\u00e0u d\u1eef li\u1ec7u th\u00e1c n\u01b0\u1edbc (waterfall) th\u00f4ng minh.",
+      },
+    },
+    pros: {
+      en: ["Waterfall enrichment queries 50+ data providers in sequence, achieving 80%+ verified email match rates", "Claygent AI web-scraping agent visits prospects' websites, hiring boards, and LinkedIn to find specific facts", "AI formula generator writes tailored, 1-to-1 cold emails referencing genuine customer pain points", "Direct integrations to push enriched leads into Smartlead, Instantly, HubSpot, and Salesforce"],
+      vi: ["Quy tr\u00ecnh Waterfall truy v\u1ea5n h\u01a1n 50 nh\u00e0 cung c\u1ea5p d\u1eef li\u1ec7u n\u1ed1i ti\u1ebfp nhau, \u0111\u1ea1t t\u1ef7 l\u1ec7 t\u00ecm th\u1ea5y email chu\u1ea9n t\u1edbi h\u01a1n 80%", "AI Agent Claygent t\u1ef1 truy c\u1eadp website c\u1ee7a kh\u00e1ch, trang tuy\u1ec3n d\u1ee5ng v\u00e0 LinkedIn \u0111\u1ec3 thu th\u1eadp c\u00e1c d\u1eef ki\u1ec7n c\u1ee5 th\u1ec3", "Tr\u00ecnh t\u1ea1o c\u00e2u l\u1ec7nh AI vi\u1ebft email ti\u1ebfp c\u1eadn c\u00e1 nh\u00e2n h\u00f3a 1-1 nh\u1eafc \u0111\u00fang nh\u1eefng kh\u00f3 kh\u0103n th\u1ef1c t\u1ebf c\u1ee7a kh\u00e1ch h\u00e0ng", "\u0110\u1ea9y d\u1eef li\u1ec7u kh\u00e1ch h\u00e0ng ti\u1ec1m n\u0103ng tr\u1ef1c ti\u1ebfp v\u00e0o c\u00e1c ph\u1ea7n m\u1ec1m g\u1eedi email nh\u01b0 Smartlead, Instantly, HubSpot"],
+    },
+    cons: {
+      en: ["Requires an understanding of outbound sales concepts and credit-based workflow economics", "Starting subscription ($149/mo) represents a serious commitment for early-stage solo founders"],
+      vi: ["\u0110\u00f2i h\u1ecfi ng\u01b0\u1eddi d\u00f9ng n\u1eafm v\u1eefng t\u01b0 duy b\u00e1n h\u00e0ng B2B v\u00e0 c\u00e1ch t\u1ed1i \u01b0u h\u1ea1n m\u1ee9c credit c\u1ee7a t\u1eebng t\u00e1c v\u1ee5", "M\u1ee9c gi\u00e1 g\u00f3i kh\u1edfi \u0111i\u1ec3m ($149/th\u00e1ng) l\u00e0 m\u1ed9t kho\u1ea3n \u0111\u1ea7u t\u01b0 \u0111\u00e1ng k\u1ec3 \u0111\u1ed1i v\u1edbi c\u00e1c c\u00e1 nh\u00e2n kh\u1edfi nghi\u1ec7p giai \u0111o\u1ea1n \u0111\u1ea7u"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free Starter",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "100 credits/mo",
+                  "Access to 50+ data providers",
+                  "Claygent AI research basic",
+                  "Export to CSV"
+            ]
+      },
+      {
+            "name": "Starter",
+            "priceMonthly": 149,
+            "priceAnnualMonthly": 134,
+            "currency": "USD",
+            "features": [
+                  "2,000 credits/mo",
+                  "Unlimited table rows",
+                  "Email verification waterfall",
+                  "Integrations with CRMs"
+            ]
+      },
+      {
+            "name": "Explorer",
+            "priceMonthly": 349,
+            "priceAnnualMonthly": 314,
+            "currency": "USD",
+            "features": [
+                  "10,000 credits/mo",
+                  "Full Claygent web research",
+                  "Webhook automations",
+                  "Priority support channel"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.clay.com",
+    logoUrl: "/logos/clay-ai.png",
+    alternatives: ["apollo-ai", "instantly-ai", "highlevel"],
+  },
+  {
+    id: "apollo-ai",
+    slug: "apollo-ai",
+    name: "Apollo.io AI",
+    tagline: {
+      en: "All-in-one B2B lead intelligence and sales execution platform with 275M+ verified contacts and AI email sequencing.",
+      vi: "N\u1ec1n t\u1ea3ng d\u1eef li\u1ec7u B2B v\u00e0 ti\u1ebfp c\u1eadn b\u00e1n h\u00e0ng t\u1ea5t c\u1ea3 trong m\u1ed9t v\u1edbi h\u01a1n 275 tri\u1ec7u li\u00ean h\u1ec7 v\u00e0 chu\u1ed7i email AI t\u1ef1 \u0111\u1ed9ng.",
+    },
+    description: {
+      en: "Apollo.io combines the world's most extensive B2B lead database with an automated sales engagement suite. Discover prospects, find verified phone numbers and emails, and launch multi-channel AI sequences.",
+      vi: "Apollo.io k\u1ebft h\u1ee3p kho c\u01a1 s\u1edf d\u1eef li\u1ec7u kh\u00e1ch h\u00e0ng B2B l\u1edbn nh\u1ea5t th\u1ebf gi\u1edbi v\u1edbi b\u1ed9 c\u00f4ng c\u1ee5 ti\u1ebfp c\u1eadn b\u00e1n h\u00e0ng t\u1ef1 \u0111\u1ed9ng. T\u00ecm ki\u1ebfm kh\u00e1ch h\u00e0ng theo ch\u1ee9c danh, l\u1ea5y s\u1ed1 \u0111i\u1ec7n tho\u1ea1i/email \u0111\u00e3 x\u00e1c th\u1ef1c v\u00e0 kh\u1edfi ch\u1ea1y chu\u1ed7i ch\u0103m s\u00f3c \u0111a k\u00eanh b\u1eb1ng AI.",
+    },
+    directAnswer: {
+      en: "Apollo.io is the undisputed powerhouse of B2B sales prospecting, offering direct access to 275M+ verified contacts across 73M+ companies. Its AI assistant crafts personalized emails, scores inbound leads, and automates multi-step outreach sequences. Plans start at $59/user/month with a free starter tier.",
+      vi: "Apollo.io l\u00e0 c\u1ed7 m\u00e1y t\u00ecm ki\u1ebfm kh\u00e1ch h\u00e0ng B2B m\u1ea1nh m\u1ebd nh\u1ea5t hi\u1ec7n nay, cung c\u1ea5p quy\u1ec1n truy c\u1eadp h\u01a1n 275 tri\u1ec7u li\u00ean h\u1ec7 tr\u00ean 73 tri\u1ec7u doanh nghi\u1ec7p to\u00e0n c\u1ea7u. Tr\u1ee3 l\u00fd AI t\u1ef1 \u0111\u1ed9ng so\u1ea1n th\u1ea3o email c\u00e1 nh\u00e2n h\u00f3a, ch\u1ea5m \u0111i\u1ec3m kh\u00e1ch ti\u1ec1m n\u0103ng v\u00e0 ch\u1ea1y chu\u1ed7i t\u01b0\u01a1ng t\u00e1c \u0111a b\u01b0\u1edbc. Gi\u00e1 t\u1eeb $49/ng\u01b0\u1eddi/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["sales-crm"],
+    tags: ["Apollo.io", "B2B Lead Database", "Email Sequences", "Sales Engagement", "Lead Prospecting"],
+    startingPrice: 49,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "PartnerStack",
+    affiliateUrlTemplate: "https://www.apollo.io/?via={code}",
+    adminAffiliateUrl: "https://www.apollo.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 8100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "B2B sales teams, agency business developers, recruiters, and founders needing an all-in-one database and email outreach platform without paying multiple tool subscriptions.",
+        vi: "\u0110\u1ed9i ng\u0169 b\u00e1n h\u00e0ng B2B, ph\u00e1t tri\u1ec3n th\u1ecb tr\u01b0\u1eddng, nh\u00e0 tuy\u1ec3n d\u1ee5ng v\u00e0 ch\u1ee7 doanh nghi\u1ec7p c\u1ea7n tr\u1ecdn g\u00f3i t\u1eeb data kh\u00e1ch h\u00e0ng \u0111\u1ebfn ph\u1ea7n m\u1ec1m g\u1eedi mail.",
+      },
+      notFor: {
+        en: "B2C consumer brands selling clothing or direct-to-consumer physical retail.",
+        vi: "Th\u01b0\u01a1ng hi\u1ec7u b\u00e1n l\u1ebb B2C b\u00e1n h\u00e0ng ti\u00eau d\u00f9ng th\u1eddi trang tr\u1ef1c ti\u1ebfp cho c\u00e1 nh\u00e2n.",
+      },
+      bottomLine: {
+        en: "The most comprehensive and cost-effective B2B sales operating system, uniting massive lead data with native AI execution.",
+        vi: "H\u1ec7 \u0111i\u1ec1u h\u00e0nh b\u00e1n h\u00e0ng B2B to\u00e0n di\u1ec7n v\u00e0 ti\u1ebft ki\u1ec7m chi ph\u00ed nh\u1ea5t, k\u1ebft h\u1ee3p kho d\u1eef li\u1ec7u kh\u00e1ch kh\u1ed5ng l\u1ed3 v\u1edbi c\u00f4ng ngh\u1ec7 ti\u1ebfp c\u1eadn t\u1ef1 \u0111\u1ed9ng b\u1eb1ng AI.",
+      },
+    },
+    pros: {
+      en: ["Direct access to 275M+ verified global contacts with granular filters (industry, headcount, tech stack, revenue)", "Built-in AI writing assistant drafts personalized multi-step email sequences based on buyer persona", "Chrome extension pulls verified emails and direct dials right off LinkedIn profiles in 1 click", "Native dialer and call recording features integrated directly into the browser"],
+      vi: ["Truy c\u1eadp tr\u1ef1c ti\u1ebfp h\u01a1n 275 tri\u1ec7u li\u00ean h\u1ec7 to\u00e0n c\u1ea7u v\u1edbi b\u1ed9 l\u1ecdc chi ti\u1ebft (ng\u00e0nh ngh\u1ec1, quy m\u00f4, c\u00f4ng ngh\u1ec7 s\u1eed d\u1ee5ng, doanh thu)", "Tr\u1ee3 l\u00fd AI vi\u1ebft s\u1eb5n c\u00e1c chu\u1ed7i email ch\u0103m s\u00f3c nhi\u1ec1u b\u01b0\u1edbc \u0111\u01b0\u1ee3c c\u00e1 nh\u00e2n h\u00f3a theo t\u1eebng nh\u00f3m ch\u00e2n dung kh\u00e1ch h\u00e0ng", "Ti\u1ec7n \u00edch Chrome m\u1edf r\u1ed9ng l\u1ea5y ngay email c\u00f4ng vi\u1ec7c v\u00e0 s\u1ed1 \u0111i\u1ec7n tho\u1ea1i tr\u1ef1c ti\u1ebfp t\u1eeb trang LinkedIn ch\u1ec9 b\u1eb1ng 1 c\u00fa nh\u1ea5p chu\u1ed9t", "T\u00edch h\u1ee3p s\u1eb5n t\u1ed5ng \u0111\u00e0i g\u1ecdi \u0111i\u1ec7n (dialer) v\u00e0 ghi \u00e2m cu\u1ed9c g\u1ecdi tr\u1ef1c ti\u1ebfp ngay tr\u00ean tr\u00ecnh duy\u1ec7t web"],
+    },
+    cons: {
+      en: ["Mobile direct dial credits require higher tier subscription bundles", "High-volume cold emailing requires careful domain warm-up to preserve deliverability"],
+      vi: ["S\u1ed1 l\u01b0\u1ee3t l\u1ea5y s\u1ed1 \u0111i\u1ec7n tho\u1ea1i di \u0111\u1ed9ng tr\u1ef1c ti\u1ebfp (direct dials) \u0111\u00f2i h\u1ecfi c\u00e1c g\u00f3i thu\u00ea bao cao c\u1ea5p h\u01a1n", "G\u1eedi email ti\u1ebfp c\u1eadn s\u1ed1 l\u01b0\u1ee3ng l\u1edbn c\u1ea7n th\u1ef1c hi\u1ec7n c\u00e1c b\u01b0\u1edbc l\u00e0m \u1ea5m h\u1ed9p th\u01b0 (warm-up) c\u1ea9n th\u1eadn \u0111\u1ec3 tr\u00e1nh v\u00e0o m\u1ee5c spam"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "10,000 email credits/mo",
+                  "Basic search filters",
+                  "2 sequence schedules",
+                  "LinkedIn Chrome extension"
+            ]
+      },
+      {
+            "name": "Basic",
+            "priceMonthly": 59,
+            "priceAnnualMonthly": 49,
+            "currency": "USD",
+            "features": [
+                  "Unlimited email credits",
+                  "25 mobile credits/mo",
+                  "Full sequence engine",
+                  "HubSpot & Salesforce sync"
+            ]
+      },
+      {
+            "name": "Professional",
+            "priceMonthly": 99,
+            "priceAnnualMonthly": 79,
+            "currency": "USD",
+            "features": [
+                  "100 mobile credits/mo",
+                  "Advanced AI sequence writer",
+                  "Pre-call research insights",
+                  "Call recordings & dialer"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.apollo.io",
+    logoUrl: "/logos/apollo-ai.png",
+    alternatives: ["clay-ai", "instantly-ai", "highlevel"],
+  },
+  {
+    id: "instantly-ai",
+    slug: "instantly-ai",
+    name: "Instantly.ai",
+    tagline: {
+      en: "Hyper-growth cold email delivery platform with automated inbox warm-up, unlimited sending accounts, and AI copywriting.",
+      vi: "N\u1ec1n t\u1ea3ng g\u1eedi email l\u1ea1nh chuy\u1ec3n \u0111\u1ed5i cao v\u1edbi t\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng warm-up h\u1ed9p th\u01b0, kh\u00f4ng gi\u1edbi h\u1ea1n t\u00e0i kho\u1ea3n g\u1eedi v\u00e0 AI vi\u1ebft email.",
+    },
+    description: {
+      en: "Instantly.ai transformed outbound email marketing by removing account sending limits. Connect unlimited email accounts, automatically warm them up with peer-to-peer sending networks, and send 10,000+ emails daily directly to the primary inbox.",
+      vi: "Instantly.ai thay \u0111\u1ed5i ho\u00e0n to\u00e0n c\u00e1ch g\u1eedi cold email b\u1eb1ng vi\u1ec7c x\u00f3a b\u1ecf gi\u1edbi h\u1ea1n t\u00e0i kho\u1ea3n g\u1eedi. Cho ph\u00e9p k\u1ebft n\u1ed1i kh\u00f4ng gi\u1edbi h\u1ea1n h\u1ed9p th\u01b0, t\u1ef1 \u0111\u1ed9ng l\u00e0m \u1ea5m (warm-up) qua m\u1ea1ng l\u01b0\u1edbi h\u1ed9p th\u01b0 ch\u00e9o v\u00e0 g\u1eedi h\u00e0ng ng\u00e0n email m\u1ed7i ng\u00e0y th\u1eb3ng v\u00e0o h\u1ed9p th\u01b0 ch\u00ednh (Primary Inbox).",
+    },
+    directAnswer: {
+      en: "Instantly.ai is the industry-standard software for scaling cold email outreach. Renowned for its unlimited inbox connection model and automated deliverability network, Instantly ensures your emails land in inboxes rather than spam folders. Plans start at $37/month ($30 billed annually).",
+      vi: "Instantly.ai l\u00e0 gi\u1ea3i ph\u00e1p ti\u00eau chu\u1ea9n \u0111\u1ec3 m\u1edf r\u1ed9ng quy m\u00f4 ti\u1ebfp c\u1eadn b\u1eb1ng email l\u1ea1nh. N\u1ed5i ti\u1ebfng v\u1edbi m\u00f4 h\u00ecnh cho ph\u00e9p k\u1ebft n\u1ed1i kh\u00f4ng gi\u1edbi h\u1ea1n s\u1ed1 l\u01b0\u1ee3ng h\u1ed9p th\u01b0 v\u00e0 m\u1ea1ng l\u01b0\u1edbi duy tr\u00ec uy t\u00edn t\u00ean mi\u1ec1n t\u1ef1 \u0111\u1ed9ng, Instantly \u0111\u1ea3m b\u1ea3o email v\u00e0o th\u1eb3ng h\u1ed9p th\u01b0 \u0111\u1ebfn thay v\u00ec h\u00f2m th\u01b0 r\u00e1c. Gi\u00e1 t\u1eeb $30/th\u00e1ng (thanh to\u00e1n n\u0103m).",
+    },
+    hubs: ["sales-crm", "advertising"],
+    tags: ["Cold Email", "Email Deliverability", "Inbox Warmup", "Instantly.ai", "Outbound Automation"],
+    startingPrice: 30,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://instantly.ai/?via={code}",
+    adminAffiliateUrl: "https://instantly.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 5900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Lead generation agencies, B2B SaaS growth hackers, and sales teams needing to send high-volume cold email campaigns with 95%+ inbox placement.",
+        vi: "Agency t\u00ecm ki\u1ebfm kh\u00e1ch h\u00e0ng, ng\u01b0\u1eddi l\u00e0m t\u0103ng tr\u01b0\u1edfng B2B SaaS v\u00e0 \u0111\u1ed9i ng\u0169 sales c\u1ea7n g\u1eedi email l\u1ea1nh s\u1ed1 l\u01b0\u1ee3ng l\u1edbn v\u1edbi t\u1ef7 l\u1ec7 v\u00e0o Inbox tr\u00ean 95%.",
+      },
+      notFor: {
+        en: "Retail newsletters sending opt-in weekly marketing promotions to existing email subscribers (use GetResponse or Klaviyo).",
+        vi: "B\u1ea3n tin b\u00e1n l\u1ebb g\u1eedi email ti\u1ebfp th\u1ecb h\u00e0ng tu\u1ea7n cho ng\u01b0\u1eddi \u0111\u0103ng k\u00fd t\u1ef1 nguy\u1ec7n (n\u00ean d\u00f9ng GetResponse ho\u1eb7c Klaviyo).",
+      },
+      bottomLine: {
+        en: "The undisputed king of cold email infrastructure, allowing agencies to scale outbound prospecting without deliverability penalties.",
+        vi: "\u00d4ng vua h\u1ea1 t\u1ea7ng g\u1eedi email l\u1ea1nh hi\u1ec7n nay, gi\u00fap doanh nghi\u1ec7p m\u1edf r\u1ed9ng quy m\u00f4 ti\u1ebfp c\u1eadn kh\u00e1ch h\u00e0ng m\u00e0 kh\u00f4ng lo b\u1ecb r\u01a1i v\u00e0o h\u00f2m th\u01b0 r\u00e1c.",
+      },
+    },
+    pros: {
+      en: ["Unlimited email accounts: connect dozens of Google Workspace and Outlook inboxes with zero extra per-account fees", "Automated Deliverability Network continuously warms up inboxes to maintain high sender reputation", "Unibox feature centralizes replies from all sending domains into a single unified customer response inbox", "AI Copilot generates high-converting subject lines, intro hooks, and personalized call-to-actions"],
+      vi: ["Kh\u00f4ng gi\u1edbi h\u1ea1n t\u00e0i kho\u1ea3n email: k\u1ebft n\u1ed1i h\u00e0ng ch\u1ee5c h\u1ed9p th\u01b0 Google Workspace v\u00e0 Outlook m\u00e0 kh\u00f4ng m\u1ea5t th\u00eam ph\u00ed ph\u1ee5", "M\u1ea1ng l\u01b0\u1edbi l\u00e0m \u1ea5m t\u1ef1 \u0111\u1ed9ng (Warm-up Network) li\u00ean t\u1ee5c g\u1eedi v\u00e0 t\u01b0\u01a1ng t\u00e1c ch\u00e9o gi\u1eef uy t\u00edn ng\u01b0\u1eddi g\u1eedi lu\u00f4n \u1edf m\u1ee9c t\u1ed1i \u0111a", "H\u1ed9p th\u01b0 t\u1eadp trung Unibox gom to\u00e0n b\u1ed9 ph\u1ea3n h\u1ed3i t\u1eeb m\u1ecdi t\u00ean mi\u1ec1n g\u1eedi v\u1ec1 m\u1ed9t giao di\u1ec7n tr\u1ea3 l\u1eddi duy nh\u1ea5t", "AI Copilot t\u1ef1 \u0111\u1ed9ng g\u1ee3i \u00fd ti\u00eau \u0111\u1ec1 thu h\u00fat, \u0111o\u1ea1n m\u1edf \u0111\u1ea7u \u1ea5n t\u01b0\u1ee3ng v\u00e0 l\u1eddi k\u00eau g\u1ecdi h\u00e0nh \u0111\u1ed9ng (CTA) chuy\u1ec3n \u0111\u1ed5i cao"],
+    },
+    cons: {
+      en: ["Requires setting up dedicated secondary domains and DNS records (SPF, DKIM, DMARC) for safety", "Lead database search credits are billed as a separate add-on module"],
+      vi: ["\u0110\u00f2i h\u1ecfi ph\u1ea3i mua th\u00eam c\u00e1c t\u00ean mi\u1ec1n ph\u1ee5 v\u00e0 c\u1ea5u h\u00ecnh b\u1ea3n ghi DNS (SPF, DKIM, DMARC) chu\u1ea9n \u0111\u1ec3 \u0111\u1ea3m b\u1ea3o an to\u00e0n", "T\u00ednh n\u0103ng tra c\u1ee9u data kh\u00e1ch h\u00e0ng (Lead Finder) l\u00e0 g\u00f3i mua th\u00eam t\u00e1ch bi\u1ec7t"],
+    },
+    pricingTiers: [
+      {
+            "name": "Growth",
+            "priceMonthly": 37,
+            "priceAnnualMonthly": 30,
+            "currency": "USD",
+            "features": [
+                  "Unlimited email accounts",
+                  "Unlimited warmup",
+                  "1,000 active leads",
+                  "5,000 emails/mo",
+                  "Live support"
+            ]
+      },
+      {
+            "name": "Hypergrowth",
+            "priceMonthly": 97,
+            "priceAnnualMonthly": 77.6,
+            "currency": "USD",
+            "features": [
+                  "Unlimited email accounts",
+                  "Unlimited warmup",
+                  "25,000 active leads",
+                  "100,000 emails/mo",
+                  "Premium support"
+            ]
+      },
+      {
+            "name": "Light Speed",
+            "priceMonthly": 358,
+            "priceAnnualMonthly": 286,
+            "currency": "USD",
+            "features": [
+                  "Unlimited email accounts",
+                  "Unlimited warmup",
+                  "100,000 active leads",
+                  "500,000 emails/mo",
+                  "Dedicated IP warm-up"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://instantly.ai",
+    logoUrl: "/logos/instantly-ai.png",
+    alternatives: ["clay-ai", "apollo-ai", "highlevel"],
+  },
+  {
+    id: "beautiful-ai",
+    slug: "beautiful-ai",
+    name: "Beautiful.ai",
+    tagline: {
+      en: "Smart presentation designer that automatically applies professional graphic design rules and real-time layout alignment.",
+      vi: "Ph\u1ea7n m\u1ec1m thi\u1ebft k\u1ebf slide thuy\u1ebft tr\u00ecnh th\u00f4ng minh t\u1ef1 \u0111\u1ed9ng c\u0103n ch\u1ec9nh b\u1ed1 c\u1ee5c v\u00e0 \u00e1p d\u1ee5ng chu\u1ea9n m\u1ef1c \u0111\u1ed3 h\u1ecda chuy\u00ean nghi\u1ec7p.",
+    },
+    description: {
+      en: "Beautiful.ai eliminates the frustration of moving text boxes and resizing shapes. Its Smart Slides adapt dynamically as you add content, keeping typography, margins, and visual balance mathematically perfect.",
+      vi: "Beautiful.ai x\u00f3a b\u1ecf ho\u00e0n to\u00e0n s\u1ef1 \u1ee9c ch\u1ebf khi ph\u1ea3i k\u00e9o th\u1ea3 c\u0103n ch\u1ec9nh t\u1eebng h\u1ed9p ch\u1eef tr\u00ean PowerPoint. C\u00e1c trang Smart Slides t\u1ef1 \u0111\u1ed9ng co gi\u00e3n linh ho\u1ea1t khi b\u1ea1n th\u00eam n\u1ed9i dung, \u0111\u1ea3m b\u1ea3o l\u1ec1, ph\u00f4ng ch\u1eef v\u00e0 b\u1ed1 c\u1ee5c lu\u00f4n c\u00e2n \u0111\u1ed1i ho\u00e0n h\u1ea3o.",
+    },
+    directAnswer: {
+      en: "Beautiful.ai is an intelligent presentation maker designed to keep pitch decks and business reports looking immaculate without a graphic designer. Featuring 60+ Smart Slide templates and DesignerBot AI, it builds complete branded slide decks in seconds. Plans start at $12/month ($12 billed annually) with a 14-day free trial.",
+      vi: "Beautiful.ai l\u00e0 c\u00f4ng c\u1ee5 thi\u1ebft k\u1ebf b\u00e0i thuy\u1ebft tr\u00ecnh th\u00f4ng minh gi\u00fap c\u00e1c b\u1ea3n \u0111\u1ec1 \u00e1n kinh doanh v\u00e0 b\u00e1o c\u00e1o lu\u00f4n \u0111\u1eb9p m\u1eaft chu\u1ea9n \u0111\u1ed3 h\u1ecda m\u00e0 kh\u00f4ng c\u1ea7n thu\u00ea designer. S\u1edf h\u1eefu h\u01a1n 60 m\u1eabu Smart Slide v\u00e0 tr\u1ee3 l\u00fd DesignerBot AI t\u1ef1 t\u1ea1o b\u00e0i thuy\u1ebft tr\u00ecnh ho\u00e0n ch\u1ec9nh sau v\u00e0i gi\u00e2y. Gi\u00e1 t\u1eeb $12/th\u00e1ng k\u00e8m 14 ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["presentation-design"],
+    tags: ["AI Presentations", "Smart Slides", "Beautiful.ai", "Pitch Deck", "Slide Designer"],
+    startingPrice: 12,
+    hasFreePlan: false,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.beautiful.ai/?via={code}",
+    adminAffiliateUrl: "https://www.beautiful.ai/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.7,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Startup founders, consultants, marketing directors, and business executives who need to create immaculate, board-ready presentations fast.",
+        vi: "Nh\u00e0 s\u00e1ng l\u1eadp kh\u1edfi nghi\u1ec7p, chuy\u00ean gia t\u01b0 v\u1ea5n, gi\u00e1m \u0111\u1ed1c marketing c\u1ea7n t\u1ea1o c\u00e1c b\u00e0i thuy\u1ebft tr\u00ecnh g\u1ecdi v\u1ed1n v\u00e0 b\u00e1o c\u00e1o \u0111i\u1ec1u h\u00e0nh ch\u1ec9n chu trong th\u1eddi gian ng\u1eafn.",
+      },
+      notFor: {
+        en: "Graphic artists who want freehand chaotic drawing freedom without geometric layout constraints.",
+        vi: "H\u1ecda s\u0129 mu\u1ed1n v\u1ebd t\u1ef1 do kh\u00f4ng theo c\u00e1c quy chu\u1ea9n b\u1ed1 c\u1ee5c h\u00ecnh h\u1ecdc ng\u0103n n\u1eafp.",
+      },
+      bottomLine: {
+        en: "The easiest way to guarantee that every slide in your presentation looks like it was created by an expensive corporate design agency.",
+        vi: "C\u00e1ch nhanh nh\u1ea5t \u0111\u1ec3 \u0111\u1ea3m b\u1ea3o t\u1eebng trang slide c\u1ee7a b\u1ea1n tr\u00f4ng nh\u01b0 \u0111\u01b0\u1ee3c thi\u1ebft k\u1ebf b\u1edfi m\u1ed9t c\u00f4ng ty thi\u1ebft k\u1ebf th\u01b0\u01a1ng hi\u1ec7u chuy\u00ean nghi\u1ec7p.",
+      },
+    },
+    pros: {
+      en: ["Smart Slides automatically re-position elements and adjust typography as content is typed", "DesignerBot AI generates complete tailored slide decks with relevant imagery from a single text prompt", "Universal Brand Control locks company colors, fonts, and logos across all employee presentations", "Export directly to editable PowerPoint (.pptx) or present live with viewer engagement analytics"],
+      vi: ["T\u00ednh n\u0103ng Smart Slides t\u1ef1 \u0111\u1ed9ng s\u1eafp x\u1ebfp l\u1ea1i c\u00e1c th\u00e0nh ph\u1ea7n v\u00e0 c\u00e2n ch\u1ec9nh ch\u1eef khi b\u1ea1n g\u00f5 th\u00eam n\u1ed9i dung", "Tr\u1ee3 l\u00fd DesignerBot AI t\u1ef1 \u0111\u1ed9ng t\u1ea1o to\u00e0n b\u1ed9 b\u00e0i thuy\u1ebft tr\u00ecnh k\u00e8m h\u00ecnh \u1ea3nh ph\u00f9 h\u1ee3p ch\u1ec9 t\u1eeb m\u1ed9t c\u00e2u m\u00f4 t\u1ea3 ng\u1eafn", "B\u1ed9 qu\u1ea3n tr\u1ecb th\u01b0\u01a1ng hi\u1ec7u (Brand Control) kh\u00f3a ch\u1eb7t m\u00e0u s\u1eafc, ph\u00f4ng ch\u1eef v\u00e0 logo c\u00f4ng ty tr\u00ean to\u00e0n b\u1ed9 slide c\u1ee7a nh\u00e2n vi\u00ean", "Cho ph\u00e9p xu\u1ea5t th\u1eb3ng sang file PowerPoint (.pptx) c\u00f3 th\u1ec3 ch\u1ec9nh s\u1eeda ti\u1ebfp ho\u1eb7c tr\u00ecnh chi\u1ebfu online c\u00f3 \u0111o l\u01b0\u1eddng l\u01b0\u1ee3t xem"],
+    },
+    cons: {
+      en: ["Strict smart layout rules prevent dragging elements to arbitrary random coordinates", "Requires credit card to initiate the 14-day free trial"],
+      vi: ["Quy chu\u1ea9n b\u1ed1 c\u1ee5c th\u00f4ng minh ng\u0103n vi\u1ec7c k\u00e9o th\u1ea3 t\u1ef1 do c\u00e1c th\u00e0nh ph\u1ea7n ra ngo\u00e0i l\u1ec1 quy \u0111\u1ecbnh", "C\u1ea7n th\u00f4ng tin thanh to\u00e1n khi \u0111\u0103ng k\u00fd 14 ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "Pro (Individual)",
+            "priceMonthly": 12,
+            "priceAnnualMonthly": 12,
+            "currency": "USD",
+            "features": [
+                  "Unlimited slides & presentations",
+                  "DesignerBot AI generation",
+                  "PowerPoint export",
+                  "Revision history"
+            ]
+      },
+      {
+            "name": "Team",
+            "priceMonthly": 50,
+            "priceAnnualMonthly": 40,
+            "currency": "USD",
+            "features": [
+                  "Shared team slide library",
+                  "Custom company theme & fonts",
+                  "Centralized administrative billing",
+                  "Real-time collaboration"
+            ]
+      },
+      {
+            "name": "Enterprise",
+            "priceMonthly": 99,
+            "priceAnnualMonthly": 80,
+            "currency": "USD",
+            "features": [
+                  "Unlimited team workspaces",
+                  "Dedicated design specialist",
+                  "SAML SSO security",
+                  "Priority customer success"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.beautiful.ai",
+    logoUrl: "/logos/beautiful-ai.png",
+    alternatives: ["decktopus", "gamma", "magicslides"],
+  },
+  {
+    id: "napkin-ai",
+    slug: "napkin-ai",
+    name: "Napkin AI",
+    tagline: {
+      en: "Turn business text, docs, and notes into visual diagrams, flowcharts & presentation graphics.",
+      vi: "Bi\u1ebfn v\u0103n b\u1ea3n, t\u00e0i li\u1ec7u v\u00e0 ghi ch\u00fa th\u00e0nh s\u01a1 \u0111\u1ed3 h\u00ecnh \u1ea3nh tr\u1ef1c quan, l\u01b0u \u0111\u1ed3 & \u0111\u1ed3 h\u1ecda thuy\u1ebft tr\u00ecnh.",
+    },
+    description: {
+      en: "Napkin AI automatically reads long-form business text, strategic documents, or meeting notes and generates tailored visual diagrams, flowcharts, and presentation-ready infographics with one click.",
+      vi: "Napkin AI t\u1ef1 \u0111\u1ed9ng ph\u00e2n t\u00edch c\u00e1c \u0111o\u1ea1n v\u0103n b\u1ea3n d\u00e0i, t\u00e0i li\u1ec7u chi\u1ebfn l\u01b0\u1ee3c ho\u1eb7c ghi ch\u00fa cu\u1ed9c h\u1ecdp \u0111\u1ec3 t\u1ea1o ra s\u01a1 \u0111\u1ed3 tr\u1ef1c quan, l\u01b0u \u0111\u1ed3 v\u00e0 \u0111\u1ed3 h\u1ecda thuy\u1ebft tr\u00ecnh b\u1eaft m\u1eaft ch\u1ec9 v\u1edbi m\u1ed9t c\u00fa nh\u1ea5p chu\u1ed9t.",
+    },
+    directAnswer: {
+      en: "Napkin AI is the leading AI text-to-visual documentation tool for professionals who need fast, clean visual diagrams and infographics without manual graphic design work.",
+      vi: "Napkin AI l\u00e0 c\u00f4ng c\u1ee5 AI t\u1ea1o \u0111\u1ed3 h\u1ecda t\u1eeb v\u0103n b\u1ea3n h\u00e0ng \u0111\u1ea7u d\u00e0nh cho chuy\u00ean gia c\u1ea7n s\u01a1 \u0111\u1ed3 v\u00e0 infographic nhanh ch\u00f3ng m\u00e0 kh\u00f4ng c\u1ea7n k\u1ef9 n\u0103ng thi\u1ebft k\u1ebf th\u1ee7 c\u00f4ng.",
+    },
+    hubs: ["presentation-design", "content-seo", "image-design"],
+    tags: ["text to visual", "infographic generator", "diagrams", "presentation visuals", "AI documentation"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.napkin.ai/?via={code}",
+    adminAffiliateUrl: "https://www.napkin.ai/?via=asmire",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 420,
+    verifiedAt: "2027-11-22",
+    verdict: {
+      bestFor: {
+        en: "Product managers, founders, content marketers, and consultants creating visual decks and docs.",
+        vi: "Product Manager, Founder, Marketer v\u00e0 chuy\u00ean gia t\u01b0 v\u1ea5n c\u1ea7n minh h\u1ecda t\u00e0i li\u1ec7u v\u00e0 slide nhanh ch\u00f3ng.",
+      },
+      notFor: {
+        en: "Users needing complex custom vector illustration or full interactive 3D video presentations.",
+        vi: "Ng\u01b0\u1eddi c\u1ea7n v\u1ebd vector \u0111\u1ed3 h\u1ecda ph\u1ee9c t\u1ea1p th\u1ee7 c\u00f4ng ho\u1eb7c d\u1ef1ng video 3D t\u01b0\u01a1ng t\u00e1c chuy\u00ean s\u00e2u.",
+      },
+      bottomLine: {
+        en: "Exceptional productivity booster that transforms plain text documents into engaging visual assets within seconds.",
+        vi: "\u0110\u00f2n b\u1ea9y n\u0103ng su\u1ea5t v\u01b0\u1ee3t tr\u1ed9i gi\u00fap chuy\u1ec3n \u0111\u1ed5i c\u00e1c t\u00e0i li\u1ec7u v\u0103n b\u1ea3n th\u00f4 r\u00e1p th\u00e0nh h\u00ecnh \u1ea3nh minh h\u1ecda chuy\u00ean nghi\u1ec7p t\u1ee9c th\u00ec.",
+      },
+    },
+    pros: {
+      en: ["Instant text-to-diagram conversion", "Wide range of visual flowcharts, matrices & frameworks", "Seamless export to PNG, SVG, PDF, and PPTX", "Generous free starter tier"],
+      vi: ["Chuy\u1ec3n v\u0103n b\u1ea3n th\u00e0nh s\u01a1 \u0111\u1ed3 tr\u1ef1c quan t\u1ee9c th\u00ec", "\u0110a d\u1ea1ng m\u1eabu bi\u1ec3u \u0111\u1ed3 quy tr\u00ecnh, ma tr\u1eadn & t\u01b0 duy", "Xu\u1ea5t file linh ho\u1ea1t sang PNG, SVG, PDF, PPTX", "G\u00f3i mi\u1ec5n ph\u00ed tr\u1ea3i nghi\u1ec7m h\u00e0o ph\u00f3ng"],
+    },
+    cons: {
+      en: ["Advanced custom styling requires paid plan", "Complex niche technical flowcharts may need manual tweak"],
+      vi: ["T\u00f9y ch\u1ec9nh s\u00e2u phong c\u00e1ch th\u01b0\u01a1ng hi\u1ec7u c\u1ea7n g\u00f3i tr\u1ea3 ph\u00ed", "M\u1ed9t s\u1ed1 s\u01a1 \u0111\u1ed3 k\u1ef9 thu\u1eadt ng\u00e1ch c\u1ea7n c\u0103n ch\u1ec9nh th\u1ee7 c\u00f4ng"],
+    },
+    pricingTiers: [
+      {
+            "name": "Starter Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Unlimited text documents",
+                  "Basic visual generation",
+                  "Standard PNG export"
+            ]
+      },
+      {
+            "name": "Professional",
+            "priceMonthly": 10,
+            "priceAnnualMonthly": 8,
+            "currency": "USD",
+            "features": [
+                  "Unlimited AI visual sparks",
+                  "Vector SVG & PDF exports",
+                  "Custom brand color palettes",
+                  "Commercial license"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.napkin.ai",
+    logoUrl: "/logos/napkin-ai.png",
+    alternatives: ["beautiful-ai", "gamma", "canva"],
+  },
+  {
+    id: "glide-apps",
+    slug: "glide-apps",
+    name: "Glide",
+    tagline: {
+      en: "No-code platform that builds beautiful, mobile-friendly internal tools and business software from your spreadsheets and databases.",
+      vi: "N\u1ec1n t\u1ea3ng kh\u00f4ng c\u1ea7n code bi\u1ebfn b\u1ea3ng t\u00ednh Excel/Google Sheets v\u00e0 c\u01a1 s\u1edf d\u1eef li\u1ec7u th\u00e0nh \u1ee9ng d\u1ee5ng doanh nghi\u1ec7p ho\u00e0n ch\u1ec9nh.",
+    },
+    description: {
+      en: "Glide transforms spreadsheets, Airtable bases, and SQL databases into powerful custom web and mobile apps without code. Integrated with AI workflows, Glide automates inventory tracking, field operations, and employee portals.",
+      vi: "Glide chuy\u1ec3n \u0111\u1ed5i b\u1ea3ng t\u00ednh Excel, Google Sheets, Airtable v\u00e0 c\u01a1 s\u1edf d\u1eef li\u1ec7u SQL th\u00e0nh \u1ee9ng d\u1ee5ng web v\u00e0 di \u0111\u1ed9ng chuy\u00ean nghi\u1ec7p m\u00e0 kh\u00f4ng c\u1ea7n vi\u1ebft code. T\u00edch h\u1ee3p AI t\u1ef1 \u0111\u1ed9ng h\u00f3a qu\u1ea3n l\u00fd kho, c\u00f4ng t\u00e1c hi\u1ec7n tr\u01b0\u1eddng v\u00e0 c\u1ed5ng th\u00f4ng tin n\u1ed9i b\u1ed9.",
+    },
+    directAnswer: {
+      en: "Glide is an industry-leading no-code app development platform. Used by 100,000+ businesses including Spotify and Whirlpool, it allows teams to assemble responsive internal software from spreadsheets in hours rather than months. Plans start at $60/month ($49 billed annually) with a generous free starter tier.",
+      vi: "Glide l\u00e0 n\u1ec1n t\u1ea3ng ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng kh\u00f4ng c\u1ea7n code (no-code) h\u00e0ng \u0111\u1ea7u th\u1ecb tr\u01b0\u1eddng \u0111\u01b0\u1ee3c h\u01a1n 100.000 doanh nghi\u1ec7p nh\u01b0 Spotify v\u00e0 Whirlpool tin d\u00f9ng. Cho ph\u00e9p d\u1ef1ng c\u00e1c \u1ee9ng d\u1ee5ng qu\u1ea3n l\u00fd n\u1ed9i b\u1ed9 t\u1eeb b\u1ea3ng t\u00ednh ch\u1ec9 trong v\u00e0i gi\u1edd thay v\u00ec m\u1ea5t h\u00e0ng th\u00e1ng ph\u00e1t tri\u1ec3n. Gi\u00e1 t\u1eeb $49/th\u00e1ng k\u00e8m g\u00f3i d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["website-builder"],
+    tags: ["No-Code App", "Glide", "Internal Tools", "Google Sheets App", "Business Software"],
+    startingPrice: 49,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://www.glideapps.com/?via={code}",
+    adminAffiliateUrl: "https://www.glideapps.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Operations managers, small business owners, and IT teams needing custom internal tools, field service apps, and client portals built in days.",
+        vi: "Qu\u1ea3n l\u00fd v\u1eadn h\u00e0nh, ch\u1ee7 doanh nghi\u1ec7p v\u1eeba v\u00e0 nh\u1ecf, \u0111\u1ed9i ng\u0169 IT c\u1ea7n l\u00e0m app n\u1ed9i b\u1ed9, app ki\u1ec3m kho v\u00e0 c\u1ed5ng th\u00f4ng tin kh\u00e1ch h\u00e0ng nhanh ch\u00f3ng.",
+      },
+      notFor: {
+        en: "Developers seeking to compile native iOS/Android binary IPAs to publish on the public Apple App Store.",
+        vi: "L\u1eadp tr\u00ecnh vi\u00ean mu\u1ed1n xu\u1ea5t file nh\u1ecb ph\u00e2n IPA/APK nguy\u00ean b\u1ea3n \u0111\u1ec3 \u0111\u01b0a l\u00ean kho \u1ee9ng d\u1ee5ng Apple App Store c\u00f4ng khai.",
+      },
+      bottomLine: {
+        en: "The fastest way on the planet to turn business spreadsheets into gorgeous, highly functional web and mobile applications.",
+        vi: "C\u00e1ch nhanh nh\u1ea5t \u0111\u1ec3 bi\u1ebfn c\u00e1c b\u1ea3ng t\u00ednh kh\u00f4 khan th\u00e0nh \u1ee9ng d\u1ee5ng web v\u00e0 di \u0111\u1ed9ng \u0111\u1eb9p m\u1eaft, ch\u1ea1y m\u01b0\u1ee3t m\u00e0 tr\u00ean m\u1ecdi thi\u1ebft b\u1ecb.",
+      },
+    },
+    pros: {
+      en: ["Builds responsive web apps in hours: changes to your Google Sheet or database update live in the app instantly", "Native Glide AI column features: transcribe voice memos, extract invoice text, and generate summaries without code", "Role-based permissions and Row-Owner security ensure users only view data they are authorized to see", "Works on all devices: desktop, tablet, and mobile with offline data caching"],
+      vi: ["D\u1ef1ng \u1ee9ng d\u1ee5ng ch\u1ec9 trong v\u00e0i gi\u1edd: d\u1eef li\u1ec7u thay \u0111\u1ed5i tr\u00ean Google Sheets hay database s\u1ebd c\u1eadp nh\u1eadt t\u1ee9c th\u00ec tr\u00ean app", "T\u00edch h\u1ee3p s\u1eb5n c\u00e1c c\u1ed9t t\u00ednh n\u0103ng Glide AI: t\u1ef1 ch\u00e9p l\u1eddi file ghi \u00e2m, \u0111\u1ecdc th\u00f4ng tin h\u00f3a \u0111\u01a1n v\u00e0 t\u00f3m t\u1eaft v\u0103n b\u1ea3n", "Ph\u00e2n quy\u1ec1n ng\u01b0\u1eddi d\u00f9ng chi ti\u1ebft (Row-Owner) \u0111\u1ea3m b\u1ea3o nh\u00e2n vi\u00ean ch\u1ec9 nh\u00ecn th\u1ea5y \u0111\u00fang d\u1eef li\u1ec7u thu\u1ed9c th\u1ea9m quy\u1ec1n c\u1ee7a m\u00ecnh", "T\u01b0\u01a1ng th\u00edch m\u01b0\u1ee3t m\u00e0 tr\u00ean m\u00e1y t\u00ednh, m\u00e1y t\u00ednh b\u1ea3ng v\u00e0 \u0111i\u1ec7n tho\u1ea1i v\u1edbi kh\u1ea3 n\u0103ng l\u01b0u d\u1eef li\u1ec7u ngo\u1ea1i tuy\u1ebfn t\u1ea1m th\u1eddi"],
+    },
+    cons: {
+      en: ["Apps run as progressive web apps (PWAs) rather than standalone binary App Store package downloads", "Heavy datasets exceeding 50,000+ rows perform better with SQL connections rather than raw Google Sheets"],
+      vi: ["\u1ee8ng d\u1ee5ng ho\u1ea1t \u0111\u1ed9ng d\u01b0\u1edbi d\u1ea1ng Progressive Web App (PWA) c\u00e0i qua tr\u00ecnh duy\u1ec7t ch\u1ee9 kh\u00f4ng ph\u1ea3i t\u1ea3i qua App Store", "D\u1eef li\u1ec7u l\u1edbn tr\u00ean 50.000 d\u00f2ng n\u00ean k\u1ebft n\u1ed1i c\u01a1 s\u1edf d\u1eef li\u1ec7u SQL chuy\u00ean d\u1ee5ng thay v\u00ec d\u00f9ng Google Sheets th\u00f4ng th\u01b0\u1eddng"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Up to 3 apps",
+                  "1,000 data rows",
+                  "Unlimited personal users",
+                  "Community support"
+            ]
+      },
+      {
+            "name": "Maker",
+            "priceMonthly": 60,
+            "priceAnnualMonthly": 49,
+            "currency": "USD",
+            "features": [
+                  "Unlimited apps",
+                  "5,000 data rows",
+                  "Custom custom domains",
+                  "Glide AI features included"
+            ]
+      },
+      {
+            "name": "Team",
+            "priceMonthly": 125,
+            "priceAnnualMonthly": 99,
+            "currency": "USD",
+            "features": [
+                  "25,000 data rows",
+                  "SQL & BigQuery connectors",
+                  "Role-based user permissions",
+                  "Priority support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.glideapps.com",
+    logoUrl: "/logos/glide-apps.png",
+    alternatives: ["flutterflow", "bubble-io", "marblism"],
+  },
+  {
+    id: "flutterflow",
+    slug: "flutterflow",
+    name: "FlutterFlow",
+    tagline: {
+      en: "Low-code native app builder that compiles visual drag-and-drop designs into clean, exportable Flutter & Dart source code.",
+      vi: "N\u1ec1n t\u1ea3ng ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng native tr\u1ef1c quan xu\u1ea5t m\u00e3 ngu\u1ed3n Flutter & Dart s\u1ea1ch chu\u1ea9n xu\u1ea5t b\u1ea3n App Store.",
+    },
+    description: {
+      en: "FlutterFlow bridges visual development with professional software engineering. Build iOS, Android, and web apps 10x faster with drag-and-drop ease, while maintaining complete access to pure Flutter source code, Firebase, and custom APIs.",
+      vi: "FlutterFlow k\u1ebft h\u1ee3p ho\u00e0n h\u1ea3o gi\u1eefa thi\u1ebft k\u1ebf k\u00e9o th\u1ea3 tr\u1ef1c quan v\u00e0 quy chu\u1ea9n k\u1ef9 thu\u1eadt ph\u1ea7n m\u1ec1m chuy\u00ean nghi\u1ec7p. D\u1ef1ng \u1ee9ng d\u1ee5ng iOS, Android v\u00e0 web nhanh g\u1ea5p 10 l\u1ea7n m\u00e0 v\u1eabn s\u1edf h\u1eefu 100% m\u00e3 ngu\u1ed3n Flutter & Dart s\u1ea1ch, t\u00edch h\u1ee3p Firebase v\u00e0 API t\u00f9y bi\u1ebfn.",
+    },
+    directAnswer: {
+      en: "FlutterFlow is the premier low-code platform for building native mobile and web applications. Unlike locked-in builders, FlutterFlow allows developers to inspect, download, and modify the underlying Flutter code at any time, with one-click deployment to Apple App Store and Google Play. Plans start at $30/month with a free starter tier.",
+      vi: "FlutterFlow l\u00e0 n\u1ec1n t\u1ea3ng low-code s\u1ed1 m\u1ed9t \u0111\u1ec3 ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng native v\u00e0 web. Kh\u00e1c v\u1edbi c\u00e1c h\u1ec7 th\u1ed1ng \u0111\u00f3ng, FlutterFlow cho ph\u00e9p l\u1eadp tr\u00ecnh vi\u00ean t\u1ea3i to\u00e0n b\u1ed9 m\u00e3 ngu\u1ed3n Flutter s\u1ea1ch v\u1ec1 m\u00e1y b\u1ea5t c\u1ee9 l\u00fac n\u00e0o, h\u1ed7 tr\u1ee3 xu\u1ea5t b\u1ea3n ch\u1ec9 1 click l\u00ean Apple App Store v\u00e0 Google Play. Gi\u00e1 t\u1eeb $30/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["website-builder", "code-developer"],
+    tags: ["FlutterFlow", "Low-Code", "Flutter", "Mobile App Builder", "App Store Deploy"],
+    startingPrice: 30,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Rewardful",
+    affiliateUrlTemplate: "https://flutterflow.io/?via={code}",
+    adminAffiliateUrl: "https://flutterflow.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Founders, startup developers, and digital agencies wanting to build and publish authentic native mobile apps to the App Store without writing boilerplate code.",
+        vi: "Nh\u00e0 s\u00e1ng l\u1eadp, l\u1eadp tr\u00ecnh vi\u00ean startup v\u00e0 agency mu\u1ed1n ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng native th\u1ef1c th\u1ee5 l\u00ean App Store m\u00e0 kh\u00f4ng m\u1ea5t th\u1eddi gian vi\u1ebft code l\u1eb7p l\u1ea1i.",
+      },
+      notFor: {
+        en: "Complete non-technical users unfamiliar with basic database concepts (collections, fields, authentication).",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng ho\u00e0n to\u00e0n kh\u00f4ng bi\u1ebft g\u00ec v\u1ec1 t\u01b0 duy c\u01a1 s\u1edf d\u1eef li\u1ec7u (b\u1ea3ng d\u1eef li\u1ec7u, tr\u01b0\u1eddng th\u00f4ng tin, x\u00e1c th\u1ef1c t\u00e0i kho\u1ea3n).",
+      },
+      bottomLine: {
+        en: "The undisputed champion of low-code mobile development, giving you the speed of visual builders with the absolute freedom of clean Flutter source code.",
+        vi: "Qu\u00e1n qu\u00e2n kh\u00f4ng \u0111\u1ed1i th\u1ee7 trong m\u1ea3ng ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng low-code, \u0111em l\u1ea1i t\u1ed1c \u0111\u1ed9 k\u00e9o th\u1ea3 th\u1ea7n t\u1ed1c c\u00f9ng s\u1ef1 t\u1ef1 do tuy\u1ec7t \u0111\u1ed1i c\u1ee7a m\u00e3 ngu\u1ed3n Flutter m\u1edf.",
+      },
+    },
+    pros: {
+      en: ["Complete code export: download the pure Flutter & Dart repository and run locally in VS Code or Android Studio", "One-click deployment pipelines directly to Apple TestFlight, App Store, and Google Play Store", "Deep native integrations: Firebase Authentication, Cloud Firestore, Supabase, SQLite, and custom REST APIs", "AI Gen features generate UI screens, database schemas, and custom Dart functions from plain English"],
+      vi: ["Xu\u1ea5t to\u00e0n b\u1ed9 m\u00e3 ngu\u1ed3n: t\u1ea3i v\u1ec1 kho m\u00e3 ngu\u1ed3n Flutter & Dart s\u1ea1ch v\u00e0 m\u1edf ch\u1ea1y tr\u1ef1c ti\u1ebfp tr\u00ean VS Code ho\u1eb7c Android Studio", "T\u1ef1 \u0111\u1ed9ng xu\u1ea5t b\u1ea3n ch\u1ec9 v\u1edbi 1 c\u00fa nh\u1ea5p chu\u1ed9t l\u00ean Apple TestFlight, App Store v\u00e0 Google Play Store", "T\u00edch h\u1ee3p s\u00e2u \u0111a n\u1ec1n t\u1ea3ng: x\u00e1c th\u1ef1c Firebase Auth, Cloud Firestore, Supabase, SQLite v\u00e0 REST API t\u00f9y ch\u1ec9nh", "T\u00ednh n\u0103ng AI Gen t\u1ef1 \u0111\u1ed9ng t\u1ea1o m\u00e0n h\u00ecnh giao di\u1ec7n, c\u1ea5u tr\u00fac c\u01a1 s\u1edf d\u1eef li\u1ec7u v\u00e0 h\u00e0m code Dart t\u1eeb v\u0103n b\u1ea3n m\u00f4 t\u1ea3"],
+    },
+    cons: {
+      en: ["Steeper learning curve than simple web drag-and-drop tools like Glide", "Source code download and App Store deployment features require paid tiers"],
+      vi: ["\u0110\u00f2i h\u1ecfi th\u1eddi gian l\u00e0m quen v\u00e0 t\u01b0 duy k\u1ef9 thu\u1eadt nhi\u1ec1u h\u01a1n so v\u1edbi c\u00e1c c\u00f4ng c\u1ee5 t\u1ea1o web k\u00e9o th\u1ea3 \u0111\u01a1n gi\u1ea3n nh\u01b0 Glide", "T\u00ednh n\u0103ng t\u1ea3i m\u00e3 ngu\u1ed3n v\u00e0 xu\u1ea5t b\u1ea3n t\u1ef1 \u0111\u1ed9ng l\u00ean App Store y\u00eau c\u1ea7u g\u00f3i tr\u1ea3 ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Visual builder access",
+                  "Firebase & Supabase integration",
+                  "Run & test in browser",
+                  "Community templates"
+            ]
+      },
+      {
+            "name": "Standard",
+            "priceMonthly": 30,
+            "priceAnnualMonthly": 24,
+            "currency": "USD",
+            "features": [
+                  "Download clean Flutter source code",
+                  "APK & web publishing",
+                  "Full custom widgets",
+                  "No FlutterFlow badge"
+            ]
+      },
+      {
+            "name": "Pro",
+            "priceMonthly": 70,
+            "priceAnnualMonthly": 56,
+            "currency": "USD",
+            "features": [
+                  "One-click Apple App Store deployment",
+                  "Google Play deployment",
+                  "GitHub two-way sync",
+                  "Team collaboration"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://flutterflow.io",
+    logoUrl: "/logos/flutterflow.png",
+    alternatives: ["glide-apps", "bubble-io", "replit"],
+  },
+  {
+    id: "bubble-io",
+    slug: "bubble-io",
+    name: "Bubble.io",
+    tagline: {
+      en: "The most powerful full-stack no-code web application platform powering scalable SaaS and venture-backed startups.",
+      vi: "N\u1ec1n t\u1ea3ng ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng web full-stack kh\u00f4ng c\u1ea7n code m\u1ea1nh m\u1ebd nh\u1ea5t h\u1ed7 tr\u1ee3 v\u1eadn h\u00e0nh SaaS v\u00e0 startup g\u1ecdi v\u1ed1n tri\u1ec7u \u0111\u00f4.",
+    },
+    description: {
+      en: "Bubble pioneered full-stack visual web development. With Bubble, non-technical founders build complex web apps, database architectures, user authentication flows, and payment systems without touching a line of code.",
+      vi: "Bubble l\u00e0 ng\u01b0\u1eddi ti\u00ean phong trong k\u1ef7 nguy\u00ean l\u1eadp tr\u00ecnh web full-stack tr\u1ef1c quan. Gi\u00fap c\u00e1c nh\u00e0 s\u00e1ng l\u1eadp phi k\u1ef9 thu\u1eadt x\u00e2y d\u1ef1ng \u1ee9ng d\u1ee5ng web ph\u1ee9c t\u1ea1p, thi\u1ebft k\u1ebf c\u01a1 s\u1edf d\u1eef li\u1ec7u, ph\u00e2n quy\u1ec1n th\u00e0nh vi\u00ean v\u00e0 thanh to\u00e1n m\u00e0 kh\u00f4ng c\u1ea7n \u0111\u1ee5ng t\u1edbi m\u1ed9t d\u00f2ng code.",
+    },
+    directAnswer: {
+      en: "Bubble is the enterprise benchmark in no-code web development. Over 3.3 million applications have been built on Bubble, powering marketplaces, CRM portals, and scalable SaaS businesses. It combines visual UI design, relational database hosting, and server-side workflow logic. Plans start at $32/month with a free starter tier.",
+      vi: "Bubble l\u00e0 chu\u1ea9n m\u1ef1c s\u1ed1 m\u1ed9t v\u1ec1 ph\u00e1t tri\u1ec3n \u1ee9ng d\u1ee5ng web kh\u00f4ng c\u1ea7n code. H\u01a1n 3,3 tri\u1ec7u \u1ee9ng d\u1ee5ng \u0111\u00e3 \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng tr\u00ean Bubble, v\u1eadn h\u00e0nh c\u00e1c s\u00e0n th\u01b0\u01a1ng m\u1ea1i \u0111i\u1ec7n t\u1eed, c\u1ed5ng CRM v\u00e0 ph\u1ea7n m\u1ec1m SaaS ph\u1ee5c v\u1ee5 h\u00e0ng tri\u1ec7u ng\u01b0\u1eddi d\u00f9ng. T\u00edch h\u1ee3p thi\u1ebft k\u1ebf UI, c\u01a1 s\u1edf d\u1eef li\u1ec7u quan h\u1ec7 v\u00e0 lu\u1ed3ng x\u1eed l\u00fd ph\u00eda server. Gi\u00e1 t\u1eeb $29/th\u00e1ng (thanh to\u00e1n n\u0103m).",
+    },
+    hubs: ["website-builder"],
+    tags: ["No-Code Web", "Bubble.io", "Full-Stack No-Code", "SaaS Builder", "Relational Database"],
+    startingPrice: 29,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://bubble.io/?via={code}",
+    adminAffiliateUrl: "https://bubble.io/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.6,
+    reviewCount: 5100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Non-technical founders, startup teams, and agencies building complex, multi-user web platforms with extensive relational database logic.",
+        vi: "Nh\u00e0 s\u00e1ng l\u1eadp kh\u00f4ng chuy\u00ean k\u1ef9 thu\u1eadt, nh\u00f3m kh\u1edfi nghi\u1ec7p v\u00e0 agency c\u1ea7n x\u00e2y d\u1ef1ng n\u1ec1n t\u1ea3ng web ph\u1ee9c t\u1ea1p c\u00f3 l\u01b0\u1ee3ng t\u01b0\u01a1ng t\u00e1c d\u1eef li\u1ec7u l\u1edbn.",
+      },
+      notFor: {
+        en: "Simple static blog owners or developers wanting clean exportable Next.js/React repositories.",
+        vi: "Ch\u1ee7 website blog t\u0129nh \u0111\u01a1n gi\u1ea3n ho\u1eb7c l\u1eadp tr\u00ecnh vi\u00ean mu\u1ed1n xu\u1ea5t m\u00e3 ngu\u1ed3n React/Next.js ra ngo\u00e0i.",
+      },
+      bottomLine: {
+        en: "The most battle-tested and flexible no-code full-stack platform on earth, capable of handling everything from MVP to venture-backed scale.",
+        vi: "N\u1ec1n t\u1ea3ng no-code full-stack b\u1ec1n b\u1ec9 v\u00e0 m\u1ea1nh m\u1ebd nh\u1ea5t th\u1ebf gi\u1edbi, \u0111\u1ee7 s\u1ee9c g\u00e1nh v\u00e1c \u1ee9ng d\u1ee5ng t\u1eeb giai \u0111o\u1ea1n MVP \u0111\u1ebfn quy m\u00f4 g\u1ecdi v\u1ed1n tri\u1ec7u \u0111\u00f4.",
+      },
+    },
+    pros: {
+      en: ["Complete full-stack capabilities: visual drag-and-drop frontend, integrated relational database, and backend workflows", "Ecosystem of thousands of plugins connecting Stripe, OpenAI, Google, AWS, and external APIs", "Proven venture-scale track record: startups have raised hundreds of millions of dollars on Bubble apps", "Automatic database backups, SSL certificates, and scalable serverless cloud hosting"],
+      vi: ["N\u0103ng l\u1ef1c full-stack to\u00e0n di\u1ec7n: giao di\u1ec7n k\u00e9o th\u1ea3 tr\u1ef1c quan, c\u01a1 s\u1edf d\u1eef li\u1ec7u quan h\u1ec7 t\u00edch h\u1ee3p v\u00e0 lu\u1ed3ng x\u1eed l\u00fd backend", "H\u1ec7 sinh th\u00e1i h\u00e0ng ng\u00e0n plugin k\u1ebft n\u1ed1i t\u1ee9c th\u00ec v\u1edbi Stripe, OpenAI, Google, AWS v\u00e0 c\u00e1c API b\u00ean ngo\u00e0i", "Th\u01b0\u1edbc \u0111o th\u00e0nh c\u00f4ng th\u1ef1c t\u1ebf: nhi\u1ec1u startup x\u00e2y d\u1ef1ng tr\u00ean Bubble \u0111\u00e3 g\u1ecdi v\u1ed1n th\u00e0nh c\u00f4ng h\u00e0ng tr\u0103m tri\u1ec7u \u0111\u00f4 la", "T\u1ef1 \u0111\u1ed9ng sao l\u01b0u c\u01a1 s\u1edf d\u1eef li\u1ec7u, ch\u1ee9ng ch\u1ec9 SSL v\u00e0 h\u1ea1 t\u1ea7ng \u0111\u00e1m m\u00e2y serverless t\u1ef1 \u0111\u1ed9ng co gi\u00e3n"],
+    },
+    cons: {
+      en: ["Proprietary hosting model: applications must run on Bubble's cloud and cannot be exported as raw code", "Workload Units (WU) pricing structure requires monitoring server capacity usage"],
+      vi: ["M\u00f4 h\u00ecnh l\u01b0u tr\u1eef \u0111\u00e1m m\u00e2y \u0111\u1ed9c quy\u1ec1n: \u1ee9ng d\u1ee5ng ph\u1ea3i ch\u1ea1y tr\u00ean h\u1ea1 t\u1ea7ng Bubble ch\u1ee9 kh\u00f4ng th\u1ec3 xu\u1ea5t m\u00e3 ngu\u1ed3n thu\u1ea7n ra ngo\u00e0i", "C\u01a1 ch\u1ebf t\u00ednh ph\u00ed Workload Units (WU) \u0111\u00f2i h\u1ecfi ng\u01b0\u1eddi qu\u1ea3n tr\u1ecb t\u1ed1i \u01b0u h\u00f3a t\u1ea7n su\u1ea5t truy v\u1ea5n \u0111\u1ec3 ti\u1ebft ki\u1ec7m chi ph\u00ed"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Core visual editor",
+                  "Community support",
+                  "Test database & logs",
+                  "Bubble domain URL"
+            ]
+      },
+      {
+            "name": "Starter",
+            "priceMonthly": 32,
+            "priceAnnualMonthly": 29,
+            "currency": "USD",
+            "features": [
+                  "Custom domain & SSL",
+                  "Recurring workflows",
+                  "175,000 monthly workload units",
+                  "Basic live server metrics"
+            ]
+      },
+      {
+            "name": "Growth",
+            "priceMonthly": 134,
+            "priceAnnualMonthly": 119,
+            "currency": "USD",
+            "features": [
+                  "250,000 monthly workload units",
+                  "10 server branches",
+                  "2-factor authentication",
+                  "Priority email support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://bubble.io",
+    logoUrl: "/logos/bubble-io.png",
+    alternatives: ["flutterflow", "glide-apps", "marblism"],
+  },
+  {
+    id: "webflow",
+    slug: "webflow",
+    name: "Webflow AI",
+    tagline: {
+      en: "The visual web design standard for marketing teams and agencies, with generative AI content and enterprise hosting.",
+      vi: "Chu\u1ea9n m\u1ef1c thi\u1ebft k\u1ebf web tr\u1ef1c quan h\u00e0ng \u0111\u1ea7u cho agency v\u00e0 marketing, t\u00edch h\u1ee3p AI s\u00e1ng t\u1ea1o n\u1ed9i dung v\u00e0 hosting doanh nghi\u1ec7p.",
+    },
+    description: {
+      en: "Webflow gives designers and marketers the power of HTML, CSS, and JavaScript in a visual canvas. Build award-winning responsive websites, manage custom CMS collections, and localize global sites with AI assistance.",
+      vi: "Webflow trao cho nh\u00e0 thi\u1ebft k\u1ebf v\u00e0 marketer s\u1ee9c m\u1ea1nh t\u1ed1i th\u01b0\u1ee3ng c\u1ee7a HTML, CSS v\u00e0 JavaScript tr\u00ean giao di\u1ec7n tr\u1ef1c quan. D\u1ef1ng c\u00e1c website chu\u1ea9n responsive, qu\u1ea3n l\u00fd h\u1ec7 th\u1ed1ng CMS m\u1ea1nh m\u1ebd v\u00e0 b\u1ea3n \u0111\u1ecba h\u00f3a ng\u00f4n ng\u1eef \u0111a qu\u1ed1c gia b\u1eb1ng AI.",
+    },
+    directAnswer: {
+      en: "Webflow is the industry standard for professional visual web development and website design. Trusted by companies like The New York Times and Discord, it bridges visual design with semantic, clean web code, offering an enterprise-grade CMS and built-in AI copywriting. Plans start at $18/month ($14 billed annually) with a free starter tier.",
+      vi: "Webflow l\u00e0 chu\u1ea9n m\u1ef1c qu\u1ed1c t\u1ebf v\u1ec1 ph\u00e1t tri\u1ec3n v\u00e0 thi\u1ebft k\u1ebf web tr\u1ef1c quan chuy\u00ean nghi\u1ec7p. \u0110\u01b0\u1ee3c c\u00e1c t\u1eadp \u0111o\u00e0n nh\u01b0 The New York Times v\u00e0 Discord tin d\u00f9ng, n\u1ec1n t\u1ea3ng k\u1ebft h\u1ee3p gi\u1eefa t\u00ednh th\u1ea9m m\u1ef9 tr\u1ef1c quan v\u00e0 m\u00e3 ngu\u1ed3n web chu\u1ea9n ng\u1eef ngh\u0129a, s\u1edf h\u1eefu h\u1ec7 th\u1ed1ng CMS c\u1ea5p doanh nghi\u1ec7p v\u00e0 AI h\u1ed7 tr\u1ee3 vi\u1ebft n\u1ed9i dung. Gi\u00e1 t\u1eeb $14/th\u00e1ng k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed.",
+    },
+    hubs: ["website-builder"],
+    tags: ["Webflow", "Web Design", "Visual Development", "Enterprise CMS", "Responsive Design"],
+    startingPrice: 14,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://webflow.com/?via={code}",
+    adminAffiliateUrl: "https://webflow.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 7900,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Design agencies, marketing teams, freelance web designers, and enterprises wanting total design freedom with world-class hosting reliability.",
+        vi: "Agency thi\u1ebft k\u1ebf, \u0111\u1ed9i ng\u0169 ti\u1ebfp th\u1ecb, nh\u00e0 thi\u1ebft k\u1ebf t\u1ef1 do v\u00e0 doanh nghi\u1ec7p c\u1ea7n s\u1ef1 t\u1ef1 do tuy\u1ec7t \u0111\u1ed1i v\u1ec1 s\u00e1ng t\u1ea1o giao di\u1ec7n web.",
+      },
+      notFor: {
+        en: "Users looking for complex backend transactional logic and native iOS Swift compilation (use FlutterFlow or Bubble).",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u1ea7n x\u00e2y d\u1ef1ng logic backend giao d\u1ecbch ph\u1ee9c t\u1ea1p ho\u1eb7c xu\u1ea5t \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng native (n\u00ean d\u00f9ng FlutterFlow ho\u1eb7c Bubble).",
+      },
+      bottomLine: {
+        en: "The undisputed gold standard for visual web design, producing pristine semantic HTML/CSS that ranks, converts, and scales effortlessly.",
+        vi: "Ti\u00eau chu\u1ea9n v\u00e0ng s\u1ed1 m\u1ed9t cho thi\u1ebft k\u1ebf website tr\u1ef1c quan, s\u1ea3n xu\u1ea5t m\u00e3 ngu\u1ed3n HTML/CSS chu\u1ea9n ng\u1eef ngh\u0129a gi\u00fap t\u1ed1i \u01b0u SEO v\u00e0 n\u00e2ng cao t\u1ef7 l\u1ec7 chuy\u1ec3n \u0111\u1ed5i.",
+      },
+    },
+    pros: {
+      en: ["Complete design freedom: control every CSS property (flexbox, CSS grid, custom animations, interactions) visually", "Webflow AI features: generate SEO descriptions, translate pages into 50+ languages, and adjust tone", "World-class enterprise hosting powered by AWS and Fastly CDN with 99.99% uptime reliability", "Clean exportable code: export fully semantic HTML, CSS, images, and JS files on paid workspace plans"],
+      vi: ["T\u1ef1 do thi\u1ebft k\u1ebf kh\u00f4ng gi\u1edbi h\u1ea1n: l\u00e0m ch\u1ee7 m\u1ecdi thu\u1ed9c t\u00ednh CSS (flexbox, CSS grid, hi\u1ec7u \u1ee9ng chuy\u1ec3n \u0111\u1ed9ng) m\u1ed9t c\u00e1ch tr\u1ef1c quan", "T\u00ednh n\u0103ng Webflow AI: t\u1ef1 \u0111\u1ed9ng t\u1ea1o m\u00f4 t\u1ea3 SEO, d\u1ecbch website sang h\u01a1n 50 ng\u00f4n ng\u1eef v\u00e0 trau chu\u1ed1t gi\u1ecdng v\u0103n", "H\u1ea1 t\u1ea7ng l\u01b0u tr\u1eef \u0111\u00e1m m\u00e2y cao c\u1ea5p tr\u00ean m\u00e1y ch\u1ee7 AWS v\u00e0 m\u1ea1ng ph\u00e2n ph\u1ed1i Fastly CDN \u0111\u1ea1t \u0111\u1ed9 \u1ed5n \u0111\u1ecbnh 99.99%", "Xu\u1ea5t m\u00e3 ngu\u1ed3n s\u1ea1ch \u0111\u1eb9p: t\u1ea3i to\u00e0n b\u1ed9 file HTML, CSS, h\u00ecnh \u1ea3nh v\u00e0 JavaScript ho\u00e0n ch\u1ec9nh \u1edf c\u00e1c g\u00f3i workspace"],
+    },
+    cons: {
+      en: ["Steeper learning curve than basic template-based site builders like Wix or Squarespace", "CMS item limits apply based on the selected hosting tier"],
+      vi: ["\u0110\u00f2i h\u1ecfi hi\u1ec3u bi\u1ebft c\u01a1 b\u1ea3n v\u1ec1 c\u1ea5u tr\u00fac HTML/CSS h\u01a1n so v\u1edbi c\u00e1c n\u1ec1n t\u1ea3ng k\u00e9o th\u1ea3 m\u1eabu \u0111\u01a1n gi\u1ea3n nh\u01b0 Wix", "S\u1ed1 l\u01b0\u1ee3ng b\u00e0i vi\u1ebft CMS c\u00f3 gi\u1edbi h\u1ea1n theo t\u1eebng g\u00f3i hosting \u0111\u0103ng k\u00fd"],
+    },
+    pricingTiers: [
+      {
+            "name": "Free Starter",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "2 published pages",
+                  "webflow.io domain",
+                  "50 CMS items",
+                  "50 form submissions"
+            ]
+      },
+      {
+            "name": "Basic",
+            "priceMonthly": 18,
+            "priceAnnualMonthly": 14,
+            "currency": "USD",
+            "features": [
+                  "Custom domain connection",
+                  "150 static pages",
+                  "500 monthly form submissions",
+                  "Fastly CDN hosting"
+            ]
+      },
+      {
+            "name": "CMS",
+            "priceMonthly": 29,
+            "priceAnnualMonthly": 23,
+            "currency": "USD",
+            "features": [
+                  "2,000 CMS items",
+                  "3 guest editors",
+                  "Site search feature",
+                  "200,000 monthly visits"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://webflow.com",
+    logoUrl: "/logos/webflow.png",
+    alternatives: ["framer", "10web", "pineapple-builder"],
+  },
+  {
+    id: "cohere",
+    slug: "cohere",
+    name: "Cohere (Command R+)",
+    tagline: {
+      en: "Enterprise-first AI foundation models specializing in high-accuracy Retrieval-Augmented Generation (RAG) and multilingual embeddings.",
+      vi: "M\u00f4 h\u00ecnh n\u1ec1n t\u1ea3ng AI doanh nghi\u1ec7p chuy\u00ean s\u00e2u v\u1ec1 k\u1ef9 thu\u1eadt RAG tr\u00edch d\u1eabn ch\u00ednh x\u00e1c v\u00e0 m\u00f4 h\u00ecnh bi\u1ec3u di\u1ec5n t\u1eeb \u0111a ng\u00f4n ng\u1eef.",
+    },
+    description: {
+      en: "Cohere builds AI foundation models tailored strictly for enterprise business workloads. With Command R+, Embed, and Rerank, Cohere enables companies to ground AI responses in private data with verifiable citations.",
+      vi: "Cohere x\u00e2y d\u1ef1ng c\u00e1c m\u00f4 h\u00ecnh n\u1ec1n t\u1ea3ng AI chuy\u00ean bi\u1ec7t cho c\u00e1c b\u00e0i to\u00e1n doanh nghi\u1ec7p. V\u1edbi c\u00e1c gi\u1ea3i ph\u00e1p Command R+, Embed v\u00e0 Rerank, Cohere cho ph\u00e9p doanh nghi\u1ec7p k\u1ebft n\u1ed1i AI v\u1edbi c\u01a1 s\u1edf d\u1eef li\u1ec7u n\u1ed9i b\u1ed9 c\u00f3 ngu\u1ed3n tr\u00edch d\u1eabn \u0111\u1ed1i so\u00e1t minh b\u1ea1ch.",
+    },
+    directAnswer: {
+      en: "Cohere is a premier enterprise AI foundation company led by former Google Brain transformer co-inventors. Renowned for its Command R+ reasoning model, industry-standard Embed embeddings, and Rerank search models, Cohere operates across any cloud (AWS, Azure, Google Cloud, OCI) or on-premise. Pay-per-token API with free developer tiers.",
+      vi: "Cohere l\u00e0 c\u00f4ng ty AI doanh nghi\u1ec7p h\u00e0ng \u0111\u1ea7u do c\u00e1c \u0111\u1ed3ng t\u00e1c gi\u1ea3 ph\u00e1t minh ki\u1ebfn tr\u00fac Transformer t\u1ea1i Google Brain s\u00e1ng l\u1eadp. N\u1ed5i danh v\u1edbi m\u00f4 h\u00ecnh Command R+, m\u00f4 h\u00ecnh bi\u1ec3u di\u1ec5n d\u1eef li\u1ec7u Embed v\u00e0 c\u00f4ng c\u1ee5 x\u1ebfp h\u1ea1ng t\u00ecm ki\u1ebfm Rerank, Cohere v\u1eadn h\u00e0nh linh ho\u1ea1t tr\u00ean m\u1ecdi \u0111\u00e1m m\u00e2y (AWS, Azure, GCP, OCI) ho\u1eb7c m\u00e1y ch\u1ee7 ri\u00eang. Gi\u00e1 t\u00ednh theo token API k\u00e8m g\u00f3i mi\u1ec5n ph\u00ed cho l\u1eadp tr\u00ecnh vi\u00ean.",
+    },
+    hubs: ["research-agent"],
+    tags: ["Enterprise AI", "Cohere", "Command R+", "RAG", "Embeddings"],
+    startingPrice: 5,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://cohere.com/?via={code}",
+    adminAffiliateUrl: "https://cohere.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.8,
+    reviewCount: 4200,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Enterprise data teams, banks, healthcare organizations, and software engineers needing verifiable, cited RAG architectures with strict data privacy.",
+        vi: "\u0110\u1ed9i ng\u0169 d\u1eef li\u1ec7u doanh nghi\u1ec7p, ng\u00e2n h\u00e0ng, b\u1ec7nh vi\u1ec7n v\u00e0 k\u1ef9 s\u01b0 ph\u1ea7n m\u1ec1m c\u1ea7n gi\u1ea3i ph\u00e1p RAG c\u00f3 tr\u00edch d\u1eabn ngu\u1ed3n minh b\u1ea1ch v\u00e0 b\u1ea3o m\u1eadt d\u1eef li\u1ec7u tuy\u1ec7t \u0111\u1ed1i.",
+      },
+      notFor: {
+        en: "Consumers seeking playful casual character chats or consumer image generation.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u00e1 nh\u00e2n mu\u1ed1n tr\u00f2 chuy\u1ec7n v\u1edbi nh\u00e2n v\u1eadt \u1ea3o ho\u1eb7c t\u1ea1o h\u00ecnh \u1ea3nh gi\u1ea3i tr\u00ed.",
+      },
+      bottomLine: {
+        en: "The definitive gold standard for enterprise RAG and search retrieval, offering verifiable citations and total cloud-agnostic deployment freedom.",
+        vi: "Ti\u00eau chu\u1ea9n v\u00e0ng s\u1ed1 m\u1ed9t cho k\u1ef9 thu\u1eadt t\u00ecm ki\u1ebfm RAG doanh nghi\u1ec7p, cung c\u1ea5p tr\u00edch d\u1eabn c\u00f3 th\u1ec3 x\u00e1c minh v\u00e0 t\u1ef1 do tri\u1ec3n khai tr\u00ean b\u1ea5t k\u1ef3 \u0111\u00e1m m\u00e2y n\u00e0o.",
+      },
+    },
+    pros: {
+      en: ["Command R+ provides verifiable inline citations linked directly to source enterprise documents", "Cohere Rerank dramatically improves existing vector search and lexical search accuracy by up to 50%", "Complete cloud agnosticism: deploy natively on AWS Bedrock, Microsoft Azure, Google Cloud, or Oracle", "Multilingual Embed v3 model handles 100+ languages with exceptional semantic clustering"],
+      vi: ["M\u00f4 h\u00ecnh Command R+ cung c\u1ea5p c\u00e1c \u0111\u01b0\u1eddng d\u1eabn tr\u00edch d\u1eabn minh b\u1ea1ch li\u00ean k\u1ebft th\u1eb3ng t\u1edbi t\u00e0i li\u1ec7u g\u1ed1c c\u1ee7a doanh nghi\u1ec7p", "Cohere Rerank n\u00e2ng cao \u0111\u1ed9 ch\u00ednh x\u00e1c c\u1ee7a c\u00e1c c\u00f4ng c\u1ee5 t\u00ecm ki\u1ebfm vector v\u00e0 t\u00ecm ki\u1ebfm t\u1eeb kh\u00f3a l\u00ean t\u1edbi h\u01a1n 50%", "Kh\u1ea3 n\u0103ng tri\u1ec3n khai linh ho\u1ea1t: ch\u1ea1y tr\u1ef1c ti\u1ebfp tr\u00ean AWS Bedrock, Microsoft Azure, Google Cloud ho\u1eb7c Oracle", "M\u00f4 h\u00ecnh Embed v3 \u0111a ng\u00f4n ng\u1eef x\u1eed l\u00fd m\u01b0\u1ee3t m\u00e0 h\u01a1n 100 th\u1ee9 ti\u1ebfng v\u1edbi n\u0103ng l\u1ef1c ph\u00e2n c\u1ee5m ng\u1eef ngh\u0129a v\u01b0\u1ee3t tr\u1ed9i"],
+    },
+    cons: {
+      en: ["Focused strictly on enterprise B2B backend API integration rather than consumer mobile apps", "Dedicated private model deployments require cloud infrastructure engineering resources"],
+      vi: ["T\u1eadp trung chuy\u00ean bi\u1ec7t cho h\u1ea1 t\u1ea7ng API ph\u00eda backend c\u1ee7a doanh nghi\u1ec7p ch\u1ee9 kh\u00f4ng c\u00f3 \u1ee9ng d\u1ee5ng di \u0111\u1ed9ng cho ng\u01b0\u1eddi ti\u00eau d\u00f9ng", "Vi\u1ec7c tri\u1ec3n khai c\u00e1c c\u1ee5m m\u00e1y ch\u1ee7 ri\u00eang bi\u1ec7t \u0111\u00f2i h\u1ecfi nh\u00e2n s\u1ef1 k\u1ef9 thu\u1eadt h\u1ea1 t\u1ea7ng \u0111\u00e1m m\u00e2y ph\u1ee5 tr\u00e1ch"],
+    },
+    pricingTiers: [
+      {
+            "name": "Trial Key (Free)",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Free API key for development",
+                  "Rate-limited endpoints",
+                  "Command R+ test access",
+                  "Full documentation"
+            ]
+      },
+      {
+            "name": "Production Pay-Go",
+            "priceMonthly": 5,
+            "priceAnnualMonthly": 5,
+            "currency": "USD",
+            "features": [
+                  "$2.50 per 1M input tokens",
+                  "$10.00 per 1M output tokens",
+                  "Cohere Rerank API access",
+                  "Embed API access"
+            ]
+      },
+      {
+            "name": "Private VPC / Cloud",
+            "priceMonthly": 500,
+            "priceAnnualMonthly": 450,
+            "currency": "USD",
+            "features": [
+                  "Deploy on AWS Bedrock / Azure / OCI",
+                  "Zero data retention SLA",
+                  "Custom model fine-tuning",
+                  "Dedicated support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://cohere.com",
+    logoUrl: "/logos/cohere.png",
+    alternatives: ["deepseek", "chatgpt", "claude-ai"],
+  },
+  {
+    id: "groq",
+    slug: "groq",
+    name: "Groq",
+    tagline: {
+      en: "Ultra-fast Language Processing Unit (LPU) inference engine delivering open LLMs at real-time speeds exceeding 500 tokens per second.",
+      vi: "C\u1ed7 m\u00e1y x\u1eed l\u00fd ng\u00f4n ng\u1eef LPU si\u00eau t\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t m\u00f4 h\u00ecnh LLM m\u1edf theo th\u1eddi gian th\u1ef1c \u0111\u1ea1t t\u1ed1c \u0111\u1ed9 h\u01a1n 500 token m\u1ed7i gi\u00e2y.",
+    },
+    description: {
+      en: "Groq revolutionized AI inference speed with its proprietary LPU (Language Processing Unit) silicon. Delivering real-time responses at 500+ tokens per second for Llama 3, Groq enables instantaneous voice agents and fluid user interfaces.",
+      vi: "Groq t\u1ea1o n\u00ean cu\u1ed9c c\u00e1ch m\u1ea1ng v\u1ec1 t\u1ed1c \u0111\u1ed9 ph\u1ea3n h\u1ed3i AI v\u1edbi chip x\u1eed l\u00fd LPU \u0111\u1ed9c quy\u1ec1n. \u0110\u1ea1t t\u1ed1c \u0111\u1ed9 h\u01a1n 500 token/gi\u00e2y khi ch\u1ea1y c\u00e1c m\u00f4 h\u00ecnh Llama 3, Grok m\u1edf ra k\u1ef7 nguy\u00ean cho c\u00e1c tr\u1ee3 l\u00fd gi\u1ecdng n\u00f3i \u0111\u00e0m tho\u1ea1i t\u1ee9c th\u00ec v\u00e0 giao di\u1ec7n t\u01b0\u01a1ng t\u00e1c kh\u00f4ng \u0111\u1ed9 tr\u1ec5.",
+    },
+    directAnswer: {
+      en: "Groq is the world's fastest AI inference platform, powered by custom-built LPU semiconductor chips. By ditching traditional GPU memory bottlenecks, Groq delivers open-weights models (Llama 3.3, DeepSeek R1, Mistral) at blazing speeds (300-500+ tokens/sec). Available free on GroqCloud, with enterprise pay-per-token API tiers.",
+      vi: "Groq l\u00e0 n\u1ec1n t\u1ea3ng k\u1ebft xu\u1ea5t AI nhanh nh\u1ea5t h\u00e0nh tinh nh\u1edd d\u00f2ng chip b\u00e1n d\u1eabn LPU t\u1ef1 ph\u00e1t tri\u1ec3n. X\u00f3a b\u1ecf ho\u00e0n to\u00e0n hi\u1ec7n t\u01b0\u1ee3ng ngh\u1ebdn c\u1ed5 chai b\u1ed9 nh\u1edb c\u1ee7a GPU truy\u1ec1n th\u1ed1ng, Groq ch\u1ea1y c\u00e1c m\u00f4 h\u00ecnh m\u1edf (Llama 3.3, DeepSeek R1, Mistral) v\u1edbi t\u1ed1c \u0111\u1ed9 kinh ng\u1ea1c (300-500+ token/gi\u00e2y). Tr\u1ea3i nghi\u1ec7m mi\u1ec5n ph\u00ed tr\u00ean GroqCloud k\u00e8m c\u00e1c g\u00f3i API tr\u1ea3 theo l\u01b0\u1ee3ng d\u00f9ng.",
+    },
+    hubs: ["code-developer", "research-agent"],
+    tags: ["Groq", "LPU", "Fast Inference", "Llama 3", "Real-Time AI"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 30,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://groq.com/?via={code}",
+    adminAffiliateUrl: "https://groq.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 6100,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Developers, AI voice agent creators, live customer support bots, and engineers needing instant, zero-latency text and code generation.",
+        vi: "L\u1eadp tr\u00ecnh vi\u00ean, ng\u01b0\u1eddi ph\u00e1t tri\u1ec3n tr\u1ee3 l\u00fd \u1ea3o gi\u1ecdng n\u00f3i th\u1eddi gian th\u1ef1c v\u00e0 k\u1ef9 s\u01b0 c\u1ea7n t\u1ed1c \u0111\u1ed9 t\u1ea1o ch\u1eef v\u00e0 sinh m\u00e3 ngu\u1ed3n t\u1ee9c th\u00ec kh\u00f4ng \u0111\u1ed9 tr\u1ec5.",
+      },
+      notFor: {
+        en: "Users looking for complex graphic design or video timeline editing tools.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng c\u1ea7n c\u00f4ng c\u1ee5 v\u1ebd tranh \u0111\u1ed3 h\u1ecda ho\u1eb7c d\u1ef1ng video.",
+      },
+      bottomLine: {
+        en: "The undisputed world champion in AI inference velocity, making language models feel as instant and responsive as typing on a local keyboard.",
+        vi: "Qu\u00e1n qu\u00e2n th\u1ebf gi\u1edbi v\u1ec1 t\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t AI, mang l\u1ea1i c\u1ea3m gi\u00e1c ph\u1ea3n h\u1ed3i nhanh t\u1ee9c th\u00ec nh\u01b0 b\u1ea1n \u0111ang g\u00f5 ph\u00edm tr\u00ean m\u00e1y t\u00ednh c\u00e1 nh\u00e2n.",
+      },
+    },
+    pros: {
+      en: ["Mind-bending inference speeds: generates 500+ tokens per second on Llama 3, completely eliminating generation lag", "Enables truly conversational real-time voice agents that listen and speak without awkward pauses", "100% drop-in compatibility with the OpenAI SDK: simply change the base URL and API key", "Generous free tier on GroqCloud allowing developers to prototype applications without credit cards"],
+      vi: ["T\u1ed1c \u0111\u1ed9 k\u1ebft xu\u1ea5t kinh ng\u1ea1c: \u0111\u1ea1t h\u01a1n 500 token m\u1ed7i gi\u00e2y tr\u00ean m\u00f4 h\u00ecnh Llama 3, x\u00f3a b\u1ecf ho\u00e0n to\u00e0n hi\u1ec7n t\u01b0\u1ee3ng ch\u1edd \u0111\u1ee3i", "M\u1edf \u0111\u01b0\u1eddng cho c\u00e1c tr\u1ee3 l\u00fd gi\u1ecdng n\u00f3i \u0111\u00e0m tho\u1ea1i hai chi\u1ec1u th\u1eddi gian th\u1ef1c l\u1eafng nghe v\u00e0 tr\u1ea3 l\u1eddi m\u01b0\u1ee3t m\u00e0 kh\u00f4ng b\u1ecb kh\u1ef1ng", "T\u01b0\u01a1ng th\u00edch 100% v\u1edbi th\u01b0 vi\u1ec7n OpenAI SDK: ch\u1ec9 c\u1ea7n \u0111\u1ed5i \u0111\u01b0\u1eddng d\u1eabn base URL v\u00e0 kh\u00f3a API l\u00e0 \u1ee9ng d\u1ee5ng ch\u1ea1y ngay", "G\u00f3i mi\u1ec5n ph\u00ed c\u1ef1c k\u1ef3 h\u00e0o ph\u00f3ng tr\u00ean GroqCloud cho ph\u00e9p l\u1eadp tr\u00ecnh vi\u00ean th\u1eed nghi\u1ec7m d\u1ef1 \u00e1n m\u00e0 kh\u00f4ng c\u1ea7n th\u1ebb ng\u00e2n h\u00e0ng"],
+    },
+    cons: {
+      en: ["Focused strictly on running open-weights models rather than proprietary models like GPT-4o or Claude", "Rate limits apply on free developer tiers during periods of peak global demand"],
+      vi: ["Chuy\u00ean bi\u1ec7t \u0111\u1ec3 ch\u1ea1y c\u00e1c m\u00f4 h\u00ecnh m\u00e3 ngu\u1ed3n m\u1edf ch\u1ee9 kh\u00f4ng ch\u1ea1y \u0111\u01b0\u1ee3c c\u00e1c m\u00f4 h\u00ecnh \u0111\u00f3ng \u0111\u1ed9c quy\u1ec1n nh\u01b0 GPT-4o hay Claude", "\u00c1p d\u1ee5ng h\u1ea1n m\u1ee9c s\u1ed1 l\u01b0\u1ee3t g\u1ecdi m\u1ed7i ph\u00fat tr\u00ean g\u00f3i nh\u00e0 ph\u00e1t tri\u1ec3n mi\u1ec5n ph\u00ed khi c\u00f3 l\u01b0\u1ee3ng truy c\u1eadp \u0111\u1ed9t bi\u1ebfn"],
+    },
+    pricingTiers: [
+      {
+            "name": "Developer Free",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Free API key",
+                  "Llama 3.3 70B & 8B access",
+                  "Whisper speech-to-text",
+                  "Standard rate limits"
+            ]
+      },
+      {
+            "name": "On-Demand Pay-Go",
+            "priceMonthly": 2,
+            "priceAnnualMonthly": 2,
+            "currency": "USD",
+            "features": [
+                  "$0.05 per 1M input tokens (Llama 8B)",
+                  "$0.59 per 1M input tokens (Llama 70B)",
+                  "Ultra-high rate limits",
+                  "Production SLA uptime"
+            ]
+      },
+      {
+            "name": "Enterprise Dedicated",
+            "priceMonthly": 500,
+            "priceAnnualMonthly": 450,
+            "currency": "USD",
+            "features": [
+                  "Dedicated LPU server clusters",
+                  "Guaranteed throughput tokens/sec",
+                  "SOC2 Type II compliance",
+                  "24/7 dedicated engineering support"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://groq.com",
+    logoUrl: "/logos/groq.png",
+    alternatives: ["hugging-face", "deepseek", "mistral"],
+  },
+  {
+    id: "langchain",
+    slug: "langchain",
+    name: "LangChain & LangSmith",
+    tagline: {
+      en: "The industry-standard open-source development framework and observability platform for building production-grade AI agents.",
+      vi: "Khung ph\u00e1t tri\u1ec3n m\u00e3 ngu\u1ed3n m\u1edf v\u00e0 n\u1ec1n t\u1ea3ng gi\u00e1m s\u00e1t chu\u1ea9n m\u1ef1c s\u1ed1 m\u1ed9t th\u1ebf gi\u1edbi \u0111\u1ec3 x\u00e2y d\u1ef1ng c\u00e1c h\u1ec7 th\u1ed1ng AI Agent ph\u1ee9c t\u1ea1p.",
+    },
+    description: {
+      en: "LangChain empowers software engineers to connect LLMs with external APIs, databases, memory, and document retrieval. Together with LangSmith, it provides full-lifecycle tracing, evaluation, and production monitoring for AI agents.",
+      vi: "LangChain trao quy\u1ec1n cho c\u00e1c k\u1ef9 s\u01b0 ph\u1ea7n m\u1ec1m k\u1ebft n\u1ed1i m\u00f4 h\u00ecnh ng\u00f4n ng\u1eef l\u1edbn v\u1edbi API b\u00ean ngo\u00e0i, c\u01a1 s\u1edf d\u1eef li\u1ec7u, b\u1ed9 nh\u1edb v\u00e0 t\u00ecm ki\u1ebfm t\u00e0i li\u1ec7u. K\u1ebft h\u1ee3p c\u00f9ng LangSmith \u0111\u1ec3 theo d\u00f5i v\u1ebft (tracing), \u0111\u00e1nh gi\u00e1 hi\u1ec7u n\u0103ng v\u00e0 gi\u00e1m s\u00e1t v\u1eadn h\u00e0nh AI Agent.",
+    },
+    directAnswer: {
+      en: "LangChain is the undisputed open-source framework for building context-aware AI applications. Spanning Python and TypeScript, it orchestrates complex multi-agent graphs (LangGraph) and RAG pipelines. Paired with LangSmith for enterprise debugging and observability. Open-source core is free; LangSmith plans start at $39/seat/month.",
+      vi: "LangChain l\u00e0 framework m\u00e3 ngu\u1ed3n m\u1edf ti\u00eau chu\u1ea9n s\u1ed1 m\u1ed9t th\u1ebf gi\u1edbi \u0111\u1ec3 x\u00e2y d\u1ef1ng \u1ee9ng d\u1ee5ng AI th\u1ea5u hi\u1ec3u ng\u1eef c\u1ea3nh. H\u1ed7 tr\u1ee3 c\u1ea3 Python v\u00e0 TypeScript, n\u1ec1n t\u1ea3ng \u0111i\u1ec1u ph\u1ed1i c\u00e1c lu\u1ed3ng AI Agent \u0111a nhi\u1ec7m (LangGraph) v\u00e0 quy tr\u00ecnh RAG chuy\u00ean s\u00e2u. \u0110i k\u00e8m c\u00f4ng c\u1ee5 gi\u00e1m s\u00e1t LangSmith gi\u00fap g\u1ee1 l\u1ed7i v\u00e0 \u0111o l\u01b0\u1eddng. Th\u01b0 vi\u1ec7n m\u00e3 ngu\u1ed3n m\u1edf ho\u00e0n to\u00e0n mi\u1ec5n ph\u00ed; g\u00f3i LangSmith t\u1eeb $39/ng\u01b0\u1eddi/th\u00e1ng.",
+    },
+    hubs: ["code-developer", "research-agent"],
+    tags: ["LangChain", "LangSmith", "LangGraph", "AI Framework", "LLM Observability"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 30,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://www.langchain.com/?via={code}",
+    adminAffiliateUrl: "https://www.langchain.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 7800,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Software engineers, AI developers, and enterprise tech leads building production RAG systems, autonomous multi-agent teams, and LLM applications.",
+        vi: "K\u1ef9 s\u01b0 ph\u1ea7n m\u1ec1m, l\u1eadp tr\u00ecnh vi\u00ean AI v\u00e0 tr\u01b0\u1edfng nh\u00f3m k\u1ef9 thu\u1eadt c\u1ea7n x\u00e2y d\u1ef1ng h\u1ec7 th\u1ed1ng RAG th\u1ef1c t\u1ebf v\u00e0 m\u1ea1ng l\u01b0\u1edbi AI Agent t\u1ef1 tr\u1ecb.",
+      },
+      notFor: {
+        en: "Non-technical business users seeking a drag-and-drop no-code tool without programming knowledge.",
+        vi: "Ng\u01b0\u1eddi d\u00f9ng kh\u00f4ng chuy\u00ean k\u1ef9 thu\u1eadt mu\u1ed1n k\u00e9o th\u1ea3 web \u0111\u01a1n gi\u1ea3n m\u00e0 kh\u00f4ng bi\u1ebft l\u1eadp tr\u00ecnh.",
+      },
+      bottomLine: {
+        en: "The foundational software backbone of generative AI engineering, essential for moving LLM experiments into robust, observable production systems.",
+        vi: "X\u01b0\u01a1ng s\u1ed1ng n\u1ec1n t\u1ea3ng c\u1ee7a ng\u00e0nh k\u1ef9 thu\u1eadt AI t\u1ea1o sinh, c\u00f4ng c\u1ee5 b\u1eaft bu\u1ed9c \u0111\u1ec3 \u0111\u01b0a c\u00e1c th\u1eed nghi\u1ec7m m\u00f4 h\u00ecnh ng\u00f4n ng\u1eef th\u00e0nh h\u1ec7 th\u1ed1ng th\u1ef1c t\u1ebf tin c\u1eady.",
+      },
+    },
+    pros: {
+      en: ["Over 700 integrations connecting all major LLMs, vector databases, embedding models, and API tools", "LangGraph framework enables cyclical multi-agent architectures with state persistence and human-in-the-loop approvals", "LangSmith provides full visual execution traces, token latency breakdowns, and regression testing suites", "Massive global community with thousands of tutorials, cookbooks, and open-source GitHub examples"],
+      vi: ["H\u01a1n 700 c\u1ed5ng t\u00edch h\u1ee3p s\u1eb5n k\u1ebft n\u1ed1i m\u1ecdi m\u00f4 h\u00ecnh LLM l\u1edbn, c\u01a1 s\u1edf d\u1eef li\u1ec7u vector, m\u00f4 h\u00ecnh embedding v\u00e0 API", "Khung LangGraph cho ph\u00e9p x\u00e2y d\u1ef1ng c\u00e1c h\u1ec7 th\u1ed1ng ph\u1ed1i h\u1ee3p \u0111a Agent c\u00f3 chu tr\u00ecnh kh\u00e9p k\u00edn, l\u01b0u tr\u1ea1ng th\u00e1i v\u00e0 ng\u01b0\u1eddi duy\u1ec7t", "LangSmith cung c\u1ea5p b\u1ea3n ghi theo d\u00f5i v\u1ebft (trace) tr\u1ef1c quan, b\u00f3c t\u00e1ch \u0111\u1ed9 tr\u1ec5 t\u1eebng token v\u00e0 b\u1ed9 ki\u1ec3m th\u1eed ch\u1ed1ng h\u1ed3i quy", "C\u1ed9ng \u0111\u1ed3ng to\u00e0n c\u1ea7u kh\u1ed5ng l\u1ed3 v\u1edbi h\u00e0ng ng\u00e0n b\u00e0i h\u01b0\u1edbng d\u1eabn, m\u1eabu code cookbook v\u00e0 v\u00ed d\u1ee5 th\u1ef1c t\u1ebf tr\u00ean GitHub"],
+    },
+    cons: {
+      en: ["Rapid library evolution requires keeping up with major version syntax and architectural migrations", "Comprehensive framework carries a technical learning curve compared to simple single-prompt scripts"],
+      vi: ["T\u1ed1c \u0111\u1ed9 ph\u00e1t tri\u1ec3n nhanh c\u1ee7a th\u01b0 vi\u1ec7n \u0111\u00f2i h\u1ecfi l\u1eadp tr\u00ecnh vi\u00ean c\u1eadp nh\u1eadt li\u00ean t\u1ee5c c\u00e1c thay \u0111\u1ed5i v\u1ec1 c\u00fa ph\u00e1p", "C\u1ea5u tr\u00fac framework \u0111a t\u1ea7ng \u0111\u00f2i h\u1ecfi n\u1eafm v\u1eefng t\u01b0 duy ki\u1ebfn tr\u00fac ph\u1ea7n m\u1ec1m h\u01a1n so v\u1edbi vi\u1ec7c g\u1ecdi API \u0111\u01a1n l\u1ebb"],
+    },
+    pricingTiers: [
+      {
+            "name": "LangChain Framework",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "100% free open-source (MIT)",
+                  "Full Python & TypeScript libraries",
+                  "LangGraph open-source",
+                  "Community support"
+            ]
+      },
+      {
+            "name": "LangSmith Developer",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Up to 5,000 trace events/mo free",
+                  "Visual debugging canvas",
+                  "Prompt playground",
+                  "Basic evaluation suites"
+            ]
+      },
+      {
+            "name": "LangSmith Team",
+            "priceMonthly": 39,
+            "priceAnnualMonthly": 39,
+            "currency": "USD",
+            "features": [
+                  "Shared team workspaces",
+                  "Extended trace retention",
+                  "Automated evaluation pipelines",
+                  "Role-based access control"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://www.langchain.com",
+    logoUrl: "/logos/langchain.png",
+    alternatives: ["n8n", "hugging-face", "coze"],
+  },
+  {
+    id: "codeium",
+    slug: "codeium",
+    name: "Codeium",
+    tagline: {
+      en: "Ultra-fast AI code completion and chat assistant trusted by 800,000+ developers across 70+ programming languages and 40+ IDEs.",
+      vi: "Tr\u1ee3 l\u00fd vi\u1ebft code v\u00e0 g\u1ee3i \u00fd m\u00e3 ngu\u1ed3n AI si\u00eau t\u1ed1c \u0111\u1ed9 \u0111\u01b0\u1ee3c h\u01a1n 800.000 l\u1eadp tr\u00ecnh vi\u00ean tin d\u00f9ng tr\u00ean 70+ ng\u00f4n ng\u1eef v\u00e0 40+ IDE.",
+    },
+    description: {
+      en: "Codeium is the leading developer-first code autocomplete and chat extension. Engineered on custom compute infrastructure, Codeium provides context-aware completions, refactoring, and code explanation with zero telemetry leakage.",
+      vi: "Codeium l\u00e0 ti\u1ec7n \u00edch g\u1ee3i \u00fd code v\u00e0 tr\u1ee3 l\u00fd tr\u00f2 chuy\u1ec7n h\u00e0ng \u0111\u1ea7u d\u00e0nh cho l\u1eadp tr\u00ecnh vi\u00ean. \u0110\u01b0\u1ee3c x\u00e2y d\u1ef1ng tr\u00ean h\u1ea1 t\u1ea7ng si\u00eau t\u1ed1i \u01b0u, Codeium mang l\u1ea1i t\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng ho\u00e0n th\u00e0nh code theo ng\u1eef c\u1ea3nh, t\u00e1i c\u1ea5u tr\u00fac m\u00e3 ngu\u1ed3n v\u00e0 gi\u1ea3i th\u00edch thu\u1eadt to\u00e1n b\u1ea3o m\u1eadt tuy\u1ec7t \u0111\u1ed1i.",
+    },
+    directAnswer: {
+      en: "Codeium is a premier AI coding assistant and the creator of the Windsurf editor. Available as an extension for VS Code, JetBrains, Xcode, Vim, and 40+ editors, it delivers blazing-fast multi-line completions and repository chat. Completely free for individual developers, with Enterprise plans from $15/user/month.",
+      vi: "Codeium l\u00e0 tr\u1ee3 l\u00fd l\u1eadp tr\u00ecnh AI h\u00e0ng \u0111\u1ea7u th\u1ebf gi\u1edbi v\u00e0 l\u00e0 \u0111\u1ed9i ng\u0169 \u0111\u1ee9ng sau tr\u00ecnh so\u1ea1n th\u1ea3o Windsurf. Ho\u1ea1t \u0111\u1ed9ng d\u01b0\u1edbi d\u1ea1ng extension tr\u00ean VS Code, JetBrains, Xcode, Vim v\u00e0 h\u01a1n 40 tr\u00ecnh so\u1ea1n th\u1ea3o kh\u00e1c, mang l\u1ea1i kh\u1ea3 n\u0103ng g\u1ee3i \u00fd code nhi\u1ec1u d\u00f2ng si\u00eau t\u1ed1c \u0111\u1ed9. Ho\u00e0n to\u00e0n mi\u1ec5n ph\u00ed cho c\u00e1 nh\u00e2n, g\u00f3i doanh nghi\u1ec7p t\u1eeb $15/ng\u01b0\u1eddi/th\u00e1ng.",
+    },
+    hubs: ["code-developer"],
+    tags: ["AI Code Autocomplete", "Codeium", "VS Code Extension", "Free AI Coding", "JetBrains"],
+    startingPrice: 0,
+    hasFreePlan: true,
+    hasFreeTrial: true,
+    trialDays: 14,
+    affiliateNetwork: "Direct",
+    affiliateUrlTemplate: "https://codeium.com/?via={code}",
+    adminAffiliateUrl: "https://codeium.com/?via=asmire_admin",
+    allowMemberLinks: true,
+    rating: 4.9,
+    reviewCount: 7600,
+    verifiedAt: "2027-11-21",
+    verdict: {
+      bestFor: {
+        en: "Software engineers, students, and teams who want a fast, reliable AI coding companion across any code editor without paying GitHub Copilot fees.",
+        vi: "K\u1ef9 s\u01b0 ph\u1ea7n m\u1ec1m, sinh vi\u00ean CNTT v\u00e0 \u0111\u1ed9i ng\u0169 ph\u00e1t tri\u1ec3n c\u1ea7n m\u1ed9t tr\u1ee3 l\u00fd vi\u1ebft code t\u1ed1c \u0111\u1ed9 cao, h\u1ed7 tr\u1ee3 m\u1ecdi IDE m\u00e0 kh\u00f4ng t\u1ed1n ph\u00ed nh\u01b0 GitHub Copilot.",
+      },
+      notFor: {
+        en: "Marketers or copywriters looking for blog article generation.",
+        vi: "Marketer ho\u1eb7c ng\u01b0\u1eddi vi\u1ebft l\u00e1ch ch\u1ec9 c\u1ea7n c\u00f4ng c\u1ee5 vi\u1ebft b\u00e0i blog.",
+      },
+      bottomLine: {
+        en: "The best free coding assistant on the market, outperforming GitHub Copilot in autocomplete latency and editor compatibility.",
+        vi: "Tr\u1ee3 l\u00fd l\u1eadp tr\u00ecnh mi\u1ec5n ph\u00ed xu\u1ea5t s\u1eafc nh\u1ea5t hi\u1ec7n nay, v\u01b0\u1ee3t tr\u1ed9i GitHub Copilot v\u1ec1 t\u1ed1c \u0111\u1ed9 g\u1ee3i \u00fd m\u00e3 ngu\u1ed3n v\u00e0 kh\u1ea3 n\u0103ng t\u01b0\u01a1ng th\u00edch tr\u00ean h\u01a1n 40 IDE.",
+      },
+    },
+    pros: {
+      en: ["Permanently free tier for individuals with unlimited fast autocomplete and in-editor chat", "Sub-100ms autocomplete latency powered by Codeium's proprietary custom inference servers", "Broadest editor support in the industry: works on VS Code, IntelliJ, PyCharm, Xcode, Vim, Emacs, and Eclipse", "Zero telemetry policy guarantees your proprietary source code is never used for model training"],
+      vi: ["G\u00f3i mi\u1ec5n ph\u00ed v\u0129nh vi\u1ec5n cho c\u00e1 nh\u00e2n v\u1edbi t\u00ednh n\u0103ng t\u1ef1 \u0111\u1ed9ng ho\u00e0n th\u00e0nh code kh\u00f4ng gi\u1edbi h\u1ea1n v\u00e0 khung chat trong IDE", "\u0110\u1ed9 tr\u1ec5 g\u1ee3i \u00fd code si\u00eau th\u1ea5p d\u01b0\u1edbi 100ms nh\u1edd m\u00e1y ch\u1ee7 k\u1ebft xu\u1ea5t chuy\u00ean d\u1ee5ng \u0111\u1ed9c quy\u1ec1n c\u1ee7a Codeium", "H\u1ed7 tr\u1ee3 nhi\u1ec1u tr\u00ecnh so\u1ea1n th\u1ea3o nh\u1ea5t ng\u00e0nh: ch\u1ea1y m\u01b0\u1ee3t tr\u00ean VS Code, IntelliJ, PyCharm, Xcode, Vim, Emacs v\u00e0 Eclipse", "Ch\u00ednh s\u00e1ch b\u1ea3o m\u1eadt nghi\u00eam ng\u1eb7t cam k\u1ebft m\u00e3 ngu\u1ed3n n\u1ed9i b\u1ed9 c\u1ee7a b\u1ea1n kh\u00f4ng bao gi\u1edd b\u1ecb s\u1eed d\u1ee5ng \u0111\u1ec3 hu\u1ea5n luy\u1ec7n AI"],
+    },
+    cons: {
+      en: ["Autonomous multi-file agentic editing requires switching to Codeium's native Windsurf editor", "Self-hosted air-gapped enterprise deployments require custom organizational quotes"],
+      vi: ["\u0110\u1ec3 tr\u1ea3i nghi\u1ec7m t\u00ednh n\u0103ng AI Agent t\u1ef1 \u0111\u1ed9ng s\u1eeda nhi\u1ec1u file \u0111\u1ed3ng b\u1ed9, ng\u01b0\u1eddi d\u00f9ng c\u1ea7n chuy\u1ec3n sang d\u00f9ng tr\u00ecnh so\u1ea1n th\u1ea3o Windsurf", "Tri\u1ec3n khai c\u1ee5c b\u1ed9 ng\u1eaft m\u1ea1ng ho\u00e0n to\u00e0n (air-gapped) y\u00eau c\u1ea7u b\u00e1o gi\u00e1 doanh nghi\u1ec7p ri\u00eang"],
+    },
+    pricingTiers: [
+      {
+            "name": "Individual (Free)",
+            "priceMonthly": 0,
+            "priceAnnualMonthly": 0,
+            "currency": "USD",
+            "features": [
+                  "Unlimited fast code autocomplete",
+                  "In-editor AI chat assistant",
+                  "70+ programming languages",
+                  "Support for 40+ IDEs"
+            ]
+      },
+      {
+            "name": "Teams",
+            "priceMonthly": 15,
+            "priceAnnualMonthly": 12,
+            "currency": "USD",
+            "features": [
+                  "Centralized team dashboard",
+                  "Repository-level context indexing",
+                  "Usage analytics & seat management",
+                  "Priority customer support"
+            ]
+      },
+      {
+            "name": "Enterprise",
+            "priceMonthly": 35,
+            "priceAnnualMonthly": 28,
+            "currency": "USD",
+            "features": [
+                  "SAML SSO & audit logging",
+                  "Zero data retention SLA",
+                  "Self-hosted deployment options",
+                  "Dedicated solutions architect"
+            ]
+      }
+],
+    pricingModel: "freemium",
+    officialUrl: "https://codeium.com",
+    logoUrl: "/logos/codeium.png",
+    alternatives: ["cursor", "windsurf", "replit"],
+  },
 ];
 
 export function getToolBySlug(slug: string): ToolItem | undefined {
