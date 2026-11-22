@@ -15723,8 +15723,40 @@ export const TOOLS_DATA: ToolItem[] = [
   },
 ];
 
+const TOOL_CANONICAL_ALIASES: Record<string, string> = {
+  ghl: "highlevel",
+  gohighlevel: "highlevel",
+  claude: "claude-ai",
+  murf: "murf-ai",
+  did: "d-id",
+  make: "make",
+  apollo: "apollo-ai",
+  instantly: "instantly-ai",
+  clay: "clay-ai",
+  surfer: "surfer-seo",
+  surferseo: "surfer-seo",
+  bubble: "bubble-io",
+  glide: "glide-apps",
+  bolt: "bolt-new",
+  canva: "canva-ai",
+  leonardo: "leonardo-ai",
+  fathom: "fathom-ai",
+  pika: "pika-labs",
+  opus: "opusclip",
+  tenweb: "10web",
+  kling: "kling-ai",
+  luma: "luma-dream-machine",
+  minimax: "minimax-video",
+  flux: "flux-ai",
+  krea: "krea-ai",
+  recraft: "recraft-ai",
+};
+
 export function getToolBySlug(slug: string): ToolItem | undefined {
-  return TOOLS_DATA.find((t) => t.slug === slug);
+  if (!slug) return undefined;
+  const normalized = slug.toLowerCase().trim();
+  const canonical = TOOL_CANONICAL_ALIASES[normalized] || normalized;
+  return TOOLS_DATA.find((t) => t.slug === canonical);
 }
 
 export function getToolsByHub(hub: string): ToolItem[] {

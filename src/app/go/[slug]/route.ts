@@ -26,10 +26,32 @@ const clickDedupeCache = new Map<string, number>();
 
 // Slug aliases map to ensure zero affiliate 404 leakage
 const SLUG_ALIASES: Record<string, string> = {
+  ghl: "highlevel",
+  gohighlevel: "highlevel",
+  claude: "claude-ai",
   murf: "murf-ai",
   did: "d-id",
-  ghl: "highlevel",
   make: "make",
+  apollo: "apollo-ai",
+  instantly: "instantly-ai",
+  clay: "clay-ai",
+  surfer: "surfer-seo",
+  surferseo: "surfer-seo",
+  bubble: "bubble-io",
+  glide: "glide-apps",
+  bolt: "bolt-new",
+  canva: "canva-ai",
+  leonardo: "leonardo-ai",
+  fathom: "fathom-ai",
+  pika: "pika-labs",
+  opus: "opusclip",
+  tenweb: "10web",
+  kling: "kling-ai",
+  luma: "luma-dream-machine",
+  minimax: "minimax-video",
+  flux: "flux-ai",
+  krea: "krea-ai",
+  recraft: "recraft-ai",
 };
 
 export async function GET(
