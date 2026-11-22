@@ -190,7 +190,7 @@ export default async function HomePage({ params }: HomePageProps) {
                   href={`/${locale}/tools`}
                   className="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline flex items-center gap-1 group"
                 >
-                  <span>View All 50 Tools</span>
+                  <span>{locale === "vi" ? "Xem tất cả công cụ" : "View All Tools"}</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </div>

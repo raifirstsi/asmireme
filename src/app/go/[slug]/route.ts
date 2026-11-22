@@ -80,7 +80,7 @@ export async function GET(
           let isToolInEntitlement = false;
 
           if (isPro) {
-            // Pro plan has unlimited access to all 50 tools
+            // Pro plan has unlimited access to all tools
             isToolInEntitlement = true;
           } else {
             // Standard plan: tool MUST be chosen in member's 3 active slots

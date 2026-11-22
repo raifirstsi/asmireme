@@ -1,6 +1,6 @@
 import { isPrivateOrLoopbackHost } from "./security";
 
-// Strict Regex Allowlists for all 50 SaaS Tools derived from docs/affiliate-terms-audit.md
+// Strict Regex Allowlists for all verified SaaS Tools derived from docs/affiliate-terms-audit.md
 export const TOOL_ALLOWLIST_PATTERNS: Record<string, RegExp> = {
   highlevel: /^https:\/\/([a-zA-Z0-9\-]+\.)?(gohighlevel\.com|highlevel\.com)(\/.*)?/,
   decktopus: /^https:\/\/([a-zA-Z0-9\-]+\.)?decktopus\.com(\/.*)?/,

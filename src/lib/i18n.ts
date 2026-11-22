@@ -17,7 +17,7 @@ export const dictionary = {
       deals: "Deals",
       blog: "Blog",
       membership: "Membership",
-      searchPlaceholder: "Search 50+ verified AI SaaS tools (Press ⌘K)...",
+      searchPlaceholder: "Search verified AI SaaS tools (Press ⌘K)...",
       login: "Sign In",
       getStarted: "Join Free",
       myAccount: "Dashboard",
@@ -25,11 +25,11 @@ export const dictionary = {
     hero: {
       badge: "Empirical Testing & 0% Sponsored Fluff",
       title: "Discover the Right AI SaaS Without the Marketing BS.",
-      subtitle: "We run standardized workloads on all 50 top AI tools. Zero paid placement. Real output artifacts, live pricing history, and transparent community attribution.",
+      subtitle: "We run standardized workloads on all verified AI tools. Zero paid placement. Real output artifacts, live pricing history, and transparent community attribution.",
       browseCta: "Explore All Tools",
       compareCta: "Compare Software",
       stats: {
-        tools: "50 Verified Tools",
+        tools: "Verified AI Tools",
         benchmarks: "100+ Tested Workloads",
         pricingUpdates: "Daily Price Monitoring",
       },
@@ -91,7 +91,7 @@ export const dictionary = {
       proVnd: "725,000 VND",
       proPeriod: "/month (Prepaid)",
       proFeatures: [
-        "Unlimited tools (All 50 AI SaaS tools)",
+        "Unlimited tools (All verified AI SaaS tools)",
         "Instant, real-time link slot updates",
         "Granular tool-by-tool click analytics",
         "Priority moderation & link verification",
@@ -115,7 +115,7 @@ export const dictionary = {
       deals: "Ưu đãi",
       blog: "Blog",
       membership: "Gói thành viên",
-      searchPlaceholder: "Tìm kiếm hơn 50 công cụ AI đã kiểm chứng (Bấm ⌘K)...",
+      searchPlaceholder: "Tìm kiếm công cụ AI đã kiểm chứng (Bấm ⌘K)...",
       login: "Đăng nhập",
       getStarted: "Tham gia miễn phí",
       myAccount: "Quản trị",
@@ -123,11 +123,11 @@ export const dictionary = {
     hero: {
       badge: "100% Thử Nghiệm Thực Tế - Không Quảng Cáo Ẩn",
       title: "Tìm Đúng Công Cụ AI SaaS Phù Hợp, Minh Bạch Tuyệt Đối.",
-      subtitle: "Chúng tôi chạy thử nghiệm thực tế trên toàn bộ 50 công cụ AI hàng đầu. Không thiên vị hoa hồng, có dữ liệu kiểm chứng, bảng giá cập nhật hàng ngày.",
+      subtitle: "Chúng tôi chạy thử nghiệm thực tế trên toàn bộ công cụ AI hàng đầu. Không thiên vị hoa hồng, có dữ liệu kiểm chứng, bảng giá cập nhật hàng ngày.",
       browseCta: "Khám phá danh mục",
       compareCta: "So sánh công cụ",
       stats: {
-        tools: "50 Công cụ kiểm chứng",
+        tools: "Công cụ kiểm chứng",
         benchmarks: "100+ Bài test thực nghiệm",
         pricingUpdates: "Cập nhật giá hàng ngày",
       },
@@ -189,7 +189,7 @@ export const dictionary = {
       proVnd: "725.000 VNĐ",
       proPeriod: "/tháng ($29)",
       proFeatures: [
-        "Không giới hạn công cụ (toàn bộ 50 tool AI)",
+        "Không giới hạn công cụ (toàn bộ tool AI)",
         "Thay đổi và cập nhật link tức thì không chờ",
         "Thống kê chi tiết lượt click theo từng tool",
         "Ưu tiên duyệt link và kiểm tra an toàn",

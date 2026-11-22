@@ -159,12 +159,12 @@ export default async function AdminPage({ params }: AdminPageProps) {
           </div>
         </div>
 
-        {/* Section 2: 50 SaaS Tools Allowlist, CSV Import/Export & Registry */}
+        {/* Section 2: Verified SaaS Tools Allowlist, CSV Import/Export & Registry */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-base font-bold text-foreground flex items-center gap-2">
               <Database className="h-4 w-4 text-brand-600" />
-              50 SaaS Tools Registry, CSV Import/Export & Admin Links
+              Verified SaaS Tools Registry, CSV Import/Export & Admin Links
             </h3>
             <span className="text-xs text-muted-foreground">From affiliate-terms-audit.md</span>
           </div>

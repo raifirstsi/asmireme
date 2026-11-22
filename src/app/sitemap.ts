@@ -96,7 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    // 50 Tools Reviews & Sub-pages
+    // Verified Tools Reviews & Sub-pages
     for (const tool of TOOLS_DATA) {
       // Main Review Page
       entries.push({

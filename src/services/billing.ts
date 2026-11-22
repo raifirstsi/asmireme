@@ -280,7 +280,7 @@ export async function activateProSubscription({
       await resend.emails.send({
         from: `Asmire <${fromEmail}>`,
         to: targetEmail,
-        subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
+        subject: "🎉 Welcome to Asmire Pro - All AI SaaS Tools Unlocked!",
         headers: {
           "List-Unsubscribe": `<mailto:${fromEmail}?subject=unsubscribe>, <${siteUrl}/account/login?action=unsubscribe>`,
           "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
@@ -301,7 +301,7 @@ export async function activateProSubscription({
             <div style="background-color: #f8fafc; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 6px;">
               <p style="margin: 0 0 8px 0; font-weight: bold; color: #0f172a; font-size: 14px;">Your Pro Plan Details:</p>
               <ul style="margin: 0; padding-left: 20px; color: #334155; font-size: 13px; line-height: 1.6;">
-                <li><strong>Entitlement:</strong> All 50 AI SaaS Tool Affiliate Slots Unlocked</li>
+                <li><strong>Entitlement:</strong> All AI SaaS Tool Affiliate Slots Unlocked (Unlimited)</li>
                 <li><strong>Active Period:</strong> Until ${expiryFormatted} (30 days prepaid)</li>
                 <li><strong>14-Day Guarantee:</strong> Full money-back guarantee eligible until ${new Date(
                   now.getTime() + 14 * 24 * 60 * 60 * 1000
@@ -309,7 +309,7 @@ export async function activateProSubscription({
               </ul>
             </div>
 
-            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the 50 tools in our verified catalog.</p>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the tools in our verified catalog.</p>
 
             <div style="text-align: center; margin: 28px 0;">
               <a href="${siteUrl}/account" style="display: inline-block; background-color: #000000; color: #ffffff; padding: 12px 28px; font-weight: 600; text-decoration: none; border-radius: 9999px; font-size: 14px;">Open Member Dashboard</a>
@@ -510,7 +510,7 @@ export async function processSepayWebhook(
       await resend.emails.send({
         from: `Asmire <${fromEmail}>`,
         to: targetUserEmail,
-        subject: "🎉 Welcome to Asmire Pro - All 50 AI SaaS Tools Unlocked!",
+        subject: "🎉 Welcome to Asmire Pro - All AI SaaS Tools Unlocked!",
         headers: {
           "List-Unsubscribe": `<mailto:${fromEmail}?subject=unsubscribe>, <${siteUrl}/account/login?action=unsubscribe>`,
           "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
@@ -531,7 +531,7 @@ export async function processSepayWebhook(
             <div style="background-color: #f8fafc; border-left: 4px solid #10b981; padding: 16px; margin: 20px 0; border-radius: 6px;">
               <p style="margin: 0 0 8px 0; font-weight: bold; color: #0f172a; font-size: 14px;">Your Pro Plan Details:</p>
               <ul style="margin: 0; padding-left: 20px; color: #334155; font-size: 13px; line-height: 1.6;">
-                <li><strong>Entitlement:</strong> All 50 AI SaaS Tool Affiliate Slots Unlocked</li>
+                <li><strong>Entitlement:</strong> All AI SaaS Tool Affiliate Slots Unlocked (Unlimited)</li>
                 <li><strong>Active Period:</strong> Until ${expiryFormatted} (30 days prepaid)</li>
                 <li><strong>14-Day Guarantee:</strong> Full money-back guarantee eligible until ${new Date(
                   now.getTime() + 14 * 24 * 60 * 60 * 1000
@@ -539,7 +539,7 @@ export async function processSepayWebhook(
               </ul>
             </div>
 
-            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the 50 tools in our verified catalog.</p>
+            <p style="color: #334155; font-size: 14px; line-height: 1.6;">You can now go to your Member Dashboard and input your personal affiliate links for any or all of the tools in our verified catalog.</p>
 
             <div style="text-align: center; margin: 28px 0;">
               <a href="${siteUrl}/account" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 28px; font-weight: 600; text-decoration: none; border-radius: 6px; font-size: 14px;">Open Member Dashboard</a>

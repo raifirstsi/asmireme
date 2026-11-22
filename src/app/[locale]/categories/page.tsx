@@ -38,8 +38,8 @@ export default async function CategoriesPage({ params }: CategoriesPageProps) {
           </h1>
           <p className="text-sm text-muted-foreground max-w-2xl">
             {isVi
-              ? "Tất cả 50 công cụ AI được phân loại thành 10 chuyên mục độc lập để bạn dễ dàng tìm kiếm giải pháp phù hợp với công việc."
-              : "50 verified AI SaaS tools classified across 10 distinct software hubs with dedicated production benchmarks."}
+              ? "Tất cả các công cụ AI được phân loại thành 10 chuyên mục độc lập để bạn dễ dàng tìm kiếm giải pháp phù hợp với công việc."
+              : "All verified AI SaaS tools classified across 10 distinct software hubs with dedicated production benchmarks."}
           </p>
         </div>
 

@@ -189,7 +189,7 @@ export function ReviewsClient({ initialReviews, locale }: ReviewsClientProps) {
             onChange={(e) => setSelectedTool(e.target.value)}
             className="h-10 px-3.5 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs font-medium text-zinc-800 dark:text-zinc-200 focus:outline-none cursor-pointer shadow-2xs"
           >
-            <option value="all">{isVi ? "Tất cả 50 công cụ" : "All 50 Tools"}</option>
+            <option value="all">{isVi ? `Tất cả ${TOOLS_DATA.length} công cụ` : `All ${TOOLS_DATA.length} Tools`}</option>
             {TOOLS_DATA.map((t) => (
               <option key={t.slug} value={t.slug}>
                 {t.name}

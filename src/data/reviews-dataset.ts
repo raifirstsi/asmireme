@@ -1,6 +1,6 @@
 /**
  * Complete Real-World Multi-Platform Review Dataset
- * Covers all 50 SaaS tools with verified reviews from Product Hunt, G2, Trustpilot, Capterra, Reddit & Hacker News.
+ * Covers verified SaaS tools with reviews from Product Hunt, G2, Trustpilot, Capterra, Reddit & Hacker News.
  * Real-time automated sync every 10 hours.
  */
 

@@ -122,7 +122,7 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
             {isPro ? (
               <span className="text-xs font-bold px-3 py-1 rounded-full bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 border border-zinc-950 dark:border-white flex items-center gap-1">
                 <Sparkles className="h-3 w-3" />
-                <span>Pro Member (All 50 Tools)</span>
+                <span>Pro Member (All Tools Unlocked)</span>
               </span>
             ) : (
               <span className="text-xs font-semibold px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-foreground border border-border">
@@ -347,16 +347,16 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
               <Lock className="h-5 w-5" />
             </div>
             <h4 className="font-bold text-sm text-foreground">
-              47 Additional AI Tools Locked (Standard Plan Limit: 3 Slots)
+              Additional AI Tools Locked (Standard Plan Limit: 3 Slots)
             </h4>
             <p className="text-xs text-muted-foreground max-w-md mx-auto">
-              Any visitor clicks on the remaining 47 tools currently fall back to Asmire's owner link. Upgrade to Pro for $29/mo to unlock all 50 tools with unlimited link slots.
+              Any visitor clicks on remaining tools currently fall back to Asmire's owner link. Upgrade to Pro for $29/mo to unlock all tools with unlimited link slots.
             </p>
             <Link
               href={`/${locale}/membership`}
               className="inline-flex items-center gap-1.5 px-6 py-2.5 text-xs font-bold rounded-full bg-zinc-950 hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 text-white dark:text-zinc-950 transition-all shadow-xs"
             >
-              <span>Unlock All 50 Tools on Pro</span>
+              <span>Unlock All Tools on Pro</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
@@ -427,11 +427,11 @@ export function MemberDashboardClient({ user, locale, isPro = false, daysRemaini
             <div className="space-y-3 text-xs text-muted-foreground">
               {isPro ? (
                 <p>
-                  You have full access to all 50 AI SaaS tool affiliate slots and 365-day first-touch referral attribution.
+                  You have full access to all verified AI SaaS tool affiliate slots and 365-day first-touch referral attribution.
                 </p>
               ) : (
                 <p>
-                  Looking to monetize all 50 SaaS tools without slot limits? Upgrade with automated VietQR banking.
+                  Looking to monetize all SaaS tools without slot limits? Upgrade with automated VietQR banking.
                 </p>
               )}
               <div>

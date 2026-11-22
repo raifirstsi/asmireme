@@ -140,7 +140,7 @@ export function AdminLinksManager() {
       {savedMessage && (
         <div className="p-3 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold border border-emerald-500/30 flex items-center gap-2">
           <Check className="h-4 w-4 shrink-0" />
-          <span>All 50 default owner affiliate links saved successfully.</span>
+          <span>All default owner affiliate links saved successfully.</span>
         </div>
       )}
 

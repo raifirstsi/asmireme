@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return {
     title: locale === "vi" ? "Quy Trình & Tiêu Chuẩn Thử Nghiệm Thực Tế - Asmire" : "Empirical Testing Methodology - Asmire",
-    description: "How Asmire evaluates, benchmarks, and scores all 50 AI SaaS tools using standardized production workloads.",
+    description: "How Asmire evaluates, benchmarks, and scores all verified AI SaaS tools using standardized production workloads.",
   };
 }
 

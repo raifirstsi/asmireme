@@ -1,6 +1,6 @@
 /**
  * Direct & Authentic Verified 3rd-Party Review Links Registry
- * Maps each of the 50 SaaS tools to their actual, working review URLs on:
+ * Maps each verified SaaS tool to their actual, working review URLs on:
  * - G2 (https://www.g2.com/products/{slug}/reviews)
  * - Trustpilot (https://www.trustpilot.com/review/{domain})
  * - Product Hunt (https://www.producthunt.com/products/{slug}/reviews)
@@ -496,6 +496,127 @@ export const TOOL_PLATFORM_META: Record<string, PlatformReviewMeta> = {
     "g2": "turnitin",
     "ph": "turnitin",
     "reddit": "r/Turnitin"
+  },
+
+  "chatgpt": {
+    "domain": "chatgpt.com",
+    "g2": "chatgpt",
+    "ph": "chatgpt",
+    "reddit": "r/ChatGPT"
+  },
+  "claude-ai": {
+    "domain": "claude.ai",
+    "g2": "claude",
+    "ph": "claude-ai",
+    "reddit": "r/ClaudeAI"
+  },
+  "midjourney": {
+    "domain": "midjourney.com",
+    "g2": "midjourney",
+    "ph": "midjourney",
+    "reddit": "r/midjourney"
+  },
+  "grok": {
+    "domain": "x.ai",
+    "g2": "grok",
+    "ph": "grok",
+    "reddit": "r/Grok"
+  },
+  "deepseek": {
+    "domain": "deepseek.com",
+    "g2": "deepseek",
+    "ph": "deepseek-r1",
+    "reddit": "r/DeepSeek"
+  },
+  "descript": {
+    "domain": "descript.com",
+    "g2": "descript",
+    "ph": "descript",
+    "reddit": "r/Descript"
+  },
+  "n8n": {
+    "domain": "n8n.io",
+    "g2": "n8n",
+    "ph": "n8n",
+    "reddit": "r/n8n"
+  },
+  "coze": {
+    "domain": "coze.com",
+    "g2": "coze",
+    "ph": "coze",
+    "reddit": "r/Coze"
+  },
+  "adobe-firefly": {
+    "domain": "adobe.com",
+    "g2": "adobe-firefly",
+    "ph": "adobe-firefly",
+    "reddit": "r/AdobeFirefly"
+  },
+  "grammarly": {
+    "domain": "grammarly.com",
+    "g2": "grammarly",
+    "ph": "grammarly",
+    "reddit": "r/Grammarly"
+  },
+  "hugging-face": {
+    "domain": "huggingface.co",
+    "g2": "hugging-face",
+    "ph": "hugging-face",
+    "reddit": "r/HuggingFace"
+  },
+  "mistral": {
+    "domain": "mistral.ai",
+    "g2": "mistral-ai",
+    "ph": "mistral-ai",
+    "reddit": "r/MistralAI"
+  },
+  "pika-labs": {
+    "domain": "pika.art",
+    "g2": "pika-labs",
+    "ph": "pika-labs",
+    "reddit": "r/PikaLabs"
+  },
+  "writesonic": {
+    "domain": "writesonic.com",
+    "g2": "writesonic",
+    "ph": "writesonic",
+    "reddit": "r/Writesonic"
+  },
+  "copyleaks": {
+    "domain": "copyleaks.com",
+    "g2": "copyleaks",
+    "ph": "copyleaks",
+    "reddit": "r/Copyleaks"
+  },
+  "ai-or-not": {
+    "domain": "aiornot.com",
+    "g2": "ai-or-not",
+    "ph": "ai-or-not",
+    "reddit": "r/AIEthics"
+  },
+  "convertos-ai": {
+    "domain": "convertos.ai",
+    "g2": "convertos-ai",
+    "ph": "convertos-ai",
+    "reddit": "r/SEO"
+  },
+  "voicefleet": {
+    "domain": "voicefleet.ai",
+    "g2": "voicefleet",
+    "ph": "voicefleet",
+    "reddit": "r/SmallBusiness"
+  },
+  "stable-diffusion": {
+    "domain": "stability.ai",
+    "g2": "stable-diffusion",
+    "ph": "stable-diffusion",
+    "reddit": "r/StableDiffusion"
+  },
+  "v0-dev": {
+    "domain": "v0.dev",
+    "g2": "v0-vercel",
+    "ph": "v0-by-vercel",
+    "reddit": "r/nextjs"
   },
 };
 

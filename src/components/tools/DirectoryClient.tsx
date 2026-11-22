@@ -122,7 +122,7 @@ export function DirectoryClient({ initialTools, locale }: DirectoryClientProps) 
             type="text"
             value={query}
             onChange={(e) => handleQueryChange(e.target.value)}
-            placeholder={locale === "vi" ? "Tìm nhanh 50 công cụ AI..." : "Search across all 50 AI tools..."}
+            placeholder={locale === "vi" ? `Tìm nhanh ${initialTools.length} công cụ AI...` : `Search across all ${initialTools.length} AI tools...`}
             className="w-full h-10 pl-10 pr-10 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#141415] text-xs sm:text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 shadow-2xs"
           />
           {query && (

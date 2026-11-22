@@ -70,7 +70,7 @@ export function Footer({ locale }: FooterProps) {
               </li>
               <li>
                 <Link href={`/${locale}/tools`} className="font-medium text-zinc-900 dark:text-zinc-100 hover:underline">
-                  View All 50 SaaS Tools →
+                  {locale === "vi" ? "Xem tất cả công cụ AI →" : "View All AI SaaS Tools →"}
                 </Link>
               </li>
             </ul>
