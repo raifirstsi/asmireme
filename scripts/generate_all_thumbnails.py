@@ -304,13 +304,14 @@ def generate_2x_thumbnail(art, white_a_img):
     draw = ImageDraw.Draw(canvas)
 
     tools = art.get("tools", [])
-    is_vs = "vs" in slug or len(tools) >= 2
+    is_review = "review" in slug or slug.startswith("gohighlevel-pricing") or slug.startswith("gohighlevel-saas-mode")
+    is_vs = ("-vs-" in slug) or (("comparison" in slug or "benchmark" in slug or slug.startswith("best-ai-") or slug.startswith("top-ai-")) and not is_review and len(tools) >= 2)
     is_ai_news = "AI News" in category
 
     if is_ai_news:
         draw_2x_news_artwork(draw, slug, card_cx, card_cy, accent)
     elif is_vs and len(tools) >= 2:
-        # Comparison: 2 Floating Tool Squircles + Glowing VS badge
+        # Genuine Comparison: 2 Floating Tool Squircles + Glowing VS badge
         t1, t2 = tools[0], tools[1]
         t1_x = card_cx - 175
         t2_x = card_cx + 175
@@ -343,12 +344,17 @@ def generate_2x_thumbnail(art, white_a_img):
         font_vs = ImageFont.truetype(FONT_BOLD, 36)
         draw.text((card_cx - 24, card_cy - 24), "VS", font=font_vs, fill=(ar, ag, ab, 255))
     else:
-        # Single Tool
-        primary_tool = tools[0] if tools else None
-        if not primary_tool:
-            m = re.match(r"^([a-z0-9\-]+)-review", slug)
-            if m:
-                primary_tool = m.group(1)
+        # Single Tool Review / Single Tool Guide
+        primary_tool = None
+        m = re.match(r"^([a-z0-9\-]+)-review", slug)
+        if m:
+            primary_tool = m.group(1)
+            if primary_tool in ["gohighlevel", "highlevel"]:
+                primary_tool = "highlevel"
+        if not primary_tool and ("gohighlevel" in slug or "highlevel" in slug):
+            primary_tool = "highlevel"
+        if not primary_tool and tools:
+            primary_tool = tools[0]
 
         box_s = 340
         draw.rounded_rectangle(

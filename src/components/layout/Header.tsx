@@ -118,8 +118,8 @@ export function Header({ locale }: HeaderProps) {
         }`}
       >
         <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-6xl">
-          {/* Brand Logo - Left Column (flex-1 guarantees center alignment) */}
-          <div className="flex items-center justify-start flex-1 shrink-0">
+          {/* Brand Logo - Left Anchor */}
+          <div className="flex items-center justify-start shrink-0">
             <Link href={`/${locale}`} prefetch={true} className="inline-flex items-center transition-opacity hover:opacity-85" aria-label="Asmire Home">
               <img
                 src="/brand/asmire-logo-black.png?v=3"
@@ -129,7 +129,7 @@ export function Header({ locale }: HeaderProps) {
             </Link>
           </div>
 
-          {/* Desktop Navigation - Pure Minimalist Typography (Centered Vertically & Horizontally, Zero Bubble, Zero Hover Box) */}
+          {/* Desktop Navigation - Balanced & Harmonious Positioning between Logo and Actions */}
           <nav className="hidden md:flex items-center justify-center space-x-6 lg:space-x-8 shrink-0">
             {primaryNavItems.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -150,8 +150,8 @@ export function Header({ locale }: HeaderProps) {
             })}
           </nav>
 
-          {/* Right Action Cluster - Right Column (flex-1 guarantees center alignment) */}
-          <div className="flex items-center justify-end flex-1 gap-1.5 sm:gap-2 shrink-0">
+          {/* Right Action Cluster */}
+          <div className="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0">
             {/* Desktop Quick Search Trigger (Cmd+K) - Clean Minimalist Pill with harmonious height */}
             <button
               onClick={openSearch}
