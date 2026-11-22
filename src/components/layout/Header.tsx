@@ -89,11 +89,12 @@ export function Header({ locale }: HeaderProps) {
     router.push(segments.join("/") || `/${targetLocale}`);
   };
 
-  // Apple-style streamlined primary navigation: 5 core links
+  // Apple-style streamlined primary navigation
   const primaryNavItems = [
     { label: dict.nav.tools, href: `/${locale}/tools` },
     { label: dict.nav.categories, href: `/${locale}/categories` },
     { label: dict.nav.compare, href: `/${locale}/compare` },
+    { label: locale === "vi" ? "Thử Nghiệm" : "Playground", href: `/${locale}/playground` },
     { label: dict.nav.news || dict.nav.blog, href: `/${locale}/news` },
     { label: "Member", href: `/${locale}/membership` },
   ];
@@ -103,6 +104,7 @@ export function Header({ locale }: HeaderProps) {
     { label: dict.nav.rankings, href: `/${locale}/rankings` },
     { label: locale === "vi" ? "Đánh Giá Thực Tế" : "Reviews", href: `/${locale}/reviews` },
     { label: locale === "vi" ? "Cắt Giảm SaaS" : "Cut SaaS Bill", href: `/${locale}/replace` },
+    { label: locale === "vi" ? "Phòng Thử Nghiệm" : "Output Playground", href: `/${locale}/playground` },
     { label: dict.nav.deals, href: `/${locale}/deals` },
   ];
 

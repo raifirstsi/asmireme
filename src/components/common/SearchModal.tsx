@@ -76,6 +76,20 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
     }).slice(0, 3);
   }, [query]);
 
+  const isPlaygroundMatch = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return false;
+    return (
+      q.includes("play") ||
+      q.includes("thử nghiệm") ||
+      q.includes("thu nghiem") ||
+      q.includes("voice") ||
+      q.includes("audio") ||
+      q.includes("avatar") ||
+      q.includes("benchmark")
+    );
+  }, [query]);
+
   if (!isOpen) return null;
 
   return (
@@ -108,6 +122,36 @@ export function SearchModal({ isOpen, onClose, locale }: SearchModalProps) {
 
         {/* Search Results */}
         <div className="max-h-96 overflow-y-auto p-3 space-y-3">
+          {/* Playground Spotlight Match */}
+          {isPlaygroundMatch && (
+            <div className="space-y-1">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 px-3 py-1 flex items-center gap-1.5">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>{isVi ? "Phòng Thử Nghiệm Đa Phương Tiện (Output Playground)" : "AI Output Playground Match"}</span>
+              </div>
+              <Link
+                href={`/${locale}/playground`}
+                onClick={onClose}
+                className="flex items-center justify-between p-2.5 rounded-xl bg-cyan-500/5 hover:bg-cyan-500/10 border border-cyan-500/20 transition-all group"
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className="h-8 w-8 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center shrink-0">
+                    <Sparkles className="h-4 w-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-xs sm:text-sm text-zinc-900 dark:text-white truncate">
+                      {isVi ? "Nghe & Xem Thực Tế Đầu Ra (Voice, Video, Content AI)" : "Listen & Watch AI Outputs (Voice, Video, Content)"}
+                    </div>
+                    <p className="text-[11px] text-zinc-400 truncate">
+                      {isVi ? "So sánh ElevenLabs, HeyGen, KoalaWriter trên đề bài chuẩn hóa" : "Compare ElevenLabs, HeyGen, KoalaWriter side-by-side"}
+                    </p>
+                  </div>
+                </div>
+                <ArrowRight className="h-4 w-4 text-cyan-600 dark:text-cyan-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+              </Link>
+            </div>
+          )}
+
           {/* 1. Matched SaaS Stack Replacements (High-Intent Conversion Spotlight) */}
           {matchedStacks.length > 0 && (
             <div className="space-y-1">

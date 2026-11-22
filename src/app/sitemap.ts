@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
-    // Dedicated Snapshot Bonus Landing Page
+    // Dedicated Snapshot Bonus Landing Pages
     entries.push({
       url: `${baseUrl}/${locale}/snapshots/agency-os`,
       lastModified: now,
@@ -42,8 +42,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
+    entries.push({
+      url: `${baseUrl}/${locale}/snapshots/sme-os`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/snapshots/sme-os`,
+          vi: `${baseUrl}/vi/snapshots/sme-os`,
+          "x-default": `${baseUrl}/en/snapshots/sme-os`,
+        },
+      },
+    });
+
     // Main section hubs
-    const mainSections = ["tools", "categories", "compare", "rankings", "deals", "news", "membership", "methodology", "editorial-policy", "affiliate-disclosure", "member-terms", "refund-policy", "terms", "privacy", "about", "contact"];
+    const mainSections = ["tools", "categories", "compare", "rankings", "deals", "news", "replace", "playground", "membership", "methodology", "editorial-policy", "affiliate-disclosure", "member-terms", "refund-policy", "terms", "privacy", "about", "contact"];
     for (const section of mainSections) {
       entries.push({
         url: `${baseUrl}/${locale}/${section}`,
