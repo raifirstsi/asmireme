@@ -27,6 +27,7 @@ export interface BlogPost {
   directAnswerSummary: Record<Locale, string>;
   featuredToolSlugs: string[];
   contentMarkdown: Record<Locale, string>;
+  coverImage?: string;
 }
 
 const ORIGINAL_BLOG_POSTS: BlogPost[] = [
@@ -554,7 +555,10 @@ const ALL_REVIEWS_POSTS: BlogPost[] = [
 export const NEWS_POSTS: BlogPost[] = [
   ...AI_NEWS_POSTS,
   ...ALL_REVIEWS_POSTS,
-];
+].map((post) => ({
+  ...post,
+  coverImage: post.coverImage || `/thumbnails/news/${post.slug}.webp`,
+}));
 
 export const BLOG_POSTS: BlogPost[] = NEWS_POSTS;
 

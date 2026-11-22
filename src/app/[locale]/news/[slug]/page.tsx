@@ -47,6 +47,20 @@ export async function generateMetadata({ params }: NewsPostPageProps) {
       publishedTime: post.publishedDate,
       modifiedTime: post.lastReviewedDate,
       authors: [post.author.name],
+      images: [
+        {
+          url: `https://asmire.me/thumbnails/news/${post.slug}.png`,
+          width: 1200,
+          height: 630,
+          alt: post.title[locale as Locale],
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title[locale as Locale],
+      description: post.metaDescription[locale as Locale],
+      images: [`https://asmire.me/thumbnails/news/${post.slug}.png`],
     },
   };
 }
@@ -202,6 +216,19 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
                 </Link>
               </div>
             </div>
+          </div>
+
+          {/* Article Hero Thumbnail (International Standard 16:9 Modern SaaS Layout) */}
+          <div className="relative w-full aspect-[16/9] sm:aspect-[1.91/1] rounded-2xl overflow-hidden border border-zinc-200/80 dark:border-zinc-800 bg-zinc-950 shadow-md">
+            <picture>
+              <source srcSet={`/thumbnails/news/${post.slug}.webp`} type="image/webp" />
+              <img
+                src={`/thumbnails/news/${post.slug}.png`}
+                alt={post.title[locale as Locale]}
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.01]"
+                loading="eager"
+              />
+            </picture>
           </div>
 
           {/* Direct Takeaway Box (Apple Callout Card) */}

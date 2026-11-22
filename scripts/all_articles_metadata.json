@@ -1,0 +1,845 @@
+[
+  {
+    "slug": "gohighlevel-review-agency-blueprint-2027",
+    "category": "CRM & Agency Automation",
+    "title_en": "GoHighLevel Review (2027): The Complete All-in-One Agency Operating System, Pricing Breakdown & Honest Drawbacks",
+    "title_vi": "Đánh Giá GoHighLevel Chi Tiết (2027): Cách Kiếm Hàng Trăm Triệu Mỗi Tháng Bằng White-Label CRM & Bẫy Cần Tránh",
+    "tools": [
+      "highlevel",
+      "getresponse",
+      "my-ai-front-desk",
+      "taskade"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "best-ai-video-generators-2027",
+    "category": "Video & Avatar AI",
+    "title_en": "Best AI Video Generators (2027): 9 Tools Tested on Real Lip-Sync & Avatar Realism",
+    "title_vi": "Top 9 Phần Mềm Tạo Video AI Tốt Nhất 2027: Đánh Giá Thực Tế Khớp Lời & Avatar",
+    "tools": [
+      "synthesia",
+      "ai-studios",
+      "fliki",
+      "opusclip",
+      "submagic",
+      "capcut"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "ai-writing-tools-seo-comparison",
+    "category": "SEO & Content AI",
+    "title_en": "AI Writing Tools for SEO: Jasper vs Koala AI vs Frase in 2027",
+    "title_vi": "So Sánh Công Cụ Viết Bài AI Chuẩn SEO: Jasper vs Koala AI vs Frase 2027",
+    "tools": [
+      "jasper",
+      "koala",
+      "frase",
+      "rightblogger",
+      "omniseo",
+      "describely"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "ai-content-detection-accuracy-benchmark",
+    "category": "AI Detection & Plagiarism",
+    "title_en": "AI Content Detection Benchmark (2027): Originality.ai vs Winston AI",
+    "title_vi": "Thử Nghiệm Độ Chính Xác Của Phần Mềm Quét AI: Originality.ai vs Winston AI",
+    "tools": [
+      "originality",
+      "winston",
+      "undetectable"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "best-ai-presentations-gamma-vs-decktopus",
+    "category": "Presentations & Slides",
+    "title_en": "Best AI Presentation Makers: Gamma vs Decktopus vs MagicSlides",
+    "title_vi": "Top Trình Tạo Slide AI Tốt Nhất: Gamma vs Decktopus vs MagicSlides 2027",
+    "tools": [
+      "gamma",
+      "decktopus",
+      "magicslides"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "top-ai-meeting-note-takers",
+    "category": "Productivity & Meeting AI",
+    "title_en": "Top AI Meeting Assistants: Fireflies vs MeetGeek vs Speak AI",
+    "title_vi": "Top Trợ Lý Ghi Chép Cuộc Họp AI: Fireflies vs MeetGeek vs Speak AI",
+    "tools": [
+      "fireflies",
+      "meetgeek",
+      "speak-ai",
+      "reclaim",
+      "taskade"
+    ],
+    "source_file": "blog-data.ts"
+  },
+  {
+    "slug": "ai-rewriting-amd-silicon-death-of-manual-engineering",
+    "category": "AI News",
+    "title_en": "When Algorithms Rewrite Silicon: The Death of Manual Engineering and the Closed-Loop Future",
+    "title_vi": "Khi Thuật Toán Tự Viết Lại Silicon: Dấu Chấm Hết Của Kỹ Thuật Thủ Công và Vòng Lặp Khép Kín",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "the-knowledge-trap-why-ai-cant-make-decisions",
+    "category": "AI News",
+    "title_en": "The Knowledge Trap: Why AI Can Read 761 Molecules but Can't Make a Single Decision",
+    "title_vi": "Bẫy Tri Thức: Vì Sao AI Đọc Hiểu 761 Phân Tử Nhưng Lại Tê Liệt Khi Phải Ra Quyết Định",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "the-intuition-engine-runway-praxis-robot-control",
+    "category": "AI News",
+    "title_en": "The Intuition Engine: How Video Models Gave Robots Physical Common Sense",
+    "title_vi": "Động Cơ Bản Năng: Cách Mô Hình Video Truyền Thụ Trực Giác Vật Lý Cho Robot",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "anthropic-ipo-hyper-leverage-and-the-death-of-linear-careers",
+    "category": "AI News",
+    "title_en": "The $93 Billion Lesson: Extreme Leverage and the Death of the Linear Career",
+    "title_vi": "Bài Học $93 Tỷ Đô: Đòn Bẩy Cực Hạn và Cái Chết Của Nấc Thang Sự Nghiệp Tuyến Tính",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "the-frictionless-society-gemini-autonomous-agents",
+    "category": "AI News",
+    "title_en": "The Frictionless Society: When AI Sits on Hold and Humans Face The Void",
+    "title_vi": "Xã Hội Không Ma Sát: Khi AI Thay Bạn Nghe Nhạc Chờ và Con Người Đối Mặt Với Khoảng Trống",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "the-2026-intelligence-shift-master-briefing",
+    "category": "AI News",
+    "title_en": "The 2026 Intelligence Shift: The Signal, The Noise, and Your Position in the New Order",
+    "title_vi": "Bước Chuyển Dịch Trí Tuệ 2026: Đâu Là Tín Hiệu Thực, Đâu Là Tiếng Ồn và Vị Thế Của Bạn",
+    "tools": [],
+    "source_file": "ai-news-posts.ts"
+  },
+  {
+    "slug": "adcreative-review-roi-guide-2027",
+    "category": "Advertising & Paid Traffic",
+    "title_en": "AdCreative.ai Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá AdCreative.ai (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "adcreative",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "advertising-posts.ts"
+  },
+  {
+    "slug": "quickads-review-roi-guide-2027",
+    "category": "Advertising & Paid Traffic",
+    "title_en": "QuickAds Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá QuickAds (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "quickads",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "advertising-posts.ts"
+  },
+  {
+    "slug": "lebesgue-review-roi-guide-2027",
+    "category": "Advertising & Paid Traffic",
+    "title_en": "Lebesgue Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Lebesgue (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "lebesgue",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "advertising-posts.ts"
+  },
+  {
+    "slug": "pickaxe-review-roi-guide-2027",
+    "category": "AI Agents & Web Intelligence",
+    "title_en": "Pickaxe Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Pickaxe (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "pickaxe",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "agent-posts.ts"
+  },
+  {
+    "slug": "paperguide-review-roi-guide-2027",
+    "category": "AI Agents & Web Intelligence",
+    "title_en": "Paperguide Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Paperguide (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "paperguide",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "agent-posts.ts"
+  },
+  {
+    "slug": "browse-ai-review-roi-guide-2027",
+    "category": "AI Agents & Web Intelligence",
+    "title_en": "Browse AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Browse AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "browse-ai",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "agent-posts.ts"
+  },
+  {
+    "slug": "elevenlabs-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "ElevenLabs Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá ElevenLabs (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "elevenlabs",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "castmagic-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "Castmagic Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Castmagic (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "castmagic",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "palette-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "Palette.fm Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Palette.fm (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "palette",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "palabra-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "Palabra.ai Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Palabra.ai (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "palabra",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "listnr-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "Listnr Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Listnr (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "listnr",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "speak-ai-review-roi-guide-2027",
+    "category": "Audio, Voice & Transcription",
+    "title_en": "Speak AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Speak AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "speak-ai",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "audio-posts.ts"
+  },
+  {
+    "slug": "marblism-review-roi-guide-2027",
+    "category": "Web Builders & No-Code Apps",
+    "title_en": "Marblism Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Marblism (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "marblism",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "builder-posts.ts"
+  },
+  {
+    "slug": "10web-review-roi-guide-2027",
+    "category": "Web Builders & No-Code Apps",
+    "title_en": "10Web Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá 10Web (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "10web",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "builder-posts.ts"
+  },
+  {
+    "slug": "postcrest-review-roi-guide-2027",
+    "category": "Web Builders & No-Code Apps",
+    "title_en": "Postcrest Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Postcrest (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "postcrest",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "builder-posts.ts"
+  },
+  {
+    "slug": "pineapple-builder-review-roi-guide-2027",
+    "category": "Web Builders & No-Code Apps",
+    "title_en": "Pineapple Builder Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Pineapple Builder (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "pineapple-builder",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "builder-posts.ts"
+  },
+  {
+    "slug": "jotform-review-roi-guide-2027",
+    "category": "Web Builders & No-Code Apps",
+    "title_en": "Jotform Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Jotform (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "jotform",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "builder-posts.ts"
+  },
+  {
+    "slug": "omniseo-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "OmniSEO Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá OmniSEO (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "omniseo",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "rightblogger-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "RightBlogger Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá RightBlogger (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "rightblogger",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "describely-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Describely Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Describely (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "describely",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "koala-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Koala AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Koala AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "koala",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "textero-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Textero AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Textero AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "textero",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "frase-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Frase Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Frase (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "frase",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "rytr-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Rytr Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Rytr (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "rytr",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "jasper-review-roi-guide-2027",
+    "category": "Content, Copywriting & SEO Engines",
+    "title_en": "Jasper Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Jasper (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "jasper",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "content-posts.ts"
+  },
+  {
+    "slug": "highlevel-review-roi-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "HighLevel (GoHighLevel) Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá HighLevel (GoHighLevel) (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse",
+      "omniseo"
+    ],
+    "source_file": "crm-posts.ts"
+  },
+  {
+    "slug": "getresponse-review-roi-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "GetResponse Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá GetResponse (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "getresponse",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "omniseo"
+    ],
+    "source_file": "crm-posts.ts"
+  },
+  {
+    "slug": "nutshell-review-roi-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "Nutshell Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Nutshell (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "nutshell",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "crm-posts.ts"
+  },
+  {
+    "slug": "krispcall-review-roi-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "KrispCall Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá KrispCall (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "krispcall",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "crm-posts.ts"
+  },
+  {
+    "slug": "my-ai-front-desk-review-roi-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "My AI Front Desk Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá My AI Front Desk (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "my-ai-front-desk",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "crm-posts.ts"
+  },
+  {
+    "slug": "winston-review-roi-guide-2027",
+    "category": "AI Detection & Quality Control",
+    "title_en": "Winston AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Winston AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "winston",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "detection-posts.ts"
+  },
+  {
+    "slug": "originality-review-roi-guide-2027",
+    "category": "AI Detection & Quality Control",
+    "title_en": "Originality.ai Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Originality.ai (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "originality",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "detection-posts.ts"
+  },
+  {
+    "slug": "undetectable-review-roi-guide-2027",
+    "category": "AI Detection & Quality Control",
+    "title_en": "Undetectable AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Undetectable AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "undetectable",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "detection-posts.ts"
+  },
+  {
+    "slug": "gohighlevel-pricing-hidden-costs-guide-2027",
+    "category": "Sales CRM & Growth Systems",
+    "title_en": "GoHighLevel Pricing Breakdown & Hidden Costs (2027): Complete Plans Audit, Twilio/LC Margins & Agency SaaS ROI",
+    "title_vi": "Bảng Giá GoHighLevel & Bóc Trần Chi Phí Ẩn 2027: Phân Tích Gói $97, $297, $497 & Bài Toán SaaS Rebilling",
+    "tools": [
+      "highlevel",
+      "getresponse",
+      "taskade",
+      "decktopus",
+      "omniseo"
+    ],
+    "source_file": "ghl-pricing-post.ts"
+  },
+  {
+    "slug": "decktopus-review-roi-guide-2027",
+    "category": "Presentation & Slide Design",
+    "title_en": "Decktopus AI Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Decktopus AI (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "decktopus",
+      "highlevel",
+      "taskade",
+      "getresponse",
+      "omniseo"
+    ],
+    "source_file": "presentation-posts.ts"
+  },
+  {
+    "slug": "gamma-review-roi-guide-2027",
+    "category": "Presentation & Slide Design",
+    "title_en": "Gamma Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Gamma (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "gamma",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "presentation-posts.ts"
+  },
+  {
+    "slug": "magicslides-review-roi-guide-2027",
+    "category": "Presentation & Slide Design",
+    "title_en": "MagicSlides Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá MagicSlides (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "magicslides",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "presentation-posts.ts"
+  },
+  {
+    "slug": "simplified-review-roi-guide-2027",
+    "category": "Presentation & Slide Design",
+    "title_en": "Simplified Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Simplified (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "simplified",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "presentation-posts.ts"
+  },
+  {
+    "slug": "taskade-review-roi-guide-2027",
+    "category": "Meeting Productivity & Automation",
+    "title_en": "Taskade Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Taskade (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "taskade",
+      "highlevel",
+      "decktopus",
+      "getresponse",
+      "omniseo"
+    ],
+    "source_file": "productivity-posts.ts"
+  },
+  {
+    "slug": "reclaim-review-roi-guide-2027",
+    "category": "Meeting Productivity & Automation",
+    "title_en": "Reclaim.ai Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Reclaim.ai (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "reclaim",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "productivity-posts.ts"
+  },
+  {
+    "slug": "meetgeek-review-roi-guide-2027",
+    "category": "Meeting Productivity & Automation",
+    "title_en": "MeetGeek Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá MeetGeek (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "meetgeek",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "productivity-posts.ts"
+  },
+  {
+    "slug": "fireflies-review-roi-guide-2027",
+    "category": "Meeting Productivity & Automation",
+    "title_en": "Fireflies.ai Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Fireflies.ai (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "fireflies",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "productivity-posts.ts"
+  },
+  {
+    "slug": "ai-studios-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "AI Studios (DeepBrain) Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá AI Studios (DeepBrain) (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "ai-studios",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "capcut-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "CapCut Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá CapCut (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "capcut",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "akool-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "AKOOL Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá AKOOL (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "akool",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "fliki-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "Fliki Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Fliki (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "fliki",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "submagic-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "Submagic Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Submagic (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "submagic",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "videogen-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "VideoGen Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá VideoGen (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "videogen",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "potion-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "Potion Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Potion (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "potion",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "synthesia-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "Synthesia Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá Synthesia (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "synthesia",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  },
+  {
+    "slug": "opusclip-review-roi-guide-2027",
+    "category": "Video Creation & AI Avatars",
+    "title_en": "OpusClip Review (2027): A Cold-Blooded Look at ROI, Hidden Costs & Real Cash Flow",
+    "title_vi": "Đánh Giá OpusClip (2027): Phân Tích Lợi Nhuận Thực Tế, Chi Phí Ẩn & Cách Kiếm Tiền Thực Chiến",
+    "tools": [
+      "opusclip",
+      "highlevel",
+      "decktopus",
+      "taskade",
+      "getresponse"
+    ],
+    "source_file": "video-posts.ts"
+  }
+]

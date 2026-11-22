@@ -122,6 +122,22 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
                     : "border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-[#141415] hover:border-zinc-400 dark:hover:border-zinc-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
                 }`}
               >
+                {/* Modern SaaS 16:9 Card Thumbnail */}
+                <Link
+                  href={`/${locale}/news/${post.slug}`}
+                  className="block relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-zinc-200/60 dark:border-zinc-800/60 bg-zinc-950 group-hover:border-zinc-400 dark:group-hover:border-zinc-600 transition-all shrink-0 shadow-2xs"
+                >
+                  <picture>
+                    <source srcSet={`/thumbnails/news/${post.slug}.webp`} type="image/webp" />
+                    <img
+                      src={`/thumbnails/news/${post.slug}.png`}
+                      alt={post.title[locale]}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </picture>
+                </Link>
+
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-between text-xs text-zinc-400">
                     <span
