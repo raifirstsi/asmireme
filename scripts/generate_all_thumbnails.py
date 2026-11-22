@@ -1,12 +1,11 @@
 """
-Generate Luxury Black 3D Article Thumbnails for Asmire
-Specifications:
+Generate Harmonious, Luxury Black 3D Article Thumbnails for Asmire
 - 100% Black 3D Background with volumetric studio lighting and depth vignette (NO grid lines / no square stripes)
 - Floating 3D Glassmorphic Card on the right with soft shadow & top glass highlight rim
-- Centered, prominent Tool Logo (148px) inside a 3D squircle / Custom 3D Vector Artwork for AI News
-- "Tiêu đề vừa phải": Moderate, elegant title typography (40px bold Segoe UI with text shadow)
-- NO Vietnamese description text
-- Centered 3D Asmire Favicon 'a' badge (50px) perfectly aligned above title
+- Centered, prominent Tool Logo (150px) inside a 3D squircle / Custom 3D Vector Artwork for AI News
+- "Tiêu đề vừa phải": Perfectly proportioned 2-line title hierarchy (Main Title 42px Bold + Subtitle 24px Semibold)
+- NO clipping, NO text overflow, NO dangling words, NO Vietnamese subtitle clutter
+- Centered 3D Asmire Favicon 'a' badge (52px) perfectly aligned on the vertical center axis
 """
 
 import os
@@ -52,10 +51,8 @@ def get_accent_for_article(art):
     return THEMES["DEFAULT"]
 
 def create_3d_black_canvas(width, height, accent_color):
-    # 1. Base dark obsidian canvas with vertical 3D depth gradient
     base = Image.new("RGBA", (width, height), (5, 6, 8, 255))
     draw_base = ImageDraw.Draw(base)
-    
     for y in range(height):
         factor = 1.0 - math.pow(abs(y - height * 0.45) / (height * 0.55), 1.6)
         r = int(5 + 10 * factor)
@@ -63,10 +60,8 @@ def create_3d_black_canvas(width, height, accent_color):
         b = int(8 + 15 * factor)
         draw_base.line([(0, y), (width, y)], fill=(r, g, b, 255))
 
-    # 2. 3D Volumetric Ambient Lighting
     glow_layer = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     gdraw = ImageDraw.Draw(glow_layer)
-    
     rx, ry = 920, 315
     ar, ag, ab = accent_color
     for rad in range(380, 0, -20):
@@ -80,7 +75,6 @@ def create_3d_black_canvas(width, height, accent_color):
     glow_blurred = glow_layer.filter(ImageFilter.GaussianBlur(radius=36))
     canvas = Image.alpha_composite(base, glow_blurred)
 
-    # 3. 3D Camera Depth Vignette
     vignette = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     vdraw = ImageDraw.Draw(vignette)
     cx, cy = width // 2, height // 2
@@ -93,7 +87,6 @@ def create_3d_black_canvas(width, height, accent_color):
     vignette = vignette.filter(ImageFilter.GaussianBlur(radius=30))
     canvas = Image.alpha_composite(canvas, vignette)
     
-    # 4. Subtle 3D Top Studio Bevel
     top_rim = Image.new("RGBA", (width, height), (0, 0, 0, 0))
     tdraw = ImageDraw.Draw(top_rim)
     tdraw.line([(60, 0), (width - 60, 0)], fill=(255, 255, 255, 25), width=1)
@@ -104,7 +97,6 @@ def create_3d_black_canvas(width, height, accent_color):
     return canvas
 
 def draw_3d_card(canvas, card_x, card_y, card_w, card_h, accent_color):
-    # 3D Floating Shadow (Deep ambient occlusion)
     shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
     sdraw = ImageDraw.Draw(shadow)
     sdraw.rounded_rectangle(
@@ -115,10 +107,8 @@ def draw_3d_card(canvas, card_x, card_y, card_w, card_h, accent_color):
     shadow = shadow.filter(ImageFilter.GaussianBlur(radius=22))
     canvas = Image.alpha_composite(canvas, shadow)
 
-    # 3D Glass Body
     card_img = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
     cdraw = ImageDraw.Draw(card_img)
-    
     cdraw.rounded_rectangle(
         [(card_x, card_y), (card_x + card_w, card_y + card_h)],
         radius=30,
@@ -127,10 +117,9 @@ def draw_3d_card(canvas, card_x, card_y, card_w, card_h, accent_color):
         width=1
     )
     cdraw.line([(card_x + 35, card_y + 1), (card_x + card_w - 35, card_y + 1)], fill=(255, 255, 255, 60), width=1)
-    
     return Image.alpha_composite(canvas, card_img)
 
-def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=148):
+def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=150):
     logo_path = f"public/logos/{logo_slug}.png"
     if os.path.exists(logo_path):
         try:
@@ -138,16 +127,16 @@ def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=148):
             lw, lh = logo.size
             lx = cx - lw // 2
             ly = cy - lh // 2
-            card_pad = 26
+            card_pad = 28
             
             draw.rounded_rectangle(
                 [(lx - card_pad, ly - card_pad + 6), (lx + lw + card_pad, ly + lh + card_pad + 10)],
-                radius=32,
-                fill=(0, 0, 0, 90)
+                radius=34,
+                fill=(0, 0, 0, 100)
             )
             draw.rounded_rectangle(
                 [(lx - card_pad, ly - card_pad), (lx + lw + card_pad, ly + lh + card_pad)],
-                radius=30,
+                radius=32,
                 fill=(255, 255, 255, 252),
                 outline=(255, 255, 255, 100),
                 width=1
@@ -158,11 +147,11 @@ def draw_3d_tool_logo(im, draw, logo_slug, cx, cy, size=148):
             pass
     return False
 
-def draw_3d_news_artwork(draw, slug, cx, cy, accent):
+def draw_3d_news_artwork(draw, slug, cx, cy, accent, card_x, card_w):
     if "frictionless" in slug or "gemini" in slug:
         draw.ellipse([(cx - 48, cy - 48), (cx + 48, cy + 48)], fill=(accent[0], accent[1], accent[2], 230))
-        font_bold = ImageFont.truetype(FONT_BOLD, 15)
-        draw.text((cx - 30, cy - 11), "SWARM", font=font_bold, fill=(10, 10, 15, 255))
+        font_b = ImageFont.truetype(FONT_BOLD, 15)
+        draw.text((cx - 30, cy - 11), "SWARM", font=font_b, fill=(10, 10, 15, 255))
         for angle in [45, 135, 225, 315]:
             rad = math.radians(angle)
             nx = cx + int(math.cos(rad) * 135)
@@ -177,8 +166,8 @@ def draw_3d_news_artwork(draw, slug, cx, cy, accent):
         draw.rounded_rectangle([(cx - chip_size//2, cy - chip_size//2), (cx + chip_size//2, cy + chip_size//2)], radius=20, fill=(24, 24, 32, 255), outline=accent, width=2)
         core_s = 90
         draw.rounded_rectangle([(cx - core_s//2, cy - core_s//2), (cx + core_s//2, cy + core_s//2)], radius=12, fill=(accent[0]//4, accent[1]//4, accent[2]//4, 255), outline=(255, 255, 255, 80), width=1)
-        font_bold = ImageFont.truetype(FONT_BOLD, 18)
-        draw.text((cx - 36, cy - 12), "AI CORE", font=font_bold, fill=(255, 255, 255, 255))
+        font_b = ImageFont.truetype(FONT_BOLD, 18)
+        draw.text((cx - 36, cy - 12), "AI CORE", font=font_b, fill=(255, 255, 255, 255))
         for offset in [-50, -25, 0, 25, 50]:
             draw.line([(cx + offset, cy - chip_size//2), (cx + offset, cy - chip_size//2 - 28)], fill=accent, width=2)
             draw.line([(cx + offset, cy + chip_size//2), (cx + offset, cy + chip_size//2 + 28)], fill=accent, width=2)
@@ -231,6 +220,102 @@ def draw_3d_news_artwork(draw, slug, cx, cy, accent):
         draw.line([(cx - 160, cy), (cx + 160, cy)], fill=(255, 255, 255, 120), width=2)
         return
 
+def format_thumbnail_title(art):
+    slug = art["slug"]
+    title_raw = art.get("title_en", slug)
+    
+    # 1. AI News articles
+    news_titles = {
+        "the-frictionless-society-gemini-autonomous-agents": ("The Frictionless Society", "Autonomous AI & The Human Void"),
+        "ai-rewriting-amd-silicon-death-of-manual-engineering": ("When AI Rewrites Silicon", "The Death of Manual Engineering"),
+        "the-knowledge-trap-why-ai-cant-make-decisions": ("The Knowledge Trap", "Why AI Can't Make Real Decisions"),
+        "the-intuition-engine-runway-praxis-robot-control": ("The Intuition Engine", "Video Models & Robot Common Sense"),
+        "anthropic-ipo-hyper-leverage-and-the-death-of-linear-careers": ("The $93 Billion Lesson", "Extreme Leverage & Anthropic IPO"),
+        "the-2026-intelligence-shift-master-briefing": ("The 2026 Intelligence Shift", "Master Briefing & Strategic Position"),
+    }
+    if slug in news_titles:
+        return news_titles[slug]
+        
+    # 2. Megaguides / Comparisons
+    if "vs" in slug:
+        if "gamma-vs-decktopus" in slug:
+            return ("Gamma vs Decktopus", "AI Presentation Benchmark (2027)")
+        if "meeting" in slug:
+            return ("Top AI Meeting Assistants", "Fireflies vs MeetGeek vs Speak AI")
+        if "writing" in slug:
+            return ("AI Writing Tools for SEO", "Jasper vs Koala AI vs Frase")
+        if "detection" in slug:
+            return ("AI Content Detection", "Originality.ai vs Winston AI (2027)")
+        if "video" in slug:
+            return ("Best AI Video Generators", "Avatar & Realism Benchmark (2027)")
+
+    # 3. Dedicated Pricing breakdown
+    if "pricing" in slug or "cost" in slug:
+        return ("GoHighLevel Pricing", "Hidden Costs & Real Margins (2027)")
+
+    # 4. Single-tool Reviews
+    match_review = re.match(r"^([a-z0-9\-]+)-review", slug)
+    if match_review:
+        tool_slug = match_review.group(1)
+        brand_map = {
+            "gohighlevel": "GoHighLevel",
+            "highlevel": "HighLevel",
+            "getresponse": "GetResponse",
+            "nutshell": "Nutshell CRM",
+            "elevenlabs": "ElevenLabs",
+            "jasper": "Jasper AI",
+            "textero": "Textero AI",
+            "adcreative": "AdCreative.ai",
+            "quickads": "QuickAds",
+            "lebesgue": "Lebesgue AI",
+            "pickaxe": "Pickaxe AI",
+            "paperguide": "Paperguide",
+            "browse-ai": "Browse AI",
+            "castmagic": "Castmagic",
+            "palette": "Palette.fm",
+            "palabra": "Palabra.ai",
+            "listnr": "Listnr AI",
+            "speak-ai": "Speak AI",
+            "marblism": "Marblism",
+            "10web": "10Web WordPress",
+            "postcrest": "Postcrest",
+            "pineapple-builder": "Pineapple Builder",
+            "jotform": "Jotform AI",
+            "omniseo": "OmniSEO",
+            "rightblogger": "RightBlogger",
+            "describely": "Describely",
+            "koala": "Koala AI",
+            "frase": "Frase.io",
+            "rytr": "Rytr AI",
+            "krispcall": "KrispCall",
+            "my-ai-front-desk": "My AI Front Desk",
+            "winston": "Winston AI",
+            "originality": "Originality.ai",
+            "undetectable": "Undetectable AI",
+            "decktopus": "Decktopus AI",
+            "gamma": "Gamma App",
+            "magicslides": "MagicSlides",
+            "simplified": "Simplified AI",
+            "taskade": "Taskade Genesis",
+            "reclaim": "Reclaim.ai",
+            "meetgeek": "MeetGeek",
+            "fireflies": "Fireflies.ai",
+            "ai-studios": "AI Studios",
+            "capcut": "CapCut Pro",
+            "akool": "AKOOL AI",
+            "fliki": "Fliki AI",
+            "submagic": "Submagic",
+            "videogen": "VideoGen",
+            "potion": "Potion Video",
+            "synthesia": "Synthesia",
+            "opusclip": "OpusClip",
+        }
+        bname = brand_map.get(tool_slug, tool_slug.replace("-", " ").title())
+        return (f"{bname} Review", "Empirical ROI & Pricing (2027)")
+
+    parts = title_raw.split(":", 1)
+    return (parts[0].strip()[:32], parts[1].strip()[:36] if len(parts) > 1 else "Empirical Evaluation (2027)")
+
 def wrap_text(text, font, max_width, draw):
     words = text.split()
     lines = []
@@ -255,32 +340,14 @@ def wrap_text(text, font, max_width, draw):
 def generate_single_thumbnail(art, asmire_icon_white):
     width, height = 1200, 630
     slug = art["slug"]
-    title_raw = art.get("title_en", slug)
-
-    # Clean and format English title gracefully
-    clean_title = re.sub(r'\s*\(202\d\):.*', ' (2027)', title_raw)
-    if ":" in title_raw:
-        parts = title_raw.split(":", 1)
-        p0 = parts[0].strip()
-        p1 = parts[1].strip()
-        if len(p1) > 42:
-            words1 = p1.split()
-            trunc = []
-            cur_l = 0
-            for w in words1:
-                if cur_l + len(w) + 1 > 38:
-                    break
-                trunc.append(w)
-                cur_l += len(w) + 1
-            p1 = " ".join(trunc)
-        clean_title = f"{p0}:\n{p1}"
-
+    
+    t_main, t_sub = format_thumbnail_title(art)
     accent = get_accent_for_article(art)
 
-    # 1. 3D Black Canvas (NO GRID LINES)
+    # 1. 3D Black Canvas
     im = create_3d_black_canvas(width, height, accent)
 
-    # 2. 3D Floating Glass Card on Right (400x400)
+    # 2. 3D Floating Glass Card on Right
     card_x, card_y = 730, 115
     card_w, card_h = 400, 400
     im = draw_3d_card(im, card_x, card_y, card_w, card_h, accent)
@@ -293,13 +360,13 @@ def generate_single_thumbnail(art, asmire_icon_white):
     tools = art.get("tools", [])
     primary_tool = tools[0] if tools else None
     if not primary_tool:
-        match_slug = re.match(r'^([a-z0-9\-]+)-review', slug)
+        match_slug = re.match(r"^([a-z0-9\-]+)-review", slug)
         if match_slug:
             primary_tool = match_slug.group(1)
 
     logo_drawn = False
     if primary_tool and "AI News" not in (art.get("category") or ""):
-        logo_drawn = draw_3d_tool_logo(im, draw, primary_tool, cx, cy, size=148)
+        logo_drawn = draw_3d_tool_logo(im, draw, primary_tool, cx, cy, size=150)
 
     if not logo_drawn:
         if "vs" in slug or len(tools) >= 2:
@@ -310,30 +377,26 @@ def generate_single_thumbnail(art, asmire_icon_white):
             font_vs = ImageFont.truetype(FONT_BOLD, 24)
             draw.text((cx - 17, cy - 14), "VS", font=font_vs, fill=accent)
         else:
-            draw_3d_news_artwork(draw, slug, cx, cy, accent)
+            draw_3d_news_artwork(draw, slug, cx, cy, accent, card_x, card_w)
 
-    # 3. Left Section: "Tiêu đề vừa phải" (Font 40px) + Centered 3D Favicon 'a'
-    col_center_x = 380
-    max_title_w = 600
+    # 3. Left Section: Harmonious, Well-Proportioned Typography
+    col_center_x = 370
+    max_text_w = 540
 
-    font_title = ImageFont.truetype(FONT_BOLD, 40)
+    font_main = ImageFont.truetype(FONT_BOLD, 42)
+    font_sub = ImageFont.truetype(FONT_SEMI, 24)
 
-    if "\n" in clean_title:
-        p0, p1 = clean_title.split("\n", 1)
-        lines_en = [p0] + wrap_text(p1, font_title, max_title_w, draw)
-    else:
-        lines_en = wrap_text(clean_title, font_title, max_title_w, draw)
+    lines_main = wrap_text(t_main, font_main, max_text_w, draw)
+    lines_sub = wrap_text(t_sub, font_sub, max_text_w, draw)
 
-    if len(lines_en) > 4:
-        lines_en = lines_en[:4]
-
-    # Favicon 'a' badge: Balanced size (50px icon in 68px squircle)
-    icon_size = 50
+    icon_size = 52
     badge_w = icon_size + 18
-    gap_icon = 28
-    line_h_title = 54
+    gap_icon = 26
+    line_h_main = 54
+    gap_sub = 18
+    line_h_sub = 34
 
-    total_h = badge_w + gap_icon + len(lines_en) * line_h_title
+    total_h = badge_w + gap_icon + len(lines_main) * line_h_main + gap_sub + len(lines_sub) * line_h_sub
     start_y = (height - total_h) // 2
 
     # Draw 3D Favicon badge centered
@@ -355,15 +418,24 @@ def generate_single_thumbnail(art, asmire_icon_white):
     ico_scaled = asmire_icon_white.resize((icon_size, icon_size), Image.Resampling.LANCZOS)
     im.paste(ico_scaled, (bx + 9, start_y + 9), ico_scaled)
 
-    # Draw Title Lines centered
+    # Draw Main Title Lines centered
     curr_y = start_y + badge_w + gap_icon
-    for l in lines_en:
-        bbox = draw.textbbox((0, 0), l, font=font_title)
+    for l in lines_main:
+        bbox = draw.textbbox((0, 0), l, font=font_main)
         lw = bbox[2] - bbox[0]
-        # Text shadow for subtle 3D pop
-        draw.text((col_center_x - lw // 2 + 1, curr_y + 2), l, font=font_title, fill=(0, 0, 0, 130))
-        draw.text((col_center_x - lw // 2, curr_y), l, font=font_title, fill=(255, 255, 255, 255))
-        curr_y += line_h_title
+        # Text 3D shadow
+        draw.text((col_center_x - lw // 2 + 1, curr_y + 2), l, font=font_main, fill=(0, 0, 0, 140))
+        draw.text((col_center_x - lw // 2, curr_y), l, font=font_main, fill=(255, 255, 255, 255))
+        curr_y += line_h_main
+
+    # Draw Subtitle Line centered
+    curr_y += gap_sub - 10
+    for l in lines_sub:
+        bbox = draw.textbbox((0, 0), l, font=font_sub)
+        lw = bbox[2] - bbox[0]
+        draw.text((col_center_x - lw // 2 + 1, curr_y + 1), l, font=font_sub, fill=(0, 0, 0, 110))
+        draw.text((col_center_x - lw // 2, curr_y), l, font=font_sub, fill=(160, 168, 188, 220))
+        curr_y += line_h_sub
 
     return im
 
@@ -400,11 +472,11 @@ def main():
 
             success_count += 1
             if (i + 1) % 10 == 0 or (i + 1) == len(articles):
-                print(f"[{i+1}/{len(articles)}] Generated 3D thumbnail for {slug}")
+                print(f"[{i+1}/{len(articles)}] Generated Harmonious 3D thumbnail for {slug}")
         except Exception as e:
             print(f"Error generating {slug}: {e}")
 
-    print(f"\nSuccessfully generated {success_count} / {len(articles)} 3D thumbnail pairs in {out_dir}")
+    print(f"\nSuccessfully generated {success_count} / {len(articles)} Harmonious 3D thumbnail pairs in {out_dir}")
 
 if __name__ == "__main__":
     main()
