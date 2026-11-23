@@ -17,7 +17,7 @@ export const GHL_PRICING_BLOG_POST: BlogPost = {
   author: {
     name: "Asmire Team",
     role: "Direct-Response ROI & SaaS Economics Team",
-    avatarUrl: "/images/authors/crm-lab.png",
+    avatarUrl: "/icon.png",
   },
   directAnswerSummary: {
     en: "In 2027, GoHighLevel offers three core pricing tiers: Starter ($97/mo for 3 sub-accounts), Unlimited ($297/mo for unlimited sub-accounts & white-labeling), and SaaS Pro ($497/mo with automated client rebilling). Hidden usage costs include LC Phone/Twilio SMS ($0.0079–$0.014/msg), local phone numbers ($1.15/mo), LC Email ($0.675/1,000 emails), A2P 10DLC carrier compliance ($19.41 setup), and AI credits ($0.02–$0.03/execution). By replacing 8–10 standalone SaaS tools ($1,200+/mo), HighLevel delivers an immediate 70%–85% overhead reduction.",

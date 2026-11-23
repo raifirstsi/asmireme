@@ -560,7 +560,7 @@ export const NEWS_POSTS: BlogPost[] = [
   author: {
     name: "Asmire Team",
     role: post.author?.role || "AI SaaS Research & Empirical Analysis",
-    avatarUrl: post.author?.avatarUrl || "/icon.png",
+    avatarUrl: "/icon.png",
   },
   coverImage: post.coverImage || `/thumbnails/news/${post.slug}.webp`,
 }));

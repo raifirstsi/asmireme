@@ -18,7 +18,7 @@ export const CONTENT_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "OmniSEO is a high-yield content, copywriting & seo engines platform starting at $49/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -211,7 +211,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "RightBlogger is a high-yield content, copywriting & seo engines platform starting at $29/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -404,7 +404,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Describely is a high-yield content, copywriting & seo engines platform starting at $28/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -597,7 +597,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Koala AI is a high-yield content, copywriting & seo engines platform starting at $9/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -790,7 +790,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Textero AI is a high-yield content, copywriting & seo engines platform starting at $16/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -983,7 +983,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Frase is a high-yield content, copywriting & seo engines platform starting at $15/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -1176,7 +1176,7 @@ Với chính sách **dùng thử 5 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Rytr is a high-yield content, copywriting & seo engines platform starting at $9/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -1369,7 +1369,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Jasper is a high-yield content, copywriting & seo engines platform starting at $39/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",

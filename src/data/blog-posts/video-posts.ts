@@ -18,7 +18,7 @@ export const VIDEO_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "AI Studios (DeepBrain) is a high-yield video creation & ai avatars platform starting at $29/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -211,7 +211,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "CapCut is a high-yield video creation & ai avatars platform starting at $9/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -404,7 +404,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "AKOOL is a high-yield video creation & ai avatars platform starting at $21/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -597,7 +597,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Fliki is a high-yield video creation & ai avatars platform starting at $28/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -790,7 +790,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Submagic is a high-yield video creation & ai avatars platform starting at $20/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -983,7 +983,7 @@ Với chính sách **dùng thử 3 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "VideoGen is a high-yield video creation & ai avatars platform starting at $18/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -1176,7 +1176,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Potion is a high-yield video creation & ai avatars platform starting at $29/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -1369,7 +1369,7 @@ Với chính sách **dùng thử 14 ngày miễn phí**, bạn hoàn toàn khôn
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Synthesia is a high-yield video creation & ai avatars platform starting at $22/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -1562,7 +1562,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "OpusClip is a high-yield video creation & ai avatars platform starting at $19/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",

@@ -18,7 +18,7 @@ export const PRESENTATION_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Decktopus AI is a high-yield presentation & slide design platform starting at $14/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -211,7 +211,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Gamma is a high-yield presentation & slide design platform starting at $10/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -404,7 +404,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "MagicSlides is a high-yield presentation & slide design platform starting at $12/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -597,7 +597,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Simplified is a high-yield presentation & slide design platform starting at $24/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",

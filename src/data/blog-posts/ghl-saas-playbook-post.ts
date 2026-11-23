@@ -17,7 +17,7 @@ export const GHL_SAAS_PLAYBOOK_BLOG_POST: BlogPost = {
   author: {
     name: "Asmire Team",
     role: "Direct-Response ROI & SaaS Economics Team",
-    avatarUrl: "/images/authors/crm-lab.png",
+    avatarUrl: "/icon.png",
   },
   directAnswerSummary: {
     en: "To build a $5,000–$10,000/month recurring revenue business with GoHighLevel SaaS Mode in 2027, deploy a 4-phase system: (1) Pick high-transaction local niches (Dentists, MedSpas, HVAC, Legal) where 1 customer is worth $1,500+; (2) Package your white-label software into two core offers ($197/mo and $297/mo); (3) Install a turnkey snapshot (funnel + 45-second AI speed-to-lead workflow) so onboarding takes under 5 minutes; (4) Acquire 20–35 clients using the 'Database Reactivation' Trojan Horse strategy. With 34 clients at $297/mo, you net over $9,200/mo after HighLevel's $497/mo platform overhead.",

@@ -18,7 +18,7 @@ export const DETECTION_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Winston AI is a high-yield ai detection & quality control platform starting at $18/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -211,7 +211,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Originality.ai is a high-yield ai detection & quality control platform starting at $14/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -404,7 +404,7 @@ Với chính sách **cam kết hoàn tiền**, bạn hoàn toàn không chịu b
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Undetectable AI is a high-yield ai detection & quality control platform starting at $14/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",

@@ -24,7 +24,7 @@ export const CRM_BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "HighLevel (GoHighLevel) is a high-yield sales crm & growth systems platform starting at $97/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -217,7 +217,7 @@ Với chính sách **dùng thử 14 ngày miễn phí**, bạn hoàn toàn khôn
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "GetResponse is a high-yield sales crm & growth systems platform starting at $19/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -410,7 +410,7 @@ Với chính sách **dùng thử 30 ngày miễn phí**, bạn hoàn toàn khôn
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "Nutshell is a high-yield sales crm & growth systems platform starting at $19/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -603,7 +603,7 @@ Với chính sách **dùng thử 14 ngày miễn phí**, bạn hoàn toàn khôn
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "KrispCall is a high-yield sales crm & growth systems platform starting at $15/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",
@@ -796,7 +796,7 @@ Với chính sách **dùng thử 7 ngày miễn phí**, bạn hoàn toàn không
     author: {
       name: "Asmire Team",
       role: "Direct-Response ROI & SaaS Economics Team",
-      avatarUrl: "/images/authors/crm-lab.png",
+      avatarUrl: "/icon.png",
     },
     directAnswerSummary: {
       en: "My AI Front Desk is a high-yield sales crm & growth systems platform starting at $44/month. For pragmatic business owners, it eliminates 20–35 hours of manual payroll monthly, delivering an estimated 5.4x–12.8x financial return on software spend when deployed in revenue-generating workflows.",

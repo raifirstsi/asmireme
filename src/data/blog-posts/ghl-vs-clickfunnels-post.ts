@@ -17,7 +17,7 @@ export const GHL_VS_CLICKFUNNELS_BLOG_POST: BlogPost = {
   author: {
     name: "Asmire Team",
     role: "Direct-Response ROI & SaaS Economics Team",
-    avatarUrl: "/images/authors/crm-lab.png",
+    avatarUrl: "/icon.png",
   },
   directAnswerSummary: {
     en: "In 2027, GoHighLevel decisively crushes ClickFunnels for agencies, B2B consultants, and modern digital operators. For a flat $297/month, HighLevel provides unlimited client sub-accounts, complete desktop white-labeling, built-in CRM, native 2-way SMS/phone, appointment booking, and automated SaaS rebilling. ClickFunnels ($297/mo for Pro) remains an isolated page builder lacking agency infrastructure, forcing you to pay an extra $400–$800/mo for ActiveCampaign, Calendly, and Zapier glue.",
