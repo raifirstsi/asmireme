@@ -3,6 +3,7 @@ import { db } from "@/db";
 import { invoices, subscriptions, paymentEvents, users, auditLogs } from "@/db/schema";
 import { eq, and, desc } from "drizzle-orm";
 import { Resend } from "resend";
+import { notifyNewOrder } from "./telegram";
 
 export interface SePayWebhookPayload {
   id: number | string;
@@ -329,6 +330,22 @@ export async function activateProSubscription({
     }
   } catch (emailErr) {
     console.error("[Billing] Failed to send activation email:", emailErr);
+  }
+
+  // 5. Send instant Telegram notification to Admin 1-1 and Group
+  try {
+    const userRecord = await db.select().from(users).where(eq(users.id, userId));
+    const targetEmail = userRecord[0]?.email || "Unknown";
+    notifyNewOrder({
+      orderId: orderCode,
+      userEmail: targetEmail,
+      planName: "Asmire Pro Membership (30 Ngày)",
+      amount,
+      currency,
+      paymentMethod,
+    }).catch((tgErr) => console.warn("[Telegram Order Alert Error]:", tgErr?.message));
+  } catch (tgNotifyErr) {
+    console.warn("[Billing] Telegram notify wrapper error:", tgNotifyErr);
   }
 
   return { success: true, expiresAt: newPeriodEnd };

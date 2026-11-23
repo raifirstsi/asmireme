@@ -9,6 +9,7 @@ import {
   activeToolSlots, memberAffiliateLinks 
 } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
+import { notifyOutboundClick } from "@/services/telegram";
 
 // 1. Comprehensive bot and crawler list
 export const dynamic = "force-dynamic";
@@ -226,6 +227,16 @@ async function issueRedirect(
         targetUrlHost: parsed.hostname,
       });
       console.log(`[Click Logged] tool=${toolSlug} fallback=${isFallback} reason=${reasonCode} host=${parsed.hostname}`);
+
+      // Fire non-blocking Telegram notification to Admin 1-1 and Group
+      notifyOutboundClick({
+        toolSlug,
+        targetHost: parsed.hostname,
+        isFallback,
+        attributedMemberId,
+        reasonCode,
+        visitorHash,
+      }).catch((tgErr) => console.warn("[Telegram Click Alert Error]:", tgErr?.message));
     } catch (err) {
       console.error("[Click Tracker DB Error]:", err);
     }

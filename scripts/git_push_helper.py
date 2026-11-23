@@ -10,6 +10,6 @@ def run(cmd):
         raise Exception(f"Command failed with exit code {res.returncode}")
 
 run("git add -A")
-run('git commit -m "feat(blog): replace letter text avatar with official website favicon icon.png for blog authors"')
+run('git commit -m "feat(telegram): support parallel notifications to 1-1 admin chat and RAI2 POWER group, add outbound click alerts"')
 run("git push origin master")
 run("git push origin master:main")
