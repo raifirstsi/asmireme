@@ -42,7 +42,7 @@ Below is the complete, unvarnished operational playbook from niche selection to 
 
 ---
 
-### The Dan Koe Lens: Escaping the "Agency Hamster Wheel"
+### Systems Thinking: Escaping the "Agency Hamster Wheel"
 
 If you run a traditional marketing agency or freelance service, you already know the brutal truth: **You are trading your life energy for volatile client retainers.**
 
@@ -210,7 +210,7 @@ Dưới đây là cẩm nang thực chiến chi tiết từng bước giúp bạ
 
 ---
 
-### Lăng Kính Dan Koe: Thoát Khỏi "Bánh Xe Chuột Hamster" Của Nghề Làm Dịch Vụ
+### Tư Duy Hệ Thống: Thoát Khỏi "Bánh Xe Chuột Hamster" Của Nghề Làm Dịch Vụ
 
 Nếu bạn đang làm Freelancer, chạy quảng cáo thuê (Media Buyer) hoặc mở Marketing Agency truyền thống, bạn thừa hiểu sự nghiệt ngã của mô hình này: **Bạn đang đổi thời gian và sức lực lấy những hợp đồng dịch vụ bấp bênh.**
 

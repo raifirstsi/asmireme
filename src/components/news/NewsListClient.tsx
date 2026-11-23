@@ -20,12 +20,12 @@ export function NewsListClient({ posts, locale }: NewsListClientProps) {
     { id: "all", label: isVi ? "Tất Cả" : "All Updates", count: posts.length },
     {
       id: "AI News",
-      label: isVi ? "Tin Tức AI (Dan Koe Dispatch)" : "AI News (Frontier Dispatches)",
+      label: isVi ? "Tin Tức AI" : "AI News",
       count: posts.filter((p) => p.category === "AI News").length,
     },
     {
       id: "Reviews",
-      label: isVi ? "Đánh Giá Thực Nghiệm (Reviews)" : "Empirical Reviews",
+      label: isVi ? "Đánh Giá Thực Nghiệm" : "Empirical Reviews",
       count: posts.filter((p) => p.category === "Reviews").length,
     },
   ];

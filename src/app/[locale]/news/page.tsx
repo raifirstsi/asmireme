@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: NewsIndexProps) {
       ? "Tin Tức AI & Đánh Giá Thực Nghiệm Chuyên Sâu (AI News & Reviews) - Asmire"
       : "Asmire AI News, Frontier Dispatches & In-Depth Reviews - Asmire",
     description: isVi
-      ? "Cập nhật các bước đột phá AI biên giới mới nhất viết theo phong cách tư duy hệ thống Dan Koe, cùng toàn bộ kho bài đánh giá phần mềm độc lập."
-      : "Frontier AI intelligence dispatches written through Dan Koe's systems philosophy, alongside empirical software benchmarks and honest pricing audits.",
+      ? "Cập nhật các bước đột phá công nghệ AI biên giới mới nhất cùng toàn bộ kho bài đánh giá phần mềm độc lập, chuẩn xác."
+      : "Frontier AI intelligence dispatches alongside empirical software benchmarks and honest pricing audits.",
     alternates: {
       canonical: `/${locale}/news`,
       languages: {
@@ -78,8 +78,8 @@ export default async function NewsIndexPage({ params }: NewsIndexProps) {
             </h1>
             <p className="text-sm sm:text-base text-zinc-500 dark:text-zinc-400 leading-relaxed font-normal">
               {isVi
-                ? "Kết hợp giữa các bài phân tích chuyển dịch công nghệ biên giới theo tư duy triết học hệ thống Dan Koe 2026 và toàn bộ kho dữ liệu đánh giá phần mềm độc lập, không quảng cáo trá hình."
-                : "A high-signal synthesis of bleeding-edge AI structural shifts filtered through Dan Koe's 2026 systems philosophy, paired with empirical SaaS benchmarks and stress tests."}
+                ? "Tổng hợp các bài phân tích chuyển dịch công nghệ biên giới và toàn bộ kho dữ liệu đánh giá phần mềm độc lập, thực chứng, không quảng cáo trá hình."
+                : "A high-signal synthesis of bleeding-edge AI structural shifts paired with empirical SaaS benchmarks and stress tests."}
             </p>
           </div>
 

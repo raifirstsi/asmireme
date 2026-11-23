@@ -37,7 +37,7 @@ If your goal is to attend cheerleader seminars and collect pretty t-shirts, buy 
 
 ---
 
-### The Dan Koe Lens: The Cognitive Overhead of Fragmented Tooling
+### Systems Thinking: The Cognitive Overhead of Fragmented Tooling
 
 Most agency owners and digital entrepreneurs are trapped in a digital prison of their own making. 
 
@@ -192,7 +192,7 @@ Nếu mục tiêu của bạn là đi dự hội thảo truyền động lực v
 
 ---
 
-### Lăng Kính Dan Koe: Cái Bẫy "Thuế Phễu" & Sự Phân Mảnh Nhận Thức
+### Tư Duy Hệ Thống: Cái Bẫy "Thuế Phễu" & Sự Phân Mảnh Nhận Thức
 
 Hầu hết các chủ agency và người làm kinh doanh số hiện nay đang tự giam mình trong một "nhà tù kỹ thuật số" do chính họ dựng nên.
 

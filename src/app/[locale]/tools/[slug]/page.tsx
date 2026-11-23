@@ -612,8 +612,8 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                     </div>
                     <p className="text-muted-foreground line-clamp-2">
                       {isVi 
-                        ? "Phân tích không khoan nhượng theo phong cách Dan Kennedy & Dan Koe: Bóc trần cái bẫy $297/tháng."
-                        : "No-BS comparison in the style of Dan Kennedy & Dan Koe: Exposing the $297/mo funnel trap."}
+                        ? "Phân tích đối soát thực tế: Bóc trần cái bẫy $297/tháng và giải bài toán kinh tế cho Agency."
+                        : "Empirical comparison: Exposing the $297/mo funnel trap and the true economics for agencies."}
                     </p>
                   </div>
                   <Link

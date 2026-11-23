@@ -168,12 +168,12 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
                 {isAiNews ? (
                   <>
                     <Flame className="h-3 w-3 fill-current text-amber-500" />
-                    <span>AI News (Dan Koe Dispatch)</span>
+                    <span>{isVi ? "Tin Tức AI" : "AI News"}</span>
                   </>
                 ) : (
                   <>
                     <ShieldCheck className="h-3 w-3 text-emerald-500" />
-                    <span>Reviews</span>
+                    <span>{isVi ? "Đánh Giá Thực Chứng" : "Reviews"}</span>
                   </>
                 )}
               </span>
