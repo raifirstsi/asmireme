@@ -10,7 +10,7 @@ import {
 } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
 import { notifyOutboundClick } from "@/services/telegram";
-import { getClientIp, getIpGeoLocation } from "@/lib/geo";
+import { getClientIp, getIpGeoLocation, isDatacenterOrBot } from "@/lib/geo";
 
 // 1. Comprehensive bot and crawler list
 export const dynamic = "force-dynamic";
@@ -218,41 +218,49 @@ async function issueRedirect(
       }
     }
 
-    // Log genuine click event
-    try {
-      await db.insert(referralClicks).values({
-        visitorHash,
-        toolSlug,
-        pagePath: referer,
-        attributedMemberId: attributedMemberId as any,
-        isFallback,
-        reasonCode,
-        targetUrlHost: parsed.hostname,
-      });
-      console.log(`[Click Logged] tool=${toolSlug} fallback=${isFallback} reason=${reasonCode} host=${parsed.hostname}`);
+    // Resolve IP Geolocation & Filter out Cloud Datacenter Crawlers/Scrapers
+    getIpGeoLocation(ip)
+      .then(async (geo) => {
+        // 1. CLOUD DATACENTER / SCRAPER FILTER:
+        // Automatically drop crawlers from Tencent, AWS, GCP, Hetzner, etc. from analytics & Telegram
+        if (isDatacenterOrBot(geo)) {
+          console.log(`[Bot Filtered] Ignored cloud datacenter crawler: IP=${geo.ip} Org=${geo.org || geo.isp || "Unknown"} Tool=${toolSlug}`);
+          return;
+        }
 
-      // Fire non-blocking Telegram notification with 100% REAL IP Geolocation to Admin 1-1 and Group
-      getIpGeoLocation(ip)
-        .then((geo) => {
-          return notifyOutboundClick({
-            toolName,
-            toolSlug,
-            targetHost: parsed.hostname,
-            isFallback,
-            attributedMemberId,
-            reasonCode,
+        // 2. Genuine Human Visitor: Record in Database
+        try {
+          await db.insert(referralClicks).values({
             visitorHash,
-            ip: geo.ip,
-            country: geo.country,
-            countryCode: geo.countryCode,
-            city: geo.city,
-            flag: geo.flag,
+            toolSlug,
+            pagePath: referer,
+            attributedMemberId: attributedMemberId as any,
+            isFallback,
+            reasonCode,
+            targetUrlHost: parsed.hostname,
           });
-        })
-        .catch((tgErr) => console.warn("[Telegram Click Alert Error]:", tgErr?.message));
-    } catch (err) {
-      console.error("[Click Tracker DB Error]:", err);
-    }
+          console.log(`[Click Logged] tool=${toolSlug} fallback=${isFallback} country=${geo.country} host=${parsed.hostname}`);
+        } catch (dbErr) {
+          console.error("[Click Tracker DB Error]:", dbErr);
+        }
+
+        // 3. Fire real-time Telegram notification to Admin 1-1 and Group
+        return notifyOutboundClick({
+          toolName,
+          toolSlug,
+          targetHost: parsed.hostname,
+          isFallback,
+          attributedMemberId,
+          reasonCode,
+          visitorHash,
+          ip: geo.ip,
+          country: geo.country,
+          countryCode: geo.countryCode,
+          city: geo.city,
+          flag: geo.flag,
+        });
+      })
+      .catch((tgErr) => console.warn("[Telegram Click Alert Error]:", tgErr?.message));
   }
 
   return createCleanRedirect(targetUrl);

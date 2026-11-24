@@ -1,7 +1,7 @@
 /**
- * Real IP Geolocation Service for Asmire Radar
+ * Real IP Geolocation & Bot Intelligence Service for Asmire Radar
  * Accurately determines country, city, and flag for visitor IP addresses.
- * 100% REAL telemetry with multi-provider failover and in-memory LRU caching.
+ * Filters out automated cloud datacenters, crawlers, and server scrapers (Tencent, AWS, GCP, etc.).
  */
 
 export interface GeoLocation {
@@ -10,6 +10,10 @@ export interface GeoLocation {
   countryCode: string;
   city: string;
   flag: string;
+  isDatacenter: boolean;
+  isp?: string;
+  org?: string;
+  asn?: string;
 }
 
 interface CacheEntry {
@@ -48,7 +52,51 @@ const COUNTRY_NAME_VI: Record<string, string> = {
   AE: "Các TVQ Ả Rập Thống Nhất (UAE)",
   IT: "Ý (Italy)",
   ES: "Tây Ban Nha",
+  BR: "Brazil",
 };
+
+// Known cloud datacenter / VPS / bot host keywords
+const CLOUD_DATACENTER_KEYWORDS = [
+  "tencent",
+  "alibaba",
+  "aliyun",
+  "amazon",
+  "aws",
+  "google cloud",
+  "google llc",
+  "microsoft",
+  "azure",
+  "digitalocean",
+  "hetzner",
+  "ovh",
+  "linode",
+  "akamai",
+  "vultr",
+  "oracle",
+  "cloudflare",
+  "choopa",
+  "leaseweb",
+  "m247",
+  "scaleway",
+  "kamatera",
+  "contabo",
+  "zenlayer",
+  "fastly",
+  "datacenter",
+  "hosting",
+  "server",
+  "rackspace",
+  "aceville",
+];
+
+/**
+ * Check if the resolved IP belongs to a cloud hosting datacenter or bot farm
+ */
+export function isDatacenterOrBot(geo: GeoLocation): boolean {
+  if (geo.isDatacenter) return true;
+  const orgText = `${geo.isp || ""} ${geo.org || ""} ${geo.asn || ""}`.toLowerCase();
+  return CLOUD_DATACENTER_KEYWORDS.some((kw) => orgText.includes(kw));
+}
 
 /**
  * Generate Unicode Flag Emoji from 2-letter ISO Country Code
@@ -113,7 +161,7 @@ export function getClientIp(reqHeaders: Headers): string {
 }
 
 /**
- * Lookup real geographical information for an IP address
+ * Lookup real geographical information and cloud bot intelligence for an IP address
  */
 export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
   const ip = (rawIp || "").replace(/^::ffff:/, "").trim();
@@ -126,6 +174,8 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
       countryCode: "VN",
       city: "Localhost",
       flag: "🏠",
+      isDatacenter: false,
+      isp: "Localhost",
     };
   }
 
@@ -139,11 +189,11 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
   // 3. Fallback Providers
   let result: GeoLocation | null = null;
 
-  // Provider 1: ip-api.com (HTTP, fast, no auth needed, 45 req/min)
+  // Provider 1: ip-api.com (Includes "hosting: true/false" flag)
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 2000);
-    const res = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,countryCode,city`, {
+    const res = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,countryCode,city,hosting,isp,org,as`, {
       signal: controller.signal,
       headers: { "User-Agent": "asmire-geo-telemetry/1.0" },
     });
@@ -152,20 +202,25 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
       const data = await res.json();
       if (data.status === "success" && data.countryCode) {
         const countryCode = data.countryCode.toUpperCase();
+        const isDatacenter = Boolean(data.hosting);
         result = {
           ip,
           country: COUNTRY_NAME_VI[countryCode] || data.country || countryCode,
           countryCode,
           city: data.city || "",
           flag: getFlagEmoji(countryCode),
+          isDatacenter,
+          isp: data.isp,
+          org: data.org,
+          asn: data.as,
         };
       }
     }
   } catch (err) {
-    // Provider 1 failed or timed out, proceed to provider 2
+    // Provider 1 failed or timed out
   }
 
-  // Provider 2: freeipapi.com (HTTPS, free, 60 req/min)
+  // Provider 2: freeipapi.com (HTTPS fallback)
   if (!result) {
     try {
       const controller = new AbortController();
@@ -179,12 +234,17 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
         const data = await res.json();
         if (data.countryCode) {
           const countryCode = data.countryCode.toUpperCase();
+          const org = data.asnOrganization || "";
+          const isDatacenter = CLOUD_DATACENTER_KEYWORDS.some((kw) => org.toLowerCase().includes(kw));
           result = {
             ip,
             country: COUNTRY_NAME_VI[countryCode] || data.countryName || countryCode,
             countryCode,
             city: data.cityName || "",
             flag: getFlagEmoji(countryCode),
+            isDatacenter,
+            org,
+            asn: data.asn,
           };
         }
       }
@@ -193,7 +253,7 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
     }
   }
 
-  // Provider 3: ipwho.is (HTTPS, free)
+  // Provider 3: ipwho.is (HTTPS fallback)
   if (!result) {
     try {
       const controller = new AbortController();
@@ -207,12 +267,19 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
         const data = await res.json();
         if (data.success && data.country_code) {
           const countryCode = data.country_code.toUpperCase();
+          const conn = data.connection || {};
+          const orgText = `${conn.isp || ""} ${conn.org || ""} ${conn.domain || ""}`.toLowerCase();
+          const isDatacenter = CLOUD_DATACENTER_KEYWORDS.some((kw) => orgText.includes(kw));
           result = {
             ip,
             country: COUNTRY_NAME_VI[countryCode] || data.country || countryCode,
             countryCode,
             city: data.city || "",
             flag: getFlagEmoji(countryCode),
+            isDatacenter,
+            isp: conn.isp,
+            org: conn.org,
+            asn: String(conn.asn || ""),
           };
         }
       }
@@ -229,6 +296,7 @@ export async function getIpGeoLocation(rawIp: string): Promise<GeoLocation> {
       countryCode: "XX",
       city: "",
       flag: "🌐",
+      isDatacenter: false,
     };
   }
 
