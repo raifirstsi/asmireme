@@ -35,7 +35,7 @@ export async function sendTelegramNotification(
     const results = await Promise.allSettled(
       recipientChatIds.map(async (chatId) => {
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-        const res = await fetch(url, {
+        let res = await fetch(url, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -46,7 +46,27 @@ export async function sendTelegramNotification(
           }),
         });
 
-        const data = await res.json();
+        let data = await res.json();
+
+        // Handle Telegram Rate Limit (429) automatically
+        if ((!res.ok || !data.ok) && data.error_code === 429 && data.parameters?.retry_after) {
+          const waitTimeMs = Math.min((data.parameters.retry_after + 1) * 1000, 10000);
+          console.warn(`[Telegram] Rate limited on chat ${chatId}. Retrying in ${waitTimeMs}ms...`);
+          await new Promise((r) => setTimeout(r, waitTimeMs));
+
+          res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message,
+              parse_mode: parseMode,
+              disable_web_page_preview: true,
+            }),
+          });
+          data = await res.json();
+        }
+
         if (!res.ok || !data.ok) {
           console.error(`[Telegram] API error for chat ${chatId}:`, data);
           throw new Error(data.description || `Failed to send to ${chatId}`);
