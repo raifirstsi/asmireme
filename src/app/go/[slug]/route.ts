@@ -10,6 +10,7 @@ import {
 } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
 import { notifyOutboundClick } from "@/services/telegram";
+import { getClientIp, getIpGeoLocation } from "@/lib/geo";
 
 // 1. Comprehensive bot and crawler list
 export const dynamic = "force-dynamic";
@@ -85,7 +86,7 @@ export async function GET(
     });
   }
 
-  const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "127.0.0.1";
+  const ip = getClientIp(request.headers);
   const userAgent = (request.headers.get("user-agent") || "").toLowerCase();
   const visitorHash = generateVisitorHash(ip, userAgent);
   const referer = request.headers.get("referer") || "direct";
@@ -169,7 +170,7 @@ export async function GET(
     }
   }
 
-  return issueRedirect(targetUrl, reasonCode, isFallback, attributedMemberId, visitorHash, tool.slug, referer);
+  return issueRedirect(targetUrl, reasonCode, isFallback, attributedMemberId, visitorHash, tool.slug, tool.name, referer, ip);
 }
 
 function createCleanRedirect(targetUrl: string) {
@@ -190,7 +191,9 @@ async function issueRedirect(
   attributedMemberId: string | null,
   visitorHash: string,
   toolSlug: string,
-  referer: string
+  toolName: string,
+  referer: string,
+  ip: string
 ) {
   if (!isValidOutboundUrl(targetUrl)) {
     return new NextResponse("Security Alert: Invalid target URL rejected.", { status: 400 });
@@ -228,15 +231,25 @@ async function issueRedirect(
       });
       console.log(`[Click Logged] tool=${toolSlug} fallback=${isFallback} reason=${reasonCode} host=${parsed.hostname}`);
 
-      // Fire non-blocking Telegram notification to Admin 1-1 and Group
-      notifyOutboundClick({
-        toolSlug,
-        targetHost: parsed.hostname,
-        isFallback,
-        attributedMemberId,
-        reasonCode,
-        visitorHash,
-      }).catch((tgErr) => console.warn("[Telegram Click Alert Error]:", tgErr?.message));
+      // Fire non-blocking Telegram notification with 100% REAL IP Geolocation to Admin 1-1 and Group
+      getIpGeoLocation(ip)
+        .then((geo) => {
+          return notifyOutboundClick({
+            toolName,
+            toolSlug,
+            targetHost: parsed.hostname,
+            isFallback,
+            attributedMemberId,
+            reasonCode,
+            visitorHash,
+            ip: geo.ip,
+            country: geo.country,
+            countryCode: geo.countryCode,
+            city: geo.city,
+            flag: geo.flag,
+          });
+        })
+        .catch((tgErr) => console.warn("[Telegram Click Alert Error]:", tgErr?.message));
     } catch (err) {
       console.error("[Click Tracker DB Error]:", err);
     }

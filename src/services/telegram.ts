@@ -188,17 +188,28 @@ export async function notifyOutboundClick(data: {
   attributedMemberId?: string | null;
   reasonCode: string;
   visitorHash: string;
+  ip?: string;
+  country?: string;
+  countryCode?: string;
+  city?: string;
+  flag?: string;
 }) {
   const toolDisplay = data.toolName || data.toolSlug.toUpperCase();
   const attributionText = data.isFallback
     ? "🟡 <b>Fallback về Admin Master Link</b>"
     : `🟢 <b>Member Referral:</b> <code>${data.attributedMemberId || "Unknown"}</code>`;
 
+  const locationDisplay = data.country
+    ? `${data.flag ? `${data.flag} ` : ""}${data.country}${data.city ? ` (${data.city})` : ""}`
+    : "Chưa xác định";
+
   const message = `
 🖱️ <b>[ASMIRE RADAR] CÓ LƯỢT CLICK OUTBOUND MỚI!</b>
 ━━━━━━━━━━━━━━━━━━━━
 🛠️ <b>Công cụ SaaS:</b> <b>${toolDisplay}</b> (<code>${data.toolSlug}</code>)
 🌐 <b>Host đích:</b> <code>${data.targetHost}</code>
+🌍 <b>Quốc gia:</b> <b>${locationDisplay}</b>
+🔍 <b>IP thực tế:</b> <code>${data.ip || "Unknown"}</code>
 🎯 <b>Phân bổ:</b> ${attributionText}
 🏷️ <b>Mã lý do:</b> <code>${data.reasonCode}</code>
 🕵️ <b>Visitor Hash:</b> <code>${data.visitorHash}</code>

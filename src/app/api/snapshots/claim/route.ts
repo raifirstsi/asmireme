@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
 import { snapshotClaims } from "@/db/schema";
 import { notifyNewSnapshotClaimed } from "@/services/telegram";
+import { getClientIp } from "@/lib/geo";
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,7 +25,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "127.0.0.1";
+    const ip = getClientIp(request.headers);
     const userAgent = request.headers.get("user-agent") || "unknown";
 
     // Attempt DB insertion
